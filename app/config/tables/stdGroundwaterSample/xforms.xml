@@ -1,0 +1,81 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>stdGroundwaterSample</h:title>
+  <model>
+    <instance>
+      <data id="stdGroundwaterSample">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <bolts/>
+        <con_pad_intect/>
+        <depth_to_bottom/>
+        <depth_to_water/>
+        <diameter/>
+        <geo_info/>
+        <locked/>
+        <material/>
+        <one_purge_volume/>
+        <pro_casing_secure/>
+        <pump_type/>
+        <purge_end/>
+        <purge_start/>
+        <pvc_casing_intact/>
+        <sample_id/>
+        <sampling_type/>
+        <stdgwslog_id/>
+        <well_gripper/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/bolts" type="string"/>
+    <bind nodeset="/data/con_pad_intect" type="string"/>
+    <bind nodeset="/data/depth_to_bottom" type="decimal"/>
+    <bind nodeset="/data/depth_to_water" type="decimal"/>
+    <bind nodeset="/data/diameter" type="decimal"/>
+    <bind nodeset="/data/geo_info" type="geopoint"/>
+    <bind nodeset="/data/locked" type="string"/>
+    <bind nodeset="/data/material" type="string"/>
+    <bind nodeset="/data/one_purge_volume" type="string"/>
+    <bind nodeset="/data/pro_casing_secure" type="string"/>
+    <bind nodeset="/data/pump_type" type="string"/>
+    <bind nodeset="/data/purge_end" type="time"/>
+    <bind nodeset="/data/purge_start" type="time"/>
+    <bind nodeset="/data/pvc_casing_intact" type="string"/>
+    <bind nodeset="/data/sample_id" type="string"/>
+    <bind nodeset="/data/sampling_type" type="string"/>
+    <bind nodeset="/data/stdgwslog_id" type="string"/>
+    <bind nodeset="/data/well_gripper" type="string"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+ </h:body> 
+</h:html>

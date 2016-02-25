@@ -1,0 +1,22 @@
+<form role="form">
+<div class="form-group">
+    <!--<label for="slider-{{promptId}}">{{> labelHint}}</label>-->
+    <div class="input-container">{{! used to prevent swiping on sliders}}
+    <input id="slider-{{promptId}}"
+        type="number"
+        step="0.01"
+        class="form-control"
+        placeholder="{{{localize display.text}}}"
+        name="{{name}}"
+        value="{{value}}"
+        {{#eachProperty inputAttributes}}
+            {{property}}="{{value}}"
+        {{/eachProperty}}
+        {{#if disabled}}
+            style="background-color:lightgray;"
+            disabled="true"
+        {{/if}}
+        />
+    </div>
+</div>
+</form>

@@ -1,0 +1,22 @@
+{{#if passiveError}}
+    <div>
+        {{passiveError}}
+    </div>
+{{/if}}
+<form>
+    
+    <select class="form-control" name="{{name}}">        
+        <option disabled selected>Select {{> labelHint}}</option>
+        {{#each choices}}
+            <option 
+                {{#if checked}}
+                    selected="selected"
+                {{/if}}
+                value="{{data_value}}">
+                {{#if display.text}}
+                    {{{localize display.text}}}
+                {{/if}}
+            </option>
+        {{/each}}
+    </select>
+</form>

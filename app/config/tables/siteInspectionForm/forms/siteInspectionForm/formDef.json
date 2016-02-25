@@ -1,0 +1,1501 @@
+{
+  "xlsx": {
+    "initial": [
+      {
+        "clause": "if // start",
+        "condition": "(opendatakit.getCurrentInstanceId() != null)",
+        "_row_num": 3
+      },
+      {
+        "clause": "do section survey",
+        "_row_num": 4
+      },
+      {
+        "type": "finalize",
+        "display": {
+          "text": "Save form"
+        },
+        "_row_num": 5
+      },
+      {
+        "clause": "else // start",
+        "_row_num": 6
+      },
+      {
+        "type": "instances",
+        "display": {
+          "text": "Saved instances"
+        },
+        "_row_num": 7
+      },
+      {
+        "clause": "end if // start",
+        "_row_num": 8
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Site Inspection Details"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "assign",
+        "name": "inspection_id",
+        "calculation": "opendatakit.getCurrentInstanceId()",
+        "_row_num": 3
+      },
+      {
+        "type": "string",
+        "name": "inspection_id",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 4
+      },
+      {
+        "type": "string",
+        "name": "task",
+        "display": {
+          "text": "Task"
+        },
+        "_row_num": 5
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "equipment_csv",
+        "name": "vehicle",
+        "display": {
+          "text": "Vehicle"
+        },
+        "_row_num": 6
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "equipment_csv",
+        "name": "consumables",
+        "display": {
+          "text": "Consumables"
+        },
+        "_row_num": 7
+      },
+      {
+        "type": "string",
+        "name": "weather",
+        "display": {
+          "text": "Weather"
+        },
+        "_row_num": 8
+      },
+      {
+        "type": "string",
+        "name": "subcontractors",
+        "display": {
+          "text": "Subcontractors"
+        },
+        "_row_num": 9
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Time Logs"
+        },
+        "_row_num": 10
+      },
+      {
+        "type": "time",
+        "name": "project_start_time",
+        "display": {
+          "text": "Project Start Time"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 11
+      },
+      {
+        "type": "time",
+        "name": "project_end_time",
+        "display": {
+          "text": "Project End Time"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 12
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "personnel_csv",
+        "name": "personnel",
+        "display": {
+          "text": "Personnel"
+        },
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 13
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 14
+      },
+      {
+        "branch_label": "menu",
+        "_row_num": 15
+      },
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Site Inspection Home Page"
+        },
+        "_row_num": 16
+      },
+      {
+        "type": "user_branch",
+        "values_list": "branches",
+        "_row_num": 17
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 18
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 19
+      },
+      {
+        "branch_label": "notes",
+        "_row_num": 20
+      },
+      {
+        "clause": "do section notes_section",
+        "_row_num": 21
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 22
+      },
+      {
+        "branch_label": "gps",
+        "_row_num": 23
+      },
+      {
+        "clause": "do section gps_section",
+        "_row_num": 24
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 25
+      },
+      {
+        "branch_label": "image",
+        "_row_num": 26
+      },
+      {
+        "clause": "do section image_section",
+        "_row_num": 27
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 28
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 29
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 30
+      }
+    ],
+    "notes_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Notes"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "linked_table",
+        "values_list": "linked_notes",
+        "display": {
+          "text": "Add Notes to this list",
+          "new_instance_text": "Add Note"
+        },
+        "templatePath": "linked_table_note.handlebars",
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "gps_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "GPS"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "geopoint",
+        "name": "geo_info",
+        "display": {
+          "text": "Location",
+          "hint": "Capture GPS coordinates of this location"
+        },
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "image_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Photo"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "linked_table",
+        "values_list": "linked_images",
+        "display": {
+          "text": "Add photos to this list",
+          "new_instance_text": "Add Image"
+        },
+        "templatePath": "linked_table_image.handlebars",
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "queries": [
+      {
+        "query_name": "personnel_csv",
+        "query_type": "csv",
+        "uri": "\"personnel.csv\"",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name;\npersonnel.display = {text:personnel.name};\nreturn personnel;\n})",
+        "_row_num": 2
+      },
+      {
+        "query_name": "equipment_csv",
+        "query_type": "csv",
+        "uri": "\"equipment.csv\"",
+        "callback": "_.map(context, function(equipment){equipment.data_value = equipment.name;\nequipment.display = {text:equipment.name};\nreturn equipment;\n})",
+        "_row_num": 3
+      },
+      {
+        "query_name": "linked_images",
+        "query_type": "linked_table",
+        "linked_form_id": "imageSubform",
+        "linked_table_id": "imageSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 4
+      },
+      {
+        "query_name": "linked_notes",
+        "query_type": "linked_table",
+        "linked_form_id": "notesSubform",
+        "linked_table_id": "notesSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 5
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "branches",
+        "data_value": "notes",
+        "display": {
+          "text": "Notes",
+          "image": "Notes.png"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "gps",
+        "display": {
+          "text": "GPS",
+          "image": "Gps.png"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "image",
+        "display": {
+          "text": "Photo",
+          "image": "Photo.png"
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "signature",
+        "display": {
+          "text": "Signature",
+          "image": "Signature.png"
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "sketch",
+        "display": {
+          "text": "Sketch",
+          "image": "Sketch.png"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "exitpath",
+        "display": {
+          "text": "Exit",
+          "image": "Exit.png"
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "yes",
+        "display": {
+          "text": "Yes"
+        },
+        "_row_num": 8
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "no",
+        "display": {
+          "text": "No"
+        },
+        "_row_num": 9
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "siteInspectionForm",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20160101003,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Site Inspection"
+        },
+        "_row_num": 4
+      },
+      {
+        "setting_name": "notes_section",
+        "display": {
+          "title": "Notes"
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "gps_section",
+        "display": {
+          "title": "GPS"
+        },
+        "_row_num": 6
+      },
+      {
+        "setting_name": "image_section",
+        "display": {
+          "title": "Photo"
+        },
+        "_row_num": 7
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "siteInspectionForm",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20160101003,
+        "_row_num": 3
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Site Inspection"
+        },
+        "_row_num": 4
+      },
+      "notes_section": {
+        "setting_name": "notes_section",
+        "display": {
+          "title": "Notes"
+        },
+        "_row_num": 5
+      },
+      "gps_section": {
+        "setting_name": "gps_section",
+        "display": {
+          "title": "GPS"
+        },
+        "_row_num": 6
+      },
+      "image_section": {
+        "setting_name": "image_section",
+        "display": {
+          "title": "Photo"
+        },
+        "_row_num": 7
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "siteInspectionForm",
+        "_row_num": 2,
+        "__rowNum__": 1
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 4,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 4,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Site Inspection"
+        },
+        "_row_num": 4
+      }
+    },
+    "choices": {
+      "branches": [
+        {
+          "choice_list_name": "branches",
+          "data_value": "notes",
+          "display": {
+            "text": "Notes",
+            "image": "Notes.png"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "gps",
+          "display": {
+            "text": "GPS",
+            "image": "Gps.png"
+          },
+          "_row_num": 3
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "image",
+          "display": {
+            "text": "Photo",
+            "image": "Photo.png"
+          },
+          "_row_num": 4
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "signature",
+          "display": {
+            "text": "Signature",
+            "image": "Signature.png"
+          },
+          "_row_num": 5
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "sketch",
+          "display": {
+            "text": "Sketch",
+            "image": "Sketch.png"
+          },
+          "_row_num": 6
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "exitpath",
+          "display": {
+            "text": "Exit",
+            "image": "Exit.png"
+          },
+          "_row_num": 7
+        }
+      ],
+      "yesno": [
+        {
+          "choice_list_name": "yesno",
+          "data_value": "yes",
+          "display": {
+            "text": "Yes"
+          },
+          "_row_num": 8
+        },
+        {
+          "choice_list_name": "yesno",
+          "data_value": "no",
+          "display": {
+            "text": "No"
+          },
+          "_row_num": 9
+        }
+      ]
+    },
+    "queries": {
+      "personnel_csv": {
+        "query_name": "personnel_csv",
+        "query_type": "csv",
+        "uri": "\"personnel.csv\"",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name;\npersonnel.display = {text:personnel.name};\nreturn personnel;\n})",
+        "_row_num": 2
+      },
+      "equipment_csv": {
+        "query_name": "equipment_csv",
+        "query_type": "csv",
+        "uri": "\"equipment.csv\"",
+        "callback": "_.map(context, function(equipment){equipment.data_value = equipment.name;\nequipment.display = {text:equipment.name};\nreturn equipment;\n})",
+        "_row_num": 3
+      },
+      "linked_images": {
+        "query_name": "linked_images",
+        "query_type": "linked_table",
+        "linked_form_id": "imageSubform",
+        "linked_table_id": "imageSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 4
+      },
+      "linked_notes": {
+        "query_name": "linked_notes",
+        "query_type": "linked_table",
+        "linked_form_id": "notesSubform",
+        "linked_table_id": "notesSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 5
+      }
+    },
+    "calculates": {},
+    "model": {
+      "inspection_id": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "inspection_id"
+      },
+      "task": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "task"
+      },
+      "vehicle": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "equipment_csv",
+        "elementKey": "vehicle"
+      },
+      "consumables": {
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "equipment_csv",
+        "elementKey": "consumables"
+      },
+      "weather": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "weather"
+      },
+      "subcontractors": {
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "subcontractors"
+      },
+      "project_start_time": {
+        "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "time",
+        "elementKey": "project_start_time"
+      },
+      "project_end_time": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "time",
+        "elementKey": "project_end_time"
+      },
+      "personnel": {
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "personnel_items"
+        },
+        "valuesList": "personnel_csv",
+        "elementKey": "personnel"
+      },
+      "geo_info": {
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "gps_section"
+          }
+        ],
+        "type": "object",
+        "elementType": "geopoint",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "elementKey": "geo_info_latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "elementKey": "geo_info_longitude"
+          },
+          "altitude": {
+            "type": "number",
+            "elementKey": "geo_info_altitude"
+          },
+          "accuracy": {
+            "type": "number",
+            "elementKey": "geo_info_accuracy"
+          }
+        },
+        "elementKey": "geo_info"
+      }
+    },
+    "section_names": [
+      "gps_section",
+      "image_section",
+      "initial",
+      "notes_section",
+      "survey"
+    ],
+    "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true,
+          "notes_section": true,
+          "gps_section": true,
+          "image_section": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": "Site Inspection"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "type": "finalize",
+            "display": {
+              "text": "Save form"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "finalize",
+            "_branch_label_enclosing_screen": "initial/_screen5",
+            "promptIdx": 1
+          },
+          {
+            "type": "instances",
+            "display": {
+              "text": "Saved instances"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "instances",
+            "_branch_label_enclosing_screen": "initial/_screen7",
+            "promptIdx": 2
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 9,
+            "_branch_label_enclosing_screen": "initial/_screen9",
+            "promptIdx": 3
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "if // start",
+            "condition": "(opendatakit.getCurrentInstanceId() != null)",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_tag_name": "start",
+            "_branch_label": "_then3",
+            "operationIdx": 0
+          },
+          {
+            "clause": "else // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_else6",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "clause": "do section survey",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
+          },
+          {
+            "clause": "end if // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif8",
+            "_row_num": 8,
+            "operationIdx": 4
+          },
+          {
+            "_row_num": 7,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 9,
+            "operationIdx": 6
+          },
+          {
+            "_row_num": 9,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 7
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 8
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 9
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 10
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 11
+          }
+        ],
+        "branch_label_map": {
+          "_then3": 2,
+          "_screen5": 3,
+          "_else6": 5,
+          "_screen7": 5,
+          "_endif8": 6,
+          "_contents": 7,
+          "_screen9": 7,
+          "_finalize": 9
+        }
+      },
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {
+          "notes_section": true,
+          "gps_section": true,
+          "image_section": true
+        },
+        "reachable_sections": {
+          "notes_section": true,
+          "gps_section": true,
+          "image_section": true
+        },
+        "prompts": [
+          {
+            "type": "string",
+            "name": "inspection_id",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "string",
+            "name": "task",
+            "display": {
+              "text": "Task"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "equipment_csv",
+            "name": "vehicle",
+            "display": {
+              "text": "Vehicle"
+            },
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "equipment_csv",
+            "name": "consumables",
+            "display": {
+              "text": "Consumables"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "string",
+            "name": "weather",
+            "display": {
+              "text": "Weather"
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "string",
+            "name": "subcontractors",
+            "display": {
+              "text": "Subcontractors"
+            },
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "Time Logs"
+            },
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "time",
+            "name": "project_start_time",
+            "display": {
+              "text": "Project Start Time"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "time",
+            "name": "project_end_time",
+            "display": {
+              "text": "Project End Time"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "personnel_csv",
+            "name": "personnel",
+            "display": {
+              "text": "Personnel"
+            },
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "user_branch",
+            "values_list": "branches",
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "user_branch",
+            "_branch_label_enclosing_screen": "survey/_screen16",
+            "promptIdx": 10
+          },
+          {
+            "clause": "do section notes_section",
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_do_section_name": "notes_section",
+            "_type": "_section",
+            "promptIdx": 11,
+            "display": {
+              "title": "Notes"
+            },
+            "_branch_label_enclosing_screen": "notes_section/0"
+          },
+          {
+            "clause": "do section gps_section",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_do_section_name": "gps_section",
+            "_type": "_section",
+            "promptIdx": 12,
+            "display": {
+              "title": "GPS"
+            },
+            "_branch_label_enclosing_screen": "gps_section/0"
+          },
+          {
+            "clause": "do section image_section",
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "prompt",
+            "_do_section_name": "image_section",
+            "_type": "_section",
+            "promptIdx": 13,
+            "display": {
+              "title": "Photo"
+            },
+            "_branch_label_enclosing_screen": "image_section/0"
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 31,
+            "_branch_label_enclosing_screen": "survey/_screen31",
+            "promptIdx": 14
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Site Inspection Details"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 14,
+              "__rowNum__": 13,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Site Inspection Home Page"
+            },
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 18,
+              "__rowNum__": 17,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 1
+          },
+          {
+            "clause": "goto menu",
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "goto_label",
+            "_branch_label": "menu",
+            "operationIdx": 2
+          },
+          {
+            "clause": "do section notes_section",
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "do_section",
+            "_do_section_name": "notes_section",
+            "operationIdx": 3
+          },
+          {
+            "clause": "goto menu",
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "goto_label",
+            "_branch_label": "menu",
+            "operationIdx": 4
+          },
+          {
+            "clause": "do section gps_section",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "do_section",
+            "_do_section_name": "gps_section",
+            "operationIdx": 5
+          },
+          {
+            "clause": "goto menu",
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "goto_label",
+            "_branch_label": "menu",
+            "operationIdx": 6
+          },
+          {
+            "clause": "do section image_section",
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "do_section",
+            "_do_section_name": "image_section",
+            "operationIdx": 7
+          },
+          {
+            "clause": "goto menu",
+            "_row_num": 28,
+            "__rowNum__": 27,
+            "_token_type": "goto_label",
+            "_branch_label": "menu",
+            "operationIdx": 8
+          },
+          {
+            "clause": "exit section",
+            "_row_num": 30,
+            "__rowNum__": 29,
+            "_token_type": "exit_section",
+            "operationIdx": 9
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 31,
+            "operationIdx": 10
+          },
+          {
+            "_row_num": 31,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 11
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 31,
+            "operationIdx": 12
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "menu": 1,
+          "_screen16": 1,
+          "notes": 3,
+          "gps": 5,
+          "image": 7,
+          "exitpath": 9,
+          "_contents": 11,
+          "_screen31": 11
+        }
+      },
+      "notes_section": {
+        "section_name": "notes_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "linked_table",
+            "values_list": "linked_notes",
+            "display": {
+              "text": "Add Notes to this list",
+              "new_instance_text": "Add Note"
+            },
+            "templatePath": "linked_table_note.handlebars",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "linked_table",
+            "_branch_label_enclosing_screen": "notes_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "notes_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Notes"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      },
+      "gps_section": {
+        "section_name": "gps_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "geopoint",
+            "name": "geo_info",
+            "display": {
+              "text": "Location",
+              "hint": "Capture GPS coordinates of this location"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "geopoint",
+            "_branch_label_enclosing_screen": "gps_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "gps_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "GPS"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      },
+      "image_section": {
+        "section_name": "image_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "linked_table",
+            "values_list": "linked_images",
+            "display": {
+              "text": "Add photos to this list",
+              "new_instance_text": "Add Image"
+            },
+            "templatePath": "linked_table_image.handlebars",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "linked_table",
+            "_branch_label_enclosing_screen": "image_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "image_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Photo"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      }
+    }
+  }
+}

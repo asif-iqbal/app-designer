@@ -1,0 +1,693 @@
+{
+  "xlsx": {
+    "initial": [
+      {
+        "clause": "do section survey",
+        "_row_num": 2
+      },
+      {
+        "clause": "goto _finalize",
+        "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+        "_row_num": 3
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Field Chemistry Readings"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "assign",
+        "name": "reading_id",
+        "calculation": "calculates.currTime()",
+        "_row_num": 3
+      },
+      {
+        "type": "string",
+        "name": "reading_id",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 4
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Field Water Quality Measurements"
+        },
+        "_row_num": 5
+      },
+      {
+        "type": "time",
+        "name": "reading_time",
+        "display": {
+          "text": "Time"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "decimal",
+        "name": "reading_temperature",
+        "display": {
+          "text": "Temperature (&#x2103;)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 7
+      },
+      {
+        "type": "integer",
+        "name": "reading_conductivity",
+        "display": {
+          "text": "Specific Conductivity (&#xb5;S/cm)"
+        },
+        "_row_num": 8
+      },
+      {
+        "type": "decimal",
+        "name": "reading_oxygen",
+        "display": {
+          "text": "Dissolved Oxygen (mg/L)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 9
+      },
+      {
+        "type": "decimal",
+        "name": "reading_ph",
+        "display": {
+          "text": "pH (S.U.)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 10
+      },
+      {
+        "type": "decimal",
+        "name": "reading_orp",
+        "display": {
+          "text": "ORP (mv)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 11
+      },
+      {
+        "type": "decimal",
+        "name": "reading_vol_purged",
+        "display": {
+          "text": "Volume Purged (gal)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 12
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 13
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "currTime",
+        "calculation": "(function(){\n  var d = new Date(),\n      h = (d.getHours()<10?'0':'') + d.getHours(),\n      m = (d.getMinutes()<10?'0':'') + d.getMinutes();\n  return h + ':' + m;\n})()",
+        "_row_num": 2
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "stdGroundwaterFieldChemistry",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20160101003,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "table_id",
+        "value": "stdGroundwaterFieldChemistry",
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Std. GWS Field Chemistry Readings"
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "instance_name",
+        "value": "reading_id",
+        "_row_num": 6
+      }
+    ],
+    "model": [
+      {
+        "name": "parent_id",
+        "type": "string",
+        "_row_num": 2
+      },
+      {
+        "name": "reading_id",
+        "type": "string",
+        "_row_num": 3
+      },
+      {
+        "name": "reading_time",
+        "type": "time",
+        "_row_num": 4
+      },
+      {
+        "name": "reading_temperature",
+        "type": "decimal",
+        "_row_num": 5
+      },
+      {
+        "name": "reading_conductivity",
+        "type": "integer",
+        "_row_num": 6
+      },
+      {
+        "name": "reading_oxygen",
+        "type": "decimal",
+        "_row_num": 7
+      },
+      {
+        "name": "reading_ph",
+        "type": "decimal",
+        "_row_num": 8
+      },
+      {
+        "name": "reading_orp",
+        "type": "decimal",
+        "_row_num": 9
+      },
+      {
+        "name": "reading_vol_purged",
+        "type": "decimal",
+        "_row_num": 10
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "stdGroundwaterFieldChemistry",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20160101003,
+        "_row_num": 3
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "stdGroundwaterFieldChemistry",
+        "_row_num": 4
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Std. GWS Field Chemistry Readings"
+        },
+        "_row_num": 5
+      },
+      "instance_name": {
+        "setting_name": "instance_name",
+        "value": "reading_id",
+        "_row_num": 6
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 5,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 5,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Std. GWS Field Chemistry Readings"
+        },
+        "_row_num": 5
+      }
+    },
+    "choices": {},
+    "queries": {},
+    "calculates": {
+      "currTime": {
+        "calculation_name": "currTime",
+        "calculation": "(function(){\n  var d = new Date(),\n      h = (d.getHours()<10?'0':'') + d.getHours(),\n      m = (d.getMinutes()<10?'0':'') + d.getMinutes();\n  return h + ':' + m;\n})()",
+        "_row_num": 2
+      }
+    },
+    "model": {
+      "parent_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "parent_id"
+      },
+      "reading_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 3,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "reading_id"
+      },
+      "reading_time": {
+        "type": "object",
+        "elementType": "time",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 4,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "reading_time"
+      },
+      "reading_temperature": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "reading_temperature"
+      },
+      "reading_conductivity": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 6,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "reading_conductivity"
+      },
+      "reading_oxygen": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 7,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "reading_oxygen"
+      },
+      "reading_ph": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 8,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "reading_ph"
+      },
+      "reading_orp": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 9,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "reading_orp"
+      },
+      "reading_vol_purged": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 10,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "reading_vol_purged"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": "Std. GWS Field Chemistry Readings"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 4,
+            "_branch_label_enclosing_screen": "initial/_screen4",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 0
+          },
+          {
+            "clause": "goto _finalize",
+            "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_branch_label": "_finalize",
+            "operationIdx": 1
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 4,
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 3
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 4
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 7
+          }
+        ],
+        "branch_label_map": {
+          "_contents": 3,
+          "_screen4": 3,
+          "_finalize": 5
+        }
+      },
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "string",
+            "name": "reading_id",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "Field Water Quality Measurements"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "time",
+            "name": "reading_time",
+            "display": {
+              "text": "Time"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "decimal",
+            "name": "reading_temperature",
+            "display": {
+              "text": "Temperature (&#x2103;)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "integer",
+            "name": "reading_conductivity",
+            "display": {
+              "text": "Specific Conductivity (&#xb5;S/cm)"
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "decimal",
+            "name": "reading_oxygen",
+            "display": {
+              "text": "Dissolved Oxygen (mg/L)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "decimal",
+            "name": "reading_ph",
+            "display": {
+              "text": "pH (S.U.)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "decimal",
+            "name": "reading_orp",
+            "display": {
+              "text": "ORP (mv)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "decimal",
+            "name": "reading_vol_purged",
+            "display": {
+              "text": "Volume Purged (gal)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 14,
+            "_branch_label_enclosing_screen": "survey/_screen14",
+            "promptIdx": 9
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Field Chemistry Readings"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 13,
+              "__rowNum__": 12,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('reading_id', calculates.currTime());\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 14,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 14,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 14,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen14": 2
+        }
+      }
+    }
+  }
+}
