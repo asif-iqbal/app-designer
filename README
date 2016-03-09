@@ -19,4 +19,12 @@ Suggestions and corrections are welcomed in our efforts to make the
 documentation more complete and the data collection application design 
 process easier. Please send to:
 
+====== To run on localmachine =========
+
+git clone https://github.com/asif-iqbal/app-designer.git
+cd /app-designer
+npm install
+grunt
+
+=======================================
 opendatakit@googlegroups.com
