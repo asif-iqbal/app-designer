@@ -41,11 +41,11 @@
         "_row_num": 7
       },
       {
-        "branch_label": "siteInspectionForm",
+        "branch_label": "sketchForm",
         "_row_num": 8
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/siteInspectionForm/forms/siteInspectionForm/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/sketchForm/forms/sketchForm/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -57,11 +57,11 @@
         "_row_num": 10
       },
       {
-        "branch_label": "stdGWSForm",
+        "branch_label": "siteInspectionForm",
         "_row_num": 11
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/stdGWSForm/forms/stdGWSForm/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/siteInspectionForm/forms/siteInspectionForm/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -73,11 +73,11 @@
         "_row_num": 13
       },
       {
-        "branch_label": "constructionForm",
+        "branch_label": "stdGWSForm",
         "_row_num": 14
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/constructionForm/forms/constructionForm/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/stdGWSForm/forms/stdGWSForm/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -89,11 +89,11 @@
         "_row_num": 16
       },
       {
-        "branch_label": "agriculture",
+        "branch_label": "constructionForm",
         "_row_num": 17
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/imageSubform/forms/imageSubform/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/constructionForm/forms/constructionForm/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -105,11 +105,11 @@
         "_row_num": 19
       },
       {
-        "branch_label": "notesSubform",
+        "branch_label": "agriculture",
         "_row_num": 20
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/notesSubform/forms/notesSubform/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/imageSubform/forms/imageSubform/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -121,11 +121,11 @@
         "_row_num": 22
       },
       {
-        "branch_label": "constructionMaterialDelivered",
+        "branch_label": "notesSubform",
         "_row_num": 23
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/constructionMaterialDelivered/forms/constructionMaterialDelivered/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/notesSubform/forms/notesSubform/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -137,11 +137,11 @@
         "_row_num": 25
       },
       {
-        "branch_label": "constructionMaterialRemoved",
+        "branch_label": "constructionMaterialDelivered",
         "_row_num": 26
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/constructionMaterialRemoved/forms/constructionMaterialRemoved/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/constructionMaterialDelivered/forms/constructionMaterialDelivered/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -153,11 +153,11 @@
         "_row_num": 28
       },
       {
-        "branch_label": "equipmentSubform",
+        "branch_label": "constructionMaterialRemoved",
         "_row_num": 29
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/equipmentSubform/forms/equipmentSubform/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/constructionMaterialRemoved/forms/constructionMaterialRemoved/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -169,11 +169,11 @@
         "_row_num": 31
       },
       {
-        "branch_label": "stdGrounwaterSample",
+        "branch_label": "equipmentSubform",
         "_row_num": 32
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/stdGrounwaterSample/forms/stdGrounwaterSample/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/equipmentSubform/forms/equipmentSubform/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -185,11 +185,11 @@
         "_row_num": 34
       },
       {
-        "branch_label": "stdGrounwaterFieldChemistry",
+        "branch_label": "stdGrounwaterSample",
         "_row_num": 35
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/stdGrounwaterFieldChemistry/forms/stdGrounwaterFieldChemistry/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/stdGrounwaterSample/forms/stdGrounwaterSample/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -201,11 +201,11 @@
         "_row_num": 37
       },
       {
-        "branch_label": "imnci_test",
+        "branch_label": "stdGrounwaterFieldChemistry",
         "_row_num": 38
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/imnci/forms/imnci_test/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/stdGrounwaterFieldChemistry/forms/stdGrounwaterFieldChemistry/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -217,11 +217,11 @@
         "_row_num": 40
       },
       {
-        "branch_label": "refrigerators_init",
+        "branch_label": "imnci_test",
         "_row_num": 41
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/refrigerators/forms/refrigerators_init/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/imnci/forms/imnci_test/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -233,11 +233,11 @@
         "_row_num": 43
       },
       {
-        "branch_label": "refrigerators_update",
+        "branch_label": "refrigerators_init",
         "_row_num": 44
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/refrigerators/forms/refrigerators_update/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/refrigerators/forms/refrigerators_init/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -249,11 +249,11 @@
         "_row_num": 46
       },
       {
-        "branch_label": "section_test",
+        "branch_label": "refrigerators_update",
         "_row_num": 47
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/section_test/forms/section_test/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/refrigerators/forms/refrigerators_update/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -265,11 +265,11 @@
         "_row_num": 49
       },
       {
-        "branch_label": "selects",
+        "branch_label": "section_test",
         "_row_num": 50
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/selects/forms/selects/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/section_test/forms/section_test/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -281,11 +281,11 @@
         "_row_num": 52
       },
       {
-        "branch_label": "twoColumn",
+        "branch_label": "selects",
         "_row_num": 53
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/twoColumn/forms/twoColumn/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/selects/forms/selects/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -297,11 +297,11 @@
         "_row_num": 55
       },
       {
-        "branch_label": "gridScreen",
+        "branch_label": "twoColumn",
         "_row_num": 56
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/gridScreen/forms/gridScreen/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/twoColumn/forms/twoColumn/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -313,11 +313,11 @@
         "_row_num": 58
       },
       {
-        "branch_label": "adult_coverage",
+        "branch_label": "gridScreen",
         "_row_num": 59
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/adult_coverage/forms/adult_coverage/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/gridScreen/forms/gridScreen/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -329,11 +329,11 @@
         "_row_num": 61
       },
       {
-        "branch_label": "child_coverage",
+        "branch_label": "adult_coverage",
         "_row_num": 62
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/child_coverage/forms/child_coverage/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/adult_coverage/forms/adult_coverage/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -345,11 +345,11 @@
         "_row_num": 64
       },
       {
-        "branch_label": "graphExample",
+        "branch_label": "child_coverage",
         "_row_num": 65
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/graphExample/forms/graphExample/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/child_coverage/forms/child_coverage/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -361,11 +361,11 @@
         "_row_num": 67
       },
       {
-        "branch_label": "visit",
+        "branch_label": "graphExample",
         "_row_num": 68
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/visit/forms/visit/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/graphExample/forms/graphExample/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -377,11 +377,11 @@
         "_row_num": 70
       },
       {
-        "branch_label": "plot",
+        "branch_label": "visit",
         "_row_num": 71
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/plot/forms/plot/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/visit/forms/visit/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -393,11 +393,11 @@
         "_row_num": 73
       },
       {
-        "branch_label": "geoweather",
+        "branch_label": "plot",
         "_row_num": 74
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/geoweather/forms/geoweather/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/plot/forms/plot/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -409,11 +409,11 @@
         "_row_num": 76
       },
       {
-        "branch_label": "send_sms",
+        "branch_label": "geoweather",
         "_row_num": 77
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/send_sms/forms/send_sms/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/geoweather/forms/geoweather/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -425,11 +425,11 @@
         "_row_num": 79
       },
       {
-        "branch_label": "eonasdan",
+        "branch_label": "send_sms",
         "_row_num": 80
       },
       {
-        "url": "'?' + opendatakit.getHashString('../config/tables/eonasdan/forms/eonasdan/',null)",
+        "url": "'?' + opendatakit.getHashString('../config/tables/send_sms/forms/send_sms/',null)",
         "type": "external_link",
         "display": {
           "text": "Open form"
@@ -439,6 +439,22 @@
       {
         "clause": "exit section",
         "_row_num": 82
+      },
+      {
+        "branch_label": "eonasdan",
+        "_row_num": 83
+      },
+      {
+        "url": "'?' + opendatakit.getHashString('../config/tables/eonasdan/forms/eonasdan/',null)",
+        "type": "external_link",
+        "display": {
+          "text": "Open form"
+        },
+        "_row_num": 84
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 85
       }
     ],
     "settings": [
@@ -467,11 +483,19 @@
     "choices": [
       {
         "choice_list_name": "test_forms",
+        "data_value": "sketchForm",
+        "display": {
+          "text": "sketchForm"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "test_forms",
         "data_value": "stdGWSForm",
         "display": {
           "text": "stdGWSForm"
         },
-        "_row_num": 2
+        "_row_num": 3
       },
       {
         "choice_list_name": "test_forms",
@@ -479,7 +503,7 @@
         "display": {
           "text": "siteInspectionForm"
         },
-        "_row_num": 3
+        "_row_num": 4
       },
       {
         "choice_list_name": "test_forms",
@@ -487,7 +511,7 @@
         "display": {
           "text": "constructionForm"
         },
-        "_row_num": 4
+        "_row_num": 5
       },
       {
         "choice_list_name": "test_forms",
@@ -495,7 +519,7 @@
         "display": {
           "text": "imageSubform"
         },
-        "_row_num": 5
+        "_row_num": 6
       },
       {
         "choice_list_name": "test_forms",
@@ -503,7 +527,7 @@
         "display": {
           "text": "notesSubform"
         },
-        "_row_num": 6
+        "_row_num": 7
       },
       {
         "choice_list_name": "test_forms",
@@ -511,7 +535,7 @@
         "display": {
           "text": "constructionMaterialDelivered"
         },
-        "_row_num": 7
+        "_row_num": 8
       },
       {
         "choice_list_name": "test_forms",
@@ -519,7 +543,7 @@
         "display": {
           "text": "constructionMaterialRemoved"
         },
-        "_row_num": 8
+        "_row_num": 9
       },
       {
         "choice_list_name": "test_forms",
@@ -527,7 +551,7 @@
         "display": {
           "text": "equipmentSubform"
         },
-        "_row_num": 9
+        "_row_num": 10
       },
       {
         "choice_list_name": "test_forms",
@@ -535,7 +559,7 @@
         "display": {
           "text": "stdGroundwaterSample"
         },
-        "_row_num": 10
+        "_row_num": 11
       },
       {
         "choice_list_name": "test_forms",
@@ -543,7 +567,7 @@
         "display": {
           "text": "stdGroundwaterFieldChemistry"
         },
-        "_row_num": 11
+        "_row_num": 12
       },
       {
         "choice_list_name": "test_forms",
@@ -551,7 +575,7 @@
         "display": {
           "text": "section_test"
         },
-        "_row_num": 12
+        "_row_num": 13
       },
       {
         "choice_list_name": "test_forms",
@@ -559,7 +583,7 @@
         "display": {
           "text": "selects"
         },
-        "_row_num": 13
+        "_row_num": 14
       },
       {
         "choice_list_name": "test_forms",
@@ -567,7 +591,7 @@
         "display": {
           "text": "twoColumn"
         },
-        "_row_num": 14
+        "_row_num": 15
       },
       {
         "choice_list_name": "test_forms",
@@ -575,7 +599,7 @@
         "display": {
           "text": "gridScreen"
         },
-        "_row_num": 15
+        "_row_num": 16
       },
       {
         "choice_list_name": "test_forms",
@@ -583,7 +607,7 @@
         "display": {
           "text": "Child Coverage Immunizations"
         },
-        "_row_num": 16
+        "_row_num": 17
       },
       {
         "choice_list_name": "test_forms",
@@ -591,7 +615,7 @@
         "display": {
           "text": "Adult Coverage Immunizations"
         },
-        "_row_num": 17
+        "_row_num": 18
       },
       {
         "choice_list_name": "test_forms",
@@ -599,7 +623,7 @@
         "display": {
           "text": "Graph Examples"
         },
-        "_row_num": 18
+        "_row_num": 19
       },
       {
         "choice_list_name": "test_forms",
@@ -607,7 +631,7 @@
         "display": {
           "text": "Visit"
         },
-        "_row_num": 19
+        "_row_num": 20
       },
       {
         "choice_list_name": "test_forms",
@@ -615,7 +639,7 @@
         "display": {
           "text": "Plot"
         },
-        "_row_num": 20
+        "_row_num": 21
       },
       {
         "choice_list_name": "test_forms",
@@ -623,7 +647,7 @@
         "display": {
           "text": "Agriculture"
         },
-        "_row_num": 21
+        "_row_num": 22
       },
       {
         "choice_list_name": "test_forms",
@@ -631,7 +655,7 @@
         "display": {
           "text": "geoweather"
         },
-        "_row_num": 22
+        "_row_num": 23
       },
       {
         "choice_list_name": "test_forms",
@@ -639,7 +663,7 @@
         "display": {
           "text": "Send SMS"
         },
-        "_row_num": 23
+        "_row_num": 24
       },
       {
         "choice_list_name": "test_forms",
@@ -647,7 +671,7 @@
         "display": {
           "text": "DateTime Picker"
         },
-        "_row_num": 24
+        "_row_num": 25
       }
     ]
   },
@@ -729,11 +753,19 @@
       "test_forms": [
         {
           "choice_list_name": "test_forms",
+          "data_value": "sketchForm",
+          "display": {
+            "text": "sketchForm"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "test_forms",
           "data_value": "stdGWSForm",
           "display": {
             "text": "stdGWSForm"
           },
-          "_row_num": 2
+          "_row_num": 3
         },
         {
           "choice_list_name": "test_forms",
@@ -741,7 +773,7 @@
           "display": {
             "text": "siteInspectionForm"
           },
-          "_row_num": 3
+          "_row_num": 4
         },
         {
           "choice_list_name": "test_forms",
@@ -749,7 +781,7 @@
           "display": {
             "text": "constructionForm"
           },
-          "_row_num": 4
+          "_row_num": 5
         },
         {
           "choice_list_name": "test_forms",
@@ -757,7 +789,7 @@
           "display": {
             "text": "imageSubform"
           },
-          "_row_num": 5
+          "_row_num": 6
         },
         {
           "choice_list_name": "test_forms",
@@ -765,7 +797,7 @@
           "display": {
             "text": "notesSubform"
           },
-          "_row_num": 6
+          "_row_num": 7
         },
         {
           "choice_list_name": "test_forms",
@@ -773,7 +805,7 @@
           "display": {
             "text": "constructionMaterialDelivered"
           },
-          "_row_num": 7
+          "_row_num": 8
         },
         {
           "choice_list_name": "test_forms",
@@ -781,7 +813,7 @@
           "display": {
             "text": "constructionMaterialRemoved"
           },
-          "_row_num": 8
+          "_row_num": 9
         },
         {
           "choice_list_name": "test_forms",
@@ -789,7 +821,7 @@
           "display": {
             "text": "equipmentSubform"
           },
-          "_row_num": 9
+          "_row_num": 10
         },
         {
           "choice_list_name": "test_forms",
@@ -797,7 +829,7 @@
           "display": {
             "text": "stdGroundwaterSample"
           },
-          "_row_num": 10
+          "_row_num": 11
         },
         {
           "choice_list_name": "test_forms",
@@ -805,7 +837,7 @@
           "display": {
             "text": "stdGroundwaterFieldChemistry"
           },
-          "_row_num": 11
+          "_row_num": 12
         },
         {
           "choice_list_name": "test_forms",
@@ -813,7 +845,7 @@
           "display": {
             "text": "section_test"
           },
-          "_row_num": 12
+          "_row_num": 13
         },
         {
           "choice_list_name": "test_forms",
@@ -821,7 +853,7 @@
           "display": {
             "text": "selects"
           },
-          "_row_num": 13
+          "_row_num": 14
         },
         {
           "choice_list_name": "test_forms",
@@ -829,7 +861,7 @@
           "display": {
             "text": "twoColumn"
           },
-          "_row_num": 14
+          "_row_num": 15
         },
         {
           "choice_list_name": "test_forms",
@@ -837,7 +869,7 @@
           "display": {
             "text": "gridScreen"
           },
-          "_row_num": 15
+          "_row_num": 16
         },
         {
           "choice_list_name": "test_forms",
@@ -845,7 +877,7 @@
           "display": {
             "text": "Child Coverage Immunizations"
           },
-          "_row_num": 16
+          "_row_num": 17
         },
         {
           "choice_list_name": "test_forms",
@@ -853,7 +885,7 @@
           "display": {
             "text": "Adult Coverage Immunizations"
           },
-          "_row_num": 17
+          "_row_num": 18
         },
         {
           "choice_list_name": "test_forms",
@@ -861,7 +893,7 @@
           "display": {
             "text": "Graph Examples"
           },
-          "_row_num": 18
+          "_row_num": 19
         },
         {
           "choice_list_name": "test_forms",
@@ -869,7 +901,7 @@
           "display": {
             "text": "Visit"
           },
-          "_row_num": 19
+          "_row_num": 20
         },
         {
           "choice_list_name": "test_forms",
@@ -877,7 +909,7 @@
           "display": {
             "text": "Plot"
           },
-          "_row_num": 20
+          "_row_num": 21
         },
         {
           "choice_list_name": "test_forms",
@@ -885,7 +917,7 @@
           "display": {
             "text": "Agriculture"
           },
-          "_row_num": 21
+          "_row_num": 22
         },
         {
           "choice_list_name": "test_forms",
@@ -893,7 +925,7 @@
           "display": {
             "text": "geoweather"
           },
-          "_row_num": 22
+          "_row_num": 23
         },
         {
           "choice_list_name": "test_forms",
@@ -901,7 +933,7 @@
           "display": {
             "text": "Send SMS"
           },
-          "_row_num": 23
+          "_row_num": 24
         },
         {
           "choice_list_name": "test_forms",
@@ -909,7 +941,7 @@
           "display": {
             "text": "DateTime Picker"
           },
-          "_row_num": 24
+          "_row_num": 25
         }
       ]
     },
@@ -1050,7 +1082,7 @@
             "promptIdx": 1
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/siteInspectionForm/forms/siteInspectionForm/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/sketchForm/forms/sketchForm/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1063,7 +1095,7 @@
             "promptIdx": 2
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/stdGWSForm/forms/stdGWSForm/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/siteInspectionForm/forms/siteInspectionForm/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1076,7 +1108,7 @@
             "promptIdx": 3
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/constructionForm/forms/constructionForm/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/stdGWSForm/forms/stdGWSForm/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1089,7 +1121,7 @@
             "promptIdx": 4
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/imageSubform/forms/imageSubform/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/constructionForm/forms/constructionForm/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1102,7 +1134,7 @@
             "promptIdx": 5
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/notesSubform/forms/notesSubform/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/imageSubform/forms/imageSubform/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1115,7 +1147,7 @@
             "promptIdx": 6
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/constructionMaterialDelivered/forms/constructionMaterialDelivered/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/notesSubform/forms/notesSubform/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1128,7 +1160,7 @@
             "promptIdx": 7
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/constructionMaterialRemoved/forms/constructionMaterialRemoved/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/constructionMaterialDelivered/forms/constructionMaterialDelivered/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1141,7 +1173,7 @@
             "promptIdx": 8
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/equipmentSubform/forms/equipmentSubform/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/constructionMaterialRemoved/forms/constructionMaterialRemoved/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1154,7 +1186,7 @@
             "promptIdx": 9
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/stdGrounwaterSample/forms/stdGrounwaterSample/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/equipmentSubform/forms/equipmentSubform/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1167,7 +1199,7 @@
             "promptIdx": 10
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/stdGrounwaterFieldChemistry/forms/stdGrounwaterFieldChemistry/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/stdGrounwaterSample/forms/stdGrounwaterSample/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1180,7 +1212,7 @@
             "promptIdx": 11
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/imnci/forms/imnci_test/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/stdGrounwaterFieldChemistry/forms/stdGrounwaterFieldChemistry/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1193,7 +1225,7 @@
             "promptIdx": 12
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/refrigerators/forms/refrigerators_init/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/imnci/forms/imnci_test/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1206,7 +1238,7 @@
             "promptIdx": 13
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/refrigerators/forms/refrigerators_update/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/refrigerators/forms/refrigerators_init/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1219,7 +1251,7 @@
             "promptIdx": 14
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/section_test/forms/section_test/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/refrigerators/forms/refrigerators_update/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1232,7 +1264,7 @@
             "promptIdx": 15
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/selects/forms/selects/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/section_test/forms/section_test/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1245,7 +1277,7 @@
             "promptIdx": 16
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/twoColumn/forms/twoColumn/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/selects/forms/selects/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1258,7 +1290,7 @@
             "promptIdx": 17
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/gridScreen/forms/gridScreen/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/twoColumn/forms/twoColumn/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1271,7 +1303,7 @@
             "promptIdx": 18
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/adult_coverage/forms/adult_coverage/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/gridScreen/forms/gridScreen/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1284,7 +1316,7 @@
             "promptIdx": 19
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/child_coverage/forms/child_coverage/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/adult_coverage/forms/adult_coverage/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1297,7 +1329,7 @@
             "promptIdx": 20
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/graphExample/forms/graphExample/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/child_coverage/forms/child_coverage/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1310,7 +1342,7 @@
             "promptIdx": 21
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/visit/forms/visit/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/graphExample/forms/graphExample/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1323,7 +1355,7 @@
             "promptIdx": 22
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/plot/forms/plot/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/visit/forms/visit/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1336,7 +1368,7 @@
             "promptIdx": 23
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/geoweather/forms/geoweather/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/plot/forms/plot/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1349,7 +1381,7 @@
             "promptIdx": 24
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/send_sms/forms/send_sms/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/geoweather/forms/geoweather/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1362,7 +1394,7 @@
             "promptIdx": 25
           },
           {
-            "url": "'?' + opendatakit.getHashString('../config/tables/eonasdan/forms/eonasdan/',null)",
+            "url": "'?' + opendatakit.getHashString('../config/tables/send_sms/forms/send_sms/',null)",
             "type": "external_link",
             "display": {
               "text": "Open form"
@@ -1375,12 +1407,25 @@
             "promptIdx": 26
           },
           {
+            "url": "'?' + opendatakit.getHashString('../config/tables/eonasdan/forms/eonasdan/',null)",
+            "type": "external_link",
+            "display": {
+              "text": "Open form"
+            },
+            "_row_num": 84,
+            "__rowNum__": 83,
+            "_token_type": "prompt",
+            "_type": "external_link",
+            "_branch_label_enclosing_screen": "survey/_screen84",
+            "promptIdx": 27
+          },
+          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 83,
-            "_branch_label_enclosing_screen": "survey/_screen83",
-            "promptIdx": 27
+            "_row_num": 86,
+            "_branch_label_enclosing_screen": "survey/_screen86",
+            "promptIdx": 28
           }
         ],
         "validation_tag_map": {
@@ -1755,25 +1800,38 @@
             "operationIdx": 55
           },
           {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 83,
+            "_row_num": 84,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 56
           },
           {
-            "_row_num": 83,
+            "clause": "exit section",
+            "_row_num": 85,
+            "__rowNum__": 84,
+            "_token_type": "exit_section",
+            "operationIdx": 57
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 86,
+            "operationIdx": 58
+          },
+          {
+            "_row_num": 86,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(28);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 57
+            "operationIdx": 59
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 83,
-            "operationIdx": 58
+            "_row_num": 86,
+            "operationIdx": 60
           }
         ],
         "branch_label_map": {
@@ -1782,58 +1840,60 @@
           "_else4": 4,
           "_screen5": 4,
           "_endif6": 5,
-          "siteInspectionForm": 6,
+          "sketchForm": 6,
           "_screen9": 6,
-          "stdGWSForm": 8,
+          "siteInspectionForm": 8,
           "_screen12": 8,
-          "constructionForm": 10,
+          "stdGWSForm": 10,
           "_screen15": 10,
-          "agriculture": 12,
+          "constructionForm": 12,
           "_screen18": 12,
-          "notesSubform": 14,
+          "agriculture": 14,
           "_screen21": 14,
-          "constructionMaterialDelivered": 16,
+          "notesSubform": 16,
           "_screen24": 16,
-          "constructionMaterialRemoved": 18,
+          "constructionMaterialDelivered": 18,
           "_screen27": 18,
-          "equipmentSubform": 20,
+          "constructionMaterialRemoved": 20,
           "_screen30": 20,
-          "stdGrounwaterSample": 22,
+          "equipmentSubform": 22,
           "_screen33": 22,
-          "stdGrounwaterFieldChemistry": 24,
+          "stdGrounwaterSample": 24,
           "_screen36": 24,
-          "imnci_test": 26,
+          "stdGrounwaterFieldChemistry": 26,
           "_screen39": 26,
-          "refrigerators_init": 28,
+          "imnci_test": 28,
           "_screen42": 28,
-          "refrigerators_update": 30,
+          "refrigerators_init": 30,
           "_screen45": 30,
-          "section_test": 32,
+          "refrigerators_update": 32,
           "_screen48": 32,
-          "selects": 34,
+          "section_test": 34,
           "_screen51": 34,
-          "twoColumn": 36,
+          "selects": 36,
           "_screen54": 36,
-          "gridScreen": 38,
+          "twoColumn": 38,
           "_screen57": 38,
-          "adult_coverage": 40,
+          "gridScreen": 40,
           "_screen60": 40,
-          "child_coverage": 42,
+          "adult_coverage": 42,
           "_screen63": 42,
-          "graphExample": 44,
+          "child_coverage": 44,
           "_screen66": 44,
-          "visit": 46,
+          "graphExample": 46,
           "_screen69": 46,
-          "plot": 48,
+          "visit": 48,
           "_screen72": 48,
-          "geoweather": 50,
+          "plot": 50,
           "_screen75": 50,
-          "send_sms": 52,
+          "geoweather": 52,
           "_screen78": 52,
-          "eonasdan": 54,
+          "send_sms": 54,
           "_screen81": 54,
-          "_contents": 57,
-          "_screen83": 57
+          "eonasdan": 56,
+          "_screen84": 56,
+          "_contents": 59,
+          "_screen86": 59
         }
       }
     }
