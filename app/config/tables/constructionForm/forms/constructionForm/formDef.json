@@ -71,6 +71,7 @@
         "display": {
           "text": "Vehicle"
         },
+        "choice_filter": "choice_item.type==='Vehicle'",
         "_row_num": 6
       },
       {
@@ -80,6 +81,7 @@
         "display": {
           "text": "Consumables"
         },
+        "choice_filter": "choice_item.type==='Consumables'",
         "_row_num": 7
       },
       {
@@ -99,31 +101,6 @@
         "_row_num": 9
       },
       {
-        "type": "note",
-        "display": {
-          "text": "Time Logs"
-        },
-        "_row_num": 10
-      },
-      {
-        "type": "time",
-        "name": "project_start_time",
-        "display": {
-          "text": "Project Start Time"
-        },
-        "templatePath": "time_input_type.handlebars",
-        "_row_num": 11
-      },
-      {
-        "type": "time",
-        "name": "project_end_time",
-        "display": {
-          "text": "Project End Time"
-        },
-        "templatePath": "time_input_type.handlebars",
-        "_row_num": 12
-      },
-      {
         "type": "select_multiple",
         "values_list": "personnel_csv",
         "name": "personnel",
@@ -131,103 +108,115 @@
           "text": "Personnel"
         },
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 13
+        "_row_num": 11
       },
       {
         "clause": "end screen",
-        "_row_num": 14
+        "_row_num": 12
       },
       {
         "branch_label": "menu",
-        "_row_num": 15
+        "_row_num": 13
       },
       {
         "clause": "begin screen",
         "display": {
           "text": "Construction Home Page"
         },
-        "_row_num": 16
+        "_row_num": 14
       },
       {
         "type": "user_branch",
         "values_list": "branches",
-        "_row_num": 17
+        "_row_num": 15
       },
       {
         "clause": "end screen",
-        "_row_num": 18
+        "_row_num": 16
       },
       {
         "clause": "goto menu",
-        "_row_num": 19
+        "_row_num": 17
       },
       {
         "branch_label": "notes",
-        "_row_num": 20
+        "_row_num": 18
       },
       {
         "clause": "do section notes_section",
-        "_row_num": 21
+        "_row_num": 19
       },
       {
         "clause": "goto menu",
-        "_row_num": 22
+        "_row_num": 20
       },
       {
         "branch_label": "gps",
-        "_row_num": 23
+        "_row_num": 21
       },
       {
         "clause": "do section gps_section",
-        "_row_num": 24
+        "_row_num": 22
       },
       {
         "clause": "goto menu",
-        "_row_num": 25
+        "_row_num": 23
       },
       {
         "branch_label": "image",
-        "_row_num": 26
+        "_row_num": 24
       },
       {
         "clause": "do section image_section",
-        "_row_num": 27
+        "_row_num": 25
       },
       {
         "clause": "goto menu",
-        "_row_num": 28
+        "_row_num": 26
       },
       {
         "branch_label": "mat_delivered",
-        "_row_num": 29
+        "_row_num": 27
       },
       {
         "clause": "do section mat_delivered_section",
-        "_row_num": 30
+        "_row_num": 28
       },
       {
         "clause": "goto menu",
-        "_row_num": 31
+        "_row_num": 29
       },
       {
         "branch_label": "mat_removed",
-        "_row_num": 32
+        "_row_num": 30
       },
       {
         "clause": "do section mat_removed_section",
-        "_row_num": 33
+        "_row_num": 31
       },
       {
         "clause": "goto menu",
+        "_row_num": 32
+      },
+      {
+        "branch_label": "times",
+        "_row_num": 33
+      },
+      {
+        "clause": "do section times_section",
         "_row_num": 34
       },
       {
-        "branch_label": "exitpath",
+        "clause": "goto menu",
         "_row_num": 35
       },
       {
-        "clause": "exit section",
+        "branch_label": "exitpath",
         "_row_num": 36
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 37
       }
     ],
     "notes_section": [
@@ -290,7 +279,6 @@
           "text": "Add photos to this list",
           "new_instance_text": "Add Image"
         },
-        "templatePath": "linked_table_image.handlebars",
         "_row_num": 3
       },
       {
@@ -340,6 +328,37 @@
       {
         "clause": "end screen",
         "_row_num": 4
+      }
+    ],
+    "times_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Project Times"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "time",
+        "name": "project_start_time",
+        "display": {
+          "text": "Project Start Time"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 3
+      },
+      {
+        "type": "time",
+        "name": "project_end_time",
+        "display": {
+          "text": "Project End Time"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 4
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 5
       }
     ],
     "queries": [
@@ -464,12 +483,21 @@
       },
       {
         "choice_list_name": "branches",
+        "data_value": "times",
+        "display": {
+          "text": "Times",
+          "image": "Time.png"
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "branches",
         "data_value": "exitpath",
         "display": {
           "text": "Exit",
           "image": "Exit.png"
         },
-        "_row_num": 9
+        "_row_num": 10
       },
       {
         "choice_list_name": "yesno",
@@ -477,7 +505,7 @@
         "display": {
           "text": "Yes"
         },
-        "_row_num": 10
+        "_row_num": 11
       },
       {
         "choice_list_name": "yesno",
@@ -485,7 +513,7 @@
         "display": {
           "text": "No"
         },
-        "_row_num": 11
+        "_row_num": 12
       }
     ],
     "settings": [
@@ -496,7 +524,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160101003,
+        "value": 20160101004,
         "_row_num": 3
       },
       {
@@ -540,6 +568,13 @@
           "title": "Removals"
         },
         "_row_num": 9
+      },
+      {
+        "setting_name": "times_section",
+        "display": {
+          "title": "Times"
+        },
+        "_row_num": 10
       }
     ]
   },
@@ -569,7 +604,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160101003,
+        "value": 20160101004,
         "_row_num": 3
       },
       "survey": {
@@ -613,6 +648,13 @@
           "title": "Removals"
         },
         "_row_num": 9
+      },
+      "times_section": {
+        "setting_name": "times_section",
+        "display": {
+          "title": "Times"
+        },
+        "_row_num": 10
       },
       "table_id": {
         "setting_name": "table_id",
@@ -712,12 +754,21 @@
         },
         {
           "choice_list_name": "branches",
+          "data_value": "times",
+          "display": {
+            "text": "Times",
+            "image": "Time.png"
+          },
+          "_row_num": 9
+        },
+        {
+          "choice_list_name": "branches",
           "data_value": "exitpath",
           "display": {
             "text": "Exit",
             "image": "Exit.png"
           },
-          "_row_num": 9
+          "_row_num": 10
         }
       ],
       "yesno": [
@@ -727,7 +778,7 @@
           "display": {
             "text": "Yes"
           },
-          "_row_num": 10
+          "_row_num": 11
         },
         {
           "choice_list_name": "yesno",
@@ -735,7 +786,7 @@
           "display": {
             "text": "No"
           },
-          "_row_num": 11
+          "_row_num": 12
         }
       ]
     },
@@ -859,32 +910,10 @@
         "type": "string",
         "elementKey": "subcontractors"
       },
-      "project_start_time": {
-        "_defn": [
-          {
-            "_row_num": 11,
-            "section_name": "survey"
-          }
-        ],
-        "type": "object",
-        "elementType": "time",
-        "elementKey": "project_start_time"
-      },
-      "project_end_time": {
-        "_defn": [
-          {
-            "_row_num": 12,
-            "section_name": "survey"
-          }
-        ],
-        "type": "object",
-        "elementType": "time",
-        "elementKey": "project_end_time"
-      },
       "personnel": {
         "_defn": [
           {
-            "_row_num": 13,
+            "_row_num": 11,
             "section_name": "survey"
           }
         ],
@@ -924,6 +953,28 @@
           }
         },
         "elementKey": "geo_info"
+      },
+      "project_start_time": {
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "times_section"
+          }
+        ],
+        "type": "object",
+        "elementType": "time",
+        "elementKey": "project_start_time"
+      },
+      "project_end_time": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "times_section"
+          }
+        ],
+        "type": "object",
+        "elementType": "time",
+        "elementKey": "project_end_time"
       }
     },
     "section_names": [
@@ -933,7 +984,8 @@
       "mat_delivered_section",
       "mat_removed_section",
       "notes_section",
-      "survey"
+      "survey",
+      "times_section"
     ],
     "sections": {
       "initial": {
@@ -947,7 +999,8 @@
           "gps_section": true,
           "image_section": true,
           "mat_delivered_section": true,
-          "mat_removed_section": true
+          "mat_removed_section": true,
+          "times_section": true
         },
         "prompts": [
           {
@@ -1110,14 +1163,16 @@
           "gps_section": true,
           "image_section": true,
           "mat_delivered_section": true,
-          "mat_removed_section": true
+          "mat_removed_section": true,
+          "times_section": true
         },
         "reachable_sections": {
           "notes_section": true,
           "gps_section": true,
           "image_section": true,
           "mat_delivered_section": true,
-          "mat_removed_section": true
+          "mat_removed_section": true,
+          "times_section": true
         },
         "prompts": [
           {
@@ -1154,6 +1209,7 @@
             "display": {
               "text": "Vehicle"
             },
+            "choice_filter": "choice_item.type==='Vehicle'",
             "_row_num": 6,
             "__rowNum__": 5,
             "_token_type": "prompt",
@@ -1168,6 +1224,7 @@
             "display": {
               "text": "Consumables"
             },
+            "choice_filter": "choice_item.type==='Consumables'",
             "_row_num": 7,
             "__rowNum__": 6,
             "_token_type": "prompt",
@@ -1202,46 +1259,6 @@
             "promptIdx": 5
           },
           {
-            "type": "note",
-            "display": {
-              "text": "Time Logs"
-            },
-            "_row_num": 10,
-            "__rowNum__": 9,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 6
-          },
-          {
-            "type": "time",
-            "name": "project_start_time",
-            "display": {
-              "text": "Project Start Time"
-            },
-            "templatePath": "time_input_type.handlebars",
-            "_row_num": 11,
-            "__rowNum__": 10,
-            "_token_type": "prompt",
-            "_type": "time",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 7
-          },
-          {
-            "type": "time",
-            "name": "project_end_time",
-            "display": {
-              "text": "Project End Time"
-            },
-            "templatePath": "time_input_type.handlebars",
-            "_row_num": 12,
-            "__rowNum__": 11,
-            "_token_type": "prompt",
-            "_type": "time",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 8
-          },
-          {
             "type": "select_multiple",
             "values_list": "personnel_csv",
             "name": "personnel",
@@ -1249,31 +1266,31 @@
               "text": "Personnel"
             },
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 11,
+            "__rowNum__": 10,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 9
+            "promptIdx": 6
           },
           {
             "type": "user_branch",
             "values_list": "branches",
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 15,
+            "__rowNum__": 14,
             "_token_type": "prompt",
             "_type": "user_branch",
-            "_branch_label_enclosing_screen": "survey/_screen16",
-            "promptIdx": 10
+            "_branch_label_enclosing_screen": "survey/_screen14",
+            "promptIdx": 7
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "prompt",
             "_do_section_name": "notes_section",
             "_type": "_section",
-            "promptIdx": 11,
+            "promptIdx": 8,
             "display": {
               "title": "Notes"
             },
@@ -1281,12 +1298,12 @@
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
-            "promptIdx": 12,
+            "promptIdx": 9,
             "display": {
               "title": "GPS"
             },
@@ -1294,12 +1311,12 @@
           },
           {
             "clause": "do section image_section",
-            "_row_num": 27,
-            "__rowNum__": 26,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
-            "promptIdx": 13,
+            "promptIdx": 10,
             "display": {
               "title": "Photo"
             },
@@ -1307,12 +1324,12 @@
           },
           {
             "clause": "do section mat_delivered_section",
-            "_row_num": 30,
-            "__rowNum__": 29,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "prompt",
             "_do_section_name": "mat_delivered_section",
             "_type": "_section",
-            "promptIdx": 14,
+            "promptIdx": 11,
             "display": {
               "title": "Deliveries"
             },
@@ -1320,24 +1337,37 @@
           },
           {
             "clause": "do section mat_removed_section",
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 31,
+            "__rowNum__": 30,
             "_token_type": "prompt",
             "_do_section_name": "mat_removed_section",
             "_type": "_section",
-            "promptIdx": 15,
+            "promptIdx": 12,
             "display": {
               "title": "Removals"
             },
             "_branch_label_enclosing_screen": "mat_removed_section/0"
           },
           {
+            "clause": "do section times_section",
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "prompt",
+            "_do_section_name": "times_section",
+            "_type": "_section",
+            "promptIdx": 13,
+            "display": {
+              "title": "Times"
+            },
+            "_branch_label_enclosing_screen": "times_section/0"
+          },
+          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 37,
-            "_branch_label_enclosing_screen": "survey/_screen37",
-            "promptIdx": 16
+            "_row_num": 38,
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 14
           }
         ],
         "validation_tag_map": {
@@ -1354,11 +1384,11 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 14,
-              "__rowNum__": 13,
+              "_row_num": 12,
+              "__rowNum__": 11,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('construction_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('construction_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -1366,147 +1396,164 @@
             "display": {
               "text": "Construction Home Page"
             },
-            "_row_num": 16,
-            "__rowNum__": 15,
+            "_row_num": 14,
+            "__rowNum__": 13,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 18,
-              "__rowNum__": 17,
+              "_row_num": 16,
+              "__rowNum__": 15,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "clause": "goto menu",
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 2
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "do_section",
             "_do_section_name": "notes_section",
             "operationIdx": 3
           },
           {
             "clause": "goto menu",
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 20,
+            "__rowNum__": 19,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 4
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "do_section",
             "_do_section_name": "gps_section",
             "operationIdx": 5
           },
           {
             "clause": "goto menu",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 23,
+            "__rowNum__": 22,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 6
           },
           {
             "clause": "do section image_section",
-            "_row_num": 27,
-            "__rowNum__": 26,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "do_section",
             "_do_section_name": "image_section",
             "operationIdx": 7
           },
           {
             "clause": "goto menu",
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 8
           },
           {
             "clause": "do section mat_delivered_section",
-            "_row_num": 30,
-            "__rowNum__": 29,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "do_section",
             "_do_section_name": "mat_delivered_section",
             "operationIdx": 9
           },
           {
             "clause": "goto menu",
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "_row_num": 29,
+            "__rowNum__": 28,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 10
           },
           {
             "clause": "do section mat_removed_section",
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 31,
+            "__rowNum__": 30,
             "_token_type": "do_section",
             "_do_section_name": "mat_removed_section",
             "operationIdx": 11
           },
           {
             "clause": "goto menu",
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "_row_num": 32,
+            "__rowNum__": 31,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 12
           },
           {
-            "clause": "exit section",
-            "_row_num": 36,
-            "__rowNum__": 35,
-            "_token_type": "exit_section",
+            "clause": "do section times_section",
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "do_section",
+            "_do_section_name": "times_section",
             "operationIdx": 13
           },
           {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 37,
+            "clause": "goto menu",
+            "_row_num": 35,
+            "__rowNum__": 34,
+            "_token_type": "goto_label",
+            "_branch_label": "menu",
             "operationIdx": 14
           },
           {
+            "clause": "exit section",
             "_row_num": 37,
+            "__rowNum__": 36,
+            "_token_type": "exit_section",
+            "operationIdx": 15
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 38,
+            "operationIdx": 16
+          },
+          {
+            "_row_num": 38,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 15
+            "operationIdx": 17
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 37,
-            "operationIdx": 16
+            "_row_num": 38,
+            "operationIdx": 18
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "menu": 1,
-          "_screen16": 1,
+          "_screen14": 1,
           "notes": 3,
           "gps": 5,
           "image": 7,
           "mat_delivered": 9,
           "mat_removed": 11,
-          "exitpath": 13,
-          "_contents": 15,
-          "_screen37": 15
+          "times": 13,
+          "exitpath": 15,
+          "_contents": 17,
+          "_screen38": 17
         }
       },
       "notes_section": {
@@ -1676,7 +1723,6 @@
               "text": "Add photos to this list",
               "new_instance_text": "Add Image"
             },
-            "templatePath": "linked_table_image.handlebars",
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
@@ -1894,6 +1940,97 @@
           "_screen2": 0,
           "_contents": 2,
           "_screen5": 2
+        }
+      },
+      "times_section": {
+        "section_name": "times_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "time",
+            "name": "project_start_time",
+            "display": {
+              "text": "Project Start Time"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "times_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "time",
+            "name": "project_end_time",
+            "display": {
+              "text": "Project End Time"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "times_section/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 6,
+            "_branch_label_enclosing_screen": "times_section/_screen6",
+            "promptIdx": 2
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Project Times"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 5,
+              "__rowNum__": 4,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 6,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 6,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen6": 2
         }
       }
     }
