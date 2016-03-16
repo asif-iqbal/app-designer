@@ -330,26 +330,9 @@ var XLSXConverter = {};
                 }
             }
         },
-        "sketch": {
-            "type": "string",
-            "properties": {
-                "base64String": {
-                    "type": "string"
-                },
-                
-                
-            }
-        },
-        "signature": {
-            "type": "string",
-            "properties": {
-                "base64String": {
-                    "type": "string"
-                },
-                
-                
-            }
-        },
+								"sketch" : {"type":"string"}, // database primitive
+       	"signature" : {"type":"string"}, // database primitive
+       
         "audio": {
             "type": "object",
             "elementType": "mimeUri",
