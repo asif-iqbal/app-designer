@@ -1015,6 +1015,9 @@ promptTypes.user_branch = promptTypes.base.extend({
         } else {
             newctxt.failure({message: "Error fetching choices -- no ajax query or choices defined"});
         }
+        if ( that._screen && that._screen._renderContext ) {
+            that._screen._renderContext.enableForwardNavigation = false;
+        }
     }
 });
 promptTypes.select = promptTypes._linked_type.extend({
@@ -1969,6 +1972,18 @@ promptTypes.image = promptTypes.media.extend({
     templatePath: "templates/image.handlebars",
     captureAction: 'org.opendatakit.survey.android.activities.MediaCaptureImageActivity',
     chooseAction: 'org.opendatakit.survey.android.activities.MediaChooseImageActivity'
+});
+promptTypes.sketch = promptTypes.media.extend({
+    type: "string",
+    extension: "jpg",
+    contentType: "image/*",
+    templatePath: "templates/sketch.handlebars",
+});
+promptTypes.signature = promptTypes.media.extend({
+    type: "string",
+    extension: "jpg",
+    contentType: "image/*",
+    templatePath: "templates/sign.handlebars",
 });
 promptTypes.video = promptTypes.media.extend({
     type: "video",

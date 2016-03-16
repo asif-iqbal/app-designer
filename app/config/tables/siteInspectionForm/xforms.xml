@@ -6,7 +6,7 @@
   xmlns:orx="http://openrosa.org/xforms/" 
   xmlns:odk="http://www.opendatakit.org/xforms">
  <h:head>
-  <h:title>ODK 2.0 siteInspectionForm</h:title>
+  <h:title>siteInspectionForm</h:title>
   <model>
     <instance>
       <data id="siteInspectionForm">
@@ -30,6 +30,8 @@
         <personnel/>
         <project_end_time/>
         <project_start_time/>
+        <sign/>
+        <skt/>
         <subcontractors/>
         <task/>
         <vehicle/>
@@ -54,6 +56,8 @@
     <bind nodeset="/data/personnel" type="select"/>
     <bind nodeset="/data/project_end_time" type="time"/>
     <bind nodeset="/data/project_start_time" type="time"/>
+    <bind nodeset="/data/sign" type="string"/>
+    <bind nodeset="/data/skt" type="string"/>
     <bind nodeset="/data/subcontractors" type="string"/>
     <bind nodeset="/data/task" type="string"/>
     <bind nodeset="/data/vehicle" type="string"/>
