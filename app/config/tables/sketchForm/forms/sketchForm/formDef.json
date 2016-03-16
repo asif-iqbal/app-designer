@@ -71,15 +71,23 @@
         "_row_num": 6
       },
       {
-        "clause": "end screen",
+        "type": "string",
+        "name": "skt_base64String",
+        "display": {
+          "text": "Sketch"
+        },
         "_row_num": 7
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 8
       },
       {
         "clause": "begin screen",
         "display": {
           "text": "Signature"
         },
-        "_row_num": 8
+        "_row_num": 9
       },
       {
         "type": "signature",
@@ -88,27 +96,46 @@
           "text": "Signature",
           "hint": "Signature"
         },
-        "_row_num": 9
+        "_row_num": 10
+      },
+      {
+        "type": "string",
+        "name": "sign_base64String",
+        "display": {
+          "text": "Signature"
+        },
+        "_row_num": 11
+      },
+      {
+        "type": "string",
+        "name": "sign_person_name",
+        "display": {
+          "text": "Signature Name"
+        },
+        "_row_num": 12
       },
       {
         "clause": "end screen",
-        "_row_num": 10
+        "display": {
+          "hint": "Signature Name"
+        },
+        "_row_num": 13
       }
     ],
     "settings": [
       {
         "setting_name": "form_id",
-        "value": "sketchForm",
+        "value": "sketchFormV6",
         "_row_num": 2
       },
       {
         "setting_name": "form_version",
-        "value": 20160101999,
+        "value": 20160146999,
         "_row_num": 3
       },
       {
         "setting_name": "table_id",
-        "value": "sketchForm",
+        "value": "sketchFormV6",
         "_row_num": 4
       },
       {
@@ -141,17 +168,17 @@
     "settings": {
       "form_id": {
         "setting_name": "form_id",
-        "value": "sketchForm",
+        "value": "sketchFormV6",
         "_row_num": 2
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160101999,
+        "value": 20160146999,
         "_row_num": 3
       },
       "table_id": {
         "setting_name": "table_id",
-        "value": "sketchForm",
+        "value": "sketchFormV6",
         "_row_num": 4
       },
       "survey": {
@@ -219,50 +246,58 @@
             "section_name": "survey"
           }
         ],
-        "type": "object",
-        "elementType": "mimeUri",
+        "type": "string",
         "properties": {
-          "uriFragment": {
-            "type": "rowpath",
-            "elementKey": "skt_uriFragment"
-          },
-          "contentType": {
-            "type": "string",
-            "default": "image/*",
-            "elementKey": "skt_contentType"
-          },
           "base64String": {
-            "type": "string",
-            "elementKey": "skt_base64String"
+            "type": "string"
           }
         },
         "elementKey": "skt"
       },
-      "sign": {
+      "skt_base64String": {
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 7,
             "section_name": "survey"
           }
         ],
-        "type": "object",
-        "elementType": "mimeUri",
+        "type": "string",
+        "elementKey": "skt_base64String"
+      },
+      "sign": {
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
         "properties": {
-          "uriFragment": {
-            "type": "rowpath",
-            "elementKey": "sign_uriFragment"
-          },
-          "contentType": {
-            "type": "string",
-            "default": "image/*",
-            "elementKey": "sign_contentType"
-          },
           "base64String": {
-            "type": "string",
-            "elementKey": "sign_base64String"
+            "type": "string"
           }
         },
         "elementKey": "sign"
+      },
+      "sign_base64String": {
+        "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "sign_base64String"
+      },
+      "sign_person_name": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "sign_person_name"
       }
     },
     "section_names": [
@@ -466,26 +501,65 @@
             "promptIdx": 1
           },
           {
+            "type": "string",
+            "name": "skt_base64String",
+            "display": {
+              "text": "Sketch"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen5",
+            "promptIdx": 2
+          },
+          {
             "type": "signature",
             "name": "sign",
             "display": {
               "text": "Signature",
               "hint": "Signature"
             },
-            "_row_num": 9,
-            "__rowNum__": 8,
+            "_row_num": 10,
+            "__rowNum__": 9,
             "_token_type": "prompt",
             "_type": "signature",
-            "_branch_label_enclosing_screen": "survey/_screen8",
-            "promptIdx": 2
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 3
+          },
+          {
+            "type": "string",
+            "name": "sign_base64String",
+            "display": {
+              "text": "Signature"
+            },
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 4
+          },
+          {
+            "type": "string",
+            "name": "sign_person_name",
+            "display": {
+              "text": "Signature Name"
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 5
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 11,
-            "_branch_label_enclosing_screen": "survey/_screen11",
-            "promptIdx": 3
+            "_row_num": 14,
+            "_branch_label_enclosing_screen": "survey/_screen14",
+            "promptIdx": 6
           }
         ],
         "validation_tag_map": {
@@ -519,11 +593,11 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 7,
-              "__rowNum__": 6,
+              "_row_num": 8,
+              "__rowNum__": 7,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
@@ -531,28 +605,31 @@
             "display": {
               "text": "Signature"
             },
-            "_row_num": 8,
-            "__rowNum__": 7,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 10,
-              "__rowNum__": 9,
+              "display": {
+                "hint": "Signature Name"
+              },
+              "_row_num": 13,
+              "__rowNum__": 12,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 2
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 11,
+            "_row_num": 14,
             "operationIdx": 3
           },
           {
-            "_row_num": 11,
+            "_row_num": 14,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -561,16 +638,16 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 11,
+            "_row_num": 14,
             "operationIdx": 5
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_screen5": 1,
-          "_screen8": 2,
+          "_screen9": 2,
           "_contents": 4,
-          "_screen11": 4
+          "_screen14": 4
         }
       }
     }

@@ -1,0 +1,19 @@
+<form role="form">
+<div class="form-group">
+    {{> labelHint}}
+    <input class="form-control" type="text" name="{{name}}" value="{{value}}"
+            
+        />
+								
+				 
+    {{#if invalid}}
+        <p>invalid</p>
+    {{/if}}
+</div>
+</form>
+
+<div class="mediaContainer">
+    {{#if skt_uriFragment}}
+        <img width="200" src="{{skt_uriFragment}}"/>
+    {{/if}}
+</div>

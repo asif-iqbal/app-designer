@@ -1970,6 +1970,28 @@ promptTypes.image = promptTypes.media.extend({
     captureAction: 'org.opendatakit.survey.android.activities.MediaCaptureImageActivity',
     chooseAction: 'org.opendatakit.survey.android.activities.MediaChooseImageActivity'
 });
+
+promptTypes.image = promptTypes.media.extend({
+    type: "image",
+    extension: "jpg",
+    contentType: "image/*",
+    buttonLabel: 'Take your photo:',
+    templatePath: "templates/image.handlebars",
+    captureAction: 'org.opendatakit.survey.android.activities.MediaCaptureImageActivity',
+    chooseAction: 'org.opendatakit.survey.android.activities.MediaChooseImageActivity'
+});
+promptTypes.sketch = promptTypes.media.extend({
+    type: "string",
+    extension: "jpg",
+    contentType: "image/*",
+    templatePath: "templates/sketch2.handlebars",
+});
+promptTypes.signature = promptTypes.media.extend({
+    type: "string",
+    extension: "jpg",
+    contentType: "image/*",
+    templatePath: "templates/sign.handlebars",
+});
 promptTypes.video = promptTypes.media.extend({
     type: "video",
     contentType: "video/*",

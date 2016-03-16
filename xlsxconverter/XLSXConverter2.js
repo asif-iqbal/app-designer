@@ -331,38 +331,23 @@ var XLSXConverter = {};
             }
         },
         "sketch": {
-            "type": "object",
-            "elementType": "mimeUri",
+            "type": "string",
             "properties": {
-                "uriFragment": {
-                    "type": "rowpath"
-                },
-                "contentType": {
-                    "type": "string",
-                    "default": "image/*"
-                },
                 "base64String": {
                     "type": "string"
-                }
+                },
+                
+                
             }
         },
         "signature": {
-            "type": "object",
-            "elementType": "mimeUri",
+            "type": "string",
             "properties": {
-                "uriFragment": {
-                    "type": "rowpath"
-                },
-                "contentType": {
-                    "type": "string",
-                    "default": "image/*"
-                },
-                "name": {
-                    "type": "string"
-                },
                 "base64String": {
                     "type": "string"
-                }
+                },
+                
+                
             }
         },
         "audio": {
