@@ -330,6 +330,7 @@ var XLSXConverter = {};
                 }
             }
         },
+<<<<<<< HEAD
         "sketch": {
             "type": "string",
             "properties": {
@@ -350,6 +351,11 @@ var XLSXConverter = {};
                 
             }
         },
+=======
+								"sketch" : {"type":"string"}, // database primitive
+       	"signature" : {"type":"string"}, // database primitive
+       
+>>>>>>> a9c2f733d53d2836a20583eb48a55bb43ab39f86
         "audio": {
             "type": "object",
             "elementType": "mimeUri",
