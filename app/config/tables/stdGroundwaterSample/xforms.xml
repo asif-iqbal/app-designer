@@ -40,6 +40,9 @@
         <pvc_casing_intact/>
         <sample_id/>
         <sampling_type/>
+        <sign/>
+        <sign_person_name/>
+        <skt/>
         <stdgwslog_id/>
         <well_gripper/>
       </data> 
@@ -72,6 +75,9 @@
     <bind nodeset="/data/pvc_casing_intact" type="string"/>
     <bind nodeset="/data/sample_id" type="string"/>
     <bind nodeset="/data/sampling_type" type="string"/>
+    <bind nodeset="/data/sign" type="string"/>
+    <bind nodeset="/data/sign_person_name" type="string"/>
+    <bind nodeset="/data/skt" type="string"/>
     <bind nodeset="/data/stdgwslog_id" type="string"/>
     <bind nodeset="/data/well_gripper" type="string"/>
   </model> 

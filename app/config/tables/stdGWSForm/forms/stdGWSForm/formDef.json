@@ -37,7 +37,7 @@
       {
         "clause": "begin screen",
         "display": {
-          "text": "Samples/Wells"
+          "text": "Wells/Samples"
         },
         "_row_num": 2
       },
@@ -73,6 +73,7 @@
         "display": {
           "text": "Equipment"
         },
+        "choice_filter": "choice_item.type==='Equipment'",
         "templatePath": "select_dropdown_multiple.handlebars",
         "_row_num": 6
       },
@@ -124,7 +125,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160101003,
+        "value": 20160101004,
         "_row_num": 3
       },
       {
@@ -162,7 +163,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160101003,
+        "value": 20160101004,
         "_row_num": 3
       },
       "survey": {
@@ -481,6 +482,7 @@
             "display": {
               "text": "Equipment"
             },
+            "choice_filter": "choice_item.type==='Equipment'",
             "templatePath": "select_dropdown_multiple.handlebars",
             "_row_num": 6,
             "__rowNum__": 5,
@@ -519,7 +521,7 @@
           {
             "clause": "begin screen",
             "display": {
-              "text": "Samples/Wells"
+              "text": "Wells/Samples"
             },
             "_row_num": 2,
             "__rowNum__": 1,

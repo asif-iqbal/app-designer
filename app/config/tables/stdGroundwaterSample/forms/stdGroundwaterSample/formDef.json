@@ -15,7 +15,7 @@
       {
         "clause": "begin screen",
         "display": {
-          "text": "Well Integrity"
+          "text": "Enter Well ID"
         },
         "hideInContents": "true",
         "_row_num": 2
@@ -24,7 +24,7 @@
         "type": "string",
         "name": "sample_id",
         "display": {
-          "text": "Sample/Well Id"
+          "text": "Sample/Well ID"
         },
         "hideInContents": "true",
         "_row_num": 3
@@ -110,11 +110,11 @@
         "_row_num": 21
       },
       {
-        "branch_label": "groundwater",
+        "branch_label": "sketch",
         "_row_num": 22
       },
       {
-        "clause": "do section groundwater_section",
+        "clause": "do section sketch_section",
         "_row_num": 23
       },
       {
@@ -122,12 +122,36 @@
         "_row_num": 24
       },
       {
-        "branch_label": "exitpath",
+        "branch_label": "signature",
         "_row_num": 25
       },
       {
-        "clause": "exit section",
+        "clause": "do section signature_section",
         "_row_num": 26
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 27
+      },
+      {
+        "branch_label": "groundwater",
+        "_row_num": 28
+      },
+      {
+        "clause": "do section groundwater_section",
+        "_row_num": 29
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 30
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 31
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 32
       }
     ],
     "notes_section": [
@@ -257,12 +281,61 @@
           "text": "Add photos to this list",
           "new_instance_text": "Add Image"
         },
-        "templatePath": "linked_table_image.handlebars",
         "_row_num": 3
       },
       {
         "clause": "end screen",
         "_row_num": 4
+      }
+    ],
+    "sketch_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Sketch"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "sketch",
+        "name": "skt",
+        "display": {
+          "text": "Sketch"
+        },
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "signature_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Signature"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "string",
+        "name": "sign_person_name",
+        "display": {
+          "text": "Signatory Name"
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "signature",
+        "name": "sign",
+        "display": {
+          "text": "Signature"
+        },
+        "_row_num": 4
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 5
       }
     ],
     "groundwater_section": [
@@ -293,7 +366,7 @@
         "type": "decimal",
         "name": "depth_to_water",
         "display": {
-          "text": "Depth to Water"
+          "text": "Depth to Water (feet)"
         },
         "templatePath": "decimal_input_type.handlebars",
         "_row_num": 5
@@ -302,7 +375,7 @@
         "type": "decimal",
         "name": "depth_to_bottom",
         "display": {
-          "text": "Depth to Well Bottom"
+          "text": "Depth to Well Bottom (feet)"
         },
         "templatePath": "decimal_input_type.handlebars",
         "_row_num": 6
@@ -313,6 +386,7 @@
         "display": {
           "text": "Well Construction Material"
         },
+        "templatePath": "string_input_type.handlebars",
         "_row_num": 7
       },
       {
@@ -322,6 +396,7 @@
         "display": {
           "text": "Type of Sampling"
         },
+        "templatePath": "custom_select_dropdown.handlebars",
         "_row_num": 8
       },
       {
@@ -334,8 +409,9 @@
         "type": "string",
         "name": "one_purge_volume",
         "display": {
-          "text": "Calculation of One (1) Purge Volume"
+          "text": "Calculation of One (1) Purge Volume (gallons)"
         },
+        "templatePath": "string_input_type.handlebars",
         "_row_num": 10
       },
       {
@@ -430,10 +506,10 @@
       },
       {
         "choice_list_name": "branches",
-        "data_value": "groundwater",
+        "data_value": "sketch",
         "display": {
-          "text": "GWS Data",
-          "image": "Groundwater.png"
+          "text": "Sketch",
+          "image": "Sketch.png"
         },
         "_row_num": 6
       },
@@ -448,12 +524,30 @@
       },
       {
         "choice_list_name": "branches",
+        "data_value": "groundwater",
+        "display": {
+          "text": "GWS Data",
+          "image": "Groundwater.png"
+        },
+        "_row_num": 8
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "signature",
+        "display": {
+          "text": "Signature",
+          "image": "Signature.png"
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "branches",
         "data_value": "sketch",
         "display": {
           "text": "Sketch",
           "image": "Sketch.png"
         },
-        "_row_num": 8
+        "_row_num": 10
       },
       {
         "choice_list_name": "branches",
@@ -462,7 +556,7 @@
           "text": "Exit",
           "image": "Exit.png"
         },
-        "_row_num": 9
+        "_row_num": 11
       },
       {
         "choice_list_name": "yesno",
@@ -470,7 +564,7 @@
         "display": {
           "text": "Yes"
         },
-        "_row_num": 10
+        "_row_num": 12
       },
       {
         "choice_list_name": "yesno",
@@ -478,7 +572,7 @@
         "display": {
           "text": "No"
         },
-        "_row_num": 11
+        "_row_num": 13
       },
       {
         "choice_list_name": "yesno",
@@ -486,7 +580,7 @@
         "display": {
           "text": "N/A"
         },
-        "_row_num": 12
+        "_row_num": 14
       },
       {
         "choice_list_name": "types_of_sampling",
@@ -494,7 +588,7 @@
         "display": {
           "text": "Electric Pump"
         },
-        "_row_num": 13
+        "_row_num": 15
       },
       {
         "choice_list_name": "types_of_sampling",
@@ -502,7 +596,7 @@
         "display": {
           "text": "Peristaltic Pump"
         },
-        "_row_num": 14
+        "_row_num": 16
       },
       {
         "choice_list_name": "types_of_sampling",
@@ -510,7 +604,7 @@
         "display": {
           "text": "Bladder Pump"
         },
-        "_row_num": 15
+        "_row_num": 17
       },
       {
         "choice_list_name": "types_of_sampling",
@@ -518,7 +612,7 @@
         "display": {
           "text": "Inertial Pump"
         },
-        "_row_num": 16
+        "_row_num": 18
       },
       {
         "choice_list_name": "types_of_sampling",
@@ -526,7 +620,7 @@
         "display": {
           "text": "Bailer"
         },
-        "_row_num": 17
+        "_row_num": 19
       },
       {
         "choice_list_name": "types_of_sampling",
@@ -534,7 +628,7 @@
         "display": {
           "text": "Other"
         },
-        "_row_num": 18
+        "_row_num": 20
       }
     ],
     "calculates": [
@@ -557,7 +651,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160101002,
+        "value": 20160101003,
         "_row_num": 3
       },
       {
@@ -601,16 +695,30 @@
         "_row_num": 9
       },
       {
-        "setting_name": "groundwater_section",
+        "setting_name": "sketch_section",
         "display": {
-          "title": "GWS Data"
+          "title": "Sketch"
         },
         "_row_num": 10
       },
       {
+        "setting_name": "signature_section",
+        "display": {
+          "title": "Signature"
+        },
+        "_row_num": 11
+      },
+      {
+        "setting_name": "groundwater_section",
+        "display": {
+          "title": "GWS Data"
+        },
+        "_row_num": 12
+      },
+      {
         "setting_name": "instance_name",
         "value": "sample_id",
-        "_row_num": 11
+        "_row_num": 13
       }
     ],
     "model": [
@@ -703,6 +811,21 @@
         "name": "geo_info",
         "type": "geopoint",
         "_row_num": 19
+      },
+      {
+        "name": "skt",
+        "type": "sketch",
+        "_row_num": 20
+      },
+      {
+        "name": "sign_person_name",
+        "type": "string",
+        "_row_num": 21
+      },
+      {
+        "name": "sign",
+        "type": "sketch",
+        "_row_num": 22
       }
     ]
   },
@@ -732,7 +855,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160101002,
+        "value": 20160101003,
         "_row_num": 3
       },
       "table_id": {
@@ -775,17 +898,31 @@
         },
         "_row_num": 9
       },
+      "sketch_section": {
+        "setting_name": "sketch_section",
+        "display": {
+          "title": "Sketch"
+        },
+        "_row_num": 10
+      },
+      "signature_section": {
+        "setting_name": "signature_section",
+        "display": {
+          "title": "Signature"
+        },
+        "_row_num": 11
+      },
       "groundwater_section": {
         "setting_name": "groundwater_section",
         "display": {
           "title": "GWS Data"
         },
-        "_row_num": 10
+        "_row_num": 12
       },
       "instance_name": {
         "setting_name": "instance_name",
         "value": "sample_id",
-        "_row_num": 11
+        "_row_num": 13
       },
       "_locales": {
         "setting_name": "_locales",
@@ -852,10 +989,10 @@
         },
         {
           "choice_list_name": "branches",
-          "data_value": "groundwater",
+          "data_value": "sketch",
           "display": {
-            "text": "GWS Data",
-            "image": "Groundwater.png"
+            "text": "Sketch",
+            "image": "Sketch.png"
           },
           "_row_num": 6
         },
@@ -870,12 +1007,30 @@
         },
         {
           "choice_list_name": "branches",
+          "data_value": "groundwater",
+          "display": {
+            "text": "GWS Data",
+            "image": "Groundwater.png"
+          },
+          "_row_num": 8
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "signature",
+          "display": {
+            "text": "Signature",
+            "image": "Signature.png"
+          },
+          "_row_num": 9
+        },
+        {
+          "choice_list_name": "branches",
           "data_value": "sketch",
           "display": {
             "text": "Sketch",
             "image": "Sketch.png"
           },
-          "_row_num": 8
+          "_row_num": 10
         },
         {
           "choice_list_name": "branches",
@@ -884,7 +1039,7 @@
             "text": "Exit",
             "image": "Exit.png"
           },
-          "_row_num": 9
+          "_row_num": 11
         }
       ],
       "yesno": [
@@ -894,7 +1049,7 @@
           "display": {
             "text": "Yes"
           },
-          "_row_num": 10
+          "_row_num": 12
         },
         {
           "choice_list_name": "yesno",
@@ -902,7 +1057,7 @@
           "display": {
             "text": "No"
           },
-          "_row_num": 11
+          "_row_num": 13
         },
         {
           "choice_list_name": "yesno",
@@ -910,7 +1065,7 @@
           "display": {
             "text": "N/A"
           },
-          "_row_num": 12
+          "_row_num": 14
         }
       ],
       "types_of_sampling": [
@@ -920,7 +1075,7 @@
           "display": {
             "text": "Electric Pump"
           },
-          "_row_num": 13
+          "_row_num": 15
         },
         {
           "choice_list_name": "types_of_sampling",
@@ -928,7 +1083,7 @@
           "display": {
             "text": "Peristaltic Pump"
           },
-          "_row_num": 14
+          "_row_num": 16
         },
         {
           "choice_list_name": "types_of_sampling",
@@ -936,7 +1091,7 @@
           "display": {
             "text": "Bladder Pump"
           },
-          "_row_num": 15
+          "_row_num": 17
         },
         {
           "choice_list_name": "types_of_sampling",
@@ -944,7 +1099,7 @@
           "display": {
             "text": "Inertial Pump"
           },
-          "_row_num": 16
+          "_row_num": 18
         },
         {
           "choice_list_name": "types_of_sampling",
@@ -952,7 +1107,7 @@
           "display": {
             "text": "Bailer"
           },
-          "_row_num": 17
+          "_row_num": 19
         },
         {
           "choice_list_name": "types_of_sampling",
@@ -960,7 +1115,7 @@
           "display": {
             "text": "Other"
           },
-          "_row_num": 18
+          "_row_num": 20
         }
       ]
     },
@@ -1273,6 +1428,48 @@
           }
         ],
         "elementKey": "geo_info"
+      },
+      "skt": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "sketch_section"
+          },
+          {
+            "_row_num": 20,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "skt"
+      },
+      "sign_person_name": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "signature_section"
+          },
+          {
+            "_row_num": 21,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "sign_person_name"
+      },
+      "sign": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "signature_section"
+          },
+          {
+            "_row_num": 22,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "sign"
       }
     },
     "section_names": [
@@ -1282,6 +1479,8 @@
       "initial",
       "inspection_section",
       "notes_section",
+      "signature_section",
+      "sketch_section",
       "survey"
     ],
     "sections": {
@@ -1296,6 +1495,8 @@
           "gps_section": true,
           "inspection_section": true,
           "image_section": true,
+          "sketch_section": true,
+          "signature_section": true,
           "groundwater_section": true
         },
         "prompts": [
@@ -1403,6 +1604,8 @@
           "gps_section": true,
           "inspection_section": true,
           "image_section": true,
+          "sketch_section": true,
+          "signature_section": true,
           "groundwater_section": true
         },
         "reachable_sections": {
@@ -1410,6 +1613,8 @@
           "gps_section": true,
           "inspection_section": true,
           "image_section": true,
+          "sketch_section": true,
+          "signature_section": true,
           "groundwater_section": true
         },
         "prompts": [
@@ -1417,7 +1622,7 @@
             "type": "string",
             "name": "sample_id",
             "display": {
-              "text": "Sample/Well Id"
+              "text": "Sample/Well ID"
             },
             "hideInContents": "true",
             "_row_num": 3,
@@ -1491,13 +1696,39 @@
             "_branch_label_enclosing_screen": "image_section/0"
           },
           {
-            "clause": "do section groundwater_section",
+            "clause": "do section sketch_section",
             "_row_num": 23,
             "__rowNum__": 22,
             "_token_type": "prompt",
-            "_do_section_name": "groundwater_section",
+            "_do_section_name": "sketch_section",
             "_type": "_section",
             "promptIdx": 6,
+            "display": {
+              "title": "Sketch"
+            },
+            "_branch_label_enclosing_screen": "sketch_section/0"
+          },
+          {
+            "clause": "do section signature_section",
+            "_row_num": 26,
+            "__rowNum__": 25,
+            "_token_type": "prompt",
+            "_do_section_name": "signature_section",
+            "_type": "_section",
+            "promptIdx": 7,
+            "display": {
+              "title": "Signature"
+            },
+            "_branch_label_enclosing_screen": "signature_section/0"
+          },
+          {
+            "clause": "do section groundwater_section",
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "prompt",
+            "_do_section_name": "groundwater_section",
+            "_type": "_section",
+            "promptIdx": 8,
             "display": {
               "title": "GWS Data"
             },
@@ -1507,9 +1738,9 @@
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 27,
-            "_branch_label_enclosing_screen": "survey/_screen27",
-            "promptIdx": 7
+            "_row_num": 33,
+            "_branch_label_enclosing_screen": "survey/_screen33",
+            "promptIdx": 9
           }
         ],
         "validation_tag_map": {
@@ -1519,7 +1750,7 @@
           {
             "clause": "begin screen",
             "display": {
-              "text": "Well Integrity"
+              "text": "Enter Well ID"
             },
             "hideInContents": "true",
             "_row_num": 2,
@@ -1627,11 +1858,11 @@
             "operationIdx": 10
           },
           {
-            "clause": "do section groundwater_section",
+            "clause": "do section sketch_section",
             "_row_num": 23,
             "__rowNum__": 22,
             "_token_type": "do_section",
-            "_do_section_name": "groundwater_section",
+            "_do_section_name": "sketch_section",
             "operationIdx": 11
           },
           {
@@ -1643,32 +1874,64 @@
             "operationIdx": 12
           },
           {
-            "clause": "exit section",
+            "clause": "do section signature_section",
             "_row_num": 26,
             "__rowNum__": 25,
-            "_token_type": "exit_section",
+            "_token_type": "do_section",
+            "_do_section_name": "signature_section",
             "operationIdx": 13
           },
           {
-            "_token_type": "exit_section",
-            "clause": "exit section",
+            "clause": "goto menu",
             "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "goto_label",
+            "_branch_label": "menu",
             "operationIdx": 14
           },
           {
-            "_row_num": 27,
+            "clause": "do section groundwater_section",
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "do_section",
+            "_do_section_name": "groundwater_section",
+            "operationIdx": 15
+          },
+          {
+            "clause": "goto menu",
+            "_row_num": 30,
+            "__rowNum__": 29,
+            "_token_type": "goto_label",
+            "_branch_label": "menu",
+            "operationIdx": 16
+          },
+          {
+            "clause": "exit section",
+            "_row_num": 32,
+            "__rowNum__": 31,
+            "_token_type": "exit_section",
+            "operationIdx": 17
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 33,
+            "operationIdx": 18
+          },
+          {
+            "_row_num": 33,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 15
+            "operationIdx": 19
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 27,
-            "operationIdx": 16
+            "_row_num": 33,
+            "operationIdx": 20
           }
         ],
         "branch_label_map": {
@@ -1679,10 +1942,12 @@
           "gps": 5,
           "inspection": 7,
           "image": 9,
-          "groundwater": 11,
-          "exitpath": 13,
-          "_contents": 15,
-          "_screen27": 15
+          "sketch": 11,
+          "signature": 13,
+          "groundwater": 15,
+          "exitpath": 17,
+          "_contents": 19,
+          "_screen33": 19
         }
       },
       "notes_section": {
@@ -1999,7 +2264,6 @@
               "text": "Add photos to this list",
               "new_instance_text": "Add Image"
             },
-            "templatePath": "linked_table_image.handlebars",
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
@@ -2065,6 +2329,171 @@
           "_screen5": 2
         }
       },
+      "sketch_section": {
+        "section_name": "sketch_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "sketch",
+            "name": "skt",
+            "display": {
+              "text": "Sketch"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "sketch",
+            "_branch_label_enclosing_screen": "sketch_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "sketch_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Sketch"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      },
+      "signature_section": {
+        "section_name": "signature_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "string",
+            "name": "sign_person_name",
+            "display": {
+              "text": "Signatory Name"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "signature_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "signature",
+            "name": "sign",
+            "display": {
+              "text": "Signature"
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "signature",
+            "_branch_label_enclosing_screen": "signature_section/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 6,
+            "_branch_label_enclosing_screen": "signature_section/_screen6",
+            "promptIdx": 2
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Signature"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 5,
+              "__rowNum__": 4,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 6,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 6,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen6": 2
+        }
+      },
       "groundwater_section": {
         "section_name": "groundwater_section",
         "nested_sections": {},
@@ -2100,7 +2529,7 @@
             "type": "decimal",
             "name": "depth_to_water",
             "display": {
-              "text": "Depth to Water"
+              "text": "Depth to Water (feet)"
             },
             "templatePath": "decimal_input_type.handlebars",
             "_row_num": 5,
@@ -2114,7 +2543,7 @@
             "type": "decimal",
             "name": "depth_to_bottom",
             "display": {
-              "text": "Depth to Well Bottom"
+              "text": "Depth to Well Bottom (feet)"
             },
             "templatePath": "decimal_input_type.handlebars",
             "_row_num": 6,
@@ -2130,6 +2559,7 @@
             "display": {
               "text": "Well Construction Material"
             },
+            "templatePath": "string_input_type.handlebars",
             "_row_num": 7,
             "__rowNum__": 6,
             "_token_type": "prompt",
@@ -2144,6 +2574,7 @@
             "display": {
               "text": "Type of Sampling"
             },
+            "templatePath": "custom_select_dropdown.handlebars",
             "_row_num": 8,
             "__rowNum__": 7,
             "_token_type": "prompt",
@@ -2155,8 +2586,9 @@
             "type": "string",
             "name": "one_purge_volume",
             "display": {
-              "text": "Calculation of One (1) Purge Volume"
+              "text": "Calculation of One (1) Purge Volume (gallons)"
             },
+            "templatePath": "string_input_type.handlebars",
             "_row_num": 10,
             "__rowNum__": 9,
             "_token_type": "prompt",

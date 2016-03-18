@@ -24,6 +24,7 @@
           <savepointCreator/>
           <savepointTimestamp/>
         </orx:meta>
+        <name/>
         <note/>
         <parent_id/>
         <pic/>
@@ -41,6 +42,7 @@
     <bind nodeset="/data/meta/savepointType" type="string"/>
     <bind nodeset="/data/meta/savepointCreator" type="string"/>
     <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/name" type="string"/>
     <bind nodeset="/data/note" type="string"/>
     <bind nodeset="/data/parent_id" type="string"/>
     <bind nodeset="/data/pic" type="binary"/>

@@ -313,16 +313,24 @@
         "_row_num": 2
       },
       {
-        "type": "signature",
-        "name": "sign",
+        "type": "string",
+        "name": "sign_person_name",
         "display": {
-          "text": "Signature"
+          "text": "Signatory Name"
         },
         "_row_num": 3
       },
       {
-        "clause": "end screen",
+        "type": "sketch",
+        "name": "sign",
+        "display": {
+          "text": "Signature"
+        },
         "_row_num": 4
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 5
       }
     ],
     "times_section": [
@@ -881,14 +889,9 @@
           }
         ],
         "type": "string",
-        "properties": {
-          "base64String": {
-            "type": "string"
-          }
-        },
         "elementKey": "skt"
       },
-      "sign": {
+      "sign_person_name": {
         "_defn": [
           {
             "_row_num": 3,
@@ -896,11 +899,16 @@
           }
         ],
         "type": "string",
-        "properties": {
-          "base64String": {
-            "type": "string"
+        "elementKey": "sign_person_name"
+      },
+      "sign": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "signature_section"
           }
-        },
+        ],
+        "type": "string",
         "elementKey": "sign"
       },
       "project_start_time": {
@@ -1816,25 +1824,38 @@
         "reachable_sections": {},
         "prompts": [
           {
-            "type": "signature",
-            "name": "sign",
+            "type": "string",
+            "name": "sign_person_name",
             "display": {
-              "text": "Signature"
+              "text": "Signatory Name"
             },
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
-            "_type": "signature",
+            "_type": "string",
             "_branch_label_enclosing_screen": "signature_section/_screen2",
             "promptIdx": 0
+          },
+          {
+            "type": "sketch",
+            "name": "sign",
+            "display": {
+              "text": "Signature"
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "sketch",
+            "_branch_label_enclosing_screen": "signature_section/_screen2",
+            "promptIdx": 1
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 5,
-            "_branch_label_enclosing_screen": "signature_section/_screen5",
-            "promptIdx": 1
+            "_row_num": 6,
+            "_branch_label_enclosing_screen": "signature_section/_screen6",
+            "promptIdx": 2
           }
         ],
         "validation_tag_map": {
@@ -1851,23 +1872,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 4,
-              "__rowNum__": 3,
+              "_row_num": 5,
+              "__rowNum__": 4,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 5,
+            "_row_num": 6,
             "operationIdx": 1
           },
           {
-            "_row_num": 5,
+            "_row_num": 6,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -1876,14 +1897,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 5,
+            "_row_num": 6,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen5": 2
+          "_screen6": 2
         }
       },
       "times_section": {

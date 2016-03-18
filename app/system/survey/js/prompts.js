@@ -1973,13 +1973,13 @@ promptTypes.image = promptTypes.media.extend({
     captureAction: 'org.opendatakit.survey.android.activities.MediaCaptureImageActivity',
     chooseAction: 'org.opendatakit.survey.android.activities.MediaChooseImageActivity'
 });
-promptTypes.sketch = promptTypes.media.extend({
+promptTypes.sketch = promptTypes.input_type.extend({
     type: "string",
     extension: "jpg",
     contentType: "image/*",
     templatePath: "templates/sketch.handlebars",
 });
-promptTypes.signature = promptTypes.media.extend({
+promptTypes.signature = promptTypes.base.extend({
     type: "string",
     extension: "jpg",
     contentType: "image/*",

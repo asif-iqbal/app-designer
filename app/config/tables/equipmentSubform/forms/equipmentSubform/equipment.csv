@@ -1,3 +1,5 @@
-"name"
-"Automatic Machine"
-"Long Meter"
+"name","type"
+"V1","Vehicle"
+"V2","Vehicle"
+"E1","Equipment"
+"C1","Consumables"

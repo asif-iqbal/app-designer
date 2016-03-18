@@ -62,6 +62,7 @@
         "display": {
           "text": "Specific Conductivity (&#xb5;S/cm)"
         },
+        "templatePath": "integer_input_type.handlebars",
         "_row_num": 8
       },
       {
@@ -120,7 +121,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160101003,
+        "value": 20160101004,
         "_row_num": 3
       },
       {
@@ -215,7 +216,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160101003,
+        "value": 20160101004,
         "_row_num": 3
       },
       "table_id": {
@@ -567,6 +568,7 @@
             "display": {
               "text": "Specific Conductivity (&#xb5;S/cm)"
             },
+            "templatePath": "integer_input_type.handlebars",
             "_row_num": 8,
             "__rowNum__": 7,
             "_token_type": "prompt",

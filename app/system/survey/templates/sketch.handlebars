@@ -4,19 +4,38 @@
 	border: 1px solid #000;
 	background-color:#fff;
 }
-#slider-isurvey2{
-display:none;
-}
 </style>
-<canvas id="can" width="400" height="400" style="position:relative;top:10%;left: 0%;border: 1px solid;background-color: #fff;width: 100%;"></canvas>
+<form role="form">
+<div class="form-group">
+    <div class="input-container">{{! used to prevent swiping on sliders}}
+    <input id="slider-{{name}}-sketch"
+        type="hidden"
+        class="form-control"
+        placeholder="{{{localize display.text}}}"
+        name="{{name}}"
+        value="{{value}}"
+        {{#eachProperty inputAttributes}}
+            {{property}}="{{value}}"
+        {{/eachProperty}}
+        {{#if disabled}}
+            style="background-color:lightgray;"
+            disabled="true"
+        {{/if}}
+        />
+    </div>
 
-<input type="button" class="btn btn-default btn-lg" value="Save Sketch" id="btn" onclick="save()">
-<input type="button" class="btn btn-default btn-lg" value="Clear Sketch" id="clr" onclick="erase()">
+<div id="sketch">
+
+<canvas id="can-{{name}}" width="400" height="400" style="border: 1px solid;background-color: #fff;width: 100%;"></canvas>
+</div>
+<input type="button" class="btn btn-default btn-lg" value="Save" id="btn" onclick="save(this)">
+<input type="button" class="btn btn-default btn-lg" value="Clear" id="clr" onclick="erase()">
 
 <div class="mediaContainer" id="imageView">
-        <img id="canvasimg" style="position:relative;top:10%;left: 0%;border: 1px solid;background-color: #fff;width: 100%;" src="{{skt_uriFragment}}"/>
+        <img id="canvasimg-{{name}}" style="position:relative;top:10%;left: 0%;border: 1px solid;background-color: #fff;width: 100%;" />
 </div>
-
+</div>
+</form>
 <script type="text/javascript">
 
 
@@ -32,27 +51,58 @@ var x = "black",
     y = 2;
 
 function init() {
+    document.getElementById("canvasimg-{{name}}").src = document.getElementById("slider-{{name}}-sketch").value;
 
-			document.getElementById("canvasimg").src = document.getElementById("slider-isurvey2").value
-
-				
-    canvas = document.getElementById('can');
-    ctx = canvas.getContext("2d");
-    w = canvas.width;
+    canvas = document.getElementById('can-{{name}}');
+							
+	w = canvas.width;
     h = canvas.height;
+	
+    var ctx = canvas.getContext('2d');
 
-    canvas.addEventListener("mousemove", function (e) {
-        findxy('move', e)
+    var sketch = document.querySelector('#sketch');
+    var sketch_style = getComputedStyle(sketch);
+    canvas.width = parseInt(sketch_style.getPropertyValue('width'));
+    canvas.height = parseInt(sketch_style.getPropertyValue('height'));
+
+    var mouse = {x: 0, y: 0};
+    var last_mouse = {x: 0, y: 0};
+
+    /* Mouse Capturing Work */
+    canvas.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    	var touch = e.touches[0];
+
+        last_mouse.x = mouse.x;
+        last_mouse.y = mouse.y;
+
+        mouse.x = touch.pageX - this.offsetLeft;
+        mouse.y = touch.pageY - this.offsetTop;
     }, false);
-    canvas.addEventListener("mousedown", function (e) {
-        findxy('down', e)
+
+
+    /* Drawing on Paint App */
+    ctx.lineWidth = 1;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = 'black';
+
+    canvas.addEventListener('touchstart', function(e) {
+        canvas.addEventListener('touchmove', onPaint, false);
     }, false);
-    canvas.addEventListener("mouseup", function (e) {
-        findxy('up', e)
+
+    canvas.addEventListener('touchend', function() {
+        canvas.removeEventListener('touchmove', onPaint, false);
     }, false);
-    canvas.addEventListener("mouseout", function (e) {
-        findxy('out', e)
-    }, false);
+
+    var onPaint = function() {
+        ctx.beginPath();
+        ctx.moveTo(last_mouse.x, last_mouse.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.closePath();
+        ctx.stroke();
+    };
+				
 }
 
 function color(obj) {
@@ -95,18 +145,19 @@ function draw() {
 }
 
 function erase() {
-    var m = confirm("Want to clear");
-    if (m) {
-        ctx.clearRect(0, 0, w, h);
-        document.getElementById("canvasimg").style.display = "none";
-    }
+   // var m = confirm("Want to clear");
+    //if (m) {
+        document.getElementById('can-{{name}}').getContext('2d').clearRect(0, 0, w, h);
+        document.getElementById("canvasimg-{{name}}").style.display = "none";
+    //}
 }
 
 function save() {
     var dataURL = canvas.toDataURL();
-    document.getElementById("canvasimg").src = dataURL;
-				document.getElementById("slider-isurvey2").value = dataURL;
-    document.getElementById("canvasimg").style.display = "inline";
+				//	$("#canvasimg").attr("src",dataURL);
+    document.getElementById("canvasimg-{{name}}").src = dataURL;
+	document.getElementById("slider-{{name}}-sketch").value = dataURL;
+    document.getElementById("canvasimg-{{name}}").style.display = "inline";
 }
 
 function findxy(res, e) {

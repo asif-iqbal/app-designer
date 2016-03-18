@@ -125,17 +125,17 @@
     "settings": [
       {
         "setting_name": "form_id",
-        "value": "sketchFormV6",
+        "value": "sketchForm",
         "_row_num": 2
       },
       {
         "setting_name": "form_version",
-        "value": 20160146999,
+        "value": 20160101000,
         "_row_num": 3
       },
       {
         "setting_name": "table_id",
-        "value": "sketchFormV6",
+        "value": "sketchForm",
         "_row_num": 4
       },
       {
@@ -168,17 +168,17 @@
     "settings": {
       "form_id": {
         "setting_name": "form_id",
-        "value": "sketchFormV6",
+        "value": "sketchForm",
         "_row_num": 2
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160146999,
+        "value": 20160101000,
         "_row_num": 3
       },
       "table_id": {
         "setting_name": "table_id",
-        "value": "sketchFormV6",
+        "value": "sketchForm",
         "_row_num": 4
       },
       "survey": {
