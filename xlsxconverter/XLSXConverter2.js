@@ -322,10 +322,12 @@ var XLSXConverter = {};
             "elementType": "mimeUri",
             "properties": {
                 "uriFragment": {
-                    "type": "rowpath"
+                    "type": "string",
+                    "elementType": "rowpath"
                 },
                 "contentType": {
                     "type": "string",
+                    "elementType": "mimeType",
                     "default": "image/*"
                 }
             }

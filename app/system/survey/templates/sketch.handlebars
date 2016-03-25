@@ -23,6 +23,7 @@
         {{/if}}
         />
     </div>
+    </div>
 
 <div id="sketch">
 
@@ -54,19 +55,19 @@ function init() {
     document.getElementById("canvasimg-{{name}}").src = document.getElementById("slider-{{name}}-sketch").value;
 
     canvas = document.getElementById('can-{{name}}');
-							
-	w = canvas.width;
-    h = canvas.height;
+		
+	w = canvas.offsetWidth;
+    h = canvas.offsetHeight;
 	
     var ctx = canvas.getContext('2d');
-
+	var flag = true;
     var sketch = document.querySelector('#sketch');
     var sketch_style = getComputedStyle(sketch);
     canvas.width = parseInt(sketch_style.getPropertyValue('width'));
     canvas.height = parseInt(sketch_style.getPropertyValue('height'));
 
-    var mouse = {x: 0, y: 0};
-    var last_mouse = {x: 0, y: 0};
+    var mouse = {x:0 , y:0 };
+    var last_mouse = {x:0 , y:0 };
 
     /* Mouse Capturing Work */
     canvas.addEventListener('touchmove', function(e) {
@@ -78,6 +79,14 @@ function init() {
 
         mouse.x = touch.pageX - this.offsetLeft;
         mouse.y = touch.pageY - this.offsetTop;
+		
+		if (last_mouse.x == 0 && last_mouse.y == 0) {
+        	last_mouse.x = mouse.x;
+        	last_mouse.y = mouse.y;
+        }
+		
+		//alert("touchmove" + mouse.x + '  =====' + mouse.y)
+		
     }, false);
 
 
@@ -91,17 +100,35 @@ function init() {
         canvas.addEventListener('touchmove', onPaint, false);
     }, false);
 
-    canvas.addEventListener('touchend', function() {
-        canvas.removeEventListener('touchmove', onPaint, false);
+    canvas.addEventListener('touchend', function(e) {
+        
+		canvas.removeEventListener('touchmove', onPaint, false);
+		
+		last_mouse.x = 0;
+        last_mouse.y = 0;
+
+        mouse.x = 0;
+        mouse.y = 0;
+		
+		//alert("touchend -- last_mouse.x = " +last_mouse.x + "     last_mouse.y=   " + last_mouse.y)
+		
+		
     }, false);
 
     var onPaint = function() {
+		
         ctx.beginPath();
+		//alert("-- last_mouse.x = " +last_mouse.x + "     last_mouse.y=   " + last_mouse.y)
         ctx.moveTo(last_mouse.x, last_mouse.y);
         ctx.lineTo(mouse.x, mouse.y);
         ctx.closePath();
         ctx.stroke();
+		
+		
     };
+	
+
+	
 				
 }
 

@@ -326,7 +326,7 @@
         "_row_num": 3
       },
       {
-        "type": "signature",
+        "type": "sketch",
         "name": "sign",
         "display": {
           "text": "Signature"
@@ -2424,7 +2424,7 @@
             "promptIdx": 0
           },
           {
-            "type": "signature",
+            "type": "sketch",
             "name": "sign",
             "display": {
               "text": "Signature"
@@ -2432,7 +2432,7 @@
             "_row_num": 4,
             "__rowNum__": 3,
             "_token_type": "prompt",
-            "_type": "signature",
+            "_type": "sketch",
             "_branch_label_enclosing_screen": "signature_section/_screen2",
             "promptIdx": 1
           },
