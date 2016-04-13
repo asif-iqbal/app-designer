@@ -57,6 +57,90 @@
         "_row_num": 4
       },
       {
+        "type": "assign",
+        "name": "loc_name",
+        "calculation": "opendatakit.getLocationInfo().name",
+        "_row_num": 5
+      },
+      {
+        "type": "string",
+        "name": "loc_name",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "assign",
+        "name": "loc_aid",
+        "calculation": "opendatakit.getLocationInfo().aid",
+        "_row_num": 7
+      },
+      {
+        "type": "string",
+        "name": "loc_aid",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 8
+      },
+      {
+        "type": "assign",
+        "name": "loc_streetAddress",
+        "calculation": "opendatakit.getLocationInfo().streetAddress",
+        "_row_num": 9
+      },
+      {
+        "type": "string",
+        "name": "loc_streetAddress",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 10
+      },
+      {
+        "type": "assign",
+        "name": "loc_city",
+        "calculation": "opendatakit.getLocationInfo().city",
+        "_row_num": 11
+      },
+      {
+        "type": "string",
+        "name": "loc_city",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 12
+      },
+      {
+        "type": "assign",
+        "name": "loc_state",
+        "calculation": "opendatakit.getLocationInfo().state",
+        "_row_num": 13
+      },
+      {
+        "type": "string",
+        "name": "loc_state",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 14
+      },
+      {
+        "type": "assign",
+        "name": "loc_zip",
+        "calculation": "opendatakit.getLocationInfo().zip",
+        "_row_num": 15
+      },
+      {
+        "type": "string",
+        "name": "loc_zip",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 16
+      },
+      {
+        "type": "assign",
+        "name": "loc_client",
+        "calculation": "opendatakit.getLocationInfo().client",
+        "_row_num": 17
+      },
+      {
+        "type": "string",
+        "name": "loc_client",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 18
+      },
+      {
         "type": "select_multiple",
         "values_list": "personnel_csv",
         "name": "personnel",
@@ -64,7 +148,53 @@
           "text": "Personnel"
         },
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 5
+        "_row_num": 19
+      },
+      {
+        "type": "string",
+        "name": "task",
+        "display": {
+          "text": "Task"
+        },
+        "_row_num": 20
+      },
+      {
+        "type": "string",
+        "name": "subcontractors",
+        "display": {
+          "text": "Subcontractors"
+        },
+        "_row_num": 21
+      },
+      {
+        "type": "string",
+        "name": "weather",
+        "display": {
+          "text": "Weather"
+        },
+        "_row_num": 22
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "equipment_csv",
+        "name": "vehicle",
+        "display": {
+          "text": "Vehicles"
+        },
+        "choice_filter": "choice_item.type==='Vehicle'",
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 23
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "equipment_csv",
+        "name": "consumables",
+        "display": {
+          "text": "Consumables"
+        },
+        "choice_filter": "choice_item.type==='Consumables'",
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 24
       },
       {
         "type": "select_multiple",
@@ -75,7 +205,7 @@
         },
         "choice_filter": "choice_item.type==='Equipment'",
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 6
+        "_row_num": 25
       },
       {
         "type": "linked_table",
@@ -84,11 +214,11 @@
           "text": "Add GWS Samples to this list",
           "new_instance_text": "Add Well/Sample"
         },
-        "_row_num": 7
+        "_row_num": 26
       },
       {
         "clause": "end screen",
-        "_row_num": 8
+        "_row_num": 27
       }
     ],
     "queries": [
@@ -125,7 +255,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160101004,
+        "value": 20160103,
         "_row_num": 3
       },
       {
@@ -163,7 +293,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160101004,
+        "value": 20160103,
         "_row_num": 3
       },
       "survey": {
@@ -243,10 +373,80 @@
         "type": "string",
         "elementKey": "stdgwslog_id"
       },
+      "loc_name": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_name"
+      },
+      "loc_aid": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_aid"
+      },
+      "loc_streetAddress": {
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_streetAddress"
+      },
+      "loc_city": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_city"
+      },
+      "loc_state": {
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_state"
+      },
+      "loc_zip": {
+        "_defn": [
+          {
+            "_row_num": 16,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_zip"
+      },
+      "loc_client": {
+        "_defn": [
+          {
+            "_row_num": 18,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_client"
+      },
       "personnel": {
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 19,
             "section_name": "survey"
           }
         ],
@@ -258,10 +458,70 @@
         "valuesList": "personnel_csv",
         "elementKey": "personnel"
       },
+      "task": {
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "task"
+      },
+      "subcontractors": {
+        "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "subcontractors"
+      },
+      "weather": {
+        "_defn": [
+          {
+            "_row_num": 22,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "weather"
+      },
+      "vehicle": {
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "vehicle_items"
+        },
+        "valuesList": "equipment_csv",
+        "elementKey": "vehicle"
+      },
+      "consumables": {
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "consumables_items"
+        },
+        "valuesList": "equipment_csv",
+        "elementKey": "consumables"
+      },
       "equipment": {
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 25,
             "section_name": "survey"
           }
         ],
@@ -461,6 +721,83 @@
             "promptIdx": 0
           },
           {
+            "type": "string",
+            "name": "loc_name",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "string",
+            "name": "loc_aid",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "string",
+            "name": "loc_streetAddress",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "string",
+            "name": "loc_city",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "string",
+            "name": "loc_state",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "string",
+            "name": "loc_zip",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "string",
+            "name": "loc_client",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
+          },
+          {
             "type": "select_multiple",
             "values_list": "personnel_csv",
             "name": "personnel",
@@ -468,12 +805,83 @@
               "text": "Personnel"
             },
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 5,
-            "__rowNum__": 4,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 1
+            "promptIdx": 8
+          },
+          {
+            "type": "string",
+            "name": "task",
+            "display": {
+              "text": "Task"
+            },
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "string",
+            "name": "subcontractors",
+            "display": {
+              "text": "Subcontractors"
+            },
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "string",
+            "name": "weather",
+            "display": {
+              "text": "Weather"
+            },
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "equipment_csv",
+            "name": "vehicle",
+            "display": {
+              "text": "Vehicles"
+            },
+            "choice_filter": "choice_item.type==='Vehicle'",
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "equipment_csv",
+            "name": "consumables",
+            "display": {
+              "text": "Consumables"
+            },
+            "choice_filter": "choice_item.type==='Consumables'",
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 13
           },
           {
             "type": "select_multiple",
@@ -484,12 +892,12 @@
             },
             "choice_filter": "choice_item.type==='Equipment'",
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 2
+            "promptIdx": 14
           },
           {
             "type": "linked_table",
@@ -498,20 +906,20 @@
               "text": "Add GWS Samples to this list",
               "new_instance_text": "Add Well/Sample"
             },
-            "_row_num": 7,
-            "__rowNum__": 6,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "linked_table",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 3
+            "promptIdx": 15
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 9,
-            "_branch_label_enclosing_screen": "survey/_screen9",
-            "promptIdx": 4
+            "_row_num": 28,
+            "_branch_label_enclosing_screen": "survey/_screen28",
+            "promptIdx": 16
           }
         ],
         "validation_tag_map": {
@@ -528,23 +936,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 8,
-              "__rowNum__": 7,
+              "_row_num": 27,
+              "__rowNum__": 26,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('stdgwslog_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('stdgwslog_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', opendatakit.getLocationInfo().aid);\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', opendatakit.getLocationInfo().zip);\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 9,
+            "_row_num": 28,
             "operationIdx": 1
           },
           {
-            "_row_num": 9,
+            "_row_num": 28,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -553,14 +961,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 9,
+            "_row_num": 28,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen9": 2
+          "_screen28": 2
         }
       }
     }

@@ -322,17 +322,15 @@ var XLSXConverter = {};
             "elementType": "mimeUri",
             "properties": {
                 "uriFragment": {
-                    "type": "string",
-                    "elementType": "rowpath"
+                    "type": "rowpath"
                 },
                 "contentType": {
                     "type": "string",
-                    "elementType": "mimeType",
                     "default": "image/*"
                 }
             }
         },
-								"sketch" : {"type":"string"}, // database primitive
+		"sketch" : {"type":"string"}, // database primitive
        	"signature" : {"type":"string"}, // database primitive
        
         "audio": {

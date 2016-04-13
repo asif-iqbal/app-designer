@@ -24,9 +24,21 @@
           <savepointCreator/>
           <savepointTimestamp/>
         </orx:meta>
+        <consumables/>
         <equipment/>
+        <loc_aid/>
+        <loc_city/>
+        <loc_client/>
+        <loc_name/>
+        <loc_state/>
+        <loc_streetAddress/>
+        <loc_zip/>
         <personnel/>
         <stdgwslog_id/>
+        <subcontractors/>
+        <task/>
+        <vehicle/>
+        <weather/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -41,9 +53,21 @@
     <bind nodeset="/data/meta/savepointType" type="string"/>
     <bind nodeset="/data/meta/savepointCreator" type="string"/>
     <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/consumables" type="select"/>
     <bind nodeset="/data/equipment" type="select"/>
+    <bind nodeset="/data/loc_aid" type="string"/>
+    <bind nodeset="/data/loc_city" type="string"/>
+    <bind nodeset="/data/loc_client" type="string"/>
+    <bind nodeset="/data/loc_name" type="string"/>
+    <bind nodeset="/data/loc_state" type="string"/>
+    <bind nodeset="/data/loc_streetAddress" type="string"/>
+    <bind nodeset="/data/loc_zip" type="string"/>
     <bind nodeset="/data/personnel" type="select"/>
     <bind nodeset="/data/stdgwslog_id" type="string"/>
+    <bind nodeset="/data/subcontractors" type="string"/>
+    <bind nodeset="/data/task" type="string"/>
+    <bind nodeset="/data/vehicle" type="select"/>
+    <bind nodeset="/data/weather" type="string"/>
   </model> 
  </h:head> 
  <h:body> 

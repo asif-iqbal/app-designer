@@ -15,15 +15,15 @@ requirejs.config({
     waitSeconds: 45,
     paths: {
         // third-party libraries we depend upon 
-  	      	jquery : 'libs/jquery-1.10.2.min',
+        jquery : 'libs/jquery.1.10.2',
         bootstrap : 'libs/bootstrap-3.1.1-dist/js/bootstrap.min',
-        	moment : 'libs/eonasdan/moment.min',     
-       	 	datetimepicker : 'libs/eonasdan/bootstrap-datetimepicker',
+        moment : 'libs/eonasdan/moment',     
+        datetimepicker : 'libs/eonasdan/bootstrap-datetimepicker',
         spinner : 'libs/spinner/waitMe.min',
-        	backbone : 'libs/backbone-min',
-        	handlebars : 'libs/handlebars.1.0.0.rc.4.min',
-        	underscore : 'libs/underscore.1.4.4.min',
-        	text : 'libs/text.2.0.10.min',
+        backbone : 'libs/backbone.1.0.0',
+        handlebars : 'libs/handlebars.1.0.0.rc.4',
+        underscore : 'libs/underscore.1.4.4',
+        text : 'libs/text.2.0.10',
         //mobiscroll : 'libs/mobiscroll-2.5.4/js/combined.min',
         // directory paths for resources
         img : 'img',
@@ -47,9 +47,9 @@ requirejs.config({
         //jqmConfig : 'survey/js/jqmConfig',
         handlebarsHelpers : 'survey/js/handlebarsHelpers',
         formulaFunctions : 'survey/js/formulaFunctions',
-        	jqueryCsv : 'libs/jquery-csv/src/jquery.csv',
-        	XRegExp : 'libs/XRegExp-All-3.0.0-pre-2014-12-24',
-        	d3 : 'libs/d3-amd/d3.min'
+        jqueryCsv : 'libs/jquery-csv/src/jquery.csv',
+        XRegExp : 'libs/XRegExp-All-3.0.0-pre-2014-12-24',
+        d3 : 'libs/d3-amd/d3'
     },
     shim: {
         'bootstrap': {

@@ -48,9 +48,9 @@
     <bind nodeset="/data/meta/savepointCreator" type="string"/>
     <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
     <bind nodeset="/data/parent_id" type="string"/>
-    <bind nodeset="/data/reading_conductivity" type="int"/>
+    <bind nodeset="/data/reading_conductivity" type="string"/>
     <bind nodeset="/data/reading_id" type="string"/>
-    <bind nodeset="/data/reading_orp" type="decimal"/>
+    <bind nodeset="/data/reading_orp" type="string"/>
     <bind nodeset="/data/reading_oxygen" type="decimal"/>
     <bind nodeset="/data/reading_ph" type="decimal"/>
     <bind nodeset="/data/reading_temperature" type="decimal"/>

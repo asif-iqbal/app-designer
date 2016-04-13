@@ -50,55 +50,92 @@
       {
         "type": "string",
         "name": "construction_id",
-        "display": {
-          "text": "ID"
-        },
         "templatePath": "hidden_input_type.handlebars",
         "_row_num": 4
       },
       {
-        "type": "string",
-        "name": "task",
-        "display": {
-          "text": "Task"
-        },
+        "type": "assign",
+        "name": "loc_name",
+        "calculation": "opendatakit.getLocationInfo().name",
         "_row_num": 5
       },
       {
-        "type": "select_one_dropdown",
-        "values_list": "equipment_csv",
-        "name": "vehicle",
-        "display": {
-          "text": "Vehicle"
-        },
-        "choice_filter": "choice_item.type==='Vehicle'",
+        "type": "string",
+        "name": "loc_name",
+        "templatePath": "hidden_input_type.handlebars",
         "_row_num": 6
       },
       {
-        "type": "select_one_dropdown",
-        "values_list": "equipment_csv",
-        "name": "consumables",
-        "display": {
-          "text": "Consumables"
-        },
-        "choice_filter": "choice_item.type==='Consumables'",
+        "type": "assign",
+        "name": "loc_aid",
+        "calculation": "opendatakit.getLocationInfo().aid",
         "_row_num": 7
       },
       {
         "type": "string",
-        "name": "weather",
-        "display": {
-          "text": "Weather"
-        },
+        "name": "loc_aid",
+        "templatePath": "hidden_input_type.handlebars",
         "_row_num": 8
       },
       {
-        "type": "string",
-        "name": "subcontractors",
-        "display": {
-          "text": "Subcontractors"
-        },
+        "type": "assign",
+        "name": "loc_streetAddress",
+        "calculation": "opendatakit.getLocationInfo().streetAddress",
         "_row_num": 9
+      },
+      {
+        "type": "string",
+        "name": "loc_streetAddress",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 10
+      },
+      {
+        "type": "assign",
+        "name": "loc_city",
+        "calculation": "opendatakit.getLocationInfo().city",
+        "_row_num": 11
+      },
+      {
+        "type": "string",
+        "name": "loc_city",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 12
+      },
+      {
+        "type": "assign",
+        "name": "loc_state",
+        "calculation": "opendatakit.getLocationInfo().state",
+        "_row_num": 13
+      },
+      {
+        "type": "string",
+        "name": "loc_state",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 14
+      },
+      {
+        "type": "assign",
+        "name": "loc_zip",
+        "calculation": "opendatakit.getLocationInfo().zip",
+        "_row_num": 15
+      },
+      {
+        "type": "string",
+        "name": "loc_zip",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 16
+      },
+      {
+        "type": "assign",
+        "name": "loc_client",
+        "calculation": "opendatakit.getLocationInfo().client",
+        "_row_num": 17
+      },
+      {
+        "type": "string",
+        "name": "loc_client",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 18
       },
       {
         "type": "select_multiple",
@@ -108,139 +145,196 @@
           "text": "Personnel"
         },
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 11
+        "_row_num": 19
+      },
+      {
+        "type": "string",
+        "name": "task",
+        "display": {
+          "text": "Task"
+        },
+        "_row_num": 20
+      },
+      {
+        "type": "string",
+        "name": "subcontractors",
+        "display": {
+          "text": "Subcontractors"
+        },
+        "_row_num": 21
+      },
+      {
+        "type": "string",
+        "name": "weather",
+        "display": {
+          "text": "Weather"
+        },
+        "_row_num": 22
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "equipment_csv",
+        "name": "vehicle",
+        "display": {
+          "text": "Vehicles"
+        },
+        "choice_filter": "choice_item.type==='Vehicle'",
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 23
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "equipment_csv",
+        "name": "consumables",
+        "display": {
+          "text": "Consumables"
+        },
+        "choice_filter": "choice_item.type==='Consumables'",
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 24
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "equipment_csv",
+        "name": "equipment",
+        "display": {
+          "text": "Equipment"
+        },
+        "choice_filter": "choice_item.type==='Equipment'",
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 25
       },
       {
         "clause": "end screen",
-        "_row_num": 12
+        "_row_num": 26
       },
       {
         "branch_label": "menu",
-        "_row_num": 13
+        "_row_num": 27
       },
       {
         "clause": "begin screen",
         "display": {
           "text": "Construction Home Page"
         },
-        "_row_num": 14
+        "_row_num": 28
       },
       {
         "type": "user_branch",
         "values_list": "branches",
-        "_row_num": 15
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 16
-      },
-      {
-        "clause": "goto menu",
-        "_row_num": 17
-      },
-      {
-        "branch_label": "notes",
-        "_row_num": 18
-      },
-      {
-        "clause": "do section notes_section",
-        "_row_num": 19
-      },
-      {
-        "clause": "goto menu",
-        "_row_num": 20
-      },
-      {
-        "branch_label": "gps",
-        "_row_num": 21
-      },
-      {
-        "clause": "do section gps_section",
-        "_row_num": 22
-      },
-      {
-        "clause": "goto menu",
-        "_row_num": 23
-      },
-      {
-        "branch_label": "image",
-        "_row_num": 24
-      },
-      {
-        "clause": "do section image_section",
-        "_row_num": 25
-      },
-      {
-        "clause": "goto menu",
-        "_row_num": 26
-      },
-      {
-        "branch_label": "sketch",
-        "_row_num": 27
-      },
-      {
-        "clause": "do section sketch_section",
-        "_row_num": 28
-      },
-      {
-        "clause": "goto menu",
         "_row_num": 29
       },
       {
-        "branch_label": "signature",
+        "clause": "end screen",
         "_row_num": 30
       },
       {
-        "clause": "do section signature_section",
+        "clause": "goto menu",
         "_row_num": 31
       },
       {
-        "clause": "goto menu",
+        "branch_label": "notes",
         "_row_num": 32
       },
       {
-        "branch_label": "mat_delivered",
+        "clause": "do section notes_section",
         "_row_num": 33
       },
       {
-        "clause": "do section mat_delivered_section",
+        "clause": "goto menu",
         "_row_num": 34
       },
       {
-        "clause": "goto menu",
+        "branch_label": "gps",
         "_row_num": 35
       },
       {
-        "branch_label": "mat_removed",
+        "clause": "do section gps_section",
         "_row_num": 36
       },
       {
-        "clause": "do section mat_removed_section",
+        "clause": "goto menu",
         "_row_num": 37
       },
       {
-        "clause": "goto menu",
+        "branch_label": "image",
         "_row_num": 38
       },
       {
-        "branch_label": "times",
+        "clause": "do section image_section",
         "_row_num": 39
       },
       {
-        "clause": "do section times_section",
+        "clause": "goto menu",
         "_row_num": 40
       },
       {
-        "clause": "goto menu",
+        "branch_label": "sketch",
         "_row_num": 41
       },
       {
-        "branch_label": "exitpath",
+        "clause": "do section sketch_section",
         "_row_num": 42
       },
       {
-        "clause": "exit section",
+        "clause": "goto menu",
         "_row_num": 43
+      },
+      {
+        "branch_label": "signature",
+        "_row_num": 44
+      },
+      {
+        "clause": "do section signature_section",
+        "_row_num": 45
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 46
+      },
+      {
+        "branch_label": "mat_delivered",
+        "_row_num": 47
+      },
+      {
+        "clause": "do section mat_delivered_section",
+        "_row_num": 48
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 49
+      },
+      {
+        "branch_label": "mat_removed",
+        "_row_num": 50
+      },
+      {
+        "clause": "do section mat_removed_section",
+        "_row_num": 51
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 52
+      },
+      {
+        "branch_label": "times",
+        "_row_num": 53
+      },
+      {
+        "clause": "do section times_section",
+        "_row_num": 54
+      },
+      {
+        "clause": "goto menu",
+        "_row_num": 55
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 56
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 57
       }
     ],
     "notes_section": [
@@ -319,16 +413,24 @@
         "_row_num": 2
       },
       {
+        "type": "string",
+        "name": "skt_name",
+        "display": {
+          "text": "Name"
+        },
+        "_row_num": 3
+      },
+      {
         "type": "sketch",
         "name": "skt",
         "display": {
           "text": "Sketch"
         },
-        "_row_num": 3
+        "_row_num": 4
       },
       {
         "clause": "end screen",
-        "_row_num": 4
+        "_row_num": 5
       }
     ],
     "signature_section": [
@@ -416,23 +518,41 @@
         "type": "time",
         "name": "project_start_time",
         "display": {
-          "text": "Project Start Time"
+          "text": "Depart/Start"
         },
         "templatePath": "time_input_type.handlebars",
         "_row_num": 3
       },
       {
         "type": "time",
-        "name": "project_end_time",
+        "name": "project_arrive_time",
         "display": {
-          "text": "Project End Time"
+          "text": "Arrive at Site"
         },
         "templatePath": "time_input_type.handlebars",
         "_row_num": 4
       },
       {
-        "clause": "end screen",
+        "type": "time",
+        "name": "project_depart_time",
+        "display": {
+          "text": "Depart Site"
+        },
+        "templatePath": "time_input_type.handlebars",
         "_row_num": 5
+      },
+      {
+        "type": "time",
+        "name": "project_end_time",
+        "display": {
+          "text": "Project End"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 7
       }
     ],
     "queries": [
@@ -598,7 +718,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160101005,
+        "value": 20160101,
         "_row_num": 3
       },
       {
@@ -692,7 +812,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160101005,
+        "value": 20160101,
         "_row_num": 3
       },
       "survey": {
@@ -960,17 +1080,7 @@
         "type": "string",
         "elementKey": "construction_id"
       },
-      "task": {
-        "_defn": [
-          {
-            "_row_num": 5,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "elementKey": "task"
-      },
-      "vehicle": {
+      "loc_name": {
         "_defn": [
           {
             "_row_num": 6,
@@ -978,21 +1088,9 @@
           }
         ],
         "type": "string",
-        "valuesList": "equipment_csv",
-        "elementKey": "vehicle"
+        "elementKey": "loc_name"
       },
-      "consumables": {
-        "_defn": [
-          {
-            "_row_num": 7,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "valuesList": "equipment_csv",
-        "elementKey": "consumables"
-      },
-      "weather": {
+      "loc_aid": {
         "_defn": [
           {
             "_row_num": 8,
@@ -1000,22 +1098,62 @@
           }
         ],
         "type": "string",
-        "elementKey": "weather"
+        "elementKey": "loc_aid"
       },
-      "subcontractors": {
+      "loc_streetAddress": {
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 10,
             "section_name": "survey"
           }
         ],
         "type": "string",
-        "elementKey": "subcontractors"
+        "elementKey": "loc_streetAddress"
+      },
+      "loc_city": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_city"
+      },
+      "loc_state": {
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_state"
+      },
+      "loc_zip": {
+        "_defn": [
+          {
+            "_row_num": 16,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_zip"
+      },
+      "loc_client": {
+        "_defn": [
+          {
+            "_row_num": 18,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_client"
       },
       "personnel": {
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 19,
             "section_name": "survey"
           }
         ],
@@ -1026,6 +1164,81 @@
         },
         "valuesList": "personnel_csv",
         "elementKey": "personnel"
+      },
+      "task": {
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "task"
+      },
+      "subcontractors": {
+        "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "subcontractors"
+      },
+      "weather": {
+        "_defn": [
+          {
+            "_row_num": 22,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "weather"
+      },
+      "vehicle": {
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "vehicle_items"
+        },
+        "valuesList": "equipment_csv",
+        "elementKey": "vehicle"
+      },
+      "consumables": {
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "consumables_items"
+        },
+        "valuesList": "equipment_csv",
+        "elementKey": "consumables"
+      },
+      "equipment": {
+        "_defn": [
+          {
+            "_row_num": 25,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "equipment_items"
+        },
+        "valuesList": "equipment_csv",
+        "elementKey": "equipment"
       },
       "geo_info": {
         "_defn": [
@@ -1056,10 +1269,20 @@
         },
         "elementKey": "geo_info"
       },
-      "skt": {
+      "skt_name": {
         "_defn": [
           {
             "_row_num": 3,
+            "section_name": "sketch_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "skt_name"
+      },
+      "skt": {
+        "_defn": [
+          {
+            "_row_num": 4,
             "section_name": "sketch_section"
           }
         ],
@@ -1097,10 +1320,32 @@
         "elementType": "time",
         "elementKey": "project_start_time"
       },
-      "project_end_time": {
+      "project_arrive_time": {
         "_defn": [
           {
             "_row_num": 4,
+            "section_name": "times_section"
+          }
+        ],
+        "type": "object",
+        "elementType": "time",
+        "elementKey": "project_arrive_time"
+      },
+      "project_depart_time": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "times_section"
+          }
+        ],
+        "type": "object",
+        "elementType": "time",
+        "elementKey": "project_depart_time"
+      },
+      "project_end_time": {
+        "_defn": [
+          {
+            "_row_num": 6,
             "section_name": "times_section"
           }
         ],
@@ -1318,9 +1563,6 @@
           {
             "type": "string",
             "name": "construction_id",
-            "display": {
-              "text": "ID"
-            },
             "templatePath": "hidden_input_type.handlebars",
             "_row_num": 4,
             "__rowNum__": 3,
@@ -1331,55 +1573,43 @@
           },
           {
             "type": "string",
-            "name": "task",
-            "display": {
-              "text": "Task"
-            },
-            "_row_num": 5,
-            "__rowNum__": 4,
+            "name": "loc_name",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 1
           },
           {
-            "type": "select_one_dropdown",
-            "values_list": "equipment_csv",
-            "name": "vehicle",
-            "display": {
-              "text": "Vehicle"
-            },
-            "choice_filter": "choice_item.type==='Vehicle'",
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "type": "string",
+            "name": "loc_aid",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 8,
+            "__rowNum__": 7,
             "_token_type": "prompt",
-            "_type": "select_one_dropdown",
+            "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 2
           },
           {
-            "type": "select_one_dropdown",
-            "values_list": "equipment_csv",
-            "name": "consumables",
-            "display": {
-              "text": "Consumables"
-            },
-            "choice_filter": "choice_item.type==='Consumables'",
-            "_row_num": 7,
-            "__rowNum__": 6,
+            "type": "string",
+            "name": "loc_streetAddress",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 10,
+            "__rowNum__": 9,
             "_token_type": "prompt",
-            "_type": "select_one_dropdown",
+            "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 3
           },
           {
             "type": "string",
-            "name": "weather",
-            "display": {
-              "text": "Weather"
-            },
-            "_row_num": 8,
-            "__rowNum__": 7,
+            "name": "loc_city",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 12,
+            "__rowNum__": 11,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -1387,16 +1617,36 @@
           },
           {
             "type": "string",
-            "name": "subcontractors",
-            "display": {
-              "text": "Subcontractors"
-            },
-            "_row_num": 9,
-            "__rowNum__": 8,
+            "name": "loc_state",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 14,
+            "__rowNum__": 13,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 5
+          },
+          {
+            "type": "string",
+            "name": "loc_zip",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "string",
+            "name": "loc_client",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
           },
           {
             "type": "select_multiple",
@@ -1406,31 +1656,118 @@
               "text": "Personnel"
             },
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 6
+            "promptIdx": 8
+          },
+          {
+            "type": "string",
+            "name": "task",
+            "display": {
+              "text": "Task"
+            },
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "string",
+            "name": "subcontractors",
+            "display": {
+              "text": "Subcontractors"
+            },
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "string",
+            "name": "weather",
+            "display": {
+              "text": "Weather"
+            },
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "equipment_csv",
+            "name": "vehicle",
+            "display": {
+              "text": "Vehicles"
+            },
+            "choice_filter": "choice_item.type==='Vehicle'",
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "equipment_csv",
+            "name": "consumables",
+            "display": {
+              "text": "Consumables"
+            },
+            "choice_filter": "choice_item.type==='Consumables'",
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 13
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "equipment_csv",
+            "name": "equipment",
+            "display": {
+              "text": "Equipment"
+            },
+            "choice_filter": "choice_item.type==='Equipment'",
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 14
           },
           {
             "type": "user_branch",
             "values_list": "branches",
-            "_row_num": 15,
-            "__rowNum__": 14,
+            "_row_num": 29,
+            "__rowNum__": 28,
             "_token_type": "prompt",
             "_type": "user_branch",
-            "_branch_label_enclosing_screen": "survey/_screen14",
-            "promptIdx": 7
+            "_branch_label_enclosing_screen": "survey/_screen28",
+            "promptIdx": 15
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 33,
+            "__rowNum__": 32,
             "_token_type": "prompt",
             "_do_section_name": "notes_section",
             "_type": "_section",
-            "promptIdx": 8,
+            "promptIdx": 16,
             "display": {
               "title": "Notes"
             },
@@ -1438,12 +1775,12 @@
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 36,
+            "__rowNum__": 35,
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
-            "promptIdx": 9,
+            "promptIdx": 17,
             "display": {
               "title": "GPS"
             },
@@ -1451,12 +1788,12 @@
           },
           {
             "clause": "do section image_section",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 39,
+            "__rowNum__": 38,
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
-            "promptIdx": 10,
+            "promptIdx": 18,
             "display": {
               "title": "Photo"
             },
@@ -1464,12 +1801,12 @@
           },
           {
             "clause": "do section sketch_section",
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 42,
+            "__rowNum__": 41,
             "_token_type": "prompt",
             "_do_section_name": "sketch_section",
             "_type": "_section",
-            "promptIdx": 11,
+            "promptIdx": 19,
             "display": {
               "title": "Sketch"
             },
@@ -1477,12 +1814,12 @@
           },
           {
             "clause": "do section signature_section",
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "_row_num": 45,
+            "__rowNum__": 44,
             "_token_type": "prompt",
             "_do_section_name": "signature_section",
             "_type": "_section",
-            "promptIdx": 12,
+            "promptIdx": 20,
             "display": {
               "title": "Signature"
             },
@@ -1490,12 +1827,12 @@
           },
           {
             "clause": "do section mat_delivered_section",
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "_row_num": 48,
+            "__rowNum__": 47,
             "_token_type": "prompt",
             "_do_section_name": "mat_delivered_section",
             "_type": "_section",
-            "promptIdx": 13,
+            "promptIdx": 21,
             "display": {
               "title": "Deliveries"
             },
@@ -1503,12 +1840,12 @@
           },
           {
             "clause": "do section mat_removed_section",
-            "_row_num": 37,
-            "__rowNum__": 36,
+            "_row_num": 51,
+            "__rowNum__": 50,
             "_token_type": "prompt",
             "_do_section_name": "mat_removed_section",
             "_type": "_section",
-            "promptIdx": 14,
+            "promptIdx": 22,
             "display": {
               "title": "Removals"
             },
@@ -1516,12 +1853,12 @@
           },
           {
             "clause": "do section times_section",
-            "_row_num": 40,
-            "__rowNum__": 39,
+            "_row_num": 54,
+            "__rowNum__": 53,
             "_token_type": "prompt",
             "_do_section_name": "times_section",
             "_type": "_section",
-            "promptIdx": 15,
+            "promptIdx": 23,
             "display": {
               "title": "Times"
             },
@@ -1531,9 +1868,9 @@
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 44,
-            "_branch_label_enclosing_screen": "survey/_screen44",
-            "promptIdx": 16
+            "_row_num": 58,
+            "_branch_label_enclosing_screen": "survey/_screen58",
+            "promptIdx": 24
           }
         ],
         "validation_tag_map": {
@@ -1550,11 +1887,11 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 12,
-              "__rowNum__": 11,
+              "_row_num": 26,
+              "__rowNum__": 25,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('construction_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('construction_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', opendatakit.getLocationInfo().aid);\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', opendatakit.getLocationInfo().zip);\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -1562,171 +1899,171 @@
             "display": {
               "text": "Construction Home Page"
             },
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 16,
-              "__rowNum__": 15,
+              "_row_num": 30,
+              "__rowNum__": 29,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "clause": "goto menu",
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 31,
+            "__rowNum__": 30,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 2
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 33,
+            "__rowNum__": 32,
             "_token_type": "do_section",
             "_do_section_name": "notes_section",
             "operationIdx": 3
           },
           {
             "clause": "goto menu",
-            "_row_num": 20,
-            "__rowNum__": 19,
+            "_row_num": 34,
+            "__rowNum__": 33,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 4
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 36,
+            "__rowNum__": 35,
             "_token_type": "do_section",
             "_do_section_name": "gps_section",
             "operationIdx": 5
           },
           {
             "clause": "goto menu",
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 37,
+            "__rowNum__": 36,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 6
           },
           {
             "clause": "do section image_section",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 39,
+            "__rowNum__": 38,
             "_token_type": "do_section",
             "_do_section_name": "image_section",
             "operationIdx": 7
           },
           {
             "clause": "goto menu",
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "_row_num": 40,
+            "__rowNum__": 39,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 8
           },
           {
             "clause": "do section sketch_section",
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 42,
+            "__rowNum__": 41,
             "_token_type": "do_section",
             "_do_section_name": "sketch_section",
             "operationIdx": 9
           },
           {
             "clause": "goto menu",
-            "_row_num": 29,
-            "__rowNum__": 28,
+            "_row_num": 43,
+            "__rowNum__": 42,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 10
           },
           {
             "clause": "do section signature_section",
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "_row_num": 45,
+            "__rowNum__": 44,
             "_token_type": "do_section",
             "_do_section_name": "signature_section",
             "operationIdx": 11
           },
           {
             "clause": "goto menu",
-            "_row_num": 32,
-            "__rowNum__": 31,
+            "_row_num": 46,
+            "__rowNum__": 45,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 12
           },
           {
             "clause": "do section mat_delivered_section",
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "_row_num": 48,
+            "__rowNum__": 47,
             "_token_type": "do_section",
             "_do_section_name": "mat_delivered_section",
             "operationIdx": 13
           },
           {
             "clause": "goto menu",
-            "_row_num": 35,
-            "__rowNum__": 34,
+            "_row_num": 49,
+            "__rowNum__": 48,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 14
           },
           {
             "clause": "do section mat_removed_section",
-            "_row_num": 37,
-            "__rowNum__": 36,
+            "_row_num": 51,
+            "__rowNum__": 50,
             "_token_type": "do_section",
             "_do_section_name": "mat_removed_section",
             "operationIdx": 15
           },
           {
             "clause": "goto menu",
-            "_row_num": 38,
-            "__rowNum__": 37,
+            "_row_num": 52,
+            "__rowNum__": 51,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 16
           },
           {
             "clause": "do section times_section",
-            "_row_num": 40,
-            "__rowNum__": 39,
+            "_row_num": 54,
+            "__rowNum__": 53,
             "_token_type": "do_section",
             "_do_section_name": "times_section",
             "operationIdx": 17
           },
           {
             "clause": "goto menu",
-            "_row_num": 41,
-            "__rowNum__": 40,
+            "_row_num": 55,
+            "__rowNum__": 54,
             "_token_type": "goto_label",
             "_branch_label": "menu",
             "operationIdx": 18
           },
           {
             "clause": "exit section",
-            "_row_num": 43,
-            "__rowNum__": 42,
+            "_row_num": 57,
+            "__rowNum__": 56,
             "_token_type": "exit_section",
             "operationIdx": 19
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 44,
+            "_row_num": 58,
             "operationIdx": 20
           },
           {
-            "_row_num": 44,
+            "_row_num": 58,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(24);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -1735,14 +2072,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 44,
+            "_row_num": 58,
             "operationIdx": 22
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "menu": 1,
-          "_screen14": 1,
+          "_screen28": 1,
           "notes": 3,
           "gps": 5,
           "image": 7,
@@ -1753,7 +2090,7 @@
           "times": 17,
           "exitpath": 19,
           "_contents": 21,
-          "_screen44": 21
+          "_screen58": 21
         }
       },
       "notes_section": {
@@ -1994,25 +2331,38 @@
         "reachable_sections": {},
         "prompts": [
           {
+            "type": "string",
+            "name": "skt_name",
+            "display": {
+              "text": "Name"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "sketch_section/_screen2",
+            "promptIdx": 0
+          },
+          {
             "type": "sketch",
             "name": "skt",
             "display": {
               "text": "Sketch"
             },
-            "_row_num": 3,
-            "__rowNum__": 2,
+            "_row_num": 4,
+            "__rowNum__": 3,
             "_token_type": "prompt",
             "_type": "sketch",
             "_branch_label_enclosing_screen": "sketch_section/_screen2",
-            "promptIdx": 0
+            "promptIdx": 1
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 5,
-            "_branch_label_enclosing_screen": "sketch_section/_screen5",
-            "promptIdx": 1
+            "_row_num": 6,
+            "_branch_label_enclosing_screen": "sketch_section/_screen6",
+            "promptIdx": 2
           }
         ],
         "validation_tag_map": {
@@ -2029,23 +2379,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 4,
-              "__rowNum__": 3,
+              "_row_num": 5,
+              "__rowNum__": 4,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 5,
+            "_row_num": 6,
             "operationIdx": 1
           },
           {
-            "_row_num": 5,
+            "_row_num": 6,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -2054,14 +2404,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 5,
+            "_row_num": 6,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen5": 2
+          "_screen6": 2
         }
       },
       "signature_section": {
@@ -2316,7 +2666,7 @@
             "type": "time",
             "name": "project_start_time",
             "display": {
-              "text": "Project Start Time"
+              "text": "Depart/Start"
             },
             "templatePath": "time_input_type.handlebars",
             "_row_num": 3,
@@ -2328,9 +2678,9 @@
           },
           {
             "type": "time",
-            "name": "project_end_time",
+            "name": "project_arrive_time",
             "display": {
-              "text": "Project End Time"
+              "text": "Arrive at Site"
             },
             "templatePath": "time_input_type.handlebars",
             "_row_num": 4,
@@ -2341,12 +2691,40 @@
             "promptIdx": 1
           },
           {
+            "type": "time",
+            "name": "project_depart_time",
+            "display": {
+              "text": "Depart Site"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "times_section/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "time",
+            "name": "project_end_time",
+            "display": {
+              "text": "Project End"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "times_section/_screen2",
+            "promptIdx": 3
+          },
+          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 6,
-            "_branch_label_enclosing_screen": "times_section/_screen6",
-            "promptIdx": 2
+            "_row_num": 8,
+            "_branch_label_enclosing_screen": "times_section/_screen8",
+            "promptIdx": 4
           }
         ],
         "validation_tag_map": {
@@ -2363,23 +2741,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 5,
-              "__rowNum__": 4,
+              "_row_num": 7,
+              "__rowNum__": 6,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 6,
+            "_row_num": 8,
             "operationIdx": 1
           },
           {
-            "_row_num": 6,
+            "_row_num": 8,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -2388,14 +2766,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 6,
+            "_row_num": 8,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen6": 2
+          "_screen8": 2
         }
       }
     }

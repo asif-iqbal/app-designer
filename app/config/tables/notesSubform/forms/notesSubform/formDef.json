@@ -20,21 +20,30 @@
         "_row_num": 2
       },
       {
-        "type": "textarea",
-        "name": "notes",
+        "type": "time",
+        "name": "time_taken",
         "display": {
-          "text": "Notes and comments (255 characters)"
+          "text": "Time"
         },
-        "required": "true",
-        "inputAttributes": {
-          "rows": 6,
-          "maxlength": 255
-        },
+        "templatePath": "time_input_type.handlebars",
         "_row_num": 3
       },
       {
-        "clause": "end screen",
+        "type": "textarea",
+        "name": "notes",
+        "display": {
+          "text": "Notes and comments (600 characters)"
+        },
+        "required": "true",
+        "inputAttributes": {
+          "rows": 12,
+          "maxlength": 600
+        },
         "_row_num": 4
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 5
       }
     ],
     "settings": [
@@ -45,7 +54,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160101002,
+        "value": 20160101007,
         "_row_num": 3
       },
       {
@@ -68,9 +77,14 @@
         "_row_num": 2
       },
       {
+        "name": "time_taken",
+        "type": "time",
+        "_row_num": 3
+      },
+      {
         "name": "notes",
         "type": "textarea",
-        "_row_num": 3
+        "_row_num": 4
       }
     ]
   },
@@ -100,7 +114,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160101002,
+        "value": 20160101007,
         "_row_num": 3
       },
       "table_id": {
@@ -154,8 +168,9 @@
         ],
         "elementKey": "parent_id"
       },
-      "notes": {
-        "type": "string",
+      "time_taken": {
+        "type": "object",
+        "elementType": "time",
         "_defn": [
           {
             "_row_num": 3,
@@ -163,6 +178,20 @@
           },
           {
             "_row_num": 3,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "time_taken"
+      },
+      "notes": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 4,
             "section_name": "model"
           }
         ],
@@ -286,35 +315,49 @@
         "reachable_sections": {},
         "prompts": [
           {
-            "type": "textarea",
-            "name": "notes",
+            "type": "time",
+            "name": "time_taken",
             "display": {
-              "text": "Notes and comments (255 characters)"
+              "text": "Time"
             },
-            "required": "true",
-            "inputAttributes": {
-              "rows": 6,
-              "maxlength": 255
-            },
+            "templatePath": "time_input_type.handlebars",
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
-            "_type": "textarea",
+            "_type": "time",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 0
+          },
+          {
+            "type": "textarea",
+            "name": "notes",
+            "display": {
+              "text": "Notes and comments (600 characters)"
+            },
+            "required": "true",
+            "inputAttributes": {
+              "rows": 12,
+              "maxlength": 600
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 5,
-            "_branch_label_enclosing_screen": "survey/_screen5",
-            "promptIdx": 1
+            "_row_num": 6,
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 2
           }
         ],
         "validation_tag_map": {
           "finalize": [
-            0
+            1
           ]
         },
         "operations": [
@@ -328,23 +371,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 4,
-              "__rowNum__": 3,
+              "_row_num": 5,
+              "__rowNum__": 4,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 5,
+            "_row_num": 6,
             "operationIdx": 1
           },
           {
-            "_row_num": 5,
+            "_row_num": 6,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -353,14 +396,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 5,
+            "_row_num": 6,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen5": 2
+          "_screen6": 2
         }
       }
     }

@@ -26,6 +26,7 @@
         </orx:meta>
         <notes/>
         <parent_id/>
+        <time_taken/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -40,8 +41,9 @@
     <bind nodeset="/data/meta/savepointType" type="string"/>
     <bind nodeset="/data/meta/savepointCreator" type="string"/>
     <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
-    <bind nodeset="/data/notes" type="string"/>
+    <bind nodeset="/data/notes" type="string" odk:length="600"/>
     <bind nodeset="/data/parent_id" type="string"/>
+    <bind nodeset="/data/time_taken" type="time"/>
   </model> 
  </h:head> 
  <h:body> 

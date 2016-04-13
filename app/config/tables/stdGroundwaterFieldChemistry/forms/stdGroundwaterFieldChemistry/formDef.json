@@ -57,12 +57,12 @@
         "_row_num": 7
       },
       {
-        "type": "integer",
+        "type": "string",
         "name": "reading_conductivity",
         "display": {
           "text": "Specific Conductivity (&#xb5;S/cm)"
         },
-        "templatePath": "integer_input_type.handlebars",
+        "templatePath": "string_input_type.handlebars",
         "_row_num": 8
       },
       {
@@ -84,12 +84,12 @@
         "_row_num": 10
       },
       {
-        "type": "decimal",
+        "type": "string",
         "name": "reading_orp",
         "display": {
           "text": "ORP (mv)"
         },
-        "templatePath": "decimal_input_type.handlebars",
+        "templatePath": "string_input_type.handlebars",
         "_row_num": 11
       },
       {
@@ -121,7 +121,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160101004,
+        "value": 20160101,
         "_row_num": 3
       },
       {
@@ -165,7 +165,7 @@
       },
       {
         "name": "reading_conductivity",
-        "type": "integer",
+        "type": "string",
         "_row_num": 6
       },
       {
@@ -180,7 +180,7 @@
       },
       {
         "name": "reading_orp",
-        "type": "decimal",
+        "type": "string",
         "_row_num": 9
       },
       {
@@ -216,7 +216,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160101004,
+        "value": 20160101,
         "_row_num": 3
       },
       "table_id": {
@@ -325,7 +325,7 @@
         "elementKey": "reading_temperature"
       },
       "reading_conductivity": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 8,
@@ -367,7 +367,7 @@
         "elementKey": "reading_ph"
       },
       "reading_orp": {
-        "type": "number",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 11,
@@ -563,16 +563,16 @@
             "promptIdx": 3
           },
           {
-            "type": "integer",
+            "type": "string",
             "name": "reading_conductivity",
             "display": {
               "text": "Specific Conductivity (&#xb5;S/cm)"
             },
-            "templatePath": "integer_input_type.handlebars",
+            "templatePath": "string_input_type.handlebars",
             "_row_num": 8,
             "__rowNum__": 7,
             "_token_type": "prompt",
-            "_type": "integer",
+            "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 4
           },
@@ -605,16 +605,16 @@
             "promptIdx": 6
           },
           {
-            "type": "decimal",
+            "type": "string",
             "name": "reading_orp",
             "display": {
               "text": "ORP (mv)"
             },
-            "templatePath": "decimal_input_type.handlebars",
+            "templatePath": "string_input_type.handlebars",
             "_row_num": 11,
             "__rowNum__": 10,
             "_token_type": "prompt",
-            "_type": "decimal",
+            "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 7
           },

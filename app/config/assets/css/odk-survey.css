@@ -820,20 +820,33 @@ input[type=radio], input[type=checkbox] {
 }
 
 .buttonGroup a.roundbtn {
-    height: 150px;
+/*    height: 150px;
     width: 150px;
     border-radius: 100px !important;
 	float:left;
 	margin:10px !important;
 	margin-bottom: 60px !important;
+	display: table;
+	*/
+	height: 140px;
+    width: 140px;
+    border-radius: 100px !important;
+    /*float: left;*/
+    margin: 8px !important;
+    margin-bottom: 60px !important;
+    display: table;
+    margin: 15px auto !important;
 }
 
 
 .buttonGroup .roundbtn h4{
-	    text-align: center !important;
-    font-size: 27px;
+	text-align: center !important;
+    font-size: 17px;
     font-weight: normal !important;
-    margin-top: 60px;
+    vertical-align: middle;
+    word-break: break-all;
+    white-space: normal;
+   margin:0px;
 }
 
 .buttonGroup .roundbtn h4 .glyphicon{display:none}
@@ -947,7 +960,4 @@ color: #4D5F74;
 .autoWSel{
     display: inline-block;
     width: auto;
-}
-.captureAction, .chooseAction, .sketchbtn{
-	margin:10px auto 0;
 }
