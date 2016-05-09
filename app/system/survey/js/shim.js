@@ -106,8 +106,8 @@ window.shim = window.shim || {
     getLocationInfo: function() {
         // location of the site being inspected
         
-        console.log('location: {"id":"1234","name":"Gas Station","aid":"RT 302","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":"15108"}');
-        return '{"id":"1234","name":"Gas Station","aid":"RT 302","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":"15108"}';
+        console.log('location: {"id":"1234","name":"Gas Station","aid":"","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":"15108"}');
+        return '{"id":"1234","name":"Gas Station","aid":"","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":""}';
     },
     getDatabaseSettings: function() {
         // version identifies the database schema that the database layer should use.
@@ -491,6 +491,26 @@ window.shim = window.shim || {
             return "OK";
         }
         if ( action === 'org.opendatakit.survey.android.activities.MediaChooseAudioActivity' ) {
+            that.queuedActions.push(
+              JSON.stringify({ page: promptPath, path: internalPromptContext, action: action, 
+                jsonValue: { status: -1, result: { uriFragment: "system/survey/test/raven.wav",
+                                                   contentType: "audio/wav" } } }));
+            setTimeout(function() {
+                landing.signalQueuedActionAvailable();
+            }, 100);
+            return "OK";
+        }
+        if ( action === 'org.opendatakit.survey.android.activities.DrawingActivity' ) {
+            that.queuedActions.push(
+              JSON.stringify({ page: promptPath, path: internalPromptContext, action: action, 
+                jsonValue: { status: -1, result: { uriFragment: "system/survey/test/raven.wav",
+                                                   contentType: "audio/wav" } } }));
+            setTimeout(function() {
+                landing.signalQueuedActionAvailable();
+            }, 100);
+            return "OK";
+        }
+        if ( action === 'org.opendatakit.survey.android.activities.SignatureActivity' ) {
             that.queuedActions.push(
               JSON.stringify({ page: promptPath, path: internalPromptContext, action: action, 
                 jsonValue: { status: -1, result: { uriFragment: "system/survey/test/raven.wav",

@@ -71,7 +71,7 @@
       {
         "type": "assign",
         "name": "loc_aid",
-        "calculation": "opendatakit.getLocationInfo().aid",
+        "calculation": "calculates.locationAid()",
         "_row_num": 7
       },
       {
@@ -119,7 +119,7 @@
       {
         "type": "assign",
         "name": "loc_zip",
-        "calculation": "opendatakit.getLocationInfo().zip",
+        "calculation": "calculates.locationZip()",
         "_row_num": 15
       },
       {
@@ -226,7 +226,7 @@
         "query_name": "personnel_csv",
         "query_type": "csv",
         "uri": "\"personnel.csv\"",
-        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name;\npersonnel.display = {text:personnel.name};\nreturn personnel;\n})",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name + ' ' + personnel.lastName;\npersonnel.display = {text:personnel.name + ' ' + personnel.lastName};\nreturn personnel;\n})",
         "_row_num": 2
       },
       {
@@ -247,6 +247,18 @@
         "_row_num": 4
       }
     ],
+    "calculates": [
+      {
+        "calculation_name": "locationAid",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().aid == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().aid;\n  }\n})()",
+        "_row_num": 2
+      },
+      {
+        "calculation_name": "locationZip",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
+        "_row_num": 3
+      }
+    ],
     "settings": [
       {
         "setting_name": "form_id",
@@ -255,7 +267,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160103,
+        "value": 20160104,
         "_row_num": 3
       },
       {
@@ -293,7 +305,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160103,
+        "value": 20160104,
         "_row_num": 3
       },
       "survey": {
@@ -340,7 +352,7 @@
         "query_name": "personnel_csv",
         "query_type": "csv",
         "uri": "\"personnel.csv\"",
-        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name;\npersonnel.display = {text:personnel.name};\nreturn personnel;\n})",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name + ' ' + personnel.lastName;\npersonnel.display = {text:personnel.name + ' ' + personnel.lastName};\nreturn personnel;\n})",
         "_row_num": 2
       },
       "equipment_csv": {
@@ -361,7 +373,18 @@
         "_row_num": 4
       }
     },
-    "calculates": {},
+    "calculates": {
+      "locationAid": {
+        "calculation_name": "locationAid",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().aid == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().aid;\n  }\n})()",
+        "_row_num": 2
+      },
+      "locationZip": {
+        "calculation_name": "locationZip",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
+        "_row_num": 3
+      }
+    },
     "model": {
       "stdgwslog_id": {
         "_defn": [
@@ -940,7 +963,7 @@
               "__rowNum__": 26,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('stdgwslog_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', opendatakit.getLocationInfo().aid);\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', opendatakit.getLocationInfo().zip);\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('stdgwslog_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {

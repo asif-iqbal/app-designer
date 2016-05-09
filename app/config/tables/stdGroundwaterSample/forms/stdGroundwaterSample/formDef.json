@@ -306,7 +306,7 @@
         "_row_num": 3
       },
       {
-        "type": "sketch",
+        "type": "drawing",
         "name": "skt",
         "display": {
           "text": "Sketch"
@@ -335,7 +335,7 @@
         "_row_num": 3
       },
       {
-        "type": "sketch",
+        "type": "signature",
         "name": "sign",
         "display": {
           "text": "Signature"
@@ -647,7 +647,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 20160103,
+        "value": 20160104,
         "_row_num": 3
       },
       {
@@ -815,7 +815,7 @@
       },
       {
         "name": "skt",
-        "type": "sketch",
+        "type": "drawing",
         "_row_num": 21
       },
       {
@@ -825,7 +825,7 @@
       },
       {
         "name": "sign",
-        "type": "sketch",
+        "type": "signature",
         "_row_num": 23
       }
     ]
@@ -856,7 +856,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20160103,
+        "value": 20160104,
         "_row_num": 3
       },
       "table_id": {
@@ -1432,7 +1432,19 @@
         "elementKey": "skt_name"
       },
       "skt": {
-        "type": "string",
+        "type": "object",
+        "elementType": "mimeUri",
+        "properties": {
+          "uriFragment": {
+            "type": "rowpath",
+            "elementKey": "skt_uriFragment"
+          },
+          "contentType": {
+            "type": "string",
+            "default": "image/*",
+            "elementKey": "skt_contentType"
+          }
+        },
         "_defn": [
           {
             "_row_num": 4,
@@ -1460,7 +1472,19 @@
         "elementKey": "sign_person_name"
       },
       "sign": {
-        "type": "string",
+        "type": "object",
+        "elementType": "mimeUri",
+        "properties": {
+          "uriFragment": {
+            "type": "rowpath",
+            "elementKey": "sign_uriFragment"
+          },
+          "contentType": {
+            "type": "string",
+            "default": "image/*",
+            "elementKey": "sign_contentType"
+          }
+        },
         "_defn": [
           {
             "_row_num": 4,
@@ -2353,7 +2377,7 @@
             "promptIdx": 0
           },
           {
-            "type": "sketch",
+            "type": "drawing",
             "name": "skt",
             "display": {
               "text": "Sketch"
@@ -2361,7 +2385,7 @@
             "_row_num": 4,
             "__rowNum__": 3,
             "_token_type": "prompt",
-            "_type": "sketch",
+            "_type": "drawing",
             "_branch_label_enclosing_screen": "sketch_section/_screen2",
             "promptIdx": 1
           },
@@ -2442,7 +2466,7 @@
             "promptIdx": 0
           },
           {
-            "type": "sketch",
+            "type": "signature",
             "name": "sign",
             "display": {
               "text": "Signature"
@@ -2450,7 +2474,7 @@
             "_row_num": 4,
             "__rowNum__": 3,
             "_token_type": "prompt",
-            "_type": "sketch",
+            "_type": "signature",
             "_branch_label_enclosing_screen": "signature_section/_screen2",
             "promptIdx": 1
           },

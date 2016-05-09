@@ -132,6 +132,7 @@ promptTypes.base = Backbone.View.extend({
         this.renderContext.name = this.name;
         this.renderContext.disabled = this.disabled;
         this.renderContext.image = this.image;
+        this.renderContext.drawing = this.drawing;
         this.renderContext.audio = this.audio;
         this.renderContext.video = this.video;
         this.renderContext.hint = this.hint;
@@ -1673,6 +1674,12 @@ promptTypes.decimal = promptTypes.input_type.extend({
         }
     }
 });
+promptTypes.sketch = promptTypes.input_type.extend({
+    type: "string",
+    extension: "jpg",
+    contentType: "image/*",
+    templatePath: "templates/sketch.handlebars",
+});
 promptTypes.datetime = promptTypes.input_type.extend({
     type: "datetime",
     templatePath: "templates/datetimepicker.handlebars", 
@@ -1823,7 +1830,7 @@ promptTypes.time = promptTypes.datetime.extend({
     }
 });
 /**
- * Media is an abstract object used as a base for image/audio/video
+ * Media is an abstract object used as a base for image/audio/video/drawing
  */
 promptTypes.media = promptTypes.base.extend({
     type: "media",
@@ -1973,17 +1980,21 @@ promptTypes.image = promptTypes.media.extend({
     captureAction: 'org.opendatakit.survey.android.activities.MediaCaptureImageActivity',
     chooseAction: 'org.opendatakit.survey.android.activities.MediaChooseImageActivity'
 });
-promptTypes.sketch = promptTypes.input_type.extend({
-    type: "string",
+promptTypes.drawing = promptTypes.media.extend({
+    type: "drawing",
     extension: "jpg",
     contentType: "image/*",
-    templatePath: "templates/sketch.handlebars",
+    buttonLabel: 'Draw:',
+    templatePath: "templates/drawing.handlebars",
+    chooseAction: 'org.opendatakit.survey.android.activities.DrawingActivity'
 });
-promptTypes.signature = promptTypes.base.extend({
-    type: "string",
+promptTypes.signature = promptTypes.media.extend({
+    type: "signature",
     extension: "jpg",
     contentType: "image/*",
-    templatePath: "templates/sign.handlebars",
+    buttonLabel: 'Sign:',
+    templatePath: "templates/signature.handlebars",
+    chooseAction: 'org.opendatakit.survey.android.activities.SignatureActivity'
 });
 promptTypes.video = promptTypes.media.extend({
     type: "video",

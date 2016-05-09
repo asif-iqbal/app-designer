@@ -4,9 +4,8 @@
     </div>
 {{/if}}
 <form>
-    
     <select class="form-control" name="{{name}}" multiple>        
-        <option disabled selected value="" style="display:none;">Select {{> labelHint}}</option>
+        <option disabled>Select {{> labelHint}}</option>
         {{#each choices}}
             <option 
                 {{#if checked}}

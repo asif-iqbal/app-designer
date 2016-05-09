@@ -330,9 +330,33 @@ var XLSXConverter = {};
                 }
             }
         },
+        "drawing": {
+            "type": "object",
+            "elementType": "mimeUri",
+            "properties": {
+                "uriFragment": {
+                    "type": "rowpath"
+                },
+                "contentType": {
+                    "type": "string",
+                    "default": "image/*"
+                }
+            }
+        },
 		"sketch" : {"type":"string"}, // database primitive
-       	"signature" : {"type":"string"}, // database primitive
-       
+        "signature": {
+            "type": "object",
+            "elementType": "mimeUri",
+            "properties": {
+                "uriFragment": {
+                    "type": "rowpath"
+                },
+                "contentType": {
+                    "type": "string",
+                    "default": "image/*"
+                }
+            }
+        },
         "audio": {
             "type": "object",
             "elementType": "mimeUri",

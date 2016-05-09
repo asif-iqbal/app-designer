@@ -242,7 +242,7 @@ function processFormDef(formDef) {
         var settings = jsonDef.settings;
 
         var tableId = getSettingValue(settings, 'table_id');
-        var formName = 'ODK 2.0 ' + tableId;
+        var formName = tableId;
         var formId = getSettingValue(settings, 'form_id');
         var formVersion = getSettingValue(settings, 'form_version');
         var xmlInstanceName = getSettingValue(settings, 'xml_instance_name');
