@@ -1,0 +1,11 @@
+_element_key,_element_name,_element_type,_list_child_element_keys
+parent_id,parent_id,string,[]
+reading_blows,reading_blows,string,[]
+reading_classif,reading_classif,string,[]
+reading_color,reading_color,string,[]
+reading_density,reading_density,string,[]
+reading_depth_range,reading_depth_range,string,[]
+reading_id,reading_id,string,[]
+reading_moisture,reading_moisture,string,[]
+reading_odor,reading_odor,string,[]
+reading_sample_id,reading_sample_id,string,[]

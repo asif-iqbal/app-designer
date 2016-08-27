@@ -417,7 +417,8 @@ promptTypes.finalize = promptTypes.base.extend({
     templatePath: "templates/finalize.handlebars",
     events: {
         "click .incomplete": "saveIncomplete",
-        "click .finalize": "saveFinal"
+        "click .finalize": "saveFinal",
+        "click .goback": "gotoPreviousScreen"
     },
     renderContext: {
         headerImg: requirejs.toUrl('../config/assets/img/form_logo.png')
@@ -462,6 +463,46 @@ promptTypes.finalize = promptTypes.base.extend({
         var ctxt = that.controller.newContext(evt);
         ctxt.log('D',"prompts." + this.type + ".saveFinal", "px: " + this.promptIdx);
         that.controller.gotoFinalizeAndTerminateAction(ctxt);
+    },
+    gotoPreviousScreen: function(evt) {
+        evt.stopPropagation();
+        evt.stopImmediatePropagation();
+        var that = this;
+        var ctxt = that.controller.newContext(evt);
+        //Asif
+        //ctxt.log('D','prompts.gotoPreviousScreen', 
+        //    ((that.activeScreen != null) ? ("px: " + that.activeScreen.promptIdx) : "no current activeScreen"));
+        if (that.eventTimeStamp == evt.timeStamp) {
+            ctxt.log('I','prompts.gotoPreviousScreen.duplicateEvent');
+            ctxt.success();
+            //Asif
+            //evt.preventDefault();
+            return;
+        }
+        that.eventTimeStamp = evt.timeStamp;
+        that.gotoPreviousScreenAction(ctxt);
+        evt.preventDefault();
+    },
+    gotoPreviousScreenAction: function(ctxt) {
+        //Asif
+        //this.currentPageEl.css('opacity', '.5').fadeTo("fast", 1.0);
+        var that = this;
+        if(that.pageChangeActionLockout) {
+            ctxt.log('D','prompts.gotoPreviousScreen.ignoreDisabled');
+            ctxt.success();
+            return;
+        }
+        //Asif
+        //that.pageChangeActionLockout = true;
+        that.controller.gotoPreviousScreen($.extend({},ctxt,{success:function(){ 
+                    //Asif
+                    //that.pageChangeActionLockout = false; 
+                    ctxt.success();
+                },failure:function(m){
+                    //Asif
+                    //that.pageChangeActionLockout = false; 
+                    ctxt.failure(m);
+                }}));
     }
 });
 promptTypes.json = promptTypes.base.extend({
@@ -997,6 +1038,9 @@ promptTypes.user_branch = promptTypes.base.extend({
     choice_filter: function(){ return true; },
     configureRenderContext: function(ctxt) {
         var that = this;
+        if ( that._screen && that._screen._renderContext ) {
+            that._screen._renderContext.enableForwardNavigation = false;
+        }
         var newctxt = $.extend({}, ctxt, {success: function(outcome) {
             ctxt.log('D',"prompts." + that.type + ".configureRenderContext." + outcome,
                         "px: " + that.promptIdx);
@@ -1015,9 +1059,6 @@ promptTypes.user_branch = promptTypes.base.extend({
             newctxt.success("choiceList.success");
         } else {
             newctxt.failure({message: "Error fetching choices -- no ajax query or choices defined"});
-        }
-        if ( that._screen && that._screen._renderContext ) {
-            that._screen._renderContext.enableForwardNavigation = false;
         }
     }
 });
@@ -1174,7 +1215,8 @@ promptTypes.select = promptTypes._linked_type.extend({
         var formValue = (this.$('form').serializeArray());
         that.setValueDeferredChange(that.generateSaveValue(formValue));
         that.updateRenderValue(formValue);
-        that.reRender(ctxt);
+        //Asif
+        //that.reRender(ctxt);
     },
     configureRenderContext: function(ctxt) {
         var that = this;
@@ -1580,6 +1622,42 @@ promptTypes.textarea = promptTypes.input_type.extend({
     renderContext: {
         "type": "textarea"
     },
+    events: {
+        "change textarea": "modification",
+        "swipeleft .input-container": "stopPropagation",
+        "swiperight .input-container": "stopPropagation",
+        "focusout .input-container": "loseFocus",
+        "focusin .input-container": "gainFocus"
+    },
+    loseFocus: function(evt) {
+        var that = this;
+        shim.log('D',"prompts." + that.type + ".focusout px: " + that.promptIdx);
+                
+        if (that.modified === true) {
+            var ctxt = that.controller.newContext(evt);
+            that.reRender(ctxt);
+        }
+    },
+    gainFocus: function(evt) {
+        var that = this;
+        shim.log('D',"prompts." + that.type + ".focusin px: " + that.promptIdx);
+    },
+    modification: function(evt) {
+        var value = $(evt.target).val();
+        var that = this;
+        that.modified = false;
+        if ( that.lastEventTimestamp == evt.timeStamp ) {
+            shim.log("D","prompts." + that.type + ".modification duplicate event ignored");
+            return;
+        }
+        that.lastEventTimestamp = evt.timeStamp;
+        shim.log("D","prompts." + that.type + ".modification event being processed");
+        var renderContext = that.renderContext;
+        // track original value
+        renderContext.invalid = that.setValueAndValidate(value);
+        that.modified = true;
+        renderContext.value = value;
+    },
     beforeMove: function() {
         var that = this;
         var isInvalid = that.setValueAndValidate(this.$('textarea').val());
@@ -1774,7 +1852,8 @@ promptTypes.datetime = promptTypes.input_type.extend({
  
            renderContext.value = formattedDateValue;
             if ( rerender ) {
-                that.reRender(ctxt);
+                //Asif
+                //that.reRender(ctxt);
             } else {
                 ctxt.success();
             }
@@ -2073,6 +2152,11 @@ promptTypes.launch_intent = promptTypes.base.extend({
                 if (jsonObject.result != null) {
                     that.setValueDeferredChange(that.extractDataValue(jsonObject));
                     that.renderContext.value = that.getValue();
+                    //Asif
+                    if (that.type === "geopoint") {
+                        that.buttonLabel = "Re-record Location";
+                    }
+                    //
                     that.reRender(ctxt);
                 }
             } else {
@@ -2157,758 +2241,6 @@ promptTypes.geopointmap = promptTypes.launch_intent.extend({
 promptTypes.note = promptTypes.base.extend({
     type: "note",
     templatePath: "templates/note.handlebars"
-});
-
-promptTypes.bargraph = promptTypes.base.extend({
-    type: "bargraph",
-    vHeight: 0,
-    vWidth: 0,
-    events: {
-        "click .y_up": "scale_y_up",
-        "click .y_down": "scale_y_down",
-        "click .x_up": "scale_x_up",
-        "click .x_down": "scale_x_down"
-    },
-    templatePath: "templates/graph.handlebars",
-    scale_y_up: function(evt){
-        var that = this;
-        that.vHeight = that.vHeight + (that.vHeight * .2);
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_y_down: function(evt){
-        var that = this;
-        that.vHeight = that.vHeight - (that.vHeight * .2);
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_x_up: function(evt){
-        var that = this;
-        that.vWidth = that.vWidth + (that.vWidth * .2);
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_x_down: function(evt){
-        var that = this;
-        that.vWidth = that.vWidth - (that.vWidth * .2);
-        var ctxt = that.controller.newContext(evt);    
-        that.reRender(ctxt);
-    },
-    configureRenderContext: function(ctxt) {
-        var that = this;
-        var newctxt = $.extend({}, ctxt, {success: function(outcome) {
-            ctxt.log('D',"prompts." + that.type + ".configureRenderContext." + outcome,
-                        "px: " + that.promptIdx);
-            ctxt.success();
-        },
-        failure:function(m) {
-            ctxt.failure(m);
-        }});
-        
-        that.renderContext.passiveError = null;
-        that.renderContext.graphType = that.type;
-        var queryDefn = opendatakit.getQueriesDefinition(that.values_list);
-        if(queryDefn != null) {
-            that.populateChoicesViaQueryUsingAjax(queryDefn, newctxt);
-        } else {
-            newctxt.failure({message: "Error fetching choices -- no ajax query or choices defined"});
-        }
-    },
-    afterRender: function() {
-        var that = this;
-
-        var paramWidth = 400;
-        var paramHeight = 450;
-        
-        // In configureRenderContext getting data via the CSV
-        // fetched data should now be in the renderContext.choices array
-        if (that.renderContext.choices.length == 0)
-        {
-            shim.log("E","prompts." + that.type + ".afterRender - no data to graph");
-            return; 
-        } 
-        var dataJ = _.map(that.renderContext.choices, function(choice){
-            return choice;
-        });
-
-        var margin = {top: 50, right: 20, bottom: 50, left: 50},
-            width = paramWidth - margin.left - margin.right,
-            height = paramHeight - margin.top - margin.bottom;
-
-        var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
-
-        var y = d3.scale.linear().range([height, 0]);
-
-        var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom");
-
-        var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left")
-        .tickSubdivide(true)
-        dataJ.forEach(function(d) {
-                d.y = +d.y;
-            });
-
-        x.domain(dataJ.map(function(d) { return d.x; }));
-        y.domain([0, d3.max(dataJ, function(d) { return d.y; })]);
-        if (that.vWidth == 0) {
-            that.vWidth = width;
-        }
-        if (that.vHeight == 0) {
-            that.vHeight = height;
-        }
-
-        var downx = 0;
-        var downy = Math.NaN;
-        var isClicked = 0;
-        var downscalex;
-        var downscaley;
-        var clickX;
-        var clickY;
-        var lMarg = 0;
-        var tMarg = 0;
-
-        var tempHeight = that.vHeight + 0;
-        x.rangeRoundBands([0, that.vWidth + 0], .2);
-        y.range([tempHeight, 0]);
-        yAxis.ticks(tempHeight/30);
-
-        that.$("#plot").bind('pinch', function(){
-            that.scale_y_down();
-        });
-
-        var svg = d3.select(that.$("#plot").get(0)).append("svg")
-            .attr("id", "svgElement")
-            .attr("class", "wholeBody")
-            .attr("z-index", 1)
-            .attr("width", that.vWidth + margin.left + margin.right + 0)
-            .attr("height", that.vHeight + margin.top + margin.bottom + 0)
-            .append("g")
-            .attr("transform", "translate(" + (margin.left + lMarg) + "," + (margin.top + tMarg) + ")");
-
-            svg.append("g")
-            .attr("class", "x-axis")
-            .attr("z-index", 4)
-            .attr("transform", "translate(0," + tempHeight + ")")
-            .call(xAxis)
-            .append("text")
-            .attr("x", that.vWidth/2-50)
-            .attr("y", 35)
-            .attr("dx", ".71em")
-            .attr("pointer-events", "all")
-            .style("font-size", "1.5em")
-            .style("text-anchor", "start")
-            .text("x-axis");
-
-            svg.append("g")
-            .attr("class", "y_axis")
-            .attr("z-index", 4)
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", -35)
-            .attr("x", -1 * tempHeight/2)
-            .style("font-size", "1.5em")
-            .style("text-anchor", "end")
-            .text("y-axis");
-             var lines = svg.selectAll(".bar")
-              .data(dataJ);
-
-          lines.enter()
-            .append("rect")
-              .attr("class", "bar")
-              .attr("width", x.rangeBand())
-              .attr("fill", function(d) {
-                return 'red';// change this using d.y with 'if' statements to hard code color values
-                });
-          lines
-              .attr("x", function(d) { return x(d.x); })
-              .attr("y", function(d) { return y(d.y); })
-              .attr("height", function(d) { return tempHeight - y(d.y); });
- 
-        return;
-    }
-});
-
-promptTypes.linegraph = promptTypes.base.extend({
-    type: "linegraph",
-    vHeight: 0,
-    vWidth: 0,
-    events: {
-        "click .y_up": "scale_y_up",
-        "click .y_down": "scale_y_down",
-        "click .x_up": "scale_x_up",
-        "click .x_down": "scale_x_down"
-    },
-    templatePath: "templates/graph.handlebars",
-    scale_y_up: function(evt){
-        var that = this;
-        that.vHeight = that.vHeight + (that.vHeight * .2);
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_y_down: function(evt){
-        var that = this;
-        that.vHeight = that.vHeight - (that.vHeight * .2);
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_x_up: function(evt){
-        var that = this;
-        that.vWidth = that.vWidth + (that.vWidth * .2);
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_x_down: function(evt){
-        var that = this;
-        that.vWidth = that.vWidth - (that.vWidth * .2);
-        var ctxt = that.controller.newContext(evt);    
-        that.reRender(ctxt);
-    },
-    configureRenderContext: function(ctxt) {
-        var that = this;
-        var newctxt = $.extend({}, ctxt, {success: function(outcome) {
-            ctxt.log('D',"prompts." + that.type + ".configureRenderContext." + outcome,
-                        "px: " + that.promptIdx);
-            ctxt.success();
-        },
-        failure:function(m) {
-            ctxt.failure(m);
-        }});
-        
-        that.renderContext.passiveError = null;
-        that.renderContext.graphType = that.type;
-        var queryDefn = opendatakit.getQueriesDefinition(that.values_list);
-        if(queryDefn != null) {
-            that.populateChoicesViaQueryUsingAjax(queryDefn, newctxt);
-        } else {
-            newctxt.failure({message: "Error fetching choices -- no ajax query or choices defined"});
-        }
-    },
-    afterRender: function() {
-        var that = this;
-        var xString = "x-axis";
-        var yString = "y-axis";
-        var legendString = "y-value"
-
-        var paramWidth = 450;
-        var paramHeight = 400;
-        
-        // In configureRenderContext getting data via the CSV
-        // fetched data should now be in the renderContext.choices array
-        if (that.renderContext.choices.length == 0)
-        {
-            shim.log("E","prompts." + that.type + ".afterRender - no data to graph");
-            return; 
-        } 
-
-        if (that.x_axis_label) {
-            xString = that.x_axis_label;
-        }
-
-        if (that.y_axis_label) {
-            yString = that.y_axis_label;
-        }
-
-        if (that.legend_text) {
-            legendString = that.legend_text;
-        }
-
-        var dataJ = _.map(that.renderContext.choices, function(choice){
-            return choice;
-        });
-
-        var margin = {top: 50, right: 20, bottom: 40, left: 50},
-            width = paramWidth - margin.left - margin.right,
-            height = paramHeight - margin.top - margin.bottom;
-
-        var x = d3.scale.linear().range([0, width]);
-
-        var y = d3.scale.linear().range([height, 0]);
-
-        var xAxis = d3.svg.axis()
-            .scale(x)
-            .orient("bottom")
-            .tickSubdivide(true);
-
-         var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient("left")
-            .tickSubdivide(true);
-
-        dataJ.forEach(function(d) {
-            d.y = +d.y;
-            d.x = +d.x;
-        });
-
-        /* When dataMin and dataMax gets implemented
-        dataMin.forEach(function(d) {
-            d.y = +d.y;
-            d.x = +d.x;
-        });
-    
-        dataMax.forEach(function(d) {
-            d.y = +d.y;
-            d.x = +d.x;
-        });
-        */
-
-        
-        var line = d3.svg.line()
-            .x(function(d) { return x(d.x); })
-            .y(function(d) { return y(d.y); });
-
-        // Don't have a dataMax of dataMin yet
-        // Also setting this to a fixed range and domain for now
-        // These will probably need to be settings 
-        x.domain([0, d3.max(dataJ, function(d) { return d.x; })]);
-        y.domain([d3.min(dataJ, function(d) { return d.y; }), d3.max(dataJ, function(d) { return d.y; })]);
-
-        if (that.vWidth == 0) {
-            that.vWidth = width;
-        }
-        if (that.vHeight == 0) {
-            that.vHeight = height;
-        }
-
-        var downx = 0;
-        var downy = Math.NaN;
-        var isClicked = 0;
-        var downscalex;
-        var downscaley;
-        var clickX;
-        var clickY;
-        var lMarg = 0;
-        var tMarg = 0;
-
-        var tempHeight = that.vHeight + 0;
-        //x.rangeRoundBands([0, that.vWidth + 0], .2);
-        x.range([0, that.vWidth]);
-        y.range([tempHeight, 0]);
-        yAxis.ticks(tempHeight/30);
-
-        var svg = d3.select(that.$("#plot").get(0)).append("svg")
-            .attr("id", "svgElement")
-            .attr("class", "wholeBody")
-            .attr("z-index", 1)
-            .attr("width", that.vWidth + margin.left + margin.right + 0)
-            .attr("height", that.vHeight + margin.top + margin.bottom + 0)
-            .append("g")
-            .attr("transform", "translate(" + (margin.left + lMarg) + "," + (margin.top + tMarg) + ")");
-
-        svg.append("g")
-            .attr("class", "x-axis")
-            .attr("z-index", 4)
-            .attr("transform", "translate(0," + tempHeight + ")")
-            .call(xAxis)
-            .append("text")
-            .attr("x", that.vWidth/2-50)
-            .attr("y", 35)
-            .attr("dx", ".71em")
-            .attr("pointer-events", "all")
-            .style("font-size", "1.5em")
-            .style("text-anchor", "start")
-            .text(xString);  // This should be customizable
-
-        svg.append("g")
-            .attr("class", "y_axis")
-            .attr("z-index", 4)
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", -35)
-            .attr("x", -1 * tempHeight/2)
-            .style("font-size", "1.5em")
-            .style("text-anchor", "end")
-            .text(yString);  // This should be customizable
-
-        svg.append("path")
-            .datum(dataJ)
-            .attr("class", "line")
-            .attr("fill", "none")
-            .attr("stroke", "blue")
-            .attr("d", line);
-
-        // add legend   
-        var legend = svg.append("g")
-            .attr("class", "legend")
-            .attr("height", 50)
-            .attr("width", 100);
-    
-        legend
-            .append("rect")
-            .attr("x", -10 )
-            .attr("y", -30)
-            .attr("width", 10)
-            .attr("height", 10)
-            .style("fill", 'blue');
-      
-        legend
-        .append("text")
-        .attr("x", 10)
-        .attr("y", -20)
-        .text(legendString);
-
-        if (that.x_value && that.y_value) {
-            var x_val = database.getDataValue(that.x_value);
-            var y_val = database.getDataValue(that.y_value);
-            svg.append("circle")
-                .attr("class", "dot")
-                .attr("r", 8)
-                .attr("fill", "none")
-                .attr("stroke", "#0a0")
-                .attr("stroke-width", "1.5px")
-                .attr("cx", function(d) { return x(x_val); })
-                .attr("cy", function(d) { return y(y_val); });
-    }
-
- 
-        return;
-    }
-});
-
-promptTypes.piechart = promptTypes.base.extend({
-    type: "piechart",
-    vHeight: 0,
-    vWidth: 0,
-    vRadius: 0,
-    events: {
-        "click .scale_up": "scale_up",
-        "click .scale_down": "scale_down",
-    },
-    templatePath: "templates/graph.handlebars",
-    scale_up: function(evt){
-        var that = this;
-        that.vHeight = that.vHeight + (that.vHeight * .1);
-        that.vWidth = that.vWidth + (that.vWidth * .1);
-        that.vRadius = that.vRadius * 1.1;
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_down: function(evt){
-        var that = this;
-        that.vHeight = that.vHeight - (that.vHeight * .1);
-        that.vWidth = that.vWidth - (that.vWidth * .1);
-        that.vRadius = that.vRadius * 0.9;
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    configureRenderContext: function(ctxt) {
-        var that = this;
-        var newctxt = $.extend({}, ctxt, {success: function(outcome) {
-            ctxt.log('D',"prompts." + that.type + ".configureRenderContext." + outcome,
-                        "px: " + that.promptIdx);
-            ctxt.success();
-        },
-        failure:function(m) {
-            ctxt.failure(m);
-        }});
-        
-        that.renderContext.passiveError = null;
-        that.renderContext.graphType = that.type;
-        var queryDefn = opendatakit.getQueriesDefinition(that.values_list);
-        if(queryDefn != null) {
-            that.populateChoicesViaQueryUsingAjax(queryDefn, newctxt);
-        } else {
-            newctxt.failure({message: "Error fetching choices -- no ajax query or choices defined"});
-        }
-    },
-    afterRender: function() {
-        var that = this;
-
-        var paramWidth = 500;
-        var paramHeight = 500;
-
-        var margin = {top: 20, right: 20, bottom: 40, left: 80},
-            width = paramWidth - margin.left - margin.right,
-            height = paramHeight - margin.top - margin.bottom,
-            radius = Math.min(width, height) / 2;
-        
-        // In configureRenderContext getting data via the CSV
-        // fetched data should now be in the renderContext.choices array
-        if (that.renderContext.choices.length == 0)
-        {
-            shim.log("E","prompts." + that.type + ".afterRender - no data to graph");
-            return; 
-        } 
-        var dataJ = _.map(that.renderContext.choices, function(choice){
-            return choice;
-        });
-
-        if (that.vWidth == 0) {
-            that.vWidth = width;
-        }
-        if (that.vHeight == 0) {
-            that.vHeight = height;
-        }
-        if (that.vRadius == 0) {
-            that.vRadius = radius;
-        }
-
-        dataJ.forEach(function(d) {
-            d.y = +d.y;
-        });
-
-
-        var arc = d3.svg.arc()
-            .outerRadius(that.vRadius - 10)
-            .innerRadius(0);
-
-        var pie = d3.layout.pie()
-            .sort(null)
-            .value(function(d) { return d.y; });
-
-        var svg = d3.select(that.$("#plot").get(0)).append("svg")
-            .attr("class", "wholeBody")
-            .data([dataJ])
-            .attr("width", that.vWidth)
-            .attr("height", that.vHeight)
-            .append("g")
-            .attr("transform", "translate(" + that.vWidth / 2 + "," + that.vHeight / 2 + ")");
-
-        var g = svg.selectAll(".arc")
-            .data(pie(dataJ))
-            .enter().append("g")
-            .attr("class", "arc");
-
-        g.append("path")
-            .attr("d", arc)
-            .style("fill", function(d, i) {
-                // Switch to a case statement 
-                // Maybe these colors should be available in a library or something
-                if(i == 0) {
-                    return "green";
-                } else if(i == 1) {
-                    return "yellow";
-                } else if(i == 2){
-                    return "blue";
-                } else if(i == 3){
-                    return "red";
-                } else if(i == 4){
-                    return "orange";
-                } else if(i == 5){
-                    return "purple";
-                } else if(i == 6){
-                    return "pink";
-                } else if(i == 7){
-                    return "teal";
-                }
-            });
-
-        g.append("text")
-            .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-            .attr("dy", "2em")
-            .style("text-anchor", "middle")
-            .text(function(d, i) { return dataJ[i].x; });        
-    }
-});
-
-promptTypes.scatterplot = promptTypes.base.extend({
-    type: "scatterplot",
-    vHeight: 0,
-    vWidth: 0,
-    events: {
-        "click .y_up": "scale_y_up",
-        "click .y_down": "scale_y_down",
-        "click .x_up": "scale_x_up",
-        "click .x_down": "scale_x_down"
-    },
-    templatePath: "templates/graph.handlebars",
-    scale_y_up: function(evt){
-        var that = this;
-        that.vHeight = that.vHeight + (that.vHeight * .2);
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_y_down: function(evt){
-        var that = this;
-        that.vHeight = that.vHeight - (that.vHeight * .2);
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_x_up: function(evt){
-        var that = this;
-        that.vWidth = that.vWidth + (that.vWidth * .2);
-        var ctxt = that.controller.newContext(evt);
-        that.reRender(ctxt);
-    },
-    scale_x_down: function(evt){
-        var that = this;
-        that.vWidth = that.vWidth - (that.vWidth * .2);
-        var ctxt = that.controller.newContext(evt);    
-        that.reRender(ctxt);
-    },
-    configureRenderContext: function(ctxt) {
-        var that = this;
-        var newctxt = $.extend({}, ctxt, {success: function(outcome) {
-            ctxt.log('D',"prompts." + that.type + ".configureRenderContext." + outcome,
-                        "px: " + that.promptIdx);
-            ctxt.success();
-        },
-        failure:function(m) {
-            ctxt.failure(m);
-        }});
-        
-        that.renderContext.passiveError = null;
-        that.renderContext.graphType = that.type;
-        var queryDefn = opendatakit.getQueriesDefinition(that.values_list);
-        if(queryDefn != null) {
-            that.populateChoicesViaQueryUsingAjax(queryDefn, newctxt);
-        } else {
-            newctxt.failure({message: "Error fetching choices -- no ajax query or choices defined"});
-        }
-    },
-    afterRender: function() {
-        var that = this;
-
-        var paramWidth = 450;
-        var paramHeight = 400;
-
-        var margin = {top: 20, right: 20, bottom: 40, left: 50},
-            width = paramWidth - margin.left - margin.right,
-            height = paramHeight - margin.top - margin.bottom,
-            padding = 30;
-
-        if (that.vWidth == 0) {
-            that.vWidth = width;
-        }
-        if (that.vHeight == 0) {
-            that.vHeight = height;
-        }
-        
-        // In configureRenderContext getting data via the CSV
-        // fetched data should now be in the renderContext.choices array
-        if (that.renderContext.choices.length == 0)
-        {
-            shim.log("E","prompts." + that.type + ".afterRender - no data to graph");
-            return; 
-        } 
-
-        var dataJ = _.map(that.renderContext.choices, function(choice){
-            return choice;
-        });
-
-        dataJ.forEach(function(d) {
-            d.x = +d.x;
-            d.y = +d.y;
-            d.r = +d.r;
-        });
-
-        var x = d3.scale.ordinal()
-            .rangeRoundBands([0, that.vWidth], .1);
-
-        var y = d3.scale.linear()
-            .range([that.vHeight, 0]);
-
-        x.domain([0, d3.max(dataJ, function(d) { return d.x; })]);
-        y.domain([0, d3.max(dataJ, function(d) { return d.y; })]);
-
-        //    Create scale functions
-        var xScale = d3.scale.linear()
-            .domain([0, d3.max(dataJ, function(d) { return d.x; })])
-            .range([padding, that.vWidth - padding * 2]);
-
-        var yScale = d3.scale.linear()
-            .domain([0, d3.max(dataJ, function(d) { return d.y; })])
-            .range([that.vHeight - padding, padding]);
-
-        var rScale = d3.scale.linear()
-            .domain([0, d3.max(dataJ, function(d) { return d.y; })])
-            .range([2, 5]);
-
-        // Define X axis
-        var xAxis = d3.svg.axis()
-            .scale(xScale)
-            .orient("bottom")
-            .ticks(5);
-
-        // Define Y axis
-        var yAxis = d3.svg.axis()
-            .scale(yScale)
-            .orient("left")
-            .ticks(5);
-
-    
-        // Drawing
-        d3.selectAll(".wholeBody").remove();
-        
-        //    Create SVG element
-        var svg = d3.select(that.$("#plot").get(0))
-            .append("svg")
-            .attr("class", "wholeBody")
-            .attr("width", that.vWidth + margin.left + margin.right)
-            .attr("height", that.vHeight + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
-        
-        x.rangeRoundBands([0, that.vWidth], .1);
-        y.range([that.vHeight, 0]);
-        
-        yScale.range([that.vHeight - padding, padding]);
-        xScale.range([padding, that.vWidth - padding * 2]);
-
-        // For now hardcode these values for colors
-        var rString = "x";
-        var getForegroundColor = function(value) {
-            var len = 0;
-            if (value !== null && value !== undefined) {
-                len = parseInt(value) / 10;
-            }
-            console.log('getForegroundColor() called');
-            // we need to return a string, so we'll just bring back a dummy value
-            var colors = ['blue','red','yellow','orange','green'];
-            return colors[parseInt(len) % colors.length];
-        };
-        
-        //        Create circles
-        svg.selectAll("circle")
-            .data(dataJ)
-            .enter()
-            .append("circle")
-            .attr("cx", function(d) {
-                return xScale(d.x);
-            })
-            .attr("cy", function(d) {
-                return yScale(d.y);
-            })
-            .attr("r", function(d) {
-                return rScale(4);
-            })
-            .attr("fill", function(d) {
-                if(rString != "No Scaling") {
-                    return getForegroundColor(d.r);
-                } else {
-                    return "black";
-                }
-            });
-
-        //        Create X axis
-        svg.append("g")
-            .attr("class", "axis")
-            .attr("transform", "translate(0," + (that.vHeight - padding) + ")")
-            .call(xAxis)
-            .append("text")
-            .attr("x", that.vWidth/2-50)
-            .attr("y", 35)
-            .style("font-size", "1.5em")
-            .style("text-anchor", "start")
-            .text("x-axis");  // Need to be able to pass a string in
-
-        //        Create Y axis
-        svg.append("g")
-            .attr("class", "axis")
-            .attr("transform", "translate(" + padding + ",0)")
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", -35)
-            .attr("x", -1 * that.vHeight/2)
-            .style("font-size", "1.5em")
-            .style("text-anchor", "end")
-            .text("y-axis");  // Need to be able to pass a string in
-        }
 });
 
 // psuedo-prompt emitted by do_section so that sections appear in contents list

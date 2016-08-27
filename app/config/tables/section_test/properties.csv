@@ -1,0 +1,20 @@
+_partition,_aspect,_key,_type,_value
+Column,age,displayChoicesList,object,[]
+Column,age,displayFormat,string,""
+Column,age,displayName,string,"""age"""
+Column,age,displayVisible,boolean,TRUE
+Column,age,joins,object,""
+Column,color,displayChoicesList,object,[]
+Column,color,displayFormat,string,""
+Column,color,displayName,string,"""color"""
+Column,color,displayVisible,boolean,TRUE
+Column,color,joins,object,""
+FormType,default,FormType.formType,string,SURVEY
+SurveyUtil,default,SurveyUtil.formId,string,section_test
+Table,default,colOrder,array,"[""age"",""color""]"
+Table,default,defaultViewType,string,SPREADSHEET
+Table,default,displayName,object,"{""default"":""Section Test"",""hindi"":""धारा टेस्ट""}"
+Table,default,groupByCols,object,[]
+Table,default,indexCol,string,""
+Table,default,sortCol,string,""
+Table,default,sortOrder,string,""

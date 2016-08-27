@@ -40,6 +40,7 @@
         <project_depart_time/>
         <project_end_time/>
         <project_start_time/>
+        <sample_date/>
         <sign/>
         <sign_person_name/>
         <skt/>
@@ -78,6 +79,7 @@
     <bind nodeset="/data/project_depart_time" type="time"/>
     <bind nodeset="/data/project_end_time" type="time"/>
     <bind nodeset="/data/project_start_time" type="time"/>
+    <bind nodeset="/data/sample_date" type="date"/>
     <bind nodeset="/data/sign" type="binary"/>
     <bind nodeset="/data/sign_person_name" type="string"/>
     <bind nodeset="/data/skt" type="binary"/>

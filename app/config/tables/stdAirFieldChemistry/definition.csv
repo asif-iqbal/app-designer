@@ -1,0 +1,10 @@
+_element_key,_element_name,_element_type,_list_child_element_keys
+parent_id,parent_id,string,[]
+reading_co,reading_co,number,[]
+reading_co2,reading_co2,number,[]
+reading_h2s,reading_h2s,number,[]
+reading_id,reading_id,string,[]
+reading_lel,reading_lel,number,[]
+reading_pid,reading_pid,number,[]
+reading_time,reading_time,time,[]
+reading_vol_purged,reading_vol_purged,number,[]

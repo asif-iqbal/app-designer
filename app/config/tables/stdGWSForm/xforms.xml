@@ -34,6 +34,7 @@
         <loc_streetAddress/>
         <loc_zip/>
         <personnel/>
+        <sample_date/>
         <stdgwslog_id/>
         <subcontractors/>
         <task/>
@@ -63,6 +64,7 @@
     <bind nodeset="/data/loc_streetAddress" type="string"/>
     <bind nodeset="/data/loc_zip" type="string"/>
     <bind nodeset="/data/personnel" type="select"/>
+    <bind nodeset="/data/sample_date" type="date"/>
     <bind nodeset="/data/stdgwslog_id" type="string"/>
     <bind nodeset="/data/subcontractors" type="string"/>
     <bind nodeset="/data/task" type="string"/>

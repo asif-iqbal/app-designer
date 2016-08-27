@@ -15,15 +15,15 @@ requirejs.config({
     waitSeconds: 45,
     paths: {
         // third-party libraries we depend upon 
-        jquery : 'libs/jquery.1.10.2',
+        jquery : 'libs/jquery-1.10.2.min',
         bootstrap : 'libs/bootstrap-3.1.1-dist/js/bootstrap.min',
         moment : 'libs/eonasdan/moment',     
         datetimepicker : 'libs/eonasdan/bootstrap-datetimepicker',
         spinner : 'libs/spinner/waitMe.min',
-        backbone : 'libs/backbone.1.0.0',
-        handlebars : 'libs/handlebars.1.0.0.rc.4',
-        underscore : 'libs/underscore.1.4.4',
-        text : 'libs/text.2.0.10',
+        backbone : 'libs/backbone-min',
+        handlebars : 'libs/handlebars.1.0.0.rc.4.min',
+        underscore : 'libs/underscore.1.4.4.min',
+        text : 'libs/text.2.0.10.min',
         //mobiscroll : 'libs/mobiscroll-2.5.4/js/combined.min',
         // directory paths for resources
         img : 'img',
@@ -48,8 +48,7 @@ requirejs.config({
         handlebarsHelpers : 'survey/js/handlebarsHelpers',
         formulaFunctions : 'survey/js/formulaFunctions',
         jqueryCsv : 'libs/jquery-csv/src/jquery.csv',
-        XRegExp : 'libs/XRegExp-All-3.0.0-pre-2014-12-24',
-        d3 : 'libs/d3-amd/d3'
+        XRegExp : 'libs/XRegExp-All-3.0.0-pre-2014-12-24'
     },
     shim: {
         'bootstrap': {
@@ -96,10 +95,6 @@ requirejs.config({
         'jqueryCsv' : {
             deps: ['jquery'],
             exports: '$.csv'
-        },
-        'd3' : {
-            deps: [],
-            exports: 'd3'
         }
     }
 });
@@ -142,14 +137,14 @@ require(['jquery'],
                 
             // and launch the framework...
             require([ 'spinner', 'opendatakit', 'database', 'parsequery',
-                            'builder', 'controller', 'd3', 'jqueryCsv', 'datetimepicker'], 
+                            'builder', 'controller', 'jqueryCsv', 'datetimepicker'], 
             function(spinner,   opendatakit,   database,  parsequery,
-                             builder,   controller,   d3,   jqueryCsv) {
+                             builder,   controller,   jqueryCsv) {
                 verifyLoad('main.require.framework.loaded',
                     ['datetimepicker', 'spinner', 'opendatakit', 'database','parsequery',
-                            'builder', 'controller', 'd3', 'jqueryCsv'],
+                            'builder', 'controller', 'jqueryCsv'],
                     [ $.fn.datetimepicker,   spinner,   opendatakit,   database,  parsequery,
-                             builder,   controller,   d3,   jqueryCsv]);
+                             builder,   controller,   jqueryCsv]);
 
                 
                 // define a function that waits until jquery mobile is initialized

@@ -319,6 +319,7 @@ Eventually we should make a jqm theme for this.
 
 .odk-label {
     font-size: larger;
+    font-weight: 700;
 }
 .odk-hint {
     font-style: italic;

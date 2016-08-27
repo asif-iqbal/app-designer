@@ -1,0 +1,65 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>stdBoringMeasurement</h:title>
+  <model>
+    <instance>
+      <data id="stdBoringMeasurement">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <parent_id/>
+        <reading_blows/>
+        <reading_classif/>
+        <reading_color/>
+        <reading_density/>
+        <reading_depth_range/>
+        <reading_id/>
+        <reading_moisture/>
+        <reading_odor/>
+        <reading_sample_id/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/parent_id" type="string"/>
+    <bind nodeset="/data/reading_blows" type="string"/>
+    <bind nodeset="/data/reading_classif" type="string"/>
+    <bind nodeset="/data/reading_color" type="string"/>
+    <bind nodeset="/data/reading_density" type="string"/>
+    <bind nodeset="/data/reading_depth_range" type="string"/>
+    <bind nodeset="/data/reading_id" type="string"/>
+    <bind nodeset="/data/reading_moisture" type="string"/>
+    <bind nodeset="/data/reading_odor" type="string"/>
+    <bind nodeset="/data/reading_sample_id" type="string"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+ </h:body> 
+</h:html>

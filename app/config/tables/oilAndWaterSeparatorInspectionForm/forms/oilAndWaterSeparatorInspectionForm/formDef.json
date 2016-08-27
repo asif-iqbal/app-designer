@@ -1,0 +1,3820 @@
+{
+  "xlsx": {
+    "initial": [
+      {
+        "clause": "if // start",
+        "condition": "(opendatakit.getCurrentInstanceId() != null)",
+        "_row_num": 3
+      },
+      {
+        "clause": "do section survey",
+        "_row_num": 4
+      },
+      {
+        "type": "finalize",
+        "display": {
+          "text": "Save form"
+        },
+        "_row_num": 5
+      },
+      {
+        "clause": "else // start",
+        "_row_num": 6
+      },
+      {
+        "type": "instances",
+        "display": {
+          "text": "Saved instances"
+        },
+        "_row_num": 7
+      },
+      {
+        "clause": "end if // start",
+        "_row_num": 8
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "OWS and Outfall Inspection"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "assign",
+        "name": "sample_date",
+        "calculation": "calculates.currDate()",
+        "_row_num": 3
+      },
+      {
+        "type": "date",
+        "name": "sample_date",
+        "display": {
+          "text": "Date"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 4
+      },
+      {
+        "type": "string",
+        "name": "inspection_id",
+        "display": {
+          "text": "Oil Water Separator ID"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 5
+      },
+      {
+        "type": "string",
+        "name": "outfall_id",
+        "display": {
+          "text": "Outfall ID"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "assign",
+        "name": "loc_name",
+        "calculation": "opendatakit.getLocationInfo().name",
+        "_row_num": 7
+      },
+      {
+        "type": "string",
+        "name": "loc_name",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 8
+      },
+      {
+        "type": "assign",
+        "name": "loc_aid",
+        "calculation": "calculates.locationAid()",
+        "_row_num": 9
+      },
+      {
+        "type": "string",
+        "name": "loc_aid",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 10
+      },
+      {
+        "type": "assign",
+        "name": "loc_streetAddress",
+        "calculation": "opendatakit.getLocationInfo().streetAddress",
+        "_row_num": 11
+      },
+      {
+        "type": "string",
+        "name": "loc_streetAddress",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 12
+      },
+      {
+        "type": "assign",
+        "name": "loc_city",
+        "calculation": "opendatakit.getLocationInfo().city",
+        "_row_num": 13
+      },
+      {
+        "type": "string",
+        "name": "loc_city",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 14
+      },
+      {
+        "type": "assign",
+        "name": "loc_state",
+        "calculation": "opendatakit.getLocationInfo().state",
+        "_row_num": 15
+      },
+      {
+        "type": "string",
+        "name": "loc_state",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 16
+      },
+      {
+        "type": "assign",
+        "name": "loc_zip",
+        "calculation": "calculates.locationZip()",
+        "_row_num": 17
+      },
+      {
+        "type": "string",
+        "name": "loc_zip",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 18
+      },
+      {
+        "type": "assign",
+        "name": "loc_client",
+        "calculation": "opendatakit.getLocationInfo().client",
+        "_row_num": 19
+      },
+      {
+        "type": "string",
+        "name": "loc_client",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 20
+      },
+      {
+        "type": "string",
+        "name": "weather",
+        "display": {
+          "text": "Weather"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 21
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "personnel_csv",
+        "name": "personnel",
+        "display": {
+          "text": "Personnel"
+        },
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 22
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "annual_cleaning",
+        "display": {
+          "text": "Annual Cleaning"
+        },
+        "_row_num": 23
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "inspection_types",
+        "name": "type_of_inspection",
+        "display": {
+          "text": "Type of Inspection"
+        },
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 24
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "repair_defective",
+        "display": {
+          "text": "Repair of Defective Part"
+        },
+        "_row_num": 25
+      },
+      {
+        "type": "string",
+        "name": "type_and_capacity",
+        "display": {
+          "text": "Type and capacity of OWS"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 26
+      },
+      {
+        "type": "decimal",
+        "name": "diameter_of_outfall",
+        "display": {
+          "text": "Diameter of outfall"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 27
+      },
+      {
+        "type": "time",
+        "name": "sample_time",
+        "display": {
+          "text": "Sample Time"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 28
+      },
+      {
+        "type": "decimal",
+        "name": "temperature",
+        "display": {
+          "text": "Sample Temp"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 29
+      },
+      {
+        "type": "decimal",
+        "name": "ph",
+        "display": {
+          "text": "pH"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 30
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 31
+      },
+      {
+        "branch_label": "_contents",
+        "_row_num": 32
+      },
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Inspection Home Page"
+        },
+        "_row_num": 33
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "OWS ID: {{data.inspection_id}}"
+        },
+        "templatePath": "note_for_id.handlebars",
+        "_row_num": 34
+      },
+      {
+        "type": "user_branch",
+        "values_list": "branches",
+        "_row_num": 35
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 36
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 37
+      },
+      {
+        "branch_label": "ows_inspection",
+        "_row_num": 38
+      },
+      {
+        "clause": "do section ows_inspection_section",
+        "_row_num": 39
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 40
+      },
+      {
+        "branch_label": "outfall_inspection",
+        "_row_num": 41
+      },
+      {
+        "clause": "do section outfall_inspection_section",
+        "_row_num": 42
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 43
+      },
+      {
+        "branch_label": "notes",
+        "_row_num": 44
+      },
+      {
+        "clause": "do section notes_section",
+        "_row_num": 45
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 46
+      },
+      {
+        "branch_label": "gps",
+        "_row_num": 47
+      },
+      {
+        "clause": "do section gps_section",
+        "_row_num": 48
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 49
+      },
+      {
+        "branch_label": "image",
+        "_row_num": 50
+      },
+      {
+        "clause": "do section image_section",
+        "_row_num": 51
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 52
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 53
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 54
+      }
+    ],
+    "ows_inspection_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Oil and Water Inspection"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Outfall Chamber Thickness Reading"
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "string",
+        "name": "reading_1_oil",
+        "display": {
+          "text": "Oil"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 4
+      },
+      {
+        "type": "string",
+        "name": "reading_1_sheen",
+        "display": {
+          "text": "Sheen"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 5
+      },
+      {
+        "type": "decimal",
+        "name": "reading_1_thickness",
+        "display": {
+          "text": "Sludge (in)"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Other Information"
+        },
+        "_row_num": 7
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "sheen_or_product_present",
+        "display": {
+          "text": "Any visible sheen on product in discharge chamber?"
+        },
+        "_row_num": 8
+      },
+      {
+        "type": "string",
+        "name": "sheen_or_product_description",
+        "display": {
+          "text": "If yes, describe"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 9
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "drip_pans_clear_of_oil",
+        "display": {
+          "text": "Are drip pans clear of oil?"
+        },
+        "_row_num": 10
+      },
+      {
+        "type": "string",
+        "name": "drip_pans_oil_description",
+        "display": {
+          "text": "If no, explain"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 11
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "drains_free_of_debris",
+        "display": {
+          "text": "Are drains free of debris?"
+        },
+        "_row_num": 12
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "can_drains_cleared_of_debris",
+        "display": {
+          "text": "If not, can the drain be cleared during inspection?"
+        },
+        "_row_num": 13
+      },
+      {
+        "type": "string",
+        "name": "drains_cannot_be_cleared_description",
+        "display": {
+          "text": "If no, explain"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 14
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "pans_working",
+        "display": {
+          "text": "Are all pans in working order?"
+        },
+        "_row_num": 15
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "can_pans_be_fixed",
+        "display": {
+          "text": "If not, can they be fixed during inspection?"
+        },
+        "_row_num": 16
+      },
+      {
+        "type": "string",
+        "name": "pans_cannot_be_fixed_description",
+        "display": {
+          "text": "If no, explain"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 17
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "ows_functions",
+        "display": {
+          "text": "Is the OWS functioning properly?"
+        },
+        "_row_num": 18
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "can_ows_be_fixed",
+        "display": {
+          "text": "If not, can they be fixed during inspection?"
+        },
+        "_row_num": 19
+      },
+      {
+        "type": "string",
+        "name": "ows_cannot_be_fixed_description",
+        "display": {
+          "text": "If no, explain"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 20
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "ows_needs_cleaned",
+        "display": {
+          "text": "Does the OWS need to be cleaned?"
+        },
+        "_row_num": 21
+      },
+      {
+        "type": "string",
+        "name": "ows_needs_cleaned_description",
+        "display": {
+          "text": "If yes, explain"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 22
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "equipment_need_repair",
+        "display": {
+          "text": "Does any associated equipment need repair?"
+        },
+        "_row_num": 23
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "equipment_can_be_fixed",
+        "display": {
+          "text": "If yes, can it be conducted during inspection?"
+        },
+        "_row_num": 24
+      },
+      {
+        "type": "string",
+        "name": "equipment_cannot_be_fixed_description",
+        "display": {
+          "text": "If no, explain"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 25
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "oil_debris_removed",
+        "display": {
+          "text": "Oil/Sediment/Debris Removed?"
+        },
+        "_row_num": 26
+      },
+      {
+        "type": "string",
+        "name": "estimated_quantity",
+        "display": {
+          "text": "Estimated Quantity (Tons/Yards/Drums)"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 27
+      },
+      {
+        "type": "string",
+        "name": "ows_manifest_bol",
+        "display": {
+          "text": "Manifest/BOL #"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 28
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "samples_obtained_analyzed",
+        "display": {
+          "text": "Samples obtained and analysis?"
+        },
+        "_row_num": 29
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 30
+      }
+    ],
+    "outfall_inspection_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Outfall Inspection"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "ows_discharge_types",
+        "name": "ows_discharge_type",
+        "display": {
+          "text": "Does the OWS discharge into sewer or outfall?"
+        },
+        "templatePath": "custom_select_dropdown.handlebars",
+        "_row_num": 3
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "outfall_sheen_present",
+        "display": {
+          "text": "Is sheen present?"
+        },
+        "_row_num": 4
+      },
+      {
+        "type": "string",
+        "name": "outfall_sheen_present_description",
+        "display": {
+          "text": "If yes, describe"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 5
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "outfall_product_present",
+        "display": {
+          "text": "Is product present? If yes notify PM immediately"
+        },
+        "_row_num": 6
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "outfall_odor_present",
+        "display": {
+          "text": "Is petroleum/odor present?"
+        },
+        "_row_num": 7
+      },
+      {
+        "type": "select_one",
+        "values_list": "outfall_conditions",
+        "name": "outfall_condition",
+        "display": {
+          "text": "Condition of outfall"
+        },
+        "templatePath": "custom_select_dropdown_2.handlebars",
+        "_row_num": 8
+      },
+      {
+        "type": "string",
+        "name": "outfall_repair_description",
+        "display": {
+          "text": "If Needs Repair, please describe"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 9
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Absorbent Media present?"
+        },
+        "_row_num": 10
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "ows_absorbent",
+        "display": {
+          "text": "O.W.S"
+        },
+        "_row_num": 11
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "outfall_absorbent",
+        "display": {
+          "text": "Outfall"
+        },
+        "_row_num": 12
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "absorbent_replacement",
+        "display": {
+          "text": "Absorbent media need replacing (saturated with oil/water)?"
+        },
+        "_row_num": 13
+      },
+      {
+        "type": "string",
+        "name": "type_of_absorbent",
+        "display": {
+          "text": "Type of Absorbent Material"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 14
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "absorbent_replaced",
+        "display": {
+          "text": "Absorbent Replaced?"
+        },
+        "_row_num": 15
+      },
+      {
+        "type": "string",
+        "name": "outfall_manifest_bol",
+        "display": {
+          "text": "Manifest/BOL #"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 16
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "outfall_samples_obtained_analyzed",
+        "display": {
+          "text": "Samples obtained for analysis for oil and grease?"
+        },
+        "_row_num": 17
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 18
+      }
+    ],
+    "notes_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Notes"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "linked_table",
+        "values_list": "linked_notes",
+        "display": {
+          "text": "Add Notes to this list",
+          "new_instance_text": "Add Note"
+        },
+        "templatePath": "linked_table_note.handlebars",
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "gps_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "GPS"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "geopoint",
+        "name": "geo_info",
+        "display": {
+          "text": "Location",
+          "hint": "Capture GPS coordinates of this location"
+        },
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "image_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Photo"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "linked_table",
+        "values_list": "linked_images",
+        "display": {
+          "text": "Add photos to this list",
+          "new_instance_text": "Add Image"
+        },
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "queries": [
+      {
+        "query_name": "personnel_csv",
+        "query_type": "csv",
+        "uri": "\"personnel.csv\"",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name + ' ' + personnel.lastName;\npersonnel.display = {text:personnel.name + ' ' + personnel.lastName};\nreturn personnel;\n})",
+        "_row_num": 2
+      },
+      {
+        "query_name": "equipment_csv",
+        "query_type": "csv",
+        "uri": "\"equipment.csv\"",
+        "callback": "_.map(context, function(equipment){equipment.data_value = equipment.name;\nequipment.display = {text:equipment.name};\nreturn equipment;\n})",
+        "_row_num": 3
+      },
+      {
+        "query_name": "linked_images",
+        "query_type": "linked_table",
+        "linked_form_id": "imageSubform",
+        "linked_table_id": "imageSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 4
+      },
+      {
+        "query_name": "linked_notes",
+        "query_type": "linked_table",
+        "linked_form_id": "notesSubform",
+        "linked_table_id": "notesSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 5
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "branches",
+        "data_value": "notes",
+        "display": {
+          "text": "Notes",
+          "image": "Notes.png"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "gps",
+        "display": {
+          "text": "GPS",
+          "image": "Gps.png"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "image",
+        "display": {
+          "text": "Photo",
+          "image": "Photo.png"
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "ows_inspection",
+        "display": {
+          "text": "OWS Inspection",
+          "image": "Inspection.png"
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "outfall_inspection",
+        "display": {
+          "text": "Outfall Inspection",
+          "image": "Inspection.png"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "exitpath",
+        "display": {
+          "text": "Exit",
+          "image": "Exit.png"
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "yes",
+        "display": {
+          "text": "Yes"
+        },
+        "_row_num": 8
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "no",
+        "display": {
+          "text": "No"
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "inspection_types",
+        "data_value": "Annual Inspection",
+        "display": {
+          "text": "Annual Inspection"
+        },
+        "_row_num": 10
+      },
+      {
+        "choice_list_name": "inspection_types",
+        "data_value": "Quarterly Inspection",
+        "display": {
+          "text": "Quarterly Inspection"
+        },
+        "_row_num": 11
+      },
+      {
+        "choice_list_name": "inspection_types",
+        "data_value": "Monthly Inspection",
+        "display": {
+          "text": "Monthly Inspection"
+        },
+        "_row_num": 12
+      },
+      {
+        "choice_list_name": "inspection_types",
+        "data_value": "Re-Inspection",
+        "display": {
+          "text": "Re-Inspection"
+        },
+        "_row_num": 13
+      },
+      {
+        "choice_list_name": "dry_or_connected_values",
+        "data_value": "Dry Well",
+        "display": {
+          "text": "Dry Well"
+        },
+        "_row_num": 14
+      },
+      {
+        "choice_list_name": "dry_or_connected_values",
+        "data_value": "Connected to Multiple catch Basins",
+        "display": {
+          "text": "Connected to Multiple catch Basins"
+        },
+        "_row_num": 15
+      },
+      {
+        "choice_list_name": "types_of_material",
+        "data_value": "Storm Defender",
+        "display": {
+          "text": "Storm Defender"
+        },
+        "_row_num": 16
+      },
+      {
+        "choice_list_name": "types_of_material",
+        "data_value": "Boom",
+        "display": {
+          "text": "Boom"
+        },
+        "_row_num": 17
+      },
+      {
+        "choice_list_name": "saturated_or_filled_values",
+        "data_value": "Saturated with oil or water",
+        "display": {
+          "text": "Saturated with oil or water"
+        },
+        "_row_num": 18
+      },
+      {
+        "choice_list_name": "saturated_or_filled_values",
+        "data_value": "Filled with sediment",
+        "display": {
+          "text": "Filled with sediment"
+        },
+        "_row_num": 19
+      },
+      {
+        "choice_list_name": "types_of_condition",
+        "data_value": "Good",
+        "display": {
+          "text": "Good"
+        },
+        "_row_num": 20
+      },
+      {
+        "choice_list_name": "types_of_condition",
+        "data_value": "Needs Replacement",
+        "display": {
+          "text": "Needs Replacement"
+        },
+        "_row_num": 21
+      },
+      {
+        "choice_list_name": "ows_discharge_types",
+        "data_value": "Sewer",
+        "display": {
+          "text": "Sewer"
+        },
+        "_row_num": 22
+      },
+      {
+        "choice_list_name": "ows_discharge_types",
+        "data_value": "Outfall",
+        "display": {
+          "text": "Outfall"
+        },
+        "_row_num": 23
+      },
+      {
+        "choice_list_name": "ows_discharge_types",
+        "data_value": "Inaccessible",
+        "display": {
+          "text": "Inaccessible"
+        },
+        "_row_num": 24
+      },
+      {
+        "choice_list_name": "outfall_conditions",
+        "data_value": "Good",
+        "display": {
+          "text": "Good"
+        },
+        "_row_num": 25
+      },
+      {
+        "choice_list_name": "outfall_conditions",
+        "data_value": "Needs Repair",
+        "display": {
+          "text": "Needs Repair"
+        },
+        "_row_num": 26
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "oilAndWaterSeparatorInspectionForm",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20160615,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Oil and Water Separator Inspection"
+        },
+        "_row_num": 4
+      },
+      {
+        "setting_name": "notes_section",
+        "display": {
+          "title": "Notes"
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "gps_section",
+        "display": {
+          "title": "GPS"
+        },
+        "_row_num": 6
+      },
+      {
+        "setting_name": "image_section",
+        "display": {
+          "title": "Photo"
+        },
+        "_row_num": 7
+      },
+      {
+        "setting_name": "ows_inspection_section",
+        "display": {
+          "title": "OWS Inspection"
+        },
+        "_row_num": 8
+      },
+      {
+        "setting_name": "outfall_inspection_section",
+        "display": {
+          "title": "Outfall Inspection"
+        },
+        "_row_num": 9
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "locationAid",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().aid == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().aid;\n  }\n})()",
+        "_row_num": 2
+      },
+      {
+        "calculation_name": "locationZip",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
+        "_row_num": 3
+      },
+      {
+        "calculation_name": "currDate",
+        "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
+        "_row_num": 4
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "oilAndWaterSeparatorInspectionForm",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20160615,
+        "_row_num": 3
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Oil and Water Separator Inspection"
+        },
+        "_row_num": 4
+      },
+      "notes_section": {
+        "setting_name": "notes_section",
+        "display": {
+          "title": "Notes"
+        },
+        "_row_num": 5
+      },
+      "gps_section": {
+        "setting_name": "gps_section",
+        "display": {
+          "title": "GPS"
+        },
+        "_row_num": 6
+      },
+      "image_section": {
+        "setting_name": "image_section",
+        "display": {
+          "title": "Photo"
+        },
+        "_row_num": 7
+      },
+      "ows_inspection_section": {
+        "setting_name": "ows_inspection_section",
+        "display": {
+          "title": "OWS Inspection"
+        },
+        "_row_num": 8
+      },
+      "outfall_inspection_section": {
+        "setting_name": "outfall_inspection_section",
+        "display": {
+          "title": "Outfall Inspection"
+        },
+        "_row_num": 9
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "oilAndWaterSeparatorInspectionForm",
+        "_row_num": 2,
+        "__rowNum__": 1
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 4,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 4,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Oil and Water Separator Inspection"
+        },
+        "_row_num": 4
+      }
+    },
+    "choices": {
+      "branches": [
+        {
+          "choice_list_name": "branches",
+          "data_value": "notes",
+          "display": {
+            "text": "Notes",
+            "image": "Notes.png"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "gps",
+          "display": {
+            "text": "GPS",
+            "image": "Gps.png"
+          },
+          "_row_num": 3
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "image",
+          "display": {
+            "text": "Photo",
+            "image": "Photo.png"
+          },
+          "_row_num": 4
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "ows_inspection",
+          "display": {
+            "text": "OWS Inspection",
+            "image": "Inspection.png"
+          },
+          "_row_num": 5
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "outfall_inspection",
+          "display": {
+            "text": "Outfall Inspection",
+            "image": "Inspection.png"
+          },
+          "_row_num": 6
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "exitpath",
+          "display": {
+            "text": "Exit",
+            "image": "Exit.png"
+          },
+          "_row_num": 7
+        }
+      ],
+      "yesno": [
+        {
+          "choice_list_name": "yesno",
+          "data_value": "yes",
+          "display": {
+            "text": "Yes"
+          },
+          "_row_num": 8
+        },
+        {
+          "choice_list_name": "yesno",
+          "data_value": "no",
+          "display": {
+            "text": "No"
+          },
+          "_row_num": 9
+        }
+      ],
+      "inspection_types": [
+        {
+          "choice_list_name": "inspection_types",
+          "data_value": "Annual Inspection",
+          "display": {
+            "text": "Annual Inspection"
+          },
+          "_row_num": 10
+        },
+        {
+          "choice_list_name": "inspection_types",
+          "data_value": "Quarterly Inspection",
+          "display": {
+            "text": "Quarterly Inspection"
+          },
+          "_row_num": 11
+        },
+        {
+          "choice_list_name": "inspection_types",
+          "data_value": "Monthly Inspection",
+          "display": {
+            "text": "Monthly Inspection"
+          },
+          "_row_num": 12
+        },
+        {
+          "choice_list_name": "inspection_types",
+          "data_value": "Re-Inspection",
+          "display": {
+            "text": "Re-Inspection"
+          },
+          "_row_num": 13
+        }
+      ],
+      "dry_or_connected_values": [
+        {
+          "choice_list_name": "dry_or_connected_values",
+          "data_value": "Dry Well",
+          "display": {
+            "text": "Dry Well"
+          },
+          "_row_num": 14
+        },
+        {
+          "choice_list_name": "dry_or_connected_values",
+          "data_value": "Connected to Multiple catch Basins",
+          "display": {
+            "text": "Connected to Multiple catch Basins"
+          },
+          "_row_num": 15
+        }
+      ],
+      "types_of_material": [
+        {
+          "choice_list_name": "types_of_material",
+          "data_value": "Storm Defender",
+          "display": {
+            "text": "Storm Defender"
+          },
+          "_row_num": 16
+        },
+        {
+          "choice_list_name": "types_of_material",
+          "data_value": "Boom",
+          "display": {
+            "text": "Boom"
+          },
+          "_row_num": 17
+        }
+      ],
+      "saturated_or_filled_values": [
+        {
+          "choice_list_name": "saturated_or_filled_values",
+          "data_value": "Saturated with oil or water",
+          "display": {
+            "text": "Saturated with oil or water"
+          },
+          "_row_num": 18
+        },
+        {
+          "choice_list_name": "saturated_or_filled_values",
+          "data_value": "Filled with sediment",
+          "display": {
+            "text": "Filled with sediment"
+          },
+          "_row_num": 19
+        }
+      ],
+      "types_of_condition": [
+        {
+          "choice_list_name": "types_of_condition",
+          "data_value": "Good",
+          "display": {
+            "text": "Good"
+          },
+          "_row_num": 20
+        },
+        {
+          "choice_list_name": "types_of_condition",
+          "data_value": "Needs Replacement",
+          "display": {
+            "text": "Needs Replacement"
+          },
+          "_row_num": 21
+        }
+      ],
+      "ows_discharge_types": [
+        {
+          "choice_list_name": "ows_discharge_types",
+          "data_value": "Sewer",
+          "display": {
+            "text": "Sewer"
+          },
+          "_row_num": 22
+        },
+        {
+          "choice_list_name": "ows_discharge_types",
+          "data_value": "Outfall",
+          "display": {
+            "text": "Outfall"
+          },
+          "_row_num": 23
+        },
+        {
+          "choice_list_name": "ows_discharge_types",
+          "data_value": "Inaccessible",
+          "display": {
+            "text": "Inaccessible"
+          },
+          "_row_num": 24
+        }
+      ],
+      "outfall_conditions": [
+        {
+          "choice_list_name": "outfall_conditions",
+          "data_value": "Good",
+          "display": {
+            "text": "Good"
+          },
+          "_row_num": 25
+        },
+        {
+          "choice_list_name": "outfall_conditions",
+          "data_value": "Needs Repair",
+          "display": {
+            "text": "Needs Repair"
+          },
+          "_row_num": 26
+        }
+      ]
+    },
+    "queries": {
+      "personnel_csv": {
+        "query_name": "personnel_csv",
+        "query_type": "csv",
+        "uri": "\"personnel.csv\"",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name + ' ' + personnel.lastName;\npersonnel.display = {text:personnel.name + ' ' + personnel.lastName};\nreturn personnel;\n})",
+        "_row_num": 2
+      },
+      "equipment_csv": {
+        "query_name": "equipment_csv",
+        "query_type": "csv",
+        "uri": "\"equipment.csv\"",
+        "callback": "_.map(context, function(equipment){equipment.data_value = equipment.name;\nequipment.display = {text:equipment.name};\nreturn equipment;\n})",
+        "_row_num": 3
+      },
+      "linked_images": {
+        "query_name": "linked_images",
+        "query_type": "linked_table",
+        "linked_form_id": "imageSubform",
+        "linked_table_id": "imageSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 4
+      },
+      "linked_notes": {
+        "query_name": "linked_notes",
+        "query_type": "linked_table",
+        "linked_form_id": "notesSubform",
+        "linked_table_id": "notesSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 5
+      }
+    },
+    "calculates": {
+      "locationAid": {
+        "calculation_name": "locationAid",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().aid == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().aid;\n  }\n})()",
+        "_row_num": 2
+      },
+      "locationZip": {
+        "calculation_name": "locationZip",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
+        "_row_num": 3
+      },
+      "currDate": {
+        "calculation_name": "currDate",
+        "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
+        "_row_num": 4
+      }
+    },
+    "model": {
+      "sample_date": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "sample_date"
+      },
+      "inspection_id": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "inspection_id"
+      },
+      "outfall_id": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "outfall_id"
+      },
+      "loc_name": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_name"
+      },
+      "loc_aid": {
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_aid"
+      },
+      "loc_streetAddress": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_streetAddress"
+      },
+      "loc_city": {
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_city"
+      },
+      "loc_state": {
+        "_defn": [
+          {
+            "_row_num": 16,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_state"
+      },
+      "loc_zip": {
+        "_defn": [
+          {
+            "_row_num": 18,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_zip"
+      },
+      "loc_client": {
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_client"
+      },
+      "weather": {
+        "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "weather"
+      },
+      "personnel": {
+        "_defn": [
+          {
+            "_row_num": 22,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "personnel_items"
+        },
+        "valuesList": "personnel_csv",
+        "elementKey": "personnel"
+      },
+      "annual_cleaning": {
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "annual_cleaning"
+      },
+      "type_of_inspection": {
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "type_of_inspection_items"
+        },
+        "valuesList": "inspection_types",
+        "elementKey": "type_of_inspection"
+      },
+      "repair_defective": {
+        "_defn": [
+          {
+            "_row_num": 25,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "repair_defective"
+      },
+      "type_and_capacity": {
+        "_defn": [
+          {
+            "_row_num": 26,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "type_and_capacity"
+      },
+      "diameter_of_outfall": {
+        "_defn": [
+          {
+            "_row_num": 27,
+            "section_name": "survey"
+          }
+        ],
+        "type": "number",
+        "elementKey": "diameter_of_outfall"
+      },
+      "sample_time": {
+        "_defn": [
+          {
+            "_row_num": 28,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "time",
+        "elementKey": "sample_time"
+      },
+      "temperature": {
+        "_defn": [
+          {
+            "_row_num": 29,
+            "section_name": "survey"
+          }
+        ],
+        "type": "number",
+        "elementKey": "temperature"
+      },
+      "ph": {
+        "_defn": [
+          {
+            "_row_num": 30,
+            "section_name": "survey"
+          }
+        ],
+        "type": "number",
+        "elementKey": "ph"
+      },
+      "reading_1_oil": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "reading_1_oil"
+      },
+      "reading_1_sheen": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "reading_1_sheen"
+      },
+      "reading_1_thickness": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "number",
+        "elementKey": "reading_1_thickness"
+      },
+      "sheen_or_product_present": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "sheen_or_product_present"
+      },
+      "sheen_or_product_description": {
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "sheen_or_product_description"
+      },
+      "drip_pans_clear_of_oil": {
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "drip_pans_clear_of_oil"
+      },
+      "drip_pans_oil_description": {
+        "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "drip_pans_oil_description"
+      },
+      "drains_free_of_debris": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "drains_free_of_debris"
+      },
+      "can_drains_cleared_of_debris": {
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "can_drains_cleared_of_debris"
+      },
+      "drains_cannot_be_cleared_description": {
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "drains_cannot_be_cleared_description"
+      },
+      "pans_working": {
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "pans_working"
+      },
+      "can_pans_be_fixed": {
+        "_defn": [
+          {
+            "_row_num": 16,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "can_pans_be_fixed"
+      },
+      "pans_cannot_be_fixed_description": {
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "pans_cannot_be_fixed_description"
+      },
+      "ows_functions": {
+        "_defn": [
+          {
+            "_row_num": 18,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "ows_functions"
+      },
+      "can_ows_be_fixed": {
+        "_defn": [
+          {
+            "_row_num": 19,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "can_ows_be_fixed"
+      },
+      "ows_cannot_be_fixed_description": {
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "ows_cannot_be_fixed_description"
+      },
+      "ows_needs_cleaned": {
+        "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "ows_needs_cleaned"
+      },
+      "ows_needs_cleaned_description": {
+        "_defn": [
+          {
+            "_row_num": 22,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "ows_needs_cleaned_description"
+      },
+      "equipment_need_repair": {
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "equipment_need_repair"
+      },
+      "equipment_can_be_fixed": {
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "equipment_can_be_fixed"
+      },
+      "equipment_cannot_be_fixed_description": {
+        "_defn": [
+          {
+            "_row_num": 25,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_cannot_be_fixed_description"
+      },
+      "oil_debris_removed": {
+        "_defn": [
+          {
+            "_row_num": 26,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "oil_debris_removed"
+      },
+      "estimated_quantity": {
+        "_defn": [
+          {
+            "_row_num": 27,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "estimated_quantity"
+      },
+      "ows_manifest_bol": {
+        "_defn": [
+          {
+            "_row_num": 28,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "ows_manifest_bol"
+      },
+      "samples_obtained_analyzed": {
+        "_defn": [
+          {
+            "_row_num": 29,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "samples_obtained_analyzed"
+      },
+      "ows_discharge_type": {
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "ows_discharge_types",
+        "elementKey": "ows_discharge_type"
+      },
+      "outfall_sheen_present": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "outfall_sheen_present"
+      },
+      "outfall_sheen_present_description": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "outfall_sheen_present_description"
+      },
+      "outfall_product_present": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "outfall_product_present"
+      },
+      "outfall_odor_present": {
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "outfall_odor_present"
+      },
+      "outfall_condition": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "outfall_conditions",
+        "elementKey": "outfall_condition"
+      },
+      "outfall_repair_description": {
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "outfall_repair_description"
+      },
+      "ows_absorbent": {
+        "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "ows_absorbent"
+      },
+      "outfall_absorbent": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "outfall_absorbent"
+      },
+      "absorbent_replacement": {
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "absorbent_replacement"
+      },
+      "type_of_absorbent": {
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "type_of_absorbent"
+      },
+      "absorbent_replaced": {
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "absorbent_replaced"
+      },
+      "outfall_manifest_bol": {
+        "_defn": [
+          {
+            "_row_num": 16,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "outfall_manifest_bol"
+      },
+      "outfall_samples_obtained_analyzed": {
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "outfall_inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "outfall_samples_obtained_analyzed"
+      },
+      "geo_info": {
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "gps_section"
+          }
+        ],
+        "type": "object",
+        "elementType": "geopoint",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "elementKey": "geo_info_latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "elementKey": "geo_info_longitude"
+          },
+          "altitude": {
+            "type": "number",
+            "elementKey": "geo_info_altitude"
+          },
+          "accuracy": {
+            "type": "number",
+            "elementKey": "geo_info_accuracy"
+          }
+        },
+        "elementKey": "geo_info"
+      }
+    },
+    "section_names": [
+      "gps_section",
+      "image_section",
+      "initial",
+      "notes_section",
+      "outfall_inspection_section",
+      "ows_inspection_section",
+      "survey"
+    ],
+    "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true,
+          "ows_inspection_section": true,
+          "outfall_inspection_section": true,
+          "notes_section": true,
+          "gps_section": true,
+          "image_section": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": "Oil and Water Separator Inspection"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "type": "finalize",
+            "display": {
+              "text": "Save form"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "finalize",
+            "_branch_label_enclosing_screen": "initial/_screen5",
+            "promptIdx": 1
+          },
+          {
+            "type": "instances",
+            "display": {
+              "text": "Saved instances"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "instances",
+            "_branch_label_enclosing_screen": "initial/_screen7",
+            "promptIdx": 2
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 9,
+            "_branch_label_enclosing_screen": "initial/_screen9",
+            "promptIdx": 3
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "if // start",
+            "condition": "(opendatakit.getCurrentInstanceId() != null)",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_tag_name": "start",
+            "_branch_label": "_then3",
+            "operationIdx": 0
+          },
+          {
+            "clause": "else // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_else6",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "clause": "do section survey",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
+          },
+          {
+            "clause": "end if // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif8",
+            "_row_num": 8,
+            "operationIdx": 4
+          },
+          {
+            "_row_num": 7,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 9,
+            "operationIdx": 6
+          },
+          {
+            "_row_num": 9,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 7
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 8
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 9
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 10
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 11
+          }
+        ],
+        "branch_label_map": {
+          "_then3": 2,
+          "_screen5": 3,
+          "_else6": 5,
+          "_screen7": 5,
+          "_endif8": 6,
+          "_contents": 7,
+          "_screen9": 7,
+          "_finalize": 9
+        }
+      },
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {
+          "ows_inspection_section": true,
+          "outfall_inspection_section": true,
+          "notes_section": true,
+          "gps_section": true,
+          "image_section": true
+        },
+        "reachable_sections": {
+          "ows_inspection_section": true,
+          "outfall_inspection_section": true,
+          "notes_section": true,
+          "gps_section": true,
+          "image_section": true
+        },
+        "prompts": [
+          {
+            "type": "date",
+            "name": "sample_date",
+            "display": {
+              "text": "Date"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "string",
+            "name": "inspection_id",
+            "display": {
+              "text": "Oil Water Separator ID"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "string",
+            "name": "outfall_id",
+            "display": {
+              "text": "Outfall ID"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "string",
+            "name": "loc_name",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "string",
+            "name": "loc_aid",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "string",
+            "name": "loc_streetAddress",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "string",
+            "name": "loc_city",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "string",
+            "name": "loc_state",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "string",
+            "name": "loc_zip",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "string",
+            "name": "loc_client",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "string",
+            "name": "weather",
+            "display": {
+              "text": "Weather"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "personnel_csv",
+            "name": "personnel",
+            "display": {
+              "text": "Personnel"
+            },
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "annual_cleaning",
+            "display": {
+              "text": "Annual Cleaning"
+            },
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "inspection_types",
+            "name": "type_of_inspection",
+            "display": {
+              "text": "Type of Inspection"
+            },
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 13
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "repair_defective",
+            "display": {
+              "text": "Repair of Defective Part"
+            },
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 14
+          },
+          {
+            "type": "string",
+            "name": "type_and_capacity",
+            "display": {
+              "text": "Type and capacity of OWS"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 26,
+            "__rowNum__": 25,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 15
+          },
+          {
+            "type": "decimal",
+            "name": "diameter_of_outfall",
+            "display": {
+              "text": "Diameter of outfall"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 16
+          },
+          {
+            "type": "time",
+            "name": "sample_time",
+            "display": {
+              "text": "Sample Time"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 28,
+            "__rowNum__": 27,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 17
+          },
+          {
+            "type": "decimal",
+            "name": "temperature",
+            "display": {
+              "text": "Sample Temp"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 18
+          },
+          {
+            "type": "decimal",
+            "name": "ph",
+            "display": {
+              "text": "pH"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 30,
+            "__rowNum__": 29,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 19
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "OWS ID: {{data.inspection_id}}"
+            },
+            "templatePath": "note_for_id.handlebars",
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen33",
+            "promptIdx": 20
+          },
+          {
+            "type": "user_branch",
+            "values_list": "branches",
+            "_row_num": 35,
+            "__rowNum__": 34,
+            "_token_type": "prompt",
+            "_type": "user_branch",
+            "_branch_label_enclosing_screen": "survey/_screen33",
+            "promptIdx": 21
+          },
+          {
+            "clause": "do section ows_inspection_section",
+            "_row_num": 39,
+            "__rowNum__": 38,
+            "_token_type": "prompt",
+            "_do_section_name": "ows_inspection_section",
+            "_type": "_section",
+            "promptIdx": 22,
+            "display": {
+              "title": "OWS Inspection"
+            },
+            "_branch_label_enclosing_screen": "ows_inspection_section/0"
+          },
+          {
+            "clause": "do section outfall_inspection_section",
+            "_row_num": 42,
+            "__rowNum__": 41,
+            "_token_type": "prompt",
+            "_do_section_name": "outfall_inspection_section",
+            "_type": "_section",
+            "promptIdx": 23,
+            "display": {
+              "title": "Outfall Inspection"
+            },
+            "_branch_label_enclosing_screen": "outfall_inspection_section/0"
+          },
+          {
+            "clause": "do section notes_section",
+            "_row_num": 45,
+            "__rowNum__": 44,
+            "_token_type": "prompt",
+            "_do_section_name": "notes_section",
+            "_type": "_section",
+            "promptIdx": 24,
+            "display": {
+              "title": "Notes"
+            },
+            "_branch_label_enclosing_screen": "notes_section/0"
+          },
+          {
+            "clause": "do section gps_section",
+            "_row_num": 48,
+            "__rowNum__": 47,
+            "_token_type": "prompt",
+            "_do_section_name": "gps_section",
+            "_type": "_section",
+            "promptIdx": 25,
+            "display": {
+              "title": "GPS"
+            },
+            "_branch_label_enclosing_screen": "gps_section/0"
+          },
+          {
+            "clause": "do section image_section",
+            "_row_num": 51,
+            "__rowNum__": 50,
+            "_token_type": "prompt",
+            "_do_section_name": "image_section",
+            "_type": "_section",
+            "promptIdx": 26,
+            "display": {
+              "title": "Photo"
+            },
+            "_branch_label_enclosing_screen": "image_section/0"
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "OWS and Outfall Inspection"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 31,
+              "__rowNum__": 30,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('sample_date', calculates.currDate());\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(3);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(4);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(5);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(6);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(7);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(8);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Inspection Home Page"
+            },
+            "_row_num": 33,
+            "__rowNum__": 32,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 36,
+              "__rowNum__": 35,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 1
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 37,
+            "__rowNum__": 36,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 2
+          },
+          {
+            "clause": "do section ows_inspection_section",
+            "_row_num": 39,
+            "__rowNum__": 38,
+            "_token_type": "do_section",
+            "_do_section_name": "ows_inspection_section",
+            "operationIdx": 3
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 40,
+            "__rowNum__": 39,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 4
+          },
+          {
+            "clause": "do section outfall_inspection_section",
+            "_row_num": 42,
+            "__rowNum__": 41,
+            "_token_type": "do_section",
+            "_do_section_name": "outfall_inspection_section",
+            "operationIdx": 5
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 43,
+            "__rowNum__": 42,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 6
+          },
+          {
+            "clause": "do section notes_section",
+            "_row_num": 45,
+            "__rowNum__": 44,
+            "_token_type": "do_section",
+            "_do_section_name": "notes_section",
+            "operationIdx": 7
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 46,
+            "__rowNum__": 45,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 8
+          },
+          {
+            "clause": "do section gps_section",
+            "_row_num": 48,
+            "__rowNum__": 47,
+            "_token_type": "do_section",
+            "_do_section_name": "gps_section",
+            "operationIdx": 9
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 49,
+            "__rowNum__": 48,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 10
+          },
+          {
+            "clause": "do section image_section",
+            "_row_num": 51,
+            "__rowNum__": 50,
+            "_token_type": "do_section",
+            "_do_section_name": "image_section",
+            "operationIdx": 11
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 52,
+            "__rowNum__": 51,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 12
+          },
+          {
+            "clause": "exit section",
+            "_row_num": 54,
+            "__rowNum__": 53,
+            "_token_type": "exit_section",
+            "operationIdx": 13
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 55,
+            "operationIdx": 14
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 1,
+          "_screen33": 1,
+          "ows_inspection": 3,
+          "outfall_inspection": 5,
+          "notes": 7,
+          "gps": 9,
+          "image": 11,
+          "exitpath": 13
+        }
+      },
+      "ows_inspection_section": {
+        "section_name": "ows_inspection_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "note",
+            "display": {
+              "text": "Outfall Chamber Thickness Reading"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "string",
+            "name": "reading_1_oil",
+            "display": {
+              "text": "Oil"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "string",
+            "name": "reading_1_sheen",
+            "display": {
+              "text": "Sheen"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "decimal",
+            "name": "reading_1_thickness",
+            "display": {
+              "text": "Sludge (in)"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "Other Information"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "sheen_or_product_present",
+            "display": {
+              "text": "Any visible sheen on product in discharge chamber?"
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "string",
+            "name": "sheen_or_product_description",
+            "display": {
+              "text": "If yes, describe"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "drip_pans_clear_of_oil",
+            "display": {
+              "text": "Are drip pans clear of oil?"
+            },
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "string",
+            "name": "drip_pans_oil_description",
+            "display": {
+              "text": "If no, explain"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "drains_free_of_debris",
+            "display": {
+              "text": "Are drains free of debris?"
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "can_drains_cleared_of_debris",
+            "display": {
+              "text": "If not, can the drain be cleared during inspection?"
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "string",
+            "name": "drains_cannot_be_cleared_description",
+            "display": {
+              "text": "If no, explain"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "pans_working",
+            "display": {
+              "text": "Are all pans in working order?"
+            },
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "can_pans_be_fixed",
+            "display": {
+              "text": "If not, can they be fixed during inspection?"
+            },
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 13
+          },
+          {
+            "type": "string",
+            "name": "pans_cannot_be_fixed_description",
+            "display": {
+              "text": "If no, explain"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 14
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "ows_functions",
+            "display": {
+              "text": "Is the OWS functioning properly?"
+            },
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 15
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "can_ows_be_fixed",
+            "display": {
+              "text": "If not, can they be fixed during inspection?"
+            },
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 16
+          },
+          {
+            "type": "string",
+            "name": "ows_cannot_be_fixed_description",
+            "display": {
+              "text": "If no, explain"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 17
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "ows_needs_cleaned",
+            "display": {
+              "text": "Does the OWS need to be cleaned?"
+            },
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 18
+          },
+          {
+            "type": "string",
+            "name": "ows_needs_cleaned_description",
+            "display": {
+              "text": "If yes, explain"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 19
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "equipment_need_repair",
+            "display": {
+              "text": "Does any associated equipment need repair?"
+            },
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 20
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "equipment_can_be_fixed",
+            "display": {
+              "text": "If yes, can it be conducted during inspection?"
+            },
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 21
+          },
+          {
+            "type": "string",
+            "name": "equipment_cannot_be_fixed_description",
+            "display": {
+              "text": "If no, explain"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 22
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "oil_debris_removed",
+            "display": {
+              "text": "Oil/Sediment/Debris Removed?"
+            },
+            "_row_num": 26,
+            "__rowNum__": 25,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 23
+          },
+          {
+            "type": "string",
+            "name": "estimated_quantity",
+            "display": {
+              "text": "Estimated Quantity (Tons/Yards/Drums)"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 24
+          },
+          {
+            "type": "string",
+            "name": "ows_manifest_bol",
+            "display": {
+              "text": "Manifest/BOL #"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 28,
+            "__rowNum__": 27,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 25
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "samples_obtained_analyzed",
+            "display": {
+              "text": "Samples obtained and analysis?"
+            },
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 26
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 31,
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen31",
+            "promptIdx": 27
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Oil and Water Inspection"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 30,
+              "__rowNum__": 29,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 31,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 31,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 31,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen31": 2
+        }
+      },
+      "outfall_inspection_section": {
+        "section_name": "outfall_inspection_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "select_one_dropdown",
+            "values_list": "ows_discharge_types",
+            "name": "ows_discharge_type",
+            "display": {
+              "text": "Does the OWS discharge into sewer or outfall?"
+            },
+            "templatePath": "custom_select_dropdown.handlebars",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "outfall_sheen_present",
+            "display": {
+              "text": "Is sheen present?"
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "string",
+            "name": "outfall_sheen_present_description",
+            "display": {
+              "text": "If yes, describe"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "outfall_product_present",
+            "display": {
+              "text": "Is product present? If yes notify PM immediately"
+            },
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "outfall_odor_present",
+            "display": {
+              "text": "Is petroleum/odor present?"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "select_one",
+            "values_list": "outfall_conditions",
+            "name": "outfall_condition",
+            "display": {
+              "text": "Condition of outfall"
+            },
+            "templatePath": "custom_select_dropdown_2.handlebars",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "string",
+            "name": "outfall_repair_description",
+            "display": {
+              "text": "If Needs Repair, please describe"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "Absorbent Media present?"
+            },
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "ows_absorbent",
+            "display": {
+              "text": "O.W.S"
+            },
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "outfall_absorbent",
+            "display": {
+              "text": "Outfall"
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "absorbent_replacement",
+            "display": {
+              "text": "Absorbent media need replacing (saturated with oil/water)?"
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "string",
+            "name": "type_of_absorbent",
+            "display": {
+              "text": "Type of Absorbent Material"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "absorbent_replaced",
+            "display": {
+              "text": "Absorbent Replaced?"
+            },
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "type": "string",
+            "name": "outfall_manifest_bol",
+            "display": {
+              "text": "Manifest/BOL #"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 13
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "outfall_samples_obtained_analyzed",
+            "display": {
+              "text": "Samples obtained for analysis for oil and grease?"
+            },
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen2",
+            "promptIdx": 14
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 19,
+            "_branch_label_enclosing_screen": "outfall_inspection_section/_screen19",
+            "promptIdx": 15
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Outfall Inspection"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 18,
+              "__rowNum__": 17,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 19,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 19,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 19,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen19": 2
+        }
+      },
+      "notes_section": {
+        "section_name": "notes_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "linked_table",
+            "values_list": "linked_notes",
+            "display": {
+              "text": "Add Notes to this list",
+              "new_instance_text": "Add Note"
+            },
+            "templatePath": "linked_table_note.handlebars",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "linked_table",
+            "_branch_label_enclosing_screen": "notes_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "notes_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Notes"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      },
+      "gps_section": {
+        "section_name": "gps_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "geopoint",
+            "name": "geo_info",
+            "display": {
+              "text": "Location",
+              "hint": "Capture GPS coordinates of this location"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "geopoint",
+            "_branch_label_enclosing_screen": "gps_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "gps_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "GPS"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      },
+      "image_section": {
+        "section_name": "image_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "linked_table",
+            "values_list": "linked_images",
+            "display": {
+              "text": "Add photos to this list",
+              "new_instance_text": "Add Image"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "linked_table",
+            "_branch_label_enclosing_screen": "image_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "image_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Photo"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      }
+    }
+  }
+}

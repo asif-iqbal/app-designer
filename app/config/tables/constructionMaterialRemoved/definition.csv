@@ -1,0 +1,5 @@
+_element_key,_element_name,_element_type,_list_child_element_keys
+construction_id,construction_id,string,[]
+material_removed_name,material_removed_name,string,[]
+quantity,quantity,string,[]
+removal_time,removal_time,time,[]

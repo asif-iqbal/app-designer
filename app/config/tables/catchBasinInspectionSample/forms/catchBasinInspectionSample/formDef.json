@@ -1,0 +1,2407 @@
+{
+  "xlsx": {
+    "initial": [
+      {
+        "clause": "do section survey",
+        "_row_num": 2
+      },
+      {
+        "clause": "goto _finalize",
+        "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+        "_row_num": 3
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Catch Basin Inspection"
+        },
+        "hideInContents": "true",
+        "_row_num": 2
+      },
+      {
+        "type": "string",
+        "name": "inspection_id",
+        "display": {
+          "text": "Catch Basin ID"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "required": "true",
+        "_row_num": 3
+      },
+      {
+        "type": "string",
+        "name": "diameter",
+        "display": {
+          "text": "Diameter of Catch Basin"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 4
+      },
+      {
+        "type": "string",
+        "name": "depth",
+        "display": {
+          "text": "Depth of Catch Basin"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 5
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "dry_or_connected_values",
+        "name": "dry_or_connected",
+        "display": {
+          "text": "Dry Well Or Connected to Multiple Catch Basins?"
+        },
+        "hideInContents": "true",
+        "templatePath": "custom_select_dropdown_2.handlebars",
+        "_row_num": 6
+      },
+      {
+        "clause": "end screen",
+        "hideInContents": "true",
+        "_row_num": 7
+      },
+      {
+        "branch_label": "_contents",
+        "_row_num": 8
+      },
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Inspection Home Page"
+        },
+        "hideInContents": "true",
+        "_row_num": 9
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Catch Basin ID: {{data.inspection_id}}"
+        },
+        "hideInContents": "true",
+        "templatePath": "note_for_id.handlebars",
+        "_row_num": 10
+      },
+      {
+        "type": "user_branch",
+        "values_list": "branches",
+        "hideInContents": "true",
+        "_row_num": 11
+      },
+      {
+        "clause": "end screen",
+        "hideInContents": "true",
+        "_row_num": 12
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 13
+      },
+      {
+        "branch_label": "inspection",
+        "_row_num": 14
+      },
+      {
+        "clause": "do section inspection_section",
+        "_row_num": 15
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 16
+      },
+      {
+        "branch_label": "notes",
+        "_row_num": 17
+      },
+      {
+        "clause": "do section notes_section",
+        "_row_num": 18
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 19
+      },
+      {
+        "branch_label": "gps",
+        "_row_num": 20
+      },
+      {
+        "clause": "do section gps_section",
+        "_row_num": 21
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 22
+      },
+      {
+        "branch_label": "image",
+        "_row_num": 23
+      },
+      {
+        "clause": "do section image_section",
+        "_row_num": 24
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 25
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 26
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 27
+      }
+    ],
+    "inspection_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Catch Basin Inspection"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "string",
+        "name": "sediment_thickness",
+        "display": {
+          "text": "Sediment Thickness"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 3
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "debris_present",
+        "display": {
+          "text": "Any Debris Present?"
+        },
+        "_row_num": 4
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "water_in_vault",
+        "display": {
+          "text": "Water present in the vault?"
+        },
+        "_row_num": 5
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "water_flowing_freely",
+        "display": {
+          "text": "Water flowing freely?"
+        },
+        "_row_num": 6
+      },
+      {
+        "type": "string",
+        "name": "type_of_material",
+        "display": {
+          "text": "Type of absorbent material?"
+        },
+        "_row_num": 7
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "absorbent_replacement",
+        "display": {
+          "text": "Absorbent media need replacing or cleaned?"
+        },
+        "_row_num": 8
+      },
+      {
+        "type": "select_one",
+        "values_list": "saturated_or_filled_values",
+        "name": "saturated_or_filled",
+        "display": {
+          "text": "Absorbent media saturated with oil/water or filled with sediment?"
+        },
+        "templatePath": "custom_select_dropdown_2.handlebars",
+        "_row_num": 9
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "absorbent_replaced",
+        "display": {
+          "text": "Absorbent media replaced or cleaned?"
+        },
+        "_row_num": 10
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "other_maintenance",
+        "display": {
+          "text": "Other maintenance performed? If yes, describe in notes"
+        },
+        "_row_num": 11
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "sheen_present",
+        "display": {
+          "text": "Sheen present?"
+        },
+        "_row_num": 12
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "product_present",
+        "display": {
+          "text": "Product present? (Notify PM immediately)"
+        },
+        "_row_num": 13
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "odor_present",
+        "display": {
+          "text": "Odor present? If yes, describe in notes"
+        },
+        "_row_num": 14
+      },
+      {
+        "type": "decimal",
+        "name": "pid_reading",
+        "display": {
+          "text": "PID Reading:"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 15
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "types_of_condition",
+        "name": "condition",
+        "display": {
+          "text": "Condition of Catch basin"
+        },
+        "templatePath": "custom_select_dropdown_2.handlebars",
+        "_row_num": 16
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "damage_present",
+        "display": {
+          "text": "Damage Present? If so, describe in notes. If major damage present, contact PM immediately"
+        },
+        "_row_num": 17
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "sediment_removed",
+        "display": {
+          "text": "Sediment/debris removed?"
+        },
+        "_row_num": 18
+      },
+      {
+        "type": "string",
+        "name": "estimated_quantity",
+        "display": {
+          "text": "Estimated quantity (Tons/Yards/Drums)"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 19
+      },
+      {
+        "type": "string",
+        "name": "manifest_bol",
+        "display": {
+          "text": "Manifest/BOL"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 20
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "samples_obtained_analyzed",
+        "display": {
+          "text": "Samples obtained and analysis?"
+        },
+        "_row_num": 21
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 22
+      }
+    ],
+    "notes_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Notes"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "linked_table",
+        "values_list": "linked_notes",
+        "display": {
+          "text": "Add Notes to this list",
+          "new_instance_text": "Add Note"
+        },
+        "templatePath": "linked_table_note.handlebars",
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "gps_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "GPS"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "geopoint",
+        "name": "geo_info",
+        "display": {
+          "text": "Location",
+          "hint": "Capture GPS coordinates of this location"
+        },
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "image_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Photo"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "linked_table",
+        "values_list": "linked_images",
+        "display": {
+          "text": "Add photos to this list",
+          "new_instance_text": "Add Image"
+        },
+        "_row_num": 3
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 4
+      }
+    ],
+    "queries": [
+      {
+        "query_name": "linked_images",
+        "query_type": "linked_table",
+        "linked_form_id": "imageSubform",
+        "linked_table_id": "imageSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('global_id')+'::'+data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('global_id'))+'::'+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 2
+      },
+      {
+        "query_name": "linked_notes",
+        "query_type": "linked_table",
+        "linked_form_id": "notesSubform",
+        "linked_table_id": "notesSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('global_id')+'::'+data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('global_id'))+'::'+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 3
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "branches",
+        "data_value": "notes",
+        "display": {
+          "text": "Notes",
+          "image": "Notes.png"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "gps",
+        "display": {
+          "text": "GPS",
+          "image": "Gps.png"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "image",
+        "display": {
+          "text": "Photo",
+          "image": "Photo.png"
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "inspection",
+        "display": {
+          "text": "Inspection",
+          "image": "Inspection.png"
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "branches",
+        "data_value": "exitpath",
+        "display": {
+          "text": "Exit",
+          "image": "Exit.png"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "yes",
+        "display": {
+          "text": "Yes"
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "no",
+        "display": {
+          "text": "No"
+        },
+        "_row_num": 8
+      },
+      {
+        "choice_list_name": "dry_or_connected_values",
+        "data_value": "Dry Well",
+        "display": {
+          "text": "Dry Well"
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "dry_or_connected_values",
+        "data_value": "Connected to Multiple Catch Basins",
+        "display": {
+          "text": "Connected to Multiple Catch Basins"
+        },
+        "_row_num": 10
+      },
+      {
+        "choice_list_name": "types_of_material",
+        "data_value": "Storm Defender",
+        "display": {
+          "text": "Storm Defender"
+        },
+        "_row_num": 11
+      },
+      {
+        "choice_list_name": "types_of_material",
+        "data_value": "Boom",
+        "display": {
+          "text": "Boom"
+        },
+        "_row_num": 12
+      },
+      {
+        "choice_list_name": "saturated_or_filled_values",
+        "data_value": "Saturated with oil or water",
+        "display": {
+          "text": "Saturated with oil or water"
+        },
+        "_row_num": 13
+      },
+      {
+        "choice_list_name": "saturated_or_filled_values",
+        "data_value": "Filled with Sediment",
+        "display": {
+          "text": "Filled with Sediment"
+        },
+        "_row_num": 14
+      },
+      {
+        "choice_list_name": "saturated_or_filled_values",
+        "data_value": "Absorbent Media Good Condition",
+        "display": {
+          "text": "Absorbent Media Good Condition"
+        },
+        "_row_num": 15
+      },
+      {
+        "choice_list_name": "types_of_condition",
+        "data_value": "Good",
+        "display": {
+          "text": "Good"
+        },
+        "_row_num": 16
+      },
+      {
+        "choice_list_name": "types_of_condition",
+        "data_value": "Needs Replacement",
+        "display": {
+          "text": "Needs Replacement"
+        },
+        "_row_num": 17
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "catchBasinInspectionSample",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20160615,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Catch Basin Inspection Sample"
+        },
+        "_row_num": 4
+      },
+      {
+        "setting_name": "notes_section",
+        "display": {
+          "title": "Notes"
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "gps_section",
+        "display": {
+          "title": "GPS"
+        },
+        "_row_num": 6
+      },
+      {
+        "setting_name": "image_section",
+        "display": {
+          "title": "Photo"
+        },
+        "_row_num": 7
+      },
+      {
+        "setting_name": "inspection_section",
+        "display": {
+          "title": "Inspection"
+        },
+        "_row_num": 8
+      },
+      {
+        "setting_name": "instance_name",
+        "value": "inspection_id",
+        "_row_num": 9
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "locationAid",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().aid == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().aid;\n  }\n})()",
+        "_row_num": 2
+      },
+      {
+        "calculation_name": "locationZip",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
+        "_row_num": 3
+      }
+    ],
+    "model": [
+      {
+        "name": "global_id",
+        "type": "string",
+        "_row_num": 2
+      },
+      {
+        "name": "inspection_id",
+        "type": "string",
+        "_row_num": 3
+      },
+      {
+        "name": "diameter",
+        "type": "string",
+        "_row_num": 4
+      },
+      {
+        "name": "depth",
+        "type": "string",
+        "_row_num": 5
+      },
+      {
+        "name": "dry_or_connected",
+        "type": "select_one_dropdown",
+        "_row_num": 6
+      },
+      {
+        "name": "sediment_thickness",
+        "type": "string",
+        "_row_num": 7
+      },
+      {
+        "name": "debris_present",
+        "type": "select_one",
+        "_row_num": 8
+      },
+      {
+        "name": "water_in_vault",
+        "type": "select_one",
+        "_row_num": 9
+      },
+      {
+        "name": "water_flowing_freely",
+        "type": "select_one",
+        "_row_num": 10
+      },
+      {
+        "name": "type_of_material",
+        "type": "string",
+        "_row_num": 11
+      },
+      {
+        "name": "absorbent_replacement",
+        "type": "select_one",
+        "_row_num": 12
+      },
+      {
+        "name": "saturated_or_filled",
+        "type": "select_one",
+        "_row_num": 13
+      },
+      {
+        "name": "absorbent_replaced",
+        "type": "select_one",
+        "_row_num": 14
+      },
+      {
+        "name": "other_maintenance",
+        "type": "select_one",
+        "_row_num": 15
+      },
+      {
+        "name": "sheen_present",
+        "type": "select_one",
+        "_row_num": 16
+      },
+      {
+        "name": "product_present",
+        "type": "select_one",
+        "_row_num": 17
+      },
+      {
+        "name": "odor_present",
+        "type": "select_one",
+        "_row_num": 18
+      },
+      {
+        "name": "pid_reading",
+        "type": "decimal",
+        "_row_num": 19
+      },
+      {
+        "name": "condition",
+        "type": "select_one_dropdown",
+        "_row_num": 20
+      },
+      {
+        "name": "damage_present",
+        "type": "select_one",
+        "_row_num": 21
+      },
+      {
+        "name": "sediment_removed",
+        "type": "select_one",
+        "_row_num": 22
+      },
+      {
+        "name": "estimated_quantity",
+        "type": "string",
+        "_row_num": 23
+      },
+      {
+        "name": "manifest_bol",
+        "type": "string",
+        "_row_num": 24
+      },
+      {
+        "name": "samples_obtained_analyzed",
+        "type": "select_one",
+        "_row_num": 25
+      },
+      {
+        "name": "geo_info",
+        "type": "geopoint",
+        "_row_num": 26
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "catchBasinInspectionSample",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20160615,
+        "_row_num": 3
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Catch Basin Inspection Sample"
+        },
+        "_row_num": 4
+      },
+      "notes_section": {
+        "setting_name": "notes_section",
+        "display": {
+          "title": "Notes"
+        },
+        "_row_num": 5
+      },
+      "gps_section": {
+        "setting_name": "gps_section",
+        "display": {
+          "title": "GPS"
+        },
+        "_row_num": 6
+      },
+      "image_section": {
+        "setting_name": "image_section",
+        "display": {
+          "title": "Photo"
+        },
+        "_row_num": 7
+      },
+      "inspection_section": {
+        "setting_name": "inspection_section",
+        "display": {
+          "title": "Inspection"
+        },
+        "_row_num": 8
+      },
+      "instance_name": {
+        "setting_name": "instance_name",
+        "value": "inspection_id",
+        "_row_num": 9
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "catchBasinInspectionSample",
+        "_row_num": 2,
+        "__rowNum__": 1
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 4,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 4,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Catch Basin Inspection Sample"
+        },
+        "_row_num": 4
+      }
+    },
+    "choices": {
+      "branches": [
+        {
+          "choice_list_name": "branches",
+          "data_value": "notes",
+          "display": {
+            "text": "Notes",
+            "image": "Notes.png"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "gps",
+          "display": {
+            "text": "GPS",
+            "image": "Gps.png"
+          },
+          "_row_num": 3
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "image",
+          "display": {
+            "text": "Photo",
+            "image": "Photo.png"
+          },
+          "_row_num": 4
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "inspection",
+          "display": {
+            "text": "Inspection",
+            "image": "Inspection.png"
+          },
+          "_row_num": 5
+        },
+        {
+          "choice_list_name": "branches",
+          "data_value": "exitpath",
+          "display": {
+            "text": "Exit",
+            "image": "Exit.png"
+          },
+          "_row_num": 6
+        }
+      ],
+      "yesno": [
+        {
+          "choice_list_name": "yesno",
+          "data_value": "yes",
+          "display": {
+            "text": "Yes"
+          },
+          "_row_num": 7
+        },
+        {
+          "choice_list_name": "yesno",
+          "data_value": "no",
+          "display": {
+            "text": "No"
+          },
+          "_row_num": 8
+        }
+      ],
+      "dry_or_connected_values": [
+        {
+          "choice_list_name": "dry_or_connected_values",
+          "data_value": "Dry Well",
+          "display": {
+            "text": "Dry Well"
+          },
+          "_row_num": 9
+        },
+        {
+          "choice_list_name": "dry_or_connected_values",
+          "data_value": "Connected to Multiple Catch Basins",
+          "display": {
+            "text": "Connected to Multiple Catch Basins"
+          },
+          "_row_num": 10
+        }
+      ],
+      "types_of_material": [
+        {
+          "choice_list_name": "types_of_material",
+          "data_value": "Storm Defender",
+          "display": {
+            "text": "Storm Defender"
+          },
+          "_row_num": 11
+        },
+        {
+          "choice_list_name": "types_of_material",
+          "data_value": "Boom",
+          "display": {
+            "text": "Boom"
+          },
+          "_row_num": 12
+        }
+      ],
+      "saturated_or_filled_values": [
+        {
+          "choice_list_name": "saturated_or_filled_values",
+          "data_value": "Saturated with oil or water",
+          "display": {
+            "text": "Saturated with oil or water"
+          },
+          "_row_num": 13
+        },
+        {
+          "choice_list_name": "saturated_or_filled_values",
+          "data_value": "Filled with Sediment",
+          "display": {
+            "text": "Filled with Sediment"
+          },
+          "_row_num": 14
+        },
+        {
+          "choice_list_name": "saturated_or_filled_values",
+          "data_value": "Absorbent Media Good Condition",
+          "display": {
+            "text": "Absorbent Media Good Condition"
+          },
+          "_row_num": 15
+        }
+      ],
+      "types_of_condition": [
+        {
+          "choice_list_name": "types_of_condition",
+          "data_value": "Good",
+          "display": {
+            "text": "Good"
+          },
+          "_row_num": 16
+        },
+        {
+          "choice_list_name": "types_of_condition",
+          "data_value": "Needs Replacement",
+          "display": {
+            "text": "Needs Replacement"
+          },
+          "_row_num": 17
+        }
+      ]
+    },
+    "queries": {
+      "linked_images": {
+        "query_name": "linked_images",
+        "query_type": "linked_table",
+        "linked_form_id": "imageSubform",
+        "linked_table_id": "imageSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('global_id')+'::'+data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('global_id'))+'::'+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 2
+      },
+      "linked_notes": {
+        "query_name": "linked_notes",
+        "query_type": "linked_table",
+        "linked_form_id": "notesSubform",
+        "linked_table_id": "notesSubform",
+        "selection": "parent_id = ?",
+        "selectionArgs": "[ data('global_id')+'::'+data('inspection_id')]",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('global_id'))+'::'+encodeURIComponent(data('inspection_id'))",
+        "_row_num": 3
+      }
+    },
+    "calculates": {
+      "locationAid": {
+        "calculation_name": "locationAid",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().aid == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().aid;\n  }\n})()",
+        "_row_num": 2
+      },
+      "locationZip": {
+        "calculation_name": "locationZip",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
+        "_row_num": 3
+      }
+    },
+    "model": {
+      "global_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "global_id"
+      },
+      "inspection_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 3,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "inspection_id"
+      },
+      "diameter": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 4,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "diameter"
+      },
+      "depth": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "depth"
+      },
+      "dry_or_connected": {
+        "type": "string",
+        "valuesList": "dry_or_connected_values",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 6,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "dry_or_connected"
+      },
+      "sediment_thickness": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 7,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "sediment_thickness"
+      },
+      "debris_present": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 8,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "debris_present"
+      },
+      "water_in_vault": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 9,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "water_in_vault"
+      },
+      "water_flowing_freely": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 10,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "water_flowing_freely"
+      },
+      "type_of_material": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 11,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "type_of_material"
+      },
+      "absorbent_replacement": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 12,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "absorbent_replacement"
+      },
+      "saturated_or_filled": {
+        "type": "string",
+        "valuesList": "saturated_or_filled_values",
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 13,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "saturated_or_filled"
+      },
+      "absorbent_replaced": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 14,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "absorbent_replaced"
+      },
+      "other_maintenance": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 15,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "other_maintenance"
+      },
+      "sheen_present": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 16,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "sheen_present"
+      },
+      "product_present": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 17,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "product_present"
+      },
+      "odor_present": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 18,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "odor_present"
+      },
+      "pid_reading": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 19,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "pid_reading"
+      },
+      "condition": {
+        "type": "string",
+        "valuesList": "types_of_condition",
+        "_defn": [
+          {
+            "_row_num": 16,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 20,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "condition"
+      },
+      "damage_present": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 21,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "damage_present"
+      },
+      "sediment_removed": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 18,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 22,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "sediment_removed"
+      },
+      "estimated_quantity": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 19,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 23,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "estimated_quantity"
+      },
+      "manifest_bol": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 24,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "manifest_bol"
+      },
+      "samples_obtained_analyzed": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 25,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "samples_obtained_analyzed"
+      },
+      "geo_info": {
+        "type": "object",
+        "elementType": "geopoint",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "elementKey": "geo_info_latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "elementKey": "geo_info_longitude"
+          },
+          "altitude": {
+            "type": "number",
+            "elementKey": "geo_info_altitude"
+          },
+          "accuracy": {
+            "type": "number",
+            "elementKey": "geo_info_accuracy"
+          }
+        },
+        "name": "geopoint",
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "gps_section"
+          },
+          {
+            "_row_num": 26,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "geo_info"
+      }
+    },
+    "section_names": [
+      "gps_section",
+      "image_section",
+      "initial",
+      "inspection_section",
+      "notes_section",
+      "survey"
+    ],
+    "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true,
+          "inspection_section": true,
+          "notes_section": true,
+          "gps_section": true,
+          "image_section": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": "Catch Basin Inspection Sample"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 4,
+            "_branch_label_enclosing_screen": "initial/_screen4",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 0
+          },
+          {
+            "clause": "goto _finalize",
+            "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_branch_label": "_finalize",
+            "operationIdx": 1
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 4,
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 3
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 4
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 7
+          }
+        ],
+        "branch_label_map": {
+          "_contents": 3,
+          "_screen4": 3,
+          "_finalize": 5
+        }
+      },
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {
+          "inspection_section": true,
+          "notes_section": true,
+          "gps_section": true,
+          "image_section": true
+        },
+        "reachable_sections": {
+          "inspection_section": true,
+          "notes_section": true,
+          "gps_section": true,
+          "image_section": true
+        },
+        "prompts": [
+          {
+            "type": "string",
+            "name": "inspection_id",
+            "display": {
+              "text": "Catch Basin ID"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "required": "true",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "string",
+            "name": "diameter",
+            "display": {
+              "text": "Diameter of Catch Basin"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "string",
+            "name": "depth",
+            "display": {
+              "text": "Depth of Catch Basin"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "dry_or_connected_values",
+            "name": "dry_or_connected",
+            "display": {
+              "text": "Dry Well Or Connected to Multiple Catch Basins?"
+            },
+            "hideInContents": "true",
+            "templatePath": "custom_select_dropdown_2.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "Catch Basin ID: {{data.inspection_id}}"
+            },
+            "hideInContents": "true",
+            "templatePath": "note_for_id.handlebars",
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 4
+          },
+          {
+            "type": "user_branch",
+            "values_list": "branches",
+            "hideInContents": "true",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "user_branch",
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 5
+          },
+          {
+            "clause": "do section inspection_section",
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_do_section_name": "inspection_section",
+            "_type": "_section",
+            "promptIdx": 6,
+            "display": {
+              "title": "Inspection"
+            },
+            "_branch_label_enclosing_screen": "inspection_section/0"
+          },
+          {
+            "clause": "do section notes_section",
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "prompt",
+            "_do_section_name": "notes_section",
+            "_type": "_section",
+            "promptIdx": 7,
+            "display": {
+              "title": "Notes"
+            },
+            "_branch_label_enclosing_screen": "notes_section/0"
+          },
+          {
+            "clause": "do section gps_section",
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_do_section_name": "gps_section",
+            "_type": "_section",
+            "promptIdx": 8,
+            "display": {
+              "title": "GPS"
+            },
+            "_branch_label_enclosing_screen": "gps_section/0"
+          },
+          {
+            "clause": "do section image_section",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_do_section_name": "image_section",
+            "_type": "_section",
+            "promptIdx": 9,
+            "display": {
+              "title": "Photo"
+            },
+            "_branch_label_enclosing_screen": "image_section/0"
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": [
+            0
+          ]
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Catch Basin Inspection"
+            },
+            "hideInContents": "true",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "hideInContents": "true",
+              "_row_num": 7,
+              "__rowNum__": 6,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Inspection Home Page"
+            },
+            "hideInContents": "true",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "hideInContents": "true",
+              "_row_num": 12,
+              "__rowNum__": 11,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 1
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 2
+          },
+          {
+            "clause": "do section inspection_section",
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "do_section",
+            "_do_section_name": "inspection_section",
+            "operationIdx": 3
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 4
+          },
+          {
+            "clause": "do section notes_section",
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "do_section",
+            "_do_section_name": "notes_section",
+            "operationIdx": 5
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 6
+          },
+          {
+            "clause": "do section gps_section",
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "do_section",
+            "_do_section_name": "gps_section",
+            "operationIdx": 7
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 8
+          },
+          {
+            "clause": "do section image_section",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "do_section",
+            "_do_section_name": "image_section",
+            "operationIdx": 9
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 10
+          },
+          {
+            "clause": "exit section",
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "exit_section",
+            "operationIdx": 11
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 28,
+            "operationIdx": 12
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 1,
+          "_screen9": 1,
+          "inspection": 3,
+          "notes": 5,
+          "gps": 7,
+          "image": 9,
+          "exitpath": 11
+        }
+      },
+      "inspection_section": {
+        "section_name": "inspection_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "string",
+            "name": "sediment_thickness",
+            "display": {
+              "text": "Sediment Thickness"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "debris_present",
+            "display": {
+              "text": "Any Debris Present?"
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "water_in_vault",
+            "display": {
+              "text": "Water present in the vault?"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "water_flowing_freely",
+            "display": {
+              "text": "Water flowing freely?"
+            },
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "string",
+            "name": "type_of_material",
+            "display": {
+              "text": "Type of absorbent material?"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "absorbent_replacement",
+            "display": {
+              "text": "Absorbent media need replacing or cleaned?"
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "select_one",
+            "values_list": "saturated_or_filled_values",
+            "name": "saturated_or_filled",
+            "display": {
+              "text": "Absorbent media saturated with oil/water or filled with sediment?"
+            },
+            "templatePath": "custom_select_dropdown_2.handlebars",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "absorbent_replaced",
+            "display": {
+              "text": "Absorbent media replaced or cleaned?"
+            },
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "other_maintenance",
+            "display": {
+              "text": "Other maintenance performed? If yes, describe in notes"
+            },
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "sheen_present",
+            "display": {
+              "text": "Sheen present?"
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "product_present",
+            "display": {
+              "text": "Product present? (Notify PM immediately)"
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "odor_present",
+            "display": {
+              "text": "Odor present? If yes, describe in notes"
+            },
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "decimal",
+            "name": "pid_reading",
+            "display": {
+              "text": "PID Reading:"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "types_of_condition",
+            "name": "condition",
+            "display": {
+              "text": "Condition of Catch basin"
+            },
+            "templatePath": "custom_select_dropdown_2.handlebars",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 13
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "damage_present",
+            "display": {
+              "text": "Damage Present? If so, describe in notes. If major damage present, contact PM immediately"
+            },
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 14
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "sediment_removed",
+            "display": {
+              "text": "Sediment/debris removed?"
+            },
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 15
+          },
+          {
+            "type": "string",
+            "name": "estimated_quantity",
+            "display": {
+              "text": "Estimated quantity (Tons/Yards/Drums)"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 16
+          },
+          {
+            "type": "string",
+            "name": "manifest_bol",
+            "display": {
+              "text": "Manifest/BOL"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 17
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "samples_obtained_analyzed",
+            "display": {
+              "text": "Samples obtained and analysis?"
+            },
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 18
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 23,
+            "_branch_label_enclosing_screen": "inspection_section/_screen23",
+            "promptIdx": 19
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Catch Basin Inspection"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 22,
+              "__rowNum__": 21,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 23,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 23,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(19);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 23,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen23": 2
+        }
+      },
+      "notes_section": {
+        "section_name": "notes_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "linked_table",
+            "values_list": "linked_notes",
+            "display": {
+              "text": "Add Notes to this list",
+              "new_instance_text": "Add Note"
+            },
+            "templatePath": "linked_table_note.handlebars",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "linked_table",
+            "_branch_label_enclosing_screen": "notes_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "notes_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Notes"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      },
+      "gps_section": {
+        "section_name": "gps_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "geopoint",
+            "name": "geo_info",
+            "display": {
+              "text": "Location",
+              "hint": "Capture GPS coordinates of this location"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "geopoint",
+            "_branch_label_enclosing_screen": "gps_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "gps_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "GPS"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      },
+      "image_section": {
+        "section_name": "image_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "linked_table",
+            "values_list": "linked_images",
+            "display": {
+              "text": "Add photos to this list",
+              "new_instance_text": "Add Image"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "linked_table",
+            "_branch_label_enclosing_screen": "image_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 5,
+            "_branch_label_enclosing_screen": "image_section/_screen5",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Photo"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 4,
+              "__rowNum__": 3,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 5,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 5,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen5": 2
+        }
+      }
+    }
+  }
+}

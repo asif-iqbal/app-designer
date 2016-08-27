@@ -25,6 +25,7 @@
         "display": {
           "text": "Material Name"
         },
+        "templatePath": "string_input_type.handlebars",
         "_row_num": 3
       },
       {
@@ -33,6 +34,7 @@
         "display": {
           "text": "Quantity"
         },
+        "templatePath": "string_input_type.handlebars",
         "_row_num": 4
       },
       {
@@ -352,6 +354,7 @@
             "display": {
               "text": "Material Name"
             },
+            "templatePath": "string_input_type.handlebars",
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
@@ -365,6 +368,7 @@
             "display": {
               "text": "Quantity"
             },
+            "templatePath": "string_input_type.handlebars",
             "_row_num": 4,
             "__rowNum__": 3,
             "_token_type": "prompt",

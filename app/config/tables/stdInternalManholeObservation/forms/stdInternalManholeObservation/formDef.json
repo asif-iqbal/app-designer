@@ -1,0 +1,708 @@
+{
+  "xlsx": {
+    "initial": [
+      {
+        "clause": "do section survey",
+        "_row_num": 2
+      },
+      {
+        "clause": "goto _finalize",
+        "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+        "_row_num": 3
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Internal Manhole Observation"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "items",
+        "name": "item_name",
+        "display": {
+          "text": "Item"
+        },
+        "templatePath": "select_one_dropdown.handlebars",
+        "required": "true",
+        "_row_num": 3
+      },
+      {
+        "type": "string",
+        "name": "material",
+        "display": {
+          "text": "Material"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 4
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "condition_csv",
+        "name": "condition",
+        "display": {
+          "text": "Condition"
+        },
+        "choice_filter": "choice_item.type===data('item_name')",
+        "templatePath": "select_one_dropdown.handlebars",
+        "_row_num": 5
+      },
+      {
+        "type": "decimal",
+        "name": "leaks",
+        "display": {
+          "text": "Leaks (gpm)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "string",
+        "name": "photo",
+        "display": {
+          "text": "Photo"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 7
+      },
+      {
+        "type": "string",
+        "name": "comments",
+        "display": {
+          "text": "Comments"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 8
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 9
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "items",
+        "data_value": "Frame",
+        "display": {
+          "text": "Frame"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "items",
+        "data_value": "Chimney",
+        "display": {
+          "text": "Chimney"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "items",
+        "data_value": "Cone",
+        "display": {
+          "text": "Cone"
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "items",
+        "data_value": "Walls",
+        "display": {
+          "text": "Walls"
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "items",
+        "data_value": "Bench",
+        "display": {
+          "text": "Bench"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "items",
+        "data_value": "Channel",
+        "display": {
+          "text": "Channel"
+        },
+        "_row_num": 7
+      }
+    ],
+    "queries": [
+      {
+        "query_name": "condition_csv",
+        "query_type": "csv",
+        "uri": "\"condition.csv\"",
+        "callback": "_.map(context, function(condition){condition.data_value = condition.name;\ncondition.display = {text:condition.name};\nreturn condition;\n})",
+        "_row_num": 2
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "stdInternalManholeObservation",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20160101,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "table_id",
+        "value": "stdInternalManholeObservation",
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "StdInternalManholeObservation"
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "instance_name",
+        "value": "item_name",
+        "_row_num": 6
+      }
+    ],
+    "model": [
+      {
+        "name": "parent_id",
+        "type": "string",
+        "_row_num": 2
+      },
+      {
+        "name": "item_name",
+        "type": "select_one_dropdown",
+        "_row_num": 3
+      },
+      {
+        "name": "material",
+        "type": "string",
+        "_row_num": 4
+      },
+      {
+        "name": "condition",
+        "type": "select_one_dropdown",
+        "_row_num": 5
+      },
+      {
+        "name": "leaks",
+        "type": "decimal",
+        "_row_num": 6
+      },
+      {
+        "name": "photo",
+        "type": "string",
+        "_row_num": 7
+      },
+      {
+        "name": "comments",
+        "type": "string",
+        "_row_num": 8
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "stdInternalManholeObservation",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20160101,
+        "_row_num": 3
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "stdInternalManholeObservation",
+        "_row_num": 4
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "StdInternalManholeObservation"
+        },
+        "_row_num": 5
+      },
+      "instance_name": {
+        "setting_name": "instance_name",
+        "value": "item_name",
+        "_row_num": 6
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 5,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 5,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "StdInternalManholeObservation"
+        },
+        "_row_num": 5
+      }
+    },
+    "choices": {
+      "items": [
+        {
+          "choice_list_name": "items",
+          "data_value": "Frame",
+          "display": {
+            "text": "Frame"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "items",
+          "data_value": "Chimney",
+          "display": {
+            "text": "Chimney"
+          },
+          "_row_num": 3
+        },
+        {
+          "choice_list_name": "items",
+          "data_value": "Cone",
+          "display": {
+            "text": "Cone"
+          },
+          "_row_num": 4
+        },
+        {
+          "choice_list_name": "items",
+          "data_value": "Walls",
+          "display": {
+            "text": "Walls"
+          },
+          "_row_num": 5
+        },
+        {
+          "choice_list_name": "items",
+          "data_value": "Bench",
+          "display": {
+            "text": "Bench"
+          },
+          "_row_num": 6
+        },
+        {
+          "choice_list_name": "items",
+          "data_value": "Channel",
+          "display": {
+            "text": "Channel"
+          },
+          "_row_num": 7
+        }
+      ]
+    },
+    "queries": {
+      "condition_csv": {
+        "query_name": "condition_csv",
+        "query_type": "csv",
+        "uri": "\"condition.csv\"",
+        "callback": "_.map(context, function(condition){condition.data_value = condition.name;\ncondition.display = {text:condition.name};\nreturn condition;\n})",
+        "_row_num": 2
+      }
+    },
+    "calculates": {},
+    "model": {
+      "parent_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "parent_id"
+      },
+      "item_name": {
+        "type": "string",
+        "valuesList": "items",
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 3,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "item_name"
+      },
+      "material": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 4,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "material"
+      },
+      "condition": {
+        "type": "string",
+        "valuesList": "condition_csv",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "condition"
+      },
+      "leaks": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 6,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "leaks"
+      },
+      "photo": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 7,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "photo"
+      },
+      "comments": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 8,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "comments"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": "StdInternalManholeObservation"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 4,
+            "_branch_label_enclosing_screen": "initial/_screen4",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 0
+          },
+          {
+            "clause": "goto _finalize",
+            "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_branch_label": "_finalize",
+            "operationIdx": 1
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 4,
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 3
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 4
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 7
+          }
+        ],
+        "branch_label_map": {
+          "_contents": 3,
+          "_screen4": 3,
+          "_finalize": 5
+        }
+      },
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "select_one_dropdown",
+            "values_list": "items",
+            "name": "item_name",
+            "display": {
+              "text": "Item"
+            },
+            "templatePath": "select_one_dropdown.handlebars",
+            "required": "true",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "string",
+            "name": "material",
+            "display": {
+              "text": "Material"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "condition_csv",
+            "name": "condition",
+            "display": {
+              "text": "Condition"
+            },
+            "choice_filter": "choice_item.type===data('item_name')",
+            "templatePath": "select_one_dropdown.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "decimal",
+            "name": "leaks",
+            "display": {
+              "text": "Leaks (gpm)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "string",
+            "name": "photo",
+            "display": {
+              "text": "Photo"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "string",
+            "name": "comments",
+            "display": {
+              "text": "Comments"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 10,
+            "_branch_label_enclosing_screen": "survey/_screen10",
+            "promptIdx": 6
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": [
+            0
+          ]
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Internal Manhole Observation"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 9,
+              "__rowNum__": 8,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 10,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 10,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 10,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen10": 2
+        }
+      }
+    }
+  }
+}

@@ -141,6 +141,21 @@
         "_row_num": 18
       },
       {
+        "type": "assign",
+        "name": "sample_date",
+        "calculation": "calculates.currDate()",
+        "_row_num": 19
+      },
+      {
+        "type": "date",
+        "name": "sample_date",
+        "display": {
+          "text": "Date"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 20
+      },
+      {
         "type": "select_multiple",
         "values_list": "personnel_csv",
         "name": "personnel",
@@ -148,7 +163,7 @@
           "text": "Personnel"
         },
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 19
+        "_row_num": 21
       },
       {
         "type": "string",
@@ -156,7 +171,8 @@
         "display": {
           "text": "Task"
         },
-        "_row_num": 20
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 22
       },
       {
         "type": "string",
@@ -164,7 +180,8 @@
         "display": {
           "text": "Subcontractors"
         },
-        "_row_num": 21
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 23
       },
       {
         "type": "string",
@@ -172,7 +189,8 @@
         "display": {
           "text": "Weather"
         },
-        "_row_num": 22
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 24
       },
       {
         "type": "select_multiple",
@@ -183,7 +201,7 @@
         },
         "choice_filter": "choice_item.type==='Vehicle'",
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 23
+        "_row_num": 25
       },
       {
         "type": "select_multiple",
@@ -194,7 +212,7 @@
         },
         "choice_filter": "choice_item.type==='Consumables'",
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 24
+        "_row_num": 26
       },
       {
         "type": "select_multiple",
@@ -205,7 +223,7 @@
         },
         "choice_filter": "choice_item.type==='Equipment'",
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 25
+        "_row_num": 27
       },
       {
         "type": "linked_table",
@@ -214,11 +232,11 @@
           "text": "Add GWS Samples to this list",
           "new_instance_text": "Add Well/Sample"
         },
-        "_row_num": 26
+        "_row_num": 28
       },
       {
         "clause": "end screen",
-        "_row_num": 27
+        "_row_num": 29
       }
     ],
     "queries": [
@@ -257,6 +275,11 @@
         "calculation_name": "locationZip",
         "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
         "_row_num": 3
+      },
+      {
+        "calculation_name": "currDate",
+        "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
+        "_row_num": 4
       }
     ],
     "settings": [
@@ -383,6 +406,11 @@
         "calculation_name": "locationZip",
         "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
         "_row_num": 3
+      },
+      "currDate": {
+        "calculation_name": "currDate",
+        "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
+        "_row_num": 4
       }
     },
     "model": {
@@ -466,10 +494,21 @@
         "type": "string",
         "elementKey": "loc_client"
       },
+      "sample_date": {
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "sample_date"
+      },
       "personnel": {
         "_defn": [
           {
-            "_row_num": 19,
+            "_row_num": 21,
             "section_name": "survey"
           }
         ],
@@ -484,7 +523,7 @@
       "task": {
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 22,
             "section_name": "survey"
           }
         ],
@@ -494,7 +533,7 @@
       "subcontractors": {
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 23,
             "section_name": "survey"
           }
         ],
@@ -504,7 +543,7 @@
       "weather": {
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 24,
             "section_name": "survey"
           }
         ],
@@ -514,7 +553,7 @@
       "vehicle": {
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 25,
             "section_name": "survey"
           }
         ],
@@ -529,7 +568,7 @@
       "consumables": {
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 26,
             "section_name": "survey"
           }
         ],
@@ -544,7 +583,7 @@
       "equipment": {
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 27,
             "section_name": "survey"
           }
         ],
@@ -821,6 +860,20 @@
             "promptIdx": 7
           },
           {
+            "type": "date",
+            "name": "sample_date",
+            "display": {
+              "text": "Date"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
             "type": "select_multiple",
             "values_list": "personnel_csv",
             "name": "personnel",
@@ -828,12 +881,12 @@
               "text": "Personnel"
             },
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 21,
+            "__rowNum__": 20,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 8
+            "promptIdx": 9
           },
           {
             "type": "string",
@@ -841,21 +894,9 @@
             "display": {
               "text": "Task"
             },
-            "_row_num": 20,
-            "__rowNum__": 19,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 9
-          },
-          {
-            "type": "string",
-            "name": "subcontractors",
-            "display": {
-              "text": "Subcontractors"
-            },
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -863,16 +904,31 @@
           },
           {
             "type": "string",
-            "name": "weather",
+            "name": "subcontractors",
             "display": {
-              "text": "Weather"
+              "text": "Subcontractors"
             },
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 23,
+            "__rowNum__": 22,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 11
+          },
+          {
+            "type": "string",
+            "name": "weather",
+            "display": {
+              "text": "Weather"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 12
           },
           {
             "type": "select_multiple",
@@ -883,12 +939,12 @@
             },
             "choice_filter": "choice_item.type==='Vehicle'",
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 12
+            "promptIdx": 13
           },
           {
             "type": "select_multiple",
@@ -899,12 +955,12 @@
             },
             "choice_filter": "choice_item.type==='Consumables'",
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 13
+            "promptIdx": 14
           },
           {
             "type": "select_multiple",
@@ -915,12 +971,12 @@
             },
             "choice_filter": "choice_item.type==='Equipment'",
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 27,
+            "__rowNum__": 26,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 14
+            "promptIdx": 15
           },
           {
             "type": "linked_table",
@@ -929,20 +985,20 @@
               "text": "Add GWS Samples to this list",
               "new_instance_text": "Add Well/Sample"
             },
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "prompt",
             "_type": "linked_table",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 15
+            "promptIdx": 16
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 28,
-            "_branch_label_enclosing_screen": "survey/_screen28",
-            "promptIdx": 16
+            "_row_num": 30,
+            "_branch_label_enclosing_screen": "survey/_screen30",
+            "promptIdx": 17
           }
         ],
         "validation_tag_map": {
@@ -959,23 +1015,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 27,
-              "__rowNum__": 26,
+              "_row_num": 29,
+              "__rowNum__": 28,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('stdgwslog_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('stdgwslog_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nassign('sample_date', calculates.currDate());\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 28,
+            "_row_num": 30,
             "operationIdx": 1
           },
           {
-            "_row_num": 28,
+            "_row_num": 30,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -984,14 +1040,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 28,
+            "_row_num": 30,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen28": 2
+          "_screen30": 2
         }
       }
     }

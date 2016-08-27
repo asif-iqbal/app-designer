@@ -121,6 +121,7 @@
         "_row_num": 2
       },
       {
+        "branch_label": "age_branch",
         "type": "integer",
         "name": "age",
         "display": {
@@ -136,6 +137,62 @@
           "hindi": "20 साल की उम्र से अधिक होना चाहिए"
         },
         "_row_num": 3
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 4
+      },
+      {
+        "branch_label": "_contents",
+        "_row_num": 5
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 6
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "You are in a custom contents screen for section1"
+        },
+        "_row_num": 7
+      },
+      {
+        "type": "user_branch",
+        "values_list": "section1_branch",
+        "_row_num": 8
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 9
+      },
+      {
+        "clause": "resume",
+        "_row_num": 10
+      },
+      {
+        "branch_label": "bypass_path",
+        "_row_num": 11
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "You navigated to the bypass note"
+        },
+        "hideInContents": true,
+        "_row_num": 12
+      },
+      {
+        "clause": "resume",
+        "_row_num": 13
+      },
+      {
+        "branch_label": "exit_section1",
+        "_row_num": 14
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 15
       }
     ],
     "section2": [
@@ -201,6 +258,30 @@
           }
         },
         "_row_num": 4
+      },
+      {
+        "choice_list_name": "section1_branch",
+        "data_value": "bypass_path",
+        "display": {
+          "text": "See a Silly Note"
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "section1_branch",
+        "data_value": "age_branch",
+        "display": {
+          "text": "Age {{data.age}}"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "section1_branch",
+        "data_value": "exit_section1",
+        "display": {
+          "text": "Exit this section"
+        },
+        "_row_num": 7
       }
     ],
     "settings": [
@@ -427,6 +508,32 @@
             }
           },
           "_row_num": 4
+        }
+      ],
+      "section1_branch": [
+        {
+          "choice_list_name": "section1_branch",
+          "data_value": "bypass_path",
+          "display": {
+            "text": "See a Silly Note"
+          },
+          "_row_num": 5
+        },
+        {
+          "choice_list_name": "section1_branch",
+          "data_value": "age_branch",
+          "display": {
+            "text": "Age {{data.age}}"
+          },
+          "_row_num": 6
+        },
+        {
+          "choice_list_name": "section1_branch",
+          "data_value": "exit_section1",
+          "display": {
+            "text": "Exit this section"
+          },
+          "_row_num": 7
         }
       ]
     },
@@ -777,12 +884,39 @@
             "promptIdx": 1
           },
           {
+            "type": "note",
+            "display": {
+              "text": "You are in a custom contents screen for section1"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
             "_token_type": "prompt",
-            "type": "contents",
-            "_type": "contents",
-            "_row_num": 4,
-            "_branch_label_enclosing_screen": "section1/_screen4",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "section1/_screen6",
             "promptIdx": 2
+          },
+          {
+            "type": "user_branch",
+            "values_list": "section1_branch",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "user_branch",
+            "_branch_label_enclosing_screen": "section1/_screen6",
+            "promptIdx": 3
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "You navigated to the bypass note"
+            },
+            "hideInContents": true,
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "section1/_screen12",
+            "promptIdx": 4
           }
         ],
         "validation_tag_map": {
@@ -804,32 +938,69 @@
             "operationIdx": 1
           },
           {
-            "_token_type": "exit_section",
             "clause": "exit section",
             "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "exit_section",
             "operationIdx": 2
           },
           {
-            "_row_num": 4,
+            "clause": "begin screen",
+            "_row_num": 6,
+            "__rowNum__": 5,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
-            "screen": {
-              "hideInBackHistory": true
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 9,
+              "__rowNum__": 8,
+              "_token_type": "end_screen"
             },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 3
           },
           {
-            "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 4,
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "resume",
             "operationIdx": 4
+          },
+          {
+            "_row_num": 12,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "clause": "resume",
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "resume",
+            "operationIdx": 6
+          },
+          {
+            "clause": "exit section",
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "exit_section",
+            "operationIdx": 7
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 16,
+            "operationIdx": 8
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
+          "age_branch": 1,
           "_screen3": 1,
           "_contents": 3,
-          "_screen4": 3
+          "_screen6": 3,
+          "bypass_path": 5,
+          "_screen12": 5,
+          "exit_section1": 7
         }
       },
       "section2": {

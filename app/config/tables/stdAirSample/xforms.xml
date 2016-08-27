@@ -1,0 +1,65 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>stdAirSample</h:title>
+  <model>
+    <instance>
+      <data id="stdAirSample">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <geo_info/>
+        <point_description/>
+        <sample_id/>
+        <sampling_type/>
+        <sign/>
+        <sign_person_name/>
+        <skt/>
+        <skt_name/>
+        <stdaslog_id/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/geo_info" type="geopoint"/>
+    <bind nodeset="/data/point_description" type="string"/>
+    <bind nodeset="/data/sample_id" type="string"/>
+    <bind nodeset="/data/sampling_type" type="string"/>
+    <bind nodeset="/data/sign" type="binary"/>
+    <bind nodeset="/data/sign_person_name" type="string"/>
+    <bind nodeset="/data/skt" type="binary"/>
+    <bind nodeset="/data/skt_name" type="string"/>
+    <bind nodeset="/data/stdaslog_id" type="string"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+<upload ref="sign" mediatype="image/*"><label>Dummy</label></upload>
+<upload ref="skt" mediatype="image/*"><label>Dummy</label></upload>
+ </h:body> 
+</h:html>

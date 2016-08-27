@@ -1,0 +1,73 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>stdManholeLineCondition</h:title>
+  <model>
+    <instance>
+      <data id="stdManholeLineCondition">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <connect_mnh/>
+        <debris_depth/>
+        <direction/>
+        <flow_depth/>
+        <joint_length/>
+        <line_comments/>
+        <line_cond_1_5/>
+        <parent_id/>
+        <photo/>
+        <pipe_conn_leak/>
+        <pipe_diameter/>
+        <pipe_material/>
+        <rim_to_invert_depth_feet/>
+        <rim_to_invert_depth_inches/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/connect_mnh" type="string"/>
+    <bind nodeset="/data/debris_depth" type="decimal"/>
+    <bind nodeset="/data/direction" type="string"/>
+    <bind nodeset="/data/flow_depth" type="decimal"/>
+    <bind nodeset="/data/joint_length" type="decimal"/>
+    <bind nodeset="/data/line_comments" type="string"/>
+    <bind nodeset="/data/line_cond_1_5" type="string"/>
+    <bind nodeset="/data/parent_id" type="string"/>
+    <bind nodeset="/data/photo" type="string"/>
+    <bind nodeset="/data/pipe_conn_leak" type="decimal"/>
+    <bind nodeset="/data/pipe_diameter" type="string"/>
+    <bind nodeset="/data/pipe_material" type="string"/>
+    <bind nodeset="/data/rim_to_invert_depth_feet" type="decimal"/>
+    <bind nodeset="/data/rim_to_invert_depth_inches" type="decimal"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+ </h:body> 
+</h:html>

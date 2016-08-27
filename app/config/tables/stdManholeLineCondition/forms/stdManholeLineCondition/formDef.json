@@ -1,0 +1,1541 @@
+{
+  "xlsx": {
+    "initial": [
+      {
+        "clause": "do section survey",
+        "_row_num": 2
+      },
+      {
+        "clause": "goto _finalize",
+        "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+        "_row_num": 3
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Line Conditions"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "direction_values",
+        "name": "direction",
+        "display": {
+          "text": "Direction (in/out)"
+        },
+        "templatePath": "select_one_dropdown.handlebars",
+        "_row_num": 3
+      },
+      {
+        "type": "string",
+        "name": "connect_mnh",
+        "display": {
+          "text": "Connect MNH"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "required": "true",
+        "_row_num": 4
+      },
+      {
+        "type": "decimal",
+        "name": "rim_to_invert_depth_feet",
+        "display": {
+          "text": "Rim to Invert Depth (ft.)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 5
+      },
+      {
+        "type": "decimal",
+        "name": "rim_to_invert_depth_inches",
+        "display": {
+          "text": "Rim to Invert Depth (in.)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "pipe_diameter_values",
+        "name": "pipe_diameter",
+        "display": {
+          "text": "Pipe Diameter (in.)"
+        },
+        "templatePath": "select_one_dropdown.handlebars",
+        "_row_num": 7
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "pipe_material_values",
+        "name": "pipe_material",
+        "display": {
+          "text": "Pipe Material"
+        },
+        "templatePath": "select_one_dropdown.handlebars",
+        "_row_num": 8
+      },
+      {
+        "type": "decimal",
+        "name": "joint_length",
+        "display": {
+          "text": "Joint Length"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 9
+      },
+      {
+        "type": "decimal",
+        "name": "flow_depth",
+        "display": {
+          "text": "Flow Depth (in.)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 10
+      },
+      {
+        "type": "decimal",
+        "name": "debris_depth",
+        "display": {
+          "text": "Debris Depth (in.)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 11
+      },
+      {
+        "type": "decimal",
+        "name": "pipe_conn_leak",
+        "display": {
+          "text": "Pipe Conn Leak (gpm)"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 12
+      },
+      {
+        "type": "string",
+        "name": "photo",
+        "display": {
+          "text": "Photo"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 13
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "line_condition_ratings",
+        "name": "line_cond_1_5",
+        "display": {
+          "text": "Line Condition 1 to 5"
+        },
+        "templatePath": "select_one_dropdown.handlebars",
+        "_row_num": 14
+      },
+      {
+        "type": "string",
+        "name": "line_comments",
+        "display": {
+          "text": "Line Comments"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 15
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 16
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "line_condition_ratings",
+        "data_value": "one",
+        "display": {
+          "text": "one"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "line_condition_ratings",
+        "data_value": "two",
+        "display": {
+          "text": "two"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "line_condition_ratings",
+        "data_value": "three",
+        "display": {
+          "text": "three"
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "line_condition_ratings",
+        "data_value": "four",
+        "display": {
+          "text": "four"
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "line_condition_ratings",
+        "data_value": "five",
+        "display": {
+          "text": "five"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "direction_values",
+        "data_value": "In",
+        "display": {
+          "text": "In"
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "direction_values",
+        "data_value": "Out",
+        "display": {
+          "text": "Out"
+        },
+        "_row_num": 8
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "2 in.",
+        "display": {
+          "text": "2 in."
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "3 in.",
+        "display": {
+          "text": "3 in."
+        },
+        "_row_num": 10
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "4 in.",
+        "display": {
+          "text": "4 in."
+        },
+        "_row_num": 11
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "5 in.",
+        "display": {
+          "text": "5 in."
+        },
+        "_row_num": 12
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "6 in.",
+        "display": {
+          "text": "6 in."
+        },
+        "_row_num": 13
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "8 in.",
+        "display": {
+          "text": "8 in."
+        },
+        "_row_num": 14
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "10 in.",
+        "display": {
+          "text": "10 in."
+        },
+        "_row_num": 15
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "12 in.",
+        "display": {
+          "text": "12 in."
+        },
+        "_row_num": 16
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "14 in.",
+        "display": {
+          "text": "14 in."
+        },
+        "_row_num": 17
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "15 in.",
+        "display": {
+          "text": "15 in."
+        },
+        "_row_num": 18
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "16 in.",
+        "display": {
+          "text": "16 in."
+        },
+        "_row_num": 19
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "18 in.",
+        "display": {
+          "text": "18 in."
+        },
+        "_row_num": 20
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "20 in.",
+        "display": {
+          "text": "20 in."
+        },
+        "_row_num": 21
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "21 in.",
+        "display": {
+          "text": "21 in."
+        },
+        "_row_num": 22
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "24 in.",
+        "display": {
+          "text": "24 in."
+        },
+        "_row_num": 23
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "30 in.",
+        "display": {
+          "text": "30 in."
+        },
+        "_row_num": 24
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "36 in.",
+        "display": {
+          "text": "36 in."
+        },
+        "_row_num": 25
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "40 in.",
+        "display": {
+          "text": "40 in."
+        },
+        "_row_num": 26
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "42 in.",
+        "display": {
+          "text": "42 in."
+        },
+        "_row_num": 27
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "48 in.",
+        "display": {
+          "text": "48 in."
+        },
+        "_row_num": 28
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "54 in.",
+        "display": {
+          "text": "54 in."
+        },
+        "_row_num": 29
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "60 in.",
+        "display": {
+          "text": "60 in."
+        },
+        "_row_num": 30
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "72 in.",
+        "display": {
+          "text": "72 in."
+        },
+        "_row_num": 31
+      },
+      {
+        "choice_list_name": "pipe_diameter_values",
+        "data_value": "84 in.",
+        "display": {
+          "text": "84 in."
+        },
+        "_row_num": 32
+      },
+      {
+        "choice_list_name": "pipe_material_values",
+        "data_value": "ACP",
+        "display": {
+          "text": "ACP"
+        },
+        "_row_num": 33
+      },
+      {
+        "choice_list_name": "pipe_material_values",
+        "data_value": "VCP",
+        "display": {
+          "text": "VCP"
+        },
+        "_row_num": 34
+      },
+      {
+        "choice_list_name": "pipe_material_values",
+        "data_value": "PVC",
+        "display": {
+          "text": "PVC"
+        },
+        "_row_num": 35
+      },
+      {
+        "choice_list_name": "pipe_material_values",
+        "data_value": "CONC",
+        "display": {
+          "text": "CONC"
+        },
+        "_row_num": 36
+      },
+      {
+        "choice_list_name": "pipe_material_values",
+        "data_value": "RCP",
+        "display": {
+          "text": "RCP"
+        },
+        "_row_num": 37
+      },
+      {
+        "choice_list_name": "pipe_material_values",
+        "data_value": "Truss",
+        "display": {
+          "text": "Truss"
+        },
+        "_row_num": 38
+      },
+      {
+        "choice_list_name": "pipe_material_values",
+        "data_value": "Orangeburg",
+        "display": {
+          "text": "Orangeburg"
+        },
+        "_row_num": 39
+      },
+      {
+        "choice_list_name": "pipe_material_values",
+        "data_value": "Cast Iron",
+        "display": {
+          "text": "Cast Iron"
+        },
+        "_row_num": 40
+      },
+      {
+        "choice_list_name": "pipe_material_values",
+        "data_value": "Lined",
+        "display": {
+          "text": "Lined"
+        },
+        "_row_num": 41
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "stdManholeLineCondition",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20160101,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "table_id",
+        "value": "stdManholeLineCondition",
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Std. Manhole Line Conditions"
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "instance_name",
+        "value": "connect_mnh",
+        "_row_num": 6
+      }
+    ],
+    "model": [
+      {
+        "name": "parent_id",
+        "type": "string",
+        "_row_num": 2
+      },
+      {
+        "name": "direction",
+        "type": "select_one_dropdown",
+        "_row_num": 3
+      },
+      {
+        "name": "connect_mnh",
+        "type": "string",
+        "_row_num": 4
+      },
+      {
+        "name": "rim_to_invert_depth_feet",
+        "type": "decimal",
+        "_row_num": 5
+      },
+      {
+        "name": "rim_to_invert_depth_inches",
+        "type": "decimal",
+        "_row_num": 6
+      },
+      {
+        "name": "pipe_diameter",
+        "type": "select_one_dropdown",
+        "_row_num": 7
+      },
+      {
+        "name": "pipe_material",
+        "type": "select_one_dropdown",
+        "_row_num": 8
+      },
+      {
+        "name": "joint_length",
+        "type": "decimal",
+        "_row_num": 9
+      },
+      {
+        "name": "flow_depth",
+        "type": "decimal",
+        "_row_num": 10
+      },
+      {
+        "name": "debris_depth",
+        "type": "decimal",
+        "_row_num": 11
+      },
+      {
+        "name": "pipe_conn_leak",
+        "type": "decimal",
+        "_row_num": 12
+      },
+      {
+        "name": "photo",
+        "type": "string",
+        "_row_num": 13
+      },
+      {
+        "name": "line_cond_1_5",
+        "type": "select_one_dropdown",
+        "_row_num": 14
+      },
+      {
+        "name": "line_comments",
+        "type": "string",
+        "_row_num": 15
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "stdManholeLineCondition",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20160101,
+        "_row_num": 3
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "stdManholeLineCondition",
+        "_row_num": 4
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Std. Manhole Line Conditions"
+        },
+        "_row_num": 5
+      },
+      "instance_name": {
+        "setting_name": "instance_name",
+        "value": "connect_mnh",
+        "_row_num": 6
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 5,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 5,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Std. Manhole Line Conditions"
+        },
+        "_row_num": 5
+      }
+    },
+    "choices": {
+      "line_condition_ratings": [
+        {
+          "choice_list_name": "line_condition_ratings",
+          "data_value": "one",
+          "display": {
+            "text": "one"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "line_condition_ratings",
+          "data_value": "two",
+          "display": {
+            "text": "two"
+          },
+          "_row_num": 3
+        },
+        {
+          "choice_list_name": "line_condition_ratings",
+          "data_value": "three",
+          "display": {
+            "text": "three"
+          },
+          "_row_num": 4
+        },
+        {
+          "choice_list_name": "line_condition_ratings",
+          "data_value": "four",
+          "display": {
+            "text": "four"
+          },
+          "_row_num": 5
+        },
+        {
+          "choice_list_name": "line_condition_ratings",
+          "data_value": "five",
+          "display": {
+            "text": "five"
+          },
+          "_row_num": 6
+        }
+      ],
+      "direction_values": [
+        {
+          "choice_list_name": "direction_values",
+          "data_value": "In",
+          "display": {
+            "text": "In"
+          },
+          "_row_num": 7
+        },
+        {
+          "choice_list_name": "direction_values",
+          "data_value": "Out",
+          "display": {
+            "text": "Out"
+          },
+          "_row_num": 8
+        }
+      ],
+      "pipe_diameter_values": [
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "2 in.",
+          "display": {
+            "text": "2 in."
+          },
+          "_row_num": 9
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "3 in.",
+          "display": {
+            "text": "3 in."
+          },
+          "_row_num": 10
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "4 in.",
+          "display": {
+            "text": "4 in."
+          },
+          "_row_num": 11
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "5 in.",
+          "display": {
+            "text": "5 in."
+          },
+          "_row_num": 12
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "6 in.",
+          "display": {
+            "text": "6 in."
+          },
+          "_row_num": 13
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "8 in.",
+          "display": {
+            "text": "8 in."
+          },
+          "_row_num": 14
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "10 in.",
+          "display": {
+            "text": "10 in."
+          },
+          "_row_num": 15
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "12 in.",
+          "display": {
+            "text": "12 in."
+          },
+          "_row_num": 16
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "14 in.",
+          "display": {
+            "text": "14 in."
+          },
+          "_row_num": 17
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "15 in.",
+          "display": {
+            "text": "15 in."
+          },
+          "_row_num": 18
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "16 in.",
+          "display": {
+            "text": "16 in."
+          },
+          "_row_num": 19
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "18 in.",
+          "display": {
+            "text": "18 in."
+          },
+          "_row_num": 20
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "20 in.",
+          "display": {
+            "text": "20 in."
+          },
+          "_row_num": 21
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "21 in.",
+          "display": {
+            "text": "21 in."
+          },
+          "_row_num": 22
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "24 in.",
+          "display": {
+            "text": "24 in."
+          },
+          "_row_num": 23
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "30 in.",
+          "display": {
+            "text": "30 in."
+          },
+          "_row_num": 24
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "36 in.",
+          "display": {
+            "text": "36 in."
+          },
+          "_row_num": 25
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "40 in.",
+          "display": {
+            "text": "40 in."
+          },
+          "_row_num": 26
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "42 in.",
+          "display": {
+            "text": "42 in."
+          },
+          "_row_num": 27
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "48 in.",
+          "display": {
+            "text": "48 in."
+          },
+          "_row_num": 28
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "54 in.",
+          "display": {
+            "text": "54 in."
+          },
+          "_row_num": 29
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "60 in.",
+          "display": {
+            "text": "60 in."
+          },
+          "_row_num": 30
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "72 in.",
+          "display": {
+            "text": "72 in."
+          },
+          "_row_num": 31
+        },
+        {
+          "choice_list_name": "pipe_diameter_values",
+          "data_value": "84 in.",
+          "display": {
+            "text": "84 in."
+          },
+          "_row_num": 32
+        }
+      ],
+      "pipe_material_values": [
+        {
+          "choice_list_name": "pipe_material_values",
+          "data_value": "ACP",
+          "display": {
+            "text": "ACP"
+          },
+          "_row_num": 33
+        },
+        {
+          "choice_list_name": "pipe_material_values",
+          "data_value": "VCP",
+          "display": {
+            "text": "VCP"
+          },
+          "_row_num": 34
+        },
+        {
+          "choice_list_name": "pipe_material_values",
+          "data_value": "PVC",
+          "display": {
+            "text": "PVC"
+          },
+          "_row_num": 35
+        },
+        {
+          "choice_list_name": "pipe_material_values",
+          "data_value": "CONC",
+          "display": {
+            "text": "CONC"
+          },
+          "_row_num": 36
+        },
+        {
+          "choice_list_name": "pipe_material_values",
+          "data_value": "RCP",
+          "display": {
+            "text": "RCP"
+          },
+          "_row_num": 37
+        },
+        {
+          "choice_list_name": "pipe_material_values",
+          "data_value": "Truss",
+          "display": {
+            "text": "Truss"
+          },
+          "_row_num": 38
+        },
+        {
+          "choice_list_name": "pipe_material_values",
+          "data_value": "Orangeburg",
+          "display": {
+            "text": "Orangeburg"
+          },
+          "_row_num": 39
+        },
+        {
+          "choice_list_name": "pipe_material_values",
+          "data_value": "Cast Iron",
+          "display": {
+            "text": "Cast Iron"
+          },
+          "_row_num": 40
+        },
+        {
+          "choice_list_name": "pipe_material_values",
+          "data_value": "Lined",
+          "display": {
+            "text": "Lined"
+          },
+          "_row_num": 41
+        }
+      ]
+    },
+    "queries": {},
+    "calculates": {},
+    "model": {
+      "parent_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "parent_id"
+      },
+      "direction": {
+        "type": "string",
+        "valuesList": "direction_values",
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 3,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "direction"
+      },
+      "connect_mnh": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 4,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "connect_mnh"
+      },
+      "rim_to_invert_depth_feet": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "rim_to_invert_depth_feet"
+      },
+      "rim_to_invert_depth_inches": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 6,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "rim_to_invert_depth_inches"
+      },
+      "pipe_diameter": {
+        "type": "string",
+        "valuesList": "pipe_diameter_values",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 7,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "pipe_diameter"
+      },
+      "pipe_material": {
+        "type": "string",
+        "valuesList": "pipe_material_values",
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 8,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "pipe_material"
+      },
+      "joint_length": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 9,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "joint_length"
+      },
+      "flow_depth": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 10,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "flow_depth"
+      },
+      "debris_depth": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 11,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "debris_depth"
+      },
+      "pipe_conn_leak": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 12,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "pipe_conn_leak"
+      },
+      "photo": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 13,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "photo"
+      },
+      "line_cond_1_5": {
+        "type": "string",
+        "valuesList": "line_condition_ratings",
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 14,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "line_cond_1_5"
+      },
+      "line_comments": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 15,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "line_comments"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": "Std. Manhole Line Conditions"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 4,
+            "_branch_label_enclosing_screen": "initial/_screen4",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 0
+          },
+          {
+            "clause": "goto _finalize",
+            "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_branch_label": "_finalize",
+            "operationIdx": 1
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 4,
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 3
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 4
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 7
+          }
+        ],
+        "branch_label_map": {
+          "_contents": 3,
+          "_screen4": 3,
+          "_finalize": 5
+        }
+      },
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "select_one_dropdown",
+            "values_list": "direction_values",
+            "name": "direction",
+            "display": {
+              "text": "Direction (in/out)"
+            },
+            "templatePath": "select_one_dropdown.handlebars",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "string",
+            "name": "connect_mnh",
+            "display": {
+              "text": "Connect MNH"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "required": "true",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "decimal",
+            "name": "rim_to_invert_depth_feet",
+            "display": {
+              "text": "Rim to Invert Depth (ft.)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "decimal",
+            "name": "rim_to_invert_depth_inches",
+            "display": {
+              "text": "Rim to Invert Depth (in.)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "pipe_diameter_values",
+            "name": "pipe_diameter",
+            "display": {
+              "text": "Pipe Diameter (in.)"
+            },
+            "templatePath": "select_one_dropdown.handlebars",
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "pipe_material_values",
+            "name": "pipe_material",
+            "display": {
+              "text": "Pipe Material"
+            },
+            "templatePath": "select_one_dropdown.handlebars",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "decimal",
+            "name": "joint_length",
+            "display": {
+              "text": "Joint Length"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "decimal",
+            "name": "flow_depth",
+            "display": {
+              "text": "Flow Depth (in.)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "decimal",
+            "name": "debris_depth",
+            "display": {
+              "text": "Debris Depth (in.)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "decimal",
+            "name": "pipe_conn_leak",
+            "display": {
+              "text": "Pipe Conn Leak (gpm)"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "string",
+            "name": "photo",
+            "display": {
+              "text": "Photo"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "line_condition_ratings",
+            "name": "line_cond_1_5",
+            "display": {
+              "text": "Line Condition 1 to 5"
+            },
+            "templatePath": "select_one_dropdown.handlebars",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "string",
+            "name": "line_comments",
+            "display": {
+              "text": "Line Comments"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 17,
+            "_branch_label_enclosing_screen": "survey/_screen17",
+            "promptIdx": 13
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": [
+            1
+          ]
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Line Conditions"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 16,
+              "__rowNum__": 15,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 17,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 17,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 17,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen17": 2
+        }
+      }
+    }
+  }
+}

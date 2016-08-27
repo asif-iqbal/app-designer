@@ -138,6 +138,21 @@
         "_row_num": 18
       },
       {
+        "type": "assign",
+        "name": "sample_date",
+        "calculation": "calculates.currDate()",
+        "_row_num": 19
+      },
+      {
+        "type": "date",
+        "name": "sample_date",
+        "display": {
+          "text": "Date"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 20
+      },
+      {
         "type": "select_multiple",
         "values_list": "personnel_csv",
         "name": "personnel",
@@ -145,7 +160,7 @@
           "text": "Personnel"
         },
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 19
+        "_row_num": 21
       },
       {
         "type": "string",
@@ -153,7 +168,8 @@
         "display": {
           "text": "Task"
         },
-        "_row_num": 20
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 22
       },
       {
         "type": "string",
@@ -161,7 +177,8 @@
         "display": {
           "text": "Subcontractors"
         },
-        "_row_num": 21
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 23
       },
       {
         "type": "string",
@@ -169,7 +186,8 @@
         "display": {
           "text": "Weather"
         },
-        "_row_num": 22
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 24
       },
       {
         "type": "select_multiple",
@@ -180,7 +198,7 @@
         },
         "choice_filter": "choice_item.type==='Vehicle'",
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 23
+        "_row_num": 25
       },
       {
         "type": "select_multiple",
@@ -191,7 +209,7 @@
         },
         "choice_filter": "choice_item.type==='Consumables'",
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 24
+        "_row_num": 26
       },
       {
         "type": "select_multiple",
@@ -202,115 +220,115 @@
         },
         "choice_filter": "choice_item.type==='Equipment'",
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 25
+        "_row_num": 27
       },
       {
         "clause": "end screen",
-        "_row_num": 26
+        "_row_num": 28
       },
       {
-        "branch_label": "menu",
-        "_row_num": 27
+        "branch_label": "_contents",
+        "_row_num": 29
       },
       {
         "clause": "begin screen",
         "display": {
           "text": "Site Inspection Home Page"
         },
-        "_row_num": 28
+        "_row_num": 30
       },
       {
         "type": "user_branch",
         "values_list": "branches",
-        "_row_num": 29
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 30
-      },
-      {
-        "clause": "goto menu",
         "_row_num": 31
       },
       {
-        "branch_label": "notes",
+        "clause": "end screen",
         "_row_num": 32
       },
       {
-        "clause": "do section notes_section",
+        "clause": "goto _contents",
         "_row_num": 33
       },
       {
-        "clause": "goto menu",
+        "branch_label": "notes",
         "_row_num": 34
       },
       {
-        "branch_label": "gps",
+        "clause": "do section notes_section",
         "_row_num": 35
       },
       {
-        "clause": "do section gps_section",
+        "clause": "goto _contents",
         "_row_num": 36
       },
       {
-        "clause": "goto menu",
+        "branch_label": "gps",
         "_row_num": 37
       },
       {
-        "branch_label": "image",
+        "clause": "do section gps_section",
         "_row_num": 38
       },
       {
-        "clause": "do section image_section",
+        "clause": "goto _contents",
         "_row_num": 39
       },
       {
-        "clause": "goto menu",
+        "branch_label": "image",
         "_row_num": 40
       },
       {
-        "branch_label": "sketch",
+        "clause": "do section image_section",
         "_row_num": 41
       },
       {
-        "clause": "do section sketch_section",
+        "clause": "goto _contents",
         "_row_num": 42
       },
       {
-        "clause": "goto menu",
+        "branch_label": "sketch",
         "_row_num": 43
       },
       {
-        "branch_label": "signature",
+        "clause": "do section sketch_section",
         "_row_num": 44
       },
       {
-        "clause": "do section signature_section",
+        "clause": "goto _contents",
         "_row_num": 45
       },
       {
-        "clause": "goto menu",
+        "branch_label": "signature",
         "_row_num": 46
       },
       {
-        "branch_label": "times",
+        "clause": "do section signature_section",
         "_row_num": 47
       },
       {
-        "clause": "do section times_section",
+        "clause": "goto _contents",
         "_row_num": 48
       },
       {
-        "clause": "goto menu",
+        "branch_label": "times",
         "_row_num": 49
       },
       {
-        "branch_label": "exitpath",
+        "clause": "do section times_section",
         "_row_num": 50
       },
       {
-        "clause": "exit section",
+        "clause": "goto _contents",
         "_row_num": 51
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 52
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 53
       }
     ],
     "notes_section": [
@@ -675,6 +693,11 @@
         "calculation_name": "locationZip",
         "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
         "_row_num": 3
+      },
+      {
+        "calculation_name": "currDate",
+        "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
+        "_row_num": 4
       }
     ]
   },
@@ -918,6 +941,11 @@
         "calculation_name": "locationZip",
         "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
         "_row_num": 3
+      },
+      "currDate": {
+        "calculation_name": "currDate",
+        "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
+        "_row_num": 4
       }
     },
     "model": {
@@ -1001,10 +1029,21 @@
         "type": "string",
         "elementKey": "loc_client"
       },
+      "sample_date": {
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "sample_date"
+      },
       "personnel": {
         "_defn": [
           {
-            "_row_num": 19,
+            "_row_num": 21,
             "section_name": "survey"
           }
         ],
@@ -1019,7 +1058,7 @@
       "task": {
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 22,
             "section_name": "survey"
           }
         ],
@@ -1029,7 +1068,7 @@
       "subcontractors": {
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 23,
             "section_name": "survey"
           }
         ],
@@ -1039,7 +1078,7 @@
       "weather": {
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 24,
             "section_name": "survey"
           }
         ],
@@ -1049,7 +1088,7 @@
       "vehicle": {
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 25,
             "section_name": "survey"
           }
         ],
@@ -1064,7 +1103,7 @@
       "consumables": {
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 26,
             "section_name": "survey"
           }
         ],
@@ -1079,7 +1118,7 @@
       "equipment": {
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 27,
             "section_name": "survey"
           }
         ],
@@ -1516,6 +1555,20 @@
             "promptIdx": 7
           },
           {
+            "type": "date",
+            "name": "sample_date",
+            "display": {
+              "text": "Date"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
             "type": "select_multiple",
             "values_list": "personnel_csv",
             "name": "personnel",
@@ -1523,12 +1576,12 @@
               "text": "Personnel"
             },
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 21,
+            "__rowNum__": 20,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 8
+            "promptIdx": 9
           },
           {
             "type": "string",
@@ -1536,21 +1589,9 @@
             "display": {
               "text": "Task"
             },
-            "_row_num": 20,
-            "__rowNum__": 19,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 9
-          },
-          {
-            "type": "string",
-            "name": "subcontractors",
-            "display": {
-              "text": "Subcontractors"
-            },
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -1558,16 +1599,31 @@
           },
           {
             "type": "string",
-            "name": "weather",
+            "name": "subcontractors",
             "display": {
-              "text": "Weather"
+              "text": "Subcontractors"
             },
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 23,
+            "__rowNum__": 22,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 11
+          },
+          {
+            "type": "string",
+            "name": "weather",
+            "display": {
+              "text": "Weather"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 12
           },
           {
             "type": "select_multiple",
@@ -1578,12 +1634,12 @@
             },
             "choice_filter": "choice_item.type==='Vehicle'",
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 12
+            "promptIdx": 13
           },
           {
             "type": "select_multiple",
@@ -1594,12 +1650,12 @@
             },
             "choice_filter": "choice_item.type==='Consumables'",
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 13
+            "promptIdx": 14
           },
           {
             "type": "select_multiple",
@@ -1610,31 +1666,31 @@
             },
             "choice_filter": "choice_item.type==='Equipment'",
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 27,
+            "__rowNum__": 26,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 14
+            "promptIdx": 15
           },
           {
             "type": "user_branch",
             "values_list": "branches",
-            "_row_num": 29,
-            "__rowNum__": 28,
+            "_row_num": 31,
+            "__rowNum__": 30,
             "_token_type": "prompt",
             "_type": "user_branch",
-            "_branch_label_enclosing_screen": "survey/_screen28",
-            "promptIdx": 15
+            "_branch_label_enclosing_screen": "survey/_screen30",
+            "promptIdx": 16
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 35,
+            "__rowNum__": 34,
             "_token_type": "prompt",
             "_do_section_name": "notes_section",
             "_type": "_section",
-            "promptIdx": 16,
+            "promptIdx": 17,
             "display": {
               "title": "Notes"
             },
@@ -1642,12 +1698,12 @@
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 36,
-            "__rowNum__": 35,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
-            "promptIdx": 17,
+            "promptIdx": 18,
             "display": {
               "title": "GPS"
             },
@@ -1655,12 +1711,12 @@
           },
           {
             "clause": "do section image_section",
-            "_row_num": 39,
-            "__rowNum__": 38,
+            "_row_num": 41,
+            "__rowNum__": 40,
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
-            "promptIdx": 18,
+            "promptIdx": 19,
             "display": {
               "title": "Photo"
             },
@@ -1668,12 +1724,12 @@
           },
           {
             "clause": "do section sketch_section",
-            "_row_num": 42,
-            "__rowNum__": 41,
+            "_row_num": 44,
+            "__rowNum__": 43,
             "_token_type": "prompt",
             "_do_section_name": "sketch_section",
             "_type": "_section",
-            "promptIdx": 19,
+            "promptIdx": 20,
             "display": {
               "title": "Sketch"
             },
@@ -1681,12 +1737,12 @@
           },
           {
             "clause": "do section signature_section",
-            "_row_num": 45,
-            "__rowNum__": 44,
+            "_row_num": 47,
+            "__rowNum__": 46,
             "_token_type": "prompt",
             "_do_section_name": "signature_section",
             "_type": "_section",
-            "promptIdx": 20,
+            "promptIdx": 21,
             "display": {
               "title": "Signature"
             },
@@ -1694,24 +1750,16 @@
           },
           {
             "clause": "do section times_section",
-            "_row_num": 48,
-            "__rowNum__": 47,
+            "_row_num": 50,
+            "__rowNum__": 49,
             "_token_type": "prompt",
             "_do_section_name": "times_section",
             "_type": "_section",
-            "promptIdx": 21,
+            "promptIdx": 22,
             "display": {
               "title": "Times"
             },
             "_branch_label_enclosing_screen": "times_section/0"
-          },
-          {
-            "_token_type": "prompt",
-            "type": "contents",
-            "_type": "contents",
-            "_row_num": 52,
-            "_branch_label_enclosing_screen": "survey/_screen52",
-            "promptIdx": 22
           }
         ],
         "validation_tag_map": {
@@ -1728,11 +1776,11 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 26,
-              "__rowNum__": 25,
+              "_row_num": 28,
+              "__rowNum__": 27,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nassign('sample_date', calculates.currDate());\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -1740,164 +1788,147 @@
             "display": {
               "text": "Site Inspection Home Page"
             },
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 30,
-              "__rowNum__": 29,
+              "_row_num": 32,
+              "__rowNum__": 31,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
-            "clause": "goto menu",
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "clause": "goto _contents",
+            "_row_num": 33,
+            "__rowNum__": 32,
             "_token_type": "goto_label",
-            "_branch_label": "menu",
+            "_branch_label": "_contents",
             "operationIdx": 2
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 35,
+            "__rowNum__": 34,
             "_token_type": "do_section",
             "_do_section_name": "notes_section",
             "operationIdx": 3
           },
           {
-            "clause": "goto menu",
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "clause": "goto _contents",
+            "_row_num": 36,
+            "__rowNum__": 35,
             "_token_type": "goto_label",
-            "_branch_label": "menu",
+            "_branch_label": "_contents",
             "operationIdx": 4
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 36,
-            "__rowNum__": 35,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "do_section",
             "_do_section_name": "gps_section",
             "operationIdx": 5
           },
           {
-            "clause": "goto menu",
-            "_row_num": 37,
-            "__rowNum__": 36,
+            "clause": "goto _contents",
+            "_row_num": 39,
+            "__rowNum__": 38,
             "_token_type": "goto_label",
-            "_branch_label": "menu",
+            "_branch_label": "_contents",
             "operationIdx": 6
           },
           {
             "clause": "do section image_section",
-            "_row_num": 39,
-            "__rowNum__": 38,
+            "_row_num": 41,
+            "__rowNum__": 40,
             "_token_type": "do_section",
             "_do_section_name": "image_section",
             "operationIdx": 7
           },
           {
-            "clause": "goto menu",
-            "_row_num": 40,
-            "__rowNum__": 39,
+            "clause": "goto _contents",
+            "_row_num": 42,
+            "__rowNum__": 41,
             "_token_type": "goto_label",
-            "_branch_label": "menu",
+            "_branch_label": "_contents",
             "operationIdx": 8
           },
           {
             "clause": "do section sketch_section",
-            "_row_num": 42,
-            "__rowNum__": 41,
+            "_row_num": 44,
+            "__rowNum__": 43,
             "_token_type": "do_section",
             "_do_section_name": "sketch_section",
             "operationIdx": 9
           },
           {
-            "clause": "goto menu",
-            "_row_num": 43,
-            "__rowNum__": 42,
+            "clause": "goto _contents",
+            "_row_num": 45,
+            "__rowNum__": 44,
             "_token_type": "goto_label",
-            "_branch_label": "menu",
+            "_branch_label": "_contents",
             "operationIdx": 10
           },
           {
             "clause": "do section signature_section",
-            "_row_num": 45,
-            "__rowNum__": 44,
+            "_row_num": 47,
+            "__rowNum__": 46,
             "_token_type": "do_section",
             "_do_section_name": "signature_section",
             "operationIdx": 11
           },
           {
-            "clause": "goto menu",
-            "_row_num": 46,
-            "__rowNum__": 45,
+            "clause": "goto _contents",
+            "_row_num": 48,
+            "__rowNum__": 47,
             "_token_type": "goto_label",
-            "_branch_label": "menu",
+            "_branch_label": "_contents",
             "operationIdx": 12
           },
           {
             "clause": "do section times_section",
-            "_row_num": 48,
-            "__rowNum__": 47,
+            "_row_num": 50,
+            "__rowNum__": 49,
             "_token_type": "do_section",
             "_do_section_name": "times_section",
             "operationIdx": 13
           },
           {
-            "clause": "goto menu",
-            "_row_num": 49,
-            "__rowNum__": 48,
+            "clause": "goto _contents",
+            "_row_num": 51,
+            "__rowNum__": 50,
             "_token_type": "goto_label",
-            "_branch_label": "menu",
+            "_branch_label": "_contents",
             "operationIdx": 14
           },
           {
             "clause": "exit section",
-            "_row_num": 51,
-            "__rowNum__": 50,
+            "_row_num": 53,
+            "__rowNum__": 52,
             "_token_type": "exit_section",
             "operationIdx": 15
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 52,
+            "_row_num": 54,
             "operationIdx": 16
-          },
-          {
-            "_row_num": 52,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(22);\n\nreturn activePromptIndicies;\n}\n",
-            "screen": {
-              "hideInBackHistory": true
-            },
-            "operationIdx": 17
-          },
-          {
-            "_token_type": "resume",
-            "clause": "resume",
-            "_row_num": 52,
-            "operationIdx": 18
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
-          "menu": 1,
-          "_screen28": 1,
+          "_contents": 1,
+          "_screen30": 1,
           "notes": 3,
           "gps": 5,
           "image": 7,
           "sketch": 9,
           "signature": 11,
           "times": 13,
-          "exitpath": 15,
-          "_contents": 17,
-          "_screen52": 17
+          "exitpath": 15
         }
       },
       "notes_section": {

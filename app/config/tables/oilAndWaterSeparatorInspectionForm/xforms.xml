@@ -1,0 +1,165 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>oilAndWaterSeparatorInspectionForm</h:title>
+  <model>
+    <instance>
+      <data id="oilAndWaterSeparatorInspectionForm">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <absorbent_replaced/>
+        <absorbent_replacement/>
+        <annual_cleaning/>
+        <can_drains_cleared_of_debris/>
+        <can_ows_be_fixed/>
+        <can_pans_be_fixed/>
+        <diameter_of_outfall/>
+        <drains_cannot_be_cleared_description/>
+        <drains_free_of_debris/>
+        <drip_pans_clear_of_oil/>
+        <drip_pans_oil_description/>
+        <equipment_can_be_fixed/>
+        <equipment_cannot_be_fixed_description/>
+        <equipment_need_repair/>
+        <estimated_quantity/>
+        <geo_info/>
+        <inspection_id/>
+        <loc_aid/>
+        <loc_city/>
+        <loc_client/>
+        <loc_name/>
+        <loc_state/>
+        <loc_streetAddress/>
+        <loc_zip/>
+        <oil_debris_removed/>
+        <outfall_absorbent/>
+        <outfall_condition/>
+        <outfall_id/>
+        <outfall_manifest_bol/>
+        <outfall_odor_present/>
+        <outfall_product_present/>
+        <outfall_repair_description/>
+        <outfall_samples_obtained_analyzed/>
+        <outfall_sheen_present/>
+        <outfall_sheen_present_description/>
+        <ows_absorbent/>
+        <ows_cannot_be_fixed_description/>
+        <ows_discharge_type/>
+        <ows_functions/>
+        <ows_manifest_bol/>
+        <ows_needs_cleaned/>
+        <ows_needs_cleaned_description/>
+        <pans_cannot_be_fixed_description/>
+        <pans_working/>
+        <personnel/>
+        <ph/>
+        <reading_1_oil/>
+        <reading_1_sheen/>
+        <reading_1_thickness/>
+        <repair_defective/>
+        <sample_date/>
+        <sample_time/>
+        <samples_obtained_analyzed/>
+        <sheen_or_product_description/>
+        <sheen_or_product_present/>
+        <temperature/>
+        <type_and_capacity/>
+        <type_of_absorbent/>
+        <type_of_inspection/>
+        <weather/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/absorbent_replaced" type="string"/>
+    <bind nodeset="/data/absorbent_replacement" type="string"/>
+    <bind nodeset="/data/annual_cleaning" type="string"/>
+    <bind nodeset="/data/can_drains_cleared_of_debris" type="string"/>
+    <bind nodeset="/data/can_ows_be_fixed" type="string"/>
+    <bind nodeset="/data/can_pans_be_fixed" type="string"/>
+    <bind nodeset="/data/diameter_of_outfall" type="decimal"/>
+    <bind nodeset="/data/drains_cannot_be_cleared_description" type="string"/>
+    <bind nodeset="/data/drains_free_of_debris" type="string"/>
+    <bind nodeset="/data/drip_pans_clear_of_oil" type="string"/>
+    <bind nodeset="/data/drip_pans_oil_description" type="string"/>
+    <bind nodeset="/data/equipment_can_be_fixed" type="string"/>
+    <bind nodeset="/data/equipment_cannot_be_fixed_description" type="string"/>
+    <bind nodeset="/data/equipment_need_repair" type="string"/>
+    <bind nodeset="/data/estimated_quantity" type="string"/>
+    <bind nodeset="/data/geo_info" type="geopoint"/>
+    <bind nodeset="/data/inspection_id" type="string"/>
+    <bind nodeset="/data/loc_aid" type="string"/>
+    <bind nodeset="/data/loc_city" type="string"/>
+    <bind nodeset="/data/loc_client" type="string"/>
+    <bind nodeset="/data/loc_name" type="string"/>
+    <bind nodeset="/data/loc_state" type="string"/>
+    <bind nodeset="/data/loc_streetAddress" type="string"/>
+    <bind nodeset="/data/loc_zip" type="string"/>
+    <bind nodeset="/data/oil_debris_removed" type="string"/>
+    <bind nodeset="/data/outfall_absorbent" type="string"/>
+    <bind nodeset="/data/outfall_condition" type="string"/>
+    <bind nodeset="/data/outfall_id" type="string"/>
+    <bind nodeset="/data/outfall_manifest_bol" type="string"/>
+    <bind nodeset="/data/outfall_odor_present" type="string"/>
+    <bind nodeset="/data/outfall_product_present" type="string"/>
+    <bind nodeset="/data/outfall_repair_description" type="string"/>
+    <bind nodeset="/data/outfall_samples_obtained_analyzed" type="string"/>
+    <bind nodeset="/data/outfall_sheen_present" type="string"/>
+    <bind nodeset="/data/outfall_sheen_present_description" type="string"/>
+    <bind nodeset="/data/ows_absorbent" type="string"/>
+    <bind nodeset="/data/ows_cannot_be_fixed_description" type="string"/>
+    <bind nodeset="/data/ows_discharge_type" type="string"/>
+    <bind nodeset="/data/ows_functions" type="string"/>
+    <bind nodeset="/data/ows_manifest_bol" type="string"/>
+    <bind nodeset="/data/ows_needs_cleaned" type="string"/>
+    <bind nodeset="/data/ows_needs_cleaned_description" type="string"/>
+    <bind nodeset="/data/pans_cannot_be_fixed_description" type="string"/>
+    <bind nodeset="/data/pans_working" type="string"/>
+    <bind nodeset="/data/personnel" type="select"/>
+    <bind nodeset="/data/ph" type="decimal"/>
+    <bind nodeset="/data/reading_1_oil" type="string"/>
+    <bind nodeset="/data/reading_1_sheen" type="string"/>
+    <bind nodeset="/data/reading_1_thickness" type="decimal"/>
+    <bind nodeset="/data/repair_defective" type="string"/>
+    <bind nodeset="/data/sample_date" type="date"/>
+    <bind nodeset="/data/sample_time" type="time"/>
+    <bind nodeset="/data/samples_obtained_analyzed" type="string"/>
+    <bind nodeset="/data/sheen_or_product_description" type="string"/>
+    <bind nodeset="/data/sheen_or_product_present" type="string"/>
+    <bind nodeset="/data/temperature" type="decimal"/>
+    <bind nodeset="/data/type_and_capacity" type="string"/>
+    <bind nodeset="/data/type_of_absorbent" type="string"/>
+    <bind nodeset="/data/type_of_inspection" type="select"/>
+    <bind nodeset="/data/weather" type="string"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+ </h:body> 
+</h:html>

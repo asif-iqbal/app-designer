@@ -1,0 +1,1022 @@
+{
+  "xlsx": {
+    "initial": [
+      {
+        "clause": "if // start",
+        "condition": "(opendatakit.getCurrentInstanceId() != null)",
+        "_row_num": 3
+      },
+      {
+        "clause": "do section survey",
+        "_row_num": 4
+      },
+      {
+        "type": "finalize",
+        "display": {
+          "text": "Save form"
+        },
+        "_row_num": 5
+      },
+      {
+        "clause": "else // start",
+        "_row_num": 6
+      },
+      {
+        "type": "instances",
+        "display": {
+          "text": "Saved instances"
+        },
+        "_row_num": 7
+      },
+      {
+        "clause": "end if // start",
+        "_row_num": 8
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Soil Sample/Boring Information"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "assign",
+        "name": "stdbslog_id",
+        "calculation": "opendatakit.getCurrentInstanceId()",
+        "_row_num": 3
+      },
+      {
+        "type": "string",
+        "name": "stdbslog_id",
+        "display": {
+          "text": "ID"
+        },
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 4
+      },
+      {
+        "type": "assign",
+        "name": "loc_name",
+        "calculation": "opendatakit.getLocationInfo().name",
+        "_row_num": 5
+      },
+      {
+        "type": "string",
+        "name": "loc_name",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "assign",
+        "name": "loc_aid",
+        "calculation": "calculates.locationAid()",
+        "_row_num": 7
+      },
+      {
+        "type": "string",
+        "name": "loc_aid",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 8
+      },
+      {
+        "type": "assign",
+        "name": "loc_streetAddress",
+        "calculation": "opendatakit.getLocationInfo().streetAddress",
+        "_row_num": 9
+      },
+      {
+        "type": "string",
+        "name": "loc_streetAddress",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 10
+      },
+      {
+        "type": "assign",
+        "name": "loc_city",
+        "calculation": "opendatakit.getLocationInfo().city",
+        "_row_num": 11
+      },
+      {
+        "type": "string",
+        "name": "loc_city",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 12
+      },
+      {
+        "type": "assign",
+        "name": "loc_state",
+        "calculation": "opendatakit.getLocationInfo().state",
+        "_row_num": 13
+      },
+      {
+        "type": "string",
+        "name": "loc_state",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 14
+      },
+      {
+        "type": "assign",
+        "name": "loc_zip",
+        "calculation": "calculates.locationZip()",
+        "_row_num": 15
+      },
+      {
+        "type": "string",
+        "name": "loc_zip",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 16
+      },
+      {
+        "type": "assign",
+        "name": "loc_client",
+        "calculation": "opendatakit.getLocationInfo().client",
+        "_row_num": 17
+      },
+      {
+        "type": "string",
+        "name": "loc_client",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 18
+      },
+      {
+        "type": "assign",
+        "name": "sample_date",
+        "calculation": "calculates.currDate()",
+        "_row_num": 19
+      },
+      {
+        "type": "date",
+        "name": "sample_date",
+        "display": {
+          "text": "Date"
+        },
+        "templatePath": "time_input_type.handlebars",
+        "_row_num": 20
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "personnel_csv",
+        "name": "personnel",
+        "display": {
+          "text": "Personnel"
+        },
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 21
+      },
+      {
+        "type": "string",
+        "name": "drill_company",
+        "display": {
+          "text": "Drill Company"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 22
+      },
+      {
+        "type": "string",
+        "name": "drill_method",
+        "display": {
+          "text": "Drill Method"
+        },
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 23
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "equipment_csv",
+        "name": "vehicle",
+        "display": {
+          "text": "Vehicles"
+        },
+        "choice_filter": "choice_item.type==='Vehicle'",
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 24
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "equipment_csv",
+        "name": "consumables",
+        "display": {
+          "text": "Consumables"
+        },
+        "choice_filter": "choice_item.type==='Consumables'",
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 25
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "equipment_csv",
+        "name": "equipment",
+        "display": {
+          "text": "Equipment"
+        },
+        "choice_filter": "choice_item.type==='Equipment'",
+        "templatePath": "select_dropdown_multiple.handlebars",
+        "_row_num": 26
+      },
+      {
+        "type": "linked_table",
+        "values_list": "linked_samples",
+        "display": {
+          "text": "Add Samples to this list",
+          "new_instance_text": "Add Soil Sample/Boring"
+        },
+        "_row_num": 27
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 28
+      }
+    ],
+    "queries": [
+      {
+        "query_name": "personnel_csv",
+        "query_type": "csv",
+        "uri": "\"personnel.csv\"",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name + ' ' + personnel.lastName;\npersonnel.display = {text:personnel.name + ' ' + personnel.lastName};\nreturn personnel;\n})",
+        "_row_num": 2
+      },
+      {
+        "query_name": "equipment_csv",
+        "query_type": "csv",
+        "uri": "\"equipment.csv\"",
+        "callback": "_.map(context, function(equipment){equipment.data_value = equipment.name;\nequipment.display = {text:equipment.name};\nreturn equipment;\n})",
+        "_row_num": 3
+      },
+      {
+        "query_name": "linked_samples",
+        "query_type": "linked_table",
+        "linked_form_id": "stdBoringSample",
+        "linked_table_id": "stdBoringSample",
+        "selection": "stdbslog_id = ?",
+        "selectionArgs": "[ data('stdbslog_id') ]",
+        "auxillaryHash": "'stdbslog_id='+encodeURIComponent(data('stdbslog_id'))",
+        "_row_num": 4
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "locationAid",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().aid == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().aid;\n  }\n})()",
+        "_row_num": 2
+      },
+      {
+        "calculation_name": "locationZip",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
+        "_row_num": 3
+      },
+      {
+        "calculation_name": "currDate",
+        "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
+        "_row_num": 4
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "stdBoringLog",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20160101,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Std. Boring Log"
+        },
+        "_row_num": 4
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "stdBoringLog",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20160101,
+        "_row_num": 3
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Std. Boring Log"
+        },
+        "_row_num": 4
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "stdBoringLog",
+        "_row_num": 2,
+        "__rowNum__": 1
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 4,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 4,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Std. Boring Log"
+        },
+        "_row_num": 4
+      }
+    },
+    "choices": {},
+    "queries": {
+      "personnel_csv": {
+        "query_name": "personnel_csv",
+        "query_type": "csv",
+        "uri": "\"personnel.csv\"",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name + ' ' + personnel.lastName;\npersonnel.display = {text:personnel.name + ' ' + personnel.lastName};\nreturn personnel;\n})",
+        "_row_num": 2
+      },
+      "equipment_csv": {
+        "query_name": "equipment_csv",
+        "query_type": "csv",
+        "uri": "\"equipment.csv\"",
+        "callback": "_.map(context, function(equipment){equipment.data_value = equipment.name;\nequipment.display = {text:equipment.name};\nreturn equipment;\n})",
+        "_row_num": 3
+      },
+      "linked_samples": {
+        "query_name": "linked_samples",
+        "query_type": "linked_table",
+        "linked_form_id": "stdBoringSample",
+        "linked_table_id": "stdBoringSample",
+        "selection": "stdbslog_id = ?",
+        "selectionArgs": "[ data('stdbslog_id') ]",
+        "auxillaryHash": "'stdbslog_id='+encodeURIComponent(data('stdbslog_id'))",
+        "_row_num": 4
+      }
+    },
+    "calculates": {
+      "locationAid": {
+        "calculation_name": "locationAid",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().aid == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().aid;\n  }\n})()",
+        "_row_num": 2
+      },
+      "locationZip": {
+        "calculation_name": "locationZip",
+        "calculation": "(function(){\n  if(opendatakit.getLocationInfo().zip == ''){\n    return ' ';\n  } else {\n    return opendatakit.getLocationInfo().zip;\n  }\n})()",
+        "_row_num": 3
+      },
+      "currDate": {
+        "calculation_name": "currDate",
+        "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
+        "_row_num": 4
+      }
+    },
+    "model": {
+      "stdbslog_id": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "stdbslog_id"
+      },
+      "loc_name": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_name"
+      },
+      "loc_aid": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_aid"
+      },
+      "loc_streetAddress": {
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_streetAddress"
+      },
+      "loc_city": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_city"
+      },
+      "loc_state": {
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_state"
+      },
+      "loc_zip": {
+        "_defn": [
+          {
+            "_row_num": 16,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_zip"
+      },
+      "loc_client": {
+        "_defn": [
+          {
+            "_row_num": 18,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_client"
+      },
+      "sample_date": {
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "sample_date"
+      },
+      "personnel": {
+        "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "personnel_items"
+        },
+        "valuesList": "personnel_csv",
+        "elementKey": "personnel"
+      },
+      "drill_company": {
+        "_defn": [
+          {
+            "_row_num": 22,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "drill_company"
+      },
+      "drill_method": {
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "drill_method"
+      },
+      "vehicle": {
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "vehicle_items"
+        },
+        "valuesList": "equipment_csv",
+        "elementKey": "vehicle"
+      },
+      "consumables": {
+        "_defn": [
+          {
+            "_row_num": 25,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "consumables_items"
+        },
+        "valuesList": "equipment_csv",
+        "elementKey": "consumables"
+      },
+      "equipment": {
+        "_defn": [
+          {
+            "_row_num": 26,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "equipment_items"
+        },
+        "valuesList": "equipment_csv",
+        "elementKey": "equipment"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": "Std. Boring Log"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "type": "finalize",
+            "display": {
+              "text": "Save form"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "finalize",
+            "_branch_label_enclosing_screen": "initial/_screen5",
+            "promptIdx": 1
+          },
+          {
+            "type": "instances",
+            "display": {
+              "text": "Saved instances"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "instances",
+            "_branch_label_enclosing_screen": "initial/_screen7",
+            "promptIdx": 2
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 9,
+            "_branch_label_enclosing_screen": "initial/_screen9",
+            "promptIdx": 3
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "if // start",
+            "condition": "(opendatakit.getCurrentInstanceId() != null)",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_tag_name": "start",
+            "_branch_label": "_then3",
+            "operationIdx": 0
+          },
+          {
+            "clause": "else // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_else6",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "clause": "do section survey",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
+          },
+          {
+            "clause": "end if // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif8",
+            "_row_num": 8,
+            "operationIdx": 4
+          },
+          {
+            "_row_num": 7,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 9,
+            "operationIdx": 6
+          },
+          {
+            "_row_num": 9,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 7
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 8
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 9
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 10
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 11
+          }
+        ],
+        "branch_label_map": {
+          "_then3": 2,
+          "_screen5": 3,
+          "_else6": 5,
+          "_screen7": 5,
+          "_endif8": 6,
+          "_contents": 7,
+          "_screen9": 7,
+          "_finalize": 9
+        }
+      },
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "string",
+            "name": "stdbslog_id",
+            "display": {
+              "text": "ID"
+            },
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "string",
+            "name": "loc_name",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "string",
+            "name": "loc_aid",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "string",
+            "name": "loc_streetAddress",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "string",
+            "name": "loc_city",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "string",
+            "name": "loc_state",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "string",
+            "name": "loc_zip",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "string",
+            "name": "loc_client",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "date",
+            "name": "sample_date",
+            "display": {
+              "text": "Date"
+            },
+            "templatePath": "time_input_type.handlebars",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "personnel_csv",
+            "name": "personnel",
+            "display": {
+              "text": "Personnel"
+            },
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "string",
+            "name": "drill_company",
+            "display": {
+              "text": "Drill Company"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "string",
+            "name": "drill_method",
+            "display": {
+              "text": "Drill Method"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "equipment_csv",
+            "name": "vehicle",
+            "display": {
+              "text": "Vehicles"
+            },
+            "choice_filter": "choice_item.type==='Vehicle'",
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "equipment_csv",
+            "name": "consumables",
+            "display": {
+              "text": "Consumables"
+            },
+            "choice_filter": "choice_item.type==='Consumables'",
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 13
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "equipment_csv",
+            "name": "equipment",
+            "display": {
+              "text": "Equipment"
+            },
+            "choice_filter": "choice_item.type==='Equipment'",
+            "templatePath": "select_dropdown_multiple.handlebars",
+            "_row_num": 26,
+            "__rowNum__": 25,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 14
+          },
+          {
+            "type": "linked_table",
+            "values_list": "linked_samples",
+            "display": {
+              "text": "Add Samples to this list",
+              "new_instance_text": "Add Soil Sample/Boring"
+            },
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "prompt",
+            "_type": "linked_table",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 15
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 29,
+            "_branch_label_enclosing_screen": "survey/_screen29",
+            "promptIdx": 16
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Soil Sample/Boring Information"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 28,
+              "__rowNum__": 27,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('stdbslog_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nassign('sample_date', calculates.currDate());\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 29,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 29,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 29,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen29": 2
+        }
+      }
+    }
+  }
+}
