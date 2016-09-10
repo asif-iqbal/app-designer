@@ -99,6 +99,8 @@ requirejs.config({
     }
 });
 
+var farhan=true;
+
 /**
  * This function is called by the Application Designer environment to trigger a 
  * re-draw of the current screen when returning from a linked table (sub-form).

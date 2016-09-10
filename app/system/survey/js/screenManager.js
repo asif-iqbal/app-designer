@@ -198,7 +198,9 @@ return Backbone.View.extend({
         //This is going to be useful if the screen gets data from a remote source.
         var activateTimeout = window.setTimeout(function(){
             that.showSpinnerOverlay("Loading...");
-        }, 400);
+			
+			
+        }, 1);
 
         // make sure screen knows about this screen manager
         screen._screenManager = that;
@@ -516,18 +518,27 @@ return Backbone.View.extend({
         $( "#confirmationPopup" ).modal( "hide" );
     },
     showSpinnerOverlay: function(msg) {
+		
         // window.$.mobile.loading( 'show', {
             // text: msg.text,
             // textVisible: true
         // });
+		
+		if(!farhan){}else{
         $('body').waitMe({
             effect: 'roundBounce',
             text: 'Loading ...',
             bg: 'rgba(255,255,255,0.7)',
-            color:'#000',
+            color:'#fff',
             sizeW:'',
             sizeH:''
         });
+		}
+		
+		
+		
+		//alert($('iframe.resizeablescreen'))
+		
     },
     hideSpinnerOverlay: function() {
         //window.$.mobile.loading( 'hide' );

@@ -24,8 +24,24 @@
           <savepointCreator/>
           <savepointTimestamp/>
         </orx:meta>
-        <consumables/>
-        <equipment/>
+        <consumable_name_0/>
+        <consumable_name_1/>
+        <consumable_name_2/>
+        <consumable_quantity_0/>
+        <consumable_quantity_1/>
+        <consumable_quantity_2/>
+        <consumable_totalhrs_0/>
+        <consumable_totalhrs_1/>
+        <consumable_totalhrs_2/>
+        <equipment_name_0/>
+        <equipment_name_1/>
+        <equipment_name_2/>
+        <equipment_quantity_0/>
+        <equipment_quantity_1/>
+        <equipment_quantity_2/>
+        <equipment_totalhrs_0/>
+        <equipment_totalhrs_1/>
+        <equipment_totalhrs_2/>
         <loc_aid/>
         <loc_city/>
         <loc_client/>
@@ -33,12 +49,37 @@
         <loc_state/>
         <loc_streetAddress/>
         <loc_zip/>
-        <personnel/>
+        <personnel_endtime_0/>
+        <personnel_endtime_1/>
+        <personnel_endtime_2/>
+        <personnel_name_0/>
+        <personnel_name_1/>
+        <personnel_name_2/>
+        <personnel_starttime_0/>
+        <personnel_starttime_1/>
+        <personnel_starttime_2/>
+        <personnel_title_0/>
+        <personnel_title_1/>
+        <personnel_title_2/>
+        <personnel_totalhrs_0/>
+        <personnel_totalhrs_1/>
+        <personnel_totalhrs_2/>
+        <project_comment/>
+        <project_daily_report/>
+        <project_number/>
         <sample_date/>
         <stdgwslog_id/>
         <subcontractors/>
         <task/>
-        <vehicle/>
+        <vehicle_name_0/>
+        <vehicle_name_1/>
+        <vehicle_name_2/>
+        <vehicle_quantity_0/>
+        <vehicle_quantity_1/>
+        <vehicle_quantity_2/>
+        <vehicle_totalhrs_0/>
+        <vehicle_totalhrs_1/>
+        <vehicle_totalhrs_2/>
         <weather/>
       </data> 
     </instance> 
@@ -54,8 +95,24 @@
     <bind nodeset="/data/meta/savepointType" type="string"/>
     <bind nodeset="/data/meta/savepointCreator" type="string"/>
     <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
-    <bind nodeset="/data/consumables" type="select"/>
-    <bind nodeset="/data/equipment" type="select"/>
+    <bind nodeset="/data/consumable_name_0" type="string"/>
+    <bind nodeset="/data/consumable_name_1" type="string"/>
+    <bind nodeset="/data/consumable_name_2" type="string"/>
+    <bind nodeset="/data/consumable_quantity_0" type="string"/>
+    <bind nodeset="/data/consumable_quantity_1" type="string"/>
+    <bind nodeset="/data/consumable_quantity_2" type="string"/>
+    <bind nodeset="/data/consumable_totalhrs_0" type="string"/>
+    <bind nodeset="/data/consumable_totalhrs_1" type="string"/>
+    <bind nodeset="/data/consumable_totalhrs_2" type="string"/>
+    <bind nodeset="/data/equipment_name_0" type="string"/>
+    <bind nodeset="/data/equipment_name_1" type="string"/>
+    <bind nodeset="/data/equipment_name_2" type="string"/>
+    <bind nodeset="/data/equipment_quantity_0" type="string"/>
+    <bind nodeset="/data/equipment_quantity_1" type="string"/>
+    <bind nodeset="/data/equipment_quantity_2" type="string"/>
+    <bind nodeset="/data/equipment_totalhrs_0" type="string"/>
+    <bind nodeset="/data/equipment_totalhrs_1" type="string"/>
+    <bind nodeset="/data/equipment_totalhrs_2" type="string"/>
     <bind nodeset="/data/loc_aid" type="string"/>
     <bind nodeset="/data/loc_city" type="string"/>
     <bind nodeset="/data/loc_client" type="string"/>
@@ -63,12 +120,37 @@
     <bind nodeset="/data/loc_state" type="string"/>
     <bind nodeset="/data/loc_streetAddress" type="string"/>
     <bind nodeset="/data/loc_zip" type="string"/>
-    <bind nodeset="/data/personnel" type="select"/>
-    <bind nodeset="/data/sample_date" type="date"/>
+    <bind nodeset="/data/personnel_endtime_0" type="string"/>
+    <bind nodeset="/data/personnel_endtime_1" type="string"/>
+    <bind nodeset="/data/personnel_endtime_2" type="string"/>
+    <bind nodeset="/data/personnel_name_0" type="string"/>
+    <bind nodeset="/data/personnel_name_1" type="string"/>
+    <bind nodeset="/data/personnel_name_2" type="string"/>
+    <bind nodeset="/data/personnel_starttime_0" type="string"/>
+    <bind nodeset="/data/personnel_starttime_1" type="string"/>
+    <bind nodeset="/data/personnel_starttime_2" type="string"/>
+    <bind nodeset="/data/personnel_title_0" type="string"/>
+    <bind nodeset="/data/personnel_title_1" type="string"/>
+    <bind nodeset="/data/personnel_title_2" type="string"/>
+    <bind nodeset="/data/personnel_totalhrs_0" type="string"/>
+    <bind nodeset="/data/personnel_totalhrs_1" type="string"/>
+    <bind nodeset="/data/personnel_totalhrs_2" type="string"/>
+    <bind nodeset="/data/project_comment" type="string"/>
+    <bind nodeset="/data/project_daily_report" type="string"/>
+    <bind nodeset="/data/project_number" type="string"/>
+    <bind nodeset="/data/sample_date" type="string"/>
     <bind nodeset="/data/stdgwslog_id" type="string"/>
     <bind nodeset="/data/subcontractors" type="string"/>
     <bind nodeset="/data/task" type="string"/>
-    <bind nodeset="/data/vehicle" type="select"/>
+    <bind nodeset="/data/vehicle_name_0" type="string"/>
+    <bind nodeset="/data/vehicle_name_1" type="string"/>
+    <bind nodeset="/data/vehicle_name_2" type="string"/>
+    <bind nodeset="/data/vehicle_quantity_0" type="string"/>
+    <bind nodeset="/data/vehicle_quantity_1" type="string"/>
+    <bind nodeset="/data/vehicle_quantity_2" type="string"/>
+    <bind nodeset="/data/vehicle_totalhrs_0" type="string"/>
+    <bind nodeset="/data/vehicle_totalhrs_1" type="string"/>
+    <bind nodeset="/data/vehicle_totalhrs_2" type="string"/>
     <bind nodeset="/data/weather" type="string"/>
   </model> 
  </h:head> 

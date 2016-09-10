@@ -1,0 +1,67 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>stdBoringLog2</h:title>
+  <model>
+    <instance>
+      <data id="stdBoringLog2">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <drill_company/>
+        <drill_method/>
+        <loc_aid/>
+        <loc_city/>
+        <loc_client/>
+        <loc_name/>
+        <loc_state/>
+        <loc_streetAddress/>
+        <loc_zip/>
+        <sample_date/>
+        <stdbslog_id/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/drill_company" type="string"/>
+    <bind nodeset="/data/drill_method" type="string"/>
+    <bind nodeset="/data/loc_aid" type="string"/>
+    <bind nodeset="/data/loc_city" type="string"/>
+    <bind nodeset="/data/loc_client" type="string"/>
+    <bind nodeset="/data/loc_name" type="string"/>
+    <bind nodeset="/data/loc_state" type="string"/>
+    <bind nodeset="/data/loc_streetAddress" type="string"/>
+    <bind nodeset="/data/loc_zip" type="string"/>
+    <bind nodeset="/data/sample_date" type="date"/>
+    <bind nodeset="/data/stdbslog_id" type="string"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+ </h:body> 
+</h:html>

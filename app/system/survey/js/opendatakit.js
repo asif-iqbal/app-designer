@@ -45,6 +45,7 @@ return {
     databaseSettings: null,
     platformInfo: null,
     locationInfo: null,
+    projectInfo: null,
     
     logInitDone:function(pagename) {
         shim.log("I","logInitDone: doneInit ms: " + (+new Date()) + " page: " + pagename);
@@ -72,6 +73,18 @@ return {
             this.locationInfo = JSON.parse(jsonString);
         }
         return this.locationInfo;
+    },
+
+    /**
+     * immediate return: locationInfo structure from ODK
+     */
+    getProjectInfo:function() {
+        // fetch these settings from ODK Survey (the container app)
+        if ( this.projectInfo === undefined || this.projectInfo === null ) {
+            var jsonString = shim.getProjectInfo();
+            this.projectInfo = JSON.parse(jsonString);
+        }
+        return this.projectInfo;
     },
     
     _forbiddenInstanceDirCharsPattern: XRegExp('(\\p{P}|\\p{Z})', 'A'),

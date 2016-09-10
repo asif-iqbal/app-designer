@@ -1,0 +1,12 @@
+_element_key,_element_name,_element_type,_list_child_element_keys
+accum_start_date,accum_start_date,string,[]
+aisle_space,aisle_space,string,[]
+area_location,area_location,string,[]
+associated_hazards,associated_hazards,string,[]
+comments,comments,string,[]
+container_condition,container_condition,string,[]
+containers_closed,containers_closed,string,[]
+generator_information,generator_information,string,[]
+house_keeping,house_keeping,string,[]
+inspection_id,inspection_id,string,[]
+name_waste,name_waste,string,[]

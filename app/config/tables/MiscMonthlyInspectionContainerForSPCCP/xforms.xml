@@ -1,0 +1,107 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>MiscMonthlyInspectionContainerForSPCCP</h:title>
+  <model>
+    <instance>
+      <data id="MiscMonthlyInspectionContainerForSPCCP">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <access_blocked_inspection/>
+        <access_blocked_inspection_custom/>
+        <access_blocked_inspection_fu/>
+        <capacity/>
+        <container/>
+        <container_damaged_leaking/>
+        <container_damaged_leaking_custom/>
+        <container_damaged_leaking_fu/>
+        <contents/>
+        <guage_doesnot_function/>
+        <guage_doesnot_function_custom/>
+        <guage_doesnot_function_fu/>
+        <inspection_id/>
+        <label_sign_missing/>
+        <label_sign_missing_custom/>
+        <label_sign_missing_fu/>
+        <secondary_containment_inadequate/>
+        <secondary_containment_inadequate_custom/>
+        <secondary_containment_inadequate_fu/>
+        <spill_material_needed/>
+        <spill_material_needed_custom/>
+        <spill_material_needed_fu/>
+        <spillage_staining/>
+        <spillage_staining_custom/>
+        <spillage_staining_fu/>
+        <transf_pump_leaking/>
+        <transf_pump_leaking_custom/>
+        <transf_pump_leaking_fu/>
+        <unstable_surface/>
+        <unstable_surface_custom/>
+        <unstable_surface_fu/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/access_blocked_inspection" type="string"/>
+    <bind nodeset="/data/access_blocked_inspection_custom" type="string"/>
+    <bind nodeset="/data/access_blocked_inspection_fu" type="string"/>
+    <bind nodeset="/data/capacity" type="string"/>
+    <bind nodeset="/data/container" type="string"/>
+    <bind nodeset="/data/container_damaged_leaking" type="string"/>
+    <bind nodeset="/data/container_damaged_leaking_custom" type="string"/>
+    <bind nodeset="/data/container_damaged_leaking_fu" type="string"/>
+    <bind nodeset="/data/contents" type="string"/>
+    <bind nodeset="/data/guage_doesnot_function" type="string"/>
+    <bind nodeset="/data/guage_doesnot_function_custom" type="string"/>
+    <bind nodeset="/data/guage_doesnot_function_fu" type="string"/>
+    <bind nodeset="/data/inspection_id" type="string"/>
+    <bind nodeset="/data/label_sign_missing" type="string"/>
+    <bind nodeset="/data/label_sign_missing_custom" type="string"/>
+    <bind nodeset="/data/label_sign_missing_fu" type="string"/>
+    <bind nodeset="/data/secondary_containment_inadequate" type="string"/>
+    <bind nodeset="/data/secondary_containment_inadequate_custom" type="string"/>
+    <bind nodeset="/data/secondary_containment_inadequate_fu" type="string"/>
+    <bind nodeset="/data/spill_material_needed" type="string"/>
+    <bind nodeset="/data/spill_material_needed_custom" type="string"/>
+    <bind nodeset="/data/spill_material_needed_fu" type="string"/>
+    <bind nodeset="/data/spillage_staining" type="string"/>
+    <bind nodeset="/data/spillage_staining_custom" type="string"/>
+    <bind nodeset="/data/spillage_staining_fu" type="string"/>
+    <bind nodeset="/data/transf_pump_leaking" type="string"/>
+    <bind nodeset="/data/transf_pump_leaking_custom" type="string"/>
+    <bind nodeset="/data/transf_pump_leaking_fu" type="string"/>
+    <bind nodeset="/data/unstable_surface" type="string"/>
+    <bind nodeset="/data/unstable_surface_custom" type="string"/>
+    <bind nodeset="/data/unstable_surface_fu" type="string"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+ </h:body> 
+</h:html>

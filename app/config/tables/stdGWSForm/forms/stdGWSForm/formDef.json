@@ -141,38 +141,13 @@
         "_row_num": 18
       },
       {
-        "type": "assign",
-        "name": "sample_date",
-        "calculation": "calculates.currDate()",
-        "_row_num": 19
-      },
-      {
-        "type": "date",
-        "name": "sample_date",
-        "display": {
-          "text": "Date"
-        },
-        "templatePath": "time_input_type.handlebars",
-        "_row_num": 20
-      },
-      {
-        "type": "select_multiple",
-        "values_list": "personnel_csv",
-        "name": "personnel",
-        "display": {
-          "text": "Personnel"
-        },
-        "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 21
-      },
-      {
         "type": "string",
         "name": "task",
         "display": {
           "text": "Task"
         },
         "templatePath": "string_input_type.handlebars",
-        "_row_num": 22
+        "_row_num": 19
       },
       {
         "type": "string",
@@ -181,49 +156,571 @@
           "text": "Subcontractors"
         },
         "templatePath": "string_input_type.handlebars",
+        "_row_num": 20
+      },
+      {
+        "type": "assign",
+        "name": "sample_date",
+        "calculation": "calculates.date()",
+        "_row_num": 21
+      },
+      {
+        "type": "string",
+        "name": "sample_date",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 22
+      },
+      {
+        "type": "assign",
+        "name": "weather",
+        "calculation": "calculates.weather()",
         "_row_num": 23
       },
       {
         "type": "string",
         "name": "weather",
-        "display": {
-          "text": "Weather"
-        },
-        "templatePath": "string_input_type.handlebars",
+        "templatePath": "hidden_input_type.handlebars",
         "_row_num": 24
       },
       {
-        "type": "select_multiple",
-        "values_list": "equipment_csv",
-        "name": "vehicle",
-        "display": {
-          "text": "Vehicles"
-        },
-        "choice_filter": "choice_item.type==='Vehicle'",
-        "templatePath": "select_dropdown_multiple.handlebars",
+        "type": "assign",
+        "name": "project_number",
+        "calculation": "calculates.projectno()",
         "_row_num": 25
       },
       {
-        "type": "select_multiple",
-        "values_list": "equipment_csv",
-        "name": "consumables",
-        "display": {
-          "text": "Consumables"
-        },
-        "choice_filter": "choice_item.type==='Consumables'",
-        "templatePath": "select_dropdown_multiple.handlebars",
+        "type": "string",
+        "name": "project_number",
+        "templatePath": "hidden_input_type.handlebars",
         "_row_num": 26
       },
       {
-        "type": "select_multiple",
-        "values_list": "equipment_csv",
-        "name": "equipment",
-        "display": {
-          "text": "Equipment"
-        },
-        "choice_filter": "choice_item.type==='Equipment'",
-        "templatePath": "select_dropdown_multiple.handlebars",
+        "type": "assign",
+        "name": "project_comment",
+        "calculation": "calculates.comment()",
         "_row_num": 27
+      },
+      {
+        "type": "string",
+        "name": "project_comment",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 28
+      },
+      {
+        "type": "assign",
+        "name": "project_daily_report",
+        "calculation": "calculates.issuedailyreport()",
+        "_row_num": 29
+      },
+      {
+        "type": "string",
+        "name": "project_daily_report",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 30
+      },
+      {
+        "type": "assign",
+        "name": "personnel_title_0",
+        "calculation": "calculates.personnelTitle(0)",
+        "_row_num": 31
+      },
+      {
+        "type": "string",
+        "name": "personnel_title_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 32
+      },
+      {
+        "type": "assign",
+        "name": "personnel_name_0",
+        "calculation": "calculates.personnelName(0)",
+        "_row_num": 33
+      },
+      {
+        "type": "string",
+        "name": "personnel_name_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 34
+      },
+      {
+        "type": "assign",
+        "name": "personnel_starttime_0",
+        "calculation": "calculates.personnelStartTime(0)",
+        "_row_num": 35
+      },
+      {
+        "type": "string",
+        "name": "personnel_starttime_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 36
+      },
+      {
+        "type": "assign",
+        "name": "personnel_endtime_0",
+        "calculation": "calculates.personnelEndTime(0)",
+        "_row_num": 37
+      },
+      {
+        "type": "string",
+        "name": "personnel_endtime_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 38
+      },
+      {
+        "type": "assign",
+        "name": "personnel_totalhrs_0",
+        "calculation": "calculates.personnelTotalHrs(0)",
+        "_row_num": 39
+      },
+      {
+        "type": "string",
+        "name": "personnel_totalhrs_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 40
+      },
+      {
+        "type": "assign",
+        "name": "personnel_title_1",
+        "calculation": "calculates.personnelTitle(1)",
+        "_row_num": 41
+      },
+      {
+        "type": "string",
+        "name": "personnel_title_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 42
+      },
+      {
+        "type": "assign",
+        "name": "personnel_name_1",
+        "calculation": "calculates.personnelName(1)",
+        "_row_num": 43
+      },
+      {
+        "type": "string",
+        "name": "personnel_name_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 44
+      },
+      {
+        "type": "assign",
+        "name": "personnel_starttime_1",
+        "calculation": "calculates.personnelStartTime(1)",
+        "_row_num": 45
+      },
+      {
+        "type": "string",
+        "name": "personnel_starttime_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 46
+      },
+      {
+        "type": "assign",
+        "name": "personnel_endtime_1",
+        "calculation": "calculates.personnelEndTime(1)",
+        "_row_num": 47
+      },
+      {
+        "type": "string",
+        "name": "personnel_endtime_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 48
+      },
+      {
+        "type": "assign",
+        "name": "personnel_totalhrs_1",
+        "calculation": "calculates.personnelTotalHrs(1)",
+        "_row_num": 49
+      },
+      {
+        "type": "string",
+        "name": "personnel_totalhrs_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 50
+      },
+      {
+        "type": "assign",
+        "name": "personnel_title_2",
+        "calculation": "calculates.personnelTitle(2)",
+        "_row_num": 51
+      },
+      {
+        "type": "string",
+        "name": "personnel_title_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 52
+      },
+      {
+        "type": "assign",
+        "name": "personnel_name_2",
+        "calculation": "calculates.personnelName(2)",
+        "_row_num": 53
+      },
+      {
+        "type": "string",
+        "name": "personnel_name_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 54
+      },
+      {
+        "type": "assign",
+        "name": "personnel_starttime_2",
+        "calculation": "calculates.personnelStartTime(2)",
+        "_row_num": 55
+      },
+      {
+        "type": "string",
+        "name": "personnel_starttime_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 56
+      },
+      {
+        "type": "assign",
+        "name": "personnel_endtime_2",
+        "calculation": "calculates.personnelEndTime(2)",
+        "_row_num": 57
+      },
+      {
+        "type": "string",
+        "name": "personnel_endtime_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 58
+      },
+      {
+        "type": "assign",
+        "name": "personnel_totalhrs_2",
+        "calculation": "calculates.personnelTotalHrs(2)",
+        "_row_num": 59
+      },
+      {
+        "type": "string",
+        "name": "personnel_totalhrs_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 60
+      },
+      {
+        "type": "assign",
+        "name": "equipment_name_0",
+        "calculation": "calculates.equipmentName(0)",
+        "_row_num": 61
+      },
+      {
+        "type": "string",
+        "name": "equipment_name_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 62
+      },
+      {
+        "type": "assign",
+        "name": "equipment_quantity_0",
+        "calculation": "calculates.equipmentQuantity(0)",
+        "_row_num": 63
+      },
+      {
+        "type": "string",
+        "name": "equipment_quantity_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 64
+      },
+      {
+        "type": "assign",
+        "name": "equipment_totalhrs_0",
+        "calculation": "calculates.equipmentTotalHrs(0)",
+        "_row_num": 65
+      },
+      {
+        "type": "string",
+        "name": "equipment_totalhrs_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 66
+      },
+      {
+        "type": "assign",
+        "name": "equipment_name_1",
+        "calculation": "calculates.equipmentName(1)",
+        "_row_num": 67
+      },
+      {
+        "type": "string",
+        "name": "equipment_name_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 68
+      },
+      {
+        "type": "assign",
+        "name": "equipment_quantity_1",
+        "calculation": "calculates.equipmentQuantity(1)",
+        "_row_num": 69
+      },
+      {
+        "type": "string",
+        "name": "equipment_quantity_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 70
+      },
+      {
+        "type": "assign",
+        "name": "equipment_totalhrs_1",
+        "calculation": "calculates.equipmentTotalHrs(1)",
+        "_row_num": 71
+      },
+      {
+        "type": "string",
+        "name": "equipment_totalhrs_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 72
+      },
+      {
+        "type": "assign",
+        "name": "equipment_name_2",
+        "calculation": "calculates.equipmentName(2)",
+        "_row_num": 73
+      },
+      {
+        "type": "string",
+        "name": "equipment_name_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 74
+      },
+      {
+        "type": "assign",
+        "name": "equipment_quantity_2",
+        "calculation": "calculates.equipmentQuantity(2)",
+        "_row_num": 75
+      },
+      {
+        "type": "string",
+        "name": "equipment_quantity_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 76
+      },
+      {
+        "type": "assign",
+        "name": "equipment_totalhrs_2",
+        "calculation": "calculates.equipmentTotalHrs(2)",
+        "_row_num": 77
+      },
+      {
+        "type": "string",
+        "name": "equipment_totalhrs_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 78
+      },
+      {
+        "type": "assign",
+        "name": "vehicle_name_0",
+        "calculation": "calculates.vehicleName(0)",
+        "_row_num": 79
+      },
+      {
+        "type": "string",
+        "name": "vehicle_name_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 80
+      },
+      {
+        "type": "assign",
+        "name": "vehicle_quantity_0",
+        "calculation": "calculates.vehicleQuantity(0)",
+        "_row_num": 81
+      },
+      {
+        "type": "string",
+        "name": "vehicle_quantity_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 82
+      },
+      {
+        "type": "assign",
+        "name": "vehicle_totalhrs_0",
+        "calculation": "calculates.vehicleTotalHrs(0)",
+        "_row_num": 83
+      },
+      {
+        "type": "string",
+        "name": "vehicle_totalhrs_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 84
+      },
+      {
+        "type": "assign",
+        "name": "vehicle_name_1",
+        "calculation": "calculates.vehicleName(1)",
+        "_row_num": 85
+      },
+      {
+        "type": "string",
+        "name": "vehicle_name_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 86
+      },
+      {
+        "type": "assign",
+        "name": "vehicle_quantity_1",
+        "calculation": "calculates.vehicleQuantity(1)",
+        "_row_num": 87
+      },
+      {
+        "type": "string",
+        "name": "vehicle_quantity_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 88
+      },
+      {
+        "type": "assign",
+        "name": "vehicle_totalhrs_1",
+        "calculation": "calculates.vehicleTotalHrs(1)",
+        "_row_num": 89
+      },
+      {
+        "type": "string",
+        "name": "vehicle_totalhrs_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 90
+      },
+      {
+        "type": "assign",
+        "name": "vehicle_name_2",
+        "calculation": "calculates.vehicleName(2)",
+        "_row_num": 91
+      },
+      {
+        "type": "string",
+        "name": "vehicle_name_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 92
+      },
+      {
+        "type": "assign",
+        "name": "vehicle_quantity_2",
+        "calculation": "calculates.vehicleQuantity(2)",
+        "_row_num": 93
+      },
+      {
+        "type": "string",
+        "name": "vehicle_quantity_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 94
+      },
+      {
+        "type": "assign",
+        "name": "vehicle_totalhrs_2",
+        "calculation": "calculates.vehicleTotalHrs(2)",
+        "_row_num": 95
+      },
+      {
+        "type": "string",
+        "name": "vehicle_totalhrs_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 96
+      },
+      {
+        "type": "assign",
+        "name": "consumable_name_0",
+        "calculation": "calculates.consumableName(0)",
+        "_row_num": 97
+      },
+      {
+        "type": "string",
+        "name": "consumable_name_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 98
+      },
+      {
+        "type": "assign",
+        "name": "consumable_quantity_0",
+        "calculation": "calculates.consumableQuantity(0)",
+        "_row_num": 99
+      },
+      {
+        "type": "string",
+        "name": "consumable_quantity_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 100
+      },
+      {
+        "type": "assign",
+        "name": "consumable_totalhrs_0",
+        "calculation": "calculates.consumableTotalHrs(0)",
+        "_row_num": 101
+      },
+      {
+        "type": "string",
+        "name": "consumable_totalhrs_0",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 102
+      },
+      {
+        "type": "assign",
+        "name": "consumable_name_1",
+        "calculation": "calculates.consumableName(1)",
+        "_row_num": 103
+      },
+      {
+        "type": "string",
+        "name": "consumable_name_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 104
+      },
+      {
+        "type": "assign",
+        "name": "consumable_quantity_1",
+        "calculation": "calculates.consumableQuantity(1)",
+        "_row_num": 105
+      },
+      {
+        "type": "string",
+        "name": "consumable_quantity_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 106
+      },
+      {
+        "type": "assign",
+        "name": "consumable_totalhrs_1",
+        "calculation": "calculates.consumableTotalHrs(1)",
+        "_row_num": 107
+      },
+      {
+        "type": "string",
+        "name": "consumable_totalhrs_1",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 108
+      },
+      {
+        "type": "assign",
+        "name": "consumable_name_2",
+        "calculation": "calculates.consumableName(2)",
+        "_row_num": 109
+      },
+      {
+        "type": "string",
+        "name": "consumable_name_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 110
+      },
+      {
+        "type": "assign",
+        "name": "consumable_quantity_2",
+        "calculation": "calculates.consumableQuantity(2)",
+        "_row_num": 111
+      },
+      {
+        "type": "string",
+        "name": "consumable_quantity_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 112
+      },
+      {
+        "type": "assign",
+        "name": "consumable_totalhrs_2",
+        "calculation": "calculates.consumableTotalHrs(2)",
+        "_row_num": 113
+      },
+      {
+        "type": "string",
+        "name": "consumable_totalhrs_2",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 114
       },
       {
         "type": "linked_table",
@@ -232,28 +729,14 @@
           "text": "Add GWS Samples to this list",
           "new_instance_text": "Add Well/Sample"
         },
-        "_row_num": 28
+        "_row_num": 115
       },
       {
         "clause": "end screen",
-        "_row_num": 29
+        "_row_num": 116
       }
     ],
     "queries": [
-      {
-        "query_name": "personnel_csv",
-        "query_type": "csv",
-        "uri": "\"personnel.csv\"",
-        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name + ' ' + personnel.lastName;\npersonnel.display = {text:personnel.name + ' ' + personnel.lastName};\nreturn personnel;\n})",
-        "_row_num": 2
-      },
-      {
-        "query_name": "equipment_csv",
-        "query_type": "csv",
-        "uri": "\"equipment.csv\"",
-        "callback": "_.map(context, function(equipment){equipment.data_value = equipment.name;\nequipment.display = {text:equipment.name};\nreturn equipment;\n})",
-        "_row_num": 3
-      },
       {
         "query_name": "linked_samples",
         "query_type": "linked_table",
@@ -262,7 +745,7 @@
         "selection": "stdgwslog_id = ?",
         "selectionArgs": "[ data('stdgwslog_id') ]",
         "auxillaryHash": "'stdgwslog_id='+encodeURIComponent(data('stdgwslog_id'))",
-        "_row_num": 4
+        "_row_num": 2
       }
     ],
     "calculates": [
@@ -280,6 +763,101 @@
         "calculation_name": "currDate",
         "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
         "_row_num": 4
+      },
+      {
+        "calculation_name": "date",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().date== ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().date;\n  }\n})()",
+        "_row_num": 5
+      },
+      {
+        "calculation_name": "weather",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().weather == ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().weather;\n  }\n})()",
+        "_row_num": 6
+      },
+      {
+        "calculation_name": "projectno",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().projectno== ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().projectno;\n  }\n})()",
+        "_row_num": 7
+      },
+      {
+        "calculation_name": "comment",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().comment== ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().comment;\n  }\n})()",
+        "_row_num": 8
+      },
+      {
+        "calculation_name": "issuedailyreport",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().issuedailyreport== ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().issuedailyreport;\n  }\n})()",
+        "_row_num": 9
+      },
+      {
+        "calculation_name": "personnelTitle",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].title){\n    return opendatakit.getProjectInfo().personnel_data[idx].title;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 10
+      },
+      {
+        "calculation_name": "personnelName",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].selectedpersonnel){\n    return opendatakit.getProjectInfo().personnel_data[idx].selectedpersonnel;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 11
+      },
+      {
+        "calculation_name": "personnelStartTime",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].starttime){\n    return opendatakit.getProjectInfo().personnel_data[idx].starttime;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 12
+      },
+      {
+        "calculation_name": "personnelEndTime",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].endtime){\n    return opendatakit.getProjectInfo().personnel_data[idx].endtime;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 13
+      },
+      {
+        "calculation_name": "personnelTotalHrs",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().personnel_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 14
+      },
+      {
+        "calculation_name": "equipmentName",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].selectedequipment){\n    return opendatakit.getProjectInfo().equipment_data[idx].selectedequipment;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 15
+      },
+      {
+        "calculation_name": "equipmentQuantity",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].quantity){\n    return opendatakit.getProjectInfo().equipment_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 16
+      },
+      {
+        "calculation_name": "equipmentTotalHrs",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().equipment_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 17
+      },
+      {
+        "calculation_name": "vehicleName",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].selectedvehicle){\n    return opendatakit.getProjectInfo().vehicle_data[idx].selectedvehicle;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 18
+      },
+      {
+        "calculation_name": "vehicleQuantity",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].quantity){\n    return opendatakit.getProjectInfo().vehicle_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 19
+      },
+      {
+        "calculation_name": "vehicleTotalHrs",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().vehicle_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 20
+      },
+      {
+        "calculation_name": "consumableName",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].selectedconsumable){\n    return opendatakit.getProjectInfo().consumable_data[idx].selectedconsumable;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 21
+      },
+      {
+        "calculation_name": "consumableQuantity",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].quantity){\n    return opendatakit.getProjectInfo().consumable_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 22
+      },
+      {
+        "calculation_name": "consumableTotalHrs",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().consumable_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 23
       }
     ],
     "settings": [
@@ -371,20 +949,6 @@
     },
     "choices": {},
     "queries": {
-      "personnel_csv": {
-        "query_name": "personnel_csv",
-        "query_type": "csv",
-        "uri": "\"personnel.csv\"",
-        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name + ' ' + personnel.lastName;\npersonnel.display = {text:personnel.name + ' ' + personnel.lastName};\nreturn personnel;\n})",
-        "_row_num": 2
-      },
-      "equipment_csv": {
-        "query_name": "equipment_csv",
-        "query_type": "csv",
-        "uri": "\"equipment.csv\"",
-        "callback": "_.map(context, function(equipment){equipment.data_value = equipment.name;\nequipment.display = {text:equipment.name};\nreturn equipment;\n})",
-        "_row_num": 3
-      },
       "linked_samples": {
         "query_name": "linked_samples",
         "query_type": "linked_table",
@@ -393,7 +957,7 @@
         "selection": "stdgwslog_id = ?",
         "selectionArgs": "[ data('stdgwslog_id') ]",
         "auxillaryHash": "'stdgwslog_id='+encodeURIComponent(data('stdgwslog_id'))",
-        "_row_num": 4
+        "_row_num": 2
       }
     },
     "calculates": {
@@ -411,6 +975,101 @@
         "calculation_name": "currDate",
         "calculation": "(function(){\n  if (data('sample_date')) {\n    return data('sample_date');\n  } else {\n    return new Date();\n  }\n})()",
         "_row_num": 4
+      },
+      "date": {
+        "calculation_name": "date",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().date== ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().date;\n  }\n})()",
+        "_row_num": 5
+      },
+      "weather": {
+        "calculation_name": "weather",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().weather == ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().weather;\n  }\n})()",
+        "_row_num": 6
+      },
+      "projectno": {
+        "calculation_name": "projectno",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().projectno== ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().projectno;\n  }\n})()",
+        "_row_num": 7
+      },
+      "comment": {
+        "calculation_name": "comment",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().comment== ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().comment;\n  }\n})()",
+        "_row_num": 8
+      },
+      "issuedailyreport": {
+        "calculation_name": "issuedailyreport",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo().issuedailyreport== ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().issuedailyreport;\n  }\n})()",
+        "_row_num": 9
+      },
+      "personnelTitle": {
+        "calculation_name": "personnelTitle",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].title){\n    return opendatakit.getProjectInfo().personnel_data[idx].title;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 10
+      },
+      "personnelName": {
+        "calculation_name": "personnelName",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].selectedpersonnel){\n    return opendatakit.getProjectInfo().personnel_data[idx].selectedpersonnel;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 11
+      },
+      "personnelStartTime": {
+        "calculation_name": "personnelStartTime",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].starttime){\n    return opendatakit.getProjectInfo().personnel_data[idx].starttime;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 12
+      },
+      "personnelEndTime": {
+        "calculation_name": "personnelEndTime",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].endtime){\n    return opendatakit.getProjectInfo().personnel_data[idx].endtime;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 13
+      },
+      "personnelTotalHrs": {
+        "calculation_name": "personnelTotalHrs",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().personnel_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 14
+      },
+      "equipmentName": {
+        "calculation_name": "equipmentName",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].selectedequipment){\n    return opendatakit.getProjectInfo().equipment_data[idx].selectedequipment;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 15
+      },
+      "equipmentQuantity": {
+        "calculation_name": "equipmentQuantity",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].quantity){\n    return opendatakit.getProjectInfo().equipment_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 16
+      },
+      "equipmentTotalHrs": {
+        "calculation_name": "equipmentTotalHrs",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().equipment_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 17
+      },
+      "vehicleName": {
+        "calculation_name": "vehicleName",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].selectedvehicle){\n    return opendatakit.getProjectInfo().vehicle_data[idx].selectedvehicle;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 18
+      },
+      "vehicleQuantity": {
+        "calculation_name": "vehicleQuantity",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].quantity){\n    return opendatakit.getProjectInfo().vehicle_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 19
+      },
+      "vehicleTotalHrs": {
+        "calculation_name": "vehicleTotalHrs",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().vehicle_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 20
+      },
+      "consumableName": {
+        "calculation_name": "consumableName",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].selectedconsumable){\n    return opendatakit.getProjectInfo().consumable_data[idx].selectedconsumable;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 21
+      },
+      "consumableQuantity": {
+        "calculation_name": "consumableQuantity",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].quantity){\n    return opendatakit.getProjectInfo().consumable_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 22
+      },
+      "consumableTotalHrs": {
+        "calculation_name": "consumableTotalHrs",
+        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().consumable_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 23
       }
     },
     "model": {
@@ -494,36 +1153,10 @@
         "type": "string",
         "elementKey": "loc_client"
       },
-      "sample_date": {
-        "_defn": [
-          {
-            "_row_num": 20,
-            "section_name": "survey"
-          }
-        ],
-        "type": "object",
-        "elementType": "date",
-        "elementKey": "sample_date"
-      },
-      "personnel": {
-        "_defn": [
-          {
-            "_row_num": 21,
-            "section_name": "survey"
-          }
-        ],
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "personnel_items"
-        },
-        "valuesList": "personnel_csv",
-        "elementKey": "personnel"
-      },
       "task": {
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 19,
             "section_name": "survey"
           }
         ],
@@ -533,12 +1166,22 @@
       "subcontractors": {
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 20,
             "section_name": "survey"
           }
         ],
         "type": "string",
         "elementKey": "subcontractors"
+      },
+      "sample_date": {
+        "_defn": [
+          {
+            "_row_num": 22,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "sample_date"
       },
       "weather": {
         "_defn": [
@@ -550,50 +1193,455 @@
         "type": "string",
         "elementKey": "weather"
       },
-      "vehicle": {
-        "_defn": [
-          {
-            "_row_num": 25,
-            "section_name": "survey"
-          }
-        ],
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "vehicle_items"
-        },
-        "valuesList": "equipment_csv",
-        "elementKey": "vehicle"
-      },
-      "consumables": {
+      "project_number": {
         "_defn": [
           {
             "_row_num": 26,
             "section_name": "survey"
           }
         ],
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "consumables_items"
-        },
-        "valuesList": "equipment_csv",
-        "elementKey": "consumables"
+        "type": "string",
+        "elementKey": "project_number"
       },
-      "equipment": {
+      "project_comment": {
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 28,
             "section_name": "survey"
           }
         ],
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "equipment_items"
-        },
-        "valuesList": "equipment_csv",
-        "elementKey": "equipment"
+        "type": "string",
+        "elementKey": "project_comment"
+      },
+      "project_daily_report": {
+        "_defn": [
+          {
+            "_row_num": 30,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "project_daily_report"
+      },
+      "personnel_title_0": {
+        "_defn": [
+          {
+            "_row_num": 32,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_title_0"
+      },
+      "personnel_name_0": {
+        "_defn": [
+          {
+            "_row_num": 34,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_name_0"
+      },
+      "personnel_starttime_0": {
+        "_defn": [
+          {
+            "_row_num": 36,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_starttime_0"
+      },
+      "personnel_endtime_0": {
+        "_defn": [
+          {
+            "_row_num": 38,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_endtime_0"
+      },
+      "personnel_totalhrs_0": {
+        "_defn": [
+          {
+            "_row_num": 40,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_totalhrs_0"
+      },
+      "personnel_title_1": {
+        "_defn": [
+          {
+            "_row_num": 42,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_title_1"
+      },
+      "personnel_name_1": {
+        "_defn": [
+          {
+            "_row_num": 44,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_name_1"
+      },
+      "personnel_starttime_1": {
+        "_defn": [
+          {
+            "_row_num": 46,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_starttime_1"
+      },
+      "personnel_endtime_1": {
+        "_defn": [
+          {
+            "_row_num": 48,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_endtime_1"
+      },
+      "personnel_totalhrs_1": {
+        "_defn": [
+          {
+            "_row_num": 50,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_totalhrs_1"
+      },
+      "personnel_title_2": {
+        "_defn": [
+          {
+            "_row_num": 52,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_title_2"
+      },
+      "personnel_name_2": {
+        "_defn": [
+          {
+            "_row_num": 54,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_name_2"
+      },
+      "personnel_starttime_2": {
+        "_defn": [
+          {
+            "_row_num": 56,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_starttime_2"
+      },
+      "personnel_endtime_2": {
+        "_defn": [
+          {
+            "_row_num": 58,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_endtime_2"
+      },
+      "personnel_totalhrs_2": {
+        "_defn": [
+          {
+            "_row_num": 60,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "personnel_totalhrs_2"
+      },
+      "equipment_name_0": {
+        "_defn": [
+          {
+            "_row_num": 62,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_name_0"
+      },
+      "equipment_quantity_0": {
+        "_defn": [
+          {
+            "_row_num": 64,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_quantity_0"
+      },
+      "equipment_totalhrs_0": {
+        "_defn": [
+          {
+            "_row_num": 66,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_totalhrs_0"
+      },
+      "equipment_name_1": {
+        "_defn": [
+          {
+            "_row_num": 68,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_name_1"
+      },
+      "equipment_quantity_1": {
+        "_defn": [
+          {
+            "_row_num": 70,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_quantity_1"
+      },
+      "equipment_totalhrs_1": {
+        "_defn": [
+          {
+            "_row_num": 72,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_totalhrs_1"
+      },
+      "equipment_name_2": {
+        "_defn": [
+          {
+            "_row_num": 74,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_name_2"
+      },
+      "equipment_quantity_2": {
+        "_defn": [
+          {
+            "_row_num": 76,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_quantity_2"
+      },
+      "equipment_totalhrs_2": {
+        "_defn": [
+          {
+            "_row_num": 78,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "equipment_totalhrs_2"
+      },
+      "vehicle_name_0": {
+        "_defn": [
+          {
+            "_row_num": 80,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "vehicle_name_0"
+      },
+      "vehicle_quantity_0": {
+        "_defn": [
+          {
+            "_row_num": 82,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "vehicle_quantity_0"
+      },
+      "vehicle_totalhrs_0": {
+        "_defn": [
+          {
+            "_row_num": 84,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "vehicle_totalhrs_0"
+      },
+      "vehicle_name_1": {
+        "_defn": [
+          {
+            "_row_num": 86,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "vehicle_name_1"
+      },
+      "vehicle_quantity_1": {
+        "_defn": [
+          {
+            "_row_num": 88,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "vehicle_quantity_1"
+      },
+      "vehicle_totalhrs_1": {
+        "_defn": [
+          {
+            "_row_num": 90,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "vehicle_totalhrs_1"
+      },
+      "vehicle_name_2": {
+        "_defn": [
+          {
+            "_row_num": 92,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "vehicle_name_2"
+      },
+      "vehicle_quantity_2": {
+        "_defn": [
+          {
+            "_row_num": 94,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "vehicle_quantity_2"
+      },
+      "vehicle_totalhrs_2": {
+        "_defn": [
+          {
+            "_row_num": 96,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "vehicle_totalhrs_2"
+      },
+      "consumable_name_0": {
+        "_defn": [
+          {
+            "_row_num": 98,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_name_0"
+      },
+      "consumable_quantity_0": {
+        "_defn": [
+          {
+            "_row_num": 100,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_quantity_0"
+      },
+      "consumable_totalhrs_0": {
+        "_defn": [
+          {
+            "_row_num": 102,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_totalhrs_0"
+      },
+      "consumable_name_1": {
+        "_defn": [
+          {
+            "_row_num": 104,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_name_1"
+      },
+      "consumable_quantity_1": {
+        "_defn": [
+          {
+            "_row_num": 106,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_quantity_1"
+      },
+      "consumable_totalhrs_1": {
+        "_defn": [
+          {
+            "_row_num": 108,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_totalhrs_1"
+      },
+      "consumable_name_2": {
+        "_defn": [
+          {
+            "_row_num": 110,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_name_2"
+      },
+      "consumable_quantity_2": {
+        "_defn": [
+          {
+            "_row_num": 112,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_quantity_2"
+      },
+      "consumable_totalhrs_2": {
+        "_defn": [
+          {
+            "_row_num": 114,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_totalhrs_2"
       }
     },
     "section_names": [
@@ -860,41 +1908,37 @@
             "promptIdx": 7
           },
           {
-            "type": "date",
-            "name": "sample_date",
-            "display": {
-              "text": "Date"
-            },
-            "templatePath": "time_input_type.handlebars",
-            "_row_num": 20,
-            "__rowNum__": 19,
-            "_token_type": "prompt",
-            "_type": "date",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 8
-          },
-          {
-            "type": "select_multiple",
-            "values_list": "personnel_csv",
-            "name": "personnel",
-            "display": {
-              "text": "Personnel"
-            },
-            "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 21,
-            "__rowNum__": 20,
-            "_token_type": "prompt",
-            "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 9
-          },
-          {
             "type": "string",
             "name": "task",
             "display": {
               "text": "Task"
             },
             "templatePath": "string_input_type.handlebars",
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "string",
+            "name": "subcontractors",
+            "display": {
+              "text": "Subcontractors"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "string",
+            "name": "sample_date",
+            "templatePath": "hidden_input_type.handlebars",
             "_row_num": 22,
             "__rowNum__": 21,
             "_token_type": "prompt",
@@ -904,13 +1948,10 @@
           },
           {
             "type": "string",
-            "name": "subcontractors",
-            "display": {
-              "text": "Subcontractors"
-            },
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "name": "weather",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -918,65 +1959,498 @@
           },
           {
             "type": "string",
-            "name": "weather",
-            "display": {
-              "text": "Weather"
-            },
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "name": "project_number",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 12
           },
           {
-            "type": "select_multiple",
-            "values_list": "equipment_csv",
-            "name": "vehicle",
-            "display": {
-              "text": "Vehicles"
-            },
-            "choice_filter": "choice_item.type==='Vehicle'",
-            "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "type": "string",
+            "name": "project_comment",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "prompt",
-            "_type": "select_multiple",
+            "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 13
           },
           {
-            "type": "select_multiple",
-            "values_list": "equipment_csv",
-            "name": "consumables",
-            "display": {
-              "text": "Consumables"
-            },
-            "choice_filter": "choice_item.type==='Consumables'",
-            "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "type": "string",
+            "name": "project_daily_report",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "prompt",
-            "_type": "select_multiple",
+            "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 14
           },
           {
-            "type": "select_multiple",
-            "values_list": "equipment_csv",
-            "name": "equipment",
-            "display": {
-              "text": "Equipment"
-            },
-            "choice_filter": "choice_item.type==='Equipment'",
-            "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 27,
-            "__rowNum__": 26,
+            "type": "string",
+            "name": "personnel_title_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 32,
+            "__rowNum__": 31,
             "_token_type": "prompt",
-            "_type": "select_multiple",
+            "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 15
+          },
+          {
+            "type": "string",
+            "name": "personnel_name_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 16
+          },
+          {
+            "type": "string",
+            "name": "personnel_starttime_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 36,
+            "__rowNum__": 35,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 17
+          },
+          {
+            "type": "string",
+            "name": "personnel_endtime_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 38,
+            "__rowNum__": 37,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 18
+          },
+          {
+            "type": "string",
+            "name": "personnel_totalhrs_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 40,
+            "__rowNum__": 39,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 19
+          },
+          {
+            "type": "string",
+            "name": "personnel_title_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 42,
+            "__rowNum__": 41,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 20
+          },
+          {
+            "type": "string",
+            "name": "personnel_name_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 44,
+            "__rowNum__": 43,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 21
+          },
+          {
+            "type": "string",
+            "name": "personnel_starttime_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 46,
+            "__rowNum__": 45,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 22
+          },
+          {
+            "type": "string",
+            "name": "personnel_endtime_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 48,
+            "__rowNum__": 47,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 23
+          },
+          {
+            "type": "string",
+            "name": "personnel_totalhrs_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 50,
+            "__rowNum__": 49,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 24
+          },
+          {
+            "type": "string",
+            "name": "personnel_title_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 52,
+            "__rowNum__": 51,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 25
+          },
+          {
+            "type": "string",
+            "name": "personnel_name_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 54,
+            "__rowNum__": 53,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 26
+          },
+          {
+            "type": "string",
+            "name": "personnel_starttime_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 56,
+            "__rowNum__": 55,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 27
+          },
+          {
+            "type": "string",
+            "name": "personnel_endtime_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 58,
+            "__rowNum__": 57,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 28
+          },
+          {
+            "type": "string",
+            "name": "personnel_totalhrs_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 60,
+            "__rowNum__": 59,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 29
+          },
+          {
+            "type": "string",
+            "name": "equipment_name_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 62,
+            "__rowNum__": 61,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 30
+          },
+          {
+            "type": "string",
+            "name": "equipment_quantity_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 64,
+            "__rowNum__": 63,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 31
+          },
+          {
+            "type": "string",
+            "name": "equipment_totalhrs_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 66,
+            "__rowNum__": 65,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 32
+          },
+          {
+            "type": "string",
+            "name": "equipment_name_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 68,
+            "__rowNum__": 67,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 33
+          },
+          {
+            "type": "string",
+            "name": "equipment_quantity_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 70,
+            "__rowNum__": 69,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 34
+          },
+          {
+            "type": "string",
+            "name": "equipment_totalhrs_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 72,
+            "__rowNum__": 71,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 35
+          },
+          {
+            "type": "string",
+            "name": "equipment_name_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 74,
+            "__rowNum__": 73,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 36
+          },
+          {
+            "type": "string",
+            "name": "equipment_quantity_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 76,
+            "__rowNum__": 75,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 37
+          },
+          {
+            "type": "string",
+            "name": "equipment_totalhrs_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 78,
+            "__rowNum__": 77,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 38
+          },
+          {
+            "type": "string",
+            "name": "vehicle_name_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 80,
+            "__rowNum__": 79,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 39
+          },
+          {
+            "type": "string",
+            "name": "vehicle_quantity_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 82,
+            "__rowNum__": 81,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 40
+          },
+          {
+            "type": "string",
+            "name": "vehicle_totalhrs_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 84,
+            "__rowNum__": 83,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 41
+          },
+          {
+            "type": "string",
+            "name": "vehicle_name_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 86,
+            "__rowNum__": 85,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 42
+          },
+          {
+            "type": "string",
+            "name": "vehicle_quantity_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 88,
+            "__rowNum__": 87,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 43
+          },
+          {
+            "type": "string",
+            "name": "vehicle_totalhrs_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 90,
+            "__rowNum__": 89,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 44
+          },
+          {
+            "type": "string",
+            "name": "vehicle_name_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 92,
+            "__rowNum__": 91,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 45
+          },
+          {
+            "type": "string",
+            "name": "vehicle_quantity_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 94,
+            "__rowNum__": 93,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 46
+          },
+          {
+            "type": "string",
+            "name": "vehicle_totalhrs_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 96,
+            "__rowNum__": 95,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 47
+          },
+          {
+            "type": "string",
+            "name": "consumable_name_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 98,
+            "__rowNum__": 97,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 48
+          },
+          {
+            "type": "string",
+            "name": "consumable_quantity_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 100,
+            "__rowNum__": 99,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 49
+          },
+          {
+            "type": "string",
+            "name": "consumable_totalhrs_0",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 102,
+            "__rowNum__": 101,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 50
+          },
+          {
+            "type": "string",
+            "name": "consumable_name_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 104,
+            "__rowNum__": 103,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 51
+          },
+          {
+            "type": "string",
+            "name": "consumable_quantity_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 106,
+            "__rowNum__": 105,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 52
+          },
+          {
+            "type": "string",
+            "name": "consumable_totalhrs_1",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 108,
+            "__rowNum__": 107,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 53
+          },
+          {
+            "type": "string",
+            "name": "consumable_name_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 110,
+            "__rowNum__": 109,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 54
+          },
+          {
+            "type": "string",
+            "name": "consumable_quantity_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 112,
+            "__rowNum__": 111,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 55
+          },
+          {
+            "type": "string",
+            "name": "consumable_totalhrs_2",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 114,
+            "__rowNum__": 113,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 56
           },
           {
             "type": "linked_table",
@@ -985,20 +2459,20 @@
               "text": "Add GWS Samples to this list",
               "new_instance_text": "Add Well/Sample"
             },
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 115,
+            "__rowNum__": 114,
             "_token_type": "prompt",
             "_type": "linked_table",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 16
+            "promptIdx": 57
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 30,
-            "_branch_label_enclosing_screen": "survey/_screen30",
-            "promptIdx": 17
+            "_row_num": 117,
+            "_branch_label_enclosing_screen": "survey/_screen117",
+            "promptIdx": 58
           }
         ],
         "validation_tag_map": {
@@ -1015,23 +2489,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 29,
-              "__rowNum__": 28,
+              "_row_num": 116,
+              "__rowNum__": 115,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('stdgwslog_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nassign('sample_date', calculates.currDate());\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('stdgwslog_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(10);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(11);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(12);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(13);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(14);\nassign('personnel_title_0', calculates.personnelTitle(0));\nactivePromptIndicies.push(15);\nassign('personnel_name_0', calculates.personnelName(0));\nactivePromptIndicies.push(16);\nassign('personnel_starttime_0', calculates.personnelStartTime(0));\nactivePromptIndicies.push(17);\nassign('personnel_endtime_0', calculates.personnelEndTime(0));\nactivePromptIndicies.push(18);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs(0));\nactivePromptIndicies.push(19);\nassign('personnel_title_1', calculates.personnelTitle(1));\nactivePromptIndicies.push(20);\nassign('personnel_name_1', calculates.personnelName(1));\nactivePromptIndicies.push(21);\nassign('personnel_starttime_1', calculates.personnelStartTime(1));\nactivePromptIndicies.push(22);\nassign('personnel_endtime_1', calculates.personnelEndTime(1));\nactivePromptIndicies.push(23);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs(1));\nactivePromptIndicies.push(24);\nassign('personnel_title_2', calculates.personnelTitle(2));\nactivePromptIndicies.push(25);\nassign('personnel_name_2', calculates.personnelName(2));\nactivePromptIndicies.push(26);\nassign('personnel_starttime_2', calculates.personnelStartTime(2));\nactivePromptIndicies.push(27);\nassign('personnel_endtime_2', calculates.personnelEndTime(2));\nactivePromptIndicies.push(28);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs(2));\nactivePromptIndicies.push(29);\nassign('equipment_name_0', calculates.equipmentName(0));\nactivePromptIndicies.push(30);\nassign('equipment_quantity_0', calculates.equipmentQuantity(0));\nactivePromptIndicies.push(31);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs(0));\nactivePromptIndicies.push(32);\nassign('equipment_name_1', calculates.equipmentName(1));\nactivePromptIndicies.push(33);\nassign('equipment_quantity_1', calculates.equipmentQuantity(1));\nactivePromptIndicies.push(34);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs(1));\nactivePromptIndicies.push(35);\nassign('equipment_name_2', calculates.equipmentName(2));\nactivePromptIndicies.push(36);\nassign('equipment_quantity_2', calculates.equipmentQuantity(2));\nactivePromptIndicies.push(37);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs(2));\nactivePromptIndicies.push(38);\nassign('vehicle_name_0', calculates.vehicleName(0));\nactivePromptIndicies.push(39);\nassign('vehicle_quantity_0', calculates.vehicleQuantity(0));\nactivePromptIndicies.push(40);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs(0));\nactivePromptIndicies.push(41);\nassign('vehicle_name_1', calculates.vehicleName(1));\nactivePromptIndicies.push(42);\nassign('vehicle_quantity_1', calculates.vehicleQuantity(1));\nactivePromptIndicies.push(43);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs(1));\nactivePromptIndicies.push(44);\nassign('vehicle_name_2', calculates.vehicleName(2));\nactivePromptIndicies.push(45);\nassign('vehicle_quantity_2', calculates.vehicleQuantity(2));\nactivePromptIndicies.push(46);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs(2));\nactivePromptIndicies.push(47);\nassign('consumable_name_0', calculates.consumableName(0));\nactivePromptIndicies.push(48);\nassign('consumable_quantity_0', calculates.consumableQuantity(0));\nactivePromptIndicies.push(49);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs(0));\nactivePromptIndicies.push(50);\nassign('consumable_name_1', calculates.consumableName(1));\nactivePromptIndicies.push(51);\nassign('consumable_quantity_1', calculates.consumableQuantity(1));\nactivePromptIndicies.push(52);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs(1));\nactivePromptIndicies.push(53);\nassign('consumable_name_2', calculates.consumableName(2));\nactivePromptIndicies.push(54);\nassign('consumable_quantity_2', calculates.consumableQuantity(2));\nactivePromptIndicies.push(55);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs(2));\nactivePromptIndicies.push(56);\nactivePromptIndicies.push(57);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 30,
+            "_row_num": 117,
             "operationIdx": 1
           },
           {
-            "_row_num": 30,
+            "_row_num": 117,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(58);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -1040,14 +2514,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 30,
+            "_row_num": 117,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen30": 2
+          "_screen117": 2
         }
       }
     }

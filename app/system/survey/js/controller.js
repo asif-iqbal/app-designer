@@ -94,6 +94,7 @@ return {
         
         var parts = opPath.split("/");
         if ( parts.length < 2 ) {
+			
             shim.log('E',"controller.getNextOperationPath: invalid opPath: " + opPath);
             return null;
         }
@@ -104,7 +105,12 @@ return {
             shim.log('E',"controller.getNextOperationPath: no section matching opPath: " + opPath);
             return null;
         }
-
+		if(parts[0] != "initial"){
+			farhan=false
+			$('.waitMe_container .waitMe ').css("display","none !important");
+		}else{
+			$('.waitMe_container .waitMe ').css("display","");
+		}
         var intRegex = /^\d+$/;
         var intIndex;
         if(intRegex.test(parts[1])) {

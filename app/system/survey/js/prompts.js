@@ -722,6 +722,7 @@ promptTypes._linked_type = promptTypes.base.extend({
                 ctxt.log('D',"prompts." + that.type + 'getCallback.actionFn.resultOK', "px: " + that.promptIdx +
                     " promptPath: " + promptPath + " internalPromptContext: " + internalPromptContext + " action: " + action);
                 that.enableButtons();
+                //Asif
                 that.reRender(ctxt);
             }
             else {
@@ -729,6 +730,7 @@ promptTypes._linked_type = promptTypes.base.extend({
                     "px: " + that.promptIdx + " promptPath: " + promptPath + " internalPromptContext: " + 
                     internalPromptContext + " action: " + action);
                 that.enableButtons();
+                //Asif
                 that.reRender($.extend({}, ctxt, {success: function() { ctxt.failure({message: "Action canceled."});},
                     failure: function(j) { ctxt.failure({message: "Action canceled."});}}));
             }
@@ -743,9 +745,9 @@ promptTypes.linked_table = promptTypes._linked_type.extend({
     launchAction: 'org.opendatakit.survey.android.activities.MainMenuActivity',
 
     events: {
-        "click .openInstance": "openInstance",
-        "click .deleteInstance": "confirmDeleteInstance",
-        "click .addInstance": "addInstance"
+        "focusin .openInstance": "openInstance",
+        "focusin .deleteInstance": "confirmDeleteInstance",
+        "focusin .addInstance": "addInstance"
     },
     disableButtons: function() {
         var that = this;
@@ -824,7 +826,8 @@ promptTypes.linked_table = promptTypes._linked_type.extend({
         }
 
         var that = this;
-        var ctxt = that.controller.newContext(evt);
+        //Asif
+        //var ctxt = that.controller.newContext(evt);
         that.disableButtons();
         var platInfo = opendatakit.getPlatformInfo();
         // TODO: is this the right sequence?
@@ -834,14 +837,14 @@ promptTypes.linked_table = promptTypes._linked_type.extend({
             'launchSurvey', that.launchAction, 
             JSON.stringify({ uri: uri + opendatakit.getHashString(that.getFormPath(),instanceId, opendatakit.initialScreenPath),
                              extras: { url: expandedUrl }}));
-        ctxt.log('D','linked_table.openInstance', platInfo.container + " outcome is " + outcome);
-        if (outcome === null || outcome !== "OK") {
-            ctxt.log('W','linked_table.openInstance',"Should be OK got >" + outcome + "<");
+        //ctxt.log('D','linked_table.openInstance', platInfo.container + " outcome is " + outcome);
+        //if (outcome === null || outcome !== "OK") {
+        //    ctxt.log('W','linked_table.openInstance',"Should be OK got >" + outcome + "<");
             that.enableButtons();
-            ctxt.failure({message: "Action canceled."});
-        } else {
-            ctxt.success();
-        }
+        //    ctxt.failure({message: "Action canceled."});
+        //} else {
+        //    ctxt.success();
+        //}
     },
     confirmDeleteInstance: function(evt) {
         var that = this;
@@ -904,7 +907,8 @@ promptTypes.linked_table = promptTypes._linked_type.extend({
         var queryDefn = opendatakit.getQueriesDefinition(this.values_list);
         var instanceId = opendatakit.genUUID();
         var that = this;
-        var ctxt = that.controller.newContext(evt);
+        //Asif
+        //var ctxt = that.controller.newContext(evt);
         that.disableButtons();
         var platInfo = opendatakit.getPlatformInfo();
         // TODO: is this the right sequence?
@@ -921,14 +925,15 @@ promptTypes.linked_table = promptTypes._linked_type.extend({
             'launchSurvey', that.launchAction, 
             JSON.stringify({ uri: uri + opendatakit.getHashString(that.getFormPath(),instanceId, opendatakit.initialScreenPath) + auxHash,
                              extras: { url: expandedUrl }}));
-        ctxt.log('D','linked_table.addInstance', platInfo.container + " outcome is " + outcome);
-        if (outcome === null || outcome !== "OK") {
-            ctxt.log('W','linked_table.addInstance',"Should be OK got >" + outcome + "<");
+        //Asif
+        //ctxt.log('D','linked_table.addInstance', platInfo.container + " outcome is " + outcome);
+        //if (outcome === null || outcome !== "OK") {
+        //    ctxt.log('W','linked_table.addInstance',"Should be OK got >" + outcome + "<");
             that.enableButtons();
-            ctxt.failure({message: "Action canceled."});
-        } else {
-            ctxt.success();
-        }
+        //    ctxt.failure({message: "Action canceled."});
+        //} else {
+        //    ctxt.success();
+        //}
     }
 });
 promptTypes.external_link = promptTypes.base.extend({
@@ -1013,7 +1018,7 @@ promptTypes.user_branch = promptTypes.base.extend({
     renderContext: {
     },
     events: {
-        "click .branch-select-item": "selectBranchItem"
+        "focusin .branch-select-item": "selectBranchItem"
     },
     selectBranchItem: function(evt) {
         var that = this;
@@ -1994,7 +1999,8 @@ promptTypes.media = promptTypes.base.extend({
                 // TODO: should null returns indicate a clearing of this value?
                 that.enableButtons();
                 that.updateRenderContext();
-                that.reRender(ctxt);
+                //Asif
+                //that.reRender(ctxt);
             }
             else {
                 ctxt.log('W',"prompts." + that.type + 'getCallback.actionFn.failureOutcome',
@@ -2003,9 +2009,10 @@ promptTypes.media = promptTypes.base.extend({
                     " promptPath: " + promptPath + " internalPromptContext: " + internalPromptContext + " action: " + action);
                 that.enableButtons();
                 that.updateRenderContext();
-                that.reRender($.extend({}, ctxt, {success: function() {
-                    ctxt.failure({message: "Action canceled."});
-                }, failure: function(j) { ctxt.failure({message: "Action canceled."});}}));
+                //Asif
+                //that.reRender($.extend({}, ctxt, {success: function() {
+                //    ctxt.failure({message: "Action canceled."});
+                //}, failure: function(j) { ctxt.failure({message: "Action canceled."});}}));
             }
         };
     },
@@ -2112,24 +2119,25 @@ promptTypes.launch_intent = promptTypes.base.extend({
         ctxt.success();
     },
     launch: function(evt) {
-        var ctxt = this.controller.newContext(evt);
+        //Asif
+        //var ctxt = this.controller.newContext(evt);
         var platInfo = opendatakit.getPlatformInfo();
-        $('#block-ui').show().on('swipeleft swiperight click', function(evt) {
-            evt.stopPropagation();
-        });
+        //$('#block-ui').show().on('swipeleft swiperight click', function(evt) {
+        //    evt.stopPropagation();
+        //});
         //We assume that the webkit could go away when an intent is launched,
         //so this prompt's "address" is passed along with the intent.
         var outcome = shim.doAction( opendatakit.getRefId(), this.getPromptPath(), 
             'launch', this.intentString,
             ((this.intentParameters == null) ? null : JSON.stringify(this.intentParameters)));
-        ctxt.log('D',"prompts." + this.type + ".launch " + this.intentString, platInfo.container + " outcome is " + outcome);
-        if (outcome && outcome === "OK") {
-            ctxt.success();
-        } else {
-            ctxt.log("W","prompts." + this.type + " Should be OK got >" + outcome + "<");
-            $('#block-ui').hide().off();
-            ctxt.failure({message: "Action canceled."});
-        }
+        //ctxt.log('D',"prompts." + this.type + ".launch " + this.intentString, platInfo.container + " outcome is " + outcome);
+        //if (outcome && outcome === "OK") {
+        //    ctxt.success();
+        //} else {
+        //    ctxt.log("W","prompts." + this.type + " Should be OK got >" + outcome + "<");
+        //    $('#block-ui').hide().off();
+        //    ctxt.failure({message: "Action canceled."});
+        //}
     },
     /**
      * When the intent returns a result this factory function creates a callback to process it.
@@ -2156,7 +2164,6 @@ promptTypes.launch_intent = promptTypes.base.extend({
                     if (that.type === "geopoint") {
                         that.buttonLabel = "Re-record Location";
                     }
-                    //
                     that.reRender(ctxt);
                 }
             } else {

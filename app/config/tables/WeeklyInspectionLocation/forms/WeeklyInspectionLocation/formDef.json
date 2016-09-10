@@ -1,0 +1,1319 @@
+{
+  "xlsx": {
+    "initial": [
+      {
+        "clause": "do section survey",
+        "_row_num": 2
+      },
+      {
+        "clause": "goto _finalize",
+        "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+        "_row_num": 3
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Area"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Hazardous Waste Label Requirements"
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "area_locations",
+        "name": "area_location",
+        "display": {
+          "text": "Area Location"
+        },
+        "templatePath": "custom_select_dropdown.handlebars",
+        "_row_num": 4
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "generator_information",
+        "display": {
+          "text": "Generator Information"
+        },
+        "_row_num": 5
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "name_waste",
+        "display": {
+          "text": "Name of Waste"
+        },
+        "_row_num": 6
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "associated_hazards",
+        "display": {
+          "text": "Associated Hazards"
+        },
+        "_row_num": 7
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Container Requirements"
+        },
+        "_row_num": 8
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "containers_closed",
+        "display": {
+          "text": "Containers Closed"
+        },
+        "_row_num": 9
+      },
+      {
+        "type": "select_one",
+        "values_list": "passfail",
+        "name": "container_condition",
+        "display": {
+          "text": "Container Condition"
+        },
+        "_row_num": 10
+      },
+      {
+        "type": "select_one",
+        "values_list": "passfail",
+        "name": "aisle_space",
+        "display": {
+          "text": "Aisle Space"
+        },
+        "_row_num": 11
+      },
+      {
+        "type": "select_one",
+        "values_list": "passfail",
+        "name": "house_keeping",
+        "display": {
+          "text": "House Keeping"
+        },
+        "_row_num": 12
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Marking"
+        },
+        "_row_num": 13
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "accum_start_date",
+        "display": {
+          "text": "Accum. Start Date"
+        },
+        "_row_num": 14
+      },
+      {
+        "type": "textarea",
+        "name": "comments",
+        "inputAttributes": {
+          "rows": 4,
+          "maxlength": 250
+        },
+        "_row_num": 15
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 16
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "MAA-1 WWTP",
+        "display": {
+          "text": "MAA-1 WWTP"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "MAA-2 P&M Track 2",
+        "display": {
+          "text": "MAA-2 P&M Track 2"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "MAA-3 AST Tank#4 Waste Oil",
+        "display": {
+          "text": "MAA-3 AST Tank#4 Waste Oil"
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-1 Pump House WWTP 1st Floor",
+        "display": {
+          "text": "SAA-1 Pump House WWTP 1st Floor"
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-2 Pipe Shop",
+        "display": {
+          "text": "SAA-2 Pipe Shop"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-3 Rm 119 Machine Shop",
+        "display": {
+          "text": "SAA-3 Rm 119 Machine Shop"
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-4 Truck Shop Area",
+        "display": {
+          "text": "SAA-4 Truck Shop Area"
+        },
+        "_row_num": 8
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-5 Rubber Tire Room",
+        "display": {
+          "text": "SAA-5 Rubber Tire Room"
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-6 AST 13 Waste Oil",
+        "display": {
+          "text": "SAA-6 AST 13 Waste Oil"
+        },
+        "_row_num": 10
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-7 Locomotive Repair/ Diesel House lower platforms",
+        "display": {
+          "text": "SAA-7 Locomotive Repair/ Diesel House lower platforms"
+        },
+        "_row_num": 11
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment",
+        "display": {
+          "text": "SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment"
+        },
+        "_row_num": 12
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-9 Waste Oil Filters - S&I bay and Wheel Truing",
+        "display": {
+          "text": "SAA-9 Waste Oil Filters - S&I bay and Wheel Truing"
+        },
+        "_row_num": 13
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-10 P&M Bays lower platforms",
+        "display": {
+          "text": "SAA-10 P&M Bays lower platforms"
+        },
+        "_row_num": 14
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-11 P&M Bays Upper Secondary Containments",
+        "display": {
+          "text": "SAA-11 P&M Bays Upper Secondary Containments"
+        },
+        "_row_num": 15
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-12 S&I Bays lower platforms",
+        "display": {
+          "text": "SAA-12 S&I Bays lower platforms"
+        },
+        "_row_num": 16
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "SAA-13 S&I Bays Upper Secondary Containments",
+        "display": {
+          "text": "SAA-13 S&I Bays Upper Secondary Containments"
+        },
+        "_row_num": 17
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "Other: Materials Storage (Shipping/Receiving)",
+        "display": {
+          "text": "Other: Materials Storage (Shipping/Receiving)"
+        },
+        "_row_num": 18
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "Other: Unused Product Area Preventative Maintenance",
+        "display": {
+          "text": "Other: Unused Product Area Preventative Maintenance"
+        },
+        "_row_num": 19
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "Other: Waste Oil Spill Bucket -WWTP Fueling Pad",
+        "display": {
+          "text": "Other: Waste Oil Spill Bucket -WWTP Fueling Pad"
+        },
+        "_row_num": 20
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "UNW-Main Storage Area",
+        "display": {
+          "text": "UNW-Main Storage Area"
+        },
+        "_row_num": 21
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "UNW - Upper Platforms S&I, PM, (multiple)",
+        "display": {
+          "text": "UNW - Upper Platforms S&I, PM, (multiple)"
+        },
+        "_row_num": 22
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "UNW-Coach Repair Track 3",
+        "display": {
+          "text": "UNW-Coach Repair Track 3"
+        },
+        "_row_num": 23
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "UNW-Shipping and Receiving",
+        "display": {
+          "text": "UNW-Shipping and Receiving"
+        },
+        "_row_num": 24
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "BioW-MAA",
+        "display": {
+          "text": "BioW-MAA"
+        },
+        "_row_num": 25
+      },
+      {
+        "choice_list_name": "area_locations",
+        "data_value": "Spill Kits",
+        "display": {
+          "text": "Spill Kits"
+        },
+        "_row_num": 26
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "Yes",
+        "display": {
+          "text": "Yes"
+        },
+        "_row_num": 27
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "No",
+        "display": {
+          "text": "No"
+        },
+        "_row_num": 28
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "NA",
+        "display": {
+          "text": "N/A"
+        },
+        "_row_num": 29
+      },
+      {
+        "choice_list_name": "passfail",
+        "data_value": "Pass",
+        "display": {
+          "text": "Pass"
+        },
+        "_row_num": 30
+      },
+      {
+        "choice_list_name": "passfail",
+        "data_value": "Fail",
+        "display": {
+          "text": "Fail"
+        },
+        "_row_num": 31
+      },
+      {
+        "choice_list_name": "passfail",
+        "data_value": "NA",
+        "display": {
+          "text": "N/A"
+        },
+        "_row_num": 32
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "WeeklyInspectionLocation",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20160901001,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "table_id",
+        "value": "WeeklyInspectionLocation",
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Weekly Inspection Location"
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "instance_name",
+        "value": "area_location",
+        "_row_num": 6
+      }
+    ],
+    "model": [
+      {
+        "name": "inspection_id",
+        "type": "string",
+        "_row_num": 2
+      },
+      {
+        "name": "area_location",
+        "type": "select_one_dropdown",
+        "_row_num": 3
+      },
+      {
+        "name": "generator_information",
+        "type": "select_one",
+        "_row_num": 4
+      },
+      {
+        "name": "name_waste",
+        "type": "select_one",
+        "_row_num": 5
+      },
+      {
+        "name": "associated_hazards",
+        "type": "select_one",
+        "_row_num": 6
+      },
+      {
+        "name": "containers_closed",
+        "type": "select_one",
+        "_row_num": 7
+      },
+      {
+        "name": "container_condition",
+        "type": "select_one",
+        "_row_num": 8
+      },
+      {
+        "name": "aisle_space",
+        "type": "select_one",
+        "_row_num": 9
+      },
+      {
+        "name": "house_keeping",
+        "type": "select_one",
+        "_row_num": 10
+      },
+      {
+        "name": "accum_start_date",
+        "type": "select_one",
+        "_row_num": 11
+      },
+      {
+        "name": "comments",
+        "type": "textarea",
+        "_row_num": 12
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "WeeklyInspectionLocation",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20160901001,
+        "_row_num": 3
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "WeeklyInspectionLocation",
+        "_row_num": 4
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Weekly Inspection Location"
+        },
+        "_row_num": 5
+      },
+      "instance_name": {
+        "setting_name": "instance_name",
+        "value": "area_location",
+        "_row_num": 6
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 5,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 5,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Weekly Inspection Location"
+        },
+        "_row_num": 5
+      }
+    },
+    "choices": {
+      "area_locations": [
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "MAA-1 WWTP",
+          "display": {
+            "text": "MAA-1 WWTP"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "MAA-2 P&M Track 2",
+          "display": {
+            "text": "MAA-2 P&M Track 2"
+          },
+          "_row_num": 3
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "MAA-3 AST Tank#4 Waste Oil",
+          "display": {
+            "text": "MAA-3 AST Tank#4 Waste Oil"
+          },
+          "_row_num": 4
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-1 Pump House WWTP 1st Floor",
+          "display": {
+            "text": "SAA-1 Pump House WWTP 1st Floor"
+          },
+          "_row_num": 5
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-2 Pipe Shop",
+          "display": {
+            "text": "SAA-2 Pipe Shop"
+          },
+          "_row_num": 6
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-3 Rm 119 Machine Shop",
+          "display": {
+            "text": "SAA-3 Rm 119 Machine Shop"
+          },
+          "_row_num": 7
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-4 Truck Shop Area",
+          "display": {
+            "text": "SAA-4 Truck Shop Area"
+          },
+          "_row_num": 8
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-5 Rubber Tire Room",
+          "display": {
+            "text": "SAA-5 Rubber Tire Room"
+          },
+          "_row_num": 9
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-6 AST 13 Waste Oil",
+          "display": {
+            "text": "SAA-6 AST 13 Waste Oil"
+          },
+          "_row_num": 10
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-7 Locomotive Repair/ Diesel House lower platforms",
+          "display": {
+            "text": "SAA-7 Locomotive Repair/ Diesel House lower platforms"
+          },
+          "_row_num": 11
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment",
+          "display": {
+            "text": "SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment"
+          },
+          "_row_num": 12
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-9 Waste Oil Filters - S&I bay and Wheel Truing",
+          "display": {
+            "text": "SAA-9 Waste Oil Filters - S&I bay and Wheel Truing"
+          },
+          "_row_num": 13
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-10 P&M Bays lower platforms",
+          "display": {
+            "text": "SAA-10 P&M Bays lower platforms"
+          },
+          "_row_num": 14
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-11 P&M Bays Upper Secondary Containments",
+          "display": {
+            "text": "SAA-11 P&M Bays Upper Secondary Containments"
+          },
+          "_row_num": 15
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-12 S&I Bays lower platforms",
+          "display": {
+            "text": "SAA-12 S&I Bays lower platforms"
+          },
+          "_row_num": 16
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "SAA-13 S&I Bays Upper Secondary Containments",
+          "display": {
+            "text": "SAA-13 S&I Bays Upper Secondary Containments"
+          },
+          "_row_num": 17
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "Other: Materials Storage (Shipping/Receiving)",
+          "display": {
+            "text": "Other: Materials Storage (Shipping/Receiving)"
+          },
+          "_row_num": 18
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "Other: Unused Product Area Preventative Maintenance",
+          "display": {
+            "text": "Other: Unused Product Area Preventative Maintenance"
+          },
+          "_row_num": 19
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "Other: Waste Oil Spill Bucket -WWTP Fueling Pad",
+          "display": {
+            "text": "Other: Waste Oil Spill Bucket -WWTP Fueling Pad"
+          },
+          "_row_num": 20
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "UNW-Main Storage Area",
+          "display": {
+            "text": "UNW-Main Storage Area"
+          },
+          "_row_num": 21
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "UNW - Upper Platforms S&I, PM, (multiple)",
+          "display": {
+            "text": "UNW - Upper Platforms S&I, PM, (multiple)"
+          },
+          "_row_num": 22
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "UNW-Coach Repair Track 3",
+          "display": {
+            "text": "UNW-Coach Repair Track 3"
+          },
+          "_row_num": 23
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "UNW-Shipping and Receiving",
+          "display": {
+            "text": "UNW-Shipping and Receiving"
+          },
+          "_row_num": 24
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "BioW-MAA",
+          "display": {
+            "text": "BioW-MAA"
+          },
+          "_row_num": 25
+        },
+        {
+          "choice_list_name": "area_locations",
+          "data_value": "Spill Kits",
+          "display": {
+            "text": "Spill Kits"
+          },
+          "_row_num": 26
+        }
+      ],
+      "yesno": [
+        {
+          "choice_list_name": "yesno",
+          "data_value": "Yes",
+          "display": {
+            "text": "Yes"
+          },
+          "_row_num": 27
+        },
+        {
+          "choice_list_name": "yesno",
+          "data_value": "No",
+          "display": {
+            "text": "No"
+          },
+          "_row_num": 28
+        },
+        {
+          "choice_list_name": "yesno",
+          "data_value": "NA",
+          "display": {
+            "text": "N/A"
+          },
+          "_row_num": 29
+        }
+      ],
+      "passfail": [
+        {
+          "choice_list_name": "passfail",
+          "data_value": "Pass",
+          "display": {
+            "text": "Pass"
+          },
+          "_row_num": 30
+        },
+        {
+          "choice_list_name": "passfail",
+          "data_value": "Fail",
+          "display": {
+            "text": "Fail"
+          },
+          "_row_num": 31
+        },
+        {
+          "choice_list_name": "passfail",
+          "data_value": "NA",
+          "display": {
+            "text": "N/A"
+          },
+          "_row_num": 32
+        }
+      ]
+    },
+    "queries": {},
+    "calculates": {},
+    "model": {
+      "inspection_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "inspection_id"
+      },
+      "area_location": {
+        "type": "string",
+        "valuesList": "area_locations",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 3,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "area_location"
+      },
+      "generator_information": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 4,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "generator_information"
+      },
+      "name_waste": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "name_waste"
+      },
+      "associated_hazards": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 6,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "associated_hazards"
+      },
+      "containers_closed": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 7,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "containers_closed"
+      },
+      "container_condition": {
+        "type": "string",
+        "valuesList": "passfail",
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 8,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "container_condition"
+      },
+      "aisle_space": {
+        "type": "string",
+        "valuesList": "passfail",
+        "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 9,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "aisle_space"
+      },
+      "house_keeping": {
+        "type": "string",
+        "valuesList": "passfail",
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 10,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "house_keeping"
+      },
+      "accum_start_date": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 11,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "accum_start_date"
+      },
+      "comments": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 12,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "comments"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": "Weekly Inspection Location"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 4,
+            "_branch_label_enclosing_screen": "initial/_screen4",
+            "promptIdx": 1
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 0
+          },
+          {
+            "clause": "goto _finalize",
+            "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_branch_label": "_finalize",
+            "operationIdx": 1
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 4,
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 3
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 4
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 4,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 4,
+            "operationIdx": 7
+          }
+        ],
+        "branch_label_map": {
+          "_contents": 3,
+          "_screen4": 3,
+          "_finalize": 5
+        }
+      },
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "note",
+            "display": {
+              "text": "Hazardous Waste Label Requirements"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "area_locations",
+            "name": "area_location",
+            "display": {
+              "text": "Area Location"
+            },
+            "templatePath": "custom_select_dropdown.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "generator_information",
+            "display": {
+              "text": "Generator Information"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "name_waste",
+            "display": {
+              "text": "Name of Waste"
+            },
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "associated_hazards",
+            "display": {
+              "text": "Associated Hazards"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "Container Requirements"
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "containers_closed",
+            "display": {
+              "text": "Containers Closed"
+            },
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "select_one",
+            "values_list": "passfail",
+            "name": "container_condition",
+            "display": {
+              "text": "Container Condition"
+            },
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "select_one",
+            "values_list": "passfail",
+            "name": "aisle_space",
+            "display": {
+              "text": "Aisle Space"
+            },
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "select_one",
+            "values_list": "passfail",
+            "name": "house_keeping",
+            "display": {
+              "text": "House Keeping"
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "Marking"
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "accum_start_date",
+            "display": {
+              "text": "Accum. Start Date"
+            },
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "textarea",
+            "name": "comments",
+            "inputAttributes": {
+              "rows": 4,
+              "maxlength": 250
+            },
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 17,
+            "_branch_label_enclosing_screen": "survey/_screen17",
+            "promptIdx": 13
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Area"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 16,
+              "__rowNum__": 15,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 17,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 17,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 17,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen17": 2
+        }
+      }
+    }
+  }
+}

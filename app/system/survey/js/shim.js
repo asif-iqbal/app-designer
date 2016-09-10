@@ -106,8 +106,14 @@ window.shim = window.shim || {
     getLocationInfo: function() {
         // location of the site being inspected
         
-        console.log('location: {"id":"1234","name":"Gas Station","aid":"","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":"15108"}');
-        return '{"id":"1234","name":"Gas Station","aid":"","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":""}';
+        console.log('location: {"id":"1234","name":"Gas Station","aid":"RT 302","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":"15108"}');
+        return '{"id":"1234","name":"Gas Station","aid":"RT 302","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":"15108"}';
+    },
+    getProjectInfo: function() {
+        // project info from daily report screen
+
+		console.log('{"project": "Brockton 620 - 620 Belmont Street, Brockton, MA", "date": "17/8/2016", "weather": "See", "projectno": "Xcdv", "comment": "Ddf", "issuedailyreport": false, "personnel_data": [{  "title": "Fdf",  "starttime": "11:55",  "endtime": "12:55",  "totalhrs": 0,  "selectedpersonnel": "Shoaib Meghani" }], "equipment_data": [{  "quantity": "1",  "totalhrs": "Fdfd",  "selectedequipment": "PID" }], "vehicle_data": [{  "quantity": "12",  "totalhrs": "4",  "selectedvehicle": null }], "consumable_data": [{  "quantity": "5",  "totalhrs": "Fff",  "selectedconsumable": "Nitrile Gloves"}]}');
+   		return '{"location": "Brockton 620 - 620 Belmont Street, Brockton, MA", "date": "17/8/2016", "weather": "See", "projectno": "Xcdv", "comment": "Ddf", "issuedailyreport": false, "personnel_data": [{  "title": "Fdf",  "starttime": "11:55",  "endtime": "12:55",  "totalhrs": 0,  "selectedpersonnel": "Shoaib Meghani" }], "equipment_data": [{  "quantity": "1",  "totalhrs": "Fdfd",  "selectedequipment": "PID" }], "vehicle_data": [{  "quantity": "12",  "totalhrs": "4",  "selectedvehicle": null }], "consumable_data": [{  "quantity": "5",  "totalhrs": "Fff",  "selectedconsumable": "Nitrile Gloves"}]}'
     },
     getDatabaseSettings: function() {
         // version identifies the database schema that the database layer should use.
@@ -596,7 +602,7 @@ window.shim = window.shim || {
                 window.parent.pushPageAndOpen(value.extras.url);
             }
             setTimeout(function() {
-                that.log("D","Opened new browser window for Survey content. Close to continue");
+                that.log("D","Opened new browser window for Form content. Close to continue");
                 landing.signalQueuedActionAvailable();
             }, 1000);
             return "OK";
@@ -614,7 +620,7 @@ window.shim = window.shim || {
                 window.parent.pushPageAndOpen(value.extras.url);
             }
             setTimeout(function() {
-                that.log("D","Opened new browser window for link to another ODK Survey page. Close to continue");
+                that.log("D","Opened new browser window for link to another Go2Data Form page. Close to continue");
                 landing.signalQueuedActionAvailable();
             }, 1000);
             return "OK";

@@ -5,13 +5,14 @@ Github: https://github.com/vadimsva/waitMe
 */
 .waitMe_container {position:relative}
 body.waitMe_container {position:fixed;width:100%;height:100%}
-.waitMe_container .waitMe {position:absolute;top:0;left:0;right:0;bottom:0;z-index:9989;text-align:center;height:240px;background-color:lightgray;}
+.waitMe_container .waitMe {position:absolute;top:0;left:0;right:0;bottom:0;z-index:9989;text-align:center;height:100;    background: rgb(80, 95, 114) !important;}
 .waitMe_container .waitMe * {font-family:sans-serif;font-size:14px;font-weight:initial;font-style:initial;color:initial;text-decoration:initial;text-transform:initial;padding:initial;margin:initial}
 .waitMe_container .waitMe .waitMe_content {position:absolute;width:100%;top:50%}
 .waitMe_container .waitMe .waitMe_progress {position:relative}
 .waitMe_container .waitMe .waitMe_progress > div {-webkit-animation-fill-mode:both;animation-fill-mode:both;display:inline-block}
-.waitMe_container .waitMe .waitMe_text {position:relative;margin:20px 0 0}
+.waitMe_container .waitMe .waitMe_text {position:relative;margin:20px 0 0; color:#fff;}
 
+#previewscreen body.waitMe_container .waitMe.hidemeNow {display:none !important} 
 
 /* bounce */
 .waitMe_container .waitMe_progress.bounce > div {

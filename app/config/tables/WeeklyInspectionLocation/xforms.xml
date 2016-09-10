@@ -1,0 +1,67 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>WeeklyInspectionLocation</h:title>
+  <model>
+    <instance>
+      <data id="WeeklyInspectionLocation">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <accum_start_date/>
+        <aisle_space/>
+        <area_location/>
+        <associated_hazards/>
+        <comments/>
+        <container_condition/>
+        <containers_closed/>
+        <generator_information/>
+        <house_keeping/>
+        <inspection_id/>
+        <name_waste/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/accum_start_date" type="string"/>
+    <bind nodeset="/data/aisle_space" type="string"/>
+    <bind nodeset="/data/area_location" type="string"/>
+    <bind nodeset="/data/associated_hazards" type="string"/>
+    <bind nodeset="/data/comments" type="string"/>
+    <bind nodeset="/data/container_condition" type="string"/>
+    <bind nodeset="/data/containers_closed" type="string"/>
+    <bind nodeset="/data/generator_information" type="string"/>
+    <bind nodeset="/data/house_keeping" type="string"/>
+    <bind nodeset="/data/inspection_id" type="string"/>
+    <bind nodeset="/data/name_waste" type="string"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+ </h:body> 
+</h:html>
