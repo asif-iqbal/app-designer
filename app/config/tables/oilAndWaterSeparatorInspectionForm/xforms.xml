@@ -81,6 +81,7 @@
         <ows_cannot_be_fixed_description/>
         <ows_discharge_type/>
         <ows_functions/>
+        <ows_id/>
         <ows_manifest_bol/>
         <ows_needs_cleaned/>
         <ows_needs_cleaned_description/>
@@ -199,6 +200,7 @@
     <bind nodeset="/data/ows_cannot_be_fixed_description" type="string"/>
     <bind nodeset="/data/ows_discharge_type" type="string"/>
     <bind nodeset="/data/ows_functions" type="string"/>
+    <bind nodeset="/data/ows_id" type="string"/>
     <bind nodeset="/data/ows_manifest_bol" type="string"/>
     <bind nodeset="/data/ows_needs_cleaned" type="string"/>
     <bind nodeset="/data/ows_needs_cleaned_description" type="string"/>

@@ -1847,74 +1847,214 @@
         "_row_num": 9
       },
       {
-        "calculation_name": "personnelTitle",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].title){\n    return opendatakit.getProjectInfo().personnel_data[idx].title;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelTitle0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['title']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['title'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 10
       },
       {
-        "calculation_name": "personnelName",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].selectedpersonnel){\n    return opendatakit.getProjectInfo().personnel_data[idx].selectedpersonnel;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelName0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['selectedpersonnel']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['selectedpersonnel'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 11
       },
       {
-        "calculation_name": "personnelStartTime",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].starttime){\n    return opendatakit.getProjectInfo().personnel_data[idx].starttime;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelStartTime0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['starttime']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['starttime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 12
       },
       {
-        "calculation_name": "personnelEndTime",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].endtime){\n    return opendatakit.getProjectInfo().personnel_data[idx].endtime;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelEndTime0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['endtime']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['endtime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 13
       },
       {
-        "calculation_name": "personnelTotalHrs",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().personnel_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelTotalHrs0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['totalhrs']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 14
       },
       {
-        "calculation_name": "equipmentName",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].selectedequipment){\n    return opendatakit.getProjectInfo().equipment_data[idx].selectedequipment;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelTitle1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['title']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['title'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 15
       },
       {
-        "calculation_name": "equipmentQuantity",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].quantity){\n    return opendatakit.getProjectInfo().equipment_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelName1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['selectedpersonnel']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['selectedpersonnel'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 16
       },
       {
-        "calculation_name": "equipmentTotalHrs",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().equipment_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelStartTime1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['starttime']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['starttime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 17
       },
       {
-        "calculation_name": "vehicleName",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].selectedvehicle){\n    return opendatakit.getProjectInfo().vehicle_data[idx].selectedvehicle;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelEndTime1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['endtime']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['endtime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 18
       },
       {
-        "calculation_name": "vehicleQuantity",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].quantity){\n    return opendatakit.getProjectInfo().vehicle_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelTotalHrs1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['totalhrs']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 19
       },
       {
-        "calculation_name": "vehicleTotalHrs",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().vehicle_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelTitle2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['title']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['title'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 20
       },
       {
-        "calculation_name": "consumableName",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].selectedconsumable){\n    return opendatakit.getProjectInfo().consumable_data[idx].selectedconsumable;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelName2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['selectedpersonnel']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['selectedpersonnel'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 21
       },
       {
-        "calculation_name": "consumableQuantity",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].quantity){\n    return opendatakit.getProjectInfo().consumable_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelStartTime2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['starttime']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['starttime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 22
       },
       {
-        "calculation_name": "consumableTotalHrs",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().consumable_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+        "calculation_name": "personnelEndTime2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['endtime']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['endtime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 23
+      },
+      {
+        "calculation_name": "personnelTotalHrs2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 24
+      },
+      {
+        "calculation_name": "equipmentName0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][0] && opendatakit.getProjectInfo()['equipment_data'][0]['selectedequipment']){\n    return opendatakit.getProjectInfo()['equipment_data'][0]['selectedequipment'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 25
+      },
+      {
+        "calculation_name": "equipmentQuantity0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][0] && opendatakit.getProjectInfo()['equipment_data'][0]['quantity']){\n    return opendatakit.getProjectInfo()['equipment_data'][0]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 26
+      },
+      {
+        "calculation_name": "equipmentTotalHrs0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][0] && opendatakit.getProjectInfo()['equipment_data'][0]['totalhrs']){\n    return opendatakit.getProjectInfo()['equipment_data'][0]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 27
+      },
+      {
+        "calculation_name": "equipmentName1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][1] && opendatakit.getProjectInfo()['equipment_data'][1]['selectedequipment']){\n    return opendatakit.getProjectInfo()['equipment_data'][1]['selectedequipment'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 28
+      },
+      {
+        "calculation_name": "equipmentQuantity1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][1] && opendatakit.getProjectInfo()['equipment_data'][1]['quantity']){\n    return opendatakit.getProjectInfo()['equipment_data'][1]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 29
+      },
+      {
+        "calculation_name": "equipmentTotalHrs1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][1] && opendatakit.getProjectInfo()['equipment_data'][1]['totalhrs']){\n    return opendatakit.getProjectInfo()['equipment_data'][1]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 30
+      },
+      {
+        "calculation_name": "equipmentName2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][2] && opendatakit.getProjectInfo()['equipment_data'][2]['selectedequipment']){\n    return opendatakit.getProjectInfo()['equipment_data'][2]['selectedequipment'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 31
+      },
+      {
+        "calculation_name": "equipmentQuantity2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][2] && opendatakit.getProjectInfo()['equipment_data'][2]['quantity']){\n    return opendatakit.getProjectInfo()['equipment_data'][2]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 32
+      },
+      {
+        "calculation_name": "equipmentTotalHrs2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][2] && opendatakit.getProjectInfo()['equipment_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['equipment_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 33
+      },
+      {
+        "calculation_name": "vehicleName0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][0] && opendatakit.getProjectInfo()['vehicle_data'][0]['selectedvehicle']){\n    return opendatakit.getProjectInfo()['vehicle_data'][0]['selectedvehicle'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 34
+      },
+      {
+        "calculation_name": "vehicleQuantity0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][0] && opendatakit.getProjectInfo()['vehicle_data'][0]['quantity']){\n    return opendatakit.getProjectInfo()['vehicle_data'][0]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 35
+      },
+      {
+        "calculation_name": "vehicleTotalHrs0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][0] && opendatakit.getProjectInfo()['vehicle_data'][0]['totalhrs']){\n    return opendatakit.getProjectInfo()['vehicle_data'][0]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 36
+      },
+      {
+        "calculation_name": "vehicleName1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][1] && opendatakit.getProjectInfo()['vehicle_data'][1]['selectedvehicle']){\n    return opendatakit.getProjectInfo()['vehicle_data'][1]['selectedvehicle'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 37
+      },
+      {
+        "calculation_name": "vehicleQuantity1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][1] && opendatakit.getProjectInfo()['vehicle_data'][1]['quantity']){\n    return opendatakit.getProjectInfo()['vehicle_data'][1]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 38
+      },
+      {
+        "calculation_name": "vehicleTotalHrs1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][1] && opendatakit.getProjectInfo()['vehicle_data'][1]['totalhrs']){\n    return opendatakit.getProjectInfo()['vehicle_data'][1]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 39
+      },
+      {
+        "calculation_name": "vehicleName2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][2] && opendatakit.getProjectInfo()['vehicle_data'][2]['selectedvehicle']){\n    return opendatakit.getProjectInfo()['vehicle_data'][2]['selectedvehicle'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 40
+      },
+      {
+        "calculation_name": "vehicleQuantity2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][2] && opendatakit.getProjectInfo()['vehicle_data'][2]['quantity']){\n    return opendatakit.getProjectInfo()['vehicle_data'][2]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 41
+      },
+      {
+        "calculation_name": "vehicleTotalHrs2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][2] && opendatakit.getProjectInfo()['vehicle_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['vehicle_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 42
+      },
+      {
+        "calculation_name": "consumableName0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][0] && opendatakit.getProjectInfo()['consumable_data'][0]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][0]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 43
+      },
+      {
+        "calculation_name": "consumableQuantity0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][0] && opendatakit.getProjectInfo()['consumable_data'][0]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][0]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 44
+      },
+      {
+        "calculation_name": "consumableTotalHrs0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][0] && opendatakit.getProjectInfo()['consumable_data'][0]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][0]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 45
+      },
+      {
+        "calculation_name": "consumableName1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][1] && opendatakit.getProjectInfo()['consumable_data'][1]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][1]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 46
+      },
+      {
+        "calculation_name": "consumableQuantity1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][1] && opendatakit.getProjectInfo()['consumable_data'][1]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][1]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 47
+      },
+      {
+        "calculation_name": "consumableTotalHrs1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][1] && opendatakit.getProjectInfo()['consumable_data'][1]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][1]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 48
+      },
+      {
+        "calculation_name": "consumableName2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][2] && opendatakit.getProjectInfo()['consumable_data'][2]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][2]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 49
+      },
+      {
+        "calculation_name": "consumableQuantity2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][2] && opendatakit.getProjectInfo()['consumable_data'][2]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][2]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 50
+      },
+      {
+        "calculation_name": "consumableTotalHrs2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][2] && opendatakit.getProjectInfo()['consumable_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 51
       }
     ]
   },
@@ -2615,75 +2755,215 @@
         "calculation": "(function(){\n  if(opendatakit.getProjectInfo().issuedailyreport== ''){\n    return ' ';\n  } else {\n    return opendatakit.getProjectInfo().issuedailyreport;\n  }\n})()",
         "_row_num": 9
       },
-      "personnelTitle": {
-        "calculation_name": "personnelTitle",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].title){\n    return opendatakit.getProjectInfo().personnel_data[idx].title;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelTitle0": {
+        "calculation_name": "personnelTitle0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['title']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['title'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 10
       },
-      "personnelName": {
-        "calculation_name": "personnelName",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].selectedpersonnel){\n    return opendatakit.getProjectInfo().personnel_data[idx].selectedpersonnel;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelName0": {
+        "calculation_name": "personnelName0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['selectedpersonnel']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['selectedpersonnel'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 11
       },
-      "personnelStartTime": {
-        "calculation_name": "personnelStartTime",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].starttime){\n    return opendatakit.getProjectInfo().personnel_data[idx].starttime;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelStartTime0": {
+        "calculation_name": "personnelStartTime0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['starttime']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['starttime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 12
       },
-      "personnelEndTime": {
-        "calculation_name": "personnelEndTime",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].endtime){\n    return opendatakit.getProjectInfo().personnel_data[idx].endtime;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelEndTime0": {
+        "calculation_name": "personnelEndTime0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['endtime']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['endtime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 13
       },
-      "personnelTotalHrs": {
-        "calculation_name": "personnelTotalHrs",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().personnel_data && opendatakit.getProjectInfo().personnel_data[idx] && opendatakit.getProjectInfo().personnel_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().personnel_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelTotalHrs0": {
+        "calculation_name": "personnelTotalHrs0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][0] && opendatakit.getProjectInfo()['personnel_data'][0]['totalhrs']){\n    return opendatakit.getProjectInfo()['personnel_data'][0]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 14
       },
-      "equipmentName": {
-        "calculation_name": "equipmentName",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].selectedequipment){\n    return opendatakit.getProjectInfo().equipment_data[idx].selectedequipment;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelTitle1": {
+        "calculation_name": "personnelTitle1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['title']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['title'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 15
       },
-      "equipmentQuantity": {
-        "calculation_name": "equipmentQuantity",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].quantity){\n    return opendatakit.getProjectInfo().equipment_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelName1": {
+        "calculation_name": "personnelName1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['selectedpersonnel']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['selectedpersonnel'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 16
       },
-      "equipmentTotalHrs": {
-        "calculation_name": "equipmentTotalHrs",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().equipment_data && opendatakit.getProjectInfo().equipment_data[idx] && opendatakit.getProjectInfo().equipment_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().equipment_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelStartTime1": {
+        "calculation_name": "personnelStartTime1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['starttime']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['starttime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 17
       },
-      "vehicleName": {
-        "calculation_name": "vehicleName",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].selectedvehicle){\n    return opendatakit.getProjectInfo().vehicle_data[idx].selectedvehicle;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelEndTime1": {
+        "calculation_name": "personnelEndTime1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['endtime']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['endtime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 18
       },
-      "vehicleQuantity": {
-        "calculation_name": "vehicleQuantity",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].quantity){\n    return opendatakit.getProjectInfo().vehicle_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelTotalHrs1": {
+        "calculation_name": "personnelTotalHrs1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][1] && opendatakit.getProjectInfo()['personnel_data'][1]['totalhrs']){\n    return opendatakit.getProjectInfo()['personnel_data'][1]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 19
       },
-      "vehicleTotalHrs": {
-        "calculation_name": "vehicleTotalHrs",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().vehicle_data && opendatakit.getProjectInfo().vehicle_data[idx] && opendatakit.getProjectInfo().vehicle_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().vehicle_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelTitle2": {
+        "calculation_name": "personnelTitle2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['title']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['title'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 20
       },
-      "consumableName": {
-        "calculation_name": "consumableName",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].selectedconsumable){\n    return opendatakit.getProjectInfo().consumable_data[idx].selectedconsumable;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelName2": {
+        "calculation_name": "personnelName2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['selectedpersonnel']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['selectedpersonnel'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 21
       },
-      "consumableQuantity": {
-        "calculation_name": "consumableQuantity",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].quantity){\n    return opendatakit.getProjectInfo().consumable_data[idx].quantity;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelStartTime2": {
+        "calculation_name": "personnelStartTime2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['starttime']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['starttime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 22
       },
-      "consumableTotalHrs": {
-        "calculation_name": "consumableTotalHrs",
-        "calculation": "(function(idx){\n  if(opendatakit.getProjectInfo().consumable_data && opendatakit.getProjectInfo().consumable_data[idx] && opendatakit.getProjectInfo().consumable_data[idx].totalhrs){\n    return opendatakit.getProjectInfo().consumable_data[idx].totalhrs;\n  } else {\n    return ' ';\n  }\n})()",
+      "personnelEndTime2": {
+        "calculation_name": "personnelEndTime2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['endtime']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['endtime'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 23
+      },
+      "personnelTotalHrs2": {
+        "calculation_name": "personnelTotalHrs2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['personnel_data'] && opendatakit.getProjectInfo()['personnel_data'][2] && opendatakit.getProjectInfo()['personnel_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['personnel_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 24
+      },
+      "equipmentName0": {
+        "calculation_name": "equipmentName0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][0] && opendatakit.getProjectInfo()['equipment_data'][0]['selectedequipment']){\n    return opendatakit.getProjectInfo()['equipment_data'][0]['selectedequipment'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 25
+      },
+      "equipmentQuantity0": {
+        "calculation_name": "equipmentQuantity0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][0] && opendatakit.getProjectInfo()['equipment_data'][0]['quantity']){\n    return opendatakit.getProjectInfo()['equipment_data'][0]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 26
+      },
+      "equipmentTotalHrs0": {
+        "calculation_name": "equipmentTotalHrs0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][0] && opendatakit.getProjectInfo()['equipment_data'][0]['totalhrs']){\n    return opendatakit.getProjectInfo()['equipment_data'][0]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 27
+      },
+      "equipmentName1": {
+        "calculation_name": "equipmentName1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][1] && opendatakit.getProjectInfo()['equipment_data'][1]['selectedequipment']){\n    return opendatakit.getProjectInfo()['equipment_data'][1]['selectedequipment'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 28
+      },
+      "equipmentQuantity1": {
+        "calculation_name": "equipmentQuantity1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][1] && opendatakit.getProjectInfo()['equipment_data'][1]['quantity']){\n    return opendatakit.getProjectInfo()['equipment_data'][1]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 29
+      },
+      "equipmentTotalHrs1": {
+        "calculation_name": "equipmentTotalHrs1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][1] && opendatakit.getProjectInfo()['equipment_data'][1]['totalhrs']){\n    return opendatakit.getProjectInfo()['equipment_data'][1]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 30
+      },
+      "equipmentName2": {
+        "calculation_name": "equipmentName2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][2] && opendatakit.getProjectInfo()['equipment_data'][2]['selectedequipment']){\n    return opendatakit.getProjectInfo()['equipment_data'][2]['selectedequipment'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 31
+      },
+      "equipmentQuantity2": {
+        "calculation_name": "equipmentQuantity2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][2] && opendatakit.getProjectInfo()['equipment_data'][2]['quantity']){\n    return opendatakit.getProjectInfo()['equipment_data'][2]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 32
+      },
+      "equipmentTotalHrs2": {
+        "calculation_name": "equipmentTotalHrs2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['equipment_data'] && opendatakit.getProjectInfo()['equipment_data'][2] && opendatakit.getProjectInfo()['equipment_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['equipment_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 33
+      },
+      "vehicleName0": {
+        "calculation_name": "vehicleName0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][0] && opendatakit.getProjectInfo()['vehicle_data'][0]['selectedvehicle']){\n    return opendatakit.getProjectInfo()['vehicle_data'][0]['selectedvehicle'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 34
+      },
+      "vehicleQuantity0": {
+        "calculation_name": "vehicleQuantity0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][0] && opendatakit.getProjectInfo()['vehicle_data'][0]['quantity']){\n    return opendatakit.getProjectInfo()['vehicle_data'][0]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 35
+      },
+      "vehicleTotalHrs0": {
+        "calculation_name": "vehicleTotalHrs0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][0] && opendatakit.getProjectInfo()['vehicle_data'][0]['totalhrs']){\n    return opendatakit.getProjectInfo()['vehicle_data'][0]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 36
+      },
+      "vehicleName1": {
+        "calculation_name": "vehicleName1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][1] && opendatakit.getProjectInfo()['vehicle_data'][1]['selectedvehicle']){\n    return opendatakit.getProjectInfo()['vehicle_data'][1]['selectedvehicle'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 37
+      },
+      "vehicleQuantity1": {
+        "calculation_name": "vehicleQuantity1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][1] && opendatakit.getProjectInfo()['vehicle_data'][1]['quantity']){\n    return opendatakit.getProjectInfo()['vehicle_data'][1]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 38
+      },
+      "vehicleTotalHrs1": {
+        "calculation_name": "vehicleTotalHrs1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][1] && opendatakit.getProjectInfo()['vehicle_data'][1]['totalhrs']){\n    return opendatakit.getProjectInfo()['vehicle_data'][1]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 39
+      },
+      "vehicleName2": {
+        "calculation_name": "vehicleName2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][2] && opendatakit.getProjectInfo()['vehicle_data'][2]['selectedvehicle']){\n    return opendatakit.getProjectInfo()['vehicle_data'][2]['selectedvehicle'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 40
+      },
+      "vehicleQuantity2": {
+        "calculation_name": "vehicleQuantity2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][2] && opendatakit.getProjectInfo()['vehicle_data'][2]['quantity']){\n    return opendatakit.getProjectInfo()['vehicle_data'][2]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 41
+      },
+      "vehicleTotalHrs2": {
+        "calculation_name": "vehicleTotalHrs2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['vehicle_data'] && opendatakit.getProjectInfo()['vehicle_data'][2] && opendatakit.getProjectInfo()['vehicle_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['vehicle_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 42
+      },
+      "consumableName0": {
+        "calculation_name": "consumableName0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][0] && opendatakit.getProjectInfo()['consumable_data'][0]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][0]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 43
+      },
+      "consumableQuantity0": {
+        "calculation_name": "consumableQuantity0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][0] && opendatakit.getProjectInfo()['consumable_data'][0]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][0]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 44
+      },
+      "consumableTotalHrs0": {
+        "calculation_name": "consumableTotalHrs0",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][0] && opendatakit.getProjectInfo()['consumable_data'][0]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][0]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 45
+      },
+      "consumableName1": {
+        "calculation_name": "consumableName1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][1] && opendatakit.getProjectInfo()['consumable_data'][1]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][1]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 46
+      },
+      "consumableQuantity1": {
+        "calculation_name": "consumableQuantity1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][1] && opendatakit.getProjectInfo()['consumable_data'][1]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][1]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 47
+      },
+      "consumableTotalHrs1": {
+        "calculation_name": "consumableTotalHrs1",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][1] && opendatakit.getProjectInfo()['consumable_data'][1]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][1]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 48
+      },
+      "consumableName2": {
+        "calculation_name": "consumableName2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][2] && opendatakit.getProjectInfo()['consumable_data'][2]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][2]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 49
+      },
+      "consumableQuantity2": {
+        "calculation_name": "consumableQuantity2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][2] && opendatakit.getProjectInfo()['consumable_data'][2]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][2]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 50
+      },
+      "consumableTotalHrs2": {
+        "calculation_name": "consumableTotalHrs2",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][2] && opendatakit.getProjectInfo()['consumable_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 51
       }
     },
     "model": {

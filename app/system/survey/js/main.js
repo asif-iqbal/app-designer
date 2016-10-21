@@ -17,7 +17,7 @@ requirejs.config({
         // third-party libraries we depend upon 
         jquery : 'libs/jquery-1.10.2.min',
         bootstrap : 'libs/bootstrap-3.1.1-dist/js/bootstrap.min',
-        moment : 'libs/eonasdan/moment',     
+        moment : 'libs/eonasdan/moment.min',     
         datetimepicker : 'libs/eonasdan/bootstrap-datetimepicker',
         spinner : 'libs/spinner/waitMe.min',
         backbone : 'libs/backbone-min',
@@ -47,8 +47,8 @@ requirejs.config({
         //jqmConfig : 'survey/js/jqmConfig',
         handlebarsHelpers : 'survey/js/handlebarsHelpers',
         formulaFunctions : 'survey/js/formulaFunctions',
-        jqueryCsv : 'libs/jquery-csv/src/jquery.csv',
-        XRegExp : 'libs/XRegExp-All-3.0.0-pre-2014-12-24'
+        jqueryCsv : 'libs/jquery-csv-0.8.2/src/jquery.csv.min',
+        XRegExp : 'libs/XRegExp-All-3.0.0-pre-2014-12-24.min'
     },
     shim: {
         'bootstrap': {

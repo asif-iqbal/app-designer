@@ -51,8 +51,16 @@
         <equipment_totalhrs_1/>
         <equipment_totalhrs_2/>
         <evidence_dry_water/>
+        <geo_info/>
         <good_housekeeping_procedures/>
         <inspection_id/>
+        <loc_aid/>
+        <loc_city/>
+        <loc_client/>
+        <loc_name/>
+        <loc_state/>
+        <loc_streetAddress/>
+        <loc_zip/>
         <locomotive_storage/>
         <non_incidental_spills/>
         <operations_storage_material/>
@@ -72,6 +80,9 @@
         <personnel_totalhrs_1/>
         <personnel_totalhrs_2/>
         <problems_found/>
+        <project_comment/>
+        <project_daily_report/>
+        <project_number/>
         <quarter_name/>
         <sample_date/>
         <sign/>
@@ -129,8 +140,16 @@
     <bind nodeset="/data/equipment_totalhrs_1" type="string"/>
     <bind nodeset="/data/equipment_totalhrs_2" type="string"/>
     <bind nodeset="/data/evidence_dry_water" type="string"/>
+    <bind nodeset="/data/geo_info" type="geopoint"/>
     <bind nodeset="/data/good_housekeeping_procedures" type="string"/>
     <bind nodeset="/data/inspection_id" type="string"/>
+    <bind nodeset="/data/loc_aid" type="string"/>
+    <bind nodeset="/data/loc_city" type="string"/>
+    <bind nodeset="/data/loc_client" type="string"/>
+    <bind nodeset="/data/loc_name" type="string"/>
+    <bind nodeset="/data/loc_state" type="string"/>
+    <bind nodeset="/data/loc_streetAddress" type="string"/>
+    <bind nodeset="/data/loc_zip" type="string"/>
     <bind nodeset="/data/locomotive_storage" type="string"/>
     <bind nodeset="/data/non_incidental_spills" type="string"/>
     <bind nodeset="/data/operations_storage_material" type="string"/>
@@ -150,6 +169,9 @@
     <bind nodeset="/data/personnel_totalhrs_1" type="string"/>
     <bind nodeset="/data/personnel_totalhrs_2" type="string"/>
     <bind nodeset="/data/problems_found" type="string"/>
+    <bind nodeset="/data/project_comment" type="string"/>
+    <bind nodeset="/data/project_daily_report" type="string"/>
+    <bind nodeset="/data/project_number" type="string"/>
     <bind nodeset="/data/quarter_name" type="string"/>
     <bind nodeset="/data/sample_date" type="string"/>
     <bind nodeset="/data/sign" type="binary"/>

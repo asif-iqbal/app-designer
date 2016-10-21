@@ -962,3 +962,7 @@ color: #4D5F74;
     display: inline-block;
     width: auto;
 }
+
+.form-group.hiddenGroup {
+    margin-bottom: 0px;
+}

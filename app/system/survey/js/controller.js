@@ -386,6 +386,7 @@ return {
                     if('condition' in op && !op.condition()) {
                         path = that.getNextOperationPath(path);
                     } else {
+                        alert(op._section_name + "/" + op._branch_label)
                         path = that.getOperationPath(op._section_name + "/" + op._branch_label);
                     }
                     break;
@@ -408,6 +409,32 @@ return {
                     var combo = that.findPreviousScreenAndState(false);
                     path = combo.path;
                     state = combo.state;
+
+                    alert(path + '-' + state + '-' + opendatakit.initialScreenPath + '-' + opendatakit.getSettingValue('form_id') + '-' + opendatakit.getRefId());
+                    if (path == 'initial/_contents') {
+                        var complete = ('calculation' in op) ? op.calculation() : false;
+                        var siformId = opendatakit.getSettingValue('form_id');
+                        var simodel = opendatakit.getCurrentModel();
+                        var siinstanceId = opendatakit.getCurrentInstanceId();
+                        database.save_all_changes($.extend({},ctxt,{success:function() {
+                                that.screenManager.hideSpinnerOverlay();
+                                shim.saveAllChangesCompleted( opendatakit.getRefId(), opendatakit.getCurrentInstanceId(), complete);
+                                // the shim should terminate the window... if not, at least leave the instance.
+                                that.leaveInstance(ctxt);
+                            },
+                            failure:function(m) {
+                                shim.saveAllChangesFailed( opendatakit.getRefId(), opendatakit.getCurrentInstanceId());
+                                // advance to next operation if we fail...
+                                path = that.getNextOperationPath(path);
+                                op = that.getOperation(path);
+                                if ( op !== undefined && op !== null ) {
+                                    that._doActionAtLoop(ctxt, op, op._token_type );
+                                } else {
+                                    ctxt.failure(that.moveFailureMessage);
+                                }
+                            }}), simodel, siformId, siinstanceId, complete);
+                        return;
+                    }
 
                     if ( path == null ) {
                         path = opendatakit.initialScreenPath;
@@ -978,6 +1005,7 @@ return {
             ctxt.failure(that.moveFailureMessage);
             return;
         }
+        alert('path-'+path + ' - ' + '_token_type-'+op._token_type);
         that._doActionAt(ctxt, op, op._token_type, false);
     },
     /*

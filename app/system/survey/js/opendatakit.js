@@ -83,6 +83,10 @@ return {
         if ( this.projectInfo === undefined || this.projectInfo === null ) {
             var jsonString = shim.getProjectInfo();
             this.projectInfo = JSON.parse(jsonString);
+            console.log(this.projectInfo);
+            console.log(this.projectInfo['personnel_data']);
+            console.log(this.projectInfo['personnel_data'][0]);
+            console.log(this.projectInfo['personnel_data'][0]['title']);
         }
         return this.projectInfo;
     },

@@ -65,6 +65,7 @@
         <equipment_totalhrs_0/>
         <equipment_totalhrs_1/>
         <equipment_totalhrs_2/>
+        <geo_info/>
         <inspection_id/>
         <inspector_name/>
         <level_gauges_alarm/>
@@ -75,6 +76,7 @@
         <loading_lines_damaged_fu/>
         <loc_aid/>
         <loc_city/>
+        <loc_client/>
         <loc_name/>
         <loc_state/>
         <loc_streetAddress/>
@@ -116,6 +118,7 @@
         <tank_area_blocked/>
         <tank_area_blocked_com/>
         <tank_area_blocked_fu/>
+        <tank_id/>
         <tank_surface_rust/>
         <tank_surface_rust_com/>
         <tank_surface_rust_fu/>
@@ -190,6 +193,7 @@
     <bind nodeset="/data/equipment_totalhrs_0" type="string"/>
     <bind nodeset="/data/equipment_totalhrs_1" type="string"/>
     <bind nodeset="/data/equipment_totalhrs_2" type="string"/>
+    <bind nodeset="/data/geo_info" type="geopoint"/>
     <bind nodeset="/data/inspection_id" type="string"/>
     <bind nodeset="/data/inspector_name" type="string"/>
     <bind nodeset="/data/level_gauges_alarm" type="string"/>
@@ -200,6 +204,7 @@
     <bind nodeset="/data/loading_lines_damaged_fu" type="string"/>
     <bind nodeset="/data/loc_aid" type="string"/>
     <bind nodeset="/data/loc_city" type="string"/>
+    <bind nodeset="/data/loc_client" type="string"/>
     <bind nodeset="/data/loc_name" type="string"/>
     <bind nodeset="/data/loc_state" type="string"/>
     <bind nodeset="/data/loc_streetAddress" type="string"/>
@@ -241,6 +246,7 @@
     <bind nodeset="/data/tank_area_blocked" type="string"/>
     <bind nodeset="/data/tank_area_blocked_com" type="string"/>
     <bind nodeset="/data/tank_area_blocked_fu" type="string"/>
+    <bind nodeset="/data/tank_id" type="string"/>
     <bind nodeset="/data/tank_surface_rust" type="string"/>
     <bind nodeset="/data/tank_surface_rust_com" type="string"/>
     <bind nodeset="/data/tank_surface_rust_fu" type="string"/>

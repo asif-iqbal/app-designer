@@ -30,12 +30,18 @@
       {
         "type": "string",
         "name": "capacity",
+        "display": {
+          "text": "Capacity"
+        },
         "templatePath": "string_input_type.handlebars",
         "_row_num": 4
       },
       {
         "type": "string",
         "name": "contents",
+        "display": {
+          "text": "Contents"
+        },
         "templatePath": "string_input_type.handlebars",
         "_row_num": 5
       },
@@ -68,24 +74,18 @@
         "_row_num": 9
       },
       {
-        "type": "string",
-        "name": "spillage_staining_custom",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 10
-      },
-      {
         "type": "select_one",
         "values_list": "yesno",
         "name": "container_damaged_leaking",
         "display": {
           "text": "Container Damaged or Leaking"
         },
-        "_row_num": 11
+        "_row_num": 10
       },
       {
         "clause": "if",
         "condition": "data('container_damaged_leaking') == 'YES'",
-        "_row_num": 12
+        "_row_num": 11
       },
       {
         "type": "select_one_dropdown",
@@ -95,17 +95,11 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 13
+        "_row_num": 12
       },
       {
         "clause": "end if",
-        "_row_num": 14
-      },
-      {
-        "type": "string",
-        "name": "container_damaged_leaking_custom",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 15
+        "_row_num": 13
       },
       {
         "type": "select_one",
@@ -114,12 +108,12 @@
         "display": {
           "text": "Unstable Surface"
         },
-        "_row_num": 16
+        "_row_num": 14
       },
       {
         "clause": "if",
         "condition": "data('unstable_surface') == 'YES'",
-        "_row_num": 17
+        "_row_num": 15
       },
       {
         "type": "select_one_dropdown",
@@ -129,17 +123,11 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 18
+        "_row_num": 16
       },
       {
         "clause": "end if",
-        "_row_num": 19
-      },
-      {
-        "type": "string",
-        "name": "unstable_surface_custom",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 20
+        "_row_num": 17
       },
       {
         "type": "select_one",
@@ -148,12 +136,12 @@
         "display": {
           "text": "Access Blocked for Inspection"
         },
-        "_row_num": 21
+        "_row_num": 18
       },
       {
         "clause": "if",
         "condition": "data('access_blocked_inspection') == 'YES'",
-        "_row_num": 22
+        "_row_num": 19
       },
       {
         "type": "select_one_dropdown",
@@ -163,36 +151,58 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 23
+        "_row_num": 20
       },
       {
         "clause": "end if",
-        "_row_num": 24
-      },
-      {
-        "type": "string",
-        "name": "access_blocked_inspection_custom",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 25
+        "_row_num": 21
       },
       {
         "type": "select_one",
         "values_list": "yesno",
         "name": "guage_doesnot_function",
         "display": {
-          "text": "Guage Does Not Function"
+          "text": "Gauge Does Not Function"
         },
-        "_row_num": 26
+        "_row_num": 22
       },
       {
         "clause": "if",
         "condition": "data('guage_doesnot_function') == 'YES'",
-        "_row_num": 27
+        "_row_num": 23
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "guage_doesnot_function_fu",
+        "display": {
+          "text": "If YES, follow up"
+        },
+        "templatePath": "custom_select_dropdown.handlebars",
+        "_row_num": 24
+      },
+      {
+        "clause": "end if",
+        "_row_num": 25
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "label_sign_missing",
+        "display": {
+          "text": "Labels/Signs Missing"
+        },
+        "_row_num": 26
+      },
+      {
+        "clause": "if",
+        "condition": "data('label_sign_missing') == 'YES'",
+        "_row_num": 27
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "followup_values",
+        "name": "label_sign_missing_fu",
         "display": {
           "text": "If YES, follow up"
         },
@@ -204,58 +214,18 @@
         "_row_num": 29
       },
       {
-        "type": "string",
-        "name": "guage_doesnot_function_custom",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 30
-      },
-      {
-        "type": "select_one",
-        "values_list": "yesno",
-        "name": "label_sign_missing",
-        "display": {
-          "text": "Labels/Signs Missing"
-        },
-        "_row_num": 31
-      },
-      {
-        "clause": "if",
-        "condition": "data('label_sign_missing') == 'YES'",
-        "_row_num": 32
-      },
-      {
-        "type": "select_one_dropdown",
-        "values_list": "followup_values",
-        "name": "label_sign_missing_fu",
-        "display": {
-          "text": "If YES, follow up"
-        },
-        "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 33
-      },
-      {
-        "clause": "end if",
-        "_row_num": 34
-      },
-      {
-        "type": "string",
-        "name": "label_sign_missing_custom",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 35
-      },
-      {
         "type": "select_one",
         "values_list": "yesno",
         "name": "secondary_containment_inadequate",
         "display": {
           "text": "Labels/Signs Missing"
         },
-        "_row_num": 36
+        "_row_num": 30
       },
       {
         "clause": "if",
         "condition": "data('secondary_containment_inadequate') == 'YES'",
-        "_row_num": 37
+        "_row_num": 31
       },
       {
         "type": "select_one_dropdown",
@@ -265,17 +235,11 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 38
+        "_row_num": 32
       },
       {
         "clause": "end if",
-        "_row_num": 39
-      },
-      {
-        "type": "string",
-        "name": "secondary_containment_inadequate_custom",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 40
+        "_row_num": 33
       },
       {
         "type": "select_one",
@@ -284,12 +248,12 @@
         "display": {
           "text": "Transf Pump leaking"
         },
-        "_row_num": 41
+        "_row_num": 34
       },
       {
         "clause": "if",
         "condition": "data('transf_pump_leaking') == 'YES'",
-        "_row_num": 42
+        "_row_num": 35
       },
       {
         "type": "select_one_dropdown",
@@ -299,17 +263,11 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 43
+        "_row_num": 36
       },
       {
         "clause": "end if",
-        "_row_num": 44
-      },
-      {
-        "type": "string",
-        "name": "transf_pump_leaking_custom",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 45
+        "_row_num": 37
       },
       {
         "type": "select_one",
@@ -318,12 +276,12 @@
         "display": {
           "text": "Spill Material Needed"
         },
-        "_row_num": 46
+        "_row_num": 38
       },
       {
         "clause": "if",
         "condition": "data('spill_material_needed') == 'YES'",
-        "_row_num": 47
+        "_row_num": 39
       },
       {
         "type": "select_one_dropdown",
@@ -333,20 +291,15 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 48
+        "_row_num": 40
       },
       {
         "clause": "end if",
-        "_row_num": 49
-      },
-      {
-        "type": "string",
-        "name": "spill_material_needed_custom",
-        "_row_num": 50
+        "_row_num": 41
       },
       {
         "clause": "end screen",
-        "_row_num": 51
+        "_row_num": 42
       }
     ],
     "choices": [
@@ -963,10 +916,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 10,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 8,
             "section_name": "model"
           }
@@ -978,7 +927,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 10,
             "section_name": "survey"
           },
           {
@@ -993,7 +942,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 13,
+            "_row_num": 12,
             "section_name": "survey"
           },
           {
@@ -1007,10 +956,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 15,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 11,
             "section_name": "model"
           }
@@ -1022,7 +967,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 16,
+            "_row_num": 14,
             "section_name": "survey"
           },
           {
@@ -1037,7 +982,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 16,
             "section_name": "survey"
           },
           {
@@ -1051,10 +996,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 20,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 14,
             "section_name": "model"
           }
@@ -1066,7 +1007,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 18,
             "section_name": "survey"
           },
           {
@@ -1081,7 +1022,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 20,
             "section_name": "survey"
           },
           {
@@ -1095,10 +1036,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 25,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 17,
             "section_name": "model"
           }
@@ -1110,7 +1047,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 22,
             "section_name": "survey"
           },
           {
@@ -1125,7 +1062,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 24,
             "section_name": "survey"
           },
           {
@@ -1139,10 +1076,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 30,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 20,
             "section_name": "model"
           }
@@ -1154,7 +1087,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 31,
+            "_row_num": 26,
             "section_name": "survey"
           },
           {
@@ -1169,7 +1102,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 33,
+            "_row_num": 28,
             "section_name": "survey"
           },
           {
@@ -1183,10 +1116,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 35,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 23,
             "section_name": "model"
           }
@@ -1198,7 +1127,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 36,
+            "_row_num": 30,
             "section_name": "survey"
           },
           {
@@ -1213,7 +1142,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 38,
+            "_row_num": 32,
             "section_name": "survey"
           },
           {
@@ -1227,10 +1156,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 40,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 26,
             "section_name": "model"
           }
@@ -1242,7 +1167,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 41,
+            "_row_num": 34,
             "section_name": "survey"
           },
           {
@@ -1257,7 +1182,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 43,
+            "_row_num": 36,
             "section_name": "survey"
           },
           {
@@ -1271,10 +1196,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 45,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 29,
             "section_name": "model"
           }
@@ -1286,7 +1207,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 46,
+            "_row_num": 38,
             "section_name": "survey"
           },
           {
@@ -1301,7 +1222,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 48,
+            "_row_num": 40,
             "section_name": "survey"
           },
           {
@@ -1314,10 +1235,6 @@
       "spill_material_needed_custom": {
         "type": "string",
         "_defn": [
-          {
-            "_row_num": 50,
-            "section_name": "survey"
-          },
           {
             "_row_num": 32,
             "section_name": "model"
@@ -1461,6 +1378,9 @@
           {
             "type": "string",
             "name": "capacity",
+            "display": {
+              "text": "Capacity"
+            },
             "templatePath": "string_input_type.handlebars",
             "_row_num": 4,
             "__rowNum__": 3,
@@ -1472,6 +1392,9 @@
           {
             "type": "string",
             "name": "contents",
+            "display": {
+              "text": "Contents"
+            },
             "templatePath": "string_input_type.handlebars",
             "_row_num": 5,
             "__rowNum__": 4,
@@ -1510,29 +1433,18 @@
             "promptIdx": 4
           },
           {
-            "type": "string",
-            "name": "spillage_staining_custom",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 10,
-            "__rowNum__": 9,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 5
-          },
-          {
             "type": "select_one",
             "values_list": "yesno",
             "name": "container_damaged_leaking",
             "display": {
               "text": "Container Damaged or Leaking"
             },
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 10,
+            "__rowNum__": 9,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 6
+            "promptIdx": 5
           },
           {
             "type": "select_one_dropdown",
@@ -1542,23 +1454,12 @@
               "text": "If YES, follow up"
             },
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 12,
+            "__rowNum__": 11,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 7
-          },
-          {
-            "type": "string",
-            "name": "container_damaged_leaking_custom",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 15,
-            "__rowNum__": 14,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 8
+            "promptIdx": 6
           },
           {
             "type": "select_one",
@@ -1567,12 +1468,12 @@
             "display": {
               "text": "Unstable Surface"
             },
-            "_row_num": 16,
-            "__rowNum__": 15,
+            "_row_num": 14,
+            "__rowNum__": 13,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 9
+            "promptIdx": 7
           },
           {
             "type": "select_one_dropdown",
@@ -1582,23 +1483,12 @@
               "text": "If YES, follow up"
             },
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 18,
-            "__rowNum__": 17,
+            "_row_num": 16,
+            "__rowNum__": 15,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 10
-          },
-          {
-            "type": "string",
-            "name": "unstable_surface_custom",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 20,
-            "__rowNum__": 19,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 11
+            "promptIdx": 8
           },
           {
             "type": "select_one",
@@ -1607,12 +1497,12 @@
             "display": {
               "text": "Access Blocked for Inspection"
             },
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 18,
+            "__rowNum__": 17,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 12
+            "promptIdx": 9
           },
           {
             "type": "select_one_dropdown",
@@ -1622,37 +1512,26 @@
               "text": "If YES, follow up"
             },
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 20,
+            "__rowNum__": 19,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 13
-          },
-          {
-            "type": "string",
-            "name": "access_blocked_inspection_custom",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 25,
-            "__rowNum__": 24,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 14
+            "promptIdx": 10
           },
           {
             "type": "select_one",
             "values_list": "yesno",
             "name": "guage_doesnot_function",
             "display": {
-              "text": "Guage Does Not Function"
+              "text": "Gauge Does Not Function"
             },
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 15
+            "promptIdx": 11
           },
           {
             "type": "select_one_dropdown",
@@ -1662,23 +1541,12 @@
               "text": "If YES, follow up"
             },
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 16
-          },
-          {
-            "type": "string",
-            "name": "guage_doesnot_function_custom",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 30,
-            "__rowNum__": 29,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 17
+            "promptIdx": 12
           },
           {
             "type": "select_one",
@@ -1687,12 +1555,12 @@
             "display": {
               "text": "Labels/Signs Missing"
             },
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 18
+            "promptIdx": 13
           },
           {
             "type": "select_one_dropdown",
@@ -1702,23 +1570,12 @@
               "text": "If YES, follow up"
             },
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 19
-          },
-          {
-            "type": "string",
-            "name": "label_sign_missing_custom",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 35,
-            "__rowNum__": 34,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 20
+            "promptIdx": 14
           },
           {
             "type": "select_one",
@@ -1727,12 +1584,12 @@
             "display": {
               "text": "Labels/Signs Missing"
             },
-            "_row_num": 36,
-            "__rowNum__": 35,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 21
+            "promptIdx": 15
           },
           {
             "type": "select_one_dropdown",
@@ -1742,23 +1599,12 @@
               "text": "If YES, follow up"
             },
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 38,
-            "__rowNum__": 37,
+            "_row_num": 32,
+            "__rowNum__": 31,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 22
-          },
-          {
-            "type": "string",
-            "name": "secondary_containment_inadequate_custom",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 40,
-            "__rowNum__": 39,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 23
+            "promptIdx": 16
           },
           {
             "type": "select_one",
@@ -1767,12 +1613,12 @@
             "display": {
               "text": "Transf Pump leaking"
             },
-            "_row_num": 41,
-            "__rowNum__": 40,
+            "_row_num": 34,
+            "__rowNum__": 33,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 24
+            "promptIdx": 17
           },
           {
             "type": "select_one_dropdown",
@@ -1782,23 +1628,12 @@
               "text": "If YES, follow up"
             },
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 43,
-            "__rowNum__": 42,
+            "_row_num": 36,
+            "__rowNum__": 35,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 25
-          },
-          {
-            "type": "string",
-            "name": "transf_pump_leaking_custom",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 45,
-            "__rowNum__": 44,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 26
+            "promptIdx": 18
           },
           {
             "type": "select_one",
@@ -1807,12 +1642,12 @@
             "display": {
               "text": "Spill Material Needed"
             },
-            "_row_num": 46,
-            "__rowNum__": 45,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 27
+            "promptIdx": 19
           },
           {
             "type": "select_one_dropdown",
@@ -1822,30 +1657,20 @@
               "text": "If YES, follow up"
             },
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 48,
-            "__rowNum__": 47,
+            "_row_num": 40,
+            "__rowNum__": 39,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 28
-          },
-          {
-            "type": "string",
-            "name": "spill_material_needed_custom",
-            "_row_num": 50,
-            "__rowNum__": 49,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 29
+            "promptIdx": 20
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 52,
-            "_branch_label_enclosing_screen": "survey/_screen52",
-            "promptIdx": 30
+            "_row_num": 43,
+            "_branch_label_enclosing_screen": "survey/_screen43",
+            "promptIdx": 21
           }
         ],
         "validation_tag_map": {
@@ -1861,23 +1686,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 51,
-              "__rowNum__": 50,
+              "_row_num": 42,
+              "__rowNum__": 41,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nif (data('spillage_staining') == 'YES') {\nactivePromptIndicies.push(4);\n}\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nif (data('container_damaged_leaking') == 'YES') {\nactivePromptIndicies.push(7);\n}\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nif (data('unstable_surface') == 'YES') {\nactivePromptIndicies.push(10);\n}\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nif (data('access_blocked_inspection') == 'YES') {\nactivePromptIndicies.push(13);\n}\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nif (data('guage_doesnot_function') == 'YES') {\nactivePromptIndicies.push(16);\n}\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nif (data('label_sign_missing') == 'YES') {\nactivePromptIndicies.push(19);\n}\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nif (data('secondary_containment_inadequate') == 'YES') {\nactivePromptIndicies.push(22);\n}\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nif (data('transf_pump_leaking') == 'YES') {\nactivePromptIndicies.push(25);\n}\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nif (data('spill_material_needed') == 'YES') {\nactivePromptIndicies.push(28);\n}\nactivePromptIndicies.push(29);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nif (data('spillage_staining') == 'YES') {\nactivePromptIndicies.push(4);\n}\nactivePromptIndicies.push(5);\nif (data('container_damaged_leaking') == 'YES') {\nactivePromptIndicies.push(6);\n}\nactivePromptIndicies.push(7);\nif (data('unstable_surface') == 'YES') {\nactivePromptIndicies.push(8);\n}\nactivePromptIndicies.push(9);\nif (data('access_blocked_inspection') == 'YES') {\nactivePromptIndicies.push(10);\n}\nactivePromptIndicies.push(11);\nif (data('guage_doesnot_function') == 'YES') {\nactivePromptIndicies.push(12);\n}\nactivePromptIndicies.push(13);\nif (data('label_sign_missing') == 'YES') {\nactivePromptIndicies.push(14);\n}\nactivePromptIndicies.push(15);\nif (data('secondary_containment_inadequate') == 'YES') {\nactivePromptIndicies.push(16);\n}\nactivePromptIndicies.push(17);\nif (data('transf_pump_leaking') == 'YES') {\nactivePromptIndicies.push(18);\n}\nactivePromptIndicies.push(19);\nif (data('spill_material_needed') == 'YES') {\nactivePromptIndicies.push(20);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 52,
+            "_row_num": 43,
             "operationIdx": 1
           },
           {
-            "_row_num": 52,
+            "_row_num": 43,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(30);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(21);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -1886,14 +1711,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 52,
+            "_row_num": 43,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen52": 2
+          "_screen43": 2
         }
       }
     }
