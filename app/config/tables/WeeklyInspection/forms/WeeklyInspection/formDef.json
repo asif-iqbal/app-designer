@@ -43,13 +43,14 @@
         "_row_num": 2
       },
       {
-        "type": "string",
+        "type": "select_one_dropdown",
+        "values_list": "personnel_csv",
         "name": "inspector_name",
         "display": {
           "text": "Inspector Name"
         },
         "hideInContents": "true",
-        "templatePath": "string_input_type.handlebars",
+        "templatePath": "custom_select_dropdown.handlebars",
         "required": "true",
         "_row_num": 3
       },
@@ -876,6 +877,13 @@
         "selectionArgs": "[ data('inspection_id')]",
         "auxillaryHash": "'inspection_id='+encodeURIComponent(data('inspection_id'))",
         "_row_num": 3
+      },
+      {
+        "query_name": "personnel_csv",
+        "query_type": "csv",
+        "uri": "\"personnel.csv\"",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name;\npersonnel.display = {text:personnel.name};\nreturn personnel;\n})",
+        "_row_num": 4
       }
     ],
     "calculates": [
@@ -1296,6 +1304,13 @@
         "selectionArgs": "[ data('inspection_id')]",
         "auxillaryHash": "'inspection_id='+encodeURIComponent(data('inspection_id'))",
         "_row_num": 3
+      },
+      "personnel_csv": {
+        "query_name": "personnel_csv",
+        "query_type": "csv",
+        "uri": "\"personnel.csv\"",
+        "callback": "_.map(context, function(personnel){personnel.data_value = personnel.name;\npersonnel.display = {text:personnel.name};\nreturn personnel;\n})",
+        "_row_num": 4
       }
     },
     "calculates": {
@@ -1559,6 +1574,7 @@
           }
         ],
         "type": "string",
+        "valuesList": "personnel_csv",
         "elementKey": "inspector_name"
       },
       "inspection_id": {
@@ -2324,18 +2340,19 @@
         },
         "prompts": [
           {
-            "type": "string",
+            "type": "select_one_dropdown",
+            "values_list": "personnel_csv",
             "name": "inspector_name",
             "display": {
               "text": "Inspector Name"
             },
             "hideInContents": "true",
-            "templatePath": "string_input_type.handlebars",
+            "templatePath": "custom_select_dropdown.handlebars",
             "required": "true",
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
-            "_type": "string",
+            "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 0
           },
