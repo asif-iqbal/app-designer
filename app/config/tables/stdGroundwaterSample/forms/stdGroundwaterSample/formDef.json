@@ -180,7 +180,6 @@
           "text": "Add Notes to this list",
           "new_instance_text": "Add Note"
         },
-        "templatePath": "linked_table_note.handlebars",
         "_row_num": 3
       },
       {
@@ -1991,7 +1990,6 @@
               "text": "Add Notes to this list",
               "new_instance_text": "Add Note"
             },
-            "templatePath": "linked_table_note.handlebars",
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
