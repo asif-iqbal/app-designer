@@ -33,6 +33,7 @@
         <consumable_totalhrs_0/>
         <consumable_totalhrs_1/>
         <consumable_totalhrs_2/>
+        <epa_id/>
         <equipment_name_0/>
         <equipment_name_1/>
         <equipment_name_2/>
@@ -104,6 +105,7 @@
     <bind nodeset="/data/consumable_totalhrs_0" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_1" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_2" type="string"/>
+    <bind nodeset="/data/epa_id" type="string"/>
     <bind nodeset="/data/equipment_name_0" type="string"/>
     <bind nodeset="/data/equipment_name_1" type="string"/>
     <bind nodeset="/data/equipment_name_2" type="string"/>

@@ -1140,7 +1140,7 @@
         "values_list": "yesno",
         "name": "samples_obtained_analyzed",
         "display": {
-          "text": "Samples obtained and analysis?"
+          "text": "Samples obtained for analysis?"
         },
         "_row_num": 29
       },
@@ -5155,7 +5155,7 @@
             "values_list": "yesno",
             "name": "samples_obtained_analyzed",
             "display": {
-              "text": "Samples obtained and analysis?"
+              "text": "Samples obtained for analysis?"
             },
             "_row_num": 29,
             "__rowNum__": 28,
