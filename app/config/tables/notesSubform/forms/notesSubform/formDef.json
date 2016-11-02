@@ -68,6 +68,11 @@
           "title": "Notes Subform"
         },
         "_row_num": 5
+      },
+      {
+        "setting_name": "instance_name",
+        "value": "time_taken",
+        "_row_num": 6
       }
     ],
     "model": [
@@ -128,6 +133,11 @@
           "title": "Notes Subform"
         },
         "_row_num": 5
+      },
+      "instance_name": {
+        "setting_name": "instance_name",
+        "value": "time_taken",
+        "_row_num": 6
       },
       "_locales": {
         "setting_name": "_locales",

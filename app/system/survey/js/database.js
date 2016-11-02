@@ -457,7 +457,7 @@ get_linked_instances:function(ctxt, dbTableName, selection, selectionArgs, displ
                     var instance = result.rows.item(i);
                     var ts = opendatakit.convertNanosToDateTime(instance._savepoint_timestamp);
                     instanceList.push({
-                        // Asif
+                        //Asif
                         //display_field: (displayElementName === undefined || displayElementName === null) 
                         //                    ? ((ts == null) ? "" : ts.toISOString()): instance[displayElementName],
                         display_field: (displayElementName === undefined || displayElementName === null) 
