@@ -134,6 +134,16 @@ Column,type_of_material,displayFormat,string,""
 Column,type_of_material,displayName,string,"""type_of_material"""
 Column,type_of_material,displayVisible,boolean,TRUE
 Column,type_of_material,joins,object,""
+Column,waste_drums_hazardous,displayChoicesList,object,[]
+Column,waste_drums_hazardous,displayFormat,string,""
+Column,waste_drums_hazardous,displayName,string,"""waste_drums_hazardous"""
+Column,waste_drums_hazardous,displayVisible,boolean,TRUE
+Column,waste_drums_hazardous,joins,object,""
+Column,waste_drums_non_hazardous,displayChoicesList,object,[]
+Column,waste_drums_non_hazardous,displayFormat,string,""
+Column,waste_drums_non_hazardous,displayName,string,"""waste_drums_non_hazardous"""
+Column,waste_drums_non_hazardous,displayVisible,boolean,TRUE
+Column,waste_drums_non_hazardous,joins,object,""
 Column,water_flowing_freely,displayChoicesList,object,"[{""choice_list_name"":""yesno"",""data_value"":""yes"",""display"":{""text"":""Yes""},""_row_num"":7},{""choice_list_name"":""yesno"",""data_value"":""no"",""display"":{""text"":""No""},""_row_num"":8}]"
 Column,water_flowing_freely,displayFormat,string,""
 Column,water_flowing_freely,displayName,string,"""water_flowing_freely"""
@@ -146,7 +156,7 @@ Column,water_in_vault,displayVisible,boolean,TRUE
 Column,water_in_vault,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,catchBasinInspectionSample
-Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
+Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Catch Basin Inspection Sample"""
 Table,default,groupByCols,object,[]

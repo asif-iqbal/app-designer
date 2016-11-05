@@ -1127,13 +1127,31 @@
         "_row_num": 27
       },
       {
+        "type": "decimal",
+        "name": "waste_drums_hazardous",
+        "display": {
+          "text": "No. of hazardous waste drums generated:"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 28
+      },
+      {
+        "type": "decimal",
+        "name": "waste_drums_non_hazardous",
+        "display": {
+          "text": "No. of non-hazardous waste drums generated:"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 29
+      },
+      {
         "type": "string",
         "name": "ows_manifest_bol",
         "display": {
           "text": "Manifest/BOL #"
         },
         "templatePath": "string_input_type.handlebars",
-        "_row_num": 28
+        "_row_num": 30
       },
       {
         "type": "select_one",
@@ -1142,11 +1160,11 @@
         "display": {
           "text": "Samples obtained for analysis?"
         },
-        "_row_num": 29
+        "_row_num": 31
       },
       {
         "clause": "end screen",
-        "_row_num": 30
+        "_row_num": 32
       }
     ],
     "outfall_inspection_section": [
@@ -3403,10 +3421,30 @@
         "type": "string",
         "elementKey": "estimated_quantity"
       },
-      "ows_manifest_bol": {
+      "waste_drums_hazardous": {
         "_defn": [
           {
             "_row_num": 28,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "number",
+        "elementKey": "waste_drums_hazardous"
+      },
+      "waste_drums_non_hazardous": {
+        "_defn": [
+          {
+            "_row_num": 29,
+            "section_name": "ows_inspection_section"
+          }
+        ],
+        "type": "number",
+        "elementKey": "waste_drums_non_hazardous"
+      },
+      "ows_manifest_bol": {
+        "_defn": [
+          {
+            "_row_num": 30,
             "section_name": "ows_inspection_section"
           }
         ],
@@ -3416,7 +3454,7 @@
       "samples_obtained_analyzed": {
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 31,
             "section_name": "ows_inspection_section"
           }
         ],
@@ -5137,18 +5175,46 @@
             "promptIdx": 24
           },
           {
+            "type": "decimal",
+            "name": "waste_drums_hazardous",
+            "display": {
+              "text": "No. of hazardous waste drums generated:"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 28,
+            "__rowNum__": 27,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 25
+          },
+          {
+            "type": "decimal",
+            "name": "waste_drums_non_hazardous",
+            "display": {
+              "text": "No. of non-hazardous waste drums generated:"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
+            "promptIdx": 26
+          },
+          {
             "type": "string",
             "name": "ows_manifest_bol",
             "display": {
               "text": "Manifest/BOL #"
             },
             "templatePath": "string_input_type.handlebars",
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
-            "promptIdx": 25
+            "promptIdx": 27
           },
           {
             "type": "select_one",
@@ -5157,20 +5223,20 @@
             "display": {
               "text": "Samples obtained for analysis?"
             },
-            "_row_num": 29,
-            "__rowNum__": 28,
+            "_row_num": 31,
+            "__rowNum__": 30,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "ows_inspection_section/_screen2",
-            "promptIdx": 26
+            "promptIdx": 28
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 31,
-            "_branch_label_enclosing_screen": "ows_inspection_section/_screen31",
-            "promptIdx": 27
+            "_row_num": 33,
+            "_branch_label_enclosing_screen": "ows_inspection_section/_screen33",
+            "promptIdx": 29
           }
         ],
         "validation_tag_map": {
@@ -5187,23 +5253,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 30,
-              "__rowNum__": 29,
+              "_row_num": 32,
+              "__rowNum__": 31,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 31,
+            "_row_num": 33,
             "operationIdx": 1
           },
           {
-            "_row_num": 31,
+            "_row_num": 33,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(29);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -5212,14 +5278,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 31,
+            "_row_num": 33,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen31": 2
+          "_screen33": 2
         }
       },
       "outfall_inspection_section": {

@@ -31,6 +31,8 @@
         <manifest_bol/>
         <number_of_drums/>
         <track_mats_replaced/>
+        <waste_drums_hazardous/>
+        <waste_drums_non_hazardous/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -52,6 +54,8 @@
     <bind nodeset="/data/manifest_bol" type="string"/>
     <bind nodeset="/data/number_of_drums" type="decimal"/>
     <bind nodeset="/data/track_mats_replaced" type="string"/>
+    <bind nodeset="/data/waste_drums_hazardous" type="decimal"/>
+    <bind nodeset="/data/waste_drums_non_hazardous" type="decimal"/>
   </model> 
  </h:head> 
  <h:body> 

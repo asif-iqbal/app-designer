@@ -128,6 +128,8 @@
         <vehicle_totalhrs_0/>
         <vehicle_totalhrs_1/>
         <vehicle_totalhrs_2/>
+        <waste_drums_hazardous/>
+        <waste_drums_non_hazardous/>
         <weather/>
       </data> 
     </instance> 
@@ -247,6 +249,8 @@
     <bind nodeset="/data/vehicle_totalhrs_0" type="string"/>
     <bind nodeset="/data/vehicle_totalhrs_1" type="string"/>
     <bind nodeset="/data/vehicle_totalhrs_2" type="string"/>
+    <bind nodeset="/data/waste_drums_hazardous" type="decimal"/>
+    <bind nodeset="/data/waste_drums_non_hazardous" type="decimal"/>
     <bind nodeset="/data/weather" type="string"/>
   </model> 
  </h:head> 

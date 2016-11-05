@@ -165,17 +165,35 @@
         "_row_num": 5
       },
       {
+        "type": "decimal",
+        "name": "waste_drums_hazardous",
+        "display": {
+          "text": "No. of hazardous waste drums generated:"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "decimal",
+        "name": "waste_drums_non_hazardous",
+        "display": {
+          "text": "No. of non-hazardous waste drums generated:"
+        },
+        "templatePath": "decimal_input_type.handlebars",
+        "_row_num": 7
+      },
+      {
         "type": "string",
         "name": "manifest_bol",
         "display": {
           "text": "Manifest/BOL #"
         },
         "templatePath": "string_input_type.handlebars",
-        "_row_num": 6
+        "_row_num": 8
       },
       {
         "clause": "end screen",
-        "_row_num": 7
+        "_row_num": 9
       }
     ],
     "notes_section": [
@@ -428,6 +446,16 @@
         "name": "geo_info",
         "type": "geopoint",
         "_row_num": 8
+      },
+      {
+        "name": "waste_drums_hazardous",
+        "type": "decimal",
+        "_row_num": 9
+      },
+      {
+        "name": "waste_drums_non_hazardous",
+        "type": "decimal",
+        "_row_num": 10
       }
     ]
   },
@@ -705,7 +733,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 8,
             "section_name": "inspection_section"
           },
           {
@@ -748,6 +776,34 @@
           }
         ],
         "elementKey": "geo_info"
+      },
+      "waste_drums_hazardous": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 9,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "waste_drums_hazardous"
+      },
+      "waste_drums_non_hazardous": {
+        "type": "number",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 10,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "waste_drums_non_hazardous"
       }
     },
     "section_names": [
@@ -1167,26 +1223,54 @@
             "promptIdx": 2
           },
           {
+            "type": "decimal",
+            "name": "waste_drums_hazardous",
+            "display": {
+              "text": "No. of hazardous waste drums generated:"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "decimal",
+            "name": "waste_drums_non_hazardous",
+            "display": {
+              "text": "No. of non-hazardous waste drums generated:"
+            },
+            "templatePath": "decimal_input_type.handlebars",
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 4
+          },
+          {
             "type": "string",
             "name": "manifest_bol",
             "display": {
               "text": "Manifest/BOL #"
             },
             "templatePath": "string_input_type.handlebars",
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 8,
+            "__rowNum__": 7,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "inspection_section/_screen2",
-            "promptIdx": 3
+            "promptIdx": 5
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 8,
-            "_branch_label_enclosing_screen": "inspection_section/_screen8",
-            "promptIdx": 4
+            "_row_num": 10,
+            "_branch_label_enclosing_screen": "inspection_section/_screen10",
+            "promptIdx": 6
           }
         ],
         "validation_tag_map": {
@@ -1203,23 +1287,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 7,
-              "__rowNum__": 6,
+              "_row_num": 9,
+              "__rowNum__": 8,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 8,
+            "_row_num": 10,
             "operationIdx": 1
           },
           {
-            "_row_num": 8,
+            "_row_num": 10,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -1228,14 +1312,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 8,
+            "_row_num": 10,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen8": 2
+          "_screen10": 2
         }
       },
       "notes_section": {

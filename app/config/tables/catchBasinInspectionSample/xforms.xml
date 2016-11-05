@@ -47,6 +47,8 @@
         <sediment_thickness/>
         <sheen_present/>
         <type_of_material/>
+        <waste_drums_hazardous/>
+        <waste_drums_non_hazardous/>
         <water_flowing_freely/>
         <water_in_vault/>
       </data> 
@@ -86,6 +88,8 @@
     <bind nodeset="/data/sediment_thickness" type="string"/>
     <bind nodeset="/data/sheen_present" type="string"/>
     <bind nodeset="/data/type_of_material" type="string"/>
+    <bind nodeset="/data/waste_drums_hazardous" type="decimal"/>
+    <bind nodeset="/data/waste_drums_non_hazardous" type="decimal"/>
     <bind nodeset="/data/water_flowing_freely" type="string"/>
     <bind nodeset="/data/water_in_vault" type="string"/>
   </model> 
