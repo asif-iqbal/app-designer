@@ -1,0 +1,244 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>USTMonthlyInspectionForSPCCP</h:title>
+  <model>
+    <instance>
+      <data id="USTMonthlyInspectionForSPCCP">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <automatic_overfill_protection/>
+        <automatic_overfill_protection_com/>
+        <automatic_overfill_protection_fu/>
+        <capacity/>
+        <construction/>
+        <consumable_name_0/>
+        <consumable_name_1/>
+        <consumable_name_2/>
+        <consumable_quantity_0/>
+        <consumable_quantity_1/>
+        <consumable_quantity_2/>
+        <consumable_totalhrs_0/>
+        <consumable_totalhrs_1/>
+        <consumable_totalhrs_2/>
+        <dispenser_fuel_staining/>
+        <dispenser_fuel_staining_com/>
+        <dispenser_fuel_staining_fu/>
+        <dispenser_hardware_leaking/>
+        <dispenser_hardware_leaking_com/>
+        <dispenser_hardware_leaking_fu/>
+        <equipment_name_0/>
+        <equipment_name_1/>
+        <equipment_name_2/>
+        <equipment_quantity_0/>
+        <equipment_quantity_1/>
+        <equipment_quantity_2/>
+        <equipment_totalhrs_0/>
+        <equipment_totalhrs_1/>
+        <equipment_totalhrs_2/>
+        <equipment_vegetation/>
+        <equipment_vegetation_com/>
+        <equipment_vegetation_fu/>
+        <evidence_spillage_overfilling/>
+        <evidence_spillage_overfilling_com/>
+        <evidence_spillage_overfilling_fu/>
+        <geo_info/>
+        <inspection_id/>
+        <inspector_name/>
+        <loc_aid/>
+        <loc_city/>
+        <loc_client/>
+        <loc_name/>
+        <loc_state/>
+        <loc_streetAddress/>
+        <loc_zip/>
+        <manholecovers_subsurface_equipment/>
+        <manholecovers_subsurface_equipment_com/>
+        <manholecovers_subsurface_equipment_fu/>
+        <personnel_endtime_0/>
+        <personnel_endtime_1/>
+        <personnel_endtime_2/>
+        <personnel_name_0/>
+        <personnel_name_1/>
+        <personnel_name_2/>
+        <personnel_starttime_0/>
+        <personnel_starttime_1/>
+        <personnel_starttime_2/>
+        <personnel_title_0/>
+        <personnel_title_1/>
+        <personnel_title_2/>
+        <personnel_totalhrs_0/>
+        <personnel_totalhrs_1/>
+        <personnel_totalhrs_2/>
+        <primary_contents/>
+        <project_comment/>
+        <project_daily_report/>
+        <project_number/>
+        <sample_date/>
+        <sign/>
+        <sign_person_name/>
+        <spill_buckets_damaged/>
+        <spill_buckets_damaged_com/>
+        <spill_buckets_damaged_fu/>
+        <spill_material_replacement/>
+        <spill_material_replacement_com/>
+        <spill_material_replacement_fu/>
+        <structural_damage/>
+        <structural_damage_com/>
+        <structural_damage_fu/>
+        <tank_damaged_labeled/>
+        <tank_damaged_labeled_com/>
+        <tank_damaged_labeled_fu/>
+        <tank_id/>
+        <tank_vent_obstructed/>
+        <tank_vent_obstructed_com/>
+        <tank_vent_obstructed_fu/>
+        <threat_procedures_not_posted/>
+        <threat_procedures_not_posted_com/>
+        <threat_procedures_not_posted_fu/>
+        <vehicle_name_0/>
+        <vehicle_name_1/>
+        <vehicle_name_2/>
+        <vehicle_quantity_0/>
+        <vehicle_quantity_1/>
+        <vehicle_quantity_2/>
+        <vehicle_totalhrs_0/>
+        <vehicle_totalhrs_1/>
+        <vehicle_totalhrs_2/>
+        <weather/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/automatic_overfill_protection" type="string"/>
+    <bind nodeset="/data/automatic_overfill_protection_com" type="string"/>
+    <bind nodeset="/data/automatic_overfill_protection_fu" type="string"/>
+    <bind nodeset="/data/capacity" type="string"/>
+    <bind nodeset="/data/construction" type="string"/>
+    <bind nodeset="/data/consumable_name_0" type="string"/>
+    <bind nodeset="/data/consumable_name_1" type="string"/>
+    <bind nodeset="/data/consumable_name_2" type="string"/>
+    <bind nodeset="/data/consumable_quantity_0" type="string"/>
+    <bind nodeset="/data/consumable_quantity_1" type="string"/>
+    <bind nodeset="/data/consumable_quantity_2" type="string"/>
+    <bind nodeset="/data/consumable_totalhrs_0" type="string"/>
+    <bind nodeset="/data/consumable_totalhrs_1" type="string"/>
+    <bind nodeset="/data/consumable_totalhrs_2" type="string"/>
+    <bind nodeset="/data/dispenser_fuel_staining" type="string"/>
+    <bind nodeset="/data/dispenser_fuel_staining_com" type="string"/>
+    <bind nodeset="/data/dispenser_fuel_staining_fu" type="string"/>
+    <bind nodeset="/data/dispenser_hardware_leaking" type="string"/>
+    <bind nodeset="/data/dispenser_hardware_leaking_com" type="string"/>
+    <bind nodeset="/data/dispenser_hardware_leaking_fu" type="string"/>
+    <bind nodeset="/data/equipment_name_0" type="string"/>
+    <bind nodeset="/data/equipment_name_1" type="string"/>
+    <bind nodeset="/data/equipment_name_2" type="string"/>
+    <bind nodeset="/data/equipment_quantity_0" type="string"/>
+    <bind nodeset="/data/equipment_quantity_1" type="string"/>
+    <bind nodeset="/data/equipment_quantity_2" type="string"/>
+    <bind nodeset="/data/equipment_totalhrs_0" type="string"/>
+    <bind nodeset="/data/equipment_totalhrs_1" type="string"/>
+    <bind nodeset="/data/equipment_totalhrs_2" type="string"/>
+    <bind nodeset="/data/equipment_vegetation" type="string"/>
+    <bind nodeset="/data/equipment_vegetation_com" type="string"/>
+    <bind nodeset="/data/equipment_vegetation_fu" type="string"/>
+    <bind nodeset="/data/evidence_spillage_overfilling" type="string"/>
+    <bind nodeset="/data/evidence_spillage_overfilling_com" type="string"/>
+    <bind nodeset="/data/evidence_spillage_overfilling_fu" type="string"/>
+    <bind nodeset="/data/geo_info" type="geopoint"/>
+    <bind nodeset="/data/inspection_id" type="string"/>
+    <bind nodeset="/data/inspector_name" type="string"/>
+    <bind nodeset="/data/loc_aid" type="string"/>
+    <bind nodeset="/data/loc_city" type="string"/>
+    <bind nodeset="/data/loc_client" type="string"/>
+    <bind nodeset="/data/loc_name" type="string"/>
+    <bind nodeset="/data/loc_state" type="string"/>
+    <bind nodeset="/data/loc_streetAddress" type="string"/>
+    <bind nodeset="/data/loc_zip" type="string"/>
+    <bind nodeset="/data/manholecovers_subsurface_equipment" type="string"/>
+    <bind nodeset="/data/manholecovers_subsurface_equipment_com" type="string"/>
+    <bind nodeset="/data/manholecovers_subsurface_equipment_fu" type="string"/>
+    <bind nodeset="/data/personnel_endtime_0" type="string"/>
+    <bind nodeset="/data/personnel_endtime_1" type="string"/>
+    <bind nodeset="/data/personnel_endtime_2" type="string"/>
+    <bind nodeset="/data/personnel_name_0" type="string"/>
+    <bind nodeset="/data/personnel_name_1" type="string"/>
+    <bind nodeset="/data/personnel_name_2" type="string"/>
+    <bind nodeset="/data/personnel_starttime_0" type="string"/>
+    <bind nodeset="/data/personnel_starttime_1" type="string"/>
+    <bind nodeset="/data/personnel_starttime_2" type="string"/>
+    <bind nodeset="/data/personnel_title_0" type="string"/>
+    <bind nodeset="/data/personnel_title_1" type="string"/>
+    <bind nodeset="/data/personnel_title_2" type="string"/>
+    <bind nodeset="/data/personnel_totalhrs_0" type="string"/>
+    <bind nodeset="/data/personnel_totalhrs_1" type="string"/>
+    <bind nodeset="/data/personnel_totalhrs_2" type="string"/>
+    <bind nodeset="/data/primary_contents" type="string"/>
+    <bind nodeset="/data/project_comment" type="string"/>
+    <bind nodeset="/data/project_daily_report" type="string"/>
+    <bind nodeset="/data/project_number" type="string"/>
+    <bind nodeset="/data/sample_date" type="string"/>
+    <bind nodeset="/data/sign" type="binary"/>
+    <bind nodeset="/data/sign_person_name" type="string"/>
+    <bind nodeset="/data/spill_buckets_damaged" type="string"/>
+    <bind nodeset="/data/spill_buckets_damaged_com" type="string"/>
+    <bind nodeset="/data/spill_buckets_damaged_fu" type="string"/>
+    <bind nodeset="/data/spill_material_replacement" type="string"/>
+    <bind nodeset="/data/spill_material_replacement_com" type="string"/>
+    <bind nodeset="/data/spill_material_replacement_fu" type="string"/>
+    <bind nodeset="/data/structural_damage" type="string"/>
+    <bind nodeset="/data/structural_damage_com" type="string"/>
+    <bind nodeset="/data/structural_damage_fu" type="string"/>
+    <bind nodeset="/data/tank_damaged_labeled" type="string"/>
+    <bind nodeset="/data/tank_damaged_labeled_com" type="string"/>
+    <bind nodeset="/data/tank_damaged_labeled_fu" type="string"/>
+    <bind nodeset="/data/tank_id" type="string"/>
+    <bind nodeset="/data/tank_vent_obstructed" type="string"/>
+    <bind nodeset="/data/tank_vent_obstructed_com" type="string"/>
+    <bind nodeset="/data/tank_vent_obstructed_fu" type="string"/>
+    <bind nodeset="/data/threat_procedures_not_posted" type="string"/>
+    <bind nodeset="/data/threat_procedures_not_posted_com" type="string"/>
+    <bind nodeset="/data/threat_procedures_not_posted_fu" type="string"/>
+    <bind nodeset="/data/vehicle_name_0" type="string"/>
+    <bind nodeset="/data/vehicle_name_1" type="string"/>
+    <bind nodeset="/data/vehicle_name_2" type="string"/>
+    <bind nodeset="/data/vehicle_quantity_0" type="string"/>
+    <bind nodeset="/data/vehicle_quantity_1" type="string"/>
+    <bind nodeset="/data/vehicle_quantity_2" type="string"/>
+    <bind nodeset="/data/vehicle_totalhrs_0" type="string"/>
+    <bind nodeset="/data/vehicle_totalhrs_1" type="string"/>
+    <bind nodeset="/data/vehicle_totalhrs_2" type="string"/>
+    <bind nodeset="/data/weather" type="string"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+<upload ref="sign" mediatype="image/*"><label>Dummy</label></upload>
+ </h:body> 
+</h:html>
