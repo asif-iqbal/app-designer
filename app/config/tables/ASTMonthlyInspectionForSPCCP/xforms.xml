@@ -125,6 +125,9 @@
         <thief_hatch_seal/>
         <thief_hatch_seal_com/>
         <thief_hatch_seal_fu/>
+        <threat_procedures_not_posted/>
+        <threat_procedures_not_posted_com/>
+        <threat_procedures_not_posted_fu/>
         <vehicle_name_0/>
         <vehicle_name_1/>
         <vehicle_name_2/>
@@ -253,6 +256,9 @@
     <bind nodeset="/data/thief_hatch_seal" type="string"/>
     <bind nodeset="/data/thief_hatch_seal_com" type="string"/>
     <bind nodeset="/data/thief_hatch_seal_fu" type="string"/>
+    <bind nodeset="/data/threat_procedures_not_posted" type="string"/>
+    <bind nodeset="/data/threat_procedures_not_posted_com" type="string"/>
+    <bind nodeset="/data/threat_procedures_not_posted_fu" type="string"/>
     <bind nodeset="/data/vehicle_name_0" type="string"/>
     <bind nodeset="/data/vehicle_name_1" type="string"/>
     <bind nodeset="/data/vehicle_name_2" type="string"/>

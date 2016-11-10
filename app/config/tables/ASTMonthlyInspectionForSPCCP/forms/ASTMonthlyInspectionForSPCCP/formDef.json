@@ -1223,12 +1223,33 @@
         "_row_num": 176
       },
       {
-        "clause": "end screen",
+        "type": "select_one",
+        "values_list": "yesno",
+        "name": "threat_procedures_not_posted",
+        "display": {
+          "text": "Spill/ threat of a release reporting procedures with emergency contacts are not conspicuously posted"
+        },
         "_row_num": 177
       },
       {
-        "branch_label": "_contents",
+        "type": "select_one_dropdown",
+        "values_list": "followup_values",
+        "name": "threat_procedures_not_posted_fu",
+        "templatePath": "custom_select_dropdown.handlebars",
         "_row_num": 178
+      },
+      {
+        "type": "textarea",
+        "name": "threat_procedures_not_posted_com",
+        "_row_num": 179
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 180
+      },
+      {
+        "branch_label": "_contents",
+        "_row_num": 181
       },
       {
         "clause": "begin screen",
@@ -1236,7 +1257,7 @@
           "text": "AST Month Inspection Home Page"
         },
         "hideInContents": "true",
-        "_row_num": 179
+        "_row_num": 182
       },
       {
         "type": "note",
@@ -1245,29 +1266,17 @@
         },
         "hideInContents": "true",
         "templatePath": "note_for_id.handlebars",
-        "_row_num": 180
+        "_row_num": 183
       },
       {
         "type": "user_branch",
         "values_list": "branches",
         "hideInContents": "true",
-        "_row_num": 181
+        "_row_num": 184
       },
       {
         "clause": "end screen",
         "hideInContents": "true",
-        "_row_num": 182
-      },
-      {
-        "clause": "goto _contents",
-        "_row_num": 183
-      },
-      {
-        "branch_label": "notes",
-        "_row_num": 184
-      },
-      {
-        "clause": "do section notes_section",
         "_row_num": 185
       },
       {
@@ -1275,11 +1284,11 @@
         "_row_num": 186
       },
       {
-        "branch_label": "gps",
+        "branch_label": "notes",
         "_row_num": 187
       },
       {
-        "clause": "do section gps_section",
+        "clause": "do section notes_section",
         "_row_num": 188
       },
       {
@@ -1287,11 +1296,11 @@
         "_row_num": 189
       },
       {
-        "branch_label": "image",
+        "branch_label": "gps",
         "_row_num": 190
       },
       {
-        "clause": "do section image_section",
+        "clause": "do section gps_section",
         "_row_num": 191
       },
       {
@@ -1299,11 +1308,11 @@
         "_row_num": 192
       },
       {
-        "branch_label": "signature",
+        "branch_label": "image",
         "_row_num": 193
       },
       {
-        "clause": "do section signature_section",
+        "clause": "do section image_section",
         "_row_num": 194
       },
       {
@@ -1311,12 +1320,24 @@
         "_row_num": 195
       },
       {
-        "branch_label": "exitpath",
+        "branch_label": "signature",
         "_row_num": 196
       },
       {
-        "clause": "exit section",
+        "clause": "do section signature_section",
         "_row_num": 197
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 198
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 199
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 200
       }
     ],
     "gps_section": [
@@ -3461,6 +3482,38 @@
         "type": "string",
         "elementKey": "spill_material_missing_com"
       },
+      "threat_procedures_not_posted": {
+        "_defn": [
+          {
+            "_row_num": 177,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "threat_procedures_not_posted"
+      },
+      "threat_procedures_not_posted_fu": {
+        "_defn": [
+          {
+            "_row_num": 178,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "followup_values",
+        "elementKey": "threat_procedures_not_posted_fu"
+      },
+      "threat_procedures_not_posted_com": {
+        "_defn": [
+          {
+            "_row_num": 179,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "threat_procedures_not_posted_com"
+      },
       "geo_info": {
         "_defn": [
           {
@@ -5117,38 +5170,74 @@
             "promptIdx": 114
           },
           {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "threat_procedures_not_posted",
+            "display": {
+              "text": "Spill/ threat of a release reporting procedures with emergency contacts are not conspicuously posted"
+            },
+            "_row_num": 177,
+            "__rowNum__": 176,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen149",
+            "promptIdx": 115
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "followup_values",
+            "name": "threat_procedures_not_posted_fu",
+            "templatePath": "custom_select_dropdown.handlebars",
+            "_row_num": 178,
+            "__rowNum__": 177,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen149",
+            "promptIdx": 116
+          },
+          {
+            "type": "textarea",
+            "name": "threat_procedures_not_posted_com",
+            "_row_num": 179,
+            "__rowNum__": 178,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen149",
+            "promptIdx": 117
+          },
+          {
             "type": "note",
             "display": {
               "text": "Tank ID: {{data.tank_id}}"
             },
             "hideInContents": "true",
             "templatePath": "note_for_id.handlebars",
-            "_row_num": 180,
-            "__rowNum__": 179,
+            "_row_num": 183,
+            "__rowNum__": 182,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen179",
-            "promptIdx": 115
+            "_branch_label_enclosing_screen": "survey/_screen182",
+            "promptIdx": 118
           },
           {
             "type": "user_branch",
             "values_list": "branches",
             "hideInContents": "true",
-            "_row_num": 181,
-            "__rowNum__": 180,
+            "_row_num": 184,
+            "__rowNum__": 183,
             "_token_type": "prompt",
             "_type": "user_branch",
-            "_branch_label_enclosing_screen": "survey/_screen179",
-            "promptIdx": 116
+            "_branch_label_enclosing_screen": "survey/_screen182",
+            "promptIdx": 119
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 185,
-            "__rowNum__": 184,
+            "_row_num": 188,
+            "__rowNum__": 187,
             "_token_type": "prompt",
             "_do_section_name": "notes_section",
             "_type": "_section",
-            "promptIdx": 117,
+            "promptIdx": 120,
             "display": {
               "title": "Notes"
             },
@@ -5156,12 +5245,12 @@
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 188,
-            "__rowNum__": 187,
+            "_row_num": 191,
+            "__rowNum__": 190,
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
-            "promptIdx": 118,
+            "promptIdx": 121,
             "display": {
               "title": "GPS"
             },
@@ -5169,12 +5258,12 @@
           },
           {
             "clause": "do section image_section",
-            "_row_num": 191,
-            "__rowNum__": 190,
+            "_row_num": 194,
+            "__rowNum__": 193,
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
-            "promptIdx": 119,
+            "promptIdx": 122,
             "display": {
               "title": "Photo"
             },
@@ -5182,12 +5271,12 @@
           },
           {
             "clause": "do section signature_section",
-            "_row_num": 194,
-            "__rowNum__": 193,
+            "_row_num": 197,
+            "__rowNum__": 196,
             "_token_type": "prompt",
             "_do_section_name": "signature_section",
             "_type": "_section",
-            "promptIdx": 120,
+            "promptIdx": 123,
             "display": {
               "title": "Signature"
             },
@@ -5246,11 +5335,11 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 177,
-              "__rowNum__": 176,
+              "_row_num": 180,
+              "__rowNum__": 179,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(88);\nactivePromptIndicies.push(89);\nactivePromptIndicies.push(90);\nactivePromptIndicies.push(91);\nactivePromptIndicies.push(92);\nactivePromptIndicies.push(93);\nactivePromptIndicies.push(94);\nactivePromptIndicies.push(95);\nactivePromptIndicies.push(96);\nactivePromptIndicies.push(97);\nactivePromptIndicies.push(98);\nactivePromptIndicies.push(99);\nactivePromptIndicies.push(100);\nactivePromptIndicies.push(101);\nactivePromptIndicies.push(102);\nactivePromptIndicies.push(103);\nactivePromptIndicies.push(104);\nactivePromptIndicies.push(105);\nactivePromptIndicies.push(106);\nactivePromptIndicies.push(107);\nactivePromptIndicies.push(108);\nactivePromptIndicies.push(109);\nactivePromptIndicies.push(110);\nactivePromptIndicies.push(111);\nactivePromptIndicies.push(112);\nactivePromptIndicies.push(113);\nactivePromptIndicies.push(114);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(88);\nactivePromptIndicies.push(89);\nactivePromptIndicies.push(90);\nactivePromptIndicies.push(91);\nactivePromptIndicies.push(92);\nactivePromptIndicies.push(93);\nactivePromptIndicies.push(94);\nactivePromptIndicies.push(95);\nactivePromptIndicies.push(96);\nactivePromptIndicies.push(97);\nactivePromptIndicies.push(98);\nactivePromptIndicies.push(99);\nactivePromptIndicies.push(100);\nactivePromptIndicies.push(101);\nactivePromptIndicies.push(102);\nactivePromptIndicies.push(103);\nactivePromptIndicies.push(104);\nactivePromptIndicies.push(105);\nactivePromptIndicies.push(106);\nactivePromptIndicies.push(107);\nactivePromptIndicies.push(108);\nactivePromptIndicies.push(109);\nactivePromptIndicies.push(110);\nactivePromptIndicies.push(111);\nactivePromptIndicies.push(112);\nactivePromptIndicies.push(113);\nactivePromptIndicies.push(114);\nactivePromptIndicies.push(115);\nactivePromptIndicies.push(116);\nactivePromptIndicies.push(117);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 2
           },
           {
@@ -5259,34 +5348,18 @@
               "text": "AST Month Inspection Home Page"
             },
             "hideInContents": "true",
-            "_row_num": 179,
-            "__rowNum__": 178,
+            "_row_num": 182,
+            "__rowNum__": 181,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
               "hideInContents": "true",
-              "_row_num": 182,
-              "__rowNum__": 181,
+              "_row_num": 185,
+              "__rowNum__": 184,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(115);\nactivePromptIndicies.push(116);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(118);\nactivePromptIndicies.push(119);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 3
-          },
-          {
-            "clause": "goto _contents",
-            "_row_num": 183,
-            "__rowNum__": 182,
-            "_token_type": "goto_label",
-            "_branch_label": "_contents",
-            "operationIdx": 4
-          },
-          {
-            "clause": "do section notes_section",
-            "_row_num": 185,
-            "__rowNum__": 184,
-            "_token_type": "do_section",
-            "_do_section_name": "notes_section",
-            "operationIdx": 5
           },
           {
             "clause": "goto _contents",
@@ -5294,15 +5367,15 @@
             "__rowNum__": 185,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
-            "operationIdx": 6
+            "operationIdx": 4
           },
           {
-            "clause": "do section gps_section",
+            "clause": "do section notes_section",
             "_row_num": 188,
             "__rowNum__": 187,
             "_token_type": "do_section",
-            "_do_section_name": "gps_section",
-            "operationIdx": 7
+            "_do_section_name": "notes_section",
+            "operationIdx": 5
           },
           {
             "clause": "goto _contents",
@@ -5310,15 +5383,15 @@
             "__rowNum__": 188,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
-            "operationIdx": 8
+            "operationIdx": 6
           },
           {
-            "clause": "do section image_section",
+            "clause": "do section gps_section",
             "_row_num": 191,
             "__rowNum__": 190,
             "_token_type": "do_section",
-            "_do_section_name": "image_section",
-            "operationIdx": 9
+            "_do_section_name": "gps_section",
+            "operationIdx": 7
           },
           {
             "clause": "goto _contents",
@@ -5326,15 +5399,15 @@
             "__rowNum__": 191,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
-            "operationIdx": 10
+            "operationIdx": 8
           },
           {
-            "clause": "do section signature_section",
+            "clause": "do section image_section",
             "_row_num": 194,
             "__rowNum__": 193,
             "_token_type": "do_section",
-            "_do_section_name": "signature_section",
-            "operationIdx": 11
+            "_do_section_name": "image_section",
+            "operationIdx": 9
           },
           {
             "clause": "goto _contents",
@@ -5342,19 +5415,35 @@
             "__rowNum__": 194,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
+            "operationIdx": 10
+          },
+          {
+            "clause": "do section signature_section",
+            "_row_num": 197,
+            "__rowNum__": 196,
+            "_token_type": "do_section",
+            "_do_section_name": "signature_section",
+            "operationIdx": 11
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 198,
+            "__rowNum__": 197,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
             "operationIdx": 12
           },
           {
             "clause": "exit section",
-            "_row_num": 197,
-            "__rowNum__": 196,
+            "_row_num": 200,
+            "__rowNum__": 199,
             "_token_type": "exit_section",
             "operationIdx": 13
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 198,
+            "_row_num": 201,
             "operationIdx": 14
           }
         ],
@@ -5363,7 +5452,7 @@
           "_screen119": 1,
           "_screen149": 2,
           "_contents": 3,
-          "_screen179": 3,
+          "_screen182": 3,
           "notes": 5,
           "gps": 7,
           "image": 9,

@@ -1855,7 +1855,7 @@ promptTypes.datetime = promptTypes.input_type.extend({
                 rerender = true;
             }
  
-           renderContext.value = formattedDateValue;
+            renderContext.value = formattedDateValue;
             if ( rerender ) {
                 //Asif
                 //that.reRender(ctxt);

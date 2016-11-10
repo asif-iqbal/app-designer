@@ -386,7 +386,6 @@ return {
                     if('condition' in op && !op.condition()) {
                         path = that.getNextOperationPath(path);
                     } else {
-                        alert(op._section_name + "/" + op._branch_label)
                         path = that.getOperationPath(op._section_name + "/" + op._branch_label);
                     }
                     break;
@@ -410,7 +409,6 @@ return {
                     path = combo.path;
                     state = combo.state;
 
-                    alert(path + '-' + state + '-' + opendatakit.initialScreenPath + '-' + opendatakit.getSettingValue('form_id') + '-' + opendatakit.getRefId());
                     if (path == 'initial/_contents') {
                         var complete = ('calculation' in op) ? op.calculation() : false;
                         var siformId = opendatakit.getSettingValue('form_id');
@@ -1005,7 +1003,6 @@ return {
             ctxt.failure(that.moveFailureMessage);
             return;
         }
-        alert('path-'+path + ' - ' + '_token_type-'+op._token_type);
         that._doActionAt(ctxt, op, op._token_type, false);
     },
     /*
