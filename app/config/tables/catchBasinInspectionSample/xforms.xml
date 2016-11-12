@@ -40,6 +40,7 @@
         <odor_present/>
         <other_maintenance/>
         <pid_reading/>
+        <pid_reading_option/>
         <product_present/>
         <samples_obtained_analyzed/>
         <saturated_or_filled/>
@@ -81,6 +82,7 @@
     <bind nodeset="/data/odor_present" type="string"/>
     <bind nodeset="/data/other_maintenance" type="string"/>
     <bind nodeset="/data/pid_reading" type="decimal"/>
+    <bind nodeset="/data/pid_reading_option" type="string"/>
     <bind nodeset="/data/product_present" type="string"/>
     <bind nodeset="/data/samples_obtained_analyzed" type="string"/>
     <bind nodeset="/data/saturated_or_filled" type="string"/>

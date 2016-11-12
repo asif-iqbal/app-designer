@@ -99,6 +99,11 @@ Column,pid_reading,displayFormat,string,""
 Column,pid_reading,displayName,string,"""pid_reading"""
 Column,pid_reading,displayVisible,boolean,TRUE
 Column,pid_reading,joins,object,""
+Column,pid_reading_option,displayChoicesList,object,"[{""choice_list_name"":""pid_reading_option"",""data_value"":""N/A"",""display"":{""text"":""N/A""},""_row_num"":18},{""choice_list_name"":""pid_reading_option"",""data_value"":""Numeric"",""display"":{""text"":""Numeric""},""_row_num"":19}]"
+Column,pid_reading_option,displayFormat,string,""
+Column,pid_reading_option,displayName,string,"""pid_reading_option"""
+Column,pid_reading_option,displayVisible,boolean,TRUE
+Column,pid_reading_option,joins,object,""
 Column,product_present,displayChoicesList,object,"[{""choice_list_name"":""yesno"",""data_value"":""yes"",""display"":{""text"":""Yes""},""_row_num"":7},{""choice_list_name"":""yesno"",""data_value"":""no"",""display"":{""text"":""No""},""_row_num"":8}]"
 Column,product_present,displayFormat,string,""
 Column,product_present,displayName,string,"""product_present"""
@@ -156,7 +161,7 @@ Column,water_in_vault,displayVisible,boolean,TRUE
 Column,water_in_vault,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,catchBasinInspectionSample
-Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
+Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""pid_reading_option"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Catch Basin Inspection Sample"""
 Table,default,groupByCols,object,[]
