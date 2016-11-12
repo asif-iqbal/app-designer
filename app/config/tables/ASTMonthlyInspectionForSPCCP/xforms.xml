@@ -105,6 +105,8 @@
         <secondary_containment_damaged_com/>
         <secondary_containment_damaged_fu/>
         <sign/>
+        <sign_2/>
+        <sign_2_person_name/>
         <sign_person_name/>
         <spill_bucket_damaged/>
         <spill_bucket_damaged_com/>
@@ -236,6 +238,8 @@
     <bind nodeset="/data/secondary_containment_damaged_com" type="string"/>
     <bind nodeset="/data/secondary_containment_damaged_fu" type="string"/>
     <bind nodeset="/data/sign" type="binary"/>
+    <bind nodeset="/data/sign_2" type="binary"/>
+    <bind nodeset="/data/sign_2_person_name" type="string"/>
     <bind nodeset="/data/sign_person_name" type="string"/>
     <bind nodeset="/data/spill_bucket_damaged" type="string"/>
     <bind nodeset="/data/spill_bucket_damaged_com" type="string"/>
@@ -276,5 +280,6 @@
  </h:head> 
  <h:body> 
 <upload ref="sign" mediatype="image/*"><label>Dummy</label></upload>
+<upload ref="sign_2" mediatype="image/*"><label>Dummy</label></upload>
  </h:body> 
 </h:html>

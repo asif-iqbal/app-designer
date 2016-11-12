@@ -73,6 +73,8 @@
         <project_number/>
         <sample_date/>
         <sign/>
+        <sign_2/>
+        <sign_2_person_name/>
         <sign_person_name/>
         <vehicle_name_0/>
         <vehicle_name_1/>
@@ -147,6 +149,8 @@
     <bind nodeset="/data/project_number" type="string"/>
     <bind nodeset="/data/sample_date" type="string"/>
     <bind nodeset="/data/sign" type="binary"/>
+    <bind nodeset="/data/sign_2" type="binary"/>
+    <bind nodeset="/data/sign_2_person_name" type="string"/>
     <bind nodeset="/data/sign_person_name" type="string"/>
     <bind nodeset="/data/vehicle_name_0" type="string"/>
     <bind nodeset="/data/vehicle_name_1" type="string"/>
@@ -162,5 +166,6 @@
  </h:head> 
  <h:body> 
 <upload ref="sign" mediatype="image/*"><label>Dummy</label></upload>
+<upload ref="sign_2" mediatype="image/*"><label>Dummy</label></upload>
  </h:body> 
 </h:html>

@@ -25,6 +25,8 @@
           <savepointTimestamp/>
         </orx:meta>
         <bulk_storage_tanks/>
+        <bulk_storage_tanks_actions/>
+        <bulk_storage_tanks_prob/>
         <catch_basins/>
         <changes_occured_stormwater/>
         <comments/>
@@ -37,8 +39,6 @@
         <consumable_totalhrs_0/>
         <consumable_totalhrs_1/>
         <consumable_totalhrs_2/>
-        <corrective_actions_taken/>
-        <corrective_actions_to_take/>
         <drums_containers_labelled/>
         <dumpster_lids/>
         <equipment_name_0/>
@@ -79,13 +79,14 @@
         <personnel_totalhrs_0/>
         <personnel_totalhrs_1/>
         <personnel_totalhrs_2/>
-        <problems_found/>
         <project_comment/>
         <project_daily_report/>
         <project_number/>
         <quarter_name/>
         <sample_date/>
         <sign/>
+        <sign_2/>
+        <sign_2_person_name/>
         <sign_person_name/>
         <spill_response_material/>
         <traction_sand_intrerfering/>
@@ -114,6 +115,8 @@
     <bind nodeset="/data/meta/savepointCreator" type="string"/>
     <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
     <bind nodeset="/data/bulk_storage_tanks" type="string"/>
+    <bind nodeset="/data/bulk_storage_tanks_actions" type="string"/>
+    <bind nodeset="/data/bulk_storage_tanks_prob" type="string"/>
     <bind nodeset="/data/catch_basins" type="string"/>
     <bind nodeset="/data/changes_occured_stormwater" type="string"/>
     <bind nodeset="/data/comments" type="string"/>
@@ -126,8 +129,6 @@
     <bind nodeset="/data/consumable_totalhrs_0" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_1" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_2" type="string"/>
-    <bind nodeset="/data/corrective_actions_taken" type="string"/>
-    <bind nodeset="/data/corrective_actions_to_take" type="string"/>
     <bind nodeset="/data/drums_containers_labelled" type="string"/>
     <bind nodeset="/data/dumpster_lids" type="string"/>
     <bind nodeset="/data/equipment_name_0" type="string"/>
@@ -168,13 +169,14 @@
     <bind nodeset="/data/personnel_totalhrs_0" type="string"/>
     <bind nodeset="/data/personnel_totalhrs_1" type="string"/>
     <bind nodeset="/data/personnel_totalhrs_2" type="string"/>
-    <bind nodeset="/data/problems_found" type="string"/>
     <bind nodeset="/data/project_comment" type="string"/>
     <bind nodeset="/data/project_daily_report" type="string"/>
     <bind nodeset="/data/project_number" type="string"/>
     <bind nodeset="/data/quarter_name" type="string"/>
     <bind nodeset="/data/sample_date" type="string"/>
     <bind nodeset="/data/sign" type="binary"/>
+    <bind nodeset="/data/sign_2" type="binary"/>
+    <bind nodeset="/data/sign_2_person_name" type="string"/>
     <bind nodeset="/data/sign_person_name" type="string"/>
     <bind nodeset="/data/spill_response_material" type="string"/>
     <bind nodeset="/data/traction_sand_intrerfering" type="string"/>
@@ -192,5 +194,6 @@
  </h:head> 
  <h:body> 
 <upload ref="sign" mediatype="image/*"><label>Dummy</label></upload>
+<upload ref="sign_2" mediatype="image/*"><label>Dummy</label></upload>
  </h:body> 
 </h:html>

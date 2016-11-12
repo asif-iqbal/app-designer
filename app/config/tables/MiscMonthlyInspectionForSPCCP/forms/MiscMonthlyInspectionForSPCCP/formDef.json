@@ -810,12 +810,24 @@
         "_row_num": 133
       },
       {
-        "branch_label": "exitpath",
+        "branch_label": "signature_2",
         "_row_num": 134
       },
       {
-        "clause": "exit section",
+        "clause": "do section signature_2_section",
         "_row_num": 135
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 136
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 137
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 138
       }
     ],
     "gps_section": [
@@ -913,6 +925,35 @@
         "_row_num": 5
       }
     ],
+    "signature_2_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Signature"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "string",
+        "name": "sign_2_person_name",
+        "display": {
+          "text": "Signatory Name"
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "signature",
+        "name": "sign_2",
+        "display": {
+          "text": "Signature"
+        },
+        "_row_num": 4
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 5
+      }
+    ],
     "choices": [
       {
         "choice_list_name": "branches",
@@ -952,12 +993,21 @@
       },
       {
         "choice_list_name": "branches",
+        "data_value": "signature_2",
+        "display": {
+          "text": "Signature 2",
+          "image": "Signature.png"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "branches",
         "data_value": "exitpath",
         "display": {
           "text": "Exit",
           "image": "Exit.png"
         },
-        "_row_num": 6
+        "_row_num": 7
       }
     ],
     "queries": [
@@ -1392,6 +1442,11 @@
           "title": "Monthly Inspection Misc Containers"
         },
         "_row_num": 4
+      },
+      "signature_2_section": {
+        "display": {
+          "title": "Monthly Inspection Misc Containers"
+        }
       }
     },
     "choices": {
@@ -1434,12 +1489,21 @@
         },
         {
           "choice_list_name": "branches",
+          "data_value": "signature_2",
+          "display": {
+            "text": "Signature 2",
+            "image": "Signature.png"
+          },
+          "_row_num": 6
+        },
+        {
+          "choice_list_name": "branches",
           "data_value": "exitpath",
           "display": {
             "text": "Exit",
             "image": "Exit.png"
           },
-          "_row_num": 6
+          "_row_num": 7
         }
       ]
     },
@@ -2366,6 +2430,38 @@
           }
         },
         "elementKey": "sign"
+      },
+      "sign_2_person_name": {
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "signature_2_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "sign_2_person_name"
+      },
+      "sign_2": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "signature_2_section"
+          }
+        ],
+        "type": "object",
+        "elementType": "mimeUri",
+        "properties": {
+          "uriFragment": {
+            "type": "rowpath",
+            "elementKey": "sign_2_uriFragment"
+          },
+          "contentType": {
+            "type": "string",
+            "default": "image/*",
+            "elementKey": "sign_2_contentType"
+          }
+        },
+        "elementKey": "sign_2"
       }
     },
     "section_names": [
@@ -2373,6 +2469,7 @@
       "image_section",
       "initial",
       "notes_section",
+      "signature_2_section",
       "signature_section",
       "survey"
     ],
@@ -2387,7 +2484,8 @@
           "notes_section": true,
           "gps_section": true,
           "image_section": true,
-          "signature_section": true
+          "signature_section": true,
+          "signature_2_section": true
         },
         "prompts": [
           {
@@ -2549,13 +2647,15 @@
           "notes_section": true,
           "gps_section": true,
           "image_section": true,
-          "signature_section": true
+          "signature_section": true,
+          "signature_2_section": true
         },
         "reachable_sections": {
           "notes_section": true,
           "gps_section": true,
           "image_section": true,
-          "signature_section": true
+          "signature_section": true,
+          "signature_2_section": true
         },
         "prompts": [
           {
@@ -3270,6 +3370,19 @@
               "title": "Signature"
             },
             "_branch_label_enclosing_screen": "signature_section/0"
+          },
+          {
+            "clause": "do section signature_2_section",
+            "_row_num": 135,
+            "__rowNum__": 134,
+            "_token_type": "prompt",
+            "_do_section_name": "signature_2_section",
+            "_type": "_section",
+            "promptIdx": 63,
+            "display": {
+              "title": "Monthly Inspection Misc Containers"
+            },
+            "_branch_label_enclosing_screen": "signature_2_section/0"
           }
         ],
         "validation_tag_map": {
@@ -3386,17 +3499,33 @@
             "operationIdx": 10
           },
           {
-            "clause": "exit section",
+            "clause": "do section signature_2_section",
             "_row_num": 135,
             "__rowNum__": 134,
-            "_token_type": "exit_section",
+            "_token_type": "do_section",
+            "_do_section_name": "signature_2_section",
             "operationIdx": 11
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 136,
+            "__rowNum__": 135,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 12
+          },
+          {
+            "clause": "exit section",
+            "_row_num": 138,
+            "__rowNum__": 137,
+            "_token_type": "exit_section",
+            "operationIdx": 13
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 136,
-            "operationIdx": 12
+            "_row_num": 139,
+            "operationIdx": 14
           }
         ],
         "branch_label_map": {
@@ -3407,7 +3536,8 @@
           "gps": 5,
           "image": 7,
           "signature": 9,
-          "exitpath": 11
+          "signature_2": 11,
+          "exitpath": 13
         }
       },
       "gps_section": {
@@ -3678,6 +3808,95 @@
             "_type": "contents",
             "_row_num": 6,
             "_branch_label_enclosing_screen": "signature_section/_screen6",
+            "promptIdx": 2
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Signature"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 5,
+              "__rowNum__": 4,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 6,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 6,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen6": 2
+        }
+      },
+      "signature_2_section": {
+        "section_name": "signature_2_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "string",
+            "name": "sign_2_person_name",
+            "display": {
+              "text": "Signatory Name"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "signature_2_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "signature",
+            "name": "sign_2",
+            "display": {
+              "text": "Signature"
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "signature",
+            "_branch_label_enclosing_screen": "signature_2_section/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 6,
+            "_branch_label_enclosing_screen": "signature_2_section/_screen6",
             "promptIdx": 2
           }
         ],

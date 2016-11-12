@@ -44,10 +44,10 @@
       },
       {
         "type": "string",
-        "name": "quarter_name",
         "display": {
           "text": "Quarter"
         },
+        "name": "quarter_name",
         "hideInContents": "true",
         "templatePath": "string_input_type.handlebars",
         "required": "true",
@@ -716,166 +716,300 @@
       {
         "type": "select_one",
         "values_list": "yesno",
-        "name": "changes_occured_stormwater",
         "display": {
           "text": "Have any changes occurred to the exterior of the facility that could affect the current stormwater drainage patterns? If yes, describe them."
         },
+        "name": "changes_occured_stormwater",
         "_row_num": 114
       },
       {
-        "type": "select_one",
-        "values_list": "yesno",
-        "name": "non_incidental_spills",
         "display": {
-          "text": "Have there been any non-incidental spills since the last inspection? If yes, attach information regarding the spill(s) to this form"
+          "text": "List of problems"
         },
+        "name": "changes_occured_stormwater_prob",
         "_row_num": 115
       },
       {
-        "type": "select_one",
-        "values_list": "yesno",
-        "name": "operations_storage_material",
         "display": {
-          "text": "Are there any operations or storage of materials outside that could impact stormwater quality? If yes, describe them."
+          "text": "Corrective Actions"
         },
+        "name": "changes_occured_stormwater_actions",
         "_row_num": 116
       },
       {
         "type": "select_one",
         "values_list": "yesno",
-        "name": "good_housekeeping_procedures",
         "display": {
-          "text": "Are good housekeeping procedures, as discussed in the Stormwater Pollution Prevention Plan, being implemented and followed"
+          "text": "Have there been any non-incidental spills since the last inspection? If yes, attach information regarding the spill(s) to this form"
         },
+        "name": "non_incidental_spills",
         "_row_num": 117
       },
       {
-        "type": "select_one",
-        "values_list": "yesno",
-        "name": "locomotive_storage",
         "display": {
-          "text": "Is the locomotive storage area free of leaking fluids or spilled fuel"
+          "text": "List of problems"
         },
+        "name": "non_incidental_spills_prob",
         "_row_num": 118
       },
       {
-        "type": "select_one",
-        "values_list": "yesno",
-        "name": "traction_sand_intrerfering",
         "display": {
-          "text": "Is traction sand build-up interfering with the operation of the oil water separator system and/or the stormwater conveyance system (if present)"
+          "text": "Corrective Actions"
         },
+        "name": "non_incidental_spills_actions",
         "_row_num": 119
       },
       {
         "type": "select_one",
         "values_list": "yesno",
-        "name": "catch_basins",
         "display": {
-          "text": "Are catch basins clean and free of debris"
+          "text": "Are there any operations or storage of materials outside that could impact stormwater quality? If yes, describe them."
         },
+        "name": "operations_storage_material",
         "_row_num": 120
       },
       {
-        "type": "select_one",
-        "values_list": "yesno",
-        "name": "evidence_dry_water",
         "display": {
-          "text": "Is there any evidence of dry weather discharges to the catch basins"
+          "text": "List of problems"
         },
+        "name": "operations_storage_material_prob",
         "_row_num": 121
       },
       {
-        "type": "select_one",
-        "values_list": "yesno",
-        "name": "drums_containers_labelled",
         "display": {
-          "text": "Are drums/containers enclosed/covered, labeled, and closed"
+          "text": "Corrective Actions"
         },
+        "name": "operations_storage_material_actions",
         "_row_num": 122
       },
       {
         "type": "select_one",
         "values_list": "yesno",
-        "name": "spill_response_material",
         "display": {
-          "text": "Are spill response materials properly stored and easily accessible"
+          "text": "Are good housekeeping procedures, as discussed in the Stormwater Pollution Prevention Plan, being implemented and followed"
         },
+        "name": "good_housekeeping_procedures",
         "_row_num": 123
       },
       {
-        "type": "select_one",
-        "values_list": "yesno",
-        "name": "bulk_storage_tanks",
         "display": {
-          "text": "Are bulk storage tanks and material delivery areas free of drips and leaks"
+          "text": "List of problems"
         },
+        "name": "good_housekeeping_procedures_prob",
         "_row_num": 124
       },
       {
-        "type": "select_one",
-        "values_list": "yesno",
-        "name": "dumpster_lids",
         "display": {
-          "text": "Are dumpster lids closed and drain plugs intact"
+          "text": "Corrective Actions"
         },
+        "name": "good_housekeeping_procedures_actions",
         "_row_num": 125
       },
       {
-        "type": "textarea",
-        "name": "problems_found",
+        "type": "select_one",
+        "values_list": "yesno",
         "display": {
-          "text": "List problems found and corrective actions taken, and indicate who was notified"
+          "text": "Is the locomotive storage area free of leaking fluids or spilled fuel"
         },
-        "inputAttributes": {
-          "rows": 4,
-          "maxlength": 250
-        },
+        "name": "locomotive_storage",
         "_row_num": 126
       },
       {
-        "type": "textarea",
-        "name": "comments",
         "display": {
-          "text": "Comments"
+          "text": "List of problems"
         },
-        "inputAttributes": {
-          "rows": 4,
-          "maxlength": 250
-        },
+        "name": "locomotive_storage_prob",
         "_row_num": 127
       },
       {
-        "type": "textarea",
-        "name": "corrective_actions_to_take",
         "display": {
-          "text": "Corrective Actions to be taken"
+          "text": "Corrective Actions"
         },
-        "inputAttributes": {
-          "rows": 4,
-          "maxlength": 250
-        },
+        "name": "locomotive_storage_actions",
         "_row_num": 128
       },
       {
-        "type": "textarea",
-        "name": "corrective_actions_taken",
+        "type": "select_one",
+        "values_list": "yesno",
         "display": {
-          "text": "Corrective Action Taken"
+          "text": "Is traction sand build-up interfering with the operation of the oil water separator system and/or the stormwater conveyance system (if present)"
         },
+        "name": "traction_sand_intrerfering",
+        "_row_num": 129
+      },
+      {
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "traction_sand_intrerfering_prob",
+        "_row_num": 130
+      },
+      {
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "traction_sand_intrerfering_actions",
+        "_row_num": 131
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are catch basins clean and free of debris"
+        },
+        "name": "catch_basins",
+        "_row_num": 132
+      },
+      {
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "catch_basins_prob",
+        "_row_num": 133
+      },
+      {
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "catch_basins_actions",
+        "_row_num": 134
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Is there any evidence of dry weather discharges to the catch basins"
+        },
+        "name": "evidence_dry_water",
+        "_row_num": 135
+      },
+      {
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "evidence_dry_water_prob",
+        "_row_num": 136
+      },
+      {
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "evidence_dry_water_actions",
+        "_row_num": 137
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are drums/containers enclosed/covered, labeled, and closed"
+        },
+        "name": "drums_containers_labelled",
+        "_row_num": 138
+      },
+      {
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "drums_containers_labelled_prob",
+        "_row_num": 139
+      },
+      {
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "drums_containers_labelled_actions",
+        "_row_num": 140
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are spill response materials properly stored and easily accessible"
+        },
+        "name": "spill_response_material",
+        "_row_num": 141
+      },
+      {
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "spill_response_material_prob",
+        "_row_num": 142
+      },
+      {
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "spill_response_material_actions",
+        "_row_num": 143
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are bulk storage tanks and material delivery areas free of drips and leaks"
+        },
+        "name": "bulk_storage_tanks",
+        "_row_num": 144
+      },
+      {
+        "type": "string",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "bulk_storage_tanks_prob",
+        "_row_num": 145
+      },
+      {
+        "type": "string",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "bulk_storage_tanks_actions",
+        "_row_num": 146
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are dumpster lids closed and drain plugs intact"
+        },
+        "name": "dumpster_lids",
+        "_row_num": 147
+      },
+      {
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "dumpster_lids_prob",
+        "_row_num": 148
+      },
+      {
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "dumpster_lids_actions",
+        "_row_num": 149
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Comments"
+        },
+        "name": "comments",
         "inputAttributes": {
           "rows": 4,
           "maxlength": 250
         },
-        "_row_num": 129
+        "_row_num": 150
       },
       {
         "clause": "end screen",
-        "_row_num": 130
+        "_row_num": 151
       },
       {
         "branch_label": "_contents",
-        "_row_num": 131
+        "_row_num": 152
       },
       {
         "clause": "begin screen",
@@ -883,66 +1017,78 @@
           "text": "Quarter Site Inspection Report"
         },
         "hideInContents": "true",
-        "_row_num": 132
+        "_row_num": 153
       },
       {
         "type": "user_branch",
         "values_list": "branches",
         "hideInContents": "true",
-        "_row_num": 133
+        "_row_num": 154
       },
       {
         "clause": "end screen",
         "hideInContents": "true",
-        "_row_num": 134
+        "_row_num": 155
       },
       {
         "clause": "goto _contents",
-        "_row_num": 135
+        "_row_num": 156
       },
       {
         "branch_label": "image",
-        "_row_num": 136
+        "_row_num": 157
       },
       {
         "clause": "do section image_section",
-        "_row_num": 137
+        "_row_num": 158
       },
       {
         "clause": "goto _contents",
-        "_row_num": 138
+        "_row_num": 159
       },
       {
         "branch_label": "gps",
-        "_row_num": 139
+        "_row_num": 160
       },
       {
         "clause": "do section gps_section",
-        "_row_num": 140
+        "_row_num": 161
       },
       {
         "clause": "goto _contents",
-        "_row_num": 141
+        "_row_num": 162
       },
       {
         "branch_label": "signature",
-        "_row_num": 142
+        "_row_num": 163
       },
       {
         "clause": "do section signature_section",
-        "_row_num": 143
+        "_row_num": 164
       },
       {
         "clause": "goto _contents",
-        "_row_num": 144
+        "_row_num": 165
+      },
+      {
+        "branch_label": "signature_2",
+        "_row_num": 166
+      },
+      {
+        "clause": "do section signature_2_section",
+        "_row_num": 167
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 168
       },
       {
         "branch_label": "exitpath",
-        "_row_num": 145
+        "_row_num": 169
       },
       {
         "clause": "exit section",
-        "_row_num": 146
+        "_row_num": 170
       }
     ],
     "gps_section": [
@@ -1018,6 +1164,35 @@
         "_row_num": 5
       }
     ],
+    "signature_2_section": [
+      {
+        "clause": "begin screen",
+        "display": {
+          "text": "Signature"
+        },
+        "_row_num": 2
+      },
+      {
+        "type": "string",
+        "name": "sign_2_person_name",
+        "display": {
+          "text": "Signatory Name"
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "signature",
+        "name": "sign_2",
+        "display": {
+          "text": "Signature"
+        },
+        "_row_num": 4
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 5
+      }
+    ],
     "queries": [
       {
         "query_name": "linked_images",
@@ -1051,12 +1226,21 @@
       },
       {
         "choice_list_name": "branches",
+        "data_value": "signature_2",
+        "display": {
+          "text": "Signature 2",
+          "image": "Signature.png"
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "branches",
         "data_value": "gps",
         "display": {
           "text": "GPS",
           "image": "Gps.png"
         },
-        "_row_num": 4
+        "_row_num": 5
       },
       {
         "choice_list_name": "branches",
@@ -1065,7 +1249,7 @@
           "text": "Exit",
           "image": "Exit.png"
         },
-        "_row_num": 5
+        "_row_num": 6
       },
       {
         "choice_list_name": "yesno",
@@ -1073,7 +1257,7 @@
         "display": {
           "text": "Yes"
         },
-        "_row_num": 6
+        "_row_num": 7
       },
       {
         "choice_list_name": "yesno",
@@ -1081,7 +1265,7 @@
         "display": {
           "text": "No"
         },
-        "_row_num": 7
+        "_row_num": 8
       },
       {
         "choice_list_name": "yesno",
@@ -1089,7 +1273,7 @@
         "display": {
           "text": "NA"
         },
-        "_row_num": 8
+        "_row_num": 9
       }
     ],
     "settings": [
@@ -1130,6 +1314,13 @@
           "title": "Signature"
         },
         "_row_num": 7
+      },
+      {
+        "setting_name": "signature_2_section",
+        "display": {
+          "title": "Signature 2"
+        },
+        "_row_num": 8
       }
     ],
     "calculates": [
@@ -1442,6 +1633,13 @@
         },
         "_row_num": 7
       },
+      "signature_2_section": {
+        "setting_name": "signature_2_section",
+        "display": {
+          "title": "Signature 2"
+        },
+        "_row_num": 8
+      },
       "table_id": {
         "setting_name": "table_id",
         "value": "QuarterlyInspection",
@@ -1495,12 +1693,21 @@
         },
         {
           "choice_list_name": "branches",
+          "data_value": "signature_2",
+          "display": {
+            "text": "Signature 2",
+            "image": "Signature.png"
+          },
+          "_row_num": 4
+        },
+        {
+          "choice_list_name": "branches",
           "data_value": "gps",
           "display": {
             "text": "GPS",
             "image": "Gps.png"
           },
-          "_row_num": 4
+          "_row_num": 5
         },
         {
           "choice_list_name": "branches",
@@ -1509,7 +1716,7 @@
             "text": "Exit",
             "image": "Exit.png"
           },
-          "_row_num": 5
+          "_row_num": 6
         }
       ],
       "yesno": [
@@ -1519,7 +1726,7 @@
           "display": {
             "text": "Yes"
           },
-          "_row_num": 6
+          "_row_num": 7
         },
         {
           "choice_list_name": "yesno",
@@ -1527,7 +1734,7 @@
           "display": {
             "text": "No"
           },
-          "_row_num": 7
+          "_row_num": 8
         },
         {
           "choice_list_name": "yesno",
@@ -1535,7 +1742,7 @@
           "display": {
             "text": "NA"
           },
-          "_row_num": 8
+          "_row_num": 9
         }
       ]
     },
@@ -2378,7 +2585,7 @@
       "non_incidental_spills": {
         "_defn": [
           {
-            "_row_num": 115,
+            "_row_num": 117,
             "section_name": "survey"
           }
         ],
@@ -2389,7 +2596,7 @@
       "operations_storage_material": {
         "_defn": [
           {
-            "_row_num": 116,
+            "_row_num": 120,
             "section_name": "survey"
           }
         ],
@@ -2400,7 +2607,7 @@
       "good_housekeeping_procedures": {
         "_defn": [
           {
-            "_row_num": 117,
+            "_row_num": 123,
             "section_name": "survey"
           }
         ],
@@ -2411,7 +2618,7 @@
       "locomotive_storage": {
         "_defn": [
           {
-            "_row_num": 118,
+            "_row_num": 126,
             "section_name": "survey"
           }
         ],
@@ -2422,7 +2629,7 @@
       "traction_sand_intrerfering": {
         "_defn": [
           {
-            "_row_num": 119,
+            "_row_num": 129,
             "section_name": "survey"
           }
         ],
@@ -2433,7 +2640,7 @@
       "catch_basins": {
         "_defn": [
           {
-            "_row_num": 120,
+            "_row_num": 132,
             "section_name": "survey"
           }
         ],
@@ -2444,7 +2651,7 @@
       "evidence_dry_water": {
         "_defn": [
           {
-            "_row_num": 121,
+            "_row_num": 135,
             "section_name": "survey"
           }
         ],
@@ -2455,7 +2662,7 @@
       "drums_containers_labelled": {
         "_defn": [
           {
-            "_row_num": 122,
+            "_row_num": 138,
             "section_name": "survey"
           }
         ],
@@ -2466,7 +2673,7 @@
       "spill_response_material": {
         "_defn": [
           {
-            "_row_num": 123,
+            "_row_num": 141,
             "section_name": "survey"
           }
         ],
@@ -2477,7 +2684,7 @@
       "bulk_storage_tanks": {
         "_defn": [
           {
-            "_row_num": 124,
+            "_row_num": 144,
             "section_name": "survey"
           }
         ],
@@ -2485,10 +2692,30 @@
         "valuesList": "yesno",
         "elementKey": "bulk_storage_tanks"
       },
+      "bulk_storage_tanks_prob": {
+        "_defn": [
+          {
+            "_row_num": 145,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "bulk_storage_tanks_prob"
+      },
+      "bulk_storage_tanks_actions": {
+        "_defn": [
+          {
+            "_row_num": 146,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "bulk_storage_tanks_actions"
+      },
       "dumpster_lids": {
         "_defn": [
           {
-            "_row_num": 125,
+            "_row_num": 147,
             "section_name": "survey"
           }
         ],
@@ -2496,45 +2723,15 @@
         "valuesList": "yesno",
         "elementKey": "dumpster_lids"
       },
-      "problems_found": {
-        "_defn": [
-          {
-            "_row_num": 126,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "elementKey": "problems_found"
-      },
       "comments": {
         "_defn": [
           {
-            "_row_num": 127,
+            "_row_num": 150,
             "section_name": "survey"
           }
         ],
         "type": "string",
         "elementKey": "comments"
-      },
-      "corrective_actions_to_take": {
-        "_defn": [
-          {
-            "_row_num": 128,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "elementKey": "corrective_actions_to_take"
-      },
-      "corrective_actions_taken": {
-        "_defn": [
-          {
-            "_row_num": 129,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "elementKey": "corrective_actions_taken"
       },
       "geo_info": {
         "_defn": [
@@ -2596,12 +2793,45 @@
           }
         },
         "elementKey": "sign"
+      },
+      "sign_2_person_name": {
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "signature_2_section"
+          }
+        ],
+        "type": "string",
+        "elementKey": "sign_2_person_name"
+      },
+      "sign_2": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "signature_2_section"
+          }
+        ],
+        "type": "object",
+        "elementType": "mimeUri",
+        "properties": {
+          "uriFragment": {
+            "type": "rowpath",
+            "elementKey": "sign_2_uriFragment"
+          },
+          "contentType": {
+            "type": "string",
+            "default": "image/*",
+            "elementKey": "sign_2_contentType"
+          }
+        },
+        "elementKey": "sign_2"
       }
     },
     "section_names": [
       "gps_section",
       "image_section",
       "initial",
+      "signature_2_section",
       "signature_section",
       "survey"
     ],
@@ -2615,7 +2845,8 @@
           "survey": true,
           "image_section": true,
           "gps_section": true,
-          "signature_section": true
+          "signature_section": true,
+          "signature_2_section": true
         },
         "prompts": [
           {
@@ -2776,20 +3007,22 @@
         "nested_sections": {
           "image_section": true,
           "gps_section": true,
-          "signature_section": true
+          "signature_section": true,
+          "signature_2_section": true
         },
         "reachable_sections": {
           "image_section": true,
           "gps_section": true,
-          "signature_section": true
+          "signature_section": true,
+          "signature_2_section": true
         },
         "prompts": [
           {
             "type": "string",
-            "name": "quarter_name",
             "display": {
               "text": "Quarter"
             },
+            "name": "quarter_name",
             "hideInContents": "true",
             "templatePath": "string_input_type.handlebars",
             "required": "true",
@@ -3408,10 +3641,10 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "changes_occured_stormwater",
             "display": {
               "text": "Have any changes occurred to the exterior of the facility that could affect the current stormwater drainage patterns? If yes, describe them."
             },
+            "name": "changes_occured_stormwater",
             "_row_num": 114,
             "__rowNum__": 113,
             "_token_type": "prompt",
@@ -3422,12 +3655,12 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "non_incidental_spills",
             "display": {
               "text": "Have there been any non-incidental spills since the last inspection? If yes, attach information regarding the spill(s) to this form"
             },
-            "_row_num": 115,
-            "__rowNum__": 114,
+            "name": "non_incidental_spills",
+            "_row_num": 117,
+            "__rowNum__": 116,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3436,12 +3669,12 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "operations_storage_material",
             "display": {
               "text": "Are there any operations or storage of materials outside that could impact stormwater quality? If yes, describe them."
             },
-            "_row_num": 116,
-            "__rowNum__": 115,
+            "name": "operations_storage_material",
+            "_row_num": 120,
+            "__rowNum__": 119,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3450,12 +3683,12 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "good_housekeeping_procedures",
             "display": {
               "text": "Are good housekeeping procedures, as discussed in the Stormwater Pollution Prevention Plan, being implemented and followed"
             },
-            "_row_num": 117,
-            "__rowNum__": 116,
+            "name": "good_housekeeping_procedures",
+            "_row_num": 123,
+            "__rowNum__": 122,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3464,12 +3697,12 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "locomotive_storage",
             "display": {
               "text": "Is the locomotive storage area free of leaking fluids or spilled fuel"
             },
-            "_row_num": 118,
-            "__rowNum__": 117,
+            "name": "locomotive_storage",
+            "_row_num": 126,
+            "__rowNum__": 125,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3478,12 +3711,12 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "traction_sand_intrerfering",
             "display": {
               "text": "Is traction sand build-up interfering with the operation of the oil water separator system and/or the stormwater conveyance system (if present)"
             },
-            "_row_num": 119,
-            "__rowNum__": 118,
+            "name": "traction_sand_intrerfering",
+            "_row_num": 129,
+            "__rowNum__": 128,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3492,12 +3725,12 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "catch_basins",
             "display": {
               "text": "Are catch basins clean and free of debris"
             },
-            "_row_num": 120,
-            "__rowNum__": 119,
+            "name": "catch_basins",
+            "_row_num": 132,
+            "__rowNum__": 131,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3506,12 +3739,12 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "evidence_dry_water",
             "display": {
               "text": "Is there any evidence of dry weather discharges to the catch basins"
             },
-            "_row_num": 121,
-            "__rowNum__": 120,
+            "name": "evidence_dry_water",
+            "_row_num": 135,
+            "__rowNum__": 134,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3520,12 +3753,12 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "drums_containers_labelled",
             "display": {
               "text": "Are drums/containers enclosed/covered, labeled, and closed"
             },
-            "_row_num": 122,
-            "__rowNum__": 121,
+            "name": "drums_containers_labelled",
+            "_row_num": 138,
+            "__rowNum__": 137,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3534,12 +3767,12 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "spill_response_material",
             "display": {
               "text": "Are spill response materials properly stored and easily accessible"
             },
-            "_row_num": 123,
-            "__rowNum__": 122,
+            "name": "spill_response_material",
+            "_row_num": 141,
+            "__rowNum__": 140,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3548,118 +3781,93 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "bulk_storage_tanks",
             "display": {
               "text": "Are bulk storage tanks and material delivery areas free of drips and leaks"
             },
-            "_row_num": 124,
-            "__rowNum__": 123,
+            "name": "bulk_storage_tanks",
+            "_row_num": 144,
+            "__rowNum__": 143,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 66
           },
           {
-            "type": "select_one",
-            "values_list": "yesno",
-            "name": "dumpster_lids",
+            "type": "string",
             "display": {
-              "text": "Are dumpster lids closed and drain plugs intact"
+              "text": "List of problems"
             },
-            "_row_num": 125,
-            "__rowNum__": 124,
+            "name": "bulk_storage_tanks_prob",
+            "_row_num": 145,
+            "__rowNum__": 144,
             "_token_type": "prompt",
-            "_type": "select_one",
+            "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 67
           },
           {
-            "type": "textarea",
-            "name": "problems_found",
+            "type": "string",
             "display": {
-              "text": "List problems found and corrective actions taken, and indicate who was notified"
+              "text": "Corrective Actions"
             },
-            "inputAttributes": {
-              "rows": 4,
-              "maxlength": 250
-            },
-            "_row_num": 126,
-            "__rowNum__": 125,
+            "name": "bulk_storage_tanks_actions",
+            "_row_num": 146,
+            "__rowNum__": 145,
             "_token_type": "prompt",
-            "_type": "textarea",
+            "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 68
           },
           {
-            "type": "textarea",
-            "name": "comments",
+            "type": "select_one",
+            "values_list": "yesno",
             "display": {
-              "text": "Comments"
+              "text": "Are dumpster lids closed and drain plugs intact"
             },
-            "inputAttributes": {
-              "rows": 4,
-              "maxlength": 250
-            },
-            "_row_num": 127,
-            "__rowNum__": 126,
+            "name": "dumpster_lids",
+            "_row_num": 147,
+            "__rowNum__": 146,
             "_token_type": "prompt",
-            "_type": "textarea",
+            "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 69
           },
           {
             "type": "textarea",
-            "name": "corrective_actions_to_take",
             "display": {
-              "text": "Corrective Actions to be taken"
+              "text": "Comments"
             },
+            "name": "comments",
             "inputAttributes": {
               "rows": 4,
               "maxlength": 250
             },
-            "_row_num": 128,
-            "__rowNum__": 127,
+            "_row_num": 150,
+            "__rowNum__": 149,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 70
           },
           {
-            "type": "textarea",
-            "name": "corrective_actions_taken",
-            "display": {
-              "text": "Corrective Action Taken"
-            },
-            "inputAttributes": {
-              "rows": 4,
-              "maxlength": 250
-            },
-            "_row_num": 129,
-            "__rowNum__": 128,
-            "_token_type": "prompt",
-            "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 71
-          },
-          {
             "type": "user_branch",
             "values_list": "branches",
             "hideInContents": "true",
-            "_row_num": 133,
-            "__rowNum__": 132,
+            "_row_num": 154,
+            "__rowNum__": 153,
             "_token_type": "prompt",
             "_type": "user_branch",
-            "_branch_label_enclosing_screen": "survey/_screen132",
-            "promptIdx": 72
+            "_branch_label_enclosing_screen": "survey/_screen153",
+            "promptIdx": 71
           },
           {
             "clause": "do section image_section",
-            "_row_num": 137,
-            "__rowNum__": 136,
+            "_row_num": 158,
+            "__rowNum__": 157,
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
-            "promptIdx": 73,
+            "promptIdx": 72,
             "display": {
               "title": "Photo"
             },
@@ -3667,12 +3875,12 @@
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 140,
-            "__rowNum__": 139,
+            "_row_num": 161,
+            "__rowNum__": 160,
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
-            "promptIdx": 74,
+            "promptIdx": 73,
             "display": {
               "title": "GPS"
             },
@@ -3680,16 +3888,29 @@
           },
           {
             "clause": "do section signature_section",
-            "_row_num": 143,
-            "__rowNum__": 142,
+            "_row_num": 164,
+            "__rowNum__": 163,
             "_token_type": "prompt",
             "_do_section_name": "signature_section",
             "_type": "_section",
-            "promptIdx": 75,
+            "promptIdx": 74,
             "display": {
               "title": "Signature"
             },
             "_branch_label_enclosing_screen": "signature_section/0"
+          },
+          {
+            "clause": "do section signature_2_section",
+            "_row_num": 167,
+            "__rowNum__": 166,
+            "_token_type": "prompt",
+            "_do_section_name": "signature_2_section",
+            "_type": "_section",
+            "promptIdx": 75,
+            "display": {
+              "title": "Signature 2"
+            },
+            "_branch_label_enclosing_screen": "signature_2_section/0"
           }
         ],
         "validation_tag_map": {
@@ -3709,11 +3930,11 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 130,
-              "__rowNum__": 129,
+              "_row_num": 151,
+              "__rowNum__": 150,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(1);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(2);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(3);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(4);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(5);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(6);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(7);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(8);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(9);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(10);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(11);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(12);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(13);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(14);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(15);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(16);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(17);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(18);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(19);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(20);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(21);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(22);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(23);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(24);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(25);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(26);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(27);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(28);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(29);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(30);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(31);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(32);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(33);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(34);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(35);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(36);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(37);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(38);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(39);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(40);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(41);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(42);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(43);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(44);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(45);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(46);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(47);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(48);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(49);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(50);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(51);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(52);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(53);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(54);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\nactivePromptIndicies.push(64);\nactivePromptIndicies.push(65);\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\nactivePromptIndicies.push(68);\nactivePromptIndicies.push(69);\nactivePromptIndicies.push(70);\nactivePromptIndicies.push(71);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(1);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(2);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(3);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(4);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(5);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(6);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(7);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(8);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(9);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(10);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(11);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(12);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(13);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(14);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(15);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(16);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(17);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(18);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(19);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(20);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(21);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(22);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(23);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(24);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(25);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(26);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(27);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(28);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(29);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(30);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(31);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(32);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(33);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(34);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(35);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(36);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(37);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(38);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(39);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(40);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(41);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(42);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(43);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(44);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(45);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(46);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(47);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(48);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(49);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(50);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(51);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(52);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(53);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(54);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\nactivePromptIndicies.push(64);\nactivePromptIndicies.push(65);\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\nactivePromptIndicies.push(68);\nactivePromptIndicies.push(69);\nactivePromptIndicies.push(70);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -3722,97 +3943,114 @@
               "text": "Quarter Site Inspection Report"
             },
             "hideInContents": "true",
-            "_row_num": 132,
-            "__rowNum__": 131,
+            "_row_num": 153,
+            "__rowNum__": 152,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
               "hideInContents": "true",
-              "_row_num": 134,
-              "__rowNum__": 133,
+              "_row_num": 155,
+              "__rowNum__": 154,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(72);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(71);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "clause": "goto _contents",
-            "_row_num": 135,
-            "__rowNum__": 134,
+            "_row_num": 156,
+            "__rowNum__": 155,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 2
           },
           {
             "clause": "do section image_section",
-            "_row_num": 137,
-            "__rowNum__": 136,
+            "_row_num": 158,
+            "__rowNum__": 157,
             "_token_type": "do_section",
             "_do_section_name": "image_section",
             "operationIdx": 3
           },
           {
             "clause": "goto _contents",
-            "_row_num": 138,
-            "__rowNum__": 137,
+            "_row_num": 159,
+            "__rowNum__": 158,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 4
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 140,
-            "__rowNum__": 139,
+            "_row_num": 161,
+            "__rowNum__": 160,
             "_token_type": "do_section",
             "_do_section_name": "gps_section",
             "operationIdx": 5
           },
           {
             "clause": "goto _contents",
-            "_row_num": 141,
-            "__rowNum__": 140,
+            "_row_num": 162,
+            "__rowNum__": 161,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 6
           },
           {
             "clause": "do section signature_section",
-            "_row_num": 143,
-            "__rowNum__": 142,
+            "_row_num": 164,
+            "__rowNum__": 163,
             "_token_type": "do_section",
             "_do_section_name": "signature_section",
             "operationIdx": 7
           },
           {
             "clause": "goto _contents",
-            "_row_num": 144,
-            "__rowNum__": 143,
+            "_row_num": 165,
+            "__rowNum__": 164,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 8
           },
           {
-            "clause": "exit section",
-            "_row_num": 146,
-            "__rowNum__": 145,
-            "_token_type": "exit_section",
+            "clause": "do section signature_2_section",
+            "_row_num": 167,
+            "__rowNum__": 166,
+            "_token_type": "do_section",
+            "_do_section_name": "signature_2_section",
             "operationIdx": 9
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 168,
+            "__rowNum__": 167,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
+            "operationIdx": 10
+          },
+          {
+            "clause": "exit section",
+            "_row_num": 170,
+            "__rowNum__": 169,
+            "_token_type": "exit_section",
+            "operationIdx": 11
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 147,
-            "operationIdx": 10
+            "_row_num": 171,
+            "operationIdx": 12
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 1,
-          "_screen132": 1,
+          "_screen153": 1,
           "image": 3,
           "gps": 5,
           "signature": 7,
-          "exitpath": 9
+          "signature_2": 9,
+          "exitpath": 11
         }
       },
       "gps_section": {
@@ -4006,6 +4244,95 @@
             "_type": "contents",
             "_row_num": 6,
             "_branch_label_enclosing_screen": "signature_section/_screen6",
+            "promptIdx": 2
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "display": {
+              "text": "Signature"
+            },
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 5,
+              "__rowNum__": 4,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 6,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 6,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen6": 2
+        }
+      },
+      "signature_2_section": {
+        "section_name": "signature_2_section",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "string",
+            "name": "sign_2_person_name",
+            "display": {
+              "text": "Signatory Name"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "signature_2_section/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "signature",
+            "name": "sign_2",
+            "display": {
+              "text": "Signature"
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "signature",
+            "_branch_label_enclosing_screen": "signature_2_section/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 6,
+            "_branch_label_enclosing_screen": "signature_2_section/_screen6",
             "promptIdx": 2
           }
         ],

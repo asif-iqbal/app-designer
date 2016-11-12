@@ -52,6 +52,10 @@ project_daily_report,project_daily_report,string,[]
 project_number,project_number,string,[]
 sample_date,sample_date,string,[]
 sign,sign,mimeUri,"[""sign_uriFragment"",""sign_contentType""]"
+sign_2,sign_2,mimeUri,"[""sign_2_uriFragment"",""sign_2_contentType""]"
+sign_2_contentType,contentType,string,[]
+sign_2_person_name,sign_2_person_name,string,[]
+sign_2_uriFragment,uriFragment,rowpath,[]
 sign_contentType,contentType,string,[]
 sign_person_name,sign_person_name,string,[]
 sign_uriFragment,uriFragment,rowpath,[]
