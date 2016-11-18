@@ -723,6 +723,7 @@
         "_row_num": 114
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -730,6 +731,7 @@
         "_row_num": 115
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -746,6 +748,7 @@
         "_row_num": 117
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -753,6 +756,7 @@
         "_row_num": 118
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -769,6 +773,7 @@
         "_row_num": 120
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -776,6 +781,7 @@
         "_row_num": 121
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -792,6 +798,7 @@
         "_row_num": 123
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -799,6 +806,7 @@
         "_row_num": 124
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -815,6 +823,7 @@
         "_row_num": 126
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -822,6 +831,7 @@
         "_row_num": 127
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -838,6 +848,7 @@
         "_row_num": 129
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -845,6 +856,7 @@
         "_row_num": 130
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -861,6 +873,7 @@
         "_row_num": 132
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -868,6 +881,7 @@
         "_row_num": 133
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -884,6 +898,7 @@
         "_row_num": 135
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -891,6 +906,7 @@
         "_row_num": 136
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -907,6 +923,7 @@
         "_row_num": 138
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -914,6 +931,7 @@
         "_row_num": 139
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -930,6 +948,7 @@
         "_row_num": 141
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -937,6 +956,7 @@
         "_row_num": 142
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -978,6 +998,7 @@
         "_row_num": 147
       },
       {
+        "type": "textarea",
         "display": {
           "text": "List of problems"
         },
@@ -985,6 +1006,7 @@
         "_row_num": 148
       },
       {
+        "type": "textarea",
         "display": {
           "text": "Corrective Actions"
         },
@@ -2582,6 +2604,26 @@
         "valuesList": "yesno",
         "elementKey": "changes_occured_stormwater"
       },
+      "changes_occured_stormwater_prob": {
+        "_defn": [
+          {
+            "_row_num": 115,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "changes_occured_stormwater_prob"
+      },
+      "changes_occured_stormwater_actions": {
+        "_defn": [
+          {
+            "_row_num": 116,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "changes_occured_stormwater_actions"
+      },
       "non_incidental_spills": {
         "_defn": [
           {
@@ -2592,6 +2634,26 @@
         "type": "string",
         "valuesList": "yesno",
         "elementKey": "non_incidental_spills"
+      },
+      "non_incidental_spills_prob": {
+        "_defn": [
+          {
+            "_row_num": 118,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "non_incidental_spills_prob"
+      },
+      "non_incidental_spills_actions": {
+        "_defn": [
+          {
+            "_row_num": 119,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "non_incidental_spills_actions"
       },
       "operations_storage_material": {
         "_defn": [
@@ -2604,6 +2666,26 @@
         "valuesList": "yesno",
         "elementKey": "operations_storage_material"
       },
+      "operations_storage_material_prob": {
+        "_defn": [
+          {
+            "_row_num": 121,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "operations_storage_material_prob"
+      },
+      "operations_storage_material_actions": {
+        "_defn": [
+          {
+            "_row_num": 122,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "operations_storage_material_actions"
+      },
       "good_housekeeping_procedures": {
         "_defn": [
           {
@@ -2614,6 +2696,26 @@
         "type": "string",
         "valuesList": "yesno",
         "elementKey": "good_housekeeping_procedures"
+      },
+      "good_housekeeping_procedures_prob": {
+        "_defn": [
+          {
+            "_row_num": 124,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "good_housekeeping_procedures_prob"
+      },
+      "good_housekeeping_procedures_actions": {
+        "_defn": [
+          {
+            "_row_num": 125,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "good_housekeeping_procedures_actions"
       },
       "locomotive_storage": {
         "_defn": [
@@ -2626,6 +2728,26 @@
         "valuesList": "yesno",
         "elementKey": "locomotive_storage"
       },
+      "locomotive_storage_prob": {
+        "_defn": [
+          {
+            "_row_num": 127,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "locomotive_storage_prob"
+      },
+      "locomotive_storage_actions": {
+        "_defn": [
+          {
+            "_row_num": 128,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "locomotive_storage_actions"
+      },
       "traction_sand_intrerfering": {
         "_defn": [
           {
@@ -2636,6 +2758,26 @@
         "type": "string",
         "valuesList": "yesno",
         "elementKey": "traction_sand_intrerfering"
+      },
+      "traction_sand_intrerfering_prob": {
+        "_defn": [
+          {
+            "_row_num": 130,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "traction_sand_intrerfering_prob"
+      },
+      "traction_sand_intrerfering_actions": {
+        "_defn": [
+          {
+            "_row_num": 131,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "traction_sand_intrerfering_actions"
       },
       "catch_basins": {
         "_defn": [
@@ -2648,6 +2790,26 @@
         "valuesList": "yesno",
         "elementKey": "catch_basins"
       },
+      "catch_basins_prob": {
+        "_defn": [
+          {
+            "_row_num": 133,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "catch_basins_prob"
+      },
+      "catch_basins_actions": {
+        "_defn": [
+          {
+            "_row_num": 134,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "catch_basins_actions"
+      },
       "evidence_dry_water": {
         "_defn": [
           {
@@ -2658,6 +2820,26 @@
         "type": "string",
         "valuesList": "yesno",
         "elementKey": "evidence_dry_water"
+      },
+      "evidence_dry_water_prob": {
+        "_defn": [
+          {
+            "_row_num": 136,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "evidence_dry_water_prob"
+      },
+      "evidence_dry_water_actions": {
+        "_defn": [
+          {
+            "_row_num": 137,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "evidence_dry_water_actions"
       },
       "drums_containers_labelled": {
         "_defn": [
@@ -2670,6 +2852,26 @@
         "valuesList": "yesno",
         "elementKey": "drums_containers_labelled"
       },
+      "drums_containers_labelled_prob": {
+        "_defn": [
+          {
+            "_row_num": 139,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "drums_containers_labelled_prob"
+      },
+      "drums_containers_labelled_actions": {
+        "_defn": [
+          {
+            "_row_num": 140,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "drums_containers_labelled_actions"
+      },
       "spill_response_material": {
         "_defn": [
           {
@@ -2680,6 +2882,26 @@
         "type": "string",
         "valuesList": "yesno",
         "elementKey": "spill_response_material"
+      },
+      "spill_response_material_prob": {
+        "_defn": [
+          {
+            "_row_num": 142,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "spill_response_material_prob"
+      },
+      "spill_response_material_actions": {
+        "_defn": [
+          {
+            "_row_num": 143,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "spill_response_material_actions"
       },
       "bulk_storage_tanks": {
         "_defn": [
@@ -2722,6 +2944,26 @@
         "type": "string",
         "valuesList": "yesno",
         "elementKey": "dumpster_lids"
+      },
+      "dumpster_lids_prob": {
+        "_defn": [
+          {
+            "_row_num": 148,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "dumpster_lids_prob"
+      },
+      "dumpster_lids_actions": {
+        "_defn": [
+          {
+            "_row_num": 149,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "dumpster_lids_actions"
       },
       "comments": {
         "_defn": [
@@ -3653,6 +3895,32 @@
             "promptIdx": 56
           },
           {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "changes_occured_stormwater_prob",
+            "_row_num": 115,
+            "__rowNum__": 114,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 57
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "changes_occured_stormwater_actions",
+            "_row_num": 116,
+            "__rowNum__": 115,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 58
+          },
+          {
             "type": "select_one",
             "values_list": "yesno",
             "display": {
@@ -3664,7 +3932,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 57
+            "promptIdx": 59
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "non_incidental_spills_prob",
+            "_row_num": 118,
+            "__rowNum__": 117,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 60
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "non_incidental_spills_actions",
+            "_row_num": 119,
+            "__rowNum__": 118,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 61
           },
           {
             "type": "select_one",
@@ -3678,7 +3972,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 58
+            "promptIdx": 62
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "operations_storage_material_prob",
+            "_row_num": 121,
+            "__rowNum__": 120,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 63
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "operations_storage_material_actions",
+            "_row_num": 122,
+            "__rowNum__": 121,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 64
           },
           {
             "type": "select_one",
@@ -3692,7 +4012,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 59
+            "promptIdx": 65
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "good_housekeeping_procedures_prob",
+            "_row_num": 124,
+            "__rowNum__": 123,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 66
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "good_housekeeping_procedures_actions",
+            "_row_num": 125,
+            "__rowNum__": 124,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 67
           },
           {
             "type": "select_one",
@@ -3706,7 +4052,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 60
+            "promptIdx": 68
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "locomotive_storage_prob",
+            "_row_num": 127,
+            "__rowNum__": 126,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 69
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "locomotive_storage_actions",
+            "_row_num": 128,
+            "__rowNum__": 127,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 70
           },
           {
             "type": "select_one",
@@ -3720,7 +4092,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 61
+            "promptIdx": 71
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "traction_sand_intrerfering_prob",
+            "_row_num": 130,
+            "__rowNum__": 129,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 72
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "traction_sand_intrerfering_actions",
+            "_row_num": 131,
+            "__rowNum__": 130,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 73
           },
           {
             "type": "select_one",
@@ -3734,7 +4132,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 62
+            "promptIdx": 74
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "catch_basins_prob",
+            "_row_num": 133,
+            "__rowNum__": 132,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 75
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "catch_basins_actions",
+            "_row_num": 134,
+            "__rowNum__": 133,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 76
           },
           {
             "type": "select_one",
@@ -3748,7 +4172,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 63
+            "promptIdx": 77
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "evidence_dry_water_prob",
+            "_row_num": 136,
+            "__rowNum__": 135,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 78
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "evidence_dry_water_actions",
+            "_row_num": 137,
+            "__rowNum__": 136,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 79
           },
           {
             "type": "select_one",
@@ -3762,7 +4212,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 64
+            "promptIdx": 80
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "drums_containers_labelled_prob",
+            "_row_num": 139,
+            "__rowNum__": 138,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 81
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "drums_containers_labelled_actions",
+            "_row_num": 140,
+            "__rowNum__": 139,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 82
           },
           {
             "type": "select_one",
@@ -3776,7 +4252,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 65
+            "promptIdx": 83
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "spill_response_material_prob",
+            "_row_num": 142,
+            "__rowNum__": 141,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 84
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "spill_response_material_actions",
+            "_row_num": 143,
+            "__rowNum__": 142,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 85
           },
           {
             "type": "select_one",
@@ -3790,7 +4292,7 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 66
+            "promptIdx": 86
           },
           {
             "type": "string",
@@ -3803,7 +4305,7 @@
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 67
+            "promptIdx": 87
           },
           {
             "type": "string",
@@ -3816,7 +4318,7 @@
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 68
+            "promptIdx": 88
           },
           {
             "type": "select_one",
@@ -3830,7 +4332,33 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 69
+            "promptIdx": 89
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "dumpster_lids_prob",
+            "_row_num": 148,
+            "__rowNum__": 147,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 90
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "dumpster_lids_actions",
+            "_row_num": 149,
+            "__rowNum__": 148,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 91
           },
           {
             "type": "textarea",
@@ -3847,7 +4375,7 @@
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 70
+            "promptIdx": 92
           },
           {
             "type": "user_branch",
@@ -3858,7 +4386,7 @@
             "_token_type": "prompt",
             "_type": "user_branch",
             "_branch_label_enclosing_screen": "survey/_screen153",
-            "promptIdx": 71
+            "promptIdx": 93
           },
           {
             "clause": "do section image_section",
@@ -3867,7 +4395,7 @@
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
-            "promptIdx": 72,
+            "promptIdx": 94,
             "display": {
               "title": "Photo"
             },
@@ -3880,7 +4408,7 @@
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
-            "promptIdx": 73,
+            "promptIdx": 95,
             "display": {
               "title": "GPS"
             },
@@ -3893,7 +4421,7 @@
             "_token_type": "prompt",
             "_do_section_name": "signature_section",
             "_type": "_section",
-            "promptIdx": 74,
+            "promptIdx": 96,
             "display": {
               "title": "Signature"
             },
@@ -3906,7 +4434,7 @@
             "_token_type": "prompt",
             "_do_section_name": "signature_2_section",
             "_type": "_section",
-            "promptIdx": 75,
+            "promptIdx": 97,
             "display": {
               "title": "Signature 2"
             },
@@ -3934,7 +4462,7 @@
               "__rowNum__": 150,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(1);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(2);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(3);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(4);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(5);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(6);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(7);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(8);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(9);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(10);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(11);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(12);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(13);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(14);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(15);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(16);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(17);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(18);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(19);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(20);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(21);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(22);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(23);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(24);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(25);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(26);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(27);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(28);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(29);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(30);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(31);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(32);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(33);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(34);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(35);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(36);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(37);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(38);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(39);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(40);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(41);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(42);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(43);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(44);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(45);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(46);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(47);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(48);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(49);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(50);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(51);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(52);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(53);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(54);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\nactivePromptIndicies.push(64);\nactivePromptIndicies.push(65);\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\nactivePromptIndicies.push(68);\nactivePromptIndicies.push(69);\nactivePromptIndicies.push(70);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(1);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(2);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(3);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(4);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(5);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(6);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(7);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(8);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(9);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(10);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(11);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(12);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(13);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(14);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(15);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(16);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(17);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(18);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(19);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(20);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(21);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(22);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(23);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(24);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(25);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(26);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(27);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(28);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(29);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(30);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(31);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(32);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(33);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(34);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(35);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(36);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(37);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(38);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(39);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(40);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(41);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(42);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(43);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(44);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(45);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(46);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(47);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(48);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(49);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(50);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(51);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(52);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(53);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(54);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\nactivePromptIndicies.push(64);\nactivePromptIndicies.push(65);\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\nactivePromptIndicies.push(68);\nactivePromptIndicies.push(69);\nactivePromptIndicies.push(70);\nactivePromptIndicies.push(71);\nactivePromptIndicies.push(72);\nactivePromptIndicies.push(73);\nactivePromptIndicies.push(74);\nactivePromptIndicies.push(75);\nactivePromptIndicies.push(76);\nactivePromptIndicies.push(77);\nactivePromptIndicies.push(78);\nactivePromptIndicies.push(79);\nactivePromptIndicies.push(80);\nactivePromptIndicies.push(81);\nactivePromptIndicies.push(82);\nactivePromptIndicies.push(83);\nactivePromptIndicies.push(84);\nactivePromptIndicies.push(85);\nactivePromptIndicies.push(86);\nactivePromptIndicies.push(87);\nactivePromptIndicies.push(88);\nactivePromptIndicies.push(89);\nactivePromptIndicies.push(90);\nactivePromptIndicies.push(91);\nactivePromptIndicies.push(92);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -3953,7 +4481,7 @@
               "__rowNum__": 154,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(71);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(93);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
