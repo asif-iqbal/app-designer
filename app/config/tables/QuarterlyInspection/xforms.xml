@@ -28,7 +28,11 @@
         <bulk_storage_tanks_actions/>
         <bulk_storage_tanks_prob/>
         <catch_basins/>
+        <catch_basins_actions/>
+        <catch_basins_prob/>
         <changes_occured_stormwater/>
+        <changes_occured_stormwater_actions/>
+        <changes_occured_stormwater_prob/>
         <comments/>
         <consumable_name_0/>
         <consumable_name_1/>
@@ -40,7 +44,11 @@
         <consumable_totalhrs_1/>
         <consumable_totalhrs_2/>
         <drums_containers_labelled/>
+        <drums_containers_labelled_actions/>
+        <drums_containers_labelled_prob/>
         <dumpster_lids/>
+        <dumpster_lids_actions/>
+        <dumpster_lids_prob/>
         <equipment_name_0/>
         <equipment_name_1/>
         <equipment_name_2/>
@@ -51,8 +59,12 @@
         <equipment_totalhrs_1/>
         <equipment_totalhrs_2/>
         <evidence_dry_water/>
+        <evidence_dry_water_actions/>
+        <evidence_dry_water_prob/>
         <geo_info/>
         <good_housekeeping_procedures/>
+        <good_housekeeping_procedures_actions/>
+        <good_housekeeping_procedures_prob/>
         <inspection_id/>
         <loc_aid/>
         <loc_city/>
@@ -62,8 +74,14 @@
         <loc_streetAddress/>
         <loc_zip/>
         <locomotive_storage/>
+        <locomotive_storage_actions/>
+        <locomotive_storage_prob/>
         <non_incidental_spills/>
+        <non_incidental_spills_actions/>
+        <non_incidental_spills_prob/>
         <operations_storage_material/>
+        <operations_storage_material_actions/>
+        <operations_storage_material_prob/>
         <personnel_endtime_0/>
         <personnel_endtime_1/>
         <personnel_endtime_2/>
@@ -89,7 +107,11 @@
         <sign_2_person_name/>
         <sign_person_name/>
         <spill_response_material/>
+        <spill_response_material_actions/>
+        <spill_response_material_prob/>
         <traction_sand_intrerfering/>
+        <traction_sand_intrerfering_actions/>
+        <traction_sand_intrerfering_prob/>
         <vehicle_name_0/>
         <vehicle_name_1/>
         <vehicle_name_2/>
@@ -100,6 +122,7 @@
         <vehicle_totalhrs_1/>
         <vehicle_totalhrs_2/>
         <weather/>
+        <z1_next_photo_index/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -118,7 +141,11 @@
     <bind nodeset="/data/bulk_storage_tanks_actions" type="string"/>
     <bind nodeset="/data/bulk_storage_tanks_prob" type="string"/>
     <bind nodeset="/data/catch_basins" type="string"/>
+    <bind nodeset="/data/catch_basins_actions" type="string"/>
+    <bind nodeset="/data/catch_basins_prob" type="string"/>
     <bind nodeset="/data/changes_occured_stormwater" type="string"/>
+    <bind nodeset="/data/changes_occured_stormwater_actions" type="string"/>
+    <bind nodeset="/data/changes_occured_stormwater_prob" type="string"/>
     <bind nodeset="/data/comments" type="string"/>
     <bind nodeset="/data/consumable_name_0" type="string"/>
     <bind nodeset="/data/consumable_name_1" type="string"/>
@@ -130,7 +157,11 @@
     <bind nodeset="/data/consumable_totalhrs_1" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_2" type="string"/>
     <bind nodeset="/data/drums_containers_labelled" type="string"/>
+    <bind nodeset="/data/drums_containers_labelled_actions" type="string"/>
+    <bind nodeset="/data/drums_containers_labelled_prob" type="string"/>
     <bind nodeset="/data/dumpster_lids" type="string"/>
+    <bind nodeset="/data/dumpster_lids_actions" type="string"/>
+    <bind nodeset="/data/dumpster_lids_prob" type="string"/>
     <bind nodeset="/data/equipment_name_0" type="string"/>
     <bind nodeset="/data/equipment_name_1" type="string"/>
     <bind nodeset="/data/equipment_name_2" type="string"/>
@@ -141,8 +172,12 @@
     <bind nodeset="/data/equipment_totalhrs_1" type="string"/>
     <bind nodeset="/data/equipment_totalhrs_2" type="string"/>
     <bind nodeset="/data/evidence_dry_water" type="string"/>
+    <bind nodeset="/data/evidence_dry_water_actions" type="string"/>
+    <bind nodeset="/data/evidence_dry_water_prob" type="string"/>
     <bind nodeset="/data/geo_info" type="geopoint"/>
     <bind nodeset="/data/good_housekeeping_procedures" type="string"/>
+    <bind nodeset="/data/good_housekeeping_procedures_actions" type="string"/>
+    <bind nodeset="/data/good_housekeeping_procedures_prob" type="string"/>
     <bind nodeset="/data/inspection_id" type="string"/>
     <bind nodeset="/data/loc_aid" type="string"/>
     <bind nodeset="/data/loc_city" type="string"/>
@@ -152,8 +187,14 @@
     <bind nodeset="/data/loc_streetAddress" type="string"/>
     <bind nodeset="/data/loc_zip" type="string"/>
     <bind nodeset="/data/locomotive_storage" type="string"/>
+    <bind nodeset="/data/locomotive_storage_actions" type="string"/>
+    <bind nodeset="/data/locomotive_storage_prob" type="string"/>
     <bind nodeset="/data/non_incidental_spills" type="string"/>
+    <bind nodeset="/data/non_incidental_spills_actions" type="string"/>
+    <bind nodeset="/data/non_incidental_spills_prob" type="string"/>
     <bind nodeset="/data/operations_storage_material" type="string"/>
+    <bind nodeset="/data/operations_storage_material_actions" type="string"/>
+    <bind nodeset="/data/operations_storage_material_prob" type="string"/>
     <bind nodeset="/data/personnel_endtime_0" type="string"/>
     <bind nodeset="/data/personnel_endtime_1" type="string"/>
     <bind nodeset="/data/personnel_endtime_2" type="string"/>
@@ -179,7 +220,11 @@
     <bind nodeset="/data/sign_2_person_name" type="string"/>
     <bind nodeset="/data/sign_person_name" type="string"/>
     <bind nodeset="/data/spill_response_material" type="string"/>
+    <bind nodeset="/data/spill_response_material_actions" type="string"/>
+    <bind nodeset="/data/spill_response_material_prob" type="string"/>
     <bind nodeset="/data/traction_sand_intrerfering" type="string"/>
+    <bind nodeset="/data/traction_sand_intrerfering_actions" type="string"/>
+    <bind nodeset="/data/traction_sand_intrerfering_prob" type="string"/>
     <bind nodeset="/data/vehicle_name_0" type="string"/>
     <bind nodeset="/data/vehicle_name_1" type="string"/>
     <bind nodeset="/data/vehicle_name_2" type="string"/>
@@ -190,6 +235,7 @@
     <bind nodeset="/data/vehicle_totalhrs_1" type="string"/>
     <bind nodeset="/data/vehicle_totalhrs_2" type="string"/>
     <bind nodeset="/data/weather" type="string"/>
+    <bind nodeset="/data/z1_next_photo_index" type="int"/>
   </model> 
  </h:head> 
  <h:body> 
