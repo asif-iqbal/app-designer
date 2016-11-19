@@ -15,6 +15,8 @@ return {
     initialScreenPath: "initial/0",
     savepoint_type_complete: 'COMPLETE',
     savepoint_type_incomplete: 'INCOMPLETE',
+    // Asif
+    total_linked_instances: 0,
     baseDir: '',
     /**
      * Global object that is the container for 

@@ -20,12 +20,18 @@
         "_row_num": 2
       },
       {
+        "type": "assign",
+        "name": "name",
+        "calculation": "calculates.imgName()",
+        "_row_num": 3
+      },
+      {
         "type": "string",
         "name": "name",
         "display": {
           "text": "Photo name"
         },
-        "_row_num": 3
+        "_row_num": 4
       },
       {
         "type": "textarea",
@@ -37,7 +43,7 @@
           "rows": 6,
           "maxlength": 255
         },
-        "_row_num": 4
+        "_row_num": 5
       },
       {
         "type": "image",
@@ -46,11 +52,24 @@
           "text": "Photo",
           "hint": "Capture image"
         },
-        "_row_num": 5
+        "_row_num": 6
+      },
+      {
+        "type": "string",
+        "name": "z_pic_name",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 7
       },
       {
         "clause": "end screen",
-        "_row_num": 6
+        "_row_num": 8
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "imgName",
+        "calculation": "(function(){\n  if (data('name')) {\n    return data('name');\n  } else {\n    return data('z_pic_name');\n  }\n})()",
+        "_row_num": 2
       }
     ],
     "settings": [
@@ -102,6 +121,11 @@
         "name": "pic",
         "type": "image",
         "_row_num": 5
+      },
+      {
+        "name": "z_pic_name",
+        "type": "string",
+        "_row_num": 6
       }
     ]
   },
@@ -178,7 +202,13 @@
     },
     "choices": {},
     "queries": {},
-    "calculates": {},
+    "calculates": {
+      "imgName": {
+        "calculation_name": "imgName",
+        "calculation": "(function(){\n  if (data('name')) {\n    return data('name');\n  } else {\n    return data('z_pic_name');\n  }\n})()",
+        "_row_num": 2
+      }
+    },
     "model": {
       "parent_id": {
         "type": "string",
@@ -194,7 +224,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 3,
+            "_row_num": 4,
             "section_name": "survey"
           },
           {
@@ -208,7 +238,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 5,
             "section_name": "survey"
           },
           {
@@ -234,7 +264,7 @@
         },
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 6,
             "section_name": "survey"
           },
           {
@@ -243,6 +273,20 @@
           }
         ],
         "elementKey": "pic"
+      },
+      "z_pic_name": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 6,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "z_pic_name"
       }
     },
     "section_names": [
@@ -367,8 +411,8 @@
             "display": {
               "text": "Photo name"
             },
-            "_row_num": 3,
-            "__rowNum__": 2,
+            "_row_num": 4,
+            "__rowNum__": 3,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -384,8 +428,8 @@
               "rows": 6,
               "maxlength": 255
             },
-            "_row_num": 4,
-            "__rowNum__": 3,
+            "_row_num": 5,
+            "__rowNum__": 4,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -398,20 +442,31 @@
               "text": "Photo",
               "hint": "Capture image"
             },
-            "_row_num": 5,
-            "__rowNum__": 4,
+            "_row_num": 6,
+            "__rowNum__": 5,
             "_token_type": "prompt",
             "_type": "image",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 2
           },
           {
+            "type": "string",
+            "name": "z_pic_name",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 7,
-            "_branch_label_enclosing_screen": "survey/_screen7",
-            "promptIdx": 3
+            "_row_num": 9,
+            "_branch_label_enclosing_screen": "survey/_screen9",
+            "promptIdx": 4
           }
         ],
         "validation_tag_map": {
@@ -428,23 +483,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 6,
-              "__rowNum__": 5,
+              "_row_num": 8,
+              "__rowNum__": 7,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('name', calculates.imgName());\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 7,
+            "_row_num": 9,
             "operationIdx": 1
           },
           {
-            "_row_num": 7,
+            "_row_num": 9,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -453,14 +508,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 7,
+            "_row_num": 9,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen7": 2
+          "_screen9": 2
         }
       }
     }

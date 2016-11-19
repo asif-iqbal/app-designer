@@ -28,6 +28,7 @@
         <note/>
         <parent_id/>
         <pic/>
+        <z_pic_name/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -46,6 +47,7 @@
     <bind nodeset="/data/note" type="string"/>
     <bind nodeset="/data/parent_id" type="string"/>
     <bind nodeset="/data/pic" type="binary"/>
+    <bind nodeset="/data/z_pic_name" type="string"/>
   </model> 
  </h:head> 
  <h:body> 

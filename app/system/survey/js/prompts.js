@@ -781,6 +781,8 @@ promptTypes.linked_table = promptTypes._linked_type.extend({
                 });
                 instanceList = filteredInstanceList;
                 // set the image icon
+                // Asif
+                opendatakit.total_linked_instances = instanceList.length;
                 for (var i = 0; i < instanceList.length ; i++){
                     // sets the savepoint_type to incomplete if the formId doesn't match the current form
                     if (instanceList[i]["form_id"] != that.getLinkedFormId()) {
@@ -907,6 +909,8 @@ promptTypes.linked_table = promptTypes._linked_type.extend({
         var queryDefn = opendatakit.getQueriesDefinition(this.values_list);
         var instanceId = opendatakit.genUUID();
         var that = this;
+        // Asif
+        opendatakit.total_linked_instances = opendatakit.total_linked_instances + 1;
         //Asif
         //var ctxt = that.controller.newContext(evt);
         that.disableButtons();

@@ -874,7 +874,7 @@
         "linked_table_id": "imageSubform",
         "selection": "parent_id = ?",
         "selectionArgs": "[ data('inspection_id')]",
-        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))+'&z_pic_name='+encodeURIComponent(data('sample_date').split('/').join('-') + ' - ' + data('loc_name') + ' - ' + opendatakit.total_linked_instances.toString())",
         "_row_num": 2
       },
       {
@@ -1301,7 +1301,7 @@
         "linked_table_id": "imageSubform",
         "selection": "parent_id = ?",
         "selectionArgs": "[ data('inspection_id')]",
-        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))+'&z_pic_name='+encodeURIComponent(data('sample_date').split('/').join('-') + ' - ' + data('loc_name') + ' - ' + opendatakit.total_linked_instances.toString())",
         "_row_num": 2
       },
       "linked_locations": {

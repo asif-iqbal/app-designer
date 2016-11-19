@@ -929,7 +929,7 @@
       {
         "clause": "begin screen",
         "display": {
-          "text": "Signature"
+          "text": "Counter Signature"
         },
         "_row_num": 2
       },
@@ -945,7 +945,7 @@
         "type": "signature",
         "name": "sign_2",
         "display": {
-          "text": "Signature"
+          "text": "Counter Signature"
         },
         "_row_num": 4
       },
@@ -995,7 +995,7 @@
         "choice_list_name": "branches",
         "data_value": "signature_2",
         "display": {
-          "text": "Signature 2",
+          "text": "Counter Signature",
           "image": "Signature.png"
         },
         "_row_num": 6
@@ -1018,7 +1018,7 @@
         "linked_table_id": "imageSubform",
         "selection": "parent_id = ?",
         "selectionArgs": "[ data('inspection_id')]",
-        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))+'&z_pic_name='+encodeURIComponent(data('sample_date').split('/').join('-') + ' - ' + data('loc_name') + ' - ' + opendatakit.total_linked_instances.toString())",
         "_row_num": 2
       },
       {
@@ -1491,7 +1491,7 @@
           "choice_list_name": "branches",
           "data_value": "signature_2",
           "display": {
-            "text": "Signature 2",
+            "text": "Counter Signature",
             "image": "Signature.png"
           },
           "_row_num": 6
@@ -1515,7 +1515,7 @@
         "linked_table_id": "imageSubform",
         "selection": "parent_id = ?",
         "selectionArgs": "[ data('inspection_id')]",
-        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('inspection_id'))+'&z_pic_name='+encodeURIComponent(data('sample_date').split('/').join('-') + ' - ' + data('loc_name') + ' - ' + opendatakit.total_linked_instances.toString())",
         "_row_num": 2
       },
       "linked_notes": {
@@ -3882,7 +3882,7 @@
             "type": "signature",
             "name": "sign_2",
             "display": {
-              "text": "Signature"
+              "text": "Counter Signature"
             },
             "_row_num": 4,
             "__rowNum__": 3,
@@ -3907,7 +3907,7 @@
           {
             "clause": "begin screen",
             "display": {
-              "text": "Signature"
+              "text": "Counter Signature"
             },
             "_row_num": 2,
             "__rowNum__": 1,
