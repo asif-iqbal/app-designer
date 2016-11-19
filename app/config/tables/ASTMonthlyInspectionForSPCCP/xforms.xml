@@ -143,6 +143,7 @@
         <vent_pipes_obstruct_com/>
         <vent_pipes_obstruct_fu/>
         <weather/>
+        <z1_next_photo_index/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -276,6 +277,7 @@
     <bind nodeset="/data/vent_pipes_obstruct_com" type="string"/>
     <bind nodeset="/data/vent_pipes_obstruct_fu" type="string"/>
     <bind nodeset="/data/weather" type="string"/>
+    <bind nodeset="/data/z1_next_photo_index" type="int"/>
   </model> 
  </h:head> 
  <h:body> 

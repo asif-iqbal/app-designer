@@ -102,6 +102,7 @@
         <vehicle_totalhrs_1/>
         <vehicle_totalhrs_2/>
         <weather/>
+        <z1_next_photo_index/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -194,6 +195,7 @@
     <bind nodeset="/data/vehicle_totalhrs_1" type="string"/>
     <bind nodeset="/data/vehicle_totalhrs_2" type="string"/>
     <bind nodeset="/data/weather" type="string"/>
+    <bind nodeset="/data/z1_next_photo_index" type="int"/>
   </model> 
  </h:head> 
  <h:body> 
