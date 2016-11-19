@@ -2637,6 +2637,29 @@
         "elementKey": "changes_occured_stormwater"
       },
       "changes_occured_stormwater_prob": {
+<<<<<<< HEAD
+=======
+        "_defn": [
+          {
+            "_row_num": 115,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "changes_occured_stormwater_prob"
+      },
+      "changes_occured_stormwater_actions": {
+        "_defn": [
+          {
+            "_row_num": 116,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "changes_occured_stormwater_actions"
+      },
+      "non_incidental_spills": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
         "_defn": [
           {
             "_row_num": 117,
@@ -2668,6 +2691,29 @@
         "elementKey": "non_incidental_spills"
       },
       "non_incidental_spills_prob": {
+<<<<<<< HEAD
+=======
+        "_defn": [
+          {
+            "_row_num": 118,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "non_incidental_spills_prob"
+      },
+      "non_incidental_spills_actions": {
+        "_defn": [
+          {
+            "_row_num": 119,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "non_incidental_spills_actions"
+      },
+      "operations_storage_material": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
         "_defn": [
           {
             "_row_num": 120,
@@ -2699,6 +2745,29 @@
         "elementKey": "operations_storage_material"
       },
       "operations_storage_material_prob": {
+<<<<<<< HEAD
+=======
+        "_defn": [
+          {
+            "_row_num": 121,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "operations_storage_material_prob"
+      },
+      "operations_storage_material_actions": {
+        "_defn": [
+          {
+            "_row_num": 122,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "operations_storage_material_actions"
+      },
+      "good_housekeeping_procedures": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
         "_defn": [
           {
             "_row_num": 123,
@@ -2730,6 +2799,29 @@
         "elementKey": "good_housekeeping_procedures"
       },
       "good_housekeeping_procedures_prob": {
+<<<<<<< HEAD
+=======
+        "_defn": [
+          {
+            "_row_num": 124,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "good_housekeeping_procedures_prob"
+      },
+      "good_housekeeping_procedures_actions": {
+        "_defn": [
+          {
+            "_row_num": 125,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "good_housekeeping_procedures_actions"
+      },
+      "locomotive_storage": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
         "_defn": [
           {
             "_row_num": 126,
@@ -2761,9 +2853,11 @@
         "elementKey": "locomotive_storage"
       },
       "locomotive_storage_prob": {
+<<<<<<< HEAD
+=======
         "_defn": [
           {
-            "_row_num": 129,
+            "_row_num": 127,
             "section_name": "survey"
           }
         ],
@@ -2773,7 +2867,7 @@
       "locomotive_storage_actions": {
         "_defn": [
           {
-            "_row_num": 130,
+            "_row_num": 128,
             "section_name": "survey"
           }
         ],
@@ -2781,6 +2875,75 @@
         "elementKey": "locomotive_storage_actions"
       },
       "traction_sand_intrerfering": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
+        "_defn": [
+          {
+            "_row_num": 129,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "locomotive_storage_prob"
+      },
+<<<<<<< HEAD
+      "locomotive_storage_actions": {
+=======
+      "traction_sand_intrerfering_prob": {
+        "_defn": [
+          {
+            "_row_num": 130,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "traction_sand_intrerfering_prob"
+      },
+      "traction_sand_intrerfering_actions": {
+        "_defn": [
+          {
+            "_row_num": 131,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "traction_sand_intrerfering_actions"
+      },
+      "catch_basins": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
+        "_defn": [
+          {
+            "_row_num": 130,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "locomotive_storage_actions"
+      },
+<<<<<<< HEAD
+      "traction_sand_intrerfering": {
+=======
+      "catch_basins_prob": {
+        "_defn": [
+          {
+            "_row_num": 133,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "catch_basins_prob"
+      },
+      "catch_basins_actions": {
+        "_defn": [
+          {
+            "_row_num": 134,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "catch_basins_actions"
+      },
+      "evidence_dry_water": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
         "_defn": [
           {
             "_row_num": 131,
@@ -2791,7 +2954,31 @@
         "valuesList": "yesno",
         "elementKey": "traction_sand_intrerfering"
       },
+<<<<<<< HEAD
       "traction_sand_intrerfering_prob": {
+=======
+      "evidence_dry_water_prob": {
+        "_defn": [
+          {
+            "_row_num": 136,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "evidence_dry_water_prob"
+      },
+      "evidence_dry_water_actions": {
+        "_defn": [
+          {
+            "_row_num": 137,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "evidence_dry_water_actions"
+      },
+      "drums_containers_labelled": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
         "_defn": [
           {
             "_row_num": 132,
@@ -2801,7 +2988,31 @@
         "type": "string",
         "elementKey": "traction_sand_intrerfering_prob"
       },
+<<<<<<< HEAD
       "traction_sand_intrerfering_actions": {
+=======
+      "drums_containers_labelled_prob": {
+        "_defn": [
+          {
+            "_row_num": 139,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "drums_containers_labelled_prob"
+      },
+      "drums_containers_labelled_actions": {
+        "_defn": [
+          {
+            "_row_num": 140,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "drums_containers_labelled_actions"
+      },
+      "spill_response_material": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
         "_defn": [
           {
             "_row_num": 133,
@@ -2811,7 +3022,31 @@
         "type": "string",
         "elementKey": "traction_sand_intrerfering_actions"
       },
+<<<<<<< HEAD
       "catch_basins": {
+=======
+      "spill_response_material_prob": {
+        "_defn": [
+          {
+            "_row_num": 142,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "spill_response_material_prob"
+      },
+      "spill_response_material_actions": {
+        "_defn": [
+          {
+            "_row_num": 143,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "spill_response_material_actions"
+      },
+      "bulk_storage_tanks": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
         "_defn": [
           {
             "_row_num": 134,
@@ -2853,7 +3088,31 @@
         "valuesList": "yesno",
         "elementKey": "evidence_dry_water"
       },
+<<<<<<< HEAD
       "evidence_dry_water_prob": {
+=======
+      "dumpster_lids_prob": {
+        "_defn": [
+          {
+            "_row_num": 148,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "dumpster_lids_prob"
+      },
+      "dumpster_lids_actions": {
+        "_defn": [
+          {
+            "_row_num": 149,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "dumpster_lids_actions"
+      },
+      "comments": {
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
         "_defn": [
           {
             "_row_num": 138,
@@ -3964,6 +4223,32 @@
             "promptIdx": 59
           },
           {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "changes_occured_stormwater_prob",
+            "_row_num": 115,
+            "__rowNum__": 114,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 57
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "changes_occured_stormwater_actions",
+            "_row_num": 116,
+            "__rowNum__": 115,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 58
+          },
+          {
             "type": "select_one",
             "values_list": "yesno",
             "display": {
@@ -3975,7 +4260,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 60
+=======
+            "promptIdx": 59
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -3983,12 +4272,21 @@
               "text": "List of problems"
             },
             "name": "non_incidental_spills_prob",
+<<<<<<< HEAD
             "_row_num": 120,
             "__rowNum__": 119,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 61
+=======
+            "_row_num": 118,
+            "__rowNum__": 117,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 60
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -3996,12 +4294,21 @@
               "text": "Corrective Actions"
             },
             "name": "non_incidental_spills_actions",
+<<<<<<< HEAD
             "_row_num": 121,
             "__rowNum__": 120,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 62
+=======
+            "_row_num": 119,
+            "__rowNum__": 118,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 61
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4015,7 +4322,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 63
+=======
+            "promptIdx": 62
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4023,12 +4334,21 @@
               "text": "List of problems"
             },
             "name": "operations_storage_material_prob",
+<<<<<<< HEAD
             "_row_num": 123,
             "__rowNum__": 122,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 64
+=======
+            "_row_num": 121,
+            "__rowNum__": 120,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 63
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4036,12 +4356,21 @@
               "text": "Corrective Actions"
             },
             "name": "operations_storage_material_actions",
+<<<<<<< HEAD
             "_row_num": 124,
             "__rowNum__": 123,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 65
+=======
+            "_row_num": 122,
+            "__rowNum__": 121,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 64
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4055,7 +4384,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 66
+=======
+            "promptIdx": 65
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4063,12 +4396,21 @@
               "text": "List of problems"
             },
             "name": "good_housekeeping_procedures_prob",
+<<<<<<< HEAD
             "_row_num": 126,
             "__rowNum__": 125,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 67
+=======
+            "_row_num": 124,
+            "__rowNum__": 123,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 66
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4076,12 +4418,21 @@
               "text": "Corrective Actions"
             },
             "name": "good_housekeeping_procedures_actions",
+<<<<<<< HEAD
             "_row_num": 127,
             "__rowNum__": 126,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 68
+=======
+            "_row_num": 125,
+            "__rowNum__": 124,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 67
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4095,7 +4446,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 69
+=======
+            "promptIdx": 68
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4103,12 +4458,21 @@
               "text": "List of problems"
             },
             "name": "locomotive_storage_prob",
+<<<<<<< HEAD
             "_row_num": 129,
             "__rowNum__": 128,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 70
+=======
+            "_row_num": 127,
+            "__rowNum__": 126,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 69
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4116,12 +4480,21 @@
               "text": "Corrective Actions"
             },
             "name": "locomotive_storage_actions",
+<<<<<<< HEAD
             "_row_num": 130,
             "__rowNum__": 129,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 71
+=======
+            "_row_num": 128,
+            "__rowNum__": 127,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 70
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4135,7 +4508,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 72
+=======
+            "promptIdx": 71
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4143,12 +4520,21 @@
               "text": "List of problems"
             },
             "name": "traction_sand_intrerfering_prob",
+<<<<<<< HEAD
             "_row_num": 132,
             "__rowNum__": 131,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 73
+=======
+            "_row_num": 130,
+            "__rowNum__": 129,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 72
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4156,12 +4542,21 @@
               "text": "Corrective Actions"
             },
             "name": "traction_sand_intrerfering_actions",
+<<<<<<< HEAD
             "_row_num": 133,
             "__rowNum__": 132,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 74
+=======
+            "_row_num": 131,
+            "__rowNum__": 130,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 73
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4175,7 +4570,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 75
+=======
+            "promptIdx": 74
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4183,12 +4582,21 @@
               "text": "List of problems"
             },
             "name": "catch_basins_prob",
+<<<<<<< HEAD
             "_row_num": 135,
             "__rowNum__": 134,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 76
+=======
+            "_row_num": 133,
+            "__rowNum__": 132,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 75
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4196,12 +4604,21 @@
               "text": "Corrective Actions"
             },
             "name": "catch_basins_actions",
+<<<<<<< HEAD
             "_row_num": 136,
             "__rowNum__": 135,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 77
+=======
+            "_row_num": 134,
+            "__rowNum__": 133,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 76
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4215,7 +4632,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 78
+=======
+            "promptIdx": 77
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4223,12 +4644,21 @@
               "text": "List of problems"
             },
             "name": "evidence_dry_water_prob",
+<<<<<<< HEAD
             "_row_num": 138,
             "__rowNum__": 137,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 79
+=======
+            "_row_num": 136,
+            "__rowNum__": 135,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 78
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4236,12 +4666,21 @@
               "text": "Corrective Actions"
             },
             "name": "evidence_dry_water_actions",
+<<<<<<< HEAD
             "_row_num": 139,
             "__rowNum__": 138,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 80
+=======
+            "_row_num": 137,
+            "__rowNum__": 136,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 79
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4255,7 +4694,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 81
+=======
+            "promptIdx": 80
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4263,12 +4706,21 @@
               "text": "List of problems"
             },
             "name": "drums_containers_labelled_prob",
+<<<<<<< HEAD
             "_row_num": 141,
             "__rowNum__": 140,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 82
+=======
+            "_row_num": 139,
+            "__rowNum__": 138,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 81
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4276,12 +4728,21 @@
               "text": "Corrective Actions"
             },
             "name": "drums_containers_labelled_actions",
+<<<<<<< HEAD
             "_row_num": 142,
             "__rowNum__": 141,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 83
+=======
+            "_row_num": 140,
+            "__rowNum__": 139,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 82
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4295,7 +4756,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 84
+=======
+            "promptIdx": 83
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4303,12 +4768,21 @@
               "text": "List of problems"
             },
             "name": "spill_response_material_prob",
+<<<<<<< HEAD
             "_row_num": 144,
             "__rowNum__": 143,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 85
+=======
+            "_row_num": 142,
+            "__rowNum__": 141,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 84
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4316,12 +4790,21 @@
               "text": "Corrective Actions"
             },
             "name": "spill_response_material_actions",
+<<<<<<< HEAD
             "_row_num": 145,
             "__rowNum__": 144,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 86
+=======
+            "_row_num": 143,
+            "__rowNum__": 142,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 85
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4335,7 +4818,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 87
+=======
+            "promptIdx": 86
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "string",
@@ -4348,7 +4835,11 @@
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 88
+=======
+            "promptIdx": 87
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "string",
@@ -4361,7 +4852,11 @@
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 89
+=======
+            "promptIdx": 88
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "select_one",
@@ -4375,7 +4870,11 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 90
+=======
+            "promptIdx": 89
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4383,12 +4882,21 @@
               "text": "List of problems"
             },
             "name": "dumpster_lids_prob",
+<<<<<<< HEAD
             "_row_num": 150,
             "__rowNum__": 149,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 91
+=======
+            "_row_num": 148,
+            "__rowNum__": 147,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 90
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4396,12 +4904,21 @@
               "text": "Corrective Actions"
             },
             "name": "dumpster_lids_actions",
+<<<<<<< HEAD
             "_row_num": 151,
             "__rowNum__": 150,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 92
+=======
+            "_row_num": 149,
+            "__rowNum__": 148,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 91
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "textarea",
@@ -4418,7 +4935,11 @@
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
+<<<<<<< HEAD
             "promptIdx": 93
+=======
+            "promptIdx": 92
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "type": "user_branch",
@@ -4428,8 +4949,13 @@
             "__rowNum__": 155,
             "_token_type": "prompt",
             "_type": "user_branch",
+<<<<<<< HEAD
             "_branch_label_enclosing_screen": "survey/_screen155",
             "promptIdx": 94
+=======
+            "_branch_label_enclosing_screen": "survey/_screen153",
+            "promptIdx": 93
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
           },
           {
             "clause": "do section image_section",
@@ -4438,7 +4964,11 @@
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
+<<<<<<< HEAD
             "promptIdx": 95,
+=======
+            "promptIdx": 94,
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
             "display": {
               "title": "Photo"
             },
@@ -4451,7 +4981,11 @@
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
+<<<<<<< HEAD
             "promptIdx": 96,
+=======
+            "promptIdx": 95,
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
             "display": {
               "title": "GPS"
             },
@@ -4464,7 +4998,11 @@
             "_token_type": "prompt",
             "_do_section_name": "signature_section",
             "_type": "_section",
+<<<<<<< HEAD
             "promptIdx": 97,
+=======
+            "promptIdx": 96,
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
             "display": {
               "title": "Signature"
             },
@@ -4477,7 +5015,11 @@
             "_token_type": "prompt",
             "_do_section_name": "signature_2_section",
             "_type": "_section",
+<<<<<<< HEAD
             "promptIdx": 98,
+=======
+            "promptIdx": 97,
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
             "display": {
               "title": "Signature 2"
             },
@@ -4505,7 +5047,11 @@
               "__rowNum__": 152,
               "_token_type": "end_screen"
             },
+<<<<<<< HEAD
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(1);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(2);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(3);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(4);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(5);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(6);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(7);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(8);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(9);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(10);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(11);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(12);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(13);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(14);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(15);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(16);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(17);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(18);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(19);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(20);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(21);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(22);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(23);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(24);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(25);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(26);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(27);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(28);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(29);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(30);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(31);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(32);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(33);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(34);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(35);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(36);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(37);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(38);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(39);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(40);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(41);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(42);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(43);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(44);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(45);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(46);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(47);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(48);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(49);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(50);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(51);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(52);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(53);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(54);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(55);\nassign('z1_next_photo_index', calculates.nextPhotoIndex());\nactivePromptIndicies.push(56);\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\nactivePromptIndicies.push(64);\nactivePromptIndicies.push(65);\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\nactivePromptIndicies.push(68);\nactivePromptIndicies.push(69);\nactivePromptIndicies.push(70);\nactivePromptIndicies.push(71);\nactivePromptIndicies.push(72);\nactivePromptIndicies.push(73);\nactivePromptIndicies.push(74);\nactivePromptIndicies.push(75);\nactivePromptIndicies.push(76);\nactivePromptIndicies.push(77);\nactivePromptIndicies.push(78);\nactivePromptIndicies.push(79);\nactivePromptIndicies.push(80);\nactivePromptIndicies.push(81);\nactivePromptIndicies.push(82);\nactivePromptIndicies.push(83);\nactivePromptIndicies.push(84);\nactivePromptIndicies.push(85);\nactivePromptIndicies.push(86);\nactivePromptIndicies.push(87);\nactivePromptIndicies.push(88);\nactivePromptIndicies.push(89);\nactivePromptIndicies.push(90);\nactivePromptIndicies.push(91);\nactivePromptIndicies.push(92);\nactivePromptIndicies.push(93);\n\nreturn activePromptIndicies;\n}\n",
+=======
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(1);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(2);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(3);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(4);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(5);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(6);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(7);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(8);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(9);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(10);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(11);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(12);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(13);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(14);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(15);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(16);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(17);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(18);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(19);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(20);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(21);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(22);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(23);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(24);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(25);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(26);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(27);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(28);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(29);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(30);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(31);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(32);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(33);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(34);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(35);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(36);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(37);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(38);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(39);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(40);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(41);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(42);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(43);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(44);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(45);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(46);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(47);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(48);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(49);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(50);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(51);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(52);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(53);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(54);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\nactivePromptIndicies.push(64);\nactivePromptIndicies.push(65);\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\nactivePromptIndicies.push(68);\nactivePromptIndicies.push(69);\nactivePromptIndicies.push(70);\nactivePromptIndicies.push(71);\nactivePromptIndicies.push(72);\nactivePromptIndicies.push(73);\nactivePromptIndicies.push(74);\nactivePromptIndicies.push(75);\nactivePromptIndicies.push(76);\nactivePromptIndicies.push(77);\nactivePromptIndicies.push(78);\nactivePromptIndicies.push(79);\nactivePromptIndicies.push(80);\nactivePromptIndicies.push(81);\nactivePromptIndicies.push(82);\nactivePromptIndicies.push(83);\nactivePromptIndicies.push(84);\nactivePromptIndicies.push(85);\nactivePromptIndicies.push(86);\nactivePromptIndicies.push(87);\nactivePromptIndicies.push(88);\nactivePromptIndicies.push(89);\nactivePromptIndicies.push(90);\nactivePromptIndicies.push(91);\nactivePromptIndicies.push(92);\n\nreturn activePromptIndicies;\n}\n",
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
             "operationIdx": 0
           },
           {
@@ -4524,7 +5070,11 @@
               "__rowNum__": 156,
               "_token_type": "end_screen"
             },
+<<<<<<< HEAD
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(94);\n\nreturn activePromptIndicies;\n}\n",
+=======
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(93);\n\nreturn activePromptIndicies;\n}\n",
+>>>>>>> cb00bed345ef374e5f308912ce60ae073314dcdc
             "operationIdx": 1
           },
           {
