@@ -30,9 +30,12 @@
         <damage_present/>
         <debris_present/>
         <depth/>
+        <depth_unit/>
         <diameter/>
+        <diameter_unit/>
         <dry_or_connected/>
         <estimated_quantity/>
+        <estimated_quantity_unit/>
         <geo_info/>
         <global_id/>
         <inspection_id/>
@@ -46,12 +49,15 @@
         <saturated_or_filled/>
         <sediment_removed/>
         <sediment_thickness/>
+        <sediment_thickness_unit/>
+        <sediment_thickness_units/>
         <sheen_present/>
         <type_of_material/>
         <waste_drums_hazardous/>
         <waste_drums_non_hazardous/>
         <water_flowing_freely/>
         <water_in_vault/>
+        <z_sample_date/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -72,9 +78,12 @@
     <bind nodeset="/data/damage_present" type="string"/>
     <bind nodeset="/data/debris_present" type="string"/>
     <bind nodeset="/data/depth" type="string"/>
+    <bind nodeset="/data/depth_unit" type="string"/>
     <bind nodeset="/data/diameter" type="string"/>
+    <bind nodeset="/data/diameter_unit" type="string"/>
     <bind nodeset="/data/dry_or_connected" type="string"/>
     <bind nodeset="/data/estimated_quantity" type="string"/>
+    <bind nodeset="/data/estimated_quantity_unit" type="string"/>
     <bind nodeset="/data/geo_info" type="geopoint"/>
     <bind nodeset="/data/global_id" type="string"/>
     <bind nodeset="/data/inspection_id" type="string"/>
@@ -88,12 +97,15 @@
     <bind nodeset="/data/saturated_or_filled" type="string"/>
     <bind nodeset="/data/sediment_removed" type="string"/>
     <bind nodeset="/data/sediment_thickness" type="string"/>
+    <bind nodeset="/data/sediment_thickness_unit" type="string"/>
+    <bind nodeset="/data/sediment_thickness_units" type="string"/>
     <bind nodeset="/data/sheen_present" type="string"/>
     <bind nodeset="/data/type_of_material" type="string"/>
     <bind nodeset="/data/waste_drums_hazardous" type="decimal"/>
     <bind nodeset="/data/waste_drums_non_hazardous" type="decimal"/>
     <bind nodeset="/data/water_flowing_freely" type="string"/>
     <bind nodeset="/data/water_in_vault" type="string"/>
+    <bind nodeset="/data/z_sample_date" type="string"/>
   </model> 
  </h:head> 
  <h:body> 

@@ -29,11 +29,21 @@ Column,depth,displayFormat,string,""
 Column,depth,displayName,string,"""depth"""
 Column,depth,displayVisible,boolean,TRUE
 Column,depth,joins,object,""
+Column,depth_unit,displayChoicesList,object,"[{""choice_list_name"":""measurement_units"",""data_value"":""feet"",""display"":{""text"":""Feet""},""_row_num"":20},{""choice_list_name"":""measurement_units"",""data_value"":""inches"",""display"":{""text"":""Inches""},""_row_num"":21}]"
+Column,depth_unit,displayFormat,string,""
+Column,depth_unit,displayName,string,"""depth_unit"""
+Column,depth_unit,displayVisible,boolean,TRUE
+Column,depth_unit,joins,object,""
 Column,diameter,displayChoicesList,object,[]
 Column,diameter,displayFormat,string,""
 Column,diameter,displayName,string,"""diameter"""
 Column,diameter,displayVisible,boolean,TRUE
 Column,diameter,joins,object,""
+Column,diameter_unit,displayChoicesList,object,"[{""choice_list_name"":""measurement_units"",""data_value"":""feet"",""display"":{""text"":""Feet""},""_row_num"":20},{""choice_list_name"":""measurement_units"",""data_value"":""inches"",""display"":{""text"":""Inches""},""_row_num"":21}]"
+Column,diameter_unit,displayFormat,string,""
+Column,diameter_unit,displayName,string,"""diameter_unit"""
+Column,diameter_unit,displayVisible,boolean,TRUE
+Column,diameter_unit,joins,object,""
 Column,dry_or_connected,displayChoicesList,object,"[{""choice_list_name"":""dry_or_connected_values"",""data_value"":""Dry Well"",""display"":{""text"":""Dry Well""},""_row_num"":9},{""choice_list_name"":""dry_or_connected_values"",""data_value"":""Connected to Multiple Catch Basins"",""display"":{""text"":""Connected to Multiple Catch Basins""},""_row_num"":10}]"
 Column,dry_or_connected,displayFormat,string,""
 Column,dry_or_connected,displayName,string,"""dry_or_connected"""
@@ -44,6 +54,11 @@ Column,estimated_quantity,displayFormat,string,""
 Column,estimated_quantity,displayName,string,"""estimated_quantity"""
 Column,estimated_quantity,displayVisible,boolean,TRUE
 Column,estimated_quantity,joins,object,""
+Column,estimated_quantity_unit,displayChoicesList,object,"[{""choice_list_name"":""estimated_quantity_units"",""data_value"":""drums"",""display"":{""text"":""Drums""},""_row_num"":22},{""choice_list_name"":""estimated_quantity_units"",""data_value"":""totes"",""display"":{""text"":""Totes""},""_row_num"":23},{""choice_list_name"":""estimated_quantity_units"",""data_value"":""yards"",""display"":{""text"":""Yards""},""_row_num"":24},{""choice_list_name"":""estimated_quantity_units"",""data_value"":""ton"",""display"":{""text"":""Ton""},""_row_num"":25},{""choice_list_name"":""estimated_quantity_units"",""data_value"":""gallons"",""display"":{""text"":""Gallons""},""_row_num"":26},{""choice_list_name"":""estimated_quantity_units"",""data_value"":""pounds"",""display"":{""text"":""Pounds""},""_row_num"":27}]"
+Column,estimated_quantity_unit,displayFormat,string,""
+Column,estimated_quantity_unit,displayName,string,"""estimated_quantity_unit"""
+Column,estimated_quantity_unit,displayVisible,boolean,TRUE
+Column,estimated_quantity_unit,joins,object,""
 Column,geo_info,displayChoicesList,object,[]
 Column,geo_info,displayFormat,string,""
 Column,geo_info,displayName,string,"""geo_info"""
@@ -129,6 +144,16 @@ Column,sediment_thickness,displayFormat,string,""
 Column,sediment_thickness,displayName,string,"""sediment_thickness"""
 Column,sediment_thickness,displayVisible,boolean,TRUE
 Column,sediment_thickness,joins,object,""
+Column,sediment_thickness_unit,displayChoicesList,object,"[{""choice_list_name"":""measurement_units"",""data_value"":""feet"",""display"":{""text"":""Feet""},""_row_num"":20},{""choice_list_name"":""measurement_units"",""data_value"":""inches"",""display"":{""text"":""Inches""},""_row_num"":21}]"
+Column,sediment_thickness_unit,displayFormat,string,""
+Column,sediment_thickness_unit,displayName,string,"""sediment_thickness_unit"""
+Column,sediment_thickness_unit,displayVisible,boolean,TRUE
+Column,sediment_thickness_unit,joins,object,""
+Column,sediment_thickness_units,displayChoicesList,object,[]
+Column,sediment_thickness_units,displayFormat,string,""
+Column,sediment_thickness_units,displayName,string,"""sediment_thickness_units"""
+Column,sediment_thickness_units,displayVisible,boolean,TRUE
+Column,sediment_thickness_units,joins,object,""
 Column,sheen_present,displayChoicesList,object,"[{""choice_list_name"":""yesno"",""data_value"":""yes"",""display"":{""text"":""Yes""},""_row_num"":7},{""choice_list_name"":""yesno"",""data_value"":""no"",""display"":{""text"":""No""},""_row_num"":8}]"
 Column,sheen_present,displayFormat,string,""
 Column,sheen_present,displayName,string,"""sheen_present"""
@@ -159,9 +184,14 @@ Column,water_in_vault,displayFormat,string,""
 Column,water_in_vault,displayName,string,"""water_in_vault"""
 Column,water_in_vault,displayVisible,boolean,TRUE
 Column,water_in_vault,joins,object,""
+Column,z_sample_date,displayChoicesList,object,[]
+Column,z_sample_date,displayFormat,string,""
+Column,z_sample_date,displayName,string,"""z_sample_date"""
+Column,z_sample_date,displayVisible,boolean,TRUE
+Column,z_sample_date,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,catchBasinInspectionSample
-Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""pid_reading_option"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
+Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""z_sample_date"",""depth_unit"",""diameter_unit"",""estimated_quantity_unit"",""sediment_thickness_units"",""sediment_thickness_unit"",""pid_reading_option"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Catch Basin Inspection Sample"""
 Table,default,groupByCols,object,[]

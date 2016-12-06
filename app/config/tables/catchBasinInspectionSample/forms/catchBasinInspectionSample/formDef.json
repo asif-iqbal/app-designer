@@ -38,8 +38,15 @@
           "text": "Diameter of Catch Basin"
         },
         "hideInContents": "true",
-        "templatePath": "string_input_type.handlebars",
+        "templatePath": "string_input_type_2.handlebars",
         "_row_num": 4
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "measurement_units",
+        "name": "diameter_unit",
+        "templatePath": "custom_select_dropdown_3.handlebars",
+        "_row_num": 5
       },
       {
         "type": "string",
@@ -48,8 +55,15 @@
           "text": "Depth of Catch Basin"
         },
         "hideInContents": "true",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 5
+        "templatePath": "string_input_type_2.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "measurement_units",
+        "name": "depth_unit",
+        "templatePath": "custom_select_dropdown_3.handlebars",
+        "_row_num": 7
       },
       {
         "type": "select_one_dropdown",
@@ -60,16 +74,23 @@
         },
         "hideInContents": "true",
         "templatePath": "custom_select_dropdown_2.handlebars",
-        "_row_num": 6
+        "_row_num": 8
+      },
+      {
+        "type": "string",
+        "name": "z_sample_date",
+        "hideInContents": "true",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 9
       },
       {
         "clause": "end screen",
         "hideInContents": "true",
-        "_row_num": 7
+        "_row_num": 10
       },
       {
         "branch_label": "_contents",
-        "_row_num": 8
+        "_row_num": 11
       },
       {
         "clause": "begin screen",
@@ -77,7 +98,7 @@
           "text": "Inspection Home Page"
         },
         "hideInContents": "true",
-        "_row_num": 9
+        "_row_num": 12
       },
       {
         "type": "note",
@@ -86,29 +107,17 @@
         },
         "hideInContents": "true",
         "templatePath": "note_for_id.handlebars",
-        "_row_num": 10
+        "_row_num": 13
       },
       {
         "type": "user_branch",
         "values_list": "branches",
         "hideInContents": "true",
-        "_row_num": 11
+        "_row_num": 14
       },
       {
         "clause": "end screen",
         "hideInContents": "true",
-        "_row_num": 12
-      },
-      {
-        "clause": "goto _contents",
-        "_row_num": 13
-      },
-      {
-        "branch_label": "inspection",
-        "_row_num": 14
-      },
-      {
-        "clause": "do section inspection_section",
         "_row_num": 15
       },
       {
@@ -116,11 +125,11 @@
         "_row_num": 16
       },
       {
-        "branch_label": "notes",
+        "branch_label": "inspection",
         "_row_num": 17
       },
       {
-        "clause": "do section notes_section",
+        "clause": "do section inspection_section",
         "_row_num": 18
       },
       {
@@ -128,11 +137,11 @@
         "_row_num": 19
       },
       {
-        "branch_label": "gps",
+        "branch_label": "notes",
         "_row_num": 20
       },
       {
-        "clause": "do section gps_section",
+        "clause": "do section notes_section",
         "_row_num": 21
       },
       {
@@ -140,11 +149,11 @@
         "_row_num": 22
       },
       {
-        "branch_label": "image",
+        "branch_label": "gps",
         "_row_num": 23
       },
       {
-        "clause": "do section image_section",
+        "clause": "do section gps_section",
         "_row_num": 24
       },
       {
@@ -152,12 +161,24 @@
         "_row_num": 25
       },
       {
-        "branch_label": "exitpath",
+        "branch_label": "image",
         "_row_num": 26
       },
       {
-        "clause": "exit section",
+        "clause": "do section image_section",
         "_row_num": 27
+      },
+      {
+        "clause": "goto _contents",
+        "_row_num": 28
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 29
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 30
       }
     ],
     "inspection_section": [
@@ -174,8 +195,15 @@
         "display": {
           "text": "Sediment Thickness"
         },
-        "templatePath": "string_input_type.handlebars",
+        "templatePath": "string_input_type_2.handlebars",
         "_row_num": 3
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "measurement_units",
+        "name": "sediment_thickness_unit",
+        "templatePath": "custom_select_dropdown_3.handlebars",
+        "_row_num": 4
       },
       {
         "type": "select_one",
@@ -184,7 +212,7 @@
         "display": {
           "text": "Any Debris Present?"
         },
-        "_row_num": 4
+        "_row_num": 5
       },
       {
         "type": "select_one",
@@ -193,7 +221,7 @@
         "display": {
           "text": "Water present in the vault?"
         },
-        "_row_num": 5
+        "_row_num": 6
       },
       {
         "type": "select_one",
@@ -202,7 +230,7 @@
         "display": {
           "text": "Water flowing freely?"
         },
-        "_row_num": 6
+        "_row_num": 7
       },
       {
         "type": "string",
@@ -210,7 +238,7 @@
         "display": {
           "text": "Type of absorbent material?"
         },
-        "_row_num": 7
+        "_row_num": 8
       },
       {
         "type": "select_one",
@@ -219,7 +247,7 @@
         "display": {
           "text": "Absorbent media need replacing or cleaned?"
         },
-        "_row_num": 8
+        "_row_num": 9
       },
       {
         "type": "select_one",
@@ -229,7 +257,7 @@
           "text": "Absorbent media saturated with oil/water or filled with sediment?"
         },
         "templatePath": "custom_select_dropdown_2.handlebars",
-        "_row_num": 9
+        "_row_num": 10
       },
       {
         "type": "select_one",
@@ -238,7 +266,7 @@
         "display": {
           "text": "Absorbent media replaced or cleaned?"
         },
-        "_row_num": 10
+        "_row_num": 11
       },
       {
         "type": "select_one",
@@ -247,7 +275,7 @@
         "display": {
           "text": "Other maintenance performed? If yes, describe in notes"
         },
-        "_row_num": 11
+        "_row_num": 12
       },
       {
         "type": "select_one",
@@ -256,7 +284,7 @@
         "display": {
           "text": "Sheen present?"
         },
-        "_row_num": 12
+        "_row_num": 13
       },
       {
         "type": "select_one",
@@ -265,7 +293,7 @@
         "display": {
           "text": "Product present? (Notify PM immediately)"
         },
-        "_row_num": 13
+        "_row_num": 14
       },
       {
         "type": "select_one",
@@ -274,7 +302,7 @@
         "display": {
           "text": "Odor present? If yes, describe in notes"
         },
-        "_row_num": 14
+        "_row_num": 15
       },
       {
         "type": "select_one",
@@ -283,7 +311,7 @@
         "display": {
           "text": "PID Reading Option"
         },
-        "_row_num": 15
+        "_row_num": 16
       },
       {
         "type": "decimal",
@@ -292,7 +320,7 @@
           "text": "PID Reading:"
         },
         "templatePath": "decimal_input_type.handlebars",
-        "_row_num": 16
+        "_row_num": 17
       },
       {
         "type": "select_one_dropdown",
@@ -302,7 +330,7 @@
           "text": "Condition of Catch basin"
         },
         "templatePath": "custom_select_dropdown_2.handlebars",
-        "_row_num": 17
+        "_row_num": 18
       },
       {
         "type": "select_one",
@@ -311,7 +339,7 @@
         "display": {
           "text": "Damage Present? If so, describe in notes. If major damage present, contact PM immediately"
         },
-        "_row_num": 18
+        "_row_num": 19
       },
       {
         "type": "select_one",
@@ -320,16 +348,23 @@
         "display": {
           "text": "Sediment/debris removed?"
         },
-        "_row_num": 19
+        "_row_num": 20
       },
       {
         "type": "string",
         "name": "estimated_quantity",
         "display": {
-          "text": "Estimated quantity (Tons/Yards/Drums)"
+          "text": "Estimated quantity"
         },
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 20
+        "templatePath": "string_input_type_2.handlebars",
+        "_row_num": 21
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "estimated_quantity_units",
+        "name": "estimated_quantity_unit",
+        "templatePath": "custom_select_dropdown_3.handlebars",
+        "_row_num": 22
       },
       {
         "type": "string",
@@ -338,7 +373,7 @@
           "text": "Manifest/BOL"
         },
         "templatePath": "string_input_type.handlebars",
-        "_row_num": 21
+        "_row_num": 23
       },
       {
         "type": "decimal",
@@ -347,7 +382,7 @@
           "text": "No. of hazardous waste drums generated:"
         },
         "templatePath": "decimal_input_type.handlebars",
-        "_row_num": 22
+        "_row_num": 24
       },
       {
         "type": "decimal",
@@ -356,7 +391,7 @@
           "text": "No. of non-hazardous waste drums generated:"
         },
         "templatePath": "decimal_input_type.handlebars",
-        "_row_num": 23
+        "_row_num": 25
       },
       {
         "type": "select_one",
@@ -365,11 +400,11 @@
         "display": {
           "text": "Samples obtained and analysis?"
         },
-        "_row_num": 24
+        "_row_num": 26
       },
       {
         "clause": "end screen",
-        "_row_num": 25
+        "_row_num": 27
       }
     ],
     "notes_section": [
@@ -446,7 +481,7 @@
         "linked_table_id": "imageSubform",
         "selection": "parent_id = ?",
         "selectionArgs": "[ data('global_id')+'::'+data('inspection_id')]",
-        "auxillaryHash": "'parent_id='+encodeURIComponent(data('global_id'))+'::'+encodeURIComponent(data('inspection_id'))+'&z_pic_name='+encodeURIComponent(data('sample_date').split('/').join('-') + ' - ' + data('loc_name') + ' - ' + data('inspection_id') + ' - ' + opendatakit.total_linked_instances.toString())",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('global_id'))+'::'+encodeURIComponent(data('inspection_id'))+'&z_pic_name='+encodeURIComponent(data('z_sample_date').split('/').join('-') + ' - ' + data('loc_name') + ' - ' + data('inspection_id') + ' - ' + opendatakit.total_linked_instances.toString())",
         "_row_num": 2
       },
       {
@@ -609,6 +644,70 @@
           "text": "Numeric"
         },
         "_row_num": 19
+      },
+      {
+        "choice_list_name": "measurement_units",
+        "data_value": "feet",
+        "display": {
+          "text": "Feet"
+        },
+        "_row_num": 20
+      },
+      {
+        "choice_list_name": "measurement_units",
+        "data_value": "inches",
+        "display": {
+          "text": "Inches"
+        },
+        "_row_num": 21
+      },
+      {
+        "choice_list_name": "estimated_quantity_units",
+        "data_value": "drums",
+        "display": {
+          "text": "Drums"
+        },
+        "_row_num": 22
+      },
+      {
+        "choice_list_name": "estimated_quantity_units",
+        "data_value": "totes",
+        "display": {
+          "text": "Totes"
+        },
+        "_row_num": 23
+      },
+      {
+        "choice_list_name": "estimated_quantity_units",
+        "data_value": "yards",
+        "display": {
+          "text": "Yards"
+        },
+        "_row_num": 24
+      },
+      {
+        "choice_list_name": "estimated_quantity_units",
+        "data_value": "ton",
+        "display": {
+          "text": "Ton"
+        },
+        "_row_num": 25
+      },
+      {
+        "choice_list_name": "estimated_quantity_units",
+        "data_value": "gallons",
+        "display": {
+          "text": "Gallons"
+        },
+        "_row_num": 26
+      },
+      {
+        "choice_list_name": "estimated_quantity_units",
+        "data_value": "pounds",
+        "display": {
+          "text": "Pounds"
+        },
+        "_row_num": 27
       }
     ],
     "settings": [
@@ -810,6 +909,31 @@
         "name": "waste_drums_non_hazardous",
         "type": "decimal",
         "_row_num": 28
+      },
+      {
+        "name": "z_sample_date",
+        "type": "string",
+        "_row_num": 29
+      },
+      {
+        "name": "depth_unit",
+        "type": "select_one_dropdown",
+        "_row_num": 30
+      },
+      {
+        "name": "diameter_unit",
+        "type": "select_one_dropdown",
+        "_row_num": 31
+      },
+      {
+        "name": "estimated_quantity_unit",
+        "type": "select_one_dropdown",
+        "_row_num": 32
+      },
+      {
+        "name": "sediment_thickness_units",
+        "type": "select_one_dropdown",
+        "_row_num": 33
       }
     ]
   },
@@ -1076,6 +1200,74 @@
           },
           "_row_num": 19
         }
+      ],
+      "measurement_units": [
+        {
+          "choice_list_name": "measurement_units",
+          "data_value": "feet",
+          "display": {
+            "text": "Feet"
+          },
+          "_row_num": 20
+        },
+        {
+          "choice_list_name": "measurement_units",
+          "data_value": "inches",
+          "display": {
+            "text": "Inches"
+          },
+          "_row_num": 21
+        }
+      ],
+      "estimated_quantity_units": [
+        {
+          "choice_list_name": "estimated_quantity_units",
+          "data_value": "drums",
+          "display": {
+            "text": "Drums"
+          },
+          "_row_num": 22
+        },
+        {
+          "choice_list_name": "estimated_quantity_units",
+          "data_value": "totes",
+          "display": {
+            "text": "Totes"
+          },
+          "_row_num": 23
+        },
+        {
+          "choice_list_name": "estimated_quantity_units",
+          "data_value": "yards",
+          "display": {
+            "text": "Yards"
+          },
+          "_row_num": 24
+        },
+        {
+          "choice_list_name": "estimated_quantity_units",
+          "data_value": "ton",
+          "display": {
+            "text": "Ton"
+          },
+          "_row_num": 25
+        },
+        {
+          "choice_list_name": "estimated_quantity_units",
+          "data_value": "gallons",
+          "display": {
+            "text": "Gallons"
+          },
+          "_row_num": 26
+        },
+        {
+          "choice_list_name": "estimated_quantity_units",
+          "data_value": "pounds",
+          "display": {
+            "text": "Pounds"
+          },
+          "_row_num": 27
+        }
       ]
     },
     "queries": {
@@ -1086,7 +1278,7 @@
         "linked_table_id": "imageSubform",
         "selection": "parent_id = ?",
         "selectionArgs": "[ data('global_id')+'::'+data('inspection_id')]",
-        "auxillaryHash": "'parent_id='+encodeURIComponent(data('global_id'))+'::'+encodeURIComponent(data('inspection_id'))+'&z_pic_name='+encodeURIComponent(data('sample_date').split('/').join('-') + ' - ' + data('loc_name') + ' - ' + data('inspection_id') + ' - ' + opendatakit.total_linked_instances.toString())",
+        "auxillaryHash": "'parent_id='+encodeURIComponent(data('global_id'))+'::'+encodeURIComponent(data('inspection_id'))+'&z_pic_name='+encodeURIComponent(data('z_sample_date').split('/').join('-') + ' - ' + data('loc_name') + ' - ' + data('inspection_id') + ' - ' + opendatakit.total_linked_instances.toString())",
         "_row_num": 2
       },
       "linked_notes": {
@@ -1155,7 +1347,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 6,
             "section_name": "survey"
           },
           {
@@ -1170,7 +1362,7 @@
         "valuesList": "dry_or_connected_values",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 8,
             "section_name": "survey"
           },
           {
@@ -1199,7 +1391,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 5,
             "section_name": "inspection_section"
           },
           {
@@ -1214,7 +1406,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 6,
             "section_name": "inspection_section"
           },
           {
@@ -1229,7 +1421,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 7,
             "section_name": "inspection_section"
           },
           {
@@ -1243,7 +1435,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 8,
             "section_name": "inspection_section"
           },
           {
@@ -1258,7 +1450,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 8,
+            "_row_num": 9,
             "section_name": "inspection_section"
           },
           {
@@ -1273,7 +1465,7 @@
         "valuesList": "saturated_or_filled_values",
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 10,
             "section_name": "inspection_section"
           },
           {
@@ -1288,7 +1480,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 10,
+            "_row_num": 11,
             "section_name": "inspection_section"
           },
           {
@@ -1303,7 +1495,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 12,
             "section_name": "inspection_section"
           },
           {
@@ -1318,7 +1510,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 13,
             "section_name": "inspection_section"
           },
           {
@@ -1333,7 +1525,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 13,
+            "_row_num": 14,
             "section_name": "inspection_section"
           },
           {
@@ -1348,7 +1540,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 15,
             "section_name": "inspection_section"
           },
           {
@@ -1362,7 +1554,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 16,
+            "_row_num": 17,
             "section_name": "inspection_section"
           },
           {
@@ -1377,7 +1569,7 @@
         "valuesList": "types_of_condition",
         "_defn": [
           {
-            "_row_num": 17,
+            "_row_num": 18,
             "section_name": "inspection_section"
           },
           {
@@ -1392,7 +1584,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 19,
             "section_name": "inspection_section"
           },
           {
@@ -1407,7 +1599,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 19,
+            "_row_num": 20,
             "section_name": "inspection_section"
           },
           {
@@ -1421,7 +1613,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 21,
             "section_name": "inspection_section"
           },
           {
@@ -1435,7 +1627,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 23,
             "section_name": "inspection_section"
           },
           {
@@ -1450,7 +1642,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 26,
             "section_name": "inspection_section"
           },
           {
@@ -1498,7 +1690,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 24,
             "section_name": "inspection_section"
           },
           {
@@ -1512,7 +1704,7 @@
         "type": "number",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 25,
             "section_name": "inspection_section"
           },
           {
@@ -1522,10 +1714,90 @@
         ],
         "elementKey": "waste_drums_non_hazardous"
       },
+      "z_sample_date": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 29,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "z_sample_date"
+      },
+      "depth_unit": {
+        "type": "string",
+        "valuesList": "measurement_units",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 30,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "depth_unit"
+      },
+      "diameter_unit": {
+        "type": "string",
+        "valuesList": "measurement_units",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 31,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "diameter_unit"
+      },
+      "estimated_quantity_unit": {
+        "type": "string",
+        "valuesList": "estimated_quantity_units",
+        "_defn": [
+          {
+            "_row_num": 22,
+            "section_name": "inspection_section"
+          },
+          {
+            "_row_num": 32,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "estimated_quantity_unit"
+      },
+      "sediment_thickness_units": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 33,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "sediment_thickness_units"
+      },
+      "sediment_thickness_unit": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "inspection_section"
+          }
+        ],
+        "type": "string",
+        "valuesList": "measurement_units",
+        "elementKey": "sediment_thickness_unit"
+      },
       "pid_reading_option": {
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 16,
             "section_name": "inspection_section"
           }
         ],
@@ -1691,7 +1963,7 @@
               "text": "Diameter of Catch Basin"
             },
             "hideInContents": "true",
-            "templatePath": "string_input_type.handlebars",
+            "templatePath": "string_input_type_2.handlebars",
             "_row_num": 4,
             "__rowNum__": 3,
             "_token_type": "prompt",
@@ -1700,19 +1972,43 @@
             "promptIdx": 1
           },
           {
+            "type": "select_one_dropdown",
+            "values_list": "measurement_units",
+            "name": "diameter_unit",
+            "templatePath": "custom_select_dropdown_3.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
             "type": "string",
             "name": "depth",
             "display": {
               "text": "Depth of Catch Basin"
             },
             "hideInContents": "true",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 5,
-            "__rowNum__": 4,
+            "templatePath": "string_input_type_2.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 2
+            "promptIdx": 3
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "measurement_units",
+            "name": "depth_unit",
+            "templatePath": "custom_select_dropdown_3.handlebars",
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
           },
           {
             "type": "select_one_dropdown",
@@ -1723,12 +2019,24 @@
             },
             "hideInContents": "true",
             "templatePath": "custom_select_dropdown_2.handlebars",
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 8,
+            "__rowNum__": 7,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 3
+            "promptIdx": 5
+          },
+          {
+            "type": "string",
+            "name": "z_sample_date",
+            "hideInContents": "true",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
           },
           {
             "type": "note",
@@ -1737,32 +2045,32 @@
             },
             "hideInContents": "true",
             "templatePath": "note_for_id.handlebars",
-            "_row_num": 10,
-            "__rowNum__": 9,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen9",
-            "promptIdx": 4
+            "_branch_label_enclosing_screen": "survey/_screen12",
+            "promptIdx": 7
           },
           {
             "type": "user_branch",
             "values_list": "branches",
             "hideInContents": "true",
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 14,
+            "__rowNum__": 13,
             "_token_type": "prompt",
             "_type": "user_branch",
-            "_branch_label_enclosing_screen": "survey/_screen9",
-            "promptIdx": 5
+            "_branch_label_enclosing_screen": "survey/_screen12",
+            "promptIdx": 8
           },
           {
             "clause": "do section inspection_section",
-            "_row_num": 15,
-            "__rowNum__": 14,
+            "_row_num": 18,
+            "__rowNum__": 17,
             "_token_type": "prompt",
             "_do_section_name": "inspection_section",
             "_type": "_section",
-            "promptIdx": 6,
+            "promptIdx": 9,
             "display": {
               "title": "Inspection"
             },
@@ -1770,12 +2078,12 @@
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 18,
-            "__rowNum__": 17,
+            "_row_num": 21,
+            "__rowNum__": 20,
             "_token_type": "prompt",
             "_do_section_name": "notes_section",
             "_type": "_section",
-            "promptIdx": 7,
+            "promptIdx": 10,
             "display": {
               "title": "Notes"
             },
@@ -1783,12 +2091,12 @@
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
-            "promptIdx": 8,
+            "promptIdx": 11,
             "display": {
               "title": "GPS"
             },
@@ -1796,12 +2104,12 @@
           },
           {
             "clause": "do section image_section",
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 27,
+            "__rowNum__": 26,
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
-            "promptIdx": 9,
+            "promptIdx": 12,
             "display": {
               "title": "Photo"
             },
@@ -1826,11 +2134,11 @@
             "_end_screen_clause": {
               "clause": "end screen",
               "hideInContents": "true",
-              "_row_num": 7,
-              "__rowNum__": 6,
+              "_row_num": 10,
+              "__rowNum__": 9,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -1839,34 +2147,18 @@
               "text": "Inspection Home Page"
             },
             "hideInContents": "true",
-            "_row_num": 9,
-            "__rowNum__": 8,
+            "_row_num": 12,
+            "__rowNum__": 11,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
               "hideInContents": "true",
-              "_row_num": 12,
-              "__rowNum__": 11,
+              "_row_num": 15,
+              "__rowNum__": 14,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
-          },
-          {
-            "clause": "goto _contents",
-            "_row_num": 13,
-            "__rowNum__": 12,
-            "_token_type": "goto_label",
-            "_branch_label": "_contents",
-            "operationIdx": 2
-          },
-          {
-            "clause": "do section inspection_section",
-            "_row_num": 15,
-            "__rowNum__": 14,
-            "_token_type": "do_section",
-            "_do_section_name": "inspection_section",
-            "operationIdx": 3
           },
           {
             "clause": "goto _contents",
@@ -1874,15 +2166,15 @@
             "__rowNum__": 15,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
-            "operationIdx": 4
+            "operationIdx": 2
           },
           {
-            "clause": "do section notes_section",
+            "clause": "do section inspection_section",
             "_row_num": 18,
             "__rowNum__": 17,
             "_token_type": "do_section",
-            "_do_section_name": "notes_section",
-            "operationIdx": 5
+            "_do_section_name": "inspection_section",
+            "operationIdx": 3
           },
           {
             "clause": "goto _contents",
@@ -1890,15 +2182,15 @@
             "__rowNum__": 18,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
-            "operationIdx": 6
+            "operationIdx": 4
           },
           {
-            "clause": "do section gps_section",
+            "clause": "do section notes_section",
             "_row_num": 21,
             "__rowNum__": 20,
             "_token_type": "do_section",
-            "_do_section_name": "gps_section",
-            "operationIdx": 7
+            "_do_section_name": "notes_section",
+            "operationIdx": 5
           },
           {
             "clause": "goto _contents",
@@ -1906,15 +2198,15 @@
             "__rowNum__": 21,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
-            "operationIdx": 8
+            "operationIdx": 6
           },
           {
-            "clause": "do section image_section",
+            "clause": "do section gps_section",
             "_row_num": 24,
             "__rowNum__": 23,
             "_token_type": "do_section",
-            "_do_section_name": "image_section",
-            "operationIdx": 9
+            "_do_section_name": "gps_section",
+            "operationIdx": 7
           },
           {
             "clause": "goto _contents",
@@ -1922,26 +2214,42 @@
             "__rowNum__": 24,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
+            "operationIdx": 8
+          },
+          {
+            "clause": "do section image_section",
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "do_section",
+            "_do_section_name": "image_section",
+            "operationIdx": 9
+          },
+          {
+            "clause": "goto _contents",
+            "_row_num": 28,
+            "__rowNum__": 27,
+            "_token_type": "goto_label",
+            "_branch_label": "_contents",
             "operationIdx": 10
           },
           {
             "clause": "exit section",
-            "_row_num": 27,
-            "__rowNum__": 26,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "exit_section",
             "operationIdx": 11
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 28,
+            "_row_num": 31,
             "operationIdx": 12
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 1,
-          "_screen9": 1,
+          "_screen12": 1,
           "inspection": 3,
           "notes": 5,
           "gps": 7,
@@ -1960,7 +2268,7 @@
             "display": {
               "text": "Sediment Thickness"
             },
-            "templatePath": "string_input_type.handlebars",
+            "templatePath": "string_input_type_2.handlebars",
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
@@ -1969,25 +2277,23 @@
             "promptIdx": 0
           },
           {
-            "type": "select_one",
-            "values_list": "yesno",
-            "name": "debris_present",
-            "display": {
-              "text": "Any Debris Present?"
-            },
+            "type": "select_one_dropdown",
+            "values_list": "measurement_units",
+            "name": "sediment_thickness_unit",
+            "templatePath": "custom_select_dropdown_3.handlebars",
             "_row_num": 4,
             "__rowNum__": 3,
             "_token_type": "prompt",
-            "_type": "select_one",
+            "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "inspection_section/_screen2",
             "promptIdx": 1
           },
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "water_in_vault",
+            "name": "debris_present",
             "display": {
-              "text": "Water present in the vault?"
+              "text": "Any Debris Present?"
             },
             "_row_num": 5,
             "__rowNum__": 4,
@@ -1999,9 +2305,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "water_flowing_freely",
+            "name": "water_in_vault",
             "display": {
-              "text": "Water flowing freely?"
+              "text": "Water present in the vault?"
             },
             "_row_num": 6,
             "__rowNum__": 5,
@@ -2011,17 +2317,31 @@
             "promptIdx": 3
           },
           {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "water_flowing_freely",
+            "display": {
+              "text": "Water flowing freely?"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 4
+          },
+          {
             "type": "string",
             "name": "type_of_material",
             "display": {
               "text": "Type of absorbent material?"
             },
-            "_row_num": 7,
-            "__rowNum__": 6,
+            "_row_num": 8,
+            "__rowNum__": 7,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "inspection_section/_screen2",
-            "promptIdx": 4
+            "promptIdx": 5
           },
           {
             "type": "select_one",
@@ -2030,21 +2350,6 @@
             "display": {
               "text": "Absorbent media need replacing or cleaned?"
             },
-            "_row_num": 8,
-            "__rowNum__": 7,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "inspection_section/_screen2",
-            "promptIdx": 5
-          },
-          {
-            "type": "select_one",
-            "values_list": "saturated_or_filled_values",
-            "name": "saturated_or_filled",
-            "display": {
-              "text": "Absorbent media saturated with oil/water or filled with sediment?"
-            },
-            "templatePath": "custom_select_dropdown_2.handlebars",
             "_row_num": 9,
             "__rowNum__": 8,
             "_token_type": "prompt",
@@ -2054,11 +2359,12 @@
           },
           {
             "type": "select_one",
-            "values_list": "yesno",
-            "name": "absorbent_replaced",
+            "values_list": "saturated_or_filled_values",
+            "name": "saturated_or_filled",
             "display": {
-              "text": "Absorbent media replaced or cleaned?"
+              "text": "Absorbent media saturated with oil/water or filled with sediment?"
             },
+            "templatePath": "custom_select_dropdown_2.handlebars",
             "_row_num": 10,
             "__rowNum__": 9,
             "_token_type": "prompt",
@@ -2069,9 +2375,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "other_maintenance",
+            "name": "absorbent_replaced",
             "display": {
-              "text": "Other maintenance performed? If yes, describe in notes"
+              "text": "Absorbent media replaced or cleaned?"
             },
             "_row_num": 11,
             "__rowNum__": 10,
@@ -2083,9 +2389,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "sheen_present",
+            "name": "other_maintenance",
             "display": {
-              "text": "Sheen present?"
+              "text": "Other maintenance performed? If yes, describe in notes"
             },
             "_row_num": 12,
             "__rowNum__": 11,
@@ -2097,9 +2403,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "product_present",
+            "name": "sheen_present",
             "display": {
-              "text": "Product present? (Notify PM immediately)"
+              "text": "Sheen present?"
             },
             "_row_num": 13,
             "__rowNum__": 12,
@@ -2111,9 +2417,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "odor_present",
+            "name": "product_present",
             "display": {
-              "text": "Odor present? If yes, describe in notes"
+              "text": "Product present? (Notify PM immediately)"
             },
             "_row_num": 14,
             "__rowNum__": 13,
@@ -2124,10 +2430,10 @@
           },
           {
             "type": "select_one",
-            "values_list": "pid_reading_option",
-            "name": "pid_reading_option",
+            "values_list": "yesno",
+            "name": "odor_present",
             "display": {
-              "text": "PID Reading Option"
+              "text": "Odor present? If yes, describe in notes"
             },
             "_row_num": 15,
             "__rowNum__": 14,
@@ -2137,18 +2443,32 @@
             "promptIdx": 12
           },
           {
+            "type": "select_one",
+            "values_list": "pid_reading_option",
+            "name": "pid_reading_option",
+            "display": {
+              "text": "PID Reading Option"
+            },
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 13
+          },
+          {
             "type": "decimal",
             "name": "pid_reading",
             "display": {
               "text": "PID Reading:"
             },
             "templatePath": "decimal_input_type.handlebars",
-            "_row_num": 16,
-            "__rowNum__": 15,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "prompt",
             "_type": "decimal",
             "_branch_label_enclosing_screen": "inspection_section/_screen2",
-            "promptIdx": 13
+            "promptIdx": 14
           },
           {
             "type": "select_one_dropdown",
@@ -2158,12 +2478,12 @@
               "text": "Condition of Catch basin"
             },
             "templatePath": "custom_select_dropdown_2.handlebars",
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 18,
+            "__rowNum__": 17,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "inspection_section/_screen2",
-            "promptIdx": 14
+            "promptIdx": 15
           },
           {
             "type": "select_one",
@@ -2171,20 +2491,6 @@
             "name": "damage_present",
             "display": {
               "text": "Damage Present? If so, describe in notes. If major damage present, contact PM immediately"
-            },
-            "_row_num": 18,
-            "__rowNum__": 17,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "inspection_section/_screen2",
-            "promptIdx": 15
-          },
-          {
-            "type": "select_one",
-            "values_list": "yesno",
-            "name": "sediment_removed",
-            "display": {
-              "text": "Sediment/debris removed?"
             },
             "_row_num": 19,
             "__rowNum__": 18,
@@ -2194,26 +2500,26 @@
             "promptIdx": 16
           },
           {
-            "type": "string",
-            "name": "estimated_quantity",
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "sediment_removed",
             "display": {
-              "text": "Estimated quantity (Tons/Yards/Drums)"
+              "text": "Sediment/debris removed?"
             },
-            "templatePath": "string_input_type.handlebars",
             "_row_num": 20,
             "__rowNum__": 19,
             "_token_type": "prompt",
-            "_type": "string",
+            "_type": "select_one",
             "_branch_label_enclosing_screen": "inspection_section/_screen2",
             "promptIdx": 17
           },
           {
             "type": "string",
-            "name": "manifest_bol",
+            "name": "estimated_quantity",
             "display": {
-              "text": "Manifest/BOL"
+              "text": "Estimated quantity"
             },
-            "templatePath": "string_input_type.handlebars",
+            "templatePath": "string_input_type_2.handlebars",
             "_row_num": 21,
             "__rowNum__": 20,
             "_token_type": "prompt",
@@ -2222,18 +2528,44 @@
             "promptIdx": 18
           },
           {
+            "type": "select_one_dropdown",
+            "values_list": "estimated_quantity_units",
+            "name": "estimated_quantity_unit",
+            "templatePath": "custom_select_dropdown_3.handlebars",
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 19
+          },
+          {
+            "type": "string",
+            "name": "manifest_bol",
+            "display": {
+              "text": "Manifest/BOL"
+            },
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "inspection_section/_screen2",
+            "promptIdx": 20
+          },
+          {
             "type": "decimal",
             "name": "waste_drums_hazardous",
             "display": {
               "text": "No. of hazardous waste drums generated:"
             },
             "templatePath": "decimal_input_type.handlebars",
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_type": "decimal",
             "_branch_label_enclosing_screen": "inspection_section/_screen2",
-            "promptIdx": 19
+            "promptIdx": 21
           },
           {
             "type": "decimal",
@@ -2242,12 +2574,12 @@
               "text": "No. of non-hazardous waste drums generated:"
             },
             "templatePath": "decimal_input_type.handlebars",
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "prompt",
             "_type": "decimal",
             "_branch_label_enclosing_screen": "inspection_section/_screen2",
-            "promptIdx": 20
+            "promptIdx": 22
           },
           {
             "type": "select_one",
@@ -2256,20 +2588,20 @@
             "display": {
               "text": "Samples obtained and analysis?"
             },
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "inspection_section/_screen2",
-            "promptIdx": 21
+            "promptIdx": 23
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 26,
-            "_branch_label_enclosing_screen": "inspection_section/_screen26",
-            "promptIdx": 22
+            "_row_num": 28,
+            "_branch_label_enclosing_screen": "inspection_section/_screen28",
+            "promptIdx": 24
           }
         ],
         "validation_tag_map": {
@@ -2286,23 +2618,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 25,
-              "__rowNum__": 24,
+              "_row_num": 27,
+              "__rowNum__": 26,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 26,
+            "_row_num": 28,
             "operationIdx": 1
           },
           {
-            "_row_num": 26,
+            "_row_num": 28,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(22);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(24);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -2311,14 +2643,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 26,
+            "_row_num": 28,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen26": 2
+          "_screen28": 2
         }
       },
       "notes_section": {
