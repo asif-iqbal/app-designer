@@ -149,9 +149,14 @@ Column,well_gripper,displayFormat,string,""
 Column,well_gripper,displayName,string,"""well_gripper"""
 Column,well_gripper,displayVisible,boolean,TRUE
 Column,well_gripper,joins,object,""
+Column,z_sample_date,displayChoicesList,object,[]
+Column,z_sample_date,displayFormat,string,""
+Column,z_sample_date,displayName,string,"""z_sample_date"""
+Column,z_sample_date,displayVisible,boolean,TRUE
+Column,z_sample_date,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,stdGroundwaterSample
-Table,default,colOrder,array,"[""stdgwslog_id"",""sample_id"",""pro_casing_secure"",""con_pad_intect"",""pvc_casing_intact"",""well_gripper"",""bolts"",""locked"",""diameter"",""depth_to_water"",""material"",""depth_to_bottom"",""sampling_type"",""pump_type"",""one_purge_volume"",""purge_start"",""purge_end"",""skt_name"",""sign_person_name"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy"",""skt_uriFragment"",""skt_contentType"",""sign_uriFragment"",""sign_contentType""]"
+Table,default,colOrder,array,"[""stdgwslog_id"",""sample_id"",""pro_casing_secure"",""con_pad_intect"",""pvc_casing_intact"",""well_gripper"",""bolts"",""locked"",""diameter"",""depth_to_water"",""material"",""depth_to_bottom"",""sampling_type"",""pump_type"",""one_purge_volume"",""purge_start"",""purge_end"",""skt_name"",""sign_person_name"",""z_sample_date"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy"",""skt_uriFragment"",""skt_contentType"",""sign_uriFragment"",""sign_contentType""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Std. GWS Sample"""
 Table,default,groupByCols,object,[]

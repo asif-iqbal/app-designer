@@ -84,9 +84,14 @@ Column,stdaslog_id,displayFormat,string,""
 Column,stdaslog_id,displayName,string,"""stdaslog_id"""
 Column,stdaslog_id,displayVisible,boolean,TRUE
 Column,stdaslog_id,joins,object,""
+Column,z_sample_date,displayChoicesList,object,[]
+Column,z_sample_date,displayFormat,string,""
+Column,z_sample_date,displayName,string,"""z_sample_date"""
+Column,z_sample_date,displayVisible,boolean,TRUE
+Column,z_sample_date,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,stdAirSample
-Table,default,colOrder,array,"[""stdaslog_id"",""sample_id"",""point_description"",""sampling_type"",""skt_name"",""sign_person_name"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy"",""skt_uriFragment"",""skt_contentType"",""sign_uriFragment"",""sign_contentType""]"
+Table,default,colOrder,array,"[""stdaslog_id"",""sample_id"",""point_description"",""sampling_type"",""skt_name"",""sign_person_name"",""z_sample_date"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy"",""skt_uriFragment"",""skt_contentType"",""sign_uriFragment"",""sign_contentType""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Std. Air Sample"""
 Table,default,groupByCols,object,[]

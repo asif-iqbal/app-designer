@@ -64,9 +64,14 @@ Column,waste_drums_non_hazardous,displayFormat,string,""
 Column,waste_drums_non_hazardous,displayName,string,"""waste_drums_non_hazardous"""
 Column,waste_drums_non_hazardous,displayVisible,boolean,TRUE
 Column,waste_drums_non_hazardous,joins,object,""
+Column,z_sample_date,displayChoicesList,object,[]
+Column,z_sample_date,displayFormat,string,""
+Column,z_sample_date,displayName,string,"""z_sample_date"""
+Column,z_sample_date,displayVisible,boolean,TRUE
+Column,z_sample_date,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,trackMatInspectionSample
-Table,default,colOrder,array,"[""global_id"",""inspection_id"",""track_mats_replaced"",""drums_generated"",""number_of_drums"",""manifest_bol"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
+Table,default,colOrder,array,"[""global_id"",""inspection_id"",""track_mats_replaced"",""drums_generated"",""number_of_drums"",""manifest_bol"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""z_sample_date"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Track Mat Inspection Sample"""
 Table,default,groupByCols,object,[]

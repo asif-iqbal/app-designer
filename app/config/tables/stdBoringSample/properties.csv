@@ -64,9 +64,14 @@ Column,stdbslog_id,displayFormat,string,""
 Column,stdbslog_id,displayName,string,"""stdbslog_id"""
 Column,stdbslog_id,displayVisible,boolean,TRUE
 Column,stdbslog_id,joins,object,""
+Column,z_sample_date,displayChoicesList,object,[]
+Column,z_sample_date,displayFormat,string,""
+Column,z_sample_date,displayName,string,"""z_sample_date"""
+Column,z_sample_date,displayVisible,boolean,TRUE
+Column,z_sample_date,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,stdBoringSample
-Table,default,colOrder,array,"[""stdbslog_id"",""sample_id"",""boring_diameter"",""core_sample_type"",""skt_name"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy"",""skt_uriFragment"",""skt_contentType""]"
+Table,default,colOrder,array,"[""stdbslog_id"",""sample_id"",""boring_diameter"",""core_sample_type"",""skt_name"",""z_sample_date"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy"",""skt_uriFragment"",""skt_contentType""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Std. Boring Sample"""
 Table,default,groupByCols,object,[]

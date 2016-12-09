@@ -31,6 +31,7 @@
         <skt/>
         <skt_name/>
         <stdbslog_id/>
+        <z_sample_date/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -52,6 +53,7 @@
     <bind nodeset="/data/skt" type="binary"/>
     <bind nodeset="/data/skt_name" type="string"/>
     <bind nodeset="/data/stdbslog_id" type="string"/>
+    <bind nodeset="/data/z_sample_date" type="string"/>
   </model> 
  </h:head> 
  <h:body> 

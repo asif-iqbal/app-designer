@@ -159,9 +159,14 @@ Column,water_in_vault,displayFormat,string,""
 Column,water_in_vault,displayName,string,"""water_in_vault"""
 Column,water_in_vault,displayVisible,boolean,TRUE
 Column,water_in_vault,joins,object,""
+Column,z_sample_date,displayChoicesList,object,[]
+Column,z_sample_date,displayFormat,string,""
+Column,z_sample_date,displayName,string,"""z_sample_date"""
+Column,z_sample_date,displayVisible,boolean,TRUE
+Column,z_sample_date,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,catchBasinInspectionSample
-Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""pid_reading_option"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
+Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""z_sample_date"",""pid_reading_option"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Catch Basin Inspection Sample"""
 Table,default,groupByCols,object,[]
