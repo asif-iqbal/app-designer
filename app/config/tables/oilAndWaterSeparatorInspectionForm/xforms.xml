@@ -103,9 +103,13 @@
         <personnel_totalhrs_1/>
         <personnel_totalhrs_2/>
         <ph/>
+        <project_arrive_time/>
         <project_comment/>
         <project_daily_report/>
+        <project_depart_time/>
+        <project_end_time/>
         <project_number/>
+        <project_start_time/>
         <reading_1_oil/>
         <reading_1_sheen/>
         <reading_1_thickness/>
@@ -131,7 +135,6 @@
         <waste_drums_hazardous/>
         <waste_drums_non_hazardous/>
         <weather/>
-        <z1_next_photo_index/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -225,9 +228,13 @@
     <bind nodeset="/data/personnel_totalhrs_1" type="string"/>
     <bind nodeset="/data/personnel_totalhrs_2" type="string"/>
     <bind nodeset="/data/ph" type="decimal"/>
+    <bind nodeset="/data/project_arrive_time" type="time"/>
     <bind nodeset="/data/project_comment" type="string"/>
     <bind nodeset="/data/project_daily_report" type="string"/>
+    <bind nodeset="/data/project_depart_time" type="time"/>
+    <bind nodeset="/data/project_end_time" type="time"/>
     <bind nodeset="/data/project_number" type="string"/>
+    <bind nodeset="/data/project_start_time" type="time"/>
     <bind nodeset="/data/reading_1_oil" type="string"/>
     <bind nodeset="/data/reading_1_sheen" type="string"/>
     <bind nodeset="/data/reading_1_thickness" type="decimal"/>
@@ -253,7 +260,6 @@
     <bind nodeset="/data/waste_drums_hazardous" type="decimal"/>
     <bind nodeset="/data/waste_drums_non_hazardous" type="decimal"/>
     <bind nodeset="/data/weather" type="string"/>
-    <bind nodeset="/data/z1_next_photo_index" type="int"/>
   </model> 
  </h:head> 
  <h:body> 
