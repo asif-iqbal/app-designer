@@ -209,11 +209,6 @@ Column,personnel_totalhrs_2,displayFormat,string,""
 Column,personnel_totalhrs_2,displayName,string,"""personnel_totalhrs_2"""
 Column,personnel_totalhrs_2,displayVisible,boolean,TRUE
 Column,personnel_totalhrs_2,joins,object,""
-Column,project_arrive_time,displayChoicesList,object,[]
-Column,project_arrive_time,displayFormat,string,""
-Column,project_arrive_time,displayName,string,"""project_arrive_time"""
-Column,project_arrive_time,displayVisible,boolean,TRUE
-Column,project_arrive_time,joins,object,""
 Column,project_comment,displayChoicesList,object,[]
 Column,project_comment,displayFormat,string,""
 Column,project_comment,displayName,string,"""project_comment"""
@@ -224,11 +219,6 @@ Column,project_daily_report,displayFormat,string,""
 Column,project_daily_report,displayName,string,"""project_daily_report"""
 Column,project_daily_report,displayVisible,boolean,TRUE
 Column,project_daily_report,joins,object,""
-Column,project_depart_time,displayChoicesList,object,[]
-Column,project_depart_time,displayFormat,string,""
-Column,project_depart_time,displayName,string,"""project_depart_time"""
-Column,project_depart_time,displayVisible,boolean,TRUE
-Column,project_depart_time,joins,object,""
 Column,project_end_time,displayChoicesList,object,[]
 Column,project_end_time,displayFormat,string,""
 Column,project_end_time,displayName,string,"""project_end_time"""
@@ -311,7 +301,7 @@ Column,weather,displayVisible,boolean,TRUE
 Column,weather,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,trackMatInspectionForm
-Table,default,colOrder,array,"[""global_id"",""loc_name"",""loc_aid"",""loc_streetAddress"",""loc_city"",""loc_state"",""loc_zip"",""loc_client"",""sample_date"",""weather"",""project_number"",""project_comment"",""project_daily_report"",""personnel_title_0"",""personnel_name_0"",""personnel_starttime_0"",""personnel_endtime_0"",""personnel_totalhrs_0"",""personnel_title_1"",""personnel_name_1"",""personnel_starttime_1"",""personnel_endtime_1"",""personnel_totalhrs_1"",""personnel_title_2"",""personnel_name_2"",""personnel_starttime_2"",""personnel_endtime_2"",""personnel_totalhrs_2"",""equipment_name_0"",""equipment_quantity_0"",""equipment_totalhrs_0"",""equipment_name_1"",""equipment_quantity_1"",""equipment_totalhrs_1"",""equipment_name_2"",""equipment_quantity_2"",""equipment_totalhrs_2"",""vehicle_name_0"",""vehicle_quantity_0"",""vehicle_totalhrs_0"",""vehicle_name_1"",""vehicle_quantity_1"",""vehicle_totalhrs_1"",""vehicle_name_2"",""vehicle_quantity_2"",""vehicle_totalhrs_2"",""consumable_name_0"",""consumable_quantity_0"",""consumable_totalhrs_0"",""consumable_name_1"",""consumable_quantity_1"",""consumable_totalhrs_1"",""consumable_name_2"",""consumable_quantity_2"",""consumable_totalhrs_2"",""annual_cleaning"",""type_of_inspection"",""repair_defective"",""project_start_time"",""project_arrive_time"",""project_depart_time"",""project_end_time""]"
+Table,default,colOrder,array,"[""global_id"",""loc_name"",""loc_aid"",""loc_streetAddress"",""loc_city"",""loc_state"",""loc_zip"",""loc_client"",""sample_date"",""weather"",""project_number"",""project_comment"",""project_daily_report"",""personnel_title_0"",""personnel_name_0"",""personnel_starttime_0"",""personnel_endtime_0"",""personnel_totalhrs_0"",""personnel_title_1"",""personnel_name_1"",""personnel_starttime_1"",""personnel_endtime_1"",""personnel_totalhrs_1"",""personnel_title_2"",""personnel_name_2"",""personnel_starttime_2"",""personnel_endtime_2"",""personnel_totalhrs_2"",""equipment_name_0"",""equipment_quantity_0"",""equipment_totalhrs_0"",""equipment_name_1"",""equipment_quantity_1"",""equipment_totalhrs_1"",""equipment_name_2"",""equipment_quantity_2"",""equipment_totalhrs_2"",""vehicle_name_0"",""vehicle_quantity_0"",""vehicle_totalhrs_0"",""vehicle_name_1"",""vehicle_quantity_1"",""vehicle_totalhrs_1"",""vehicle_name_2"",""vehicle_quantity_2"",""vehicle_totalhrs_2"",""consumable_name_0"",""consumable_quantity_0"",""consumable_totalhrs_0"",""consumable_name_1"",""consumable_quantity_1"",""consumable_totalhrs_1"",""consumable_name_2"",""consumable_quantity_2"",""consumable_totalhrs_2"",""annual_cleaning"",""type_of_inspection"",""repair_defective"",""project_start_time"",""project_end_time""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Track Mat Inspection"""
 Table,default,groupByCols,object,[]

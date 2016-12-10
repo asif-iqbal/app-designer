@@ -1339,41 +1339,23 @@
         "type": "time",
         "name": "project_start_time",
         "display": {
-          "text": "Depart/Start"
+          "text": "Start Time"
         },
         "templatePath": "time_input_type.handlebars",
         "_row_num": 3
       },
       {
         "type": "time",
-        "name": "project_arrive_time",
+        "name": "project_end_time",
         "display": {
-          "text": "Arrive at Site"
+          "text": "End Time"
         },
         "templatePath": "time_input_type.handlebars",
         "_row_num": 4
       },
       {
-        "type": "time",
-        "name": "project_depart_time",
-        "display": {
-          "text": "Depart Site"
-        },
-        "templatePath": "time_input_type.handlebars",
-        "_row_num": 5
-      },
-      {
-        "type": "time",
-        "name": "project_end_time",
-        "display": {
-          "text": "Project End"
-        },
-        "templatePath": "time_input_type.handlebars",
-        "_row_num": 6
-      },
-      {
         "clause": "end screen",
-        "_row_num": 7
+        "_row_num": 5
       }
     ],
     "notes_section": [
@@ -3716,32 +3698,10 @@
         "elementType": "time",
         "elementKey": "project_start_time"
       },
-      "project_arrive_time": {
-        "_defn": [
-          {
-            "_row_num": 4,
-            "section_name": "times_section"
-          }
-        ],
-        "type": "object",
-        "elementType": "time",
-        "elementKey": "project_arrive_time"
-      },
-      "project_depart_time": {
-        "_defn": [
-          {
-            "_row_num": 5,
-            "section_name": "times_section"
-          }
-        ],
-        "type": "object",
-        "elementType": "time",
-        "elementKey": "project_depart_time"
-      },
       "project_end_time": {
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 4,
             "section_name": "times_section"
           }
         ],
@@ -5741,7 +5701,7 @@
             "type": "time",
             "name": "project_start_time",
             "display": {
-              "text": "Depart/Start"
+              "text": "Start Time"
             },
             "templatePath": "time_input_type.handlebars",
             "_row_num": 3,
@@ -5753,9 +5713,9 @@
           },
           {
             "type": "time",
-            "name": "project_arrive_time",
+            "name": "project_end_time",
             "display": {
-              "text": "Arrive at Site"
+              "text": "End Time"
             },
             "templatePath": "time_input_type.handlebars",
             "_row_num": 4,
@@ -5766,40 +5726,12 @@
             "promptIdx": 1
           },
           {
-            "type": "time",
-            "name": "project_depart_time",
-            "display": {
-              "text": "Depart Site"
-            },
-            "templatePath": "time_input_type.handlebars",
-            "_row_num": 5,
-            "__rowNum__": 4,
-            "_token_type": "prompt",
-            "_type": "time",
-            "_branch_label_enclosing_screen": "times_section/_screen2",
-            "promptIdx": 2
-          },
-          {
-            "type": "time",
-            "name": "project_end_time",
-            "display": {
-              "text": "Project End"
-            },
-            "templatePath": "time_input_type.handlebars",
-            "_row_num": 6,
-            "__rowNum__": 5,
-            "_token_type": "prompt",
-            "_type": "time",
-            "_branch_label_enclosing_screen": "times_section/_screen2",
-            "promptIdx": 3
-          },
-          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 8,
-            "_branch_label_enclosing_screen": "times_section/_screen8",
-            "promptIdx": 4
+            "_row_num": 6,
+            "_branch_label_enclosing_screen": "times_section/_screen6",
+            "promptIdx": 2
           }
         ],
         "validation_tag_map": {
@@ -5816,23 +5748,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 7,
-              "__rowNum__": 6,
+              "_row_num": 5,
+              "__rowNum__": 4,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 8,
+            "_row_num": 6,
             "operationIdx": 1
           },
           {
-            "_row_num": 8,
+            "_row_num": 6,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -5841,14 +5773,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 8,
+            "_row_num": 6,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen8": 2
+          "_screen6": 2
         }
       },
       "notes_section": {
