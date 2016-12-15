@@ -98,7 +98,10 @@
         <personnel_totalhrs_2/>
         <primary_contents/>
         <project_comment/>
+        <project_correl_id/>
         <project_daily_report/>
+        <project_done/>
+        <project_manager/>
         <project_number/>
         <sample_date/>
         <secondary_containment_damaged/>
@@ -143,7 +146,6 @@
         <vent_pipes_obstruct_com/>
         <vent_pipes_obstruct_fu/>
         <weather/>
-        <z1_next_photo_index/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -232,7 +234,10 @@
     <bind nodeset="/data/personnel_totalhrs_2" type="string"/>
     <bind nodeset="/data/primary_contents" type="string"/>
     <bind nodeset="/data/project_comment" type="string"/>
+    <bind nodeset="/data/project_correl_id" type="string"/>
     <bind nodeset="/data/project_daily_report" type="string"/>
+    <bind nodeset="/data/project_done" type="string"/>
+    <bind nodeset="/data/project_manager" type="string"/>
     <bind nodeset="/data/project_number" type="string"/>
     <bind nodeset="/data/sample_date" type="string"/>
     <bind nodeset="/data/secondary_containment_damaged" type="string"/>
@@ -277,7 +282,6 @@
     <bind nodeset="/data/vent_pipes_obstruct_com" type="string"/>
     <bind nodeset="/data/vent_pipes_obstruct_fu" type="string"/>
     <bind nodeset="/data/weather" type="string"/>
-    <bind nodeset="/data/z1_next_photo_index" type="int"/>
   </model> 
  </h:head> 
  <h:body> 

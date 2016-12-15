@@ -68,9 +68,12 @@
         <personnel_totalhrs_2/>
         <project_arrive_time/>
         <project_comment/>
+        <project_correl_id/>
         <project_daily_report/>
         <project_depart_time/>
+        <project_done/>
         <project_end_time/>
+        <project_manager/>
         <project_number/>
         <project_start_time/>
         <sample_date/>
@@ -148,9 +151,12 @@
     <bind nodeset="/data/personnel_totalhrs_2" type="string"/>
     <bind nodeset="/data/project_arrive_time" type="time"/>
     <bind nodeset="/data/project_comment" type="string"/>
+    <bind nodeset="/data/project_correl_id" type="string"/>
     <bind nodeset="/data/project_daily_report" type="string"/>
     <bind nodeset="/data/project_depart_time" type="time"/>
+    <bind nodeset="/data/project_done" type="string"/>
     <bind nodeset="/data/project_end_time" type="time"/>
+    <bind nodeset="/data/project_manager" type="string"/>
     <bind nodeset="/data/project_number" type="string"/>
     <bind nodeset="/data/project_start_time" type="time"/>
     <bind nodeset="/data/sample_date" type="string"/>
