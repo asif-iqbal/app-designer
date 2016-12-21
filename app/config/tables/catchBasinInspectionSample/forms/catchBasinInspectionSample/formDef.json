@@ -17,7 +17,6 @@
         "display": {
           "text": "Catch Basin Inspection"
         },
-        "hideInContents": "true",
         "_row_num": 2
       },
       {
@@ -84,20 +83,12 @@
         "_row_num": 9
       },
       {
-        "type": "string",
-        "name": "z_sample_date",
-        "hideInContents": "true",
-        "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 7
-      },
-      {
         "clause": "end screen",
-        "hideInContents": "true",
-        "_row_num": 8
+        "_row_num": 10
       },
       {
         "branch_label": "_contents",
-        "_row_num": 9
+        "_row_num": 11
       },
       {
         "clause": "begin screen",
@@ -105,7 +96,7 @@
           "text": "Inspection Home Page"
         },
         "hideInContents": "true",
-        "_row_num": 10
+        "_row_num": 12
       },
       {
         "type": "note",
@@ -114,78 +105,78 @@
         },
         "hideInContents": "true",
         "templatePath": "note_for_id.handlebars",
-        "_row_num": 11
+        "_row_num": 13
       },
       {
         "type": "user_branch",
         "values_list": "branches",
         "hideInContents": "true",
-        "_row_num": 12
+        "_row_num": 14
       },
       {
         "clause": "end screen",
         "hideInContents": "true",
-        "_row_num": 13
-      },
-      {
-        "clause": "goto _contents",
-        "_row_num": 14
-      },
-      {
-        "branch_label": "inspection",
         "_row_num": 15
       },
       {
-        "clause": "do section inspection_section",
+        "clause": "goto _contents",
         "_row_num": 16
       },
       {
-        "clause": "goto _contents",
+        "branch_label": "inspection",
         "_row_num": 17
       },
       {
-        "branch_label": "notes",
+        "clause": "do section inspection_section",
         "_row_num": 18
       },
       {
-        "clause": "do section notes_section",
+        "clause": "goto _contents",
         "_row_num": 19
       },
       {
-        "clause": "goto _contents",
+        "branch_label": "notes",
         "_row_num": 20
       },
       {
-        "branch_label": "gps",
+        "clause": "do section notes_section",
         "_row_num": 21
       },
       {
-        "clause": "do section gps_section",
+        "clause": "goto _contents",
         "_row_num": 22
       },
       {
-        "clause": "goto _contents",
+        "branch_label": "gps",
         "_row_num": 23
       },
       {
-        "branch_label": "image",
+        "clause": "do section gps_section",
         "_row_num": 24
       },
       {
-        "clause": "do section image_section",
+        "clause": "goto _contents",
         "_row_num": 25
       },
       {
-        "clause": "goto _contents",
+        "branch_label": "image",
         "_row_num": 26
       },
       {
-        "branch_label": "exitpath",
+        "clause": "do section image_section",
         "_row_num": 27
       },
       {
-        "clause": "exit section",
+        "clause": "goto _contents",
         "_row_num": 28
+      },
+      {
+        "branch_label": "exitpath",
+        "_row_num": 29
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 30
       }
     ],
     "inspection_section": [
@@ -1725,19 +1716,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 7,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 29,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "z_sample_date"
-      },
-      "pid_reading_option": {
-        "_defn": [
-          {
             "_row_num": 9,
             "section_name": "survey"
           },
@@ -2059,50 +2037,38 @@
             "promptIdx": 6
           },
           {
-            "type": "string",
-            "name": "z_sample_date",
-            "hideInContents": "true",
-            "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 7,
-            "__rowNum__": 6,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 4
-          },
-          {
             "type": "note",
             "display": {
               "text": "Catch Basin ID: {{data.inspection_id}}"
             },
             "hideInContents": "true",
             "templatePath": "note_for_id.handlebars",
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen10",
-            "promptIdx": 5
+            "_branch_label_enclosing_screen": "survey/_screen12",
+            "promptIdx": 7
           },
           {
             "type": "user_branch",
             "values_list": "branches",
             "hideInContents": "true",
-            "_row_num": 12,
-            "__rowNum__": 11,
+            "_row_num": 14,
+            "__rowNum__": 13,
             "_token_type": "prompt",
             "_type": "user_branch",
-            "_branch_label_enclosing_screen": "survey/_screen10",
-            "promptIdx": 6
+            "_branch_label_enclosing_screen": "survey/_screen12",
+            "promptIdx": 8
           },
           {
             "clause": "do section inspection_section",
-            "_row_num": 16,
-            "__rowNum__": 15,
+            "_row_num": 18,
+            "__rowNum__": 17,
             "_token_type": "prompt",
             "_do_section_name": "inspection_section",
             "_type": "_section",
-            "promptIdx": 7,
+            "promptIdx": 9,
             "display": {
               "title": "Inspection"
             },
@@ -2110,12 +2076,12 @@
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 21,
+            "__rowNum__": 20,
             "_token_type": "prompt",
             "_do_section_name": "notes_section",
             "_type": "_section",
-            "promptIdx": 8,
+            "promptIdx": 10,
             "display": {
               "title": "Notes"
             },
@@ -2123,12 +2089,12 @@
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
-            "promptIdx": 9,
+            "promptIdx": 11,
             "display": {
               "title": "GPS"
             },
@@ -2136,12 +2102,12 @@
           },
           {
             "clause": "do section image_section",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 27,
+            "__rowNum__": 26,
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
-            "promptIdx": 10,
+            "promptIdx": 12,
             "display": {
               "title": "Photo"
             },
@@ -2159,18 +2125,16 @@
             "display": {
               "text": "Catch Basin Inspection"
             },
-            "hideInContents": "true",
             "_row_num": 2,
             "__rowNum__": 1,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "hideInContents": "true",
-              "_row_num": 8,
-              "__rowNum__": 7,
+              "_row_num": 10,
+              "__rowNum__": 9,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -2179,109 +2143,109 @@
               "text": "Inspection Home Page"
             },
             "hideInContents": "true",
-            "_row_num": 10,
-            "__rowNum__": 9,
+            "_row_num": 12,
+            "__rowNum__": 11,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
               "hideInContents": "true",
-              "_row_num": 13,
-              "__rowNum__": 12,
+              "_row_num": 15,
+              "__rowNum__": 14,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "clause": "goto _contents",
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 16,
+            "__rowNum__": 15,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 2
           },
           {
             "clause": "do section inspection_section",
-            "_row_num": 16,
-            "__rowNum__": 15,
+            "_row_num": 18,
+            "__rowNum__": 17,
             "_token_type": "do_section",
             "_do_section_name": "inspection_section",
             "operationIdx": 3
           },
           {
             "clause": "goto _contents",
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 4
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 21,
+            "__rowNum__": 20,
             "_token_type": "do_section",
             "_do_section_name": "notes_section",
             "operationIdx": 5
           },
           {
             "clause": "goto _contents",
-            "_row_num": 20,
-            "__rowNum__": 19,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 6
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "do_section",
             "_do_section_name": "gps_section",
             "operationIdx": 7
           },
           {
             "clause": "goto _contents",
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 8
           },
           {
             "clause": "do section image_section",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 27,
+            "__rowNum__": 26,
             "_token_type": "do_section",
             "_do_section_name": "image_section",
             "operationIdx": 9
           },
           {
             "clause": "goto _contents",
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 10
           },
           {
             "clause": "exit section",
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "exit_section",
             "operationIdx": 11
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 29,
+            "_row_num": 31,
             "operationIdx": 12
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 1,
-          "_screen10": 1,
+          "_screen12": 1,
           "inspection": 3,
           "notes": 5,
           "gps": 7,
