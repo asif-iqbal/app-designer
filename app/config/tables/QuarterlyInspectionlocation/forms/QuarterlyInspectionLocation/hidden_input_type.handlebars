@@ -1,0 +1,17 @@
+<form role="form">
+<div class="form-group hiddenGroup">
+    <!--<label for="slider-{{promptId}}">{{> labelHint}}</label>-->
+    <div class="input-container">{{! used to prevent swiping on sliders}}
+    <input id="slider-{{promptId}}"
+        class="form-control"
+        placeholder="{{{localize display.text}}}"
+        name="{{name}}"
+        value="{{value}}"
+        type="hidden"
+        {{#eachProperty inputAttributes}}
+            {{property}}="{{value}}"
+        {{/eachProperty}}
+        />
+    </div>
+</div>
+</form>

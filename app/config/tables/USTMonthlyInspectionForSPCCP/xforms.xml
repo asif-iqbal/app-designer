@@ -24,9 +24,6 @@
           <savepointCreator/>
           <savepointTimestamp/>
         </orx:meta>
-        <automatic_overfill_protection/>
-        <automatic_overfill_protection_com/>
-        <automatic_overfill_protection_fu/>
         <capacity/>
         <construction/>
         <consumable_name_0/>
@@ -38,12 +35,6 @@
         <consumable_totalhrs_0/>
         <consumable_totalhrs_1/>
         <consumable_totalhrs_2/>
-        <dispenser_fuel_staining/>
-        <dispenser_fuel_staining_com/>
-        <dispenser_fuel_staining_fu/>
-        <dispenser_hardware_leaking/>
-        <dispenser_hardware_leaking_com/>
-        <dispenser_hardware_leaking_fu/>
         <equipment_name_0/>
         <equipment_name_1/>
         <equipment_name_2/>
@@ -53,12 +44,6 @@
         <equipment_totalhrs_0/>
         <equipment_totalhrs_1/>
         <equipment_totalhrs_2/>
-        <equipment_vegetation/>
-        <equipment_vegetation_com/>
-        <equipment_vegetation_fu/>
-        <evidence_spillage_overfilling/>
-        <evidence_spillage_overfilling_com/>
-        <evidence_spillage_overfilling_fu/>
         <geo_info/>
         <inspection_id/>
         <inspector_name/>
@@ -69,9 +54,6 @@
         <loc_state/>
         <loc_streetAddress/>
         <loc_zip/>
-        <manholecovers_subsurface_equipment/>
-        <manholecovers_subsurface_equipment_com/>
-        <manholecovers_subsurface_equipment_fu/>
         <personnel_endtime_0/>
         <personnel_endtime_1/>
         <personnel_endtime_2/>
@@ -99,25 +81,7 @@
         <sign_2/>
         <sign_2_person_name/>
         <sign_person_name/>
-        <spill_buckets_damaged/>
-        <spill_buckets_damaged_com/>
-        <spill_buckets_damaged_fu/>
-        <spill_material_replacement/>
-        <spill_material_replacement_com/>
-        <spill_material_replacement_fu/>
-        <structural_damage/>
-        <structural_damage_com/>
-        <structural_damage_fu/>
-        <tank_damaged_labeled/>
-        <tank_damaged_labeled_com/>
-        <tank_damaged_labeled_fu/>
         <tank_id/>
-        <tank_vent_obstructed/>
-        <tank_vent_obstructed_com/>
-        <tank_vent_obstructed_fu/>
-        <threat_procedures_not_posted/>
-        <threat_procedures_not_posted_com/>
-        <threat_procedures_not_posted_fu/>
         <vehicle_name_0/>
         <vehicle_name_1/>
         <vehicle_name_2/>
@@ -142,9 +106,6 @@
     <bind nodeset="/data/meta/savepointType" type="string"/>
     <bind nodeset="/data/meta/savepointCreator" type="string"/>
     <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
-    <bind nodeset="/data/automatic_overfill_protection" type="string"/>
-    <bind nodeset="/data/automatic_overfill_protection_com" type="string"/>
-    <bind nodeset="/data/automatic_overfill_protection_fu" type="string"/>
     <bind nodeset="/data/capacity" type="string"/>
     <bind nodeset="/data/construction" type="string"/>
     <bind nodeset="/data/consumable_name_0" type="string"/>
@@ -156,12 +117,6 @@
     <bind nodeset="/data/consumable_totalhrs_0" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_1" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_2" type="string"/>
-    <bind nodeset="/data/dispenser_fuel_staining" type="string"/>
-    <bind nodeset="/data/dispenser_fuel_staining_com" type="string"/>
-    <bind nodeset="/data/dispenser_fuel_staining_fu" type="string"/>
-    <bind nodeset="/data/dispenser_hardware_leaking" type="string"/>
-    <bind nodeset="/data/dispenser_hardware_leaking_com" type="string"/>
-    <bind nodeset="/data/dispenser_hardware_leaking_fu" type="string"/>
     <bind nodeset="/data/equipment_name_0" type="string"/>
     <bind nodeset="/data/equipment_name_1" type="string"/>
     <bind nodeset="/data/equipment_name_2" type="string"/>
@@ -171,12 +126,6 @@
     <bind nodeset="/data/equipment_totalhrs_0" type="string"/>
     <bind nodeset="/data/equipment_totalhrs_1" type="string"/>
     <bind nodeset="/data/equipment_totalhrs_2" type="string"/>
-    <bind nodeset="/data/equipment_vegetation" type="string"/>
-    <bind nodeset="/data/equipment_vegetation_com" type="string"/>
-    <bind nodeset="/data/equipment_vegetation_fu" type="string"/>
-    <bind nodeset="/data/evidence_spillage_overfilling" type="string"/>
-    <bind nodeset="/data/evidence_spillage_overfilling_com" type="string"/>
-    <bind nodeset="/data/evidence_spillage_overfilling_fu" type="string"/>
     <bind nodeset="/data/geo_info" type="geopoint"/>
     <bind nodeset="/data/inspection_id" type="string"/>
     <bind nodeset="/data/inspector_name" type="string"/>
@@ -187,9 +136,6 @@
     <bind nodeset="/data/loc_state" type="string"/>
     <bind nodeset="/data/loc_streetAddress" type="string"/>
     <bind nodeset="/data/loc_zip" type="string"/>
-    <bind nodeset="/data/manholecovers_subsurface_equipment" type="string"/>
-    <bind nodeset="/data/manholecovers_subsurface_equipment_com" type="string"/>
-    <bind nodeset="/data/manholecovers_subsurface_equipment_fu" type="string"/>
     <bind nodeset="/data/personnel_endtime_0" type="string"/>
     <bind nodeset="/data/personnel_endtime_1" type="string"/>
     <bind nodeset="/data/personnel_endtime_2" type="string"/>
@@ -217,25 +163,7 @@
     <bind nodeset="/data/sign_2" type="binary"/>
     <bind nodeset="/data/sign_2_person_name" type="string"/>
     <bind nodeset="/data/sign_person_name" type="string"/>
-    <bind nodeset="/data/spill_buckets_damaged" type="string"/>
-    <bind nodeset="/data/spill_buckets_damaged_com" type="string"/>
-    <bind nodeset="/data/spill_buckets_damaged_fu" type="string"/>
-    <bind nodeset="/data/spill_material_replacement" type="string"/>
-    <bind nodeset="/data/spill_material_replacement_com" type="string"/>
-    <bind nodeset="/data/spill_material_replacement_fu" type="string"/>
-    <bind nodeset="/data/structural_damage" type="string"/>
-    <bind nodeset="/data/structural_damage_com" type="string"/>
-    <bind nodeset="/data/structural_damage_fu" type="string"/>
-    <bind nodeset="/data/tank_damaged_labeled" type="string"/>
-    <bind nodeset="/data/tank_damaged_labeled_com" type="string"/>
-    <bind nodeset="/data/tank_damaged_labeled_fu" type="string"/>
     <bind nodeset="/data/tank_id" type="string"/>
-    <bind nodeset="/data/tank_vent_obstructed" type="string"/>
-    <bind nodeset="/data/tank_vent_obstructed_com" type="string"/>
-    <bind nodeset="/data/tank_vent_obstructed_fu" type="string"/>
-    <bind nodeset="/data/threat_procedures_not_posted" type="string"/>
-    <bind nodeset="/data/threat_procedures_not_posted_com" type="string"/>
-    <bind nodeset="/data/threat_procedures_not_posted_fu" type="string"/>
     <bind nodeset="/data/vehicle_name_0" type="string"/>
     <bind nodeset="/data/vehicle_name_1" type="string"/>
     <bind nodeset="/data/vehicle_name_2" type="string"/>

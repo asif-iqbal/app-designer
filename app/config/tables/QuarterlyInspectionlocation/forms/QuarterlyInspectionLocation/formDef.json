@@ -1,0 +1,2083 @@
+{
+  "xlsx": {
+    "initial": [
+      {
+        "clause": "if // start",
+        "condition": "(opendatakit.getCurrentInstanceId() != null)",
+        "_row_num": 3
+      },
+      {
+        "clause": "do section survey",
+        "_row_num": 4
+      },
+      {
+        "type": "finalize",
+        "display": {
+          "text": "Save form"
+        },
+        "_row_num": 5
+      },
+      {
+        "clause": "else // start",
+        "_row_num": 6
+      },
+      {
+        "type": "instances",
+        "display": {
+          "text": "Saved instances"
+        },
+        "_row_num": 7
+      },
+      {
+        "clause": "end if // start",
+        "_row_num": 8
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "hideInContents": "true",
+        "_row_num": 2
+      },
+      {
+        "type": "assign",
+        "name": "loc_name",
+        "calculation": "opendatakit.getLocationInfo().name",
+        "_row_num": 3
+      },
+      {
+        "type": "string",
+        "name": "loc_name",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 4
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "sublocations_csv",
+        "display": {
+          "text": "Area Location"
+        },
+        "name": "area_location",
+        "choice_filter": "choice_item.location === data('loc_name')",
+        "templatePath": "custom_select_dropdown.handlebars",
+        "_row_num": 5
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Have any changes occurred to the exterior of the facility that could affect the current stormwater drainage patterns? If yes, describe them."
+        },
+        "name": "changes_occured_stormwater",
+        "_row_num": 6
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "changes_occured_stormwater_prob",
+        "_row_num": 7
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "changes_occured_stormwater_actions",
+        "_row_num": 8
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Have there been any non-incidental spills since the last inspection? If yes, attach information regarding the spill(s) to this form"
+        },
+        "name": "non_incidental_spills",
+        "_row_num": 9
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "non_incidental_spills_prob",
+        "_row_num": 10
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "non_incidental_spills_actions",
+        "_row_num": 11
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are there any operations or storage of materials outside that could impact stormwater quality? If yes, describe them."
+        },
+        "name": "operations_storage_material",
+        "_row_num": 12
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "operations_storage_material_prob",
+        "_row_num": 13
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "operations_storage_material_actions",
+        "_row_num": 14
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are good housekeeping procedures, as discussed in the Stormwater Pollution Prevention Plan, being implemented and followed"
+        },
+        "name": "good_housekeeping_procedures",
+        "_row_num": 15
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "good_housekeeping_procedures_prob",
+        "_row_num": 16
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "good_housekeeping_procedures_actions",
+        "_row_num": 17
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Is the locomotive storage area free of leaking fluids or spilled fuel"
+        },
+        "name": "locomotive_storage",
+        "_row_num": 18
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "locomotive_storage_prob",
+        "_row_num": 19
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "locomotive_storage_actions",
+        "_row_num": 20
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Is traction sand build-up interfering with the operation of the oil water separator system and/or the stormwater conveyance system (if present)"
+        },
+        "name": "traction_sand_intrerfering",
+        "_row_num": 21
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "traction_sand_intrerfering_prob",
+        "_row_num": 22
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "traction_sand_intrerfering_actions",
+        "_row_num": 23
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are catch basins clean and free of debris"
+        },
+        "name": "catch_basins",
+        "_row_num": 24
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "catch_basins_prob",
+        "_row_num": 25
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "catch_basins_actions",
+        "_row_num": 26
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Is there any evidence of dry weather discharges to the catch basins"
+        },
+        "name": "evidence_dry_water",
+        "_row_num": 27
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "evidence_dry_water_prob",
+        "_row_num": 28
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "evidence_dry_water_actions",
+        "_row_num": 29
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are drums/containers enclosed/covered, labeled, and closed"
+        },
+        "name": "drums_containers_labelled",
+        "_row_num": 30
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "drums_containers_labelled_prob",
+        "_row_num": 31
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "drums_containers_labelled_actions",
+        "_row_num": 32
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are spill response materials properly stored and easily accessible"
+        },
+        "name": "spill_response_material",
+        "_row_num": 33
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "spill_response_material_prob",
+        "_row_num": 34
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "spill_response_material_actions",
+        "_row_num": 35
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are bulk storage tanks and material delivery areas free of drips and leaks"
+        },
+        "name": "bulk_storage_tanks",
+        "_row_num": 36
+      },
+      {
+        "type": "string",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "bulk_storage_tanks_prob",
+        "_row_num": 37
+      },
+      {
+        "type": "string",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "bulk_storage_tanks_actions",
+        "_row_num": 38
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno",
+        "display": {
+          "text": "Are dumpster lids closed and drain plugs intact"
+        },
+        "name": "dumpster_lids",
+        "_row_num": 39
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "List of problems"
+        },
+        "name": "dumpster_lids_prob",
+        "_row_num": 40
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Corrective Actions"
+        },
+        "name": "dumpster_lids_actions",
+        "_row_num": 41
+      },
+      {
+        "type": "textarea",
+        "display": {
+          "text": "Comments"
+        },
+        "name": "comments",
+        "inputAttributes": {
+          "rows": 4,
+          "maxlength": 250
+        },
+        "_row_num": 42
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 43
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "yesno",
+        "data_value": "Yes",
+        "display": {
+          "text": "Yes"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "No",
+        "display": {
+          "text": "No"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "yesno",
+        "data_value": "NA",
+        "display": {
+          "text": "NA"
+        },
+        "_row_num": 4
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "QuarterlyInspectionLocation",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20160901001,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "table_id",
+        "value": "QuarterlyInspectionLocation",
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Quarterly Inspection Location"
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "instance_name",
+        "value": "area_location",
+        "_row_num": 6
+      }
+    ],
+    "model": [
+      {
+        "name": "area_location",
+        "type": "select_one_dropdown",
+        "_row_num": 2
+      },
+      {
+        "name": "loc_name",
+        "type": "string",
+        "_row_num": 3
+      },
+      {
+        "name": "inspection_id",
+        "type": "string",
+        "_row_num": 4
+      },
+      {
+        "name": "changes_occured_stormwater",
+        "type": "select_one",
+        "_row_num": 5
+      },
+      {
+        "name": "changes_occured_stormwater_prob",
+        "type": "textarea",
+        "_row_num": 6
+      },
+      {
+        "name": "changes_occured_stormwater_actions",
+        "type": "textarea",
+        "_row_num": 7
+      },
+      {
+        "name": "non_incidental_spills",
+        "type": "select_one",
+        "_row_num": 8
+      },
+      {
+        "name": "non_incidental_spills_prob",
+        "type": "textarea",
+        "_row_num": 9
+      },
+      {
+        "name": "non_incidental_spills_actions",
+        "type": "textarea",
+        "_row_num": 10
+      },
+      {
+        "name": "operations_storage_material",
+        "type": "select_one",
+        "_row_num": 11
+      },
+      {
+        "name": "operations_storage_material_prob",
+        "type": "textarea",
+        "_row_num": 12
+      },
+      {
+        "name": "operations_storage_material_actions",
+        "type": "textarea",
+        "_row_num": 13
+      },
+      {
+        "name": "good_housekeeping_procedures",
+        "type": "select_one",
+        "_row_num": 14
+      },
+      {
+        "name": "good_housekeeping_procedures_prob",
+        "type": "textarea",
+        "_row_num": 15
+      },
+      {
+        "name": "good_housekeeping_procedures_actions",
+        "type": "textarea",
+        "_row_num": 16
+      },
+      {
+        "name": "locomotive_storage",
+        "type": "select_one",
+        "_row_num": 17
+      },
+      {
+        "name": "locomotive_storage_prob",
+        "type": "textarea",
+        "_row_num": 18
+      },
+      {
+        "name": "locomotive_storage_actions",
+        "type": "textarea",
+        "_row_num": 19
+      },
+      {
+        "name": "traction_sand_intrerfering",
+        "type": "select_one",
+        "_row_num": 20
+      },
+      {
+        "name": "traction_sand_intrerfering_prob",
+        "type": "textarea",
+        "_row_num": 21
+      },
+      {
+        "name": "traction_sand_intrerfering_actions",
+        "type": "textarea",
+        "_row_num": 22
+      },
+      {
+        "name": "catch_basins",
+        "type": "select_one",
+        "_row_num": 23
+      },
+      {
+        "name": "catch_basins_prob",
+        "type": "textarea",
+        "_row_num": 24
+      },
+      {
+        "name": "catch_basins_actions",
+        "type": "textarea",
+        "_row_num": 25
+      },
+      {
+        "name": "evidence_dry_water",
+        "type": "select_one",
+        "_row_num": 26
+      },
+      {
+        "name": "evidence_dry_water_prob",
+        "type": "textarea",
+        "_row_num": 27
+      },
+      {
+        "name": "evidence_dry_water_actions",
+        "type": "textarea",
+        "_row_num": 28
+      },
+      {
+        "name": "drums_containers_labelled",
+        "type": "select_one",
+        "_row_num": 29
+      },
+      {
+        "name": "drums_containers_labelled_prob",
+        "type": "textarea",
+        "_row_num": 30
+      },
+      {
+        "name": "drums_containers_labelled_actions",
+        "type": "textarea",
+        "_row_num": 31
+      },
+      {
+        "name": "spill_response_material",
+        "type": "select_one",
+        "_row_num": 32
+      },
+      {
+        "name": "spill_response_material_prob",
+        "type": "textarea",
+        "_row_num": 33
+      },
+      {
+        "name": "spill_response_material_actions",
+        "type": "textarea",
+        "_row_num": 34
+      },
+      {
+        "name": "bulk_storage_tanks",
+        "type": "select_one",
+        "_row_num": 35
+      },
+      {
+        "name": "bulk_storage_tanks_prob",
+        "type": "string",
+        "_row_num": 36
+      },
+      {
+        "name": "bulk_storage_tanks_actions",
+        "type": "string",
+        "_row_num": 37
+      },
+      {
+        "name": "dumpster_lids",
+        "type": "select_one",
+        "_row_num": 38
+      },
+      {
+        "name": "dumpster_lids_prob",
+        "type": "textarea",
+        "_row_num": 39
+      },
+      {
+        "name": "dumpster_lids_actions",
+        "type": "textarea",
+        "_row_num": 40
+      },
+      {
+        "name": "comments",
+        "type": "textarea",
+        "_row_num": 41
+      }
+    ],
+    "queries": [
+      {
+        "query_name": "sublocations_csv",
+        "query_type": "csv",
+        "uri": "\"sublocations.csv\"",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "_row_num": 2
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "QuarterlyInspectionLocation",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20160901001,
+        "_row_num": 3
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "QuarterlyInspectionLocation",
+        "_row_num": 4
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Quarterly Inspection Location"
+        },
+        "_row_num": 5
+      },
+      "instance_name": {
+        "setting_name": "instance_name",
+        "value": "area_location",
+        "_row_num": 6
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 5,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 5,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Quarterly Inspection Location"
+        },
+        "_row_num": 5
+      }
+    },
+    "choices": {
+      "yesno": [
+        {
+          "choice_list_name": "yesno",
+          "data_value": "Yes",
+          "display": {
+            "text": "Yes"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "yesno",
+          "data_value": "No",
+          "display": {
+            "text": "No"
+          },
+          "_row_num": 3
+        },
+        {
+          "choice_list_name": "yesno",
+          "data_value": "NA",
+          "display": {
+            "text": "NA"
+          },
+          "_row_num": 4
+        }
+      ]
+    },
+    "queries": {
+      "sublocations_csv": {
+        "query_name": "sublocations_csv",
+        "query_type": "csv",
+        "uri": "\"sublocations.csv\"",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "_row_num": 2
+      }
+    },
+    "calculates": {},
+    "model": {
+      "area_location": {
+        "type": "string",
+        "valuesList": "sublocations_csv",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 2,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "area_location"
+      },
+      "loc_name": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 3,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "loc_name"
+      },
+      "inspection_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "inspection_id"
+      },
+      "changes_occured_stormwater": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "changes_occured_stormwater"
+      },
+      "changes_occured_stormwater_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 6,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "changes_occured_stormwater_prob"
+      },
+      "changes_occured_stormwater_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 7,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "changes_occured_stormwater_actions"
+      },
+      "non_incidental_spills": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 8,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "non_incidental_spills"
+      },
+      "non_incidental_spills_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 9,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "non_incidental_spills_prob"
+      },
+      "non_incidental_spills_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 11,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 10,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "non_incidental_spills_actions"
+      },
+      "operations_storage_material": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 11,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "operations_storage_material"
+      },
+      "operations_storage_material_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 12,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "operations_storage_material_prob"
+      },
+      "operations_storage_material_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 13,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "operations_storage_material_actions"
+      },
+      "good_housekeeping_procedures": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 14,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "good_housekeeping_procedures"
+      },
+      "good_housekeeping_procedures_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 16,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 15,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "good_housekeeping_procedures_prob"
+      },
+      "good_housekeeping_procedures_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 16,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "good_housekeeping_procedures_actions"
+      },
+      "locomotive_storage": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 18,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 17,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "locomotive_storage"
+      },
+      "locomotive_storage_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 19,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 18,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "locomotive_storage_prob"
+      },
+      "locomotive_storage_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 19,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "locomotive_storage_actions"
+      },
+      "traction_sand_intrerfering": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 20,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "traction_sand_intrerfering"
+      },
+      "traction_sand_intrerfering_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 22,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 21,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "traction_sand_intrerfering_prob"
+      },
+      "traction_sand_intrerfering_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 22,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "traction_sand_intrerfering_actions"
+      },
+      "catch_basins": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 23,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "catch_basins"
+      },
+      "catch_basins_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 25,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 24,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "catch_basins_prob"
+      },
+      "catch_basins_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 26,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 25,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "catch_basins_actions"
+      },
+      "evidence_dry_water": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 27,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 26,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "evidence_dry_water"
+      },
+      "evidence_dry_water_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 28,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 27,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "evidence_dry_water_prob"
+      },
+      "evidence_dry_water_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 29,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 28,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "evidence_dry_water_actions"
+      },
+      "drums_containers_labelled": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 30,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 29,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "drums_containers_labelled"
+      },
+      "drums_containers_labelled_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 31,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 30,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "drums_containers_labelled_prob"
+      },
+      "drums_containers_labelled_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 32,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 31,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "drums_containers_labelled_actions"
+      },
+      "spill_response_material": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 33,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 32,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "spill_response_material"
+      },
+      "spill_response_material_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 34,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 33,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "spill_response_material_prob"
+      },
+      "spill_response_material_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 35,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 34,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "spill_response_material_actions"
+      },
+      "bulk_storage_tanks": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 36,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 35,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "bulk_storage_tanks"
+      },
+      "bulk_storage_tanks_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 37,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 36,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "bulk_storage_tanks_prob"
+      },
+      "bulk_storage_tanks_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 38,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 37,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "bulk_storage_tanks_actions"
+      },
+      "dumpster_lids": {
+        "type": "string",
+        "valuesList": "yesno",
+        "_defn": [
+          {
+            "_row_num": 39,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 38,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "dumpster_lids"
+      },
+      "dumpster_lids_prob": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 40,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 39,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "dumpster_lids_prob"
+      },
+      "dumpster_lids_actions": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 41,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 40,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "dumpster_lids_actions"
+      },
+      "comments": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 42,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 41,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "comments"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "clause": "do section survey",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 0,
+            "display": {
+              "title": "Quarterly Inspection Location"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "type": "finalize",
+            "display": {
+              "text": "Save form"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "finalize",
+            "_branch_label_enclosing_screen": "initial/_screen5",
+            "promptIdx": 1
+          },
+          {
+            "type": "instances",
+            "display": {
+              "text": "Saved instances"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "instances",
+            "_branch_label_enclosing_screen": "initial/_screen7",
+            "promptIdx": 2
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 9,
+            "_branch_label_enclosing_screen": "initial/_screen9",
+            "promptIdx": 3
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "if // start",
+            "condition": "(opendatakit.getCurrentInstanceId() != null)",
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "goto_label",
+            "_tag_name": "start",
+            "_branch_label": "_then3",
+            "operationIdx": 0
+          },
+          {
+            "clause": "else // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_else6",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "clause": "do section survey",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
+          },
+          {
+            "clause": "end if // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif8",
+            "_row_num": 8,
+            "operationIdx": 4
+          },
+          {
+            "_row_num": 7,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 9,
+            "operationIdx": 6
+          },
+          {
+            "_row_num": 9,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 7
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 8
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 9
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 10
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 11
+          }
+        ],
+        "branch_label_map": {
+          "_then3": 2,
+          "_screen5": 3,
+          "_else6": 5,
+          "_screen7": 5,
+          "_endif8": 6,
+          "_contents": 7,
+          "_screen9": 7,
+          "_finalize": 9
+        }
+      },
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "string",
+            "name": "loc_name",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "sublocations_csv",
+            "display": {
+              "text": "Area Location"
+            },
+            "name": "area_location",
+            "choice_filter": "choice_item.location === data('loc_name')",
+            "templatePath": "custom_select_dropdown.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Have any changes occurred to the exterior of the facility that could affect the current stormwater drainage patterns? If yes, describe them."
+            },
+            "name": "changes_occured_stormwater",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "changes_occured_stormwater_prob",
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "changes_occured_stormwater_actions",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Have there been any non-incidental spills since the last inspection? If yes, attach information regarding the spill(s) to this form"
+            },
+            "name": "non_incidental_spills",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "non_incidental_spills_prob",
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "non_incidental_spills_actions",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Are there any operations or storage of materials outside that could impact stormwater quality? If yes, describe them."
+            },
+            "name": "operations_storage_material",
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "operations_storage_material_prob",
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "operations_storage_material_actions",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Are good housekeeping procedures, as discussed in the Stormwater Pollution Prevention Plan, being implemented and followed"
+            },
+            "name": "good_housekeeping_procedures",
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 11
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "good_housekeeping_procedures_prob",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 12
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "good_housekeeping_procedures_actions",
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 13
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Is the locomotive storage area free of leaking fluids or spilled fuel"
+            },
+            "name": "locomotive_storage",
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 14
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "locomotive_storage_prob",
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 15
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "locomotive_storage_actions",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 16
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Is traction sand build-up interfering with the operation of the oil water separator system and/or the stormwater conveyance system (if present)"
+            },
+            "name": "traction_sand_intrerfering",
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 17
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "traction_sand_intrerfering_prob",
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 18
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "traction_sand_intrerfering_actions",
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 19
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Are catch basins clean and free of debris"
+            },
+            "name": "catch_basins",
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 20
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "catch_basins_prob",
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 21
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "catch_basins_actions",
+            "_row_num": 26,
+            "__rowNum__": 25,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 22
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Is there any evidence of dry weather discharges to the catch basins"
+            },
+            "name": "evidence_dry_water",
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 23
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "evidence_dry_water_prob",
+            "_row_num": 28,
+            "__rowNum__": 27,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 24
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "evidence_dry_water_actions",
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 25
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Are drums/containers enclosed/covered, labeled, and closed"
+            },
+            "name": "drums_containers_labelled",
+            "_row_num": 30,
+            "__rowNum__": 29,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 26
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "drums_containers_labelled_prob",
+            "_row_num": 31,
+            "__rowNum__": 30,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 27
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "drums_containers_labelled_actions",
+            "_row_num": 32,
+            "__rowNum__": 31,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 28
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Are spill response materials properly stored and easily accessible"
+            },
+            "name": "spill_response_material",
+            "_row_num": 33,
+            "__rowNum__": 32,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 29
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "spill_response_material_prob",
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 30
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "spill_response_material_actions",
+            "_row_num": 35,
+            "__rowNum__": 34,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 31
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Are bulk storage tanks and material delivery areas free of drips and leaks"
+            },
+            "name": "bulk_storage_tanks",
+            "_row_num": 36,
+            "__rowNum__": 35,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 32
+          },
+          {
+            "type": "string",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "bulk_storage_tanks_prob",
+            "_row_num": 37,
+            "__rowNum__": 36,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 33
+          },
+          {
+            "type": "string",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "bulk_storage_tanks_actions",
+            "_row_num": 38,
+            "__rowNum__": 37,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 34
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "display": {
+              "text": "Are dumpster lids closed and drain plugs intact"
+            },
+            "name": "dumpster_lids",
+            "_row_num": 39,
+            "__rowNum__": 38,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 35
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "List of problems"
+            },
+            "name": "dumpster_lids_prob",
+            "_row_num": 40,
+            "__rowNum__": 39,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 36
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Corrective Actions"
+            },
+            "name": "dumpster_lids_actions",
+            "_row_num": 41,
+            "__rowNum__": 40,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 37
+          },
+          {
+            "type": "textarea",
+            "display": {
+              "text": "Comments"
+            },
+            "name": "comments",
+            "inputAttributes": {
+              "rows": 4,
+              "maxlength": 250
+            },
+            "_row_num": 42,
+            "__rowNum__": 41,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 38
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 44,
+            "_branch_label_enclosing_screen": "survey/_screen44",
+            "promptIdx": 39
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "hideInContents": "true",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 43,
+              "__rowNum__": 42,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\nactivePromptIndicies.push(30);\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\nactivePromptIndicies.push(33);\nactivePromptIndicies.push(34);\nactivePromptIndicies.push(35);\nactivePromptIndicies.push(36);\nactivePromptIndicies.push(37);\nactivePromptIndicies.push(38);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 44,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 44,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(39);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 44,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen44": 2
+        }
+      }
+    }
+  }
+}

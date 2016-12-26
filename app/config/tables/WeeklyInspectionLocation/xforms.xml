@@ -34,6 +34,7 @@
         <generator_information/>
         <house_keeping/>
         <inspection_id/>
+        <loc_name/>
         <name_waste/>
       </data> 
     </instance> 
@@ -59,6 +60,7 @@
     <bind nodeset="/data/generator_information" type="string"/>
     <bind nodeset="/data/house_keeping" type="string"/>
     <bind nodeset="/data/inspection_id" type="string"/>
+    <bind nodeset="/data/loc_name" type="string"/>
     <bind nodeset="/data/name_waste" type="string"/>
   </model> 
  </h:head> 

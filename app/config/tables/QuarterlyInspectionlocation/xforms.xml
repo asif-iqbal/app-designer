@@ -1,0 +1,125 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:ev="http://www.w3.org/2001/xml-events" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa" 
+  xmlns:orx="http://openrosa.org/xforms/" 
+  xmlns:odk="http://www.opendatakit.org/xforms">
+ <h:head>
+  <h:title>QuarterlyInspectionLocation</h:title>
+  <model>
+    <instance>
+      <data id="QuarterlyInspectionLocation">
+        <orx:meta>
+          <orx:instanceID/>
+          <orx:timeEnd/>
+          <instanceName/>
+          <rowID/>
+          <rowETag/>
+          <filterType/>
+          <filterValue/>
+          <formID/>
+          <locale/>
+          <savepointType/>
+          <savepointCreator/>
+          <savepointTimestamp/>
+        </orx:meta>
+        <area_location/>
+        <bulk_storage_tanks/>
+        <bulk_storage_tanks_actions/>
+        <bulk_storage_tanks_prob/>
+        <catch_basins/>
+        <catch_basins_actions/>
+        <catch_basins_prob/>
+        <changes_occured_stormwater/>
+        <changes_occured_stormwater_actions/>
+        <changes_occured_stormwater_prob/>
+        <comments/>
+        <drums_containers_labelled/>
+        <drums_containers_labelled_actions/>
+        <drums_containers_labelled_prob/>
+        <dumpster_lids/>
+        <dumpster_lids_actions/>
+        <dumpster_lids_prob/>
+        <evidence_dry_water/>
+        <evidence_dry_water_actions/>
+        <evidence_dry_water_prob/>
+        <good_housekeeping_procedures/>
+        <good_housekeeping_procedures_actions/>
+        <good_housekeeping_procedures_prob/>
+        <inspection_id/>
+        <loc_name/>
+        <locomotive_storage/>
+        <locomotive_storage_actions/>
+        <locomotive_storage_prob/>
+        <non_incidental_spills/>
+        <non_incidental_spills_actions/>
+        <non_incidental_spills_prob/>
+        <operations_storage_material/>
+        <operations_storage_material_actions/>
+        <operations_storage_material_prob/>
+        <spill_response_material/>
+        <spill_response_material_actions/>
+        <spill_response_material_prob/>
+        <traction_sand_intrerfering/>
+        <traction_sand_intrerfering_actions/>
+        <traction_sand_intrerfering_prob/>
+      </data> 
+    </instance> 
+    <bind nodeset="/data/meta/instanceID" type="string"/>
+    <bind nodeset="/data/meta/timeEnd" type="dateTime"/>
+    <bind nodeset="/data/meta/instanceName" type="string"/>
+    <bind nodeset="/data/meta/rowID" type="string"/>
+    <bind nodeset="/data/meta/rowETag" type="string"/>
+    <bind nodeset="/data/meta/filterType" type="string"/>
+    <bind nodeset="/data/meta/filterValue" type="string"/>
+    <bind nodeset="/data/meta/formID" type="string"/>
+    <bind nodeset="/data/meta/locale" type="string"/>
+    <bind nodeset="/data/meta/savepointType" type="string"/>
+    <bind nodeset="/data/meta/savepointCreator" type="string"/>
+    <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
+    <bind nodeset="/data/area_location" type="string"/>
+    <bind nodeset="/data/bulk_storage_tanks" type="string"/>
+    <bind nodeset="/data/bulk_storage_tanks_actions" type="string"/>
+    <bind nodeset="/data/bulk_storage_tanks_prob" type="string"/>
+    <bind nodeset="/data/catch_basins" type="string"/>
+    <bind nodeset="/data/catch_basins_actions" type="string"/>
+    <bind nodeset="/data/catch_basins_prob" type="string"/>
+    <bind nodeset="/data/changes_occured_stormwater" type="string"/>
+    <bind nodeset="/data/changes_occured_stormwater_actions" type="string"/>
+    <bind nodeset="/data/changes_occured_stormwater_prob" type="string"/>
+    <bind nodeset="/data/comments" type="string"/>
+    <bind nodeset="/data/drums_containers_labelled" type="string"/>
+    <bind nodeset="/data/drums_containers_labelled_actions" type="string"/>
+    <bind nodeset="/data/drums_containers_labelled_prob" type="string"/>
+    <bind nodeset="/data/dumpster_lids" type="string"/>
+    <bind nodeset="/data/dumpster_lids_actions" type="string"/>
+    <bind nodeset="/data/dumpster_lids_prob" type="string"/>
+    <bind nodeset="/data/evidence_dry_water" type="string"/>
+    <bind nodeset="/data/evidence_dry_water_actions" type="string"/>
+    <bind nodeset="/data/evidence_dry_water_prob" type="string"/>
+    <bind nodeset="/data/good_housekeeping_procedures" type="string"/>
+    <bind nodeset="/data/good_housekeeping_procedures_actions" type="string"/>
+    <bind nodeset="/data/good_housekeeping_procedures_prob" type="string"/>
+    <bind nodeset="/data/inspection_id" type="string"/>
+    <bind nodeset="/data/loc_name" type="string"/>
+    <bind nodeset="/data/locomotive_storage" type="string"/>
+    <bind nodeset="/data/locomotive_storage_actions" type="string"/>
+    <bind nodeset="/data/locomotive_storage_prob" type="string"/>
+    <bind nodeset="/data/non_incidental_spills" type="string"/>
+    <bind nodeset="/data/non_incidental_spills_actions" type="string"/>
+    <bind nodeset="/data/non_incidental_spills_prob" type="string"/>
+    <bind nodeset="/data/operations_storage_material" type="string"/>
+    <bind nodeset="/data/operations_storage_material_actions" type="string"/>
+    <bind nodeset="/data/operations_storage_material_prob" type="string"/>
+    <bind nodeset="/data/spill_response_material" type="string"/>
+    <bind nodeset="/data/spill_response_material_actions" type="string"/>
+    <bind nodeset="/data/spill_response_material_prob" type="string"/>
+    <bind nodeset="/data/traction_sand_intrerfering" type="string"/>
+    <bind nodeset="/data/traction_sand_intrerfering_actions" type="string"/>
+    <bind nodeset="/data/traction_sand_intrerfering_prob" type="string"/>
+  </model> 
+ </h:head> 
+ <h:body> 
+ </h:body> 
+</h:html>

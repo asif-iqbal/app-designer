@@ -40,6 +40,7 @@
         <label_sign_missing/>
         <label_sign_missing_custom/>
         <label_sign_missing_fu/>
+        <loc_name/>
         <secondary_containment_inadequate/>
         <secondary_containment_inadequate_custom/>
         <secondary_containment_inadequate_fu/>
@@ -85,6 +86,7 @@
     <bind nodeset="/data/label_sign_missing" type="string"/>
     <bind nodeset="/data/label_sign_missing_custom" type="string"/>
     <bind nodeset="/data/label_sign_missing_fu" type="string"/>
+    <bind nodeset="/data/loc_name" type="string"/>
     <bind nodeset="/data/secondary_containment_inadequate" type="string"/>
     <bind nodeset="/data/secondary_containment_inadequate_custom" type="string"/>
     <bind nodeset="/data/secondary_containment_inadequate_fu" type="string"/>

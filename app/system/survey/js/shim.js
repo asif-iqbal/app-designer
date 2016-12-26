@@ -107,7 +107,7 @@ window.shim = window.shim || {
         // location of the site being inspected
         
         console.log('location: {"id":"1234","name":"Gas Station","aid":"RT 302","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":"15108"}');
-        return '{"id":"1234","name":"Gas Station","aid":"RT 302","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":"15108"}';
+        return '{"id":"1234","name":"CRMF","aid":"RT 302","streetAddress":"123 Main Street","city":"Wexford","state":"PA","zip":"15108"}';
     },
     getProjectInfo: function() {
         // project info from daily report screen

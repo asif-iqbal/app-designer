@@ -27,14 +27,27 @@
         "_row_num": 3
       },
       {
+        "type": "assign",
+        "name": "loc_name",
+        "calculation": "opendatakit.getLocationInfo().name",
+        "_row_num": 4
+      },
+      {
+        "type": "string",
+        "name": "loc_name",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 5
+      },
+      {
         "type": "select_one_dropdown",
-        "values_list": "area_locations",
+        "values_list": "sublocations_csv",
         "name": "area_location",
         "display": {
           "text": "Area Location"
         },
+        "choice_filter": "choice_item.location === data('loc_name')",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 4
+        "_row_num": 6
       },
       {
         "type": "select_one",
@@ -43,7 +56,7 @@
         "display": {
           "text": "Generator Information"
         },
-        "_row_num": 5
+        "_row_num": 7
       },
       {
         "type": "select_one",
@@ -52,7 +65,7 @@
         "display": {
           "text": "Name of Waste"
         },
-        "_row_num": 6
+        "_row_num": 8
       },
       {
         "type": "select_one",
@@ -61,14 +74,14 @@
         "display": {
           "text": "Associated Hazards"
         },
-        "_row_num": 7
+        "_row_num": 9
       },
       {
         "type": "note",
         "display": {
           "text": "Container Requirements"
         },
-        "_row_num": 8
+        "_row_num": 10
       },
       {
         "type": "select_one",
@@ -77,7 +90,7 @@
         "display": {
           "text": "Containers Closed"
         },
-        "_row_num": 9
+        "_row_num": 11
       },
       {
         "type": "select_one",
@@ -86,7 +99,7 @@
         "display": {
           "text": "Container Condition"
         },
-        "_row_num": 10
+        "_row_num": 12
       },
       {
         "type": "select_one",
@@ -95,7 +108,7 @@
         "display": {
           "text": "Aisle Space"
         },
-        "_row_num": 11
+        "_row_num": 13
       },
       {
         "type": "select_one",
@@ -104,14 +117,14 @@
         "display": {
           "text": "House Keeping"
         },
-        "_row_num": 12
+        "_row_num": 14
       },
       {
         "type": "note",
         "display": {
           "text": "Marking"
         },
-        "_row_num": 13
+        "_row_num": 15
       },
       {
         "type": "select_one",
@@ -120,7 +133,7 @@
         "display": {
           "text": "Accum. Start Date"
         },
-        "_row_num": 14
+        "_row_num": 16
       },
       {
         "type": "textarea",
@@ -129,221 +142,21 @@
           "rows": 4,
           "maxlength": 250
         },
-        "_row_num": 15
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 16
-      }
-    ],
-    "choices": [
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "MAA-1 WWTP",
-        "display": {
-          "text": "MAA-1 WWTP"
-        },
-        "_row_num": 2
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "MAA-2 P&M Track 2",
-        "display": {
-          "text": "MAA-2 P&M Track 2"
-        },
-        "_row_num": 3
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "MAA-3 AST Tank#4 Waste Oil",
-        "display": {
-          "text": "MAA-3 AST Tank#4 Waste Oil"
-        },
-        "_row_num": 4
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-1 Pump House WWTP 1st Floor",
-        "display": {
-          "text": "SAA-1 Pump House WWTP 1st Floor"
-        },
-        "_row_num": 5
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-2 Pipe Shop",
-        "display": {
-          "text": "SAA-2 Pipe Shop"
-        },
-        "_row_num": 6
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-3 Rm 119 Machine Shop",
-        "display": {
-          "text": "SAA-3 Rm 119 Machine Shop"
-        },
-        "_row_num": 7
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-4 Truck Shop Area",
-        "display": {
-          "text": "SAA-4 Truck Shop Area"
-        },
-        "_row_num": 8
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-5 Rubber Tire Room",
-        "display": {
-          "text": "SAA-5 Rubber Tire Room"
-        },
-        "_row_num": 9
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-6 AST 13 Waste Oil",
-        "display": {
-          "text": "SAA-6 AST 13 Waste Oil"
-        },
-        "_row_num": 10
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-7 Locomotive Repair/ Diesel House lower platforms",
-        "display": {
-          "text": "SAA-7 Locomotive Repair/ Diesel House lower platforms"
-        },
-        "_row_num": 11
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment",
-        "display": {
-          "text": "SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment"
-        },
-        "_row_num": 12
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-9 Waste Oil Filters - S&I bay and Wheel Truing",
-        "display": {
-          "text": "SAA-9 Waste Oil Filters - S&I bay and Wheel Truing"
-        },
-        "_row_num": 13
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-10 P&M Bays lower platforms",
-        "display": {
-          "text": "SAA-10 P&M Bays lower platforms"
-        },
-        "_row_num": 14
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-11 P&M Bays Upper Secondary Containments",
-        "display": {
-          "text": "SAA-11 P&M Bays Upper Secondary Containments"
-        },
-        "_row_num": 15
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-12 S&I Bays lower platforms",
-        "display": {
-          "text": "SAA-12 S&I Bays lower platforms"
-        },
-        "_row_num": 16
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "SAA-13 S&I Bays Upper Secondary Containments",
-        "display": {
-          "text": "SAA-13 S&I Bays Upper Secondary Containments"
-        },
         "_row_num": 17
       },
       {
-        "choice_list_name": "area_locations",
-        "data_value": "Other: Materials Storage (Shipping/Receiving)",
-        "display": {
-          "text": "Other: Materials Storage (Shipping/Receiving)"
-        },
+        "clause": "end screen",
         "_row_num": 18
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "Other: Unused Product Area Preventative Maintenance",
-        "display": {
-          "text": "Other: Unused Product Area Preventative Maintenance"
-        },
-        "_row_num": 19
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "Other: Waste Oil Spill Bucket -WWTP Fueling Pad",
-        "display": {
-          "text": "Other: Waste Oil Spill Bucket -WWTP Fueling Pad"
-        },
-        "_row_num": 20
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "UNW-Main Storage Area",
-        "display": {
-          "text": "UNW-Main Storage Area"
-        },
-        "_row_num": 21
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "UNW - Upper Platforms S&I, PM, (multiple)",
-        "display": {
-          "text": "UNW - Upper Platforms S&I, PM, (multiple)"
-        },
-        "_row_num": 22
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "UNW-Coach Repair Track 3",
-        "display": {
-          "text": "UNW-Coach Repair Track 3"
-        },
-        "_row_num": 23
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "UNW-Shipping and Receiving",
-        "display": {
-          "text": "UNW-Shipping and Receiving"
-        },
-        "_row_num": 24
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "BioW-MAA",
-        "display": {
-          "text": "BioW-MAA"
-        },
-        "_row_num": 25
-      },
-      {
-        "choice_list_name": "area_locations",
-        "data_value": "Spill Kits",
-        "display": {
-          "text": "Spill Kits"
-        },
-        "_row_num": 26
-      },
+      }
+    ],
+    "choices": [
       {
         "choice_list_name": "yesno",
         "data_value": "Yes",
         "display": {
           "text": "Yes"
         },
-        "_row_num": 27
+        "_row_num": 2
       },
       {
         "choice_list_name": "yesno",
@@ -351,7 +164,7 @@
         "display": {
           "text": "No"
         },
-        "_row_num": 28
+        "_row_num": 3
       },
       {
         "choice_list_name": "yesno",
@@ -359,7 +172,7 @@
         "display": {
           "text": "N/A"
         },
-        "_row_num": 29
+        "_row_num": 4
       },
       {
         "choice_list_name": "passfail",
@@ -367,7 +180,7 @@
         "display": {
           "text": "Pass"
         },
-        "_row_num": 30
+        "_row_num": 5
       },
       {
         "choice_list_name": "passfail",
@@ -375,7 +188,7 @@
         "display": {
           "text": "Fail"
         },
-        "_row_num": 31
+        "_row_num": 6
       },
       {
         "choice_list_name": "passfail",
@@ -383,7 +196,7 @@
         "display": {
           "text": "N/A"
         },
-        "_row_num": 32
+        "_row_num": 7
       }
     ],
     "settings": [
@@ -471,6 +284,15 @@
         "type": "textarea",
         "_row_num": 12
       }
+    ],
+    "queries": [
+      {
+        "query_name": "sublocations_csv",
+        "query_type": "csv",
+        "uri": "\"sublocations.csv\"",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "_row_num": 2
+      }
     ]
   },
   "specification": {
@@ -545,208 +367,6 @@
       }
     },
     "choices": {
-      "area_locations": [
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "MAA-1 WWTP",
-          "display": {
-            "text": "MAA-1 WWTP"
-          },
-          "_row_num": 2
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "MAA-2 P&M Track 2",
-          "display": {
-            "text": "MAA-2 P&M Track 2"
-          },
-          "_row_num": 3
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "MAA-3 AST Tank#4 Waste Oil",
-          "display": {
-            "text": "MAA-3 AST Tank#4 Waste Oil"
-          },
-          "_row_num": 4
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-1 Pump House WWTP 1st Floor",
-          "display": {
-            "text": "SAA-1 Pump House WWTP 1st Floor"
-          },
-          "_row_num": 5
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-2 Pipe Shop",
-          "display": {
-            "text": "SAA-2 Pipe Shop"
-          },
-          "_row_num": 6
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-3 Rm 119 Machine Shop",
-          "display": {
-            "text": "SAA-3 Rm 119 Machine Shop"
-          },
-          "_row_num": 7
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-4 Truck Shop Area",
-          "display": {
-            "text": "SAA-4 Truck Shop Area"
-          },
-          "_row_num": 8
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-5 Rubber Tire Room",
-          "display": {
-            "text": "SAA-5 Rubber Tire Room"
-          },
-          "_row_num": 9
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-6 AST 13 Waste Oil",
-          "display": {
-            "text": "SAA-6 AST 13 Waste Oil"
-          },
-          "_row_num": 10
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-7 Locomotive Repair/ Diesel House lower platforms",
-          "display": {
-            "text": "SAA-7 Locomotive Repair/ Diesel House lower platforms"
-          },
-          "_row_num": 11
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment",
-          "display": {
-            "text": "SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment"
-          },
-          "_row_num": 12
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-9 Waste Oil Filters - S&I bay and Wheel Truing",
-          "display": {
-            "text": "SAA-9 Waste Oil Filters - S&I bay and Wheel Truing"
-          },
-          "_row_num": 13
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-10 P&M Bays lower platforms",
-          "display": {
-            "text": "SAA-10 P&M Bays lower platforms"
-          },
-          "_row_num": 14
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-11 P&M Bays Upper Secondary Containments",
-          "display": {
-            "text": "SAA-11 P&M Bays Upper Secondary Containments"
-          },
-          "_row_num": 15
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-12 S&I Bays lower platforms",
-          "display": {
-            "text": "SAA-12 S&I Bays lower platforms"
-          },
-          "_row_num": 16
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "SAA-13 S&I Bays Upper Secondary Containments",
-          "display": {
-            "text": "SAA-13 S&I Bays Upper Secondary Containments"
-          },
-          "_row_num": 17
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "Other: Materials Storage (Shipping/Receiving)",
-          "display": {
-            "text": "Other: Materials Storage (Shipping/Receiving)"
-          },
-          "_row_num": 18
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "Other: Unused Product Area Preventative Maintenance",
-          "display": {
-            "text": "Other: Unused Product Area Preventative Maintenance"
-          },
-          "_row_num": 19
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "Other: Waste Oil Spill Bucket -WWTP Fueling Pad",
-          "display": {
-            "text": "Other: Waste Oil Spill Bucket -WWTP Fueling Pad"
-          },
-          "_row_num": 20
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "UNW-Main Storage Area",
-          "display": {
-            "text": "UNW-Main Storage Area"
-          },
-          "_row_num": 21
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "UNW - Upper Platforms S&I, PM, (multiple)",
-          "display": {
-            "text": "UNW - Upper Platforms S&I, PM, (multiple)"
-          },
-          "_row_num": 22
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "UNW-Coach Repair Track 3",
-          "display": {
-            "text": "UNW-Coach Repair Track 3"
-          },
-          "_row_num": 23
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "UNW-Shipping and Receiving",
-          "display": {
-            "text": "UNW-Shipping and Receiving"
-          },
-          "_row_num": 24
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "BioW-MAA",
-          "display": {
-            "text": "BioW-MAA"
-          },
-          "_row_num": 25
-        },
-        {
-          "choice_list_name": "area_locations",
-          "data_value": "Spill Kits",
-          "display": {
-            "text": "Spill Kits"
-          },
-          "_row_num": 26
-        }
-      ],
       "yesno": [
         {
           "choice_list_name": "yesno",
@@ -754,7 +374,7 @@
           "display": {
             "text": "Yes"
           },
-          "_row_num": 27
+          "_row_num": 2
         },
         {
           "choice_list_name": "yesno",
@@ -762,7 +382,7 @@
           "display": {
             "text": "No"
           },
-          "_row_num": 28
+          "_row_num": 3
         },
         {
           "choice_list_name": "yesno",
@@ -770,7 +390,7 @@
           "display": {
             "text": "N/A"
           },
-          "_row_num": 29
+          "_row_num": 4
         }
       ],
       "passfail": [
@@ -780,7 +400,7 @@
           "display": {
             "text": "Pass"
           },
-          "_row_num": 30
+          "_row_num": 5
         },
         {
           "choice_list_name": "passfail",
@@ -788,7 +408,7 @@
           "display": {
             "text": "Fail"
           },
-          "_row_num": 31
+          "_row_num": 6
         },
         {
           "choice_list_name": "passfail",
@@ -796,11 +416,19 @@
           "display": {
             "text": "N/A"
           },
-          "_row_num": 32
+          "_row_num": 7
         }
       ]
     },
-    "queries": {},
+    "queries": {
+      "sublocations_csv": {
+        "query_name": "sublocations_csv",
+        "query_type": "csv",
+        "uri": "\"sublocations.csv\"",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "_row_num": 2
+      }
+    },
     "calculates": {},
     "model": {
       "inspection_id": {
@@ -815,10 +443,10 @@
       },
       "area_location": {
         "type": "string",
-        "valuesList": "area_locations",
+        "valuesList": "sublocations_csv",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 6,
             "section_name": "survey"
           },
           {
@@ -833,7 +461,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 7,
             "section_name": "survey"
           },
           {
@@ -848,7 +476,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 8,
             "section_name": "survey"
           },
           {
@@ -863,7 +491,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 9,
             "section_name": "survey"
           },
           {
@@ -878,7 +506,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 11,
             "section_name": "survey"
           },
           {
@@ -893,7 +521,7 @@
         "valuesList": "passfail",
         "_defn": [
           {
-            "_row_num": 10,
+            "_row_num": 12,
             "section_name": "survey"
           },
           {
@@ -908,7 +536,7 @@
         "valuesList": "passfail",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 13,
             "section_name": "survey"
           },
           {
@@ -923,7 +551,7 @@
         "valuesList": "passfail",
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 14,
             "section_name": "survey"
           },
           {
@@ -938,7 +566,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 16,
             "section_name": "survey"
           },
           {
@@ -952,7 +580,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 17,
             "section_name": "survey"
           },
           {
@@ -961,6 +589,16 @@
           }
         ],
         "elementKey": "comments"
+      },
+      "loc_name": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "loc_name"
       }
     },
     "section_names": [
@@ -1092,19 +730,31 @@
             "promptIdx": 0
           },
           {
+            "type": "string",
+            "name": "loc_name",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
             "type": "select_one_dropdown",
-            "values_list": "area_locations",
+            "values_list": "sublocations_csv",
             "name": "area_location",
             "display": {
               "text": "Area Location"
             },
+            "choice_filter": "choice_item.location === data('loc_name')",
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 4,
-            "__rowNum__": 3,
+            "_row_num": 6,
+            "__rowNum__": 5,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 1
+            "promptIdx": 2
           },
           {
             "type": "select_one",
@@ -1113,22 +763,8 @@
             "display": {
               "text": "Generator Information"
             },
-            "_row_num": 5,
-            "__rowNum__": 4,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 2
-          },
-          {
-            "type": "select_one",
-            "values_list": "yesno",
-            "name": "name_waste",
-            "display": {
-              "text": "Name of Waste"
-            },
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 7,
+            "__rowNum__": 6,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -1137,28 +773,42 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "associated_hazards",
+            "name": "name_waste",
             "display": {
-              "text": "Associated Hazards"
+              "text": "Name of Waste"
             },
-            "_row_num": 7,
-            "__rowNum__": 6,
+            "_row_num": 8,
+            "__rowNum__": 7,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 4
           },
           {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "associated_hazards",
+            "display": {
+              "text": "Associated Hazards"
+            },
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
             "type": "note",
             "display": {
               "text": "Container Requirements"
             },
-            "_row_num": 8,
-            "__rowNum__": 7,
+            "_row_num": 10,
+            "__rowNum__": 9,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 5
+            "promptIdx": 6
           },
           {
             "type": "select_one",
@@ -1167,22 +817,8 @@
             "display": {
               "text": "Containers Closed"
             },
-            "_row_num": 9,
-            "__rowNum__": 8,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 6
-          },
-          {
-            "type": "select_one",
-            "values_list": "passfail",
-            "name": "container_condition",
-            "display": {
-              "text": "Container Condition"
-            },
-            "_row_num": 10,
-            "__rowNum__": 9,
+            "_row_num": 11,
+            "__rowNum__": 10,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -1191,12 +827,12 @@
           {
             "type": "select_one",
             "values_list": "passfail",
-            "name": "aisle_space",
+            "name": "container_condition",
             "display": {
-              "text": "Aisle Space"
+              "text": "Container Condition"
             },
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 12,
+            "__rowNum__": 11,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -1205,28 +841,42 @@
           {
             "type": "select_one",
             "values_list": "passfail",
-            "name": "house_keeping",
+            "name": "aisle_space",
             "display": {
-              "text": "House Keeping"
+              "text": "Aisle Space"
             },
-            "_row_num": 12,
-            "__rowNum__": 11,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 9
           },
           {
+            "type": "select_one",
+            "values_list": "passfail",
+            "name": "house_keeping",
+            "display": {
+              "text": "House Keeping"
+            },
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 10
+          },
+          {
             "type": "note",
             "display": {
               "text": "Marking"
             },
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 15,
+            "__rowNum__": 14,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 10
+            "promptIdx": 11
           },
           {
             "type": "select_one",
@@ -1235,12 +885,12 @@
             "display": {
               "text": "Accum. Start Date"
             },
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 16,
+            "__rowNum__": 15,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 11
+            "promptIdx": 12
           },
           {
             "type": "textarea",
@@ -1249,20 +899,20 @@
               "rows": 4,
               "maxlength": 250
             },
-            "_row_num": 15,
-            "__rowNum__": 14,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "prompt",
             "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 12
+            "promptIdx": 13
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 17,
-            "_branch_label_enclosing_screen": "survey/_screen17",
-            "promptIdx": 13
+            "_row_num": 19,
+            "_branch_label_enclosing_screen": "survey/_screen19",
+            "promptIdx": 14
           }
         ],
         "validation_tag_map": {
@@ -1279,23 +929,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 16,
-              "__rowNum__": 15,
+              "_row_num": 18,
+              "__rowNum__": 17,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 17,
+            "_row_num": 19,
             "operationIdx": 1
           },
           {
-            "_row_num": 17,
+            "_row_num": 19,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -1304,14 +954,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 17,
+            "_row_num": 19,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen17": 2
+          "_screen19": 2
         }
       }
     }
