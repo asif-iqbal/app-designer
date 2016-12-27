@@ -766,28 +766,28 @@
         "_row_num": 121
       },
       {
-        "type": "linked_table",
-        "values_list": "linked_samples",
-        "display": {
-          "text": "Add Catch Basins to this list",
-          "new_instance_text": "Add Catch Basin"
-        },
-        "_row_num": 122
-      },
-      {
         "type": "time",
         "name": "project_start_time",
         "display": {
           "text": "Start Time"
         },
         "templatePath": "time_input_type.handlebars",
+        "_row_num": 122
+      },
+      {
+        "type": "linked_table",
+        "values_list": "linked_samples",
+        "display": {
+          "text": "Add Catch Basins to this list",
+          "new_instance_text": "Add Catch Basin"
+        },
         "_row_num": 123
       },
       {
         "type": "time",
-        "name": "project_end_time",
+        "name": "project_start_time",
         "display": {
-          "text": "End Time"
+          "text": "Start Time"
         },
         "templatePath": "time_input_type.handlebars",
         "_row_num": 124
@@ -2165,26 +2165,19 @@
         "elementKey": "repair_defective"
       },
       "project_start_time": {
-        "_defn": [
-          {
-            "_row_num": 123,
-            "section_name": "survey"
-          }
-        ],
         "type": "object",
         "elementType": "time",
-        "elementKey": "project_start_time"
-      },
-      "project_end_time": {
         "_defn": [
+          {
+            "_row_num": 122,
+            "section_name": "survey"
+          },
           {
             "_row_num": 124,
             "section_name": "survey"
           }
         ],
-        "type": "object",
-        "elementType": "time",
-        "elementKey": "project_end_time"
+        "elementKey": "project_start_time"
       }
     },
     "section_names": [
@@ -3041,38 +3034,38 @@
             "promptIdx": 60
           },
           {
-            "type": "linked_table",
-            "values_list": "linked_samples",
-            "display": {
-              "text": "Add Catch Basins to this list",
-              "new_instance_text": "Add Catch Basin"
-            },
-            "_row_num": 122,
-            "__rowNum__": 121,
-            "_token_type": "prompt",
-            "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 61
-          },
-          {
             "type": "time",
             "name": "project_start_time",
             "display": {
               "text": "Start Time"
             },
             "templatePath": "time_input_type.handlebars",
+            "_row_num": 122,
+            "__rowNum__": 121,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 61
+          },
+          {
+            "type": "linked_table",
+            "values_list": "linked_samples",
+            "display": {
+              "text": "Add Catch Basins to this list",
+              "new_instance_text": "Add Catch Basin"
+            },
             "_row_num": 123,
             "__rowNum__": 122,
             "_token_type": "prompt",
-            "_type": "time",
+            "_type": "linked_table",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 62
           },
           {
             "type": "time",
-            "name": "project_end_time",
+            "name": "project_start_time",
             "display": {
-              "text": "End Time"
+              "text": "Start Time"
             },
             "templatePath": "time_input_type.handlebars",
             "_row_num": 124,

@@ -766,21 +766,21 @@
         "_row_num": 121
       },
       {
-        "type": "linked_table",
-        "values_list": "linked_samples",
-        "display": {
-          "text": "Add Track Mats to this list",
-          "new_instance_text": "Add Track Mat"
-        },
-        "_row_num": 122
-      },
-      {
         "type": "time",
         "name": "project_start_time",
         "display": {
           "text": "Start Time"
         },
         "templatePath": "time_input_type.handlebars",
+        "_row_num": 122
+      },
+      {
+        "type": "linked_table",
+        "values_list": "linked_samples",
+        "display": {
+          "text": "Add Track Mats to this list",
+          "new_instance_text": "Add Track Mat"
+        },
         "_row_num": 123
       },
       {
@@ -2163,7 +2163,7 @@
       "project_start_time": {
         "_defn": [
           {
-            "_row_num": 123,
+            "_row_num": 122,
             "section_name": "survey"
           }
         ],
@@ -3037,30 +3037,30 @@
             "promptIdx": 60
           },
           {
-            "type": "linked_table",
-            "values_list": "linked_samples",
-            "display": {
-              "text": "Add Track Mats to this list",
-              "new_instance_text": "Add Track Mat"
-            },
-            "_row_num": 122,
-            "__rowNum__": 121,
-            "_token_type": "prompt",
-            "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 61
-          },
-          {
             "type": "time",
             "name": "project_start_time",
             "display": {
               "text": "Start Time"
             },
             "templatePath": "time_input_type.handlebars",
+            "_row_num": 122,
+            "__rowNum__": 121,
+            "_token_type": "prompt",
+            "_type": "time",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 61
+          },
+          {
+            "type": "linked_table",
+            "values_list": "linked_samples",
+            "display": {
+              "text": "Add Track Mats to this list",
+              "new_instance_text": "Add Track Mat"
+            },
             "_row_num": 123,
             "__rowNum__": 122,
             "_token_type": "prompt",
-            "_type": "time",
+            "_type": "linked_table",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 62
           },
