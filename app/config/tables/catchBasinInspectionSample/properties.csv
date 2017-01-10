@@ -149,11 +149,6 @@ Column,sediment_thickness_unit,displayFormat,string,""
 Column,sediment_thickness_unit,displayName,string,"""sediment_thickness_unit"""
 Column,sediment_thickness_unit,displayVisible,boolean,TRUE
 Column,sediment_thickness_unit,joins,object,""
-Column,sediment_thickness_units,displayChoicesList,object,[]
-Column,sediment_thickness_units,displayFormat,string,""
-Column,sediment_thickness_units,displayName,string,"""sediment_thickness_units"""
-Column,sediment_thickness_units,displayVisible,boolean,TRUE
-Column,sediment_thickness_units,joins,object,""
 Column,sheen_present,displayChoicesList,object,"[{""choice_list_name"":""yesno"",""data_value"":""yes"",""display"":{""text"":""Yes""},""_row_num"":7},{""choice_list_name"":""yesno"",""data_value"":""no"",""display"":{""text"":""No""},""_row_num"":8}]"
 Column,sheen_present,displayFormat,string,""
 Column,sheen_present,displayName,string,"""sheen_present"""
@@ -191,7 +186,7 @@ Column,z_sample_date,displayVisible,boolean,TRUE
 Column,z_sample_date,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,catchBasinInspectionSample
-Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""z_sample_date"",""depth_unit"",""diameter_unit"",""estimated_quantity_unit"",""sediment_thickness_units"",""sediment_thickness_unit"",""pid_reading_option"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
+Table,default,colOrder,array,"[""global_id"",""inspection_id"",""diameter"",""depth"",""dry_or_connected"",""sediment_thickness"",""debris_present"",""water_in_vault"",""water_flowing_freely"",""type_of_material"",""absorbent_replacement"",""saturated_or_filled"",""absorbent_replaced"",""other_maintenance"",""sheen_present"",""product_present"",""odor_present"",""pid_reading"",""condition"",""damage_present"",""sediment_removed"",""estimated_quantity"",""manifest_bol"",""samples_obtained_analyzed"",""waste_drums_hazardous"",""waste_drums_non_hazardous"",""z_sample_date"",""depth_unit"",""diameter_unit"",""estimated_quantity_unit"",""sediment_thickness_unit"",""pid_reading_option"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Catch Basin Inspection Sample"""
 Table,default,groupByCols,object,[]

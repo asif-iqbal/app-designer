@@ -33,6 +33,7 @@
         <track_mats_replaced/>
         <waste_drums_hazardous/>
         <waste_drums_non_hazardous/>
+        <z_sample_date/>
       </data> 
     </instance> 
     <bind nodeset="/data/meta/instanceID" type="string"/>
@@ -56,6 +57,7 @@
     <bind nodeset="/data/track_mats_replaced" type="string"/>
     <bind nodeset="/data/waste_drums_hazardous" type="decimal"/>
     <bind nodeset="/data/waste_drums_non_hazardous" type="decimal"/>
+    <bind nodeset="/data/z_sample_date" type="string"/>
   </model> 
  </h:head> 
  <h:body> 

@@ -50,7 +50,6 @@
         <sediment_removed/>
         <sediment_thickness/>
         <sediment_thickness_unit/>
-        <sediment_thickness_units/>
         <sheen_present/>
         <type_of_material/>
         <waste_drums_hazardous/>
@@ -98,7 +97,6 @@
     <bind nodeset="/data/sediment_removed" type="string"/>
     <bind nodeset="/data/sediment_thickness" type="string"/>
     <bind nodeset="/data/sediment_thickness_unit" type="string"/>
-    <bind nodeset="/data/sediment_thickness_units" type="string"/>
     <bind nodeset="/data/sheen_present" type="string"/>
     <bind nodeset="/data/type_of_material" type="string"/>
     <bind nodeset="/data/waste_drums_hazardous" type="decimal"/>
