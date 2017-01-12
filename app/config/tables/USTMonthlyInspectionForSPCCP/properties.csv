@@ -1,14 +1,4 @@
 _partition,_aspect,_key,_type,_value
-Column,capacity,displayChoicesList,object,[]
-Column,capacity,displayFormat,string,""
-Column,capacity,displayName,string,"""capacity"""
-Column,capacity,displayVisible,boolean,TRUE
-Column,capacity,joins,object,""
-Column,construction,displayChoicesList,object,[]
-Column,construction,displayFormat,string,""
-Column,construction,displayName,string,"""construction"""
-Column,construction,displayVisible,boolean,TRUE
-Column,construction,joins,object,""
 Column,consumable_name_0,displayChoicesList,object,[]
 Column,consumable_name_0,displayFormat,string,""
 Column,consumable_name_0,displayName,string,"""consumable_name_0"""
@@ -244,11 +234,6 @@ Column,personnel_totalhrs_2,displayFormat,string,""
 Column,personnel_totalhrs_2,displayName,string,"""personnel_totalhrs_2"""
 Column,personnel_totalhrs_2,displayVisible,boolean,TRUE
 Column,personnel_totalhrs_2,joins,object,""
-Column,primary_contents,displayChoicesList,object,[]
-Column,primary_contents,displayFormat,string,""
-Column,primary_contents,displayName,string,"""primary_contents"""
-Column,primary_contents,displayVisible,boolean,TRUE
-Column,primary_contents,joins,object,""
 Column,project_comment,displayChoicesList,object,[]
 Column,project_comment,displayFormat,string,""
 Column,project_comment,displayName,string,"""project_comment"""
@@ -324,11 +309,6 @@ Column,sign_uriFragment,displayFormat,string,""
 Column,sign_uriFragment,displayName,string,"""uriFragment"""
 Column,sign_uriFragment,displayVisible,boolean,TRUE
 Column,sign_uriFragment,joins,object,""
-Column,tank_id,displayChoicesList,object,[]
-Column,tank_id,displayFormat,string,""
-Column,tank_id,displayName,string,"""tank_id"""
-Column,tank_id,displayVisible,boolean,TRUE
-Column,tank_id,joins,object,""
 Column,vehicle_name_0,displayChoicesList,object,[]
 Column,vehicle_name_0,displayFormat,string,""
 Column,vehicle_name_0,displayName,string,"""vehicle_name_0"""
@@ -381,7 +361,7 @@ Column,weather,displayVisible,boolean,TRUE
 Column,weather,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,USTMonthlyInspectionForSPCCP
-Table,default,colOrder,array,"[""tank_id"",""inspection_id"",""loc_name"",""loc_aid"",""loc_streetAddress"",""loc_city"",""loc_state"",""loc_zip"",""loc_client"",""inspector_name"",""sample_date"",""weather"",""project_number"",""project_correl_id"",""project_done"",""project_manager"",""project_comment"",""project_daily_report"",""personnel_title_0"",""personnel_name_0"",""personnel_starttime_0"",""personnel_endtime_0"",""personnel_totalhrs_0"",""personnel_title_1"",""personnel_name_1"",""personnel_starttime_1"",""personnel_endtime_1"",""personnel_totalhrs_1"",""personnel_title_2"",""personnel_name_2"",""personnel_starttime_2"",""personnel_endtime_2"",""personnel_totalhrs_2"",""equipment_name_0"",""equipment_quantity_0"",""equipment_totalhrs_0"",""equipment_name_1"",""equipment_quantity_1"",""equipment_totalhrs_1"",""equipment_name_2"",""equipment_quantity_2"",""equipment_totalhrs_2"",""vehicle_name_0"",""vehicle_quantity_0"",""vehicle_totalhrs_0"",""vehicle_name_1"",""vehicle_quantity_1"",""vehicle_totalhrs_1"",""vehicle_name_2"",""vehicle_quantity_2"",""vehicle_totalhrs_2"",""consumable_name_0"",""consumable_quantity_0"",""consumable_totalhrs_0"",""consumable_name_1"",""consumable_quantity_1"",""consumable_totalhrs_1"",""consumable_name_2"",""consumable_quantity_2"",""consumable_totalhrs_2"",""construction"",""primary_contents"",""capacity"",""sign_person_name"",""sign_2_person_name"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy"",""sign_uriFragment"",""sign_contentType"",""sign_2_uriFragment"",""sign_2_contentType""]"
+Table,default,colOrder,array,"[""inspection_id"",""loc_name"",""loc_aid"",""loc_streetAddress"",""loc_city"",""loc_state"",""loc_zip"",""loc_client"",""inspector_name"",""sample_date"",""weather"",""project_number"",""project_correl_id"",""project_done"",""project_manager"",""project_comment"",""project_daily_report"",""personnel_title_0"",""personnel_name_0"",""personnel_starttime_0"",""personnel_endtime_0"",""personnel_totalhrs_0"",""personnel_title_1"",""personnel_name_1"",""personnel_starttime_1"",""personnel_endtime_1"",""personnel_totalhrs_1"",""personnel_title_2"",""personnel_name_2"",""personnel_starttime_2"",""personnel_endtime_2"",""personnel_totalhrs_2"",""equipment_name_0"",""equipment_quantity_0"",""equipment_totalhrs_0"",""equipment_name_1"",""equipment_quantity_1"",""equipment_totalhrs_1"",""equipment_name_2"",""equipment_quantity_2"",""equipment_totalhrs_2"",""vehicle_name_0"",""vehicle_quantity_0"",""vehicle_totalhrs_0"",""vehicle_name_1"",""vehicle_quantity_1"",""vehicle_totalhrs_1"",""vehicle_name_2"",""vehicle_quantity_2"",""vehicle_totalhrs_2"",""consumable_name_0"",""consumable_quantity_0"",""consumable_totalhrs_0"",""consumable_name_1"",""consumable_quantity_1"",""consumable_totalhrs_1"",""consumable_name_2"",""consumable_quantity_2"",""consumable_totalhrs_2"",""sign_person_name"",""sign_2_person_name"",""geo_info_latitude"",""geo_info_longitude"",""geo_info_altitude"",""geo_info_accuracy"",""sign_uriFragment"",""sign_contentType"",""sign_2_uriFragment"",""sign_2_contentType""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""Spill Prevention UST Monthly Inspection"""
 Table,default,groupByCols,object,[]

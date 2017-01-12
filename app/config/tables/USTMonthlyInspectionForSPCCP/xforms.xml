@@ -24,8 +24,6 @@
           <savepointCreator/>
           <savepointTimestamp/>
         </orx:meta>
-        <capacity/>
-        <construction/>
         <consumable_name_0/>
         <consumable_name_1/>
         <consumable_name_2/>
@@ -69,7 +67,6 @@
         <personnel_totalhrs_0/>
         <personnel_totalhrs_1/>
         <personnel_totalhrs_2/>
-        <primary_contents/>
         <project_comment/>
         <project_correl_id/>
         <project_daily_report/>
@@ -81,7 +78,6 @@
         <sign_2/>
         <sign_2_person_name/>
         <sign_person_name/>
-        <tank_id/>
         <vehicle_name_0/>
         <vehicle_name_1/>
         <vehicle_name_2/>
@@ -106,8 +102,6 @@
     <bind nodeset="/data/meta/savepointType" type="string"/>
     <bind nodeset="/data/meta/savepointCreator" type="string"/>
     <bind nodeset="/data/meta/savepointTimestamp" type="string"/>
-    <bind nodeset="/data/capacity" type="string"/>
-    <bind nodeset="/data/construction" type="string"/>
     <bind nodeset="/data/consumable_name_0" type="string"/>
     <bind nodeset="/data/consumable_name_1" type="string"/>
     <bind nodeset="/data/consumable_name_2" type="string"/>
@@ -151,7 +145,6 @@
     <bind nodeset="/data/personnel_totalhrs_0" type="string"/>
     <bind nodeset="/data/personnel_totalhrs_1" type="string"/>
     <bind nodeset="/data/personnel_totalhrs_2" type="string"/>
-    <bind nodeset="/data/primary_contents" type="string"/>
     <bind nodeset="/data/project_comment" type="string"/>
     <bind nodeset="/data/project_correl_id" type="string"/>
     <bind nodeset="/data/project_daily_report" type="string"/>
@@ -163,7 +156,6 @@
     <bind nodeset="/data/sign_2" type="binary"/>
     <bind nodeset="/data/sign_2_person_name" type="string"/>
     <bind nodeset="/data/sign_person_name" type="string"/>
-    <bind nodeset="/data/tank_id" type="string"/>
     <bind nodeset="/data/vehicle_name_0" type="string"/>
     <bind nodeset="/data/vehicle_name_1" type="string"/>
     <bind nodeset="/data/vehicle_name_2" type="string"/>

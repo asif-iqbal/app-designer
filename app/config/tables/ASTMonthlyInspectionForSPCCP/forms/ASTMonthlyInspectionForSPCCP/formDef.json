@@ -43,120 +43,109 @@
         "_row_num": 2
       },
       {
-        "type": "string",
-        "name": "tank_id",
-        "display": {
-          "text": "Tank ID"
-        },
-        "hideInContents": "true",
-        "templatePath": "string_input_type.handlebars",
-        "required": "true",
-        "_row_num": 3
-      },
-      {
         "type": "linked_table",
         "values_list": "linked_locations",
         "display": {
           "text": "Add locations to this list",
           "new_instance_text": "Add Location"
         },
-        "_row_num": 4
+        "_row_num": 3
       },
       {
         "type": "assign",
         "name": "inspection_id",
         "calculation": "opendatakit.getCurrentInstanceId()",
-        "_row_num": 5
+        "_row_num": 4
       },
       {
         "type": "string",
         "name": "inspection_id",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 6
+        "_row_num": 5
       },
       {
         "type": "assign",
         "name": "loc_name",
         "calculation": "opendatakit.getLocationInfo().name",
-        "_row_num": 7
+        "_row_num": 6
       },
       {
         "type": "string",
         "name": "loc_name",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 8
+        "_row_num": 7
       },
       {
         "type": "assign",
         "name": "loc_aid",
         "calculation": "calculates.locationAid()",
-        "_row_num": 9
+        "_row_num": 8
       },
       {
         "type": "string",
         "name": "loc_aid",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 10
+        "_row_num": 9
       },
       {
         "type": "assign",
         "name": "loc_streetAddress",
         "calculation": "opendatakit.getLocationInfo().streetAddress",
-        "_row_num": 11
+        "_row_num": 10
       },
       {
         "type": "string",
         "name": "loc_streetAddress",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 12
+        "_row_num": 11
       },
       {
         "type": "assign",
         "name": "loc_city",
         "calculation": "opendatakit.getLocationInfo().city",
-        "_row_num": 13
+        "_row_num": 12
       },
       {
         "type": "string",
         "name": "loc_city",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 14
+        "_row_num": 13
       },
       {
         "type": "assign",
         "name": "loc_state",
         "calculation": "opendatakit.getLocationInfo().state",
-        "_row_num": 15
+        "_row_num": 14
       },
       {
         "type": "string",
         "name": "loc_state",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 16
+        "_row_num": 15
       },
       {
         "type": "assign",
         "name": "loc_zip",
         "calculation": "calculates.locationZip()",
-        "_row_num": 17
+        "_row_num": 16
       },
       {
         "type": "string",
         "name": "loc_zip",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 18
+        "_row_num": 17
       },
       {
         "type": "assign",
         "name": "loc_client",
         "calculation": "opendatakit.getLocationInfo().client",
-        "_row_num": 19
+        "_row_num": 18
       },
       {
         "type": "string",
         "name": "loc_client",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 20
+        "_row_num": 19
       },
       {
         "type": "select_one_dropdown",
@@ -168,645 +157,615 @@
         "hideInContents": "true",
         "templatePath": "custom_select_dropdown.handlebars",
         "required": "true",
-        "_row_num": 21
+        "_row_num": 20
       },
       {
         "type": "assign",
         "name": "sample_date",
         "calculation": "calculates.date()",
-        "_row_num": 22
+        "_row_num": 21
       },
       {
         "type": "string",
         "name": "sample_date",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 23
+        "_row_num": 22
       },
       {
         "type": "assign",
         "name": "weather",
         "calculation": "calculates.weather()",
-        "_row_num": 24
+        "_row_num": 23
       },
       {
         "type": "string",
         "name": "weather",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 25
+        "_row_num": 24
       },
       {
         "type": "assign",
         "name": "project_number",
         "calculation": "calculates.projectno()",
-        "_row_num": 26
+        "_row_num": 25
       },
       {
         "type": "string",
         "name": "project_number",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 27
+        "_row_num": 26
       },
       {
         "type": "assign",
         "name": "project_correl_id",
         "calculation": "calculates.flowid()",
-        "_row_num": 28
+        "_row_num": 27
       },
       {
         "type": "string",
         "name": "project_correl_id",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 29
+        "_row_num": 28
       },
       {
         "type": "assign",
         "name": "project_done",
         "calculation": "calculates.projectdone()",
-        "_row_num": 30
+        "_row_num": 29
       },
       {
         "type": "string",
         "name": "project_done",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 31
+        "_row_num": 30
       },
       {
         "type": "assign",
         "name": "project_manager",
         "calculation": "calculates.projectmanager()",
-        "_row_num": 32
+        "_row_num": 31
       },
       {
         "type": "string",
         "name": "project_manager",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 33
+        "_row_num": 32
       },
       {
         "type": "assign",
         "name": "project_comment",
         "calculation": "calculates.comment()",
-        "_row_num": 34
+        "_row_num": 33
       },
       {
         "type": "string",
         "name": "project_comment",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 35
+        "_row_num": 34
       },
       {
         "type": "assign",
         "name": "project_daily_report",
         "calculation": "calculates.issuedailyreport()",
-        "_row_num": 36
+        "_row_num": 35
       },
       {
         "type": "string",
         "name": "project_daily_report",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 37
+        "_row_num": 36
       },
       {
         "type": "assign",
         "name": "personnel_title_0",
         "calculation": "calculates.personnelTitle0()",
-        "_row_num": 38
+        "_row_num": 37
       },
       {
         "type": "string",
         "name": "personnel_title_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 39
+        "_row_num": 38
       },
       {
         "type": "assign",
         "name": "personnel_name_0",
         "calculation": "calculates.personnelName0()",
-        "_row_num": 40
+        "_row_num": 39
       },
       {
         "type": "string",
         "name": "personnel_name_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 41
+        "_row_num": 40
       },
       {
         "type": "assign",
         "name": "personnel_starttime_0",
         "calculation": "calculates.personnelStartTime0()",
-        "_row_num": 42
+        "_row_num": 41
       },
       {
         "type": "string",
         "name": "personnel_starttime_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 43
+        "_row_num": 42
       },
       {
         "type": "assign",
         "name": "personnel_endtime_0",
         "calculation": "calculates.personnelEndTime0()",
-        "_row_num": 44
+        "_row_num": 43
       },
       {
         "type": "string",
         "name": "personnel_endtime_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 45
+        "_row_num": 44
       },
       {
         "type": "assign",
         "name": "personnel_totalhrs_0",
         "calculation": "calculates.personnelTotalHrs0()",
-        "_row_num": 46
+        "_row_num": 45
       },
       {
         "type": "string",
         "name": "personnel_totalhrs_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 47
+        "_row_num": 46
       },
       {
         "type": "assign",
         "name": "personnel_title_1",
         "calculation": "calculates.personnelTitle1()",
-        "_row_num": 48
+        "_row_num": 47
       },
       {
         "type": "string",
         "name": "personnel_title_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 49
+        "_row_num": 48
       },
       {
         "type": "assign",
         "name": "personnel_name_1",
         "calculation": "calculates.personnelName1()",
-        "_row_num": 50
+        "_row_num": 49
       },
       {
         "type": "string",
         "name": "personnel_name_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 51
+        "_row_num": 50
       },
       {
         "type": "assign",
         "name": "personnel_starttime_1",
         "calculation": "calculates.personnelStartTime1()",
-        "_row_num": 52
+        "_row_num": 51
       },
       {
         "type": "string",
         "name": "personnel_starttime_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 53
+        "_row_num": 52
       },
       {
         "type": "assign",
         "name": "personnel_endtime_1",
         "calculation": "calculates.personnelEndTime1()",
-        "_row_num": 54
+        "_row_num": 53
       },
       {
         "type": "string",
         "name": "personnel_endtime_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 55
+        "_row_num": 54
       },
       {
         "type": "assign",
         "name": "personnel_totalhrs_1",
         "calculation": "calculates.personnelTotalHrs1()",
-        "_row_num": 56
+        "_row_num": 55
       },
       {
         "type": "string",
         "name": "personnel_totalhrs_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 57
+        "_row_num": 56
       },
       {
         "type": "assign",
         "name": "personnel_title_2",
         "calculation": "calculates.personnelTitle2()",
-        "_row_num": 58
+        "_row_num": 57
       },
       {
         "type": "string",
         "name": "personnel_title_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 59
+        "_row_num": 58
       },
       {
         "type": "assign",
         "name": "personnel_name_2",
         "calculation": "calculates.personnelName2()",
-        "_row_num": 60
+        "_row_num": 59
       },
       {
         "type": "string",
         "name": "personnel_name_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 61
+        "_row_num": 60
       },
       {
         "type": "assign",
         "name": "personnel_starttime_2",
         "calculation": "calculates.personnelStartTime2()",
-        "_row_num": 62
+        "_row_num": 61
       },
       {
         "type": "string",
         "name": "personnel_starttime_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 63
+        "_row_num": 62
       },
       {
         "type": "assign",
         "name": "personnel_endtime_2",
         "calculation": "calculates.personnelEndTime2()",
-        "_row_num": 64
+        "_row_num": 63
       },
       {
         "type": "string",
         "name": "personnel_endtime_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 65
+        "_row_num": 64
       },
       {
         "type": "assign",
         "name": "personnel_totalhrs_2",
         "calculation": "calculates.personnelTotalHrs2()",
-        "_row_num": 66
+        "_row_num": 65
       },
       {
         "type": "string",
         "name": "personnel_totalhrs_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 67
+        "_row_num": 66
       },
       {
         "type": "assign",
         "name": "equipment_name_0",
         "calculation": "calculates.equipmentName0()",
-        "_row_num": 68
+        "_row_num": 67
       },
       {
         "type": "string",
         "name": "equipment_name_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 69
+        "_row_num": 68
       },
       {
         "type": "assign",
         "name": "equipment_quantity_0",
         "calculation": "calculates.equipmentQuantity0()",
-        "_row_num": 70
+        "_row_num": 69
       },
       {
         "type": "string",
         "name": "equipment_quantity_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 71
+        "_row_num": 70
       },
       {
         "type": "assign",
         "name": "equipment_totalhrs_0",
         "calculation": "calculates.equipmentTotalHrs0()",
-        "_row_num": 72
+        "_row_num": 71
       },
       {
         "type": "string",
         "name": "equipment_totalhrs_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 73
+        "_row_num": 72
       },
       {
         "type": "assign",
         "name": "equipment_name_1",
         "calculation": "calculates.equipmentName1()",
-        "_row_num": 74
+        "_row_num": 73
       },
       {
         "type": "string",
         "name": "equipment_name_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 75
+        "_row_num": 74
       },
       {
         "type": "assign",
         "name": "equipment_quantity_1",
         "calculation": "calculates.equipmentQuantity1()",
-        "_row_num": 76
+        "_row_num": 75
       },
       {
         "type": "string",
         "name": "equipment_quantity_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 77
+        "_row_num": 76
       },
       {
         "type": "assign",
         "name": "equipment_totalhrs_1",
         "calculation": "calculates.equipmentTotalHrs1()",
-        "_row_num": 78
+        "_row_num": 77
       },
       {
         "type": "string",
         "name": "equipment_totalhrs_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 79
+        "_row_num": 78
       },
       {
         "type": "assign",
         "name": "equipment_name_2",
         "calculation": "calculates.equipmentName2()",
-        "_row_num": 80
+        "_row_num": 79
       },
       {
         "type": "string",
         "name": "equipment_name_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 81
+        "_row_num": 80
       },
       {
         "type": "assign",
         "name": "equipment_quantity_2",
         "calculation": "calculates.equipmentQuantity2()",
-        "_row_num": 82
+        "_row_num": 81
       },
       {
         "type": "string",
         "name": "equipment_quantity_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 83
+        "_row_num": 82
       },
       {
         "type": "assign",
         "name": "equipment_totalhrs_2",
         "calculation": "calculates.equipmentTotalHrs2()",
-        "_row_num": 84
+        "_row_num": 83
       },
       {
         "type": "string",
         "name": "equipment_totalhrs_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 85
+        "_row_num": 84
       },
       {
         "type": "assign",
         "name": "vehicle_name_0",
         "calculation": "calculates.vehicleName0()",
-        "_row_num": 86
+        "_row_num": 85
       },
       {
         "type": "string",
         "name": "vehicle_name_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 87
+        "_row_num": 86
       },
       {
         "type": "assign",
         "name": "vehicle_quantity_0",
         "calculation": "calculates.vehicleQuantity0()",
-        "_row_num": 88
+        "_row_num": 87
       },
       {
         "type": "string",
         "name": "vehicle_quantity_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 89
+        "_row_num": 88
       },
       {
         "type": "assign",
         "name": "vehicle_totalhrs_0",
         "calculation": "calculates.vehicleTotalHrs0()",
-        "_row_num": 90
+        "_row_num": 89
       },
       {
         "type": "string",
         "name": "vehicle_totalhrs_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 91
+        "_row_num": 90
       },
       {
         "type": "assign",
         "name": "vehicle_name_1",
         "calculation": "calculates.vehicleName1()",
-        "_row_num": 92
+        "_row_num": 91
       },
       {
         "type": "string",
         "name": "vehicle_name_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 93
+        "_row_num": 92
       },
       {
         "type": "assign",
         "name": "vehicle_quantity_1",
         "calculation": "calculates.vehicleQuantity1()",
-        "_row_num": 94
+        "_row_num": 93
       },
       {
         "type": "string",
         "name": "vehicle_quantity_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 95
+        "_row_num": 94
       },
       {
         "type": "assign",
         "name": "vehicle_totalhrs_1",
         "calculation": "calculates.vehicleTotalHrs1()",
-        "_row_num": 96
+        "_row_num": 95
       },
       {
         "type": "string",
         "name": "vehicle_totalhrs_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 97
+        "_row_num": 96
       },
       {
         "type": "assign",
         "name": "vehicle_name_2",
         "calculation": "calculates.vehicleName2()",
-        "_row_num": 98
+        "_row_num": 97
       },
       {
         "type": "string",
         "name": "vehicle_name_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 99
+        "_row_num": 98
       },
       {
         "type": "assign",
         "name": "vehicle_quantity_2",
         "calculation": "calculates.vehicleQuantity2()",
-        "_row_num": 100
+        "_row_num": 99
       },
       {
         "type": "string",
         "name": "vehicle_quantity_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 101
+        "_row_num": 100
       },
       {
         "type": "assign",
         "name": "vehicle_totalhrs_2",
         "calculation": "calculates.vehicleTotalHrs2()",
-        "_row_num": 102
+        "_row_num": 101
       },
       {
         "type": "string",
         "name": "vehicle_totalhrs_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 103
+        "_row_num": 102
       },
       {
         "type": "assign",
         "name": "consumable_name_0",
         "calculation": "calculates.consumableName0()",
-        "_row_num": 104
+        "_row_num": 103
       },
       {
         "type": "string",
         "name": "consumable_name_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 105
+        "_row_num": 104
       },
       {
         "type": "assign",
         "name": "consumable_quantity_0",
         "calculation": "calculates.consumableQuantity0()",
-        "_row_num": 106
+        "_row_num": 105
       },
       {
         "type": "string",
         "name": "consumable_quantity_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 107
+        "_row_num": 106
       },
       {
         "type": "assign",
         "name": "consumable_totalhrs_0",
         "calculation": "calculates.consumableTotalHrs0()",
-        "_row_num": 108
+        "_row_num": 107
       },
       {
         "type": "string",
         "name": "consumable_totalhrs_0",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 109
+        "_row_num": 108
       },
       {
         "type": "assign",
         "name": "consumable_name_1",
         "calculation": "calculates.consumableName1()",
-        "_row_num": 110
+        "_row_num": 109
       },
       {
         "type": "string",
         "name": "consumable_name_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 111
+        "_row_num": 110
       },
       {
         "type": "assign",
         "name": "consumable_quantity_1",
         "calculation": "calculates.consumableQuantity1()",
-        "_row_num": 112
+        "_row_num": 111
       },
       {
         "type": "string",
         "name": "consumable_quantity_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 113
+        "_row_num": 112
       },
       {
         "type": "assign",
         "name": "consumable_totalhrs_1",
         "calculation": "calculates.consumableTotalHrs1()",
-        "_row_num": 114
+        "_row_num": 113
       },
       {
         "type": "string",
         "name": "consumable_totalhrs_1",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 115
+        "_row_num": 114
       },
       {
         "type": "assign",
         "name": "consumable_name_2",
         "calculation": "calculates.consumableName2()",
-        "_row_num": 116
+        "_row_num": 115
       },
       {
         "type": "string",
         "name": "consumable_name_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 117
+        "_row_num": 116
       },
       {
         "type": "assign",
         "name": "consumable_quantity_2",
         "calculation": "calculates.consumableQuantity2()",
-        "_row_num": 118
+        "_row_num": 117
       },
       {
         "type": "string",
         "name": "consumable_quantity_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 119
+        "_row_num": 118
       },
       {
         "type": "assign",
         "name": "consumable_totalhrs_2",
         "calculation": "calculates.consumableTotalHrs2()",
-        "_row_num": 120
+        "_row_num": 119
       },
       {
         "type": "string",
         "name": "consumable_totalhrs_2",
         "templatePath": "hidden_input_type.handlebars",
-        "_row_num": 121
-      },
-      {
-        "type": "string",
-        "name": "construction",
-        "display": {
-          "text": "Construction"
-        },
-        "hideInContents": "true",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 122
-      },
-      {
-        "type": "string",
-        "name": "primary_contents",
-        "display": {
-          "text": "Primary contents"
-        },
-        "hideInContents": "true",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 123
-      },
-      {
-        "type": "string",
-        "name": "capacity",
-        "display": {
-          "text": "Capacity"
-        },
-        "hideInContents": "true",
-        "templatePath": "string_input_type.handlebars",
-        "_row_num": 124
+        "_row_num": 120
       },
       {
         "clause": "end screen",
-        "_row_num": 125
+        "_row_num": 121
       },
       {
         "branch_label": "_contents",
-        "_row_num": 126
+        "_row_num": 122
       },
       {
         "clause": "begin screen",
@@ -814,99 +773,90 @@
           "text": "AST Month Inspection Home Page"
         },
         "hideInContents": "true",
-        "_row_num": 127
-      },
-      {
-        "type": "note",
-        "display": {
-          "text": "Tank ID: {{data.tank_id}}"
-        },
-        "hideInContents": "true",
-        "templatePath": "note_for_id.handlebars",
-        "_row_num": 128
+        "_row_num": 123
       },
       {
         "type": "user_branch",
         "values_list": "branches",
         "hideInContents": "true",
-        "_row_num": 129
+        "_row_num": 124
       },
       {
         "clause": "end screen",
         "hideInContents": "true",
-        "_row_num": 130
+        "_row_num": 125
       },
       {
         "clause": "goto _contents",
-        "_row_num": 131
+        "_row_num": 126
       },
       {
         "branch_label": "notes",
-        "_row_num": 132
+        "_row_num": 127
       },
       {
         "clause": "do section notes_section",
-        "_row_num": 133
+        "_row_num": 128
       },
       {
         "clause": "goto _contents",
-        "_row_num": 134
+        "_row_num": 129
       },
       {
         "branch_label": "gps",
-        "_row_num": 135
+        "_row_num": 130
       },
       {
         "clause": "do section gps_section",
-        "_row_num": 136
+        "_row_num": 131
       },
       {
         "clause": "goto _contents",
-        "_row_num": 137
+        "_row_num": 132
       },
       {
         "branch_label": "image",
-        "_row_num": 138
+        "_row_num": 133
       },
       {
         "clause": "do section image_section",
-        "_row_num": 139
+        "_row_num": 134
       },
       {
         "clause": "goto _contents",
-        "_row_num": 140
+        "_row_num": 135
       },
       {
         "branch_label": "signature",
-        "_row_num": 141
+        "_row_num": 136
       },
       {
         "clause": "do section signature_section",
-        "_row_num": 142
+        "_row_num": 137
       },
       {
         "clause": "goto _contents",
-        "_row_num": 143
+        "_row_num": 138
       },
       {
         "branch_label": "signature_2",
-        "_row_num": 144
+        "_row_num": 139
       },
       {
         "clause": "do section signature_2_section",
-        "_row_num": 145
+        "_row_num": 140
       },
       {
         "clause": "goto _contents",
-        "_row_num": 146
+        "_row_num": 141
       },
       {
         "branch_label": "exitpath",
-        "_row_num": 147
+        "_row_num": 142
       },
       {
         "clause": "exit section",
-        "_row_num": 148
+        "_row_num": 143
       }
     ],
     "gps_section": [
@@ -1908,20 +1858,10 @@
       }
     },
     "model": {
-      "tank_id": {
-        "_defn": [
-          {
-            "_row_num": 3,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "elementKey": "tank_id"
-      },
       "inspection_id": {
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 5,
             "section_name": "survey"
           }
         ],
@@ -1931,7 +1871,7 @@
       "loc_name": {
         "_defn": [
           {
-            "_row_num": 8,
+            "_row_num": 7,
             "section_name": "survey"
           }
         ],
@@ -1941,7 +1881,7 @@
       "loc_aid": {
         "_defn": [
           {
-            "_row_num": 10,
+            "_row_num": 9,
             "section_name": "survey"
           }
         ],
@@ -1951,7 +1891,7 @@
       "loc_streetAddress": {
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 11,
             "section_name": "survey"
           }
         ],
@@ -1961,7 +1901,7 @@
       "loc_city": {
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 13,
             "section_name": "survey"
           }
         ],
@@ -1971,7 +1911,7 @@
       "loc_state": {
         "_defn": [
           {
-            "_row_num": 16,
+            "_row_num": 15,
             "section_name": "survey"
           }
         ],
@@ -1981,7 +1921,7 @@
       "loc_zip": {
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 17,
             "section_name": "survey"
           }
         ],
@@ -1991,7 +1931,7 @@
       "loc_client": {
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 19,
             "section_name": "survey"
           }
         ],
@@ -2001,7 +1941,7 @@
       "inspector_name": {
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 20,
             "section_name": "survey"
           }
         ],
@@ -2012,7 +1952,7 @@
       "sample_date": {
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 22,
             "section_name": "survey"
           }
         ],
@@ -2022,7 +1962,7 @@
       "weather": {
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 24,
             "section_name": "survey"
           }
         ],
@@ -2032,7 +1972,7 @@
       "project_number": {
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 26,
             "section_name": "survey"
           }
         ],
@@ -2042,7 +1982,7 @@
       "project_correl_id": {
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 28,
             "section_name": "survey"
           }
         ],
@@ -2052,7 +1992,7 @@
       "project_done": {
         "_defn": [
           {
-            "_row_num": 31,
+            "_row_num": 30,
             "section_name": "survey"
           }
         ],
@@ -2062,7 +2002,7 @@
       "project_manager": {
         "_defn": [
           {
-            "_row_num": 33,
+            "_row_num": 32,
             "section_name": "survey"
           }
         ],
@@ -2072,7 +2012,7 @@
       "project_comment": {
         "_defn": [
           {
-            "_row_num": 35,
+            "_row_num": 34,
             "section_name": "survey"
           }
         ],
@@ -2082,7 +2022,7 @@
       "project_daily_report": {
         "_defn": [
           {
-            "_row_num": 37,
+            "_row_num": 36,
             "section_name": "survey"
           }
         ],
@@ -2092,7 +2032,7 @@
       "personnel_title_0": {
         "_defn": [
           {
-            "_row_num": 39,
+            "_row_num": 38,
             "section_name": "survey"
           }
         ],
@@ -2102,7 +2042,7 @@
       "personnel_name_0": {
         "_defn": [
           {
-            "_row_num": 41,
+            "_row_num": 40,
             "section_name": "survey"
           }
         ],
@@ -2112,7 +2052,7 @@
       "personnel_starttime_0": {
         "_defn": [
           {
-            "_row_num": 43,
+            "_row_num": 42,
             "section_name": "survey"
           }
         ],
@@ -2122,7 +2062,7 @@
       "personnel_endtime_0": {
         "_defn": [
           {
-            "_row_num": 45,
+            "_row_num": 44,
             "section_name": "survey"
           }
         ],
@@ -2132,7 +2072,7 @@
       "personnel_totalhrs_0": {
         "_defn": [
           {
-            "_row_num": 47,
+            "_row_num": 46,
             "section_name": "survey"
           }
         ],
@@ -2142,7 +2082,7 @@
       "personnel_title_1": {
         "_defn": [
           {
-            "_row_num": 49,
+            "_row_num": 48,
             "section_name": "survey"
           }
         ],
@@ -2152,7 +2092,7 @@
       "personnel_name_1": {
         "_defn": [
           {
-            "_row_num": 51,
+            "_row_num": 50,
             "section_name": "survey"
           }
         ],
@@ -2162,7 +2102,7 @@
       "personnel_starttime_1": {
         "_defn": [
           {
-            "_row_num": 53,
+            "_row_num": 52,
             "section_name": "survey"
           }
         ],
@@ -2172,7 +2112,7 @@
       "personnel_endtime_1": {
         "_defn": [
           {
-            "_row_num": 55,
+            "_row_num": 54,
             "section_name": "survey"
           }
         ],
@@ -2182,7 +2122,7 @@
       "personnel_totalhrs_1": {
         "_defn": [
           {
-            "_row_num": 57,
+            "_row_num": 56,
             "section_name": "survey"
           }
         ],
@@ -2192,7 +2132,7 @@
       "personnel_title_2": {
         "_defn": [
           {
-            "_row_num": 59,
+            "_row_num": 58,
             "section_name": "survey"
           }
         ],
@@ -2202,7 +2142,7 @@
       "personnel_name_2": {
         "_defn": [
           {
-            "_row_num": 61,
+            "_row_num": 60,
             "section_name": "survey"
           }
         ],
@@ -2212,7 +2152,7 @@
       "personnel_starttime_2": {
         "_defn": [
           {
-            "_row_num": 63,
+            "_row_num": 62,
             "section_name": "survey"
           }
         ],
@@ -2222,7 +2162,7 @@
       "personnel_endtime_2": {
         "_defn": [
           {
-            "_row_num": 65,
+            "_row_num": 64,
             "section_name": "survey"
           }
         ],
@@ -2232,7 +2172,7 @@
       "personnel_totalhrs_2": {
         "_defn": [
           {
-            "_row_num": 67,
+            "_row_num": 66,
             "section_name": "survey"
           }
         ],
@@ -2242,7 +2182,7 @@
       "equipment_name_0": {
         "_defn": [
           {
-            "_row_num": 69,
+            "_row_num": 68,
             "section_name": "survey"
           }
         ],
@@ -2252,7 +2192,7 @@
       "equipment_quantity_0": {
         "_defn": [
           {
-            "_row_num": 71,
+            "_row_num": 70,
             "section_name": "survey"
           }
         ],
@@ -2262,7 +2202,7 @@
       "equipment_totalhrs_0": {
         "_defn": [
           {
-            "_row_num": 73,
+            "_row_num": 72,
             "section_name": "survey"
           }
         ],
@@ -2272,7 +2212,7 @@
       "equipment_name_1": {
         "_defn": [
           {
-            "_row_num": 75,
+            "_row_num": 74,
             "section_name": "survey"
           }
         ],
@@ -2282,7 +2222,7 @@
       "equipment_quantity_1": {
         "_defn": [
           {
-            "_row_num": 77,
+            "_row_num": 76,
             "section_name": "survey"
           }
         ],
@@ -2292,7 +2232,7 @@
       "equipment_totalhrs_1": {
         "_defn": [
           {
-            "_row_num": 79,
+            "_row_num": 78,
             "section_name": "survey"
           }
         ],
@@ -2302,7 +2242,7 @@
       "equipment_name_2": {
         "_defn": [
           {
-            "_row_num": 81,
+            "_row_num": 80,
             "section_name": "survey"
           }
         ],
@@ -2312,7 +2252,7 @@
       "equipment_quantity_2": {
         "_defn": [
           {
-            "_row_num": 83,
+            "_row_num": 82,
             "section_name": "survey"
           }
         ],
@@ -2322,7 +2262,7 @@
       "equipment_totalhrs_2": {
         "_defn": [
           {
-            "_row_num": 85,
+            "_row_num": 84,
             "section_name": "survey"
           }
         ],
@@ -2332,7 +2272,7 @@
       "vehicle_name_0": {
         "_defn": [
           {
-            "_row_num": 87,
+            "_row_num": 86,
             "section_name": "survey"
           }
         ],
@@ -2342,7 +2282,7 @@
       "vehicle_quantity_0": {
         "_defn": [
           {
-            "_row_num": 89,
+            "_row_num": 88,
             "section_name": "survey"
           }
         ],
@@ -2352,7 +2292,7 @@
       "vehicle_totalhrs_0": {
         "_defn": [
           {
-            "_row_num": 91,
+            "_row_num": 90,
             "section_name": "survey"
           }
         ],
@@ -2362,7 +2302,7 @@
       "vehicle_name_1": {
         "_defn": [
           {
-            "_row_num": 93,
+            "_row_num": 92,
             "section_name": "survey"
           }
         ],
@@ -2372,7 +2312,7 @@
       "vehicle_quantity_1": {
         "_defn": [
           {
-            "_row_num": 95,
+            "_row_num": 94,
             "section_name": "survey"
           }
         ],
@@ -2382,7 +2322,7 @@
       "vehicle_totalhrs_1": {
         "_defn": [
           {
-            "_row_num": 97,
+            "_row_num": 96,
             "section_name": "survey"
           }
         ],
@@ -2392,7 +2332,7 @@
       "vehicle_name_2": {
         "_defn": [
           {
-            "_row_num": 99,
+            "_row_num": 98,
             "section_name": "survey"
           }
         ],
@@ -2402,7 +2342,7 @@
       "vehicle_quantity_2": {
         "_defn": [
           {
-            "_row_num": 101,
+            "_row_num": 100,
             "section_name": "survey"
           }
         ],
@@ -2412,7 +2352,7 @@
       "vehicle_totalhrs_2": {
         "_defn": [
           {
-            "_row_num": 103,
+            "_row_num": 102,
             "section_name": "survey"
           }
         ],
@@ -2422,7 +2362,7 @@
       "consumable_name_0": {
         "_defn": [
           {
-            "_row_num": 105,
+            "_row_num": 104,
             "section_name": "survey"
           }
         ],
@@ -2432,7 +2372,7 @@
       "consumable_quantity_0": {
         "_defn": [
           {
-            "_row_num": 107,
+            "_row_num": 106,
             "section_name": "survey"
           }
         ],
@@ -2442,7 +2382,7 @@
       "consumable_totalhrs_0": {
         "_defn": [
           {
-            "_row_num": 109,
+            "_row_num": 108,
             "section_name": "survey"
           }
         ],
@@ -2452,7 +2392,7 @@
       "consumable_name_1": {
         "_defn": [
           {
-            "_row_num": 111,
+            "_row_num": 110,
             "section_name": "survey"
           }
         ],
@@ -2462,7 +2402,7 @@
       "consumable_quantity_1": {
         "_defn": [
           {
-            "_row_num": 113,
+            "_row_num": 112,
             "section_name": "survey"
           }
         ],
@@ -2472,7 +2412,7 @@
       "consumable_totalhrs_1": {
         "_defn": [
           {
-            "_row_num": 115,
+            "_row_num": 114,
             "section_name": "survey"
           }
         ],
@@ -2482,7 +2422,7 @@
       "consumable_name_2": {
         "_defn": [
           {
-            "_row_num": 117,
+            "_row_num": 116,
             "section_name": "survey"
           }
         ],
@@ -2492,7 +2432,7 @@
       "consumable_quantity_2": {
         "_defn": [
           {
-            "_row_num": 119,
+            "_row_num": 118,
             "section_name": "survey"
           }
         ],
@@ -2502,42 +2442,12 @@
       "consumable_totalhrs_2": {
         "_defn": [
           {
-            "_row_num": 121,
+            "_row_num": 120,
             "section_name": "survey"
           }
         ],
         "type": "string",
         "elementKey": "consumable_totalhrs_2"
-      },
-      "construction": {
-        "_defn": [
-          {
-            "_row_num": 122,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "elementKey": "construction"
-      },
-      "primary_contents": {
-        "_defn": [
-          {
-            "_row_num": 123,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "elementKey": "primary_contents"
-      },
-      "capacity": {
-        "_defn": [
-          {
-            "_row_num": 124,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "elementKey": "capacity"
       },
       "geo_info": {
         "_defn": [
@@ -2828,41 +2738,36 @@
         },
         "prompts": [
           {
-            "type": "string",
-            "name": "tank_id",
-            "display": {
-              "text": "Tank ID"
-            },
-            "hideInContents": "true",
-            "templatePath": "string_input_type.handlebars",
-            "required": "true",
-            "_row_num": 3,
-            "__rowNum__": 2,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 0
-          },
-          {
             "type": "linked_table",
             "values_list": "linked_locations",
             "display": {
               "text": "Add locations to this list",
               "new_instance_text": "Add Location"
             },
-            "_row_num": 4,
-            "__rowNum__": 3,
+            "_row_num": 3,
+            "__rowNum__": 2,
             "_token_type": "prompt",
             "_type": "linked_table",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 1
+            "promptIdx": 0
           },
           {
             "type": "string",
             "name": "inspection_id",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "string",
+            "name": "loc_name",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 7,
+            "__rowNum__": 6,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -2870,10 +2775,10 @@
           },
           {
             "type": "string",
-            "name": "loc_name",
+            "name": "loc_aid",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 8,
-            "__rowNum__": 7,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -2881,10 +2786,10 @@
           },
           {
             "type": "string",
-            "name": "loc_aid",
+            "name": "loc_streetAddress",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 10,
-            "__rowNum__": 9,
+            "_row_num": 11,
+            "__rowNum__": 10,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -2892,10 +2797,10 @@
           },
           {
             "type": "string",
-            "name": "loc_streetAddress",
+            "name": "loc_city",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 12,
-            "__rowNum__": 11,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -2903,10 +2808,10 @@
           },
           {
             "type": "string",
-            "name": "loc_city",
+            "name": "loc_state",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 15,
+            "__rowNum__": 14,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -2914,10 +2819,10 @@
           },
           {
             "type": "string",
-            "name": "loc_state",
+            "name": "loc_zip",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 16,
-            "__rowNum__": 15,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -2925,25 +2830,14 @@
           },
           {
             "type": "string",
-            "name": "loc_zip",
+            "name": "loc_client",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 18,
-            "__rowNum__": 17,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 8
-          },
-          {
-            "type": "string",
-            "name": "loc_client",
-            "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 20,
-            "__rowNum__": 19,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 9
           },
           {
             "type": "select_one_dropdown",
@@ -2955,19 +2849,30 @@
             "hideInContents": "true",
             "templatePath": "custom_select_dropdown.handlebars",
             "required": "true",
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 20,
+            "__rowNum__": 19,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 10
+            "promptIdx": 9
           },
           {
             "type": "string",
             "name": "sample_date",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "type": "string",
+            "name": "weather",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -2975,10 +2880,10 @@
           },
           {
             "type": "string",
-            "name": "weather",
+            "name": "project_number",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -2986,10 +2891,10 @@
           },
           {
             "type": "string",
-            "name": "project_number",
+            "name": "project_correl_id",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 27,
-            "__rowNum__": 26,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -2997,10 +2902,10 @@
           },
           {
             "type": "string",
-            "name": "project_correl_id",
+            "name": "project_done",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 29,
-            "__rowNum__": 28,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3008,10 +2913,10 @@
           },
           {
             "type": "string",
-            "name": "project_done",
+            "name": "project_manager",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "_row_num": 32,
+            "__rowNum__": 31,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3019,10 +2924,10 @@
           },
           {
             "type": "string",
-            "name": "project_manager",
+            "name": "project_comment",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 34,
+            "__rowNum__": 33,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3030,10 +2935,10 @@
           },
           {
             "type": "string",
-            "name": "project_comment",
+            "name": "project_daily_report",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 35,
-            "__rowNum__": 34,
+            "_row_num": 36,
+            "__rowNum__": 35,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3041,10 +2946,10 @@
           },
           {
             "type": "string",
-            "name": "project_daily_report",
+            "name": "personnel_title_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 37,
-            "__rowNum__": 36,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3052,10 +2957,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_title_0",
+            "name": "personnel_name_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 39,
-            "__rowNum__": 38,
+            "_row_num": 40,
+            "__rowNum__": 39,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3063,10 +2968,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_name_0",
+            "name": "personnel_starttime_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 41,
-            "__rowNum__": 40,
+            "_row_num": 42,
+            "__rowNum__": 41,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3074,10 +2979,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_starttime_0",
+            "name": "personnel_endtime_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 43,
-            "__rowNum__": 42,
+            "_row_num": 44,
+            "__rowNum__": 43,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3085,10 +2990,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_endtime_0",
+            "name": "personnel_totalhrs_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 45,
-            "__rowNum__": 44,
+            "_row_num": 46,
+            "__rowNum__": 45,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3096,10 +3001,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_totalhrs_0",
+            "name": "personnel_title_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 47,
-            "__rowNum__": 46,
+            "_row_num": 48,
+            "__rowNum__": 47,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3107,10 +3012,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_title_1",
+            "name": "personnel_name_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 49,
-            "__rowNum__": 48,
+            "_row_num": 50,
+            "__rowNum__": 49,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3118,10 +3023,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_name_1",
+            "name": "personnel_starttime_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 51,
-            "__rowNum__": 50,
+            "_row_num": 52,
+            "__rowNum__": 51,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3129,10 +3034,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_starttime_1",
+            "name": "personnel_endtime_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 53,
-            "__rowNum__": 52,
+            "_row_num": 54,
+            "__rowNum__": 53,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3140,10 +3045,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_endtime_1",
+            "name": "personnel_totalhrs_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 55,
-            "__rowNum__": 54,
+            "_row_num": 56,
+            "__rowNum__": 55,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3151,10 +3056,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_totalhrs_1",
+            "name": "personnel_title_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 57,
-            "__rowNum__": 56,
+            "_row_num": 58,
+            "__rowNum__": 57,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3162,10 +3067,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_title_2",
+            "name": "personnel_name_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 59,
-            "__rowNum__": 58,
+            "_row_num": 60,
+            "__rowNum__": 59,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3173,10 +3078,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_name_2",
+            "name": "personnel_starttime_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 61,
-            "__rowNum__": 60,
+            "_row_num": 62,
+            "__rowNum__": 61,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3184,10 +3089,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_starttime_2",
+            "name": "personnel_endtime_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 63,
-            "__rowNum__": 62,
+            "_row_num": 64,
+            "__rowNum__": 63,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3195,10 +3100,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_endtime_2",
+            "name": "personnel_totalhrs_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 65,
-            "__rowNum__": 64,
+            "_row_num": 66,
+            "__rowNum__": 65,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3206,10 +3111,10 @@
           },
           {
             "type": "string",
-            "name": "personnel_totalhrs_2",
+            "name": "equipment_name_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 67,
-            "__rowNum__": 66,
+            "_row_num": 68,
+            "__rowNum__": 67,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3217,10 +3122,10 @@
           },
           {
             "type": "string",
-            "name": "equipment_name_0",
+            "name": "equipment_quantity_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 69,
-            "__rowNum__": 68,
+            "_row_num": 70,
+            "__rowNum__": 69,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3228,10 +3133,10 @@
           },
           {
             "type": "string",
-            "name": "equipment_quantity_0",
+            "name": "equipment_totalhrs_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 71,
-            "__rowNum__": 70,
+            "_row_num": 72,
+            "__rowNum__": 71,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3239,10 +3144,10 @@
           },
           {
             "type": "string",
-            "name": "equipment_totalhrs_0",
+            "name": "equipment_name_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 73,
-            "__rowNum__": 72,
+            "_row_num": 74,
+            "__rowNum__": 73,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3250,10 +3155,10 @@
           },
           {
             "type": "string",
-            "name": "equipment_name_1",
+            "name": "equipment_quantity_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 75,
-            "__rowNum__": 74,
+            "_row_num": 76,
+            "__rowNum__": 75,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3261,10 +3166,10 @@
           },
           {
             "type": "string",
-            "name": "equipment_quantity_1",
+            "name": "equipment_totalhrs_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 77,
-            "__rowNum__": 76,
+            "_row_num": 78,
+            "__rowNum__": 77,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3272,10 +3177,10 @@
           },
           {
             "type": "string",
-            "name": "equipment_totalhrs_1",
+            "name": "equipment_name_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 79,
-            "__rowNum__": 78,
+            "_row_num": 80,
+            "__rowNum__": 79,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3283,10 +3188,10 @@
           },
           {
             "type": "string",
-            "name": "equipment_name_2",
+            "name": "equipment_quantity_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 81,
-            "__rowNum__": 80,
+            "_row_num": 82,
+            "__rowNum__": 81,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3294,10 +3199,10 @@
           },
           {
             "type": "string",
-            "name": "equipment_quantity_2",
+            "name": "equipment_totalhrs_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 83,
-            "__rowNum__": 82,
+            "_row_num": 84,
+            "__rowNum__": 83,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3305,10 +3210,10 @@
           },
           {
             "type": "string",
-            "name": "equipment_totalhrs_2",
+            "name": "vehicle_name_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 85,
-            "__rowNum__": 84,
+            "_row_num": 86,
+            "__rowNum__": 85,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3316,10 +3221,10 @@
           },
           {
             "type": "string",
-            "name": "vehicle_name_0",
+            "name": "vehicle_quantity_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 87,
-            "__rowNum__": 86,
+            "_row_num": 88,
+            "__rowNum__": 87,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3327,10 +3232,10 @@
           },
           {
             "type": "string",
-            "name": "vehicle_quantity_0",
+            "name": "vehicle_totalhrs_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 89,
-            "__rowNum__": 88,
+            "_row_num": 90,
+            "__rowNum__": 89,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3338,10 +3243,10 @@
           },
           {
             "type": "string",
-            "name": "vehicle_totalhrs_0",
+            "name": "vehicle_name_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 91,
-            "__rowNum__": 90,
+            "_row_num": 92,
+            "__rowNum__": 91,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3349,10 +3254,10 @@
           },
           {
             "type": "string",
-            "name": "vehicle_name_1",
+            "name": "vehicle_quantity_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 93,
-            "__rowNum__": 92,
+            "_row_num": 94,
+            "__rowNum__": 93,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3360,10 +3265,10 @@
           },
           {
             "type": "string",
-            "name": "vehicle_quantity_1",
+            "name": "vehicle_totalhrs_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 95,
-            "__rowNum__": 94,
+            "_row_num": 96,
+            "__rowNum__": 95,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3371,10 +3276,10 @@
           },
           {
             "type": "string",
-            "name": "vehicle_totalhrs_1",
+            "name": "vehicle_name_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 97,
-            "__rowNum__": 96,
+            "_row_num": 98,
+            "__rowNum__": 97,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3382,10 +3287,10 @@
           },
           {
             "type": "string",
-            "name": "vehicle_name_2",
+            "name": "vehicle_quantity_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 99,
-            "__rowNum__": 98,
+            "_row_num": 100,
+            "__rowNum__": 99,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3393,10 +3298,10 @@
           },
           {
             "type": "string",
-            "name": "vehicle_quantity_2",
+            "name": "vehicle_totalhrs_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 101,
-            "__rowNum__": 100,
+            "_row_num": 102,
+            "__rowNum__": 101,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3404,10 +3309,10 @@
           },
           {
             "type": "string",
-            "name": "vehicle_totalhrs_2",
+            "name": "consumable_name_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 103,
-            "__rowNum__": 102,
+            "_row_num": 104,
+            "__rowNum__": 103,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3415,10 +3320,10 @@
           },
           {
             "type": "string",
-            "name": "consumable_name_0",
+            "name": "consumable_quantity_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 105,
-            "__rowNum__": 104,
+            "_row_num": 106,
+            "__rowNum__": 105,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3426,10 +3331,10 @@
           },
           {
             "type": "string",
-            "name": "consumable_quantity_0",
+            "name": "consumable_totalhrs_0",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 107,
-            "__rowNum__": 106,
+            "_row_num": 108,
+            "__rowNum__": 107,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3437,10 +3342,10 @@
           },
           {
             "type": "string",
-            "name": "consumable_totalhrs_0",
+            "name": "consumable_name_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 109,
-            "__rowNum__": 108,
+            "_row_num": 110,
+            "__rowNum__": 109,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3448,10 +3353,10 @@
           },
           {
             "type": "string",
-            "name": "consumable_name_1",
+            "name": "consumable_quantity_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 111,
-            "__rowNum__": 110,
+            "_row_num": 112,
+            "__rowNum__": 111,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3459,10 +3364,10 @@
           },
           {
             "type": "string",
-            "name": "consumable_quantity_1",
+            "name": "consumable_totalhrs_1",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 113,
-            "__rowNum__": 112,
+            "_row_num": 114,
+            "__rowNum__": 113,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3470,10 +3375,10 @@
           },
           {
             "type": "string",
-            "name": "consumable_totalhrs_1",
+            "name": "consumable_name_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 115,
-            "__rowNum__": 114,
+            "_row_num": 116,
+            "__rowNum__": 115,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3481,10 +3386,10 @@
           },
           {
             "type": "string",
-            "name": "consumable_name_2",
+            "name": "consumable_quantity_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 117,
-            "__rowNum__": 116,
+            "_row_num": 118,
+            "__rowNum__": 117,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
@@ -3492,104 +3397,34 @@
           },
           {
             "type": "string",
-            "name": "consumable_quantity_2",
+            "name": "consumable_totalhrs_2",
             "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 119,
-            "__rowNum__": 118,
+            "_row_num": 120,
+            "__rowNum__": 119,
             "_token_type": "prompt",
             "_type": "string",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 59
           },
           {
-            "type": "string",
-            "name": "consumable_totalhrs_2",
-            "templatePath": "hidden_input_type.handlebars",
-            "_row_num": 121,
-            "__rowNum__": 120,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 60
-          },
-          {
-            "type": "string",
-            "name": "construction",
-            "display": {
-              "text": "Construction"
-            },
-            "hideInContents": "true",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 122,
-            "__rowNum__": 121,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 61
-          },
-          {
-            "type": "string",
-            "name": "primary_contents",
-            "display": {
-              "text": "Primary contents"
-            },
-            "hideInContents": "true",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 123,
-            "__rowNum__": 122,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 62
-          },
-          {
-            "type": "string",
-            "name": "capacity",
-            "display": {
-              "text": "Capacity"
-            },
-            "hideInContents": "true",
-            "templatePath": "string_input_type.handlebars",
-            "_row_num": 124,
-            "__rowNum__": 123,
-            "_token_type": "prompt",
-            "_type": "string",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 63
-          },
-          {
-            "type": "note",
-            "display": {
-              "text": "Tank ID: {{data.tank_id}}"
-            },
-            "hideInContents": "true",
-            "templatePath": "note_for_id.handlebars",
-            "_row_num": 128,
-            "__rowNum__": 127,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen127",
-            "promptIdx": 64
-          },
-          {
             "type": "user_branch",
             "values_list": "branches",
             "hideInContents": "true",
-            "_row_num": 129,
-            "__rowNum__": 128,
+            "_row_num": 124,
+            "__rowNum__": 123,
             "_token_type": "prompt",
             "_type": "user_branch",
-            "_branch_label_enclosing_screen": "survey/_screen127",
-            "promptIdx": 65
+            "_branch_label_enclosing_screen": "survey/_screen123",
+            "promptIdx": 60
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 133,
-            "__rowNum__": 132,
+            "_row_num": 128,
+            "__rowNum__": 127,
             "_token_type": "prompt",
             "_do_section_name": "notes_section",
             "_type": "_section",
-            "promptIdx": 66,
+            "promptIdx": 61,
             "display": {
               "title": "Notes"
             },
@@ -3597,12 +3432,12 @@
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 136,
-            "__rowNum__": 135,
+            "_row_num": 131,
+            "__rowNum__": 130,
             "_token_type": "prompt",
             "_do_section_name": "gps_section",
             "_type": "_section",
-            "promptIdx": 67,
+            "promptIdx": 62,
             "display": {
               "title": "GPS"
             },
@@ -3610,12 +3445,12 @@
           },
           {
             "clause": "do section image_section",
-            "_row_num": 139,
-            "__rowNum__": 138,
+            "_row_num": 134,
+            "__rowNum__": 133,
             "_token_type": "prompt",
             "_do_section_name": "image_section",
             "_type": "_section",
-            "promptIdx": 68,
+            "promptIdx": 63,
             "display": {
               "title": "Photo"
             },
@@ -3623,12 +3458,12 @@
           },
           {
             "clause": "do section signature_section",
-            "_row_num": 142,
-            "__rowNum__": 141,
+            "_row_num": 137,
+            "__rowNum__": 136,
             "_token_type": "prompt",
             "_do_section_name": "signature_section",
             "_type": "_section",
-            "promptIdx": 69,
+            "promptIdx": 64,
             "display": {
               "title": "Signature"
             },
@@ -3636,12 +3471,12 @@
           },
           {
             "clause": "do section signature_2_section",
-            "_row_num": 145,
-            "__rowNum__": 144,
+            "_row_num": 140,
+            "__rowNum__": 139,
             "_token_type": "prompt",
             "_do_section_name": "signature_2_section",
             "_type": "_section",
-            "promptIdx": 70,
+            "promptIdx": 65,
             "display": {
               "title": "Spill Prevention AST Monthly Inspection"
             },
@@ -3650,8 +3485,7 @@
         ],
         "validation_tag_map": {
           "finalize": [
-            0,
-            10
+            9
           ]
         },
         "operations": [
@@ -3666,11 +3500,11 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 125,
-              "__rowNum__": 124,
+              "_row_num": 121,
+              "__rowNum__": 120,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(2);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(3);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(4);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(5);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(6);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(7);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(8);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(11);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(12);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(13);\nassign('project_correl_id', calculates.flowid());\nactivePromptIndicies.push(14);\nassign('project_done', calculates.projectdone());\nactivePromptIndicies.push(15);\nassign('project_manager', calculates.projectmanager());\nactivePromptIndicies.push(16);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(17);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(18);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(19);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(20);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(21);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(22);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(23);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(24);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(25);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(26);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(27);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(28);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(29);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(30);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(31);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(32);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(33);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(34);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(35);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(36);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(37);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(38);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(39);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(40);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(41);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(42);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(43);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(44);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(45);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(46);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(47);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(48);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(49);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(50);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(51);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(52);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(53);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(54);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(55);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(56);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(57);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(58);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(59);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nassign('inspection_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(1);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(2);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(3);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(4);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(5);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(6);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(7);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(10);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(11);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(12);\nassign('project_correl_id', calculates.flowid());\nactivePromptIndicies.push(13);\nassign('project_done', calculates.projectdone());\nactivePromptIndicies.push(14);\nassign('project_manager', calculates.projectmanager());\nactivePromptIndicies.push(15);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(16);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(17);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(18);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(19);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(20);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(21);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(22);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(23);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(24);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(25);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(26);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(27);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(28);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(29);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(30);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(31);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(32);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(33);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(34);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(35);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(36);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(37);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(38);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(39);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(40);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(41);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(42);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(43);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(44);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(45);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(46);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(47);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(48);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(49);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(50);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(51);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(52);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(53);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(54);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(55);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(56);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(57);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(58);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(59);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -3679,125 +3513,125 @@
               "text": "AST Month Inspection Home Page"
             },
             "hideInContents": "true",
-            "_row_num": 127,
-            "__rowNum__": 126,
+            "_row_num": 123,
+            "__rowNum__": 122,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
               "hideInContents": "true",
-              "_row_num": 130,
-              "__rowNum__": 129,
+              "_row_num": 125,
+              "__rowNum__": 124,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(64);\nactivePromptIndicies.push(65);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(60);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "clause": "goto _contents",
-            "_row_num": 131,
-            "__rowNum__": 130,
+            "_row_num": 126,
+            "__rowNum__": 125,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 2
           },
           {
             "clause": "do section notes_section",
-            "_row_num": 133,
-            "__rowNum__": 132,
+            "_row_num": 128,
+            "__rowNum__": 127,
             "_token_type": "do_section",
             "_do_section_name": "notes_section",
             "operationIdx": 3
           },
           {
             "clause": "goto _contents",
-            "_row_num": 134,
-            "__rowNum__": 133,
+            "_row_num": 129,
+            "__rowNum__": 128,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 4
           },
           {
             "clause": "do section gps_section",
-            "_row_num": 136,
-            "__rowNum__": 135,
+            "_row_num": 131,
+            "__rowNum__": 130,
             "_token_type": "do_section",
             "_do_section_name": "gps_section",
             "operationIdx": 5
           },
           {
             "clause": "goto _contents",
-            "_row_num": 137,
-            "__rowNum__": 136,
+            "_row_num": 132,
+            "__rowNum__": 131,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 6
           },
           {
             "clause": "do section image_section",
-            "_row_num": 139,
-            "__rowNum__": 138,
+            "_row_num": 134,
+            "__rowNum__": 133,
             "_token_type": "do_section",
             "_do_section_name": "image_section",
             "operationIdx": 7
           },
           {
             "clause": "goto _contents",
-            "_row_num": 140,
-            "__rowNum__": 139,
+            "_row_num": 135,
+            "__rowNum__": 134,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 8
           },
           {
             "clause": "do section signature_section",
-            "_row_num": 142,
-            "__rowNum__": 141,
+            "_row_num": 137,
+            "__rowNum__": 136,
             "_token_type": "do_section",
             "_do_section_name": "signature_section",
             "operationIdx": 9
           },
           {
             "clause": "goto _contents",
-            "_row_num": 143,
-            "__rowNum__": 142,
+            "_row_num": 138,
+            "__rowNum__": 137,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 10
           },
           {
             "clause": "do section signature_2_section",
-            "_row_num": 145,
-            "__rowNum__": 144,
+            "_row_num": 140,
+            "__rowNum__": 139,
             "_token_type": "do_section",
             "_do_section_name": "signature_2_section",
             "operationIdx": 11
           },
           {
             "clause": "goto _contents",
-            "_row_num": 146,
-            "__rowNum__": 145,
+            "_row_num": 141,
+            "__rowNum__": 140,
             "_token_type": "goto_label",
             "_branch_label": "_contents",
             "operationIdx": 12
           },
           {
             "clause": "exit section",
-            "_row_num": 148,
-            "__rowNum__": 147,
+            "_row_num": 143,
+            "__rowNum__": 142,
             "_token_type": "exit_section",
             "operationIdx": 13
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 149,
+            "_row_num": 144,
             "operationIdx": 14
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 1,
-          "_screen127": 1,
+          "_screen123": 1,
           "notes": 3,
           "gps": 5,
           "image": 7,

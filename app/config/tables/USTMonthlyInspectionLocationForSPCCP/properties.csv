@@ -19,6 +19,16 @@ Column,automatic_overfill_protection_fu,displayFormat,string,""
 Column,automatic_overfill_protection_fu,displayName,string,"""automatic_overfill_protection_fu"""
 Column,automatic_overfill_protection_fu,displayVisible,boolean,TRUE
 Column,automatic_overfill_protection_fu,joins,object,""
+Column,capacity,displayChoicesList,object,[]
+Column,capacity,displayFormat,string,""
+Column,capacity,displayName,string,"""capacity"""
+Column,capacity,displayVisible,boolean,TRUE
+Column,capacity,joins,object,""
+Column,construction,displayChoicesList,object,[]
+Column,construction,displayFormat,string,""
+Column,construction,displayName,string,"""construction"""
+Column,construction,displayVisible,boolean,TRUE
+Column,construction,joins,object,""
 Column,dispenser_fuel_staining,displayChoicesList,object,"[{""choice_list_name"":""yesno"",""data_value"":""Yes"",""display"":{""text"":""Yes""},""_row_num"":5},{""choice_list_name"":""yesno"",""data_value"":""No"",""display"":{""text"":""No""},""_row_num"":6},{""choice_list_name"":""yesno"",""data_value"":""NA"",""display"":{""text"":""N/A""},""_row_num"":7}]"
 Column,dispenser_fuel_staining,displayFormat,string,""
 Column,dispenser_fuel_staining,displayName,string,"""dispenser_fuel_staining"""
@@ -104,6 +114,11 @@ Column,manholecovers_subsurface_equipment_fu,displayFormat,string,""
 Column,manholecovers_subsurface_equipment_fu,displayName,string,"""manholecovers_subsurface_equipment_fu"""
 Column,manholecovers_subsurface_equipment_fu,displayVisible,boolean,TRUE
 Column,manholecovers_subsurface_equipment_fu,joins,object,""
+Column,primary_contents,displayChoicesList,object,[]
+Column,primary_contents,displayFormat,string,""
+Column,primary_contents,displayName,string,"""primary_contents"""
+Column,primary_contents,displayVisible,boolean,TRUE
+Column,primary_contents,joins,object,""
 Column,spill_buckets_damaged,displayChoicesList,object,"[{""choice_list_name"":""yesno"",""data_value"":""Yes"",""display"":{""text"":""Yes""},""_row_num"":5},{""choice_list_name"":""yesno"",""data_value"":""No"",""display"":{""text"":""No""},""_row_num"":6},{""choice_list_name"":""yesno"",""data_value"":""NA"",""display"":{""text"":""N/A""},""_row_num"":7}]"
 Column,spill_buckets_damaged,displayFormat,string,""
 Column,spill_buckets_damaged,displayName,string,"""spill_buckets_damaged"""
@@ -196,7 +211,7 @@ Column,threat_procedures_not_posted_fu,displayVisible,boolean,TRUE
 Column,threat_procedures_not_posted_fu,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,USTMonthlyInspectionLocationForSPCCP
-Table,default,colOrder,array,"[""loc_name"",""inspection_id"",""area_location"",""evidence_spillage_overfilling"",""evidence_spillage_overfilling_fu"",""evidence_spillage_overfilling_com"",""equipment_vegetation"",""equipment_vegetation_fu"",""equipment_vegetation_com"",""tank_damaged_labeled"",""tank_damaged_labeled_fu"",""tank_damaged_labeled_com"",""spill_buckets_damaged"",""spill_buckets_damaged_fu"",""spill_buckets_damaged_com"",""structural_damage"",""structural_damage_fu"",""structural_damage_com"",""manholecovers_subsurface_equipment"",""manholecovers_subsurface_equipment_fu"",""manholecovers_subsurface_equipment_com"",""tank_vent_obstructed"",""tank_vent_obstructed_fu"",""tank_vent_obstructed_com"",""automatic_overfill_protection"",""automatic_overfill_protection_fu"",""automatic_overfill_protection_com"",""dispenser_fuel_staining"",""dispenser_fuel_staining_fu"",""dispenser_fuel_staining_com"",""dispenser_hardware_leaking"",""dispenser_hardware_leaking_fu"",""dispenser_hardware_leaking_com"",""spill_material_replacement"",""spill_material_replacement_fu"",""spill_material_replacement_com"",""threat_procedures_not_posted"",""threat_procedures_not_posted_fu"",""threat_procedures_not_posted_com""]"
+Table,default,colOrder,array,"[""loc_name"",""inspection_id"",""area_location"",""evidence_spillage_overfilling"",""evidence_spillage_overfilling_fu"",""evidence_spillage_overfilling_com"",""equipment_vegetation"",""equipment_vegetation_fu"",""equipment_vegetation_com"",""tank_damaged_labeled"",""tank_damaged_labeled_fu"",""tank_damaged_labeled_com"",""spill_buckets_damaged"",""spill_buckets_damaged_fu"",""spill_buckets_damaged_com"",""structural_damage"",""structural_damage_fu"",""structural_damage_com"",""manholecovers_subsurface_equipment"",""manholecovers_subsurface_equipment_fu"",""manholecovers_subsurface_equipment_com"",""tank_vent_obstructed"",""tank_vent_obstructed_fu"",""tank_vent_obstructed_com"",""automatic_overfill_protection"",""automatic_overfill_protection_fu"",""automatic_overfill_protection_com"",""dispenser_fuel_staining"",""dispenser_fuel_staining_fu"",""dispenser_fuel_staining_com"",""dispenser_hardware_leaking"",""dispenser_hardware_leaking_fu"",""dispenser_hardware_leaking_com"",""spill_material_replacement"",""spill_material_replacement_fu"",""spill_material_replacement_com"",""threat_procedures_not_posted"",""threat_procedures_not_posted_fu"",""threat_procedures_not_posted_com"",""construction"",""primary_contents"",""capacity""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""UST Monthly Inspection Location"""
 Table,default,groupByCols,object,[]

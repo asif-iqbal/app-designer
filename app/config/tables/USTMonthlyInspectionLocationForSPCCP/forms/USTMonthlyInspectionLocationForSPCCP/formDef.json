@@ -38,16 +38,46 @@
         "display": {
           "text": "Area Location"
         },
-        "choice_filter": "choice_item.location === data('loc_name')",
+        "choice_filter": "choice_item.location == data('loc_name') && choice_item.event == 'UST MONTHLY'",
         "templatePath": "custom_select_dropdown.handlebars",
         "_row_num": 5
+      },
+      {
+        "type": "string",
+        "name": "construction",
+        "display": {
+          "text": "Construction"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "string",
+        "name": "primary_contents",
+        "display": {
+          "text": "Primary contents"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 7
+      },
+      {
+        "type": "string",
+        "name": "capacity",
+        "display": {
+          "text": "Capacity"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 8
       },
       {
         "type": "note",
         "display": {
           "text": "Aboveground Storage Tanks and Separation Equipment"
         },
-        "_row_num": 6
+        "_row_num": 9
       },
       {
         "type": "select_one",
@@ -56,7 +86,7 @@
         "display": {
           "text": "Tank fill area shows evidence of spillage or overfilling"
         },
-        "_row_num": 7
+        "_row_num": 10
       },
       {
         "type": "select_one_dropdown",
@@ -66,7 +96,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 8
+        "_row_num": 11
       },
       {
         "type": "textarea",
@@ -74,7 +104,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 9
+        "_row_num": 12
       },
       {
         "type": "select_one",
@@ -83,7 +113,7 @@
         "display": {
           "text": "Tank fill area blocked by trash, equipment or vegetation"
         },
-        "_row_num": 10
+        "_row_num": 13
       },
       {
         "type": "select_one_dropdown",
@@ -93,7 +123,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 11
+        "_row_num": 14
       },
       {
         "type": "textarea",
@@ -101,7 +131,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 12
+        "_row_num": 15
       },
       {
         "type": "select_one",
@@ -110,7 +140,7 @@
         "display": {
           "text": "Tank fill cover is missing, damaged and/ or is improperly color coded or labeled"
         },
-        "_row_num": 13
+        "_row_num": 16
       },
       {
         "type": "select_one_dropdown",
@@ -120,7 +150,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 14
+        "_row_num": 17
       },
       {
         "type": "textarea",
@@ -128,7 +158,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 15
+        "_row_num": 18
       },
       {
         "type": "select_one",
@@ -137,7 +167,7 @@
         "display": {
           "text": "Spill buckets are damaged, cracked and/ or contain liquid (note if oil) or debris"
         },
-        "_row_num": 16
+        "_row_num": 19
       },
       {
         "type": "select_one_dropdown",
@@ -147,7 +177,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 17
+        "_row_num": 20
       },
       {
         "type": "textarea",
@@ -155,7 +185,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 18
+        "_row_num": 21
       },
       {
         "type": "select_one",
@@ -164,7 +194,7 @@
         "display": {
           "text": "Tank pad shows signs of structural damage"
         },
-        "_row_num": 19
+        "_row_num": 22
       },
       {
         "type": "select_one_dropdown",
@@ -174,7 +204,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 20
+        "_row_num": 23
       },
       {
         "type": "textarea",
@@ -182,7 +212,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 21
+        "_row_num": 24
       },
       {
         "type": "select_one",
@@ -191,7 +221,7 @@
         "display": {
           "text": "Manhole covers are not watertight, missing and/ or not protecting the subsurface UST equipment/ components"
         },
-        "_row_num": 22
+        "_row_num": 25
       },
       {
         "type": "select_one_dropdown",
@@ -201,7 +231,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 23
+        "_row_num": 26
       },
       {
         "type": "textarea",
@@ -209,7 +239,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 24
+        "_row_num": 27
       },
       {
         "type": "select_one",
@@ -218,7 +248,7 @@
         "display": {
           "text": "Tank vent is obstructed, uncapped and/ or not solidly supported"
         },
-        "_row_num": 25
+        "_row_num": 28
       },
       {
         "type": "select_one_dropdown",
@@ -228,7 +258,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 26
+        "_row_num": 29
       },
       {
         "type": "textarea",
@@ -236,7 +266,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 27
+        "_row_num": 30
       },
       {
         "type": "select_one",
@@ -245,7 +275,7 @@
         "display": {
           "text": "Automatic tank gauging (ATG) equipment and/ or overfill protection alarms are indicating alarm conditions, are faulty or inoperative"
         },
-        "_row_num": 28
+        "_row_num": 31
       },
       {
         "type": "select_one_dropdown",
@@ -255,7 +285,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 29
+        "_row_num": 32
       },
       {
         "type": "textarea",
@@ -263,7 +293,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 30
+        "_row_num": 33
       },
       {
         "type": "select_one",
@@ -272,7 +302,7 @@
         "display": {
           "text": "Dispenser fuel islands show signs of spillage or staining"
         },
-        "_row_num": 31
+        "_row_num": 34
       },
       {
         "type": "select_one_dropdown",
@@ -282,7 +312,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 32
+        "_row_num": 35
       },
       {
         "type": "textarea",
@@ -290,7 +320,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 33
+        "_row_num": 36
       },
       {
         "type": "select_one",
@@ -299,7 +329,7 @@
         "display": {
           "text": "Dispenser hanging hardware (hoses/ nozzles) show signs of defect and are leaking"
         },
-        "_row_num": 34
+        "_row_num": 37
       },
       {
         "type": "select_one_dropdown",
@@ -309,7 +339,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 35
+        "_row_num": 38
       },
       {
         "type": "textarea",
@@ -317,14 +347,14 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 36
+        "_row_num": 39
       },
       {
         "type": "note",
         "display": {
           "text": "Response Kit Inventory"
         },
-        "_row_num": 37
+        "_row_num": 40
       },
       {
         "type": "select_one",
@@ -333,19 +363,19 @@
         "display": {
           "text": "Spill response material is missing or damaged or needs replacement"
         },
-        "_row_num": 38
+        "_row_num": 41
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "spill_material_replacement_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 39
+        "_row_num": 42
       },
       {
         "type": "textarea",
         "name": "spill_material_replacement_com",
-        "_row_num": 40
+        "_row_num": 43
       },
       {
         "type": "select_one",
@@ -354,23 +384,23 @@
         "display": {
           "text": "Spill/ threat of a release reporting procedures with emergency contacts are not conspicuously posted"
         },
-        "_row_num": 41
+        "_row_num": 44
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "threat_procedures_not_posted_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 42
+        "_row_num": 45
       },
       {
         "type": "textarea",
         "name": "threat_procedures_not_posted_com",
-        "_row_num": 43
+        "_row_num": 46
       },
       {
         "clause": "end screen",
-        "_row_num": 44
+        "_row_num": 47
       }
     ],
     "choices": [
@@ -428,7 +458,7 @@
         "query_name": "sublocations_csv",
         "query_type": "csv",
         "uri": "\"sublocations.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation}; place.event = place.event;\nreturn place;\n})",
         "_row_num": 2
       }
     ],
@@ -789,7 +819,7 @@
         "query_name": "sublocations_csv",
         "query_type": "csv",
         "uri": "\"sublocations.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation}; place.event = place.event;\nreturn place;\n})",
         "_row_num": 2
       }
     },
@@ -839,7 +869,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 10,
             "section_name": "survey"
           },
           {
@@ -854,7 +884,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 8,
+            "_row_num": 11,
             "section_name": "survey"
           },
           {
@@ -868,7 +898,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 12,
             "section_name": "survey"
           },
           {
@@ -883,7 +913,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 10,
+            "_row_num": 13,
             "section_name": "survey"
           },
           {
@@ -898,7 +928,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 14,
             "section_name": "survey"
           },
           {
@@ -912,7 +942,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 15,
             "section_name": "survey"
           },
           {
@@ -927,7 +957,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 13,
+            "_row_num": 16,
             "section_name": "survey"
           },
           {
@@ -942,7 +972,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 17,
             "section_name": "survey"
           },
           {
@@ -956,7 +986,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 18,
             "section_name": "survey"
           },
           {
@@ -971,7 +1001,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 16,
+            "_row_num": 19,
             "section_name": "survey"
           },
           {
@@ -986,7 +1016,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 17,
+            "_row_num": 20,
             "section_name": "survey"
           },
           {
@@ -1000,7 +1030,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 21,
             "section_name": "survey"
           },
           {
@@ -1015,7 +1045,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 19,
+            "_row_num": 22,
             "section_name": "survey"
           },
           {
@@ -1030,7 +1060,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 23,
             "section_name": "survey"
           },
           {
@@ -1044,7 +1074,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 24,
             "section_name": "survey"
           },
           {
@@ -1059,7 +1089,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 25,
             "section_name": "survey"
           },
           {
@@ -1074,7 +1104,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 26,
             "section_name": "survey"
           },
           {
@@ -1088,7 +1118,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 27,
             "section_name": "survey"
           },
           {
@@ -1103,7 +1133,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 28,
             "section_name": "survey"
           },
           {
@@ -1118,7 +1148,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 29,
             "section_name": "survey"
           },
           {
@@ -1132,7 +1162,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 30,
             "section_name": "survey"
           },
           {
@@ -1147,7 +1177,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 31,
             "section_name": "survey"
           },
           {
@@ -1162,7 +1192,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 32,
             "section_name": "survey"
           },
           {
@@ -1176,7 +1206,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 30,
+            "_row_num": 33,
             "section_name": "survey"
           },
           {
@@ -1191,7 +1221,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 31,
+            "_row_num": 34,
             "section_name": "survey"
           },
           {
@@ -1206,7 +1236,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 32,
+            "_row_num": 35,
             "section_name": "survey"
           },
           {
@@ -1220,7 +1250,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 33,
+            "_row_num": 36,
             "section_name": "survey"
           },
           {
@@ -1235,7 +1265,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 34,
+            "_row_num": 37,
             "section_name": "survey"
           },
           {
@@ -1250,7 +1280,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 35,
+            "_row_num": 38,
             "section_name": "survey"
           },
           {
@@ -1264,7 +1294,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 36,
+            "_row_num": 39,
             "section_name": "survey"
           },
           {
@@ -1279,7 +1309,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 38,
+            "_row_num": 41,
             "section_name": "survey"
           },
           {
@@ -1294,7 +1324,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 39,
+            "_row_num": 42,
             "section_name": "survey"
           },
           {
@@ -1308,7 +1338,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 40,
+            "_row_num": 43,
             "section_name": "survey"
           },
           {
@@ -1323,7 +1353,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 41,
+            "_row_num": 44,
             "section_name": "survey"
           },
           {
@@ -1338,7 +1368,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 42,
+            "_row_num": 45,
             "section_name": "survey"
           },
           {
@@ -1352,7 +1382,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 43,
+            "_row_num": 46,
             "section_name": "survey"
           },
           {
@@ -1361,6 +1391,36 @@
           }
         ],
         "elementKey": "threat_procedures_not_posted_com"
+      },
+      "construction": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "construction"
+      },
+      "primary_contents": {
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "primary_contents"
+      },
+      "capacity": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "capacity"
       }
     },
     "section_names": [
@@ -1497,7 +1557,7 @@
             "display": {
               "text": "Area Location"
             },
-            "choice_filter": "choice_item.location === data('loc_name')",
+            "choice_filter": "choice_item.location == data('loc_name') && choice_item.event == 'UST MONTHLY'",
             "templatePath": "custom_select_dropdown.handlebars",
             "_row_num": 5,
             "__rowNum__": 4,
@@ -1507,16 +1567,61 @@
             "promptIdx": 1
           },
           {
+            "type": "string",
+            "name": "construction",
+            "display": {
+              "text": "Construction"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "string",
+            "name": "primary_contents",
+            "display": {
+              "text": "Primary contents"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "string",
+            "name": "capacity",
+            "display": {
+              "text": "Capacity"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
             "type": "note",
             "display": {
               "text": "Aboveground Storage Tanks and Separation Equipment"
             },
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 2
+            "promptIdx": 5
           },
           {
             "type": "select_one",
@@ -1524,48 +1629,6 @@
             "name": "evidence_spillage_overfilling",
             "display": {
               "text": "Tank fill area shows evidence of spillage or overfilling"
-            },
-            "_row_num": 7,
-            "__rowNum__": 6,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 3
-          },
-          {
-            "type": "select_one_dropdown",
-            "values_list": "followup_values",
-            "name": "evidence_spillage_overfilling_fu",
-            "display": {
-              "text": "If YES, follow up"
-            },
-            "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 8,
-            "__rowNum__": 7,
-            "_token_type": "prompt",
-            "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 4
-          },
-          {
-            "type": "textarea",
-            "name": "evidence_spillage_overfilling_com",
-            "display": {
-              "text": "Comments"
-            },
-            "_row_num": 9,
-            "__rowNum__": 8,
-            "_token_type": "prompt",
-            "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 5
-          },
-          {
-            "type": "select_one",
-            "values_list": "yesno",
-            "name": "equipment_vegetation",
-            "display": {
-              "text": "Tank fill area blocked by trash, equipment or vegetation"
             },
             "_row_num": 10,
             "__rowNum__": 9,
@@ -1577,7 +1640,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "equipment_vegetation_fu",
+            "name": "evidence_spillage_overfilling_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -1591,7 +1654,7 @@
           },
           {
             "type": "textarea",
-            "name": "equipment_vegetation_com",
+            "name": "evidence_spillage_overfilling_com",
             "display": {
               "text": "Comments"
             },
@@ -1605,9 +1668,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "tank_damaged_labeled",
+            "name": "equipment_vegetation",
             "display": {
-              "text": "Tank fill cover is missing, damaged and/ or is improperly color coded or labeled"
+              "text": "Tank fill area blocked by trash, equipment or vegetation"
             },
             "_row_num": 13,
             "__rowNum__": 12,
@@ -1619,7 +1682,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "tank_damaged_labeled_fu",
+            "name": "equipment_vegetation_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -1633,7 +1696,7 @@
           },
           {
             "type": "textarea",
-            "name": "tank_damaged_labeled_com",
+            "name": "equipment_vegetation_com",
             "display": {
               "text": "Comments"
             },
@@ -1647,9 +1710,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "spill_buckets_damaged",
+            "name": "tank_damaged_labeled",
             "display": {
-              "text": "Spill buckets are damaged, cracked and/ or contain liquid (note if oil) or debris"
+              "text": "Tank fill cover is missing, damaged and/ or is improperly color coded or labeled"
             },
             "_row_num": 16,
             "__rowNum__": 15,
@@ -1661,7 +1724,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "spill_buckets_damaged_fu",
+            "name": "tank_damaged_labeled_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -1675,7 +1738,7 @@
           },
           {
             "type": "textarea",
-            "name": "spill_buckets_damaged_com",
+            "name": "tank_damaged_labeled_com",
             "display": {
               "text": "Comments"
             },
@@ -1689,9 +1752,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "structural_damage",
+            "name": "spill_buckets_damaged",
             "display": {
-              "text": "Tank pad shows signs of structural damage"
+              "text": "Spill buckets are damaged, cracked and/ or contain liquid (note if oil) or debris"
             },
             "_row_num": 19,
             "__rowNum__": 18,
@@ -1703,7 +1766,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "structural_damage_fu",
+            "name": "spill_buckets_damaged_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -1717,7 +1780,7 @@
           },
           {
             "type": "textarea",
-            "name": "structural_damage_com",
+            "name": "spill_buckets_damaged_com",
             "display": {
               "text": "Comments"
             },
@@ -1731,9 +1794,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "manholecovers_subsurface_equipment",
+            "name": "structural_damage",
             "display": {
-              "text": "Manhole covers are not watertight, missing and/ or not protecting the subsurface UST equipment/ components"
+              "text": "Tank pad shows signs of structural damage"
             },
             "_row_num": 22,
             "__rowNum__": 21,
@@ -1745,7 +1808,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "manholecovers_subsurface_equipment_fu",
+            "name": "structural_damage_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -1759,7 +1822,7 @@
           },
           {
             "type": "textarea",
-            "name": "manholecovers_subsurface_equipment_com",
+            "name": "structural_damage_com",
             "display": {
               "text": "Comments"
             },
@@ -1773,9 +1836,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "tank_vent_obstructed",
+            "name": "manholecovers_subsurface_equipment",
             "display": {
-              "text": "Tank vent is obstructed, uncapped and/ or not solidly supported"
+              "text": "Manhole covers are not watertight, missing and/ or not protecting the subsurface UST equipment/ components"
             },
             "_row_num": 25,
             "__rowNum__": 24,
@@ -1787,7 +1850,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "tank_vent_obstructed_fu",
+            "name": "manholecovers_subsurface_equipment_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -1801,7 +1864,7 @@
           },
           {
             "type": "textarea",
-            "name": "tank_vent_obstructed_com",
+            "name": "manholecovers_subsurface_equipment_com",
             "display": {
               "text": "Comments"
             },
@@ -1815,9 +1878,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "automatic_overfill_protection",
+            "name": "tank_vent_obstructed",
             "display": {
-              "text": "Automatic tank gauging (ATG) equipment and/ or overfill protection alarms are indicating alarm conditions, are faulty or inoperative"
+              "text": "Tank vent is obstructed, uncapped and/ or not solidly supported"
             },
             "_row_num": 28,
             "__rowNum__": 27,
@@ -1829,7 +1892,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "automatic_overfill_protection_fu",
+            "name": "tank_vent_obstructed_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -1843,7 +1906,7 @@
           },
           {
             "type": "textarea",
-            "name": "automatic_overfill_protection_com",
+            "name": "tank_vent_obstructed_com",
             "display": {
               "text": "Comments"
             },
@@ -1857,9 +1920,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "dispenser_fuel_staining",
+            "name": "automatic_overfill_protection",
             "display": {
-              "text": "Dispenser fuel islands show signs of spillage or staining"
+              "text": "Automatic tank gauging (ATG) equipment and/ or overfill protection alarms are indicating alarm conditions, are faulty or inoperative"
             },
             "_row_num": 31,
             "__rowNum__": 30,
@@ -1871,7 +1934,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "dispenser_fuel_staining_fu",
+            "name": "automatic_overfill_protection_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -1885,7 +1948,7 @@
           },
           {
             "type": "textarea",
-            "name": "dispenser_fuel_staining_com",
+            "name": "automatic_overfill_protection_com",
             "display": {
               "text": "Comments"
             },
@@ -1899,9 +1962,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "dispenser_hardware_leaking",
+            "name": "dispenser_fuel_staining",
             "display": {
-              "text": "Dispenser hanging hardware (hoses/ nozzles) show signs of defect and are leaking"
+              "text": "Dispenser fuel islands show signs of spillage or staining"
             },
             "_row_num": 34,
             "__rowNum__": 33,
@@ -1913,7 +1976,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "dispenser_hardware_leaking_fu",
+            "name": "dispenser_fuel_staining_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -1927,7 +1990,7 @@
           },
           {
             "type": "textarea",
-            "name": "dispenser_hardware_leaking_com",
+            "name": "dispenser_fuel_staining_com",
             "display": {
               "text": "Comments"
             },
@@ -1939,16 +2002,58 @@
             "promptIdx": 32
           },
           {
-            "type": "note",
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "dispenser_hardware_leaking",
             "display": {
-              "text": "Response Kit Inventory"
+              "text": "Dispenser hanging hardware (hoses/ nozzles) show signs of defect and are leaking"
             },
             "_row_num": 37,
             "__rowNum__": 36,
             "_token_type": "prompt",
-            "_type": "note",
+            "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 33
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "followup_values",
+            "name": "dispenser_hardware_leaking_fu",
+            "display": {
+              "text": "If YES, follow up"
+            },
+            "templatePath": "custom_select_dropdown.handlebars",
+            "_row_num": 38,
+            "__rowNum__": 37,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 34
+          },
+          {
+            "type": "textarea",
+            "name": "dispenser_hardware_leaking_com",
+            "display": {
+              "text": "Comments"
+            },
+            "_row_num": 39,
+            "__rowNum__": 38,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 35
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "Response Kit Inventory"
+            },
+            "_row_num": 40,
+            "__rowNum__": 39,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 36
           },
           {
             "type": "select_one",
@@ -1956,42 +2061,6 @@
             "name": "spill_material_replacement",
             "display": {
               "text": "Spill response material is missing or damaged or needs replacement"
-            },
-            "_row_num": 38,
-            "__rowNum__": 37,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 34
-          },
-          {
-            "type": "select_one_dropdown",
-            "values_list": "followup_values",
-            "name": "spill_material_replacement_fu",
-            "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 39,
-            "__rowNum__": 38,
-            "_token_type": "prompt",
-            "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 35
-          },
-          {
-            "type": "textarea",
-            "name": "spill_material_replacement_com",
-            "_row_num": 40,
-            "__rowNum__": 39,
-            "_token_type": "prompt",
-            "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 36
-          },
-          {
-            "type": "select_one",
-            "values_list": "yesno",
-            "name": "threat_procedures_not_posted",
-            "display": {
-              "text": "Spill/ threat of a release reporting procedures with emergency contacts are not conspicuously posted"
             },
             "_row_num": 41,
             "__rowNum__": 40,
@@ -2003,7 +2072,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "threat_procedures_not_posted_fu",
+            "name": "spill_material_replacement_fu",
             "templatePath": "custom_select_dropdown.handlebars",
             "_row_num": 42,
             "__rowNum__": 41,
@@ -2014,7 +2083,7 @@
           },
           {
             "type": "textarea",
-            "name": "threat_procedures_not_posted_com",
+            "name": "spill_material_replacement_com",
             "_row_num": 43,
             "__rowNum__": 42,
             "_token_type": "prompt",
@@ -2023,12 +2092,48 @@
             "promptIdx": 39
           },
           {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "threat_procedures_not_posted",
+            "display": {
+              "text": "Spill/ threat of a release reporting procedures with emergency contacts are not conspicuously posted"
+            },
+            "_row_num": 44,
+            "__rowNum__": 43,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 40
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "followup_values",
+            "name": "threat_procedures_not_posted_fu",
+            "templatePath": "custom_select_dropdown.handlebars",
+            "_row_num": 45,
+            "__rowNum__": 44,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 41
+          },
+          {
+            "type": "textarea",
+            "name": "threat_procedures_not_posted_com",
+            "_row_num": 46,
+            "__rowNum__": 45,
+            "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 42
+          },
+          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 45,
-            "_branch_label_enclosing_screen": "survey/_screen45",
-            "promptIdx": 40
+            "_row_num": 48,
+            "_branch_label_enclosing_screen": "survey/_screen48",
+            "promptIdx": 43
           }
         ],
         "validation_tag_map": {
@@ -2045,23 +2150,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 44,
-              "__rowNum__": 43,
+              "_row_num": 47,
+              "__rowNum__": 46,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\nactivePromptIndicies.push(30);\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\nactivePromptIndicies.push(33);\nactivePromptIndicies.push(34);\nactivePromptIndicies.push(35);\nactivePromptIndicies.push(36);\nactivePromptIndicies.push(37);\nactivePromptIndicies.push(38);\nactivePromptIndicies.push(39);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\nactivePromptIndicies.push(30);\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\nactivePromptIndicies.push(33);\nactivePromptIndicies.push(34);\nactivePromptIndicies.push(35);\nactivePromptIndicies.push(36);\nactivePromptIndicies.push(37);\nactivePromptIndicies.push(38);\nactivePromptIndicies.push(39);\nactivePromptIndicies.push(40);\nactivePromptIndicies.push(41);\nactivePromptIndicies.push(42);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 45,
+            "_row_num": 48,
             "operationIdx": 1
           },
           {
-            "_row_num": 45,
+            "_row_num": 48,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(40);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(43);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -2070,14 +2175,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 45,
+            "_row_num": 48,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen45": 2
+          "_screen48": 2
         }
       }
     }

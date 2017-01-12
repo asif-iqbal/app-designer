@@ -64,6 +64,11 @@ Column,buried_pipilines_exposed_fu,displayFormat,string,""
 Column,buried_pipilines_exposed_fu,displayName,string,"""buried_pipilines_exposed_fu"""
 Column,buried_pipilines_exposed_fu,displayVisible,boolean,TRUE
 Column,buried_pipilines_exposed_fu,joins,object,""
+Column,capacity,displayChoicesList,object,[]
+Column,capacity,displayFormat,string,""
+Column,capacity,displayName,string,"""capacity"""
+Column,capacity,displayVisible,boolean,TRUE
+Column,capacity,joins,object,""
 Column,connections_blank_flanged,displayChoicesList,object,"[{""choice_list_name"":""yesno"",""data_value"":""Yes"",""display"":{""text"":""Yes""},""_row_num"":5},{""choice_list_name"":""yesno"",""data_value"":""No"",""display"":{""text"":""No""},""_row_num"":6},{""choice_list_name"":""yesno"",""data_value"":""NA"",""display"":{""text"":""N/A""},""_row_num"":7}]"
 Column,connections_blank_flanged,displayFormat,string,""
 Column,connections_blank_flanged,displayName,string,"""connections_blank_flanged"""
@@ -79,6 +84,11 @@ Column,connections_blank_flanged_fu,displayFormat,string,""
 Column,connections_blank_flanged_fu,displayName,string,"""connections_blank_flanged_fu"""
 Column,connections_blank_flanged_fu,displayVisible,boolean,TRUE
 Column,connections_blank_flanged_fu,joins,object,""
+Column,construction,displayChoicesList,object,[]
+Column,construction,displayFormat,string,""
+Column,construction,displayName,string,"""construction"""
+Column,construction,displayVisible,boolean,TRUE
+Column,construction,joins,object,""
 Column,containment_berm_stains,displayChoicesList,object,"[{""choice_list_name"":""yesno"",""data_value"":""Yes"",""display"":{""text"":""Yes""},""_row_num"":5},{""choice_list_name"":""yesno"",""data_value"":""No"",""display"":{""text"":""No""},""_row_num"":6},{""choice_list_name"":""yesno"",""data_value"":""NA"",""display"":{""text"":""N/A""},""_row_num"":7}]"
 Column,containment_berm_stains,displayFormat,string,""
 Column,containment_berm_stains,displayName,string,"""containment_berm_stains"""
@@ -149,6 +159,11 @@ Column,loc_name,displayFormat,string,""
 Column,loc_name,displayName,string,"""loc_name"""
 Column,loc_name,displayVisible,boolean,TRUE
 Column,loc_name,joins,object,""
+Column,primary_contents,displayChoicesList,object,[]
+Column,primary_contents,displayFormat,string,""
+Column,primary_contents,displayName,string,"""primary_contents"""
+Column,primary_contents,displayVisible,boolean,TRUE
+Column,primary_contents,joins,object,""
 Column,secondary_containment_damaged,displayChoicesList,object,"[{""choice_list_name"":""yesno"",""data_value"":""Yes"",""display"":{""text"":""Yes""},""_row_num"":5},{""choice_list_name"":""yesno"",""data_value"":""No"",""display"":{""text"":""No""},""_row_num"":6},{""choice_list_name"":""yesno"",""data_value"":""NA"",""display"":{""text"":""N/A""},""_row_num"":7}]"
 Column,secondary_containment_damaged,displayFormat,string,""
 Column,secondary_containment_damaged,displayName,string,"""secondary_containment_damaged"""
@@ -286,7 +301,7 @@ Column,vent_pipes_obstruct_fu,displayVisible,boolean,TRUE
 Column,vent_pipes_obstruct_fu,joins,object,""
 FormType,default,FormType.formType,string,SURVEY
 SurveyUtil,default,SurveyUtil.formId,string,ASTMonthlyInspectionLocationForSPCCP
-Table,default,colOrder,array,"[""loc_name"",""inspection_id"",""area_location"",""tank_surface_rust"",""tank_surface_rust_fu"",""tank_surface_rust_com"",""aboveground_tank_breached"",""aboveground_tank_breached_fu"",""aboveground_tank_breached_com"",""containment_berm_stains"",""containment_berm_stains_fu"",""containment_berm_stains_com"",""berm_drainage_valves"",""berm_drainage_valves_fu"",""berm_drainage_valves_com"",""aboveground_tank_liquid"",""aboveground_tank_liquid_fu"",""aboveground_tank_liquid_com"",""level_gauges_alarm"",""level_gauges_alarm_fu"",""level_gauges_alarm_com"",""vent_pipes_obstruct"",""vent_pipes_obstruct_fu"",""vent_pipes_obstruct_com"",""thief_hatch_seal"",""thief_hatch_seal_fu"",""thief_hatch_seal_com"",""tank_area_blocked"",""tank_area_blocked_fu"",""tank_area_blocked_com"",""equipment_pretector_missing"",""equipment_pretector_missing_fu"",""equipment_pretector_missing_com"",""spill_bucket_damaged"",""spill_bucket_damaged_fu"",""spill_bucket_damaged_com"",""supply_gaskets_damaged"",""supply_gaskets_damaged_fu"",""supply_gaskets_damaged_com"",""buried_pipilines_exposed"",""buried_pipilines_exposed_fu"",""buried_pipilines_exposed_com"",""loading_lines_damaged"",""loading_lines_damaged_fu"",""loading_lines_damaged_com"",""connections_blank_flanged"",""connections_blank_flanged_fu"",""connections_blank_flanged_com"",""secondary_containment_damaged"",""secondary_containment_damaged_fu"",""secondary_containment_damaged_com"",""spill_material_missing"",""spill_material_missing_fu"",""spill_material_missing_com"",""threat_procedures_not_posted"",""threat_procedures_not_posted_fu"",""threat_procedures_not_posted_com""]"
+Table,default,colOrder,array,"[""loc_name"",""inspection_id"",""area_location"",""tank_surface_rust"",""tank_surface_rust_fu"",""tank_surface_rust_com"",""aboveground_tank_breached"",""aboveground_tank_breached_fu"",""aboveground_tank_breached_com"",""containment_berm_stains"",""containment_berm_stains_fu"",""containment_berm_stains_com"",""berm_drainage_valves"",""berm_drainage_valves_fu"",""berm_drainage_valves_com"",""aboveground_tank_liquid"",""aboveground_tank_liquid_fu"",""aboveground_tank_liquid_com"",""level_gauges_alarm"",""level_gauges_alarm_fu"",""level_gauges_alarm_com"",""vent_pipes_obstruct"",""vent_pipes_obstruct_fu"",""vent_pipes_obstruct_com"",""thief_hatch_seal"",""thief_hatch_seal_fu"",""thief_hatch_seal_com"",""tank_area_blocked"",""tank_area_blocked_fu"",""tank_area_blocked_com"",""equipment_pretector_missing"",""equipment_pretector_missing_fu"",""equipment_pretector_missing_com"",""spill_bucket_damaged"",""spill_bucket_damaged_fu"",""spill_bucket_damaged_com"",""supply_gaskets_damaged"",""supply_gaskets_damaged_fu"",""supply_gaskets_damaged_com"",""buried_pipilines_exposed"",""buried_pipilines_exposed_fu"",""buried_pipilines_exposed_com"",""loading_lines_damaged"",""loading_lines_damaged_fu"",""loading_lines_damaged_com"",""connections_blank_flanged"",""connections_blank_flanged_fu"",""connections_blank_flanged_com"",""secondary_containment_damaged"",""secondary_containment_damaged_fu"",""secondary_containment_damaged_com"",""spill_material_missing"",""spill_material_missing_fu"",""spill_material_missing_com"",""threat_procedures_not_posted"",""threat_procedures_not_posted_fu"",""threat_procedures_not_posted_com"",""construction"",""primary_contents"",""capacity""]"
 Table,default,defaultViewType,string,SPREADSHEET
 Table,default,displayName,object,"""AST Monthly Inspection Location"""
 Table,default,groupByCols,object,[]

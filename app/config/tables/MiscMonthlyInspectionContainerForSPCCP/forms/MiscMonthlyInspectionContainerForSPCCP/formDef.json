@@ -35,7 +35,7 @@
         "display": {
           "text": "Container Location"
         },
-        "choice_filter": "choice_item.location === data('loc_name')",
+        "choice_filter": "choice_item.location == data('loc_name') && choice_item.event == 'MONTHLY SPCC'",
         "templatePath": "custom_select_dropdown.handlebars",
         "_row_num": 5
       },
@@ -560,7 +560,7 @@
         "query_name": "sublocations_csv",
         "query_type": "csv",
         "uri": "\"sublocations.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation}; place.event = place.event;\nreturn place;\n})",
         "_row_num": 2
       }
     ]
@@ -695,7 +695,7 @@
         "query_name": "sublocations_csv",
         "query_type": "csv",
         "uri": "\"sublocations.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation}; place.event = place.event;\nreturn place;\n})",
         "_row_num": 2
       }
     },
@@ -1263,7 +1263,7 @@
             "display": {
               "text": "Container Location"
             },
-            "choice_filter": "choice_item.location === data('loc_name')",
+            "choice_filter": "choice_item.location == data('loc_name') && choice_item.event == 'MONTHLY SPCC'",
             "templatePath": "custom_select_dropdown.handlebars",
             "_row_num": 5,
             "__rowNum__": 4,

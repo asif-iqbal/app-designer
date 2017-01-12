@@ -37,9 +37,11 @@
         <buried_pipilines_exposed/>
         <buried_pipilines_exposed_com/>
         <buried_pipilines_exposed_fu/>
+        <capacity/>
         <connections_blank_flanged/>
         <connections_blank_flanged_com/>
         <connections_blank_flanged_fu/>
+        <construction/>
         <containment_berm_stains/>
         <containment_berm_stains_com/>
         <containment_berm_stains_fu/>
@@ -54,6 +56,7 @@
         <loading_lines_damaged_com/>
         <loading_lines_damaged_fu/>
         <loc_name/>
+        <primary_contents/>
         <secondary_containment_damaged/>
         <secondary_containment_damaged_com/>
         <secondary_containment_damaged_fu/>
@@ -108,9 +111,11 @@
     <bind nodeset="/data/buried_pipilines_exposed" type="string"/>
     <bind nodeset="/data/buried_pipilines_exposed_com" type="string"/>
     <bind nodeset="/data/buried_pipilines_exposed_fu" type="string"/>
+    <bind nodeset="/data/capacity" type="string"/>
     <bind nodeset="/data/connections_blank_flanged" type="string"/>
     <bind nodeset="/data/connections_blank_flanged_com" type="string"/>
     <bind nodeset="/data/connections_blank_flanged_fu" type="string"/>
+    <bind nodeset="/data/construction" type="string"/>
     <bind nodeset="/data/containment_berm_stains" type="string"/>
     <bind nodeset="/data/containment_berm_stains_com" type="string"/>
     <bind nodeset="/data/containment_berm_stains_fu" type="string"/>
@@ -125,6 +130,7 @@
     <bind nodeset="/data/loading_lines_damaged_com" type="string"/>
     <bind nodeset="/data/loading_lines_damaged_fu" type="string"/>
     <bind nodeset="/data/loc_name" type="string"/>
+    <bind nodeset="/data/primary_contents" type="string"/>
     <bind nodeset="/data/secondary_containment_damaged" type="string"/>
     <bind nodeset="/data/secondary_containment_damaged_com" type="string"/>
     <bind nodeset="/data/secondary_containment_damaged_fu" type="string"/>

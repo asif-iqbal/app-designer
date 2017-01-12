@@ -1,76 +1,138 @@
-location,sublocation,,,,,,,
-CRMF,MAA-1 WWTP,,,,,,,
-CRMF,MAA-2 P&M Track 2,,,,,,,
-CRMF,MAA-3 AST Tank#4 Waste Oil,,,,,,,
-CRMF,SAA-1 Pump House WWTP 1st Floor,,,,,,,
-CRMF,SAA-2 Pipe Shop,,,,,,,
-CRMF,SAA-3 Rm 119 Machine Shop,,,,,,,
-CRMF,SAA-4 Truck Shop Area,,,,,,,
-CRMF,SAA-5 Rubber Tire Room,,,,,,,
-CRMF,SAA-6 AST 13 Waste Oil,,,,,,,
-CRMF,SAA-7 Locomotive Repair/ Diesel House lower platforms,,,,,,,
-CRMF,SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment,,,,,,,
-CRMF,SAA-9 Waste Oil Filters - S&I bay and Wheel Truing,,,,,,,
-CRMF,SAA-10 P&M Bays lower platforms,,,,,,,
-CRMF,SAA-11 P&M Bays Upper Secondary Containments,,,,,,,
-CRMF,SAA-12 S&I Bays lower platforms,,,,,,,
-CRMF,SAA-13 S&I Bays Upper Secondary Containments,,,,,,,
-CRMF,Other: Materials Storage (Shipping/Receiving),,,,,,,
-CRMF,Other: Unused Product Area Preventative Maintenance,,,,,,,
-CRMF,Other: Waste Oil Spill Bucket -WWTP Fueling Pad,,,,,,,
-CRMF,UNW-Main Storage Area,,,,,,,
-CRMF,"UNW - Upper Platforms S&I, PM, (multiple)",,,,,,,
-CRMF,UNW-Coach Repair Track 3,,,,,,,
-CRMF,UNW-Shipping and Receiving,,,,,,,
-CRMF,BioW-MAA,,,,,,,
-CRMF,Spill Kits,,,,,,,
-Readville Coach,MAA-1 WWTP,,,,,,,
-Readville Coach,MAA-2 P&M Track 2,,,,,,,
-Readville Coach,MAA-3 AST Tank#4 Waste Oil,,,,,,,
-Readville Coach,SAA-1 Pump House WWTP 1st Floor,,,,,,,
-Readville Coach,SAA-2 Pipe Shop,,,,,,,
-Readville Coach,SAA-3 Rm 119 Machine Shop,,,,,,,
-Readville Coach,SAA-4 Truck Shop Area,,,,,,,
-Readville Coach,SAA-5 Rubber Tire Room,,,,,,,
-Readville Coach,SAA-6 AST 13 Waste Oil,,,,,,,
-Readville Coach,SAA-7 Locomotive Repair/ Diesel House lower platforms,,,,,,,
-Readville Coach,SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment,,,,,,,
-Readville Coach,SAA-9 Waste Oil Filters - S&I bay and Wheel Truing,,,,,,,
-Readville Coach,SAA-10 P&M Bays lower platforms,,,,,,,
-Readville Coach,SAA-11 P&M Bays Upper Secondary Containments,,,,,,,
-Readville Coach,SAA-12 S&I Bays lower platforms,,,,,,,
-Readville Coach,SAA-13 S&I Bays Upper Secondary Containments,,,,,,,
-Readville Coach,Other: Materials Storage (Shipping/Receiving),,,,,,,
-Readville Coach,Other: Unused Product Area Preventative Maintenance,,,,,,,
-Readville Coach,Other: Waste Oil Spill Bucket -WWTP Fueling Pad,,,,,,,
-Readville Coach,UNW-Main Storage Area,,,,,,,
-Readville Coach,"UNW - Upper Platforms S&I, PM, (multiple)",,,,,,,
-Readville Coach,UNW-Coach Repair Track 3,,,,,,,
-Readville Coach,UNW-Shipping and Receiving,,,,,,,
-Readville Coach,BioW-MAA,,,,,,,
-Readville Coach,Spill Kits,,,,,,,
-Readville Track & Engineering,MAA-1 WWTP,,,,,,,
-Readville Track & Engineering,MAA-2 P&M Track 2,,,,,,,
-Readville Track & Engineering,MAA-3 AST Tank#4 Waste Oil,,,,,,,
-Readville Track & Engineering,SAA-1 Pump House WWTP 1st Floor,,,,,,,
-Readville Track & Engineering,SAA-2 Pipe Shop,,,,,,,
-Readville Track & Engineering,SAA-3 Rm 119 Machine Shop,,,,,,,
-Readville Track & Engineering,SAA-4 Truck Shop Area,,,,,,,
-Readville Track & Engineering,SAA-5 Rubber Tire Room,,,,,,,
-Readville Track & Engineering,SAA-6 AST 13 Waste Oil,,,,,,,
-Readville Track & Engineering,SAA-7 Locomotive Repair/ Diesel House lower platforms,,,,,,,
-Readville Track & Engineering,SAA-8 Locomotive Repair/ Diesel House Upper Secondary Containment,,,,,,,
-Readville Track & Engineering,SAA-9 Waste Oil Filters - S&I bay and Wheel Truing,,,,,,,
-Readville Track & Engineering,SAA-10 P&M Bays lower platforms,,,,,,,
-Readville Track & Engineering,SAA-11 P&M Bays Upper Secondary Containments,,,,,,,
-Readville Track & Engineering,SAA-12 S&I Bays lower platforms,,,,,,,
-Readville Track & Engineering,SAA-13 S&I Bays Upper Secondary Containments,,,,,,,
-Readville Track & Engineering,Other: Materials Storage (Shipping/Receiving),,,,,,,
-Readville Track & Engineering,Other: Unused Product Area Preventative Maintenance,,,,,,,
-Readville Track & Engineering,Other: Waste Oil Spill Bucket -WWTP Fueling Pad,,,,,,,
-Readville Track & Engineering,UNW-Main Storage Area,,,,,,,
-Readville Track & Engineering,"UNW - Upper Platforms S&I, PM, (multiple)",,,,,,,
-Readville Track & Engineering,UNW-Coach Repair Track 3,,,,,,,
-Readville Track & Engineering,UNW-Shipping and Receiving,,,,,,,
-Readville Track & Engineering,BioW-MAA,,,,,,,
-Readville Track & Engineering,Spill Kits,,,,,,,
+event,location,sublocation
+RCRA WEEKLY,CRMF,MAA-1: WWTP
+RCRA WEEKLY,CRMF,MAA-2: P&M Track 2
+RCRA WEEKLY,CRMF,MAA-3: AST-4 (Tank Farm)
+RCRA WEEKLY,CRMF,MAA-4: AST-13
+RCRA WEEKLY,CRMF,MAA-5: Universal Waste
+RCRA WEEKLY,CRMF,MAA-6: Bio Waste
+RCRA WEEKLY,CRMF,MAA-7: WWTP Diesel Pump House
+RCRA WEEKLY,CRMF,SAA-1: Pump House WWTP 1st Floor
+RCRA WEEKLY,CRMF,SAA-2: Pipe Shop
+RCRA WEEKLY,CRMF,SAA-3: Rm. 119 Machine Shop
+RCRA WEEKLY,CRMF,SAA-4: Truck Shop Area
+RCRA WEEKLY,CRMF,SAA-5: Rubber Tire Room
+RCRA WEEKLY,CRMF,SAA-6: AST 13 Waste Oil
+RCRA WEEKLY,CRMF,SAA-7: Locomotive Repair/Diesel House Lower Platforms
+RCRA WEEKLY,CRMF,SAA-8: Locomotive Repair/Diesel House Upper Secondary Containment
+RCRA WEEKLY,CRMF,SAA-9: Waste Oil Filters - S&I bay and Wheel Truing
+RCRA WEEKLY,CRMF,SAA-10: P&M Bays Lower Platforms 
+RCRA WEEKLY,CRMF,SAA-11: P&M Bays Upper Secondary Containment
+RCRA WEEKLY,CRMF,SAA-12: S&I Bays Lower Platforms
+RCRA WEEKLY,CRMF,SAA-13: S&I Bays Upper Secondary Containment
+RCRA WEEKLY,CRMF,UNW- Main Storage Area
+RCRA WEEKLY,CRMF,UNW - Upper Platforms S&I PM (multiple)
+RCRA WEEKLY,CRMF,UNW- Coach Repair Track 3
+RCRA WEEKLY,CRMF,UNW- Shipping and Receiving
+RCRA WEEKLY,CRMF,Working Area/Transfer Equipment
+RCRA WEEKLY,CRMF,Other: Materials Storage(Shipping/Receiving)
+RCRA WEEKLY,CRMF,Other: Unused Product Area Preventative Maintenance
+RCRA WEEKLY,CRMF,Other: Waste Oil Spill Bucket - WWTP Fueling Pad
+RCRA WEEKLY,CRMF,BioW- MAA
+RCRA WEEKLY,CRMF,Spill Kits
+RCRA WEEKLY,Readville Coach,MAA-1: Universal Waste
+RCRA WEEKLY,Readville Coach,SAA-1: Waste Oil
+RCRA WEEKLY,Readville Coach,Working Area/Transfer Equipment
+RCRA WEEKLY,Readville Track and Engineering,MAA-1: Hazhut
+RCRA WEEKLY,Readville Track and Engineering,MAA-2: Universal Waste
+RCRA WEEKLY,Readville Track and Engineering,SAA-1: Oil Filter Crusher
+RCRA WEEKLY,Readville Track and Engineering,SAA-2: 55-Gallon Drum with Aerosol
+RCRA WEEKLY,Readville Track and Engineering,Working Area/Transfer Equipment
+RCRA WEEKLY,Widett S and I,MAA-1: Exterior of Pump House
+RCRA WEEKLY,Widett S and I,MAA-2: UST-2
+RCRA WEEKLY,Widett S and I,MAA-3: Universal Waste
+RCRA WEEKLY,Widett S and I,MAA-5: AST-4
+RCRA WEEKLY,Widett S and I,SAA-1: Diesel Pump House
+RCRA WEEKLY,Widett S and I,SAA-2: Inside S&I Building
+RCRA WEEKLY,Widett S and I,Working Area/Transfer Equipment
+MONTHLY SPCC,CRMF,T-1 (Dielectric)
+MONTHLY SPCC,CRMF,T-2 (Dielectric) 
+MONTHLY SPCC,CRMF,T-3 (Dielectric)
+MONTHLY SPCC,CRMF,T-4 (Dielectric) - Parking Lot
+MONTHLY SPCC,CRMF,Elevator 1 (225 gal Hydraulic Oli)
+MONTHLY SPCC,CRMF,Elevator 2 (225 gal Hydraulic Oli)
+MONTHLY SPCC,CRMF,Elevator 3 (225 gal Hydraulic Oli)
+MONTHLY SPCC,CRMF,"AST-1 (175,000 gal Diesel)"
+MONTHLY SPCC,CRMF,"AST-2 (175,000 gal Diesel)"
+MONTHLY SPCC,CRMF,"AST-3 (8,000 gal Lube Oil)"
+MONTHLY SPCC,CRMF,"AST-4 (8,000 gal Lube Oil)"
+MONTHLY SPCC,CRMF,"AST-7 (8,000 gal Lube Oil)"
+MONTHLY SPCC,CRMF,AST-11 (125 gal Fuel Oil)
+MONTHLY SPCC,CRMF,AST-12 (100 gal Fuel Oil)
+MONTHLY SPCC,CRMF,AST-13 (285 gal Fuel Oil)
+MONTHLY SPCC,CRMF,Portable Containers (Totes and Drums)
+MONTHLY SPCC,Readville Coach,AST-1 (250 gal Diesel)
+MONTHLY SPCC,Readville Coach,AST-2 (180 gal Diesel)
+MONTHLY SPCC,Readville Coach,AST-3 (300 gal Kerosene)
+MONTHLY SPCC,Readville Coach,55-gall Drums Insdie bldg next to UNW (Waste Oil and Oil/Antifreeze)
+MONTHLY SPCC,Readville Coach,55 gal Drums next to AST-1
+MONTHLY SPCC,Readville Coach,T-1
+MONTHLY SPCC,Readville Coach,T-2
+MONTHLY SPCC,Readville Coach,T-4
+MONTHLY SPCC,Readville Coach,T-5
+MONTHLY SPCC,Readville Coach,T-6
+MONTHLY SPCC,Readville Coach,Emergency Generator (Diesel)
+MONTHLY SPCC,Readville Track and Engineering,AST-1 (500 gal Diesel)
+MONTHLY SPCC,Readville Track and Engineering,"UST-1 - UST-3 ((2) 2,500 gal RUL and (1) 5,000 gal Diesel)"
+MONTHLY SPCC,Readville Track and Engineering,T-1 (Dielectric)
+MONTHLY SPCC,Readville Track and Engineering,480 gal containers in Mechanics Bldg. Storage Rack
+MONTHLY SPCC,Readville Track and Engineering,330 gal drums in Petroleum Shed
+MONTHLY SPCC,Readville Track and Engineering,Drums in Hazardous Waste Storage Hut
+MONTHLY SPCC,Somerville MOW,"AST-1 (4,000 gal #2 Fuel Oil)"
+MONTHLY SPCC,Somerville MOW,AST-2 (275 gal #2 Fuel Oil)
+MONTHLY SPCC,Somerville MOW,"AST-3 - AST-7 (105,000 gal Asphalt)"
+MONTHLY SPCC,Somerville MOW,55 gal Drums in Hazardous Waste Storage Area
+MONTHLY SPCC,Somerville MOW,T-1 to T-3 Dielectric
+MONTHLY SPCC,Charlestown T-Pad,"AST-1 (2,000 gal Diesel)"
+MONTHLY SPCC,Charlestown T-Pad,AST-2 (300 gal Kerosene)
+MONTHLY SPCC,Charlestown T-Pad,AST-3 (300 gal Heating Oil)
+MONTHLY SPCC,Charlestown T-Pad,AST-4 (500 gal Heating Oil)
+MONTHLY SPCC,Charlestown T-Pad,AST-5 (300 gal Diesel)
+MONTHLY SPCC,Charlestown T-Pad,Transformer-1
+MONTHLY SPCC,Charlestown T-Pad,Hazardous Waste Storage Shed
+MONTHLY SPCC,Charlestown T-Pad,Conex Trailer #1
+MONTHLY SPCC,Widett S and I,"AST-1 (250,000 gal Diesel)"
+MONTHLY SPCC,Widett S and I,"AST-2 (250,000 gal Diesel)"
+MONTHLY SPCC,Widett S and I,AST-3 (Generator)
+MONTHLY SPCC,Widett S and I,AST-4 (200 gal Waste Oil)
+MONTHLY SPCC,Widett S and I,Elevator-1 (100 gal Hydraulic Oil)
+MONTHLY SPCC,Widett S and I,Elevator-2 (100 gal Hydraulic Oil)
+MONTHLY SPCC,Widett S and I,UST-2 (Waste Oil)
+MONTHLY SPCC,Widett S and I,250 to 300-gal Totes - Stores and S&I Main Bldg
+MONTHLY SPCC,Widett S and I,55-gal Drums- Various Locations
+AST MONTHLY,CRMF,AST-01
+AST MONTHLY,CRMF,AST-02
+AST MONTHLY,CRMF,AST-03 (Formerly AST-06)
+AST MONTHLY,CRMF,AST-04 (Formerly AST-07)
+AST MONTHLY,CRMF,AST-05 Waste Antifreeze (Fomerly AST-08)
+AST MONTHLY,CRMF,AST-06 Waste Coolant (Formerly AST-09)
+AST MONTHLY,CRMF,AST-07 Lube Oil (Formerly AST-10)
+AST MONTHLY,CRMF,AST-11 Fuel Oil (Fire Pump Room)
+AST MONTHLY,CRMF,AST-12 Fuel Oil (Emergency Generator) 
+AST MONTHLY,CRMF,AST-13 Waste Oil
+AST MONTHLY,CRMF,Elevator 1 Hydraulic Oil (Front Lobby) 
+AST MONTHLY,CRMF,Elevator 2 Hydraulic Oil (Room 128) 
+AST MONTHLY,CRMF,Elevator 3 Hydraulic Oil (Tower Control)
+AST MONTHLY,CRMF,Transformer Yard 1 Dielectric Oil (Near Remediation Tanks)
+AST MONTHLY,CRMF,Transformer Yard 3 Dielectric Oil #411504 (No PCBs)
+AST MONTHLY,CRMF,Transformer Yard 14 Dielectric Oil #411005
+AST MONTHLY,Widett,AST - 1
+AST MONTHLY,Widett,AST- 2
+AST MONTHLY,West Cambridge,AST - 1
+AST MONTHLY,West Cambridge,AST - 2
+UST MONTHLY,CRMF,UST - 02
+UST MONTHLY,CRMF,UST - 03
+UST MONTHLY,Readville Track and Engineering,UST - No ID
+UST MONTHLY,Widett,UST - No ID
+SWPPP,Charlestown T-Pad,Sub-Location 1
+SWPPP,CRMF,Sub-Location 1
+SWPPP,North Station,Sub-Location 1
+SWPPP,Widett,Sub-Location 1
+SWPPP,Bradford Layover,Sub-Location 1
+SWPPP,Fitchburg Layover,Sub-Location 1
+SWPPP,Franklin Layover,Sub-Location 1
+SWPPP,Greenbush Layover,Sub-Location 1
+SWPPP,Kingston Layover,Sub-Location 1
+SWPPP,Middleboro Layover,Sub-Location 1
+SWPPP,Needham Layover,Sub-Location 1
+SWPPP,Newburyport Layover,Sub-Location 1
+SWPPP,Rockport Layover,Sub-Location 1

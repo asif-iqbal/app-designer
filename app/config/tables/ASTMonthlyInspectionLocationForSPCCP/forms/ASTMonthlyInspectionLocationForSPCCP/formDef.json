@@ -38,16 +38,46 @@
         "display": {
           "text": "Area Location"
         },
-        "choice_filter": "choice_item.location === data('loc_name')",
+        "choice_filter": "choice_item.location == data('loc_name') && choice_item.event == 'AST MONTHLY'",
         "templatePath": "custom_select_dropdown.handlebars",
         "_row_num": 5
+      },
+      {
+        "type": "string",
+        "name": "construction",
+        "display": {
+          "text": "Construction"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 6
+      },
+      {
+        "type": "string",
+        "name": "primary_contents",
+        "display": {
+          "text": "Primary contents"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 7
+      },
+      {
+        "type": "string",
+        "name": "capacity",
+        "display": {
+          "text": "Capacity"
+        },
+        "hideInContents": "true",
+        "templatePath": "string_input_type.handlebars",
+        "_row_num": 8
       },
       {
         "type": "note",
         "display": {
           "text": "Aboveground Storage Tanks and Separation Equipment"
         },
-        "_row_num": 6
+        "_row_num": 9
       },
       {
         "type": "select_one",
@@ -56,7 +86,7 @@
         "display": {
           "text": "Tank surface, supports, bolts, rivets, seams and/ or gaskets show signs of damage, rust, deterioration or leakage"
         },
-        "_row_num": 7
+        "_row_num": 10
       },
       {
         "type": "select_one_dropdown",
@@ -66,7 +96,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 8
+        "_row_num": 11
       },
       {
         "type": "textarea",
@@ -74,7 +104,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 9
+        "_row_num": 12
       },
       {
         "type": "select_one",
@@ -83,7 +113,7 @@
         "display": {
           "text": "Aboveground tank foundation and/ or secondary containment berm has eroded or settled, or has been breached"
         },
-        "_row_num": 10
+        "_row_num": 13
       },
       {
         "type": "select_one_dropdown",
@@ -93,7 +123,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 11
+        "_row_num": 14
       },
       {
         "type": "textarea",
@@ -101,7 +131,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 12
+        "_row_num": 15
       },
       {
         "type": "select_one",
@@ -110,7 +140,7 @@
         "display": {
           "text": "Containment berm shows discoloration or stains"
         },
-        "_row_num": 13
+        "_row_num": 16
       },
       {
         "type": "select_one_dropdown",
@@ -120,7 +150,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 14
+        "_row_num": 17
       },
       {
         "type": "textarea",
@@ -128,7 +158,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 15
+        "_row_num": 18
       },
       {
         "type": "select_one",
@@ -137,7 +167,7 @@
         "display": {
           "text": "Berm drainage valves are open/broken"
         },
-        "_row_num": 16
+        "_row_num": 19
       },
       {
         "type": "select_one_dropdown",
@@ -147,7 +177,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 17
+        "_row_num": 20
       },
       {
         "type": "textarea",
@@ -155,7 +185,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 18
+        "_row_num": 21
       },
       {
         "type": "select_one",
@@ -164,7 +194,7 @@
         "display": {
           "text": "Aboveground tank interstice contains liquid (applicable to ASTs with double wall spaces)."
         },
-        "_row_num": 19
+        "_row_num": 22
       },
       {
         "type": "select_one_dropdown",
@@ -174,7 +204,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 20
+        "_row_num": 23
       },
       {
         "type": "textarea",
@@ -182,7 +212,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 21
+        "_row_num": 24
       },
       {
         "type": "select_one",
@@ -191,7 +221,7 @@
         "display": {
           "text": "Level gauges, electronic monitoring equipment and/ or overfill protection alarms are faulty and/or inoperative"
         },
-        "_row_num": 22
+        "_row_num": 25
       },
       {
         "type": "select_one_dropdown",
@@ -201,7 +231,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 23
+        "_row_num": 26
       },
       {
         "type": "textarea",
@@ -209,7 +239,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 24
+        "_row_num": 27
       },
       {
         "type": "select_one",
@@ -218,7 +248,7 @@
         "display": {
           "text": "Vent pipes are uncapped and/ or obstructed."
         },
-        "_row_num": 25
+        "_row_num": 28
       },
       {
         "type": "select_one_dropdown",
@@ -228,7 +258,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 26
+        "_row_num": 29
       },
       {
         "type": "textarea",
@@ -236,7 +266,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 27
+        "_row_num": 30
       },
       {
         "type": "select_one",
@@ -245,7 +275,7 @@
         "display": {
           "text": "Thief hatch and vent valve does not seal air tight"
         },
-        "_row_num": 28
+        "_row_num": 31
       },
       {
         "type": "select_one_dropdown",
@@ -255,7 +285,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 29
+        "_row_num": 32
       },
       {
         "type": "textarea",
@@ -263,7 +293,7 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 30
+        "_row_num": 33
       },
       {
         "type": "select_one",
@@ -272,7 +302,7 @@
         "display": {
           "text": "Tank area blocked by trash, equipment or vegetation"
         },
-        "_row_num": 31
+        "_row_num": 34
       },
       {
         "type": "select_one_dropdown",
@@ -282,7 +312,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 32
+        "_row_num": 35
       },
       {
         "type": "textarea",
@@ -290,18 +320,18 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 33
+        "_row_num": 36
       },
       {
         "clause": "end screen",
-        "_row_num": 34
+        "_row_num": 37
       },
       {
         "clause": "begin screen",
         "display": {
           "text": "SPCC AST Monthly Inspection"
         },
-        "_row_num": 35
+        "_row_num": 38
       },
       {
         "type": "select_one",
@@ -310,7 +340,7 @@
         "display": {
           "text": "Equipment protectors, labels, or signs are missing"
         },
-        "_row_num": 36
+        "_row_num": 39
       },
       {
         "type": "select_one_dropdown",
@@ -320,7 +350,7 @@
           "text": "If YES, follow up"
         },
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 37
+        "_row_num": 40
       },
       {
         "type": "textarea",
@@ -328,14 +358,14 @@
         "display": {
           "text": "Comments"
         },
-        "_row_num": 38
+        "_row_num": 41
       },
       {
         "type": "note",
         "display": {
           "text": "Piping/Flow lines and Related Equipment"
         },
-        "_row_num": 39
+        "_row_num": 42
       },
       {
         "type": "select_one",
@@ -344,19 +374,19 @@
         "display": {
           "text": "Spill bucket is cracked, damaged and/or has product or debris."
         },
-        "_row_num": 40
+        "_row_num": 43
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "spill_bucket_damaged_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 41
+        "_row_num": 44
       },
       {
         "type": "textarea",
         "name": "spill_bucket_damaged_com",
-        "_row_num": 42
+        "_row_num": 45
       },
       {
         "type": "select_one",
@@ -365,19 +395,19 @@
         "display": {
           "text": "Supply/ return lines and/ or supports, gaskets or valve seals are damaged, deteriorated and/ or show signs leakage."
         },
-        "_row_num": 43
+        "_row_num": 46
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "supply_gaskets_damaged_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 44
+        "_row_num": 47
       },
       {
         "type": "textarea",
         "name": "supply_gaskets_damaged_com",
-        "_row_num": 45
+        "_row_num": 48
       },
       {
         "type": "select_one",
@@ -386,26 +416,26 @@
         "display": {
           "text": "Buried pipelines are exposed."
         },
-        "_row_num": 46
+        "_row_num": 49
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "buried_pipilines_exposed_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 47
+        "_row_num": 50
       },
       {
         "type": "textarea",
         "name": "buried_pipilines_exposed_com",
-        "_row_num": 48
+        "_row_num": 51
       },
       {
         "type": "note",
         "display": {
           "text": "Transfer equipment"
         },
-        "_row_num": 49
+        "_row_num": 52
       },
       {
         "type": "select_one",
@@ -414,19 +444,19 @@
         "display": {
           "text": "Loading/unloading lines are damaged or deteriorated."
         },
-        "_row_num": 50
+        "_row_num": 53
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "loading_lines_damaged_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 51
+        "_row_num": 54
       },
       {
         "type": "textarea",
         "name": "loading_lines_damaged_com",
-        "_row_num": 52
+        "_row_num": 55
       },
       {
         "type": "select_one",
@@ -435,19 +465,19 @@
         "display": {
           "text": "Connections are not capped or blank flanged"
         },
-        "_row_num": 53
+        "_row_num": 56
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "connections_blank_flanged_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 54
+        "_row_num": 57
       },
       {
         "type": "textarea",
         "name": "connections_blank_flanged_com",
-        "_row_num": 55
+        "_row_num": 58
       },
       {
         "type": "select_one",
@@ -456,26 +486,26 @@
         "display": {
           "text": "Secondary containment is damaged or stained"
         },
-        "_row_num": 56
+        "_row_num": 59
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "secondary_containment_damaged_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 57
+        "_row_num": 60
       },
       {
         "type": "textarea",
         "name": "secondary_containment_damaged_com",
-        "_row_num": 58
+        "_row_num": 61
       },
       {
         "type": "note",
         "display": {
           "text": "Response Kit Inventory"
         },
-        "_row_num": 59
+        "_row_num": 62
       },
       {
         "type": "select_one",
@@ -484,19 +514,19 @@
         "display": {
           "text": "Spill response material missing or needs replacement"
         },
-        "_row_num": 60
+        "_row_num": 63
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "spill_material_missing_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 61
+        "_row_num": 64
       },
       {
         "type": "textarea",
         "name": "spill_material_missing_com",
-        "_row_num": 62
+        "_row_num": 65
       },
       {
         "type": "select_one",
@@ -505,23 +535,23 @@
         "display": {
           "text": "Spill/ threat of a release reporting procedures with emergency contacts are not conspicuously posted"
         },
-        "_row_num": 63
+        "_row_num": 66
       },
       {
         "type": "select_one_dropdown",
         "values_list": "followup_values",
         "name": "threat_procedures_not_posted_fu",
         "templatePath": "custom_select_dropdown.handlebars",
-        "_row_num": 64
+        "_row_num": 67
       },
       {
         "type": "textarea",
         "name": "threat_procedures_not_posted_com",
-        "_row_num": 65
+        "_row_num": 68
       },
       {
         "clause": "end screen",
-        "_row_num": 66
+        "_row_num": 69
       }
     ],
     "choices": [
@@ -895,7 +925,7 @@
         "query_name": "sublocations_csv",
         "query_type": "csv",
         "uri": "\"sublocations.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation}; place.event = place.event;\nreturn place;\n})",
         "_row_num": 2
       }
     ]
@@ -1030,7 +1060,7 @@
         "query_name": "sublocations_csv",
         "query_type": "csv",
         "uri": "\"sublocations.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation}; place.event = place.event;\nreturn place;\n})",
         "_row_num": 2
       }
     },
@@ -1080,7 +1110,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 10,
             "section_name": "survey"
           },
           {
@@ -1095,7 +1125,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 8,
+            "_row_num": 11,
             "section_name": "survey"
           },
           {
@@ -1109,7 +1139,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 12,
             "section_name": "survey"
           },
           {
@@ -1124,7 +1154,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 10,
+            "_row_num": 13,
             "section_name": "survey"
           },
           {
@@ -1139,7 +1169,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 14,
             "section_name": "survey"
           },
           {
@@ -1153,7 +1183,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 15,
             "section_name": "survey"
           },
           {
@@ -1168,7 +1198,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 13,
+            "_row_num": 16,
             "section_name": "survey"
           },
           {
@@ -1183,7 +1213,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 17,
             "section_name": "survey"
           },
           {
@@ -1197,7 +1227,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 18,
             "section_name": "survey"
           },
           {
@@ -1212,7 +1242,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 16,
+            "_row_num": 19,
             "section_name": "survey"
           },
           {
@@ -1227,7 +1257,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 17,
+            "_row_num": 20,
             "section_name": "survey"
           },
           {
@@ -1241,7 +1271,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 21,
             "section_name": "survey"
           },
           {
@@ -1256,7 +1286,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 19,
+            "_row_num": 22,
             "section_name": "survey"
           },
           {
@@ -1271,7 +1301,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 23,
             "section_name": "survey"
           },
           {
@@ -1285,7 +1315,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 24,
             "section_name": "survey"
           },
           {
@@ -1300,7 +1330,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 25,
             "section_name": "survey"
           },
           {
@@ -1315,7 +1345,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 26,
             "section_name": "survey"
           },
           {
@@ -1329,7 +1359,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 27,
             "section_name": "survey"
           },
           {
@@ -1344,7 +1374,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 28,
             "section_name": "survey"
           },
           {
@@ -1359,7 +1389,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 29,
             "section_name": "survey"
           },
           {
@@ -1373,7 +1403,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 30,
             "section_name": "survey"
           },
           {
@@ -1388,7 +1418,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 31,
             "section_name": "survey"
           },
           {
@@ -1403,7 +1433,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 32,
             "section_name": "survey"
           },
           {
@@ -1417,7 +1447,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 30,
+            "_row_num": 33,
             "section_name": "survey"
           },
           {
@@ -1432,7 +1462,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 31,
+            "_row_num": 34,
             "section_name": "survey"
           },
           {
@@ -1447,7 +1477,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 32,
+            "_row_num": 35,
             "section_name": "survey"
           },
           {
@@ -1461,7 +1491,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 33,
+            "_row_num": 36,
             "section_name": "survey"
           },
           {
@@ -1476,7 +1506,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 36,
+            "_row_num": 39,
             "section_name": "survey"
           },
           {
@@ -1491,7 +1521,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 37,
+            "_row_num": 40,
             "section_name": "survey"
           },
           {
@@ -1505,7 +1535,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 38,
+            "_row_num": 41,
             "section_name": "survey"
           },
           {
@@ -1520,7 +1550,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 40,
+            "_row_num": 43,
             "section_name": "survey"
           },
           {
@@ -1535,7 +1565,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 41,
+            "_row_num": 44,
             "section_name": "survey"
           },
           {
@@ -1549,7 +1579,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 42,
+            "_row_num": 45,
             "section_name": "survey"
           },
           {
@@ -1564,7 +1594,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 43,
+            "_row_num": 46,
             "section_name": "survey"
           },
           {
@@ -1579,7 +1609,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 44,
+            "_row_num": 47,
             "section_name": "survey"
           },
           {
@@ -1593,7 +1623,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 45,
+            "_row_num": 48,
             "section_name": "survey"
           },
           {
@@ -1608,7 +1638,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 46,
+            "_row_num": 49,
             "section_name": "survey"
           },
           {
@@ -1623,7 +1653,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 47,
+            "_row_num": 50,
             "section_name": "survey"
           },
           {
@@ -1637,7 +1667,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 48,
+            "_row_num": 51,
             "section_name": "survey"
           },
           {
@@ -1652,7 +1682,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 50,
+            "_row_num": 53,
             "section_name": "survey"
           },
           {
@@ -1667,7 +1697,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 51,
+            "_row_num": 54,
             "section_name": "survey"
           },
           {
@@ -1681,7 +1711,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 52,
+            "_row_num": 55,
             "section_name": "survey"
           },
           {
@@ -1696,7 +1726,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 53,
+            "_row_num": 56,
             "section_name": "survey"
           },
           {
@@ -1711,7 +1741,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 54,
+            "_row_num": 57,
             "section_name": "survey"
           },
           {
@@ -1725,7 +1755,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 55,
+            "_row_num": 58,
             "section_name": "survey"
           },
           {
@@ -1740,7 +1770,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 56,
+            "_row_num": 59,
             "section_name": "survey"
           },
           {
@@ -1755,7 +1785,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 57,
+            "_row_num": 60,
             "section_name": "survey"
           },
           {
@@ -1769,7 +1799,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 58,
+            "_row_num": 61,
             "section_name": "survey"
           },
           {
@@ -1784,7 +1814,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 60,
+            "_row_num": 63,
             "section_name": "survey"
           },
           {
@@ -1799,7 +1829,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 61,
+            "_row_num": 64,
             "section_name": "survey"
           },
           {
@@ -1813,7 +1843,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 62,
+            "_row_num": 65,
             "section_name": "survey"
           },
           {
@@ -1828,7 +1858,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 63,
+            "_row_num": 66,
             "section_name": "survey"
           },
           {
@@ -1843,7 +1873,7 @@
         "valuesList": "followup_values",
         "_defn": [
           {
-            "_row_num": 64,
+            "_row_num": 67,
             "section_name": "survey"
           },
           {
@@ -1857,7 +1887,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 65,
+            "_row_num": 68,
             "section_name": "survey"
           },
           {
@@ -1866,6 +1896,36 @@
           }
         ],
         "elementKey": "threat_procedures_not_posted_com"
+      },
+      "construction": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "construction"
+      },
+      "primary_contents": {
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "primary_contents"
+      },
+      "capacity": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "capacity"
       }
     },
     "section_names": [
@@ -2002,7 +2062,7 @@
             "display": {
               "text": "Area Location"
             },
-            "choice_filter": "choice_item.location === data('loc_name')",
+            "choice_filter": "choice_item.location == data('loc_name') && choice_item.event == 'AST MONTHLY'",
             "templatePath": "custom_select_dropdown.handlebars",
             "_row_num": 5,
             "__rowNum__": 4,
@@ -2012,16 +2072,61 @@
             "promptIdx": 1
           },
           {
+            "type": "string",
+            "name": "construction",
+            "display": {
+              "text": "Construction"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "string",
+            "name": "primary_contents",
+            "display": {
+              "text": "Primary contents"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "string",
+            "name": "capacity",
+            "display": {
+              "text": "Capacity"
+            },
+            "hideInContents": "true",
+            "templatePath": "string_input_type.handlebars",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
             "type": "note",
             "display": {
               "text": "Aboveground Storage Tanks and Separation Equipment"
             },
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 2
+            "promptIdx": 5
           },
           {
             "type": "select_one",
@@ -2029,48 +2134,6 @@
             "name": "tank_surface_rust",
             "display": {
               "text": "Tank surface, supports, bolts, rivets, seams and/ or gaskets show signs of damage, rust, deterioration or leakage"
-            },
-            "_row_num": 7,
-            "__rowNum__": 6,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 3
-          },
-          {
-            "type": "select_one_dropdown",
-            "values_list": "followup_values",
-            "name": "tank_surface_rust_fu",
-            "display": {
-              "text": "If YES, follow up"
-            },
-            "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 8,
-            "__rowNum__": 7,
-            "_token_type": "prompt",
-            "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 4
-          },
-          {
-            "type": "textarea",
-            "name": "tank_surface_rust_com",
-            "display": {
-              "text": "Comments"
-            },
-            "_row_num": 9,
-            "__rowNum__": 8,
-            "_token_type": "prompt",
-            "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 5
-          },
-          {
-            "type": "select_one",
-            "values_list": "yesno",
-            "name": "aboveground_tank_breached",
-            "display": {
-              "text": "Aboveground tank foundation and/ or secondary containment berm has eroded or settled, or has been breached"
             },
             "_row_num": 10,
             "__rowNum__": 9,
@@ -2082,7 +2145,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "aboveground_tank_breached_fu",
+            "name": "tank_surface_rust_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -2096,7 +2159,7 @@
           },
           {
             "type": "textarea",
-            "name": "aboveground_tank_breached_com",
+            "name": "tank_surface_rust_com",
             "display": {
               "text": "Comments"
             },
@@ -2110,9 +2173,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "containment_berm_stains",
+            "name": "aboveground_tank_breached",
             "display": {
-              "text": "Containment berm shows discoloration or stains"
+              "text": "Aboveground tank foundation and/ or secondary containment berm has eroded or settled, or has been breached"
             },
             "_row_num": 13,
             "__rowNum__": 12,
@@ -2124,7 +2187,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "containment_berm_stains_fu",
+            "name": "aboveground_tank_breached_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -2138,7 +2201,7 @@
           },
           {
             "type": "textarea",
-            "name": "containment_berm_stains_com",
+            "name": "aboveground_tank_breached_com",
             "display": {
               "text": "Comments"
             },
@@ -2152,9 +2215,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "berm_drainage_valves",
+            "name": "containment_berm_stains",
             "display": {
-              "text": "Berm drainage valves are open/broken"
+              "text": "Containment berm shows discoloration or stains"
             },
             "_row_num": 16,
             "__rowNum__": 15,
@@ -2166,7 +2229,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "berm_drainage_valves_fu",
+            "name": "containment_berm_stains_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -2180,7 +2243,7 @@
           },
           {
             "type": "textarea",
-            "name": "berm_drainage_valves_com",
+            "name": "containment_berm_stains_com",
             "display": {
               "text": "Comments"
             },
@@ -2194,9 +2257,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "aboveground_tank_liquid",
+            "name": "berm_drainage_valves",
             "display": {
-              "text": "Aboveground tank interstice contains liquid (applicable to ASTs with double wall spaces)."
+              "text": "Berm drainage valves are open/broken"
             },
             "_row_num": 19,
             "__rowNum__": 18,
@@ -2208,7 +2271,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "aboveground_tank_liquid_fu",
+            "name": "berm_drainage_valves_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -2222,7 +2285,7 @@
           },
           {
             "type": "textarea",
-            "name": "aboveground_tank_liquid_com",
+            "name": "berm_drainage_valves_com",
             "display": {
               "text": "Comments"
             },
@@ -2236,9 +2299,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "level_gauges_alarm",
+            "name": "aboveground_tank_liquid",
             "display": {
-              "text": "Level gauges, electronic monitoring equipment and/ or overfill protection alarms are faulty and/or inoperative"
+              "text": "Aboveground tank interstice contains liquid (applicable to ASTs with double wall spaces)."
             },
             "_row_num": 22,
             "__rowNum__": 21,
@@ -2250,7 +2313,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "level_gauges_alarm_fu",
+            "name": "aboveground_tank_liquid_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -2264,7 +2327,7 @@
           },
           {
             "type": "textarea",
-            "name": "level_gauges_alarm_com",
+            "name": "aboveground_tank_liquid_com",
             "display": {
               "text": "Comments"
             },
@@ -2278,9 +2341,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "vent_pipes_obstruct",
+            "name": "level_gauges_alarm",
             "display": {
-              "text": "Vent pipes are uncapped and/ or obstructed."
+              "text": "Level gauges, electronic monitoring equipment and/ or overfill protection alarms are faulty and/or inoperative"
             },
             "_row_num": 25,
             "__rowNum__": 24,
@@ -2292,7 +2355,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "vent_pipes_obstruct_fu",
+            "name": "level_gauges_alarm_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -2306,7 +2369,7 @@
           },
           {
             "type": "textarea",
-            "name": "vent_pipes_obstruct_com",
+            "name": "level_gauges_alarm_com",
             "display": {
               "text": "Comments"
             },
@@ -2320,9 +2383,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "thief_hatch_seal",
+            "name": "vent_pipes_obstruct",
             "display": {
-              "text": "Thief hatch and vent valve does not seal air tight"
+              "text": "Vent pipes are uncapped and/ or obstructed."
             },
             "_row_num": 28,
             "__rowNum__": 27,
@@ -2334,7 +2397,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "thief_hatch_seal_fu",
+            "name": "vent_pipes_obstruct_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -2348,7 +2411,7 @@
           },
           {
             "type": "textarea",
-            "name": "thief_hatch_seal_com",
+            "name": "vent_pipes_obstruct_com",
             "display": {
               "text": "Comments"
             },
@@ -2362,9 +2425,9 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "tank_area_blocked",
+            "name": "thief_hatch_seal",
             "display": {
-              "text": "Tank area blocked by trash, equipment or vegetation"
+              "text": "Thief hatch and vent valve does not seal air tight"
             },
             "_row_num": 31,
             "__rowNum__": 30,
@@ -2376,7 +2439,7 @@
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
-            "name": "tank_area_blocked_fu",
+            "name": "thief_hatch_seal_fu",
             "display": {
               "text": "If YES, follow up"
             },
@@ -2390,7 +2453,7 @@
           },
           {
             "type": "textarea",
-            "name": "tank_area_blocked_com",
+            "name": "thief_hatch_seal_com",
             "display": {
               "text": "Comments"
             },
@@ -2404,16 +2467,58 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "equipment_pretector_missing",
+            "name": "tank_area_blocked",
             "display": {
-              "text": "Equipment protectors, labels, or signs are missing"
+              "text": "Tank area blocked by trash, equipment or vegetation"
+            },
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 30
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "followup_values",
+            "name": "tank_area_blocked_fu",
+            "display": {
+              "text": "If YES, follow up"
+            },
+            "templatePath": "custom_select_dropdown.handlebars",
+            "_row_num": 35,
+            "__rowNum__": 34,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 31
+          },
+          {
+            "type": "textarea",
+            "name": "tank_area_blocked_com",
+            "display": {
+              "text": "Comments"
             },
             "_row_num": 36,
             "__rowNum__": 35,
             "_token_type": "prompt",
+            "_type": "textarea",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 32
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno",
+            "name": "equipment_pretector_missing",
+            "display": {
+              "text": "Equipment protectors, labels, or signs are missing"
+            },
+            "_row_num": 39,
+            "__rowNum__": 38,
+            "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 30
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 33
           },
           {
             "type": "select_one_dropdown",
@@ -2423,12 +2528,12 @@
               "text": "If YES, follow up"
             },
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 37,
-            "__rowNum__": 36,
+            "_row_num": 40,
+            "__rowNum__": 39,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 31
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 34
           },
           {
             "type": "textarea",
@@ -2436,24 +2541,24 @@
             "display": {
               "text": "Comments"
             },
-            "_row_num": 38,
-            "__rowNum__": 37,
+            "_row_num": 41,
+            "__rowNum__": 40,
             "_token_type": "prompt",
             "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 32
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 35
           },
           {
             "type": "note",
             "display": {
               "text": "Piping/Flow lines and Related Equipment"
             },
-            "_row_num": 39,
-            "__rowNum__": 38,
+            "_row_num": 42,
+            "__rowNum__": 41,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 33
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 36
           },
           {
             "type": "select_one",
@@ -2462,34 +2567,34 @@
             "display": {
               "text": "Spill bucket is cracked, damaged and/or has product or debris."
             },
-            "_row_num": 40,
-            "__rowNum__": 39,
+            "_row_num": 43,
+            "__rowNum__": 42,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 34
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 37
           },
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
             "name": "spill_bucket_damaged_fu",
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 41,
-            "__rowNum__": 40,
+            "_row_num": 44,
+            "__rowNum__": 43,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 35
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 38
           },
           {
             "type": "textarea",
             "name": "spill_bucket_damaged_com",
-            "_row_num": 42,
-            "__rowNum__": 41,
+            "_row_num": 45,
+            "__rowNum__": 44,
             "_token_type": "prompt",
             "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 36
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 39
           },
           {
             "type": "select_one",
@@ -2498,34 +2603,34 @@
             "display": {
               "text": "Supply/ return lines and/ or supports, gaskets or valve seals are damaged, deteriorated and/ or show signs leakage."
             },
-            "_row_num": 43,
-            "__rowNum__": 42,
+            "_row_num": 46,
+            "__rowNum__": 45,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 37
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 40
           },
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
             "name": "supply_gaskets_damaged_fu",
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 44,
-            "__rowNum__": 43,
+            "_row_num": 47,
+            "__rowNum__": 46,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 38
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 41
           },
           {
             "type": "textarea",
             "name": "supply_gaskets_damaged_com",
-            "_row_num": 45,
-            "__rowNum__": 44,
+            "_row_num": 48,
+            "__rowNum__": 47,
             "_token_type": "prompt",
             "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 39
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 42
           },
           {
             "type": "select_one",
@@ -2534,46 +2639,46 @@
             "display": {
               "text": "Buried pipelines are exposed."
             },
-            "_row_num": 46,
-            "__rowNum__": 45,
+            "_row_num": 49,
+            "__rowNum__": 48,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 40
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 43
           },
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
             "name": "buried_pipilines_exposed_fu",
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 47,
-            "__rowNum__": 46,
+            "_row_num": 50,
+            "__rowNum__": 49,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 41
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 44
           },
           {
             "type": "textarea",
             "name": "buried_pipilines_exposed_com",
-            "_row_num": 48,
-            "__rowNum__": 47,
+            "_row_num": 51,
+            "__rowNum__": 50,
             "_token_type": "prompt",
             "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 42
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 45
           },
           {
             "type": "note",
             "display": {
               "text": "Transfer equipment"
             },
-            "_row_num": 49,
-            "__rowNum__": 48,
+            "_row_num": 52,
+            "__rowNum__": 51,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 43
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 46
           },
           {
             "type": "select_one",
@@ -2582,34 +2687,34 @@
             "display": {
               "text": "Loading/unloading lines are damaged or deteriorated."
             },
-            "_row_num": 50,
-            "__rowNum__": 49,
+            "_row_num": 53,
+            "__rowNum__": 52,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 44
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 47
           },
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
             "name": "loading_lines_damaged_fu",
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 51,
-            "__rowNum__": 50,
+            "_row_num": 54,
+            "__rowNum__": 53,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 45
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 48
           },
           {
             "type": "textarea",
             "name": "loading_lines_damaged_com",
-            "_row_num": 52,
-            "__rowNum__": 51,
+            "_row_num": 55,
+            "__rowNum__": 54,
             "_token_type": "prompt",
             "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 46
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 49
           },
           {
             "type": "select_one",
@@ -2618,34 +2723,34 @@
             "display": {
               "text": "Connections are not capped or blank flanged"
             },
-            "_row_num": 53,
-            "__rowNum__": 52,
+            "_row_num": 56,
+            "__rowNum__": 55,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 47
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 50
           },
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
             "name": "connections_blank_flanged_fu",
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 54,
-            "__rowNum__": 53,
+            "_row_num": 57,
+            "__rowNum__": 56,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 48
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 51
           },
           {
             "type": "textarea",
             "name": "connections_blank_flanged_com",
-            "_row_num": 55,
-            "__rowNum__": 54,
+            "_row_num": 58,
+            "__rowNum__": 57,
             "_token_type": "prompt",
             "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 49
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 52
           },
           {
             "type": "select_one",
@@ -2654,46 +2759,46 @@
             "display": {
               "text": "Secondary containment is damaged or stained"
             },
-            "_row_num": 56,
-            "__rowNum__": 55,
+            "_row_num": 59,
+            "__rowNum__": 58,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 50
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 53
           },
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
             "name": "secondary_containment_damaged_fu",
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 57,
-            "__rowNum__": 56,
+            "_row_num": 60,
+            "__rowNum__": 59,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 51
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 54
           },
           {
             "type": "textarea",
             "name": "secondary_containment_damaged_com",
-            "_row_num": 58,
-            "__rowNum__": 57,
+            "_row_num": 61,
+            "__rowNum__": 60,
             "_token_type": "prompt",
             "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 52
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 55
           },
           {
             "type": "note",
             "display": {
               "text": "Response Kit Inventory"
             },
-            "_row_num": 59,
-            "__rowNum__": 58,
+            "_row_num": 62,
+            "__rowNum__": 61,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 53
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 56
           },
           {
             "type": "select_one",
@@ -2702,34 +2807,34 @@
             "display": {
               "text": "Spill response material missing or needs replacement"
             },
-            "_row_num": 60,
-            "__rowNum__": 59,
+            "_row_num": 63,
+            "__rowNum__": 62,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 54
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 57
           },
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
             "name": "spill_material_missing_fu",
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 61,
-            "__rowNum__": 60,
+            "_row_num": 64,
+            "__rowNum__": 63,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 55
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 58
           },
           {
             "type": "textarea",
             "name": "spill_material_missing_com",
-            "_row_num": 62,
-            "__rowNum__": 61,
+            "_row_num": 65,
+            "__rowNum__": 64,
             "_token_type": "prompt",
             "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 56
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 59
           },
           {
             "type": "select_one",
@@ -2738,42 +2843,42 @@
             "display": {
               "text": "Spill/ threat of a release reporting procedures with emergency contacts are not conspicuously posted"
             },
-            "_row_num": 63,
-            "__rowNum__": 62,
+            "_row_num": 66,
+            "__rowNum__": 65,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 57
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 60
           },
           {
             "type": "select_one_dropdown",
             "values_list": "followup_values",
             "name": "threat_procedures_not_posted_fu",
             "templatePath": "custom_select_dropdown.handlebars",
-            "_row_num": 64,
-            "__rowNum__": 63,
+            "_row_num": 67,
+            "__rowNum__": 66,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 58
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 61
           },
           {
             "type": "textarea",
             "name": "threat_procedures_not_posted_com",
-            "_row_num": 65,
-            "__rowNum__": 64,
+            "_row_num": 68,
+            "__rowNum__": 67,
             "_token_type": "prompt",
             "_type": "textarea",
-            "_branch_label_enclosing_screen": "survey/_screen35",
-            "promptIdx": 59
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 62
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 67,
-            "_branch_label_enclosing_screen": "survey/_screen67",
-            "promptIdx": 60
+            "_row_num": 70,
+            "_branch_label_enclosing_screen": "survey/_screen70",
+            "promptIdx": 63
           }
         ],
         "validation_tag_map": {
@@ -2790,11 +2895,11 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 34,
-              "__rowNum__": 33,
+              "_row_num": 37,
+              "__rowNum__": 36,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\nactivePromptIndicies.push(30);\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -2802,28 +2907,28 @@
             "display": {
               "text": "SPCC AST Monthly Inspection"
             },
-            "_row_num": 35,
-            "__rowNum__": 34,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 66,
-              "__rowNum__": 65,
+              "_row_num": 69,
+              "__rowNum__": 68,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(30);\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\nactivePromptIndicies.push(33);\nactivePromptIndicies.push(34);\nactivePromptIndicies.push(35);\nactivePromptIndicies.push(36);\nactivePromptIndicies.push(37);\nactivePromptIndicies.push(38);\nactivePromptIndicies.push(39);\nactivePromptIndicies.push(40);\nactivePromptIndicies.push(41);\nactivePromptIndicies.push(42);\nactivePromptIndicies.push(43);\nactivePromptIndicies.push(44);\nactivePromptIndicies.push(45);\nactivePromptIndicies.push(46);\nactivePromptIndicies.push(47);\nactivePromptIndicies.push(48);\nactivePromptIndicies.push(49);\nactivePromptIndicies.push(50);\nactivePromptIndicies.push(51);\nactivePromptIndicies.push(52);\nactivePromptIndicies.push(53);\nactivePromptIndicies.push(54);\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(33);\nactivePromptIndicies.push(34);\nactivePromptIndicies.push(35);\nactivePromptIndicies.push(36);\nactivePromptIndicies.push(37);\nactivePromptIndicies.push(38);\nactivePromptIndicies.push(39);\nactivePromptIndicies.push(40);\nactivePromptIndicies.push(41);\nactivePromptIndicies.push(42);\nactivePromptIndicies.push(43);\nactivePromptIndicies.push(44);\nactivePromptIndicies.push(45);\nactivePromptIndicies.push(46);\nactivePromptIndicies.push(47);\nactivePromptIndicies.push(48);\nactivePromptIndicies.push(49);\nactivePromptIndicies.push(50);\nactivePromptIndicies.push(51);\nactivePromptIndicies.push(52);\nactivePromptIndicies.push(53);\nactivePromptIndicies.push(54);\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nactivePromptIndicies.push(62);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 67,
+            "_row_num": 70,
             "operationIdx": 2
           },
           {
-            "_row_num": 67,
+            "_row_num": 70,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(60);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(63);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -2832,15 +2937,15 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 67,
+            "_row_num": 70,
             "operationIdx": 4
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
-          "_screen35": 1,
+          "_screen38": 1,
           "_contents": 3,
-          "_screen67": 3
+          "_screen70": 3
         }
       }
     }

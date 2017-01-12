@@ -28,6 +28,8 @@
         <automatic_overfill_protection/>
         <automatic_overfill_protection_com/>
         <automatic_overfill_protection_fu/>
+        <capacity/>
+        <construction/>
         <dispenser_fuel_staining/>
         <dispenser_fuel_staining_com/>
         <dispenser_fuel_staining_fu/>
@@ -45,6 +47,7 @@
         <manholecovers_subsurface_equipment/>
         <manholecovers_subsurface_equipment_com/>
         <manholecovers_subsurface_equipment_fu/>
+        <primary_contents/>
         <spill_buckets_damaged/>
         <spill_buckets_damaged_com/>
         <spill_buckets_damaged_fu/>
@@ -81,6 +84,8 @@
     <bind nodeset="/data/automatic_overfill_protection" type="string"/>
     <bind nodeset="/data/automatic_overfill_protection_com" type="string"/>
     <bind nodeset="/data/automatic_overfill_protection_fu" type="string"/>
+    <bind nodeset="/data/capacity" type="string"/>
+    <bind nodeset="/data/construction" type="string"/>
     <bind nodeset="/data/dispenser_fuel_staining" type="string"/>
     <bind nodeset="/data/dispenser_fuel_staining_com" type="string"/>
     <bind nodeset="/data/dispenser_fuel_staining_fu" type="string"/>
@@ -98,6 +103,7 @@
     <bind nodeset="/data/manholecovers_subsurface_equipment" type="string"/>
     <bind nodeset="/data/manholecovers_subsurface_equipment_com" type="string"/>
     <bind nodeset="/data/manholecovers_subsurface_equipment_fu" type="string"/>
+    <bind nodeset="/data/primary_contents" type="string"/>
     <bind nodeset="/data/spill_buckets_damaged" type="string"/>
     <bind nodeset="/data/spill_buckets_damaged_com" type="string"/>
     <bind nodeset="/data/spill_buckets_damaged_fu" type="string"/>

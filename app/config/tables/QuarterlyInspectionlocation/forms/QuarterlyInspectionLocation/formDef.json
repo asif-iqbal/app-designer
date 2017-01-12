@@ -2,35 +2,13 @@
   "xlsx": {
     "initial": [
       {
-        "clause": "if // start",
-        "condition": "(opendatakit.getCurrentInstanceId() != null)",
-        "_row_num": 3
-      },
-      {
         "clause": "do section survey",
-        "_row_num": 4
+        "_row_num": 2
       },
       {
-        "type": "finalize",
-        "display": {
-          "text": "Save form"
-        },
-        "_row_num": 5
-      },
-      {
-        "clause": "else // start",
-        "_row_num": 6
-      },
-      {
-        "type": "instances",
-        "display": {
-          "text": "Saved instances"
-        },
-        "_row_num": 7
-      },
-      {
-        "clause": "end if // start",
-        "_row_num": 8
+        "clause": "goto _finalize",
+        "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+        "_row_num": 3
       }
     ],
     "survey": [
@@ -58,7 +36,7 @@
           "text": "Area Location"
         },
         "name": "area_location",
-        "choice_filter": "choice_item.location === data('loc_name')",
+        "choice_filter": "choice_item.location == data('loc_name') && choice_item.event == 'SWPPP'",
         "templatePath": "custom_select_dropdown.handlebars",
         "_row_num": 5
       },
@@ -641,7 +619,7 @@
         "query_name": "sublocations_csv",
         "query_type": "csv",
         "uri": "\"sublocations.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation}; place.event = place.event;\nreturn place;\n})",
         "_row_num": 2
       }
     ]
@@ -750,7 +728,7 @@
         "query_name": "sublocations_csv",
         "query_type": "csv",
         "uri": "\"sublocations.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation};\nreturn place;\n})",
+        "callback": "_.map(context, function(place){place.data_value = place.sublocation;\nplace.display = {text:place.sublocation}; place.event = place.event;\nreturn place;\n})",
         "_row_num": 2
       }
     },
@@ -1342,8 +1320,8 @@
         "prompts": [
           {
             "clause": "do section survey",
-            "_row_num": 4,
-            "__rowNum__": 3,
+            "_row_num": 2,
+            "__rowNum__": 1,
             "_token_type": "prompt",
             "_do_section_name": "survey",
             "_type": "_section",
@@ -1354,36 +1332,12 @@
             "_branch_label_enclosing_screen": "survey/0"
           },
           {
-            "type": "finalize",
-            "display": {
-              "text": "Save form"
-            },
-            "_row_num": 5,
-            "__rowNum__": 4,
-            "_token_type": "prompt",
-            "_type": "finalize",
-            "_branch_label_enclosing_screen": "initial/_screen5",
-            "promptIdx": 1
-          },
-          {
-            "type": "instances",
-            "display": {
-              "text": "Saved instances"
-            },
-            "_row_num": 7,
-            "__rowNum__": 6,
-            "_token_type": "prompt",
-            "_type": "instances",
-            "_branch_label_enclosing_screen": "initial/_screen7",
-            "promptIdx": 2
-          },
-          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 9,
-            "_branch_label_enclosing_screen": "initial/_screen9",
-            "promptIdx": 3
+            "_row_num": 4,
+            "_branch_label_enclosing_screen": "initial/_screen4",
+            "promptIdx": 1
           }
         ],
         "validation_tag_map": {
@@ -1391,106 +1345,74 @@
         },
         "operations": [
           {
-            "clause": "if // start",
-            "condition": "(opendatakit.getCurrentInstanceId() != null)",
-            "_row_num": 3,
-            "__rowNum__": 2,
-            "_token_type": "goto_label",
-            "_tag_name": "start",
-            "_branch_label": "_then3",
+            "clause": "do section survey",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
             "operationIdx": 0
           },
           {
-            "clause": "else // start",
+            "clause": "goto _finalize",
+            "comments": "skips the finalize screen where the user chooses to save as incomplete or finalized and instead saves as finalized",
+            "_row_num": 3,
+            "__rowNum__": 2,
             "_token_type": "goto_label",
-            "_branch_label": "_else6",
-            "_row_num": 6,
+            "_branch_label": "_finalize",
             "operationIdx": 1
-          },
-          {
-            "clause": "do section survey",
-            "_row_num": 4,
-            "__rowNum__": 3,
-            "_token_type": "do_section",
-            "_do_section_name": "survey",
-            "operationIdx": 2
-          },
-          {
-            "_row_num": 5,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 3
-          },
-          {
-            "clause": "end if // start",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif8",
-            "_row_num": 8,
-            "operationIdx": 4
-          },
-          {
-            "_row_num": 7,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 5
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 9,
-            "operationIdx": 6
+            "_row_num": 4,
+            "operationIdx": 2
           },
           {
-            "_row_num": 9,
+            "_row_num": 4,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 7
+            "operationIdx": 3
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 9,
-            "operationIdx": 8
+            "_row_num": 4,
+            "operationIdx": 4
           },
           {
             "_token_type": "validate",
             "clause": "validate finalize",
             "_sweep_name": "finalize",
-            "_row_num": 9,
+            "_row_num": 4,
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 9
+            "operationIdx": 5
           },
           {
             "_token_type": "save_and_terminate",
             "clause": "save and terminate",
             "calculation": true,
-            "_row_num": 9,
+            "_row_num": 4,
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 10
+            "operationIdx": 6
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 9,
-            "operationIdx": 11
+            "_row_num": 4,
+            "operationIdx": 7
           }
         ],
         "branch_label_map": {
-          "_then3": 2,
-          "_screen5": 3,
-          "_else6": 5,
-          "_screen7": 5,
-          "_endif8": 6,
-          "_contents": 7,
-          "_screen9": 7,
-          "_finalize": 9
+          "_contents": 3,
+          "_screen4": 3,
+          "_finalize": 5
         }
       },
       "survey": {
@@ -1516,7 +1438,7 @@
               "text": "Area Location"
             },
             "name": "area_location",
-            "choice_filter": "choice_item.location === data('loc_name')",
+            "choice_filter": "choice_item.location == data('loc_name') && choice_item.event == 'SWPPP'",
             "templatePath": "custom_select_dropdown.handlebars",
             "_row_num": 5,
             "__rowNum__": 4,
