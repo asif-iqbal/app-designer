@@ -738,13 +738,121 @@
         "_row_num": 118
       },
       {
+        "type": "assign",
+        "name": "consumable_name_3",
+        "calculation": "calculates.consumableName3()",
+        "_row_num": 119
+      },
+      {
+        "type": "string",
+        "name": "consumable_name_3",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 120
+      },
+      {
+        "type": "assign",
+        "name": "consumable_quantity_3",
+        "calculation": "calculates.consumableQuantity3()",
+        "_row_num": 121
+      },
+      {
+        "type": "string",
+        "name": "consumable_quantity_3",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 122
+      },
+      {
+        "type": "assign",
+        "name": "consumable_totalhrs_3",
+        "calculation": "calculates.consumableTotalHrs3()",
+        "_row_num": 123
+      },
+      {
+        "type": "string",
+        "name": "consumable_totalhrs_3",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 124
+      },
+      {
+        "type": "assign",
+        "name": "consumable_name_4",
+        "calculation": "calculates.consumableName4()",
+        "_row_num": 125
+      },
+      {
+        "type": "string",
+        "name": "consumable_name_4",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 126
+      },
+      {
+        "type": "assign",
+        "name": "consumable_quantity_4",
+        "calculation": "calculates.consumableQuantity4()",
+        "_row_num": 127
+      },
+      {
+        "type": "string",
+        "name": "consumable_quantity_4",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 128
+      },
+      {
+        "type": "assign",
+        "name": "consumable_totalhrs_4",
+        "calculation": "calculates.consumableTotalHrs4()",
+        "_row_num": 129
+      },
+      {
+        "type": "string",
+        "name": "consumable_totalhrs_4",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 130
+      },
+      {
+        "type": "assign",
+        "name": "consumable_name_5",
+        "calculation": "calculates.consumableName5()",
+        "_row_num": 131
+      },
+      {
+        "type": "string",
+        "name": "consumable_name_5",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 132
+      },
+      {
+        "type": "assign",
+        "name": "consumable_quantity_5",
+        "calculation": "calculates.consumableQuantity5()",
+        "_row_num": 133
+      },
+      {
+        "type": "string",
+        "name": "consumable_quantity_5",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 134
+      },
+      {
+        "type": "assign",
+        "name": "consumable_totalhrs_5",
+        "calculation": "calculates.consumableTotalHrs5()",
+        "_row_num": 135
+      },
+      {
+        "type": "string",
+        "name": "consumable_totalhrs_5",
+        "templatePath": "hidden_input_type.handlebars",
+        "_row_num": 136
+      },
+      {
         "type": "select_one",
         "values_list": "yesno",
         "name": "annual_cleaning",
         "display": {
           "text": "Annual Cleaning"
         },
-        "_row_num": 119
+        "_row_num": 137
       },
       {
         "type": "select_multiple",
@@ -754,7 +862,7 @@
           "text": "Type of Inspection"
         },
         "templatePath": "select_dropdown_multiple.handlebars",
-        "_row_num": 120
+        "_row_num": 138
       },
       {
         "type": "select_one",
@@ -763,7 +871,7 @@
         "display": {
           "text": "Repair of Defective Part"
         },
-        "_row_num": 121
+        "_row_num": 139
       },
       {
         "type": "time",
@@ -772,7 +880,7 @@
           "text": "Start Time"
         },
         "templatePath": "time_input_type.handlebars",
-        "_row_num": 122
+        "_row_num": 140
       },
       {
         "type": "linked_table",
@@ -781,7 +889,7 @@
           "text": "Add Catch Basins to this list",
           "new_instance_text": "Add Catch Basin"
         },
-        "_row_num": 123
+        "_row_num": 141
       },
       {
         "type": "time",
@@ -790,11 +898,11 @@
           "text": "End Time"
         },
         "templatePath": "time_input_type.handlebars",
-        "_row_num": 124
+        "_row_num": 142
       },
       {
         "clause": "end screen",
-        "_row_num": 125
+        "_row_num": 143
       }
     ],
     "queries": [
@@ -1143,6 +1251,51 @@
         "calculation_name": "consumableTotalHrs2",
         "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][2] && opendatakit.getProjectInfo()['consumable_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 54
+      },
+      {
+        "calculation_name": "consumableName3",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][3] && opendatakit.getProjectInfo()['consumable_data'][3]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][3]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 55
+      },
+      {
+        "calculation_name": "consumableQuantity3",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][3] && opendatakit.getProjectInfo()['consumable_data'][3]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][3]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 56
+      },
+      {
+        "calculation_name": "consumableTotalHrs3",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][3] && opendatakit.getProjectInfo()['consumable_data'][3]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][3]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 57
+      },
+      {
+        "calculation_name": "consumableName4",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][4] && opendatakit.getProjectInfo()['consumable_data'][4]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][4]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 58
+      },
+      {
+        "calculation_name": "consumableQuantity4",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][4] && opendatakit.getProjectInfo()['consumable_data'][4]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][4]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 59
+      },
+      {
+        "calculation_name": "consumableTotalHrs4",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][4] && opendatakit.getProjectInfo()['consumable_data'][4]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][4]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 60
+      },
+      {
+        "calculation_name": "consumableName5",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][5] && opendatakit.getProjectInfo()['consumable_data'][5]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][5]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 61
+      },
+      {
+        "calculation_name": "consumableQuantity5",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][5] && opendatakit.getProjectInfo()['consumable_data'][5]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][5]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 62
+      },
+      {
+        "calculation_name": "consumableTotalHrs5",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][5] && opendatakit.getProjectInfo()['consumable_data'][5]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][5]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 63
       }
     ]
   },
@@ -1544,6 +1697,51 @@
         "calculation_name": "consumableTotalHrs2",
         "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][2] && opendatakit.getProjectInfo()['consumable_data'][2]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][2]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
         "_row_num": 54
+      },
+      "consumableName3": {
+        "calculation_name": "consumableName3",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][3] && opendatakit.getProjectInfo()['consumable_data'][3]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][3]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 55
+      },
+      "consumableQuantity3": {
+        "calculation_name": "consumableQuantity3",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][3] && opendatakit.getProjectInfo()['consumable_data'][3]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][3]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 56
+      },
+      "consumableTotalHrs3": {
+        "calculation_name": "consumableTotalHrs3",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][3] && opendatakit.getProjectInfo()['consumable_data'][3]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][3]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 57
+      },
+      "consumableName4": {
+        "calculation_name": "consumableName4",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][4] && opendatakit.getProjectInfo()['consumable_data'][4]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][4]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 58
+      },
+      "consumableQuantity4": {
+        "calculation_name": "consumableQuantity4",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][4] && opendatakit.getProjectInfo()['consumable_data'][4]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][4]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 59
+      },
+      "consumableTotalHrs4": {
+        "calculation_name": "consumableTotalHrs4",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][4] && opendatakit.getProjectInfo()['consumable_data'][4]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][4]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 60
+      },
+      "consumableName5": {
+        "calculation_name": "consumableName5",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][5] && opendatakit.getProjectInfo()['consumable_data'][5]['selectedconsumable']){\n    return opendatakit.getProjectInfo()['consumable_data'][5]['selectedconsumable'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 61
+      },
+      "consumableQuantity5": {
+        "calculation_name": "consumableQuantity5",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][5] && opendatakit.getProjectInfo()['consumable_data'][5]['quantity']){\n    return opendatakit.getProjectInfo()['consumable_data'][5]['quantity'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 62
+      },
+      "consumableTotalHrs5": {
+        "calculation_name": "consumableTotalHrs5",
+        "calculation": "(function(){\n  if(opendatakit.getProjectInfo()['consumable_data'] && opendatakit.getProjectInfo()['consumable_data'][5] && opendatakit.getProjectInfo()['consumable_data'][5]['totalhrs']){\n    return opendatakit.getProjectInfo()['consumable_data'][5]['totalhrs'];\n  } else {\n    return ' ';\n  }\n})()",
+        "_row_num": 63
       }
     },
     "model": {
@@ -2127,10 +2325,100 @@
         "type": "string",
         "elementKey": "consumable_totalhrs_2"
       },
+      "consumable_name_3": {
+        "_defn": [
+          {
+            "_row_num": 120,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_name_3"
+      },
+      "consumable_quantity_3": {
+        "_defn": [
+          {
+            "_row_num": 122,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_quantity_3"
+      },
+      "consumable_totalhrs_3": {
+        "_defn": [
+          {
+            "_row_num": 124,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_totalhrs_3"
+      },
+      "consumable_name_4": {
+        "_defn": [
+          {
+            "_row_num": 126,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_name_4"
+      },
+      "consumable_quantity_4": {
+        "_defn": [
+          {
+            "_row_num": 128,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_quantity_4"
+      },
+      "consumable_totalhrs_4": {
+        "_defn": [
+          {
+            "_row_num": 130,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_totalhrs_4"
+      },
+      "consumable_name_5": {
+        "_defn": [
+          {
+            "_row_num": 132,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_name_5"
+      },
+      "consumable_quantity_5": {
+        "_defn": [
+          {
+            "_row_num": 134,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_quantity_5"
+      },
+      "consumable_totalhrs_5": {
+        "_defn": [
+          {
+            "_row_num": 136,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "consumable_totalhrs_5"
+      },
       "annual_cleaning": {
         "_defn": [
           {
-            "_row_num": 119,
+            "_row_num": 137,
             "section_name": "survey"
           }
         ],
@@ -2141,7 +2429,7 @@
       "type_of_inspection": {
         "_defn": [
           {
-            "_row_num": 120,
+            "_row_num": 138,
             "section_name": "survey"
           }
         ],
@@ -2156,7 +2444,7 @@
       "repair_defective": {
         "_defn": [
           {
-            "_row_num": 121,
+            "_row_num": 139,
             "section_name": "survey"
           }
         ],
@@ -2167,7 +2455,7 @@
       "project_start_time": {
         "_defn": [
           {
-            "_row_num": 122,
+            "_row_num": 140,
             "section_name": "survey"
           }
         ],
@@ -2178,7 +2466,7 @@
       "project_end_time": {
         "_defn": [
           {
-            "_row_num": 124,
+            "_row_num": 142,
             "section_name": "survey"
           }
         ],
@@ -2998,18 +3286,117 @@
             "promptIdx": 57
           },
           {
+            "type": "string",
+            "name": "consumable_name_3",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 120,
+            "__rowNum__": 119,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 58
+          },
+          {
+            "type": "string",
+            "name": "consumable_quantity_3",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 122,
+            "__rowNum__": 121,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 59
+          },
+          {
+            "type": "string",
+            "name": "consumable_totalhrs_3",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 124,
+            "__rowNum__": 123,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 60
+          },
+          {
+            "type": "string",
+            "name": "consumable_name_4",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 126,
+            "__rowNum__": 125,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 61
+          },
+          {
+            "type": "string",
+            "name": "consumable_quantity_4",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 128,
+            "__rowNum__": 127,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 62
+          },
+          {
+            "type": "string",
+            "name": "consumable_totalhrs_4",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 130,
+            "__rowNum__": 129,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 63
+          },
+          {
+            "type": "string",
+            "name": "consumable_name_5",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 132,
+            "__rowNum__": 131,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 64
+          },
+          {
+            "type": "string",
+            "name": "consumable_quantity_5",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 134,
+            "__rowNum__": 133,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 65
+          },
+          {
+            "type": "string",
+            "name": "consumable_totalhrs_5",
+            "templatePath": "hidden_input_type.handlebars",
+            "_row_num": 136,
+            "__rowNum__": 135,
+            "_token_type": "prompt",
+            "_type": "string",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 66
+          },
+          {
             "type": "select_one",
             "values_list": "yesno",
             "name": "annual_cleaning",
             "display": {
               "text": "Annual Cleaning"
             },
-            "_row_num": 119,
-            "__rowNum__": 118,
+            "_row_num": 137,
+            "__rowNum__": 136,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 58
+            "promptIdx": 67
           },
           {
             "type": "select_multiple",
@@ -3019,12 +3406,12 @@
               "text": "Type of Inspection"
             },
             "templatePath": "select_dropdown_multiple.handlebars",
-            "_row_num": 120,
-            "__rowNum__": 119,
+            "_row_num": 138,
+            "__rowNum__": 137,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 59
+            "promptIdx": 68
           },
           {
             "type": "select_one",
@@ -3033,12 +3420,12 @@
             "display": {
               "text": "Repair of Defective Part"
             },
-            "_row_num": 121,
-            "__rowNum__": 120,
+            "_row_num": 139,
+            "__rowNum__": 138,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 60
+            "promptIdx": 69
           },
           {
             "type": "time",
@@ -3047,12 +3434,12 @@
               "text": "Start Time"
             },
             "templatePath": "time_input_type.handlebars",
-            "_row_num": 122,
-            "__rowNum__": 121,
+            "_row_num": 140,
+            "__rowNum__": 139,
             "_token_type": "prompt",
             "_type": "time",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 61
+            "promptIdx": 70
           },
           {
             "type": "linked_table",
@@ -3061,12 +3448,12 @@
               "text": "Add Catch Basins to this list",
               "new_instance_text": "Add Catch Basin"
             },
-            "_row_num": 123,
-            "__rowNum__": 122,
+            "_row_num": 141,
+            "__rowNum__": 140,
             "_token_type": "prompt",
             "_type": "linked_table",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 62
+            "promptIdx": 71
           },
           {
             "type": "time",
@@ -3075,20 +3462,20 @@
               "text": "End Time"
             },
             "templatePath": "time_input_type.handlebars",
-            "_row_num": 124,
-            "__rowNum__": 123,
+            "_row_num": 142,
+            "__rowNum__": 141,
             "_token_type": "prompt",
             "_type": "time",
             "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 63
+            "promptIdx": 72
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 126,
-            "_branch_label_enclosing_screen": "survey/_screen126",
-            "promptIdx": 64
+            "_row_num": 144,
+            "_branch_label_enclosing_screen": "survey/_screen144",
+            "promptIdx": 73
           }
         ],
         "validation_tag_map": {
@@ -3105,23 +3492,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 125,
-              "__rowNum__": 124,
+              "_row_num": 143,
+              "__rowNum__": 142,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nassign('global_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(8);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(9);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(10);\nassign('project_correl_id', calculates.flowid());\nactivePromptIndicies.push(11);\nassign('project_done', calculates.projectdone());\nactivePromptIndicies.push(12);\nassign('project_manager', calculates.projectmanager());\nactivePromptIndicies.push(13);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(14);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(15);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(16);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(17);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(18);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(19);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(20);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(21);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(22);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(23);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(24);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(25);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(26);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(27);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(28);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(29);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(30);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(31);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(32);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(33);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(34);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(35);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(36);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(37);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(38);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(39);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(40);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(41);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(42);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(43);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(44);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(45);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(46);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(47);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(48);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(49);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(50);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(51);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(52);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(53);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(54);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(55);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(56);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('global_id', opendatakit.getCurrentInstanceId());\nactivePromptIndicies.push(0);\nassign('loc_name', opendatakit.getLocationInfo().name);\nactivePromptIndicies.push(1);\nassign('loc_aid', calculates.locationAid());\nactivePromptIndicies.push(2);\nassign('loc_streetAddress', opendatakit.getLocationInfo().streetAddress);\nactivePromptIndicies.push(3);\nassign('loc_city', opendatakit.getLocationInfo().city);\nactivePromptIndicies.push(4);\nassign('loc_state', opendatakit.getLocationInfo().state);\nactivePromptIndicies.push(5);\nassign('loc_zip', calculates.locationZip());\nactivePromptIndicies.push(6);\nassign('loc_client', opendatakit.getLocationInfo().client);\nactivePromptIndicies.push(7);\nassign('sample_date', calculates.date());\nactivePromptIndicies.push(8);\nassign('weather', calculates.weather());\nactivePromptIndicies.push(9);\nassign('project_number', calculates.projectno());\nactivePromptIndicies.push(10);\nassign('project_correl_id', calculates.flowid());\nactivePromptIndicies.push(11);\nassign('project_done', calculates.projectdone());\nactivePromptIndicies.push(12);\nassign('project_manager', calculates.projectmanager());\nactivePromptIndicies.push(13);\nassign('project_comment', calculates.comment());\nactivePromptIndicies.push(14);\nassign('project_daily_report', calculates.issuedailyreport());\nactivePromptIndicies.push(15);\nassign('personnel_title_0', calculates.personnelTitle0());\nactivePromptIndicies.push(16);\nassign('personnel_name_0', calculates.personnelName0());\nactivePromptIndicies.push(17);\nassign('personnel_starttime_0', calculates.personnelStartTime0());\nactivePromptIndicies.push(18);\nassign('personnel_endtime_0', calculates.personnelEndTime0());\nactivePromptIndicies.push(19);\nassign('personnel_totalhrs_0', calculates.personnelTotalHrs0());\nactivePromptIndicies.push(20);\nassign('personnel_title_1', calculates.personnelTitle1());\nactivePromptIndicies.push(21);\nassign('personnel_name_1', calculates.personnelName1());\nactivePromptIndicies.push(22);\nassign('personnel_starttime_1', calculates.personnelStartTime1());\nactivePromptIndicies.push(23);\nassign('personnel_endtime_1', calculates.personnelEndTime1());\nactivePromptIndicies.push(24);\nassign('personnel_totalhrs_1', calculates.personnelTotalHrs1());\nactivePromptIndicies.push(25);\nassign('personnel_title_2', calculates.personnelTitle2());\nactivePromptIndicies.push(26);\nassign('personnel_name_2', calculates.personnelName2());\nactivePromptIndicies.push(27);\nassign('personnel_starttime_2', calculates.personnelStartTime2());\nactivePromptIndicies.push(28);\nassign('personnel_endtime_2', calculates.personnelEndTime2());\nactivePromptIndicies.push(29);\nassign('personnel_totalhrs_2', calculates.personnelTotalHrs2());\nactivePromptIndicies.push(30);\nassign('equipment_name_0', calculates.equipmentName0());\nactivePromptIndicies.push(31);\nassign('equipment_quantity_0', calculates.equipmentQuantity0());\nactivePromptIndicies.push(32);\nassign('equipment_totalhrs_0', calculates.equipmentTotalHrs0());\nactivePromptIndicies.push(33);\nassign('equipment_name_1', calculates.equipmentName1());\nactivePromptIndicies.push(34);\nassign('equipment_quantity_1', calculates.equipmentQuantity1());\nactivePromptIndicies.push(35);\nassign('equipment_totalhrs_1', calculates.equipmentTotalHrs1());\nactivePromptIndicies.push(36);\nassign('equipment_name_2', calculates.equipmentName2());\nactivePromptIndicies.push(37);\nassign('equipment_quantity_2', calculates.equipmentQuantity2());\nactivePromptIndicies.push(38);\nassign('equipment_totalhrs_2', calculates.equipmentTotalHrs2());\nactivePromptIndicies.push(39);\nassign('vehicle_name_0', calculates.vehicleName0());\nactivePromptIndicies.push(40);\nassign('vehicle_quantity_0', calculates.vehicleQuantity0());\nactivePromptIndicies.push(41);\nassign('vehicle_totalhrs_0', calculates.vehicleTotalHrs0());\nactivePromptIndicies.push(42);\nassign('vehicle_name_1', calculates.vehicleName1());\nactivePromptIndicies.push(43);\nassign('vehicle_quantity_1', calculates.vehicleQuantity1());\nactivePromptIndicies.push(44);\nassign('vehicle_totalhrs_1', calculates.vehicleTotalHrs1());\nactivePromptIndicies.push(45);\nassign('vehicle_name_2', calculates.vehicleName2());\nactivePromptIndicies.push(46);\nassign('vehicle_quantity_2', calculates.vehicleQuantity2());\nactivePromptIndicies.push(47);\nassign('vehicle_totalhrs_2', calculates.vehicleTotalHrs2());\nactivePromptIndicies.push(48);\nassign('consumable_name_0', calculates.consumableName0());\nactivePromptIndicies.push(49);\nassign('consumable_quantity_0', calculates.consumableQuantity0());\nactivePromptIndicies.push(50);\nassign('consumable_totalhrs_0', calculates.consumableTotalHrs0());\nactivePromptIndicies.push(51);\nassign('consumable_name_1', calculates.consumableName1());\nactivePromptIndicies.push(52);\nassign('consumable_quantity_1', calculates.consumableQuantity1());\nactivePromptIndicies.push(53);\nassign('consumable_totalhrs_1', calculates.consumableTotalHrs1());\nactivePromptIndicies.push(54);\nassign('consumable_name_2', calculates.consumableName2());\nactivePromptIndicies.push(55);\nassign('consumable_quantity_2', calculates.consumableQuantity2());\nactivePromptIndicies.push(56);\nassign('consumable_totalhrs_2', calculates.consumableTotalHrs2());\nactivePromptIndicies.push(57);\nassign('consumable_name_3', calculates.consumableName3());\nactivePromptIndicies.push(58);\nassign('consumable_quantity_3', calculates.consumableQuantity3());\nactivePromptIndicies.push(59);\nassign('consumable_totalhrs_3', calculates.consumableTotalHrs3());\nactivePromptIndicies.push(60);\nassign('consumable_name_4', calculates.consumableName4());\nactivePromptIndicies.push(61);\nassign('consumable_quantity_4', calculates.consumableQuantity4());\nactivePromptIndicies.push(62);\nassign('consumable_totalhrs_4', calculates.consumableTotalHrs4());\nactivePromptIndicies.push(63);\nassign('consumable_name_5', calculates.consumableName5());\nactivePromptIndicies.push(64);\nassign('consumable_quantity_5', calculates.consumableQuantity5());\nactivePromptIndicies.push(65);\nassign('consumable_totalhrs_5', calculates.consumableTotalHrs5());\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\nactivePromptIndicies.push(68);\nactivePromptIndicies.push(69);\nactivePromptIndicies.push(70);\nactivePromptIndicies.push(71);\nactivePromptIndicies.push(72);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 126,
+            "_row_num": 144,
             "operationIdx": 1
           },
           {
-            "_row_num": 126,
+            "_row_num": 144,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(64);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(73);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -3130,14 +3517,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 126,
+            "_row_num": 144,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen126": 2
+          "_screen144": 2
         }
       }
     }

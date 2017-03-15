@@ -28,12 +28,21 @@
         <consumable_name_0/>
         <consumable_name_1/>
         <consumable_name_2/>
+        <consumable_name_3/>
+        <consumable_name_4/>
+        <consumable_name_5/>
         <consumable_quantity_0/>
         <consumable_quantity_1/>
         <consumable_quantity_2/>
+        <consumable_quantity_3/>
+        <consumable_quantity_4/>
+        <consumable_quantity_5/>
         <consumable_totalhrs_0/>
         <consumable_totalhrs_1/>
         <consumable_totalhrs_2/>
+        <consumable_totalhrs_3/>
+        <consumable_totalhrs_4/>
+        <consumable_totalhrs_5/>
         <equipment_name_0/>
         <equipment_name_1/>
         <equipment_name_2/>
@@ -105,12 +114,21 @@
     <bind nodeset="/data/consumable_name_0" type="string"/>
     <bind nodeset="/data/consumable_name_1" type="string"/>
     <bind nodeset="/data/consumable_name_2" type="string"/>
+    <bind nodeset="/data/consumable_name_3" type="string"/>
+    <bind nodeset="/data/consumable_name_4" type="string"/>
+    <bind nodeset="/data/consumable_name_5" type="string"/>
     <bind nodeset="/data/consumable_quantity_0" type="string"/>
     <bind nodeset="/data/consumable_quantity_1" type="string"/>
     <bind nodeset="/data/consumable_quantity_2" type="string"/>
+    <bind nodeset="/data/consumable_quantity_3" type="string"/>
+    <bind nodeset="/data/consumable_quantity_4" type="string"/>
+    <bind nodeset="/data/consumable_quantity_5" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_0" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_1" type="string"/>
     <bind nodeset="/data/consumable_totalhrs_2" type="string"/>
+    <bind nodeset="/data/consumable_totalhrs_3" type="string"/>
+    <bind nodeset="/data/consumable_totalhrs_4" type="string"/>
+    <bind nodeset="/data/consumable_totalhrs_5" type="string"/>
     <bind nodeset="/data/equipment_name_0" type="string"/>
     <bind nodeset="/data/equipment_name_1" type="string"/>
     <bind nodeset="/data/equipment_name_2" type="string"/>
